@@ -53,3 +53,12 @@ registry update/announcement history (dated activity for ~all companies) and fil
   is latest-year only. NAV's public token is for experiments and the feed has no employer filter.
 - **Decision**: keep the footer fix (0 requests, increases org-number-based verification); hold all
   source integrations until measured.
+
+## E3 — Phase 4 live measurement gate (blocked)
+
+- Frozen code `461bdbf`; 167 tests pass (`docs/measurement-freeze.md`).
+- Network re-checked twice on 2026-10-02, the second time after the owner reported the settings changed
+  (23:33 UTC). The proxy still rejected every target host. No live run was possible; nothing was estimated.
+- Outputs: `docs/live-source-expansion-results.md` (all UNMEASURED) and `docs/category-source-map.md`
+  (registry_activity → public activity UNCONFIRMED).
+- Decision: no source integrated; search and NAV stay optional and outside the batch command.
