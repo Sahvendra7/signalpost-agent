@@ -35,3 +35,21 @@ See `docs/baseline.md`. Live coverage unmeasurable from the dev container (Brreg
 
 Measure real coverage on a 100-company sample from the public universe with Brreg reachable, then add
 registry update/announcement history (dated activity for ~all companies) and filing-year history.
+
+## E2 — Source-expansion experiments (built, not yet measured)
+
+- **Hypothesis**: zero-cost, org-number-keyed official sources raise company coverage in the activity and
+  filings areas more per request than search does in the websites area.
+- **Change**: `src/norway_company_agent/experiments/` (Brreg update feed, accounts/PDF probe, NAV feed with
+  orgnr verification, non-search discovery, optional search provider interface) and
+  `scripts/run_source_experiments.py`; strict gate for discovered (non-registry) sites. In the main path:
+  footer/address identity text is now captured by `fetch_website` (it was only captured by the Scrapy
+  path, so org numbers in footers were invisible to the batch gate), and subunit `hjemmeside` is kept.
+- **Test population**: 20 offline tests with provider-shaped fakes. Live 100-company run **blocked**: the
+  container denies all target hosts; the harness ran end-to-end and reported every source `UNMEASURED`.
+- **Before/after metrics**: pending network access. See `docs/source-expansion-results.md`.
+- **Documented findings that already change the plan**: annual-account copies are image-only scans
+  (Brreg `tiffToPdf`), so PDF text extraction is not a path to multi-year figures. The open accounts API
+  is latest-year only. NAV's public token is for experiments and the feed has no employer filter.
+- **Decision**: keep the footer fix (0 requests, increases org-number-based verification); hold all
+  source integrations until measured.

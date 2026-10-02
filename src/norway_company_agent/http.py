@@ -53,3 +53,44 @@ def fetch_json(url: str, *, timeout: float = 20.0, attempts: int = 3) -> FetchRe
         if attempt + 1 < attempts:
             time.sleep(0.4 * (2**attempt))
     return FetchResult(url, 0, 0, 0, error=last_error, retrieved_at=_utc_now(), attempts=attempts)
+
+
+@dataclass
+class ByteFetch:
+    url: str
+    status: int
+    elapsed_ms: int
+    raw: bytes | None
+    content_type: str
+    headers: dict[str, str]
+    content_sha256: str | None
+    retrieved_at: str
+    attempts: int
+    error: str | None = None
+
+    def json(self) -> Any:
+        return json.loads(self.raw) if self.raw else None
+
+
+def fetch_bytes(url: str, *, headers: dict[str, str] | None = None, timeout: float = 30.0, attempts: int = 3, max_bytes: int = 30_000_000) -> ByteFetch:
+    """Raw GET with retries on transport errors and 5xx/429; 4xx is returned as-is (it is an answer)."""
+    last_error = "request failed"
+    for attempt in range(attempts):
+        started = time.monotonic()
+        request = urllib.request.Request(url, headers={"User-Agent": "builderr-signalpost-poc/0.1 (+https://builderr.ai)", **(headers or {})})
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                raw = response.read(max_bytes + 1)
+                if len(raw) > max_bytes:
+                    return ByteFetch(url, response.status, int((time.monotonic() - started) * 1000), None, "", {}, None, _utc_now(), attempt + 1, error="response exceeds byte limit")
+                return ByteFetch(url, response.status, int((time.monotonic() - started) * 1000), raw, response.headers.get("content-type", ""), dict(response.headers.items()), hashlib.sha256(raw).hexdigest(), _utc_now(), attempt + 1)
+        except urllib.error.HTTPError as exc:
+            raw = exc.read()
+            if exc.code < 500 and exc.code != 429:
+                return ByteFetch(url, exc.code, int((time.monotonic() - started) * 1000), raw, exc.headers.get("content-type", "") if exc.headers else "", dict(exc.headers.items()) if exc.headers else {}, hashlib.sha256(raw).hexdigest(), _utc_now(), attempt + 1, error=f"HTTP {exc.code}")
+            last_error = f"HTTP {exc.code}"
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            last_error = type(exc).__name__
+        if attempt + 1 < attempts:
+            time.sleep(0.5 * (2**attempt))
+    return ByteFetch(url, 0, 0, None, "", {}, None, _utc_now(), attempts, error=last_error)

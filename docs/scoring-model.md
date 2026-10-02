@@ -18,6 +18,18 @@ close Oct 21; a sample of 100 companies had 48 with data in all five categories.
 Superseded rubrics in the starter docs (`external-footprint-loop.md`: 55/15/10/12/8;
 `score_competition_v3.py`) are **not** the current rubric. They are kept for reference only.
 
+## Constraints confirmed by the project owner (2026-10-02, from the official page)
+
+- Recall + coverage = 50 points: **70% company coverage, 30% individual checked facts**.
+- Information areas: filings, leadership, locations, websites, hiring/public activity.
+- Builderr supplies fresh companies at runtime; precomputed profiles are not used for ranking.
+- Every supplied company must produce one terminal result; wrong-company publications are especially serious.
+- Third-party API cost can be a tiebreaker.
+
+Consequence: a source that adds facts to companies already covered in an area is worth far less than
+one that covers a company–area pair that was empty. The experiment harness therefore reports
+coverage per area (share of companies with ≥1 verified fact) as the primary metric.
+
 ## How each dimension most plausibly scores (working model, `[OPEN]` until confirmed)
 
 ### Recall & coverage (50)

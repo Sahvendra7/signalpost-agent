@@ -8,7 +8,7 @@ import trafilatura
 from bs4 import BeautifulSoup
 
 from .evidence import evidence, utc_now
-from .website import _extraction_state, _jsonld_organisations, _registered_domain, _social_links, normalize_homepage, structured_social_links
+from .website import _extraction_state, _jsonld_organisations, _registered_domain, _social_links, identity_text, normalize_homepage, structured_social_links
 
 
 def extract_page_event(
@@ -43,19 +43,14 @@ def extract_page_event(
     title = soup.title.get_text(" ", strip=True)[:500] if soup.title else ""
     description_tag = soup.select_one('meta[name="description"], meta[property="og:description"]')
     description = str(description_tag.get("content") or "").strip()[:2000] if description_tag else ""
-    identity_nodes = soup.select(
-        'footer, address, [itemprop="legalName"], [itemprop="address"], '
-        '[itemprop="telephone"], [itemprop="email"]'
-    )
-    identity_text = " ".join(node.get_text(" ", strip=True) for node in identity_nodes)
-    identity_text = " ".join(identity_text.split())[:3000]
+    identity_excerpt = identity_text(soup)
     event = {
         **base,
         "status": "available",
         "title": title,
         "description": description,
         "main_text_excerpt": text[:5000],
-        "identity_text_excerpt": identity_text,
+        "identity_text_excerpt": identity_excerpt,
         "social_links": _social_links(final_url, soup),
         "extraction_state": _extraction_state(text, soup),
     }

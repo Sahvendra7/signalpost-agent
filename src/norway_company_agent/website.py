@@ -227,11 +227,21 @@ def _fetch_secondary_page(url: str, *, homepage_domain: str, timeout: float, max
             "url": final_url,
             "title": page_soup.title.get_text(" ", strip=True)[:500] if page_soup.title else "",
             "main_text_excerpt": page_text[:5000],
+            "identity_text_excerpt": identity_text(page_soup),
             "content_sha256": __import__("hashlib").sha256(raw).hexdigest(),
         }
         return page, _social_links(final_url, page_soup), 2, len(raw), elapsed, None
     except Exception as exc:
         return None, [], 2, 0, int((time.monotonic() - started) * 1000), f"{type(exc).__name__}: {str(exc)[:120]}"
+
+
+IDENTITY_SELECTOR = 'footer, address, [itemprop="legalName"], [itemprop="address"], [itemprop="telephone"], [itemprop="email"]'
+
+
+def identity_text(soup: BeautifulSoup) -> str:
+    """Footer/address text, where Norwegian sites print org.nr; main-text extraction usually drops it."""
+    text = " ".join(node.get_text(" ", strip=True) for node in soup.select(IDENTITY_SELECTOR))
+    return " ".join(text.split())[:3000]
 
 
 def _jsonld_organisations(metadata: dict[str, Any]) -> list[dict[str, Any]]:
@@ -296,6 +306,7 @@ def fetch_website(url: str | None, *, timeout: float = 15.0, max_bytes: int = 2_
             "title": title[:500],
             "description": description[:2000],
             "main_text_excerpt": text[:5000],
+            "identity_text_excerpt": identity_text(soup),
             "social_links": _social_links(final_url, soup),
             "structured_organisations": _jsonld_organisations(structured),
             "content_sha256": __import__("hashlib").sha256(raw).hexdigest(),

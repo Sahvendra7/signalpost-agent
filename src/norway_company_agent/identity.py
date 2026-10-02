@@ -158,3 +158,47 @@ def apply_website_identity_gate(profile: dict[str, Any], website: dict[str, Any]
         "assessment": assessment,
         "quarantined_social_links": len(original) - len(value["social_links"]),
     }
+
+
+PARKED_MARKERS = (
+    "domain is for sale", "domain for sale", "hugedomains", "parked at", "miss hosting",
+    "her flytter snart en ny gjest", "has been informing visitors",
+    "find the best information and most relevant links on all topics related to",
+)
+
+
+def assess_discovered_website_identity(profile: dict[str, Any], website: dict[str, Any]) -> dict[str, Any]:
+    """Stricter gate for a URL the registry did NOT list for this organisation number.
+
+    Publishable only with (a) the organisation number on a captured page of the site, or (b) every
+    legal-name token in homepage identity text AND the registered postcode plus a street token on the
+    site. Name similarity alone never passes: a discovered domain carries no registry endorsement.
+    """
+    value = website.get("value") or {}
+    pages = value.get("pages") or []
+    homepage_parts = [value.get("title"), value.get("description"), value.get("identity_text_excerpt"), *_structured_names(value.get("structured_organisations") or [])]
+    all_parts = [*homepage_parts, value.get("main_text_excerpt"), *[page.get(key) for page in pages for key in ("title", "main_text_excerpt", "identity_text_excerpt")]]
+    all_text = " ".join(str(part or "") for part in all_parts)
+    folded = unicodedata.normalize("NFKD", all_text).encode("ascii", "ignore").decode().casefold()
+    org = re.sub(r"\D", "", str(profile.get("organisation_number") or ""))
+    core = _tokens(profile.get("name"))
+    address = profile.get("business_address") or {}
+    postcode = str(address.get("postnummer") or address.get("postal_code") or "")
+    street_tokens = [token for line in (address.get("adresse") or address.get("lines") or []) for token in _tokens(line) if not token.isdigit() and len(token) > 3]
+    reasons: list[str] = []
+    if website.get("status") != "available":
+        status, score = "not_available", 0.0
+        reasons.append("candidate site not available")
+    elif any(marker in folded for marker in PARKED_MARKERS):
+        status, score = "rejected", 0.1
+        reasons.append("parked, for-sale or hosting placeholder")
+    elif org and re.search(r"(?<!\d)" + r"\D{0,3}".join(org) + r"(?!\d)", all_text):
+        status, score = "exact", 1.0
+        reasons.append("organisation number appears on a captured page of the discovered site")
+    elif core and any(set(core).issubset(set(_tokens(part))) for part in homepage_parts if part) and postcode and postcode in all_text and any(token in set(_tokens(all_text)) for token in street_tokens):
+        status, score = "exact", 0.95
+        reasons.append("full legal name on homepage plus registered postcode and street on the site")
+    else:
+        status, score = "ambiguous", 0.3
+        reasons.append("no organisation number and no name-plus-registered-address corroboration")
+    return {"status": status, "score": score, "publishable": status == "exact", "reasons": reasons, "method": "discovered_site_strict_v1"}

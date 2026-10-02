@@ -53,6 +53,15 @@ class AdversarialIdentityTests(unittest.TestCase):
         self.assertEqual(gated["website"]["value"]["social_links"], [])
         self.assertEqual(gated["quarantined_social_links"], 1)
 
+    def test_footer_org_number_is_captured_for_the_batch_gate(self):
+        from bs4 import BeautifulSoup
+        from norway_company_agent.website import identity_text
+
+        html = "<html><body><main>Vi lager god kaffe.</main><footer>Kaffebrenneriet, org.nr. 923 609 016</footer></body></html>"
+        excerpt = identity_text(BeautifulSoup(html, "lxml"))
+        self.assertIn("923 609 016", excerpt)
+        self.assertTrue(assess_website_identity(profile("923609016", "Nordic Retail Holding AS", title="Kaffebrenneriet", identity_text_excerpt=excerpt))["publishable"])
+
     def test_decision_registry_listed_site_with_superset_name_is_accepted(self):
         # Recorded decision: for a URL the registry itself lists for this org number, a page title that
         # contains every legal-name token plus extra words ("Service") is accepted. Discovered URLs
