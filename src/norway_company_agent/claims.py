@@ -1,0 +1,349 @@
+"""Deterministic extraction: source records in a profile -> fact-level contract claims.
+
+Pure functions only. A claim is emitted only when its source record is `available` and carries a
+content hash; otherwise the category gets an explicit non-available state. Values are copied from the
+source, never imputed: a missing number stays missing and `0`, `false` and `[]` stay real values.
+"""
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from .contract import ClaimSet, availability_for
+
+CATEGORIES = ("identity", "description", "filings", "leadership", "locations", "websites", "relationships", "activity")
+
+ROLE_FIELDS = {
+    "DAGL": "ceo",
+    "LEDE": "board_chair",
+    "NEST": "board_deputy_chair",
+    "MEDL": "board_member",
+    "VARA": "board_deputy_member",
+    "OBS": "board_observer",
+    "REVI": "auditor",
+    "REGN": "accountant",
+    "KONT": "contact_person",
+    "DTPR": "partner",
+    "DTSO": "partner",
+    "INNH": "owner",
+    "FFØR": "business_manager",
+    "KOMP": "general_partner",
+    "PROK": "procuration",
+    "SIGN": "signatory",
+}
+
+FINANCIAL_FIELDS = (
+    ("revenue", "revenue"),
+    ("operating_result", "operating_result"),
+    ("profit_before_tax", "profit_before_tax"),
+    ("annual_result", "net_result"),
+    ("assets", "total_assets"),
+    ("equity", "equity"),
+    ("debt", "total_debt"),
+)
+
+# Bulk CSV column names -> the live-API normalised keys used below.
+_BULK_KEYS = {
+    "name": ("navn", "Navn"),
+    "legal_form": ("organisasjonsform.kode", "Organisasjonsform.kode"),
+    "employees": ("antallAnsatte", "Antall ansatte"),
+    "has_registered_employees": ("harRegistrertAntallAnsatte",),
+    "industry_code": ("naeringskode1.kode", "Næringskode1.kode"),
+    "industry_label": ("naeringskode1.beskrivelse", "Næringskode1.beskrivelse"),
+    "website": ("hjemmeside", "Hjemmeside"),
+    "latest_submitted_accounts": ("sisteInnsendteAarsregnskap", "Siste innsendte årsregnskap"),
+    "bankrupt": ("konkurs", "Konkurs"),
+    "liquidating": ("underAvvikling", "Under avvikling"),
+    "founded_date": ("stiftelsesdato", "Stiftelsesdato"),
+    "registered_date": ("registreringsdatoEnhetsregisteret", "Registreringsdato i Enhetsregisteret"),
+    "activity": ("aktivitet", "Aktivitet"),
+    "purpose": ("vedtektsfestetFormaal", "Vedtektsfestet formål"),
+}
+
+
+def _present(value: Any) -> bool:
+    return value is not None and value != ""
+
+
+def _text_list(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item or "").strip()]
+    if isinstance(value, str) and value.strip():
+        return [value.strip()]
+    return []
+
+
+def _bool(value: Any) -> bool | None:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str) and value.strip().casefold() in {"true", "false"}:
+        return value.strip().casefold() == "true"
+    return None
+
+
+def _int(value: Any) -> int | None:
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, str) and value.strip().isdigit():
+        return int(value.strip())
+    return None
+
+
+def normalize_address(value: Any) -> dict[str, Any] | None:
+    if not isinstance(value, dict):
+        return None
+    address = {
+        "lines": _text_list(value.get("adresse")),
+        "postal_code": value.get("postnummer"),
+        "city": value.get("poststed"),
+        "municipality": value.get("kommune"),
+        "municipality_number": value.get("kommunenummer"),
+        "country": value.get("land"),
+    }
+    address = {key: item for key, item in address.items() if item not in (None, "", [])}
+    return address or None
+
+
+def _bulk_address(raw: dict[str, Any], prefix: str) -> dict[str, Any] | None:
+    nested = {
+        "adresse": raw.get(f"{prefix}.adresse"),
+        "postnummer": raw.get(f"{prefix}.postnummer"),
+        "poststed": raw.get(f"{prefix}.poststed"),
+        "kommune": raw.get(f"{prefix}.kommune"),
+        "kommunenummer": raw.get(f"{prefix}.kommunenummer"),
+        "land": raw.get(f"{prefix}.land"),
+    }
+    return normalize_address(nested)
+
+
+def identity_view(profile: dict[str, Any]) -> tuple[dict[str, Any] | None, dict[str, Any], str]:
+    """Pick the freshest available identity source and expose it with uniform keys."""
+    records = profile.get("evidence", {})
+    live = records.get("registry_live") or {}
+    live_org = str((live.get("value") or {}).get("organisation_number") or "") if isinstance(live.get("value"), dict) else ""
+    if live.get("status") == "available" and live_org == str(profile.get("organisation_number")):
+        value = dict(live["value"])
+        industry = value.get("industry") if isinstance(value.get("industry"), dict) else {}
+        value["industry_code"] = industry.get("kode")
+        value["industry_label"] = industry.get("beskrivelse")
+        value["business_address"] = normalize_address(value.get("business_address"))
+        value["postal_address"] = normalize_address(value.get("postal_address"))
+        return live, value, "enheter"
+    bulk = records.get("registry") or {}
+    if bulk.get("status") == "available" and isinstance(bulk.get("value"), dict):
+        raw = bulk["value"]
+        value = {key: next((raw.get(name) for name in names if _present(raw.get(name))), None) for key, names in _BULK_KEYS.items()}
+        value["business_address"] = _bulk_address(raw, "forretningsadresse")
+        value["postal_address"] = _bulk_address(raw, "postadresse")
+        value["organisation_number"] = raw.get("organisasjonsnummer") or profile.get("organisation_number")
+        return bulk, value, "bulk_csv_row"
+    return None, {}, ""
+
+
+def _identity_claims(claims: ClaimSet, profile: dict[str, Any]) -> dict[str, Any]:
+    record, view, prefix = identity_view(profile)
+    if record is None:
+        for category, field in (("identity", "legal_name"), ("locations", "business_address"), ("description", "registered_activity")):
+            claims.absent(category, field, "failed", "No registry identity source was available to this run")
+        return view
+    span = lambda key, value: f"{prefix}.{key}={value}"  # noqa: E731
+    if _present(view.get("organisation_number")):
+        claims.add("identity", "organisation_number", str(view["organisation_number"]), record, span("organisasjonsnummer", view["organisation_number"]))
+    if _present(view.get("name")):
+        claims.add("identity", "legal_name", view["name"], record, span("navn", view["name"]))
+    else:
+        claims.absent("identity", "legal_name", "not_available", "Registry record has no name")
+    if _present(view.get("legal_form")):
+        claims.add("identity", "legal_form", view["legal_form"], record, span("organisasjonsform.kode", view["legal_form"]))
+    if _present(view.get("industry_code")):
+        claims.add("identity", "industry", {"code": view["industry_code"], "description": view.get("industry_label")}, record, span("naeringskode1", view["industry_code"]))
+    for key, field, source_key in (("bankrupt", "bankrupt", "konkurs"), ("liquidating", "under_liquidation", "underAvvikling")):
+        flag = _bool(view.get(key))
+        if flag is not None:
+            claims.add("identity", field, flag, record, span(source_key, str(flag).lower()))
+    employees = _int(view.get("employees"))
+    if employees is not None:
+        claims.add("identity", "registry_employee_count", employees, record, span("antallAnsatte", employees))
+    else:
+        claims.absent("identity", "registry_employee_count", "not_available", "The registry record carries no employee count")
+    for key, field, source_key in (("founded_date", "founded_date", "stiftelsesdato"), ("registered_date", "registry_registration_date", "registreringsdatoEnhetsregisteret")):
+        if _present(view.get(key)):
+            claims.add("identity", field, view[key], record, span(source_key, view[key]))
+    activity = " ".join(_text_list(view.get("activity")))
+    purpose = " ".join(_text_list(view.get("purpose")))
+    if activity:
+        claims.add("description", "registered_activity", activity, record, span("aktivitet", activity[:200]))
+    if purpose:
+        claims.add("description", "statutory_purpose", purpose, record, span("vedtektsfestetFormaal", purpose[:200]))
+    if not activity and not purpose:
+        claims.absent("description", "registered_activity", "not_available", "The registry record carries no activity or purpose text")
+    for key, field, source_key in (("business_address", "business_address", "forretningsadresse"), ("postal_address", "postal_address", "postadresse")):
+        if view.get(key):
+            claims.add("locations", field, view[key], record, span(source_key, ", ".join(view[key].get("lines", []) + [str(view[key].get("postal_code") or ""), str(view[key].get("city") or "")]).strip(", ")))
+    if not view.get("business_address"):
+        claims.absent("locations", "business_address", "not_available", "The registry record carries no business address")
+    if _present(view.get("website")):
+        claims.add("websites", "registry_listed_website", view["website"], record, span("hjemmeside", view["website"]))
+    if _present(view.get("latest_submitted_accounts")):
+        claims.add("filings", "latest_filed_accounts_year", str(view["latest_submitted_accounts"]), record, span("sisteInnsendteAarsregnskap", view["latest_submitted_accounts"]))
+    return view
+
+
+def _module_absent(claims: ClaimSet, category: str, field: str, record: dict[str, Any] | None, reason_if_missing: str) -> None:
+    if record is None:
+        return  # Module not requested: not checked is not the same as not available.
+    state = availability_for(record)
+    reason = record.get("note") or reason_if_missing
+    claims.absent(category, field, "not_available" if state == "available" else state, reason)
+
+
+def _financial_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
+    if record is None:
+        return
+    rows = ((record.get("value") or {}).get("records") or []) if record.get("status") == "available" else []
+    published = 0
+    for row in rows:
+        period = row.get("period") if isinstance(row.get("period"), dict) else {}
+        qualifiers = {
+            "period": {"from": period.get("fraDato"), "to": period.get("tilDato")},
+            "currency": row.get("currency"),
+            "account_type": row.get("account_type"),
+        }
+        for source_key, field in FINANCIAL_FIELDS:
+            value = row.get(source_key)
+            if value is None or isinstance(value, bool) or not isinstance(value, (int, float)):
+                continue
+            span = f"regnskap[id={row.get('record_id')}].{source_key}={value} ({qualifiers['period']['from']}..{qualifiers['period']['to']}, {row.get('currency')})"
+            published += claims.add("filings", field, value, record, span, extra=qualifiers)
+    if not published:
+        _module_absent(claims, "filings", "annual_accounts", record, "No normalised annual-account record was returned; missing values are not zero")
+
+
+def _history_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
+    if record is None:
+        return
+    value = record.get("value") or {}
+    years = value.get("years") if record.get("status") == "available" else None
+    if years is None:
+        _module_absent(claims, "filings", "filed_account_years", record, "Filing-year list unavailable")
+        return
+    claims.add("filings", "filed_account_years", list(years), record, f"aarsregnskap/kopi/aar={years}")
+    for item in value.get("pdfs") or []:
+        claims.add("filings", "annual_accounts_copy", {"year": item.get("year"), "url": item.get("url")}, record, f"aarsregnskap/kopi/{item.get('year')}")
+
+
+def _role_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
+    if record is None:
+        return
+    if record.get("status") != "available":
+        _module_absent(claims, "leadership", "roles", record, "Role source unavailable")
+        return
+    roles = [item for item in (record.get("value") or {}).get("roles", []) if not item.get("inactive")]
+    claims.add("leadership", "role_count", len(roles), record, f"roller.active_count={len(roles)}")
+    latest_change = None
+    for item in roles:
+        holder = item.get("name") or item.get("organisation_number")
+        if not holder:
+            continue
+        value = {
+            "name": item.get("name"),
+            "organisation_number": item.get("organisation_number"),
+            "role_code": item.get("role_code"),
+            "role": item.get("role"),
+            "group": item.get("group"),
+            "group_last_changed": item.get("last_changed"),
+        }
+        value = {key: item_value for key, item_value in value.items() if item_value is not None}
+        field = ROLE_FIELDS.get(str(item.get("role_code") or ""), "registered_role")
+        claims.add("leadership", field, value, record, f"roller[{item.get('role_code')}]={holder}")
+        if item.get("last_changed") and (latest_change is None or item["last_changed"] > latest_change):
+            latest_change = item["last_changed"]
+    if latest_change:
+        claims.add("activity", "roles_last_changed", latest_change, record, f"rollegrupper.sistEndret={latest_change}", extra={"event_date": latest_change})
+
+
+def _location_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
+    if record is None:
+        return
+    if record.get("status") != "available":
+        _module_absent(claims, "locations", "subunits", record, "Subunit source unavailable")
+        return
+    items = (record.get("value") or {}).get("locations", [])
+    claims.add("locations", "subunit_count", len(items), record, f"underenheter.count={len(items)}")
+    for item in items:
+        value = {
+            "organisation_number": item.get("organisation_number"),
+            "name": item.get("name"),
+            "address": normalize_address(item.get("address")),
+            "industry": (item.get("industry") or {}).get("kode") if isinstance(item.get("industry"), dict) else item.get("industry"),
+            "employees": item.get("employees"),
+        }
+        value = {key: item_value for key, item_value in value.items() if item_value is not None}
+        claims.add("locations", "subunit", value, record, f"underenheter[{item.get('organisation_number')}]={item.get('name')}")
+
+
+def _group_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
+    if record is None:
+        return
+    if record.get("status") == "available" and record.get("value"):
+        claims.add("relationships", "group_structure", record["value"], record, "konsernstruktur")
+    else:
+        _module_absent(claims, "relationships", "group_structure", record, "No official group structure was returned")
+
+
+def _website_claims(claims: ClaimSet, record: dict[str, Any] | None, view: dict[str, Any]) -> None:
+    if record is None:
+        return
+    value = record.get("value") or {}
+    assessment = value.get("identity_assessment") or {}
+    if record.get("status") != "available":
+        reason = record.get("note") or "Website unavailable"
+        if not _present(view.get("website")):
+            reason = "No registry-listed website; website discovery not run"
+        _module_absent(claims, "websites", "official_website", record, reason)
+        return
+    if not assessment.get("publishable"):
+        claims.absent("websites", "official_website", "ambiguous", "; ".join(assessment.get("reasons") or ["Exact legal-entity identity not established"]))
+        return
+    score = float(assessment.get("score") or 0.9)
+    method = assessment.get("method") or "identity_gate"
+    reasons = "; ".join(assessment.get("reasons") or [])
+    claims.add("websites", "official_website", value.get("final_url") or record.get("source_url"), record, f"identity: {reasons}", confidence=score, method=method)
+    if value.get("description"):
+        claims.add("description", "website_description", value["description"], record, f"meta description: {value['description'][:200]}", confidence=score, method="html_meta_description")
+    assessments = {item.get("url"): item for item in value.get("social_link_assessments") or []}
+    for link in value.get("social_links") or []:
+        social_score = float((assessments.get(link["url"]) or {}).get("identity_score") or score)
+        claims.add("websites", "social_profile", {"platform": link["platform"], "url": link["url"]}, record, f"outbound link on company site: {link['url']}", confidence=min(score, social_score), method="company_site_outbound_link")
+
+
+def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None = None) -> ClaimSet:
+    claims = ClaimSet(snapshot_root=snapshot_root)
+    records = profile.get("evidence", {})
+    view = _identity_claims(claims, profile)
+    _financial_claims(claims, records.get("financials"))
+    _history_claims(claims, records.get("financial_history"))
+    _role_claims(claims, records.get("roles"))
+    _location_claims(claims, records.get("locations"))
+    _group_claims(claims, records.get("group"))
+    _website_claims(claims, records.get("website"), view)
+    return claims
+
+
+def category_coverage(claims: list[dict[str, Any]]) -> dict[str, str]:
+    """Per category: `available` if any substantive fact is available, else the most informative state.
+
+    A checked-and-empty count (`role_count: 0`) is a real claim but is not coverage.
+    """
+    order = ("available", "ambiguous", "blocked", "failed", "not_available", "not_applicable")
+    coverage = {}
+    for category in CATEGORIES:
+        states = {
+            "not_available" if item["field"].endswith("_count") and item.get("value") == 0 else item["availability"]
+            for item in claims
+            if item.get("category") == category
+        }
+        coverage[category] = next((state for state in order if state in states), "not_checked")
+    return coverage

@@ -114,12 +114,6 @@ def _reserve_history_slot(clock: Callable[[], float] = time.monotonic, sleeper: 
         _history_last_request = clock()
 
 
-def _fetch_history(url: str) -> FetchResult:
-    """Keep this endpoint below its observed 30-request-starts/minute allowance."""
-    _reserve_history_slot()
-    return fetch_json(url)
-
-
 def normalize_roles(body: Any) -> dict[str, Any]:
     roles = []
     for group in body.get("rollegrupper", []) if isinstance(body, dict) else []:
@@ -167,6 +161,15 @@ def normalize_entity(body: Any) -> dict[str, Any]:
         "business_address": body.get("forretningsadresse"),
         "postal_address": body.get("postadresse"),
         "latest_submitted_accounts": body.get("sisteInnsendteAarsregnskap"),
+        "has_registered_employees": body.get("harRegistrertAntallAnsatte"),
+        "founded_date": body.get("stiftelsesdato"),
+        "registered_date": body.get("registreringsdatoEnhetsregisteret"),
+        "activity": body.get("aktivitet"),
+        "purpose": body.get("vedtektsfestetFormaal"),
+        "vat_registered": body.get("registrertIMvaregisteret"),
+        "business_register": body.get("registrertIForetaksregisteret"),
+        "parent_organisation_number": body.get("overordnetEnhet"),
+        "deleted_date": body.get("slettedato"),
     }
 
 
@@ -192,7 +195,10 @@ def fetch_official_modules(org: str, modules: set[str], fetcher: Callable[[str],
     for module, (url, source_type) in endpoints.items():
         if module not in modules:
             continue
-        result = _fetch_history(url) if module == "financial_history" and fetcher is fetch_json else fetcher(url)
+        live = getattr(fetcher, "live", fetcher is fetch_json)
+        if module == "financial_history" and live:
+            _reserve_history_slot()
+        result = fetcher(url)
         metrics.append(result)
         normalized = None
         if result.status == 200:

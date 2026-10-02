@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from typing import Any
 
 
@@ -32,8 +33,18 @@ def _evidence_for(profile: dict[str, Any], field: str) -> dict[str, Any]:
     module = field.split(".", 1)[0]
     records = profile.get("evidence", {})
     if module == "registry":
-        return records.get("registry_live") or records.get("registry", {})
+        live = records.get("registry_live") or {}
+        return live if live.get("status") == "available" else records.get("registry") or live
     return records.get(module, {})
+
+
+def _canonical(value: Any) -> Any:
+    """Order-insensitive form so a reordered source list is not reported as a change."""
+    if isinstance(value, list):
+        return sorted((_canonical(item) for item in value), key=lambda item: json.dumps(item, sort_keys=True, ensure_ascii=False, default=str))
+    if isinstance(value, dict):
+        return {key: _canonical(item) for key, item in value.items()}
+    return value
 
 
 def diff_profile(previous: dict[str, Any], current: dict[str, Any]) -> list[dict[str, Any]]:
@@ -43,12 +54,15 @@ def diff_profile(previous: dict[str, Any], current: dict[str, Any]) -> list[dict
         raise ValueError("Refresh comparison requires the same exact organisation number")
     changes = []
     for field, path in TRACKED_FIELDS.items():
-        old_value = _read(previous, path)
-        new_value = _read(current, path)
-        if old_value == new_value:
-            continue
         record = _evidence_for(current, field)
         previous_record = _evidence_for(previous, field)
+        # An outage, block or unchecked source on either side is not evidence of a business change.
+        if record.get("status") != "available" or previous_record.get("status") != "available":
+            continue
+        old_value = _read(previous, path)
+        new_value = _read(current, path)
+        if _canonical(old_value) == _canonical(new_value):
+            continue
         changes.append({
             "organisation_number": new_org,
             "field": field,

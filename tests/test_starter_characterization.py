@@ -1,7 +1,12 @@
 """Characterization tests: pin the starter's behaviour before the contract is hardened.
 
-These record what the starter does today (including known defects, marked DEFECT) so later
+These record what the starter's helpers do (including known defects, marked `defect`) so later
 changes are deliberate. Defect tests are replaced, not deleted silently, when a fix lands.
+
+Status after V1: the batch command now runs through `pipeline.py`, which does not call the legacy
+`read_organisation_inputs`/`profiles_from_bulk`/`terminal_envelope` helpers, so the input and envelope
+defects below remain true of those helpers but no longer of the command (see tests/test_contract.py).
+The refresh outage defect was fixed in `refresh.py` itself.
 """
 from __future__ import annotations
 
@@ -84,13 +89,13 @@ class StarterEnvelopeCharacterization(unittest.TestCase):
 
 
 class StarterRefreshCharacterization(unittest.TestCase):
-    def test_defect_source_outage_becomes_false_change(self):
+    def test_fixed_source_outage_is_no_longer_a_change(self):
         ok = evidence("website", "available", "site", "https://x.test", value={"title": "Example AS"}, content_sha256="a" * 64)
         down = evidence("website", "source_error", "site", "https://x.test", note="URLError")
         old = {"organisation_number": "923609016", "evidence": {"website": ok}}
         new = {"organisation_number": "923609016", "evidence": {"website": down}}
         fields = {item["field"] for item in diff_profile(old, new)}
-        self.assertIn("website.title", fields)
+        self.assertNotIn("website.title", fields)
 
 
 if __name__ == "__main__":

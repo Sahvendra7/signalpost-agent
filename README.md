@@ -4,16 +4,25 @@ This is a runnable starting point for the Signalpost company-research challenge.
 
 The public universe contains 411,160 eligible companies. Run the starter on 100 companies before submitting. Larger local tests, including 1,000 or more companies, are encouraged but their precomputed profiles are not submitted or scored.
 
-## What it already does
+## What it does
 
-- reads a batch of Norwegian organisation numbers;
-- anchors identity in the Brønnøysund bulk registry;
-- fetches official financials, roles, group links and registered workplaces;
-- visits the registry-listed website and rejects weak entity matches;
-- emits one terminal JSONL envelope per input;
-- records sources, retrieval times, content hashes, request counts and latency;
-- supports checkpoint/resume and a deterministic refresh replay;
-- includes examples for external-footprint discovery and an evidence-bounded research agent.
+- reads a batch of Norwegian organisation numbers (JSONL, JSON or text) and emits **exactly one terminal
+  envelope per input row**, in input order, in the `OUTPUT_CONTRACT.md` shape (`run`, `claims`,
+  `evidence`, `changes`, `errors`, `operations`);
+- never aborts the batch: malformed or duplicate rows, companies absent from the bulk file, failing
+  sources and parser exceptions become explicit claim states and `errors` entries;
+- anchors identity by organisation number in the Brønnøysund bulk snapshot or, when absent, the live
+  registry; a registry response for any other organisation number is discarded;
+- emits fact-level claims (identity, description, filings with reporting periods, leadership, locations,
+  website, social profiles, group structure, dated role changes), each citing an evidence entry with
+  source URL, retrieval time, SHA-256 of the captured bytes and a claim span;
+- publishes registry-linked website facts only when the exact-entity identity gate passes; otherwise
+  `ambiguous`;
+- optionally stores the exact captured bytes (`--snapshot-dir`) so every hash can be re-verified offline;
+- diffs against a previous run (`--previous-profiles`); outages and reordered lists are never changes;
+- writes a run report with category coverage, module states, error codes, requests, latency and cost.
+
+Design and rationale: `docs/architecture.md`, `docs/research.md`, `docs/source-matrix.md`.
 
 ## First run: try one saved example
 
@@ -61,8 +70,19 @@ uv run python scripts/run_competition_batch.py \
   --profiles-output out/smoke-profiles.jsonl \
   --output out/smoke-envelopes.jsonl \
   --report out/smoke-report.json \
+  --snapshot-dir out/snapshots \
   --run-id smoke-001 \
   --expected-count 100
+
+# Refresh: re-run later against the previous profiles; material changes appear in each envelope.
+uv run python scripts/run_competition_batch.py \
+  --organisations smoke-companies.jsonl \
+  --bulk brreg-enheter.csv \
+  --previous-profiles out/smoke-profiles.jsonl \
+  --profiles-output out/smoke-profiles-2.jsonl \
+  --output out/smoke-envelopes-2.jsonl \
+  --report out/smoke-report-2.json \
+  --run-id smoke-002
 
 # You may test at larger scale locally, but Builderr supplies the official batch for scoring.
 uv run python scripts/run_competition_batch.py \
@@ -78,6 +98,10 @@ uv run --with pytest pytest -q
 ```
 
 The published archive was clean-room verified on August 24, 2026: 104 tests and 5 subtests passed, followed by a one-company live BRREG smoke run with one terminal envelope, five requests and zero silent drops.
+
+`--bulk` is optional (the live registry is used for identity when it is absent) and `--expected-count` is a
+guard that is reported, never a reason to drop rows. The command needs outbound HTTPS to `data.brreg.no`
+and to company websites; with no network every envelope is still emitted, with sources marked `failed`.
 
 Increase `--count` and `--expected-count` together for a larger local test. The 100-row smoke test above is practice only; Builderr supplies the companies for every official run.
 

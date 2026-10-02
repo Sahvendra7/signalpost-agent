@@ -5,7 +5,7 @@ import hashlib
 import time
 import urllib.error
 import urllib.request
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any
 
@@ -21,6 +21,8 @@ class FetchResult:
     content_sha256: str | None = None
     retrieved_at: str | None = None
     effective_at: str | None = None
+    attempts: int = 1
+    raw: bytes | None = field(default=None, repr=False, compare=False)
 
 
 def _utc_now() -> str:
@@ -39,15 +41,15 @@ def fetch_json(url: str, *, timeout: float = 20.0, attempts: int = 3) -> FetchRe
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 raw = response.read()
                 elapsed = int((time.monotonic() - started) * 1000)
-                return FetchResult(url, response.status, elapsed, len(raw), json.loads(raw), content_sha256=hashlib.sha256(raw).hexdigest(), retrieved_at=_utc_now())
+                return FetchResult(url, response.status, elapsed, len(raw), json.loads(raw), content_sha256=hashlib.sha256(raw).hexdigest(), retrieved_at=_utc_now(), attempts=attempt + 1, raw=raw)
         except urllib.error.HTTPError as exc:
             elapsed = int((time.monotonic() - started) * 1000)
             raw = exc.read()
             if exc.code in {404, 410}:
-                return FetchResult(url, exc.code, elapsed, len(raw), error=f"HTTP {exc.code}", content_sha256=hashlib.sha256(raw).hexdigest(), retrieved_at=_utc_now())
+                return FetchResult(url, exc.code, elapsed, len(raw), error=f"HTTP {exc.code}", content_sha256=hashlib.sha256(raw).hexdigest(), retrieved_at=_utc_now(), attempts=attempt + 1, raw=raw)
             last_error = f"HTTP {exc.code}"
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             last_error = type(exc).__name__
         if attempt + 1 < attempts:
             time.sleep(0.4 * (2**attempt))
-    return FetchResult(url, 0, 0, 0, error=last_error, retrieved_at=_utc_now())
+    return FetchResult(url, 0, 0, 0, error=last_error, retrieved_at=_utc_now(), attempts=attempts)
