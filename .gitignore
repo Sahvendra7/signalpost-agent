@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.csv
+*.jsonl
+*.jsonl.gz
+out/
+.pytest_cache/
