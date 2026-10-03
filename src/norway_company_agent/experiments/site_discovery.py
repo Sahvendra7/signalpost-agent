@@ -18,12 +18,7 @@ from .common import Timer
 from ..identity import _tokens, assess_discovered_website_identity
 from ..website import fetch_website, normalize_homepage, _registered_domain
 
-FREE_MAIL = {
-    "gmail.com", "googlemail.com", "hotmail.com", "hotmail.no", "outlook.com", "outlook.no", "live.com", "live.no",
-    "msn.com", "yahoo.com", "yahoo.no", "icloud.com", "me.com", "mac.com", "online.no", "frisurf.no", "start.no",
-    "getmail.no", "broadpark.no", "lyse.net", "altibox.no", "epost.no", "mail.com", "c2i.net", "chello.no",
-    "tele2.no", "telia.no", "sensewave.com", "proton.me", "protonmail.com",
-}
+from ..site_identity import FREE_MAIL  # noqa: E402
 EMAIL_KEYS = ("epostadresse", "epost", "email")
 
 

@@ -11,7 +11,7 @@ from typing import Any
 
 from .contract import ClaimSet, availability_for
 
-CATEGORIES = ("identity", "description", "filings", "leadership", "locations", "websites", "relationships", "activity")
+CATEGORIES = ("identity", "description", "filings", "leadership", "locations", "websites", "public_activity", "hiring", "relationships", "registry_activity")
 
 ROLE_FIELDS = {
     "DAGL": "ceo",
@@ -261,7 +261,7 @@ def _role_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
         if item.get("last_changed") and (latest_change is None or item["last_changed"] > latest_change):
             latest_change = item["last_changed"]
     if latest_change:
-        claims.add("activity", "roles_last_changed", latest_change, record, f"rollegrupper.sistEndret={latest_change}", extra={"event_date": latest_change})
+        claims.add("registry_activity", "roles_last_changed", latest_change, record, f"rollegrupper.sistEndret={latest_change}", extra={"event_date": latest_change})
 
 
 def _location_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
@@ -293,9 +293,11 @@ def _group_claims(claims: ClaimSet, record: dict[str, Any] | None) -> None:
         _module_absent(claims, "relationships", "group_structure", record, "No official group structure was returned")
 
 
-def _website_claims(claims: ClaimSet, record: dict[str, Any] | None, view: dict[str, Any]) -> None:
-    if record is None:
+def _website_claims(claims: ClaimSet, record: dict[str, Any] | None, view: dict[str, Any], *, site_verified: bool = False) -> None:
+    if record is None or (site_verified and record.get("status") != "available"):
         return
+    if site_verified and not ((record.get("value") or {}).get("identity_assessment") or {}).get("publishable"):
+        return  # a V2-verified site supersedes the v1 ambiguous/unavailable state
     value = record.get("value") or {}
     assessment = value.get("identity_assessment") or {}
     if record.get("status") != "available":
@@ -319,6 +321,50 @@ def _website_claims(claims: ClaimSet, record: dict[str, Any] | None, view: dict[
         claims.add("websites", "social_profile", {"platform": link["platform"], "url": link["url"]}, record, f"outbound link on company site: {link['url']}", confidence=min(score, social_score), method="company_site_outbound_link")
 
 
+def _page_record(page_url: str, sha: str | None, retrieved_at: str | None) -> dict[str, Any]:
+    return {"status": "available", "source_url": page_url, "content_sha256": sha, "retrieved_at": retrieved_at, "source_class": "company_site"}
+
+
+def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1_site_published: bool) -> bool:
+    """Claims from the V2 site stage. Returns True when it verified a website."""
+    if record is None:
+        return False
+    value = record.get("value") or {}
+    if record.get("status") != "available":
+        reason = record.get("note") or "No verified company website"
+        if not v1_site_published:
+            claims.absent("public_activity", "site_activity", availability_for(record), reason)
+            claims.absent("hiring", "job_posting", availability_for(record), reason)
+        return False
+    identity_class = value.get("identity_class")
+    reasons = "; ".join(value.get("identity_reasons") or [])
+    first_page = (value.get("pages") or [{}])[0]
+    home = _page_record(value.get("site_url"), first_page.get("content_sha256"), first_page.get("retrieved_at"))
+    confidence = 1.0 if "organisation number" in reasons else 0.95
+    if not v1_site_published:
+        claims.add("websites", "official_website", value.get("site_url"), home, f"{identity_class}: {reasons}", confidence=confidence, method="site_identity_v2", extra={"identity_class": identity_class, "identity_source": value.get("identity_source")})
+    for profile in value.get("profiles") or []:
+        page = _page_record(profile.get("found_on"), profile.get("content_sha256"), profile.get("retrieved_at"))
+        claims.add("websites", "social_profile", {"platform": profile["platform"], "url": profile["url"]}, page, f"outbound link on verified site page {profile.get('found_on')}", confidence=min(confidence, float(profile.get("identity_score") or confidence)), method="verified_site_linked_profile")
+    if value.get("careers_page"):
+        claims.add("websites", "careers_page", value["careers_page"], home, f"careers link on {value.get('site_url')}", confidence=confidence, method="verified_site_link")
+    activities = value.get("activities") or []
+    for item in activities:
+        page = _page_record(item.get("page_url"), item.get("content_sha256"), item.get("retrieved_at"))
+        body = {"title": item.get("title"), "url": item.get("url"), "publication_date": item.get("date"), "date_kind": item.get("date_kind"), "summary": item.get("summary")}
+        claims.add("public_activity", "site_activity", {key: val for key, val in body.items() if val is not None}, page, f"{item.get('method')}: {item.get('date')} {str(item.get('title') or '')[:120]}", confidence=confidence, method=str(item.get("method")), extra={"event_date": item.get("date")})
+    if not activities:
+        claims.absent("public_activity", "site_activity", "not_available", "Verified website checked; no source-dated activity found")
+    jobs = value.get("jobs") or []
+    for job in jobs:
+        page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"))
+        body = {"title": job.get("title"), "url": job.get("url"), "date_posted": job.get("date_posted"), "valid_through": job.get("valid_through")}
+        claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, f"schema.org JobPosting: {job.get('title')}", confidence=confidence, method="jsonld_JobPosting")
+    if not jobs:
+        claims.absent("hiring", "job_posting", "not_available", "Verified website checked; no schema.org JobPosting found")
+    return True
+
+
 def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None = None) -> ClaimSet:
     claims = ClaimSet(snapshot_root=snapshot_root)
     records = profile.get("evidence", {})
@@ -328,7 +374,10 @@ def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None =
     _role_claims(claims, records.get("roles"))
     _location_claims(claims, records.get("locations"))
     _group_claims(claims, records.get("group"))
-    _website_claims(claims, records.get("website"), view)
+    website = records.get("website") or {}
+    v1_published = website.get("status") == "available" and bool(((website.get("value") or {}).get("identity_assessment") or {}).get("publishable"))
+    site_verified = _site_research_claims(claims, records.get("site_research"), v1_site_published=v1_published)
+    _website_claims(claims, records.get("website"), view, site_verified=site_verified and not v1_published)
     return claims
 
 
@@ -347,3 +396,21 @@ def category_coverage(claims: list[dict[str, Any]]) -> dict[str, str]:
         }
         coverage[category] = next((state for state in order if state in states), "not_checked")
     return coverage
+
+
+AREAS = ("filings", "leadership", "locations", "websites", "public_footprint", "hiring")
+
+
+def area_coverage(claims: list[dict[str, Any]]) -> dict[str, bool]:
+    """Builderr's five areas plus hiring split out. public_footprint = site-linked profile or dated site
+    activity (official sample's footprint logic counts profiles; SCORING_MAPPING UNCONFIRMED)."""
+    available = [item for item in claims if item.get("availability") == "available"]
+    has = lambda category, fields=None: any(item.get("category") == category and (fields is None or item["field"] in fields) and not (item["field"].endswith("_count") and item.get("value") == 0) for item in available)  # noqa: E731
+    return {
+        "filings": has("filings"),
+        "leadership": has("leadership"),
+        "locations": has("locations"),
+        "websites": has("websites", {"official_website"}),
+        "public_footprint": has("websites", {"social_profile"}) or has("public_activity"),
+        "hiring": has("hiring"),
+    }

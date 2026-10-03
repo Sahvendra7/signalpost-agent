@@ -157,7 +157,7 @@ def main() -> None:
         "population": len(population),
         "baseline": {key: len(value) for key, value in baseline.items()},
         "gate_v2_discovered": {"candidates": len(gate_rows), "accepted": sum(row["publishable"] for row in gate_rows), "classes": {row["url"]: row["class"] for row in gate_rows}, "requests": requests_gate, "seconds": round(gate_seconds, 2)},
-        "verified_sites": {"total": len(sites), "registry_linked": sum(1 for item in sites.values() if item["class"] == "REGISTRY_LINKED"), "discovered_first_party": sum(1 for item in sites.values() if item["class"] == "FIRST_PARTY")},
+        "verified_sites": {"total": len(sites), "registry_linked": sum(1 for item in sites.values() if item["class"] == "REGISTRY_LINKED"), "discovered_first_party": sum(1 for item in sites.values() if item["class"] == "FIRST_PARTY_CONFIRMED")},
         "free_path": {
             "companies_with_verified_site": len(sites),
             "companies_with_accepted_profile": len(free["profile"]),
@@ -205,16 +205,16 @@ def run_search(eligible, population, profiles, by_org, provider, families, out: 
                         if kind == "WEBSITE_CANDIDATE":
                             domain = _registered_domain(normalize_homepage(result["url"]) or "")
                             if org in by_org and _registered_domain(by_org[org]["site_url"]) == domain:
-                                record["class"] = "FIRST_PARTY (already verified)"
+                                record["class"] = "FIRST_PARTY_CONFIRMED (already verified)"
                             else:
                                 gate = gate_discovered(profile, "https://" + domain + "/")
                                 record.update({"class": gate["class"], "reasons": gate["reasons"], "gate_requests": gate["requests"]})
                         else:
                             record["class"] = kind
                         candidates.append(record)
-                        if record["class"] in {"FIRST_PARTY", "OFFICIALLY_LINKED"}:
+                        if record["class"] in {"FIRST_PARTY_CONFIRMED", "OFFICIALLY_LINKED"}:
                             break
-                accepted = [item for item in candidates if item["class"] in {"FIRST_PARTY", "OFFICIALLY_LINKED"}]
+                accepted = [item for item in candidates if item["class"] in {"FIRST_PARTY_CONFIRMED", "OFFICIALLY_LINKED"}]
                 rows.append({"mode": mode, "organisation_number": org, "family": family, "queries": len(queries), "cost_usd": sum(r.cost_usd for r in responses), "latency_ms": sum(r.latency_ms for r in responses), "results": sum(len(r.results) for r in responses), "candidates": candidates, "accepted": accepted})
         (out / f"search-{family}.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n")
         for mode in ("adaptive", "naive"):

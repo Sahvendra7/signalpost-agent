@@ -16,18 +16,21 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .batch import evidence_terminal_state
-from .claims import category_coverage, claims_from_profile
+from .claims import AREAS, area_coverage, category_coverage, claims_from_profile
 from .contract import ClaimSet, build_envelope, snapshot_relative_path, validate_batch
 from .evidence import evidence, utc_now
-from .http import FetchResult, fetch_json
+from .http import FetchResult, fetch_bytes, fetch_json
 from .identity import apply_website_identity_gate
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .refresh import diff_profile
+from .site_research import SiteSession, research_company_site
 from .sampling import iter_bulk
 from .website import fetch_website
 
-DEFAULT_MODULES = ("registry", "registry_live", "financials", "roles", "group", "locations", "website")
+DEFAULT_MODULES = ("registry", "registry_live", "financials", "roles", "group", "locations", "website", "site_research")
+V1_MODULES = DEFAULT_MODULES[:-1]
+NON_FETCH_MODULES = {"registry", "accounting_obligation", "website", "site_research"}
 BULK_URL = "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv"
 ORG_WEIGHTS = (3, 2, 7, 6, 5, 4, 3, 2)
 
@@ -147,6 +150,24 @@ class SnapshotStore:
         capturing.live = getattr(fetcher, "live", fetcher is fetch_json)  # type: ignore[attr-defined]
         return capturing
 
+    def wrap_bytes(self, fetcher: Callable[..., Any]) -> Callable[..., Any]:
+        """Same content-addressed capture for raw site fetches (ByteFetch)."""
+        if self.root is None:
+            return fetcher
+
+        def capturing(url: str, **kwargs: Any) -> Any:
+            result = fetcher(url, **kwargs)
+            if result.raw is not None and result.content_sha256:
+                path = self.root / snapshot_relative_path(result.content_sha256)
+                if not path.exists():
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    temporary = path.with_name(f"{path.name}.{threading.get_ident()}.tmp")
+                    temporary.write_bytes(result.raw)
+                    temporary.replace(path)
+            return result
+
+        return capturing
+
 
 def _apply_live_identity(profile: dict[str, Any]) -> dict[str, Any] | None:
     """Fill top-level identity from the live registry. A record for another org number is discarded."""
@@ -170,6 +191,7 @@ def research_company(
     *,
     fetcher: Fetcher,
     website_fetcher: WebsiteFetcher,
+    site_session: SiteSession | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
     """Research one company. Never raises: failures become explicit module states and errors."""
     started = time.monotonic()
@@ -180,7 +202,8 @@ def research_company(
         profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note="Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)")
     metrics: list[FetchResult] = []
     website_metrics = {"requests": 0, "bytes": 0, "latencies_ms": []}
-    fetch_modules = set(modules) - {"registry", "accounting_obligation", "website"}
+    fetch_modules = set(modules) - NON_FETCH_MODULES
+    site_requests = 0
     stage = "official"
     # Identity first, then every other source in isolation: one failing source is not a failed company.
     for module in sorted(fetch_modules, key=lambda name: (name != "registry_live", name)):
@@ -204,11 +227,17 @@ def research_company(
             profile["evidence"]["website"] = apply_website_identity_gate(profile, website_record)["website"]
     except Exception as exc:  # isolation boundary: one bad company/source never ends the batch
         errors.append({"code": "pipeline_exception", "stage": stage, "message": f"{type(exc).__name__}: {str(exc)[:200]}", "trace_tail": traceback.format_exc(limit=2)[-400:]})
+    if "site_research" in modules and site_session is not None and identity_anchored(profile):
+        try:
+            site_record, site_requests = _site_research(profile, site_session)
+            profile["evidence"]["site_research"] = site_record
+        except Exception as exc:  # own boundary: website work never costs the official facts
+            errors.append({"code": "pipeline_exception", "stage": "site_research", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     for module in modules:
         if module not in profile["evidence"]:
             profile["evidence"][module] = evidence(module, "source_error", "pipeline", "https://data.brreg.no/", note=f"Not completed: {errors[-1]['code'] if errors else 'unknown'}")
     operations = {
-        "requests": sum(item.attempts for item in metrics) + int(website_metrics.get("requests", 0)),
+        "requests": sum(item.attempts for item in metrics) + int(website_metrics.get("requests", 0)) + site_requests,
         "bytes": sum(item.bytes_received for item in metrics) + int(website_metrics.get("bytes", 0)),
         "latencies_ms": [item.elapsed_ms for item in metrics] + list(website_metrics.get("latencies_ms", [])),
         "runtime_ms": int((time.monotonic() - started) * 1000),
@@ -216,6 +245,23 @@ def research_company(
     }
     profile["run_metrics"] = {key: value for key, value in operations.items() if key != "latencies_ms"}
     return profile, operations, errors
+
+
+def _site_research(profile: dict[str, Any], session: SiteSession) -> tuple[dict[str, Any], int]:
+    website = profile["evidence"].get("website") or {}
+    value = website.get("value") or {}
+    registry_url = value.get("final_url") if website.get("status") == "available" and (value.get("identity_assessment") or {}).get("publishable") else None
+    result = research_company_site(profile, session, registry_verified_url=registry_url)
+    body = {key: getattr(result, key) for key in result.__dataclass_fields__}
+    if result.status == "verified":
+        first = result.pages[0] if result.pages else {}
+        record = evidence("site_research", "available", "company_site", result.site_url, value=body, content_sha256=first.get("content_sha256"), retrieved_at=first.get("retrieved_at"))
+    elif result.status == "budget_exhausted":
+        record = evidence("site_research", "source_error", "company_site", "https://data.brreg.no/enhetsregisteret/api/enheter", value=body, note="budget_exhausted before a website could be verified")
+    else:
+        tried = ", ".join(f"{item['source']}:{item.get('outcome')}" for item in result.candidates) or "no official pointer or resolvable name domain"
+        record = evidence("site_research", "not_found", "company_site", "https://data.brreg.no/enhetsregisteret/api/enheter", value=body, note=f"No verified company website ({tried})")
+    return record, result.requests
 
 
 def identity_anchored(profile: dict[str, Any]) -> bool:
@@ -236,12 +282,15 @@ def run_batch(
     snapshot_root: Path | None = None,
     expected_count: int | None = None,
     reuse_profiles: dict[str, dict[str, Any]] | None = None,
+    site_fetcher: Callable[..., Any] = fetch_bytes,
+    resolver: Callable[[str], bool] | None = None,
 ) -> dict[str, Any]:
     modules = list(modules or DEFAULT_MODULES)
     batch_started_at = utc_now()
     batch_started = time.monotonic()
     store = SnapshotStore(snapshot_root)
     wrapped = store.wrap(fetcher)
+    session = SiteSession(fetcher=store.wrap_bytes(site_fetcher), resolver=resolver) if "site_research" in modules else None
     unique_orgs = list(dict.fromkeys(row.organisation_number for row in rows if row.organisation_number))
     bulk_profiles, registry_metadata = load_bulk_profiles(bulk_path, set(unique_orgs)) if "registry" in modules else ({}, {"bulk": "not requested"})
 
@@ -254,7 +303,7 @@ def run_batch(
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0, "resumed": True}
             return org, {"profile": reused, "operations": operations, "errors": [], "started_at": company_started_at, "completed_at": utc_now()}
         try:
-            profile, operations, errors = research_company(org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher)
+            profile, operations, errors = research_company(org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session)
         except Exception as exc:  # second boundary: research_company should not raise, but never trust it
             profile = {"organisation_number": org, "evidence": {}}
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0}
@@ -341,6 +390,7 @@ def _envelope_for_row(
             "input_organisation_number": _input_key(row),
             "input_position": row.position,
             "category_coverage": category_coverage(claim_set.claims),
+            "area_coverage": area_coverage(claim_set.claims),
             "modules": module_states,
         },
     )
@@ -387,6 +437,9 @@ def batch_report(
         "registry": registry_metadata,
         "category_coverage": {category: dict(counter) for category, counter in sorted(coverage.items())},
         "category_available_rate": {category: round(counter.get("available", 0) / count, 4) for category, counter in sorted(coverage.items())},
+        "area_coverage": {area: sum(1 for item in envelopes if (item.get("area_coverage") or {}).get(area)) for area in AREAS},
+        # Builderr's five areas: filings, leadership, locations, websites, hiring & public activity.
+        "companies_all_five_areas": sum(1 for item in envelopes if item.get("area_coverage") and all(item["area_coverage"].get(area) for area in ("filings", "leadership", "locations", "websites")) and (item["area_coverage"].get("public_footprint") or item["area_coverage"].get("hiring"))),
         "module_states": {module: dict(counter) for module, counter in sorted(module_states.items())},
         "error_codes": dict(error_codes),
         "claims": {

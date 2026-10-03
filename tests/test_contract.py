@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from norway_company_agent.contract import AVAILABILITY_STATES, ClaimSet, validate_envelope  # noqa: E402
 from norway_company_agent.evidence import evidence  # noqa: E402
-from norway_company_agent.http import FetchResult  # noqa: E402
+from norway_company_agent.http import ByteFetch, FetchResult  # noqa: E402
 from norway_company_agent.pipeline import InputRow, mod11_valid, read_input_rows, run_batch  # noqa: E402
 from norway_company_agent.refresh import diff_profile  # noqa: E402
 
@@ -140,7 +140,13 @@ def by_field(envelope: dict, field: str) -> list[dict]:
     return [claim for claim in envelope["claims"] if claim["field"] == field]
 
 
+def offline_site(url, **kwargs):
+    return ByteFetch(url, 404, 0, b"", "text/html", {}, None, NOW, 1, "HTTP 404")
+
+
 def run(orgs, fetcher, website_fetcher=None, **kwargs):
+    kwargs.setdefault("site_fetcher", offline_site)
+    kwargs.setdefault("resolver", lambda host: False)
     return run_batch(rows(*orgs), run_id="t", fetcher=fetcher, website_fetcher=website_fetcher or make_website_fetcher({}), workers=4, **kwargs)
 
 
@@ -232,7 +238,7 @@ class BatchContractTests(unittest.TestCase):
 
     def test_concurrent_identical_snapshots_do_not_race(self):
         with tempfile.TemporaryDirectory() as directory:
-            output = run_batch(rows(ORG_A, ORG_B, ORG_C), run_id="t", fetcher=FakeBrreg({ORG_A: entity_body(ORG_A, "A AS"), ORG_B: entity_body(ORG_B, "B AS"), ORG_C: entity_body(ORG_C, "C AS")}), website_fetcher=make_website_fetcher({}), workers=8, snapshot_root=Path(directory))
+            output = run_batch(rows(ORG_A, ORG_B, ORG_C), run_id="t", fetcher=FakeBrreg({ORG_A: entity_body(ORG_A, "A AS"), ORG_B: entity_body(ORG_B, "B AS"), ORG_C: entity_body(ORG_C, "C AS")}), website_fetcher=make_website_fetcher({}), workers=8, snapshot_root=Path(directory), site_fetcher=offline_site, resolver=lambda host: False)
             self.assertEqual([error for item in output["envelopes"] for error in item["errors"]], [])
             self.assertFalse(list(Path(directory).rglob("*.tmp")))
 
@@ -329,7 +335,7 @@ class BatchContractTests(unittest.TestCase):
             path = Path(directory) / "orgs.txt"
             path.write_text(f"{ORG_A}\n12345\n{ORG_B}\n", encoding="utf-8")
             parsed = read_input_rows(path)
-        output = run_batch(parsed, run_id="t", fetcher=self.brreg, website_fetcher=make_website_fetcher({}))
+        output = run_batch(parsed, run_id="t", fetcher=self.brreg, website_fetcher=make_website_fetcher({}), site_fetcher=offline_site, resolver=lambda host: False)
         self.assert_contract(output, [ORG_A, "12345", ORG_B])
         self.assertEqual(output["envelopes"][1]["run"]["terminal_status"], "failed")
         self.assertEqual(output["envelopes"][1]["errors"][0]["code"], "invalid_organisation_number")

@@ -123,7 +123,7 @@ DIRECTORY_HOSTS = BLOCKED_DISCOVERY_HOSTS - {"linkedin.com", "facebook.com", "in
 
 
 def classify_search_result(url: str, officially_linked_profiles: set[str]) -> str:
-    """Cheap pre-crawl class of a search result. Websites still need classify_site() before FIRST_PARTY."""
+    """Cheap pre-crawl class of a search result. Websites still need classify_site() before FIRST_PARTY_CONFIRMED."""
     from ..website import normalize_social_url
 
     social = normalize_social_url(url)

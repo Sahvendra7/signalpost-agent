@@ -50,13 +50,13 @@ class GateV2Tests(unittest.TestCase):
         company = {"organisation_number": "986757368", "name": "ANNEN VRI AS", "business_address": {"adresse": ["Øvre Smebyveg 4"], "postnummer": "2870"}}
         html = "<html><head><title>Annen Vri – Frisørsalong</title></head><body><footer>E-post: post@annenvri.no Adresse: Øvre Smebyveg 4, 2870 DOKKA</footer></body></html>"
         verdict = classify_site(company, "annenvri.no", [html])
-        self.assertEqual(verdict["class"], "FIRST_PARTY")
+        self.assertEqual(verdict["class"], "FIRST_PARTY_CONFIRMED")
         self.assertTrue(verdict["reasons"][0].startswith("C2"))
 
     def test_org_number_in_footer_is_first_party(self):
         company = {"organisation_number": "920772099", "name": "SPIREN DESIGN AS"}
         html = "<html><head><title>Spiren Design AS</title></head><body><footer>Spiren Design AS Org.nr: 920 772 099</footer></body></html>"
-        self.assertEqual(classify_site(company, "spirendesign.no", [html])["class"], "FIRST_PARTY")
+        self.assertEqual(classify_site(company, "spirendesign.no", [html])["class"], "FIRST_PARTY_CONFIRMED")
 
     def test_directory_listing_many_org_numbers_is_rejected(self):
         company = {"organisation_number": "920772099", "name": "SPIREN DESIGN AS"}
