@@ -14,6 +14,7 @@ match whose orgnr differs is a rejected false employer match.
 """
 from __future__ import annotations
 
+import re
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from typing import Any
@@ -23,6 +24,7 @@ from ..http import fetch_bytes
 from ..identity import _tokens
 
 FEED_HOST = "https://pam-stilling-feed.nav.no"
+_JWT = re.compile(r"[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+")
 
 
 def public_token(meter: Meter) -> str | None:
@@ -30,11 +32,14 @@ def public_token(meter: Meter) -> str | None:
     if response.status != 200 or not response.raw:
         return None
     text = response.raw.decode("utf-8", errors="replace").strip()
+    # Live format (2026-10-03): "Current public token for Nav Job Vacancy Feed:\n<JWT>".
     for line in text.splitlines():
         line = line.strip()
         if line.lower().startswith("bearer "):
-            return line.split(None, 1)[1]
-    return text if "." in text and " " not in text else None
+            line = line.split(None, 1)[1]
+        if _JWT.fullmatch(line):
+            return line
+    return None
 
 
 def scan_active_ads(meter: Meter, token: str, *, since_days: int = 183, page_size: int = 10000, max_pages: int = 300) -> dict[str, Any]:
@@ -67,6 +72,8 @@ def scan_active_ads(meter: Meter, token: str, *, since_days: int = 183, page_siz
             stop_reason = "end_of_feed"
             break
         url = FEED_HOST + body["next_url"] if body["next_url"].startswith("/") else body["next_url"]
+        # next_url carries no pageSize; without it NAV falls back to 1,000 items per page.
+        url += ("&" if "?" in url else "?") + f"pageSize={page_size}"
         headers = {key: value for key, value in headers.items() if key != "If-Modified-Since"}
     active = {uuid: item for uuid, item in latest.items() if item.get("status") == "ACTIVE"}
     return {"active": active, "pages": pages, "entries": entries, "unique_ads": len(latest), "active_ads": len(active), "stop_reason": stop_reason}
@@ -128,7 +135,7 @@ def run_company(profile: dict[str, Any], index: dict[tuple[str, ...], list[dict[
             if detail.get("status") not in (None, "ACTIVE") or (expires and expires < now.strftime("%Y-%m-%dT%H:%M:%S")):
                 expired += 1
                 continue
-            jobs.append({"uuid": item["uuid"], "title": content.get("title"), "published": content.get("published"), "expires": content.get("expires"), "employer_orgnr": orgnr, "employer_scope": "entity" if orgnr in main_orgs else "subunit", "employer_homepage": employer.get("homepage"), "link": content.get("link")})
+            jobs.append({"uuid": item["uuid"], "title": content.get("title"), "published": content.get("published"), "expires": content.get("expires"), "employer_orgnr": orgnr, "employer_name": employer.get("name"), "employer_scope": "entity" if orgnr in main_orgs else "subunit", "employer_homepage": employer.get("homepage"), "link": content.get("link"), "source_url": url, "retrieved_at": response.retrieved_at, "content_sha256": response.content_sha256})
             evidence.append({"source_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at, "claim_span": f"employer.orgnr={orgnr} title={str(content.get('title'))[:80]}"})
     return {
         "organisation_number": profile["organisation_number"],
@@ -145,5 +152,5 @@ def run_company(profile: dict[str, Any], index: dict[tuple[str, ...], list[dict[
         "employer_homepages": sorted({job["employer_homepage"] for job in jobs if job.get("employer_homepage")}),
         "evidence_items": len(evidence),
         "evidence_complete": sum(evidence_complete(item) for item in evidence),
-        "sample_jobs": jobs[:3],
+        "accepted_jobs": jobs,
     }

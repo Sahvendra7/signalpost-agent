@@ -159,6 +159,11 @@ class NavJobsTests(unittest.TestCase):
     def test_public_token_parsing(self):
         meter = Meter(Router([(lambda u: True, lambda url, kw: byte_result(url, 200, raw=b"Bearer abc.def.ghi\n", content_type="text/plain"))]))
         self.assertEqual(nav_jobs.public_token(meter), "abc.def.ghi")
+        live_shape = b"Current public token for Nav Job Vacancy Feed:\neyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ4In0.c2lnbmF0dXJl"
+        meter = Meter(Router([(lambda u: True, lambda url, kw: byte_result(url, 200, raw=live_shape, content_type="text/plain"))]))
+        self.assertEqual(nav_jobs.public_token(meter), "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ4In0.c2lnbmF0dXJl")
+        meter = Meter(Router([(lambda u: True, lambda url, kw: byte_result(url, 200, raw=b"Service unavailable", content_type="text/plain"))]))
+        self.assertIsNone(nav_jobs.public_token(meter))
 
     def test_scan_keeps_latest_state_and_follows_pages(self):
         pages = {
@@ -171,6 +176,7 @@ class NavJobsTests(unittest.TestCase):
         self.assertEqual(scan["stop_reason"], "end_of_feed")
         self.assertIn("If-Modified-Since", router.calls[0][1]["headers"])
         self.assertTrue(router.calls[0][0].endswith("pageSize=10000"))
+        self.assertTrue(router.calls[1][0].endswith("/api/v1/feed/p2?pageSize=10000"), "page size must persist past page 1")
 
     def test_orgnr_verification_rejects_namesakes_and_accepts_subunits(self):
         active = {
@@ -188,6 +194,9 @@ class NavJobsTests(unittest.TestCase):
         self.assertEqual(result["jobs_via_subunit_orgnr"], 1)
         self.assertEqual(result["expired_or_inactive"], 1)
         self.assertEqual(router.calls[0][1]["headers"]["Authorization"], "Bearer tok")
+        job = result["accepted_jobs"][0]
+        for key in ("employer_orgnr", "employer_name", "source_url", "published", "expires", "retrieved_at", "content_sha256"):
+            self.assertTrue(job.get(key), key)
 
 
 def site(title="", text="", identity="", pages=None, status="available"):
