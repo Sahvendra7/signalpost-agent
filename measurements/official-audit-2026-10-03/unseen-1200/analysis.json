@@ -1,0 +1,121 @@
+{
+ "process": {
+  "exit": 0,
+  "wall_s": 1336.5,
+  "peak_rss_mib": 398.7,
+  "user_cpu_s": 190.0,
+  "sys_cpu_s": 16.0
+ },
+ "peak_rss_sampled_mib": 381.3,
+ "report_runtime_s": 1334.131,
+ "input_rows": 1200,
+ "emitted": 1200,
+ "validation": {
+  "one_envelope_per_input_row": true,
+  "envelopes_follow_input_order": true,
+  "all_terminal": true,
+  "all_envelopes_valid": true
+ },
+ "validation_passed": true,
+ "order_preserved": true,
+ "terminal_status_counts": {
+  "completed": 1200
+ },
+ "requests_total": 8773,
+ "requests_per_company": 7.31,
+ "bytes_total_mb": 62.9,
+ "request_latency": {
+  "n": 6397,
+  "p50_ms": 661.0,
+  "p95_ms": 855.0,
+  "max_ms": 12368
+ },
+ "company_runtime": {
+  "mean": 8.75,
+  "p50": 3.583,
+  "p90": 22.711,
+  "p95": 31.436,
+  "p99": 53.163,
+  "max": 83.185,
+  "sum": 10502
+ },
+ "companies_over_s": {
+  "30": 82,
+  "45": 34,
+  "60": 6,
+  "90": 0
+ },
+ "requests_tail": {
+  "p50": 5,
+  "p95": 16,
+  "max": 23
+ },
+ "share_of_runtime_in_slowest_10pct": 0.431,
+ "model_sum_over_8_s": 1312.7,
+ "straggler_s": 21.4,
+ "area_coverage": {
+  "filings": 1200,
+  "leadership": 1198,
+  "locations": 1199,
+  "websites": 121,
+  "public_footprint": 76,
+  "hiring": 1
+ },
+ "companies_all_five_areas": 77,
+ "category_available_rate": {
+  "description": 0.9992,
+  "filings": 1.0,
+  "hiring": 0.0008,
+  "identity": 1.0,
+  "leadership": 0.9983,
+  "locations": 0.9992,
+  "public_activity": 0.0192,
+  "registry_activity": 0.9983,
+  "relationships": 0.0775,
+  "websites": 0.1683
+ },
+ "module_states": {
+  "financials": {
+   "complete": 1196,
+   "source_error": 4
+  },
+  "group": {
+   "not_found": 1107,
+   "complete": 93
+  },
+  "locations": {
+   "complete": 1200
+  },
+  "registry": {
+   "not_found": 1200
+  },
+  "registry_live": {
+   "complete": 1200
+  },
+  "roles": {
+   "complete": 1199,
+   "not_found": 1
+  },
+  "site_research": {
+   "complete": 121,
+   "not_found": 1079
+  },
+  "website": {
+   "not_found": 1063,
+   "complete": 105,
+   "source_error": 29,
+   "blocked_policy": 2,
+   "blocked_robots": 1
+  }
+ },
+ "error_codes": {},
+ "claim_states": {
+  "available": 47942,
+  "not_available": 5510,
+  "failed": 32,
+  "ambiguous": 50,
+  "blocked": 3
+ },
+ "available_claims": 47942,
+ "evidence_total": 47871
+}

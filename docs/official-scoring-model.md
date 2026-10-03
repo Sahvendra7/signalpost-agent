@@ -139,7 +139,7 @@ fact.
 |---|---|---|---|---|
 | 4 × 100 (V2 comparison, `docs/v2-results.md`) | 46/400 (11.5%) | 31/400 (7.75%) | 0 | 31 |
 | 150 unseen (this audit) | 12/150 (8.0%) | 8/150 (5.3%) | 0 | 8 |
-| 1,200 unseen (this audit) | see `official-submission-checklist.md` §C | | | |
+| 1,200 unseen (this audit) | 121/1,200 (10.1%) | 76/1,200 (6.3%) | 1/1,200 (0.08%) | 77 |
 
 Structural ceiling: only **10.91%** of the 411,160-company universe has a registry website. Our non-search
 discovery lifts verified sites slightly above that share of companies. `SAMPLE` (Builderr's reference, top
