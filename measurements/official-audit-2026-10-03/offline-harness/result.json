@@ -1,0 +1,169 @@
+{
+ "universe_rows_known": 411160,
+ "peak_rss_mib": 205.2,
+ "results": [
+  {
+   "case": "unseen_1200_jsonl",
+   "input_lines": 1200,
+   "rows_read": 1200,
+   "envelopes": 1200,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "completed": 1158,
+    "failed": 42
+   },
+   "error_codes": {
+    "pipeline_exception": 119,
+    "identity_unresolved": 42,
+    "identity_mismatch": 15
+   },
+   "seconds": 2.54
+  },
+  {
+   "case": "universe_rows_1100",
+   "input_lines": 1100,
+   "rows_read": 1100,
+   "envelopes": 1100,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "completed": 1075,
+    "failed": 25
+   },
+   "error_codes": {
+    "pipeline_exception": 95,
+    "identity_unresolved": 25,
+    "identity_mismatch": 7
+   },
+   "seconds": 2.0
+  },
+  {
+   "case": "dirty_157",
+   "input_lines": 157,
+   "rows_read": 156,
+   "envelopes": 156,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "completed": 151,
+    "failed": 5
+   },
+   "error_codes": {
+    "pipeline_exception": 7,
+    "identity_unresolved": 3,
+    "invalid_organisation_number": 2,
+    "duplicate_input": 2,
+    "checksum_mismatch": 1
+   },
+   "seconds": 0.22
+  },
+  {
+   "case": "text_2000",
+   "input_lines": 2000,
+   "rows_read": 2000,
+   "envelopes": 2000,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "completed": 1934,
+    "failed": 66
+   },
+   "error_codes": {
+    "identity_unresolved": 66,
+    "pipeline_exception": 266,
+    "identity_mismatch": 15
+   },
+   "seconds": 4.25
+  },
+  {
+   "case": "key_orgnr",
+   "input_lines": 5,
+   "rows_read": 5,
+   "envelopes": 5,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "failed": 5
+   },
+   "error_codes": {
+    "invalid_organisation_number": 5
+   },
+   "seconds": 0.0
+  },
+  {
+   "case": "key_org",
+   "input_lines": 5,
+   "rows_read": 5,
+   "envelopes": 5,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "failed": 5
+   },
+   "error_codes": {
+    "invalid_organisation_number": 5
+   },
+   "seconds": 0.0
+  },
+  {
+   "case": "key_organization_number",
+   "input_lines": 5,
+   "rows_read": 5,
+   "envelopes": 5,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "failed": 5
+   },
+   "error_codes": {
+    "invalid_organisation_number": 5
+   },
+   "seconds": 0.0
+  },
+  {
+   "case": "key_organisationNumber",
+   "input_lines": 5,
+   "rows_read": 5,
+   "envelopes": 5,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "failed": 5
+   },
+   "error_codes": {
+    "invalid_organisation_number": 5
+   },
+   "seconds": 0.0
+  },
+  {
+   "case": "csv_header",
+   "input_lines": 6,
+   "rows_read": 6,
+   "envelopes": 6,
+   "one_per_row": true,
+   "order_preserved": true,
+   "validation_passed": true,
+   "terminal_status_counts": {
+    "failed": 1,
+    "completed": 5
+   },
+   "error_codes": {
+    "invalid_organisation_number": 1
+   },
+   "seconds": 0.01
+  },
+  {
+   "case": "bulk_plain_csv",
+   "outcome": "raised BadGzipFile: Not a gzipped file (b'or')"
+  }
+ ]
+}

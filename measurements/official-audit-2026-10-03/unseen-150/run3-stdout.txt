@@ -1,0 +1,23 @@
+{
+  "run_id": "audit-unseen-150-refresh",
+  "input_rows": 150,
+  "emitted_envelopes": 150,
+  "terminal_status_counts": {
+    "completed": 150
+  },
+  "category_available_rate": {
+    "description": 0.9933,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 0.9933,
+    "locations": 0.9933,
+    "public_activity": 0.0267,
+    "registry_activity": 0.9933,
+    "relationships": 0.04,
+    "websites": 0.14
+  },
+  "runtime_ms": 173140,
+  "validation_passed": true
+}
+{"exit": 0, "wall_s": 174.5, "peak_rss_mib": 193.8, "user_cpu_s": 23.1, "sys_cpu_s": 1.8}
