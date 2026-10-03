@@ -1,0 +1,18 @@
+{
+ "input_companies": 100,
+ "input_unique": 100,
+ "terminal_envelopes": 100,
+ "order_preserved": true,
+ "duplicate_envelopes": 0,
+ "run_status_values": [
+  "completed"
+ ],
+ "evidence_items": 3947,
+ "available_claims_without_evidence": 0,
+ "dangling_evidence_refs": 0,
+ "evidence_without_source_url": 0,
+ "evidence_without_retrieved_at": 0,
+ "evidence_without_sha256": 0,
+ "changes_in_first_run": 0,
+ "errors": 0
+}

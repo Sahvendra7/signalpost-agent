@@ -1,0 +1,3131 @@
+[
+  {
+    "organisation_number": "917922896",
+    "requests": 3,
+    "runtime_ms": 2384,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://eiendom.no/",
+        "domain": "eiendom.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://www.eiendom.no/",
+        "content_sha256": "02f7c68b7221e98a6756b3ef52b7018900d4c6584dae822d22b1840b8107c692"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "989215531",
+    "requests": 1,
+    "runtime_ms": 149,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://johanholding.no/",
+        "domain": "johanholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://johan-holding.no/",
+        "domain": "johan-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "916602200",
+    "requests": 1,
+    "runtime_ms": 136,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://sfactr.no/",
+        "domain": "sfactr.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "936945201",
+    "requests": 9,
+    "runtime_ms": 9387,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://brattsjy.no/",
+        "domain": "brattsjy.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://brattsjy.no/",
+        "content_sha256": "6abc820f5f5d4b78797903dba58dc438ab82a228bbb846ffa932c7a476c1d14c"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "930944793",
+    "requests": 1,
+    "runtime_ms": 45,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://hrasholding.no/",
+        "domain": "hrasholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://hras-holding.no/",
+        "domain": "hras-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "990970599",
+    "requests": 1,
+    "runtime_ms": 45,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://skonnordtjernetbarnehage.no/",
+        "domain": "skonnordtjernetbarnehage.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://skonnordtjernet-barnehage.no/",
+        "domain": "skonnordtjernet-barnehage.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "928590445",
+    "requests": 1,
+    "runtime_ms": 31,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://karmoybatutstyr.no/",
+        "domain": "karmoybatutstyr.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://karmoy-batutstyr.no/",
+        "domain": "karmoy-batutstyr.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "913142462",
+    "requests": 3,
+    "runtime_ms": 24075,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://fossinnovations.no/",
+        "domain": "fossinnovations.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://foss-innovations.no/",
+        "domain": "foss-innovations.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "935094674",
+    "requests": 3,
+    "runtime_ms": 22493,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://kaffepause.no/",
+        "domain": "kaffepause.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "926899929",
+    "requests": 1,
+    "runtime_ms": 30,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://holboholding.no/",
+        "domain": "holboholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://holbo-holding.no/",
+        "domain": "holbo-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "924735848",
+    "requests": 1,
+    "runtime_ms": 52,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://davvinnorway.no/",
+        "domain": "davvinnorway.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://davvin-norway.no/",
+        "domain": "davvin-norway.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "934179870",
+    "requests": 3,
+    "runtime_ms": 1755,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://lokaltre.no/",
+        "domain": "lokaltre.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://lokal-tre.no/",
+        "domain": "lokal-tre.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "980398277",
+    "requests": 3,
+    "runtime_ms": 891,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://stoplight.no/",
+        "domain": "stoplight.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "997953509",
+    "requests": 1,
+    "runtime_ms": 15,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://silvanus.no/",
+        "domain": "silvanus.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "924467509",
+    "requests": 1,
+    "runtime_ms": 258,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://hovdenverge.no/",
+        "domain": "hovdenverge.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://hovden-verge.no/",
+        "domain": "hovden-verge.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "820776372",
+    "requests": 3,
+    "runtime_ms": 23772,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://think.no/",
+        "domain": "think.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "989259504",
+    "requests": 1,
+    "runtime_ms": 38,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://langtindinvest.no/",
+        "domain": "langtindinvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://langtind-invest.no/",
+        "domain": "langtind-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "933037908",
+    "requests": 1,
+    "runtime_ms": 55,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://imengros.no/",
+        "domain": "imengros.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://im-engros.no/",
+        "domain": "im-engros.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "920772099",
+    "requests": 5,
+    "runtime_ms": 8418,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "verified",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [
+      "name_domain_guess"
+    ],
+    "covered": true,
+    "verified_url": "https://spirendesign.no/",
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 1,
+    "evidence_complete": 1,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://spirendesign.no/",
+        "domain": "spirendesign.no",
+        "outcome": "verified",
+        "score": 1.0,
+        "reason": "organisation number appears on a captured page of the discovered site",
+        "final_url": "https://spirendesign.no/",
+        "content_sha256": "08a519db74ec9365e8dc39bd0fae164e3d9c8e81e844adcadd8bfaf711d2dd35"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://spiren-design.no/",
+        "domain": "spiren-design.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "925477486",
+    "requests": 1,
+    "runtime_ms": 144,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://kjellerasenbolig.no/",
+        "domain": "kjellerasenbolig.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://kjellerasen-bolig.no/",
+        "domain": "kjellerasen-bolig.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "929635108",
+    "requests": 3,
+    "runtime_ms": 17578,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://godtselskap.no/",
+        "domain": "godtselskap.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://godt-selskap.no/",
+        "domain": "godt-selskap.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "935794722",
+    "requests": 3,
+    "runtime_ms": 2144,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://eidsvollbilvask.no/",
+        "domain": "eidsvollbilvask.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://eidsvoll-bilvask.no/",
+        "domain": "eidsvoll-bilvask.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "935610680",
+    "requests": 7,
+    "runtime_ms": 8195,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://drage.no/",
+        "domain": "drage.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://www.drage.no/",
+        "content_sha256": "beb56c7724dc95324a038715879ce9677fa9a90fde39f37024895ea17298f23d"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "985096473",
+    "requests": 1,
+    "runtime_ms": 125,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://ankertunet.no/",
+        "domain": "ankertunet.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "914719704",
+    "requests": 3,
+    "runtime_ms": 2089,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://frisknaa.no/",
+        "domain": "frisknaa.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://frisknaa.no/",
+        "content_sha256": "7a94535a703179bd58ced39fe9a452f9cb8ba0f8196474ef7fa13e767040d626"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://homeopatkinesiologsiritilset.no/",
+        "domain": "homeopatkinesiologsiritilset.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://homeopat-kinesiolog-siri-tilset.no/",
+        "domain": "homeopat-kinesiolog-siri-tilset.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "822156002",
+    "requests": 1,
+    "runtime_ms": 46,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://kvernelandnaeringsparkix.no/",
+        "domain": "kvernelandnaeringsparkix.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://kverneland-naeringspark-ix.no/",
+        "domain": "kverneland-naeringspark-ix.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "997771397",
+    "requests": 1,
+    "runtime_ms": 150,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://ultraeiendom.no/",
+        "domain": "ultraeiendom.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://ultra-eiendom.no/",
+        "domain": "ultra-eiendom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "921136501",
+    "requests": 7,
+    "runtime_ms": 7308,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "verified",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [
+      "name_domain_guess"
+    ],
+    "covered": true,
+    "verified_url": "https://www.lyserom.no/",
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 1,
+    "evidence_complete": 1,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://lyserom.no/",
+        "domain": "lyserom.no",
+        "outcome": "verified",
+        "score": 1.0,
+        "reason": "organisation number appears on a captured page of the discovered site",
+        "final_url": "https://www.lyserom.no/",
+        "content_sha256": "8d1d63e8bc088ecc569af7daaae33108ccf5848b4a57553e5096e68d5360c16a"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://lyse-rom.no/",
+        "domain": "lyse-rom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "986497447",
+    "requests": 1,
+    "runtime_ms": 50,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://bruusgaardvika.no/",
+        "domain": "bruusgaardvika.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://bruusgaard-vika.no/",
+        "domain": "bruusgaard-vika.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "914309239",
+    "requests": 1,
+    "runtime_ms": 165,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://johsrasmussen.no/",
+        "domain": "johsrasmussen.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://johs-rasmussen.no/",
+        "domain": "johs-rasmussen.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "998099811",
+    "requests": 3,
+    "runtime_ms": 1102,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://verizon.net/",
+        "domain": "verizon.net",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://bircheparkensameie.no/",
+        "domain": "bircheparkensameie.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://bircheparken-sameie.no/",
+        "domain": "bircheparken-sameie.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "915635369",
+    "requests": 1,
+    "runtime_ms": 139,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://kirinvesteringer.no/",
+        "domain": "kirinvesteringer.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://kir-investeringer.no/",
+        "domain": "kir-investeringer.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "927818094",
+    "requests": 11,
+    "runtime_ms": 10430,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "verified",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [
+      "name_domain_guess"
+    ],
+    "covered": true,
+    "verified_url": "https://www.blioptimal.no/",
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 1,
+    "evidence_complete": 1,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://blioptimal.no/",
+        "domain": "blioptimal.no",
+        "outcome": "verified",
+        "score": 0.95,
+        "reason": "full legal name on homepage plus registered postcode and street on the site",
+        "final_url": "https://www.blioptimal.no/",
+        "content_sha256": "ee6a2e5cf2bba8832fafb6ce896ff947f3cc6f495abb87f869318a02fb158294"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://bli-optimal.no/",
+        "domain": "bli-optimal.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "911763400",
+    "requests": 1,
+    "runtime_ms": 50,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://bsmalvedlikehold.no/",
+        "domain": "bsmalvedlikehold.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://bs-mal-vedlikehold.no/",
+        "domain": "bs-mal-vedlikehold.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "990568774",
+    "requests": 1,
+    "runtime_ms": 145,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://gehdrift.no/",
+        "domain": "gehdrift.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://geh-drift.no/",
+        "domain": "geh-drift.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "997791231",
+    "requests": 5,
+    "runtime_ms": 5788,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://kurtsimonsen.no/",
+        "domain": "kurtsimonsen.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://storbilsenter.no/",
+        "content_sha256": "ec6820ff64e783d8811418851fc35e0a7d13b319af215ff0b2b0fb7f15b028b9"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://simonsenholding.no/",
+        "domain": "simonsenholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://simonsen-holding.no/",
+        "domain": "simonsen-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "916713223",
+    "requests": 1,
+    "runtime_ms": 18,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://kognitivklinikken.no/",
+        "domain": "kognitivklinikken.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "933217469",
+    "requests": 1,
+    "runtime_ms": 59,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://amandusinvestment.no/",
+        "domain": "amandusinvestment.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://amandus-investment.no/",
+        "domain": "amandus-investment.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "931882481",
+    "requests": 3,
+    "runtime_ms": 12633,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://illinginvest.no/",
+        "domain": "illinginvest.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://illing-invest.no/",
+        "domain": "illing-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "923881654",
+    "requests": 1,
+    "runtime_ms": 268,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://sameietstadionkvartalet.no/",
+        "domain": "sameietstadionkvartalet.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://sameiet-stadionkvartalet.no/",
+        "domain": "sameiet-stadionkvartalet.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "934427971",
+    "requests": 1,
+    "runtime_ms": 145,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://bzinvest.no/",
+        "domain": "bzinvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://bz-invest.no/",
+        "domain": "bz-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "976744667",
+    "requests": 7,
+    "runtime_ms": 11370,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "verified",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [
+      "name_domain_guess"
+    ],
+    "covered": true,
+    "verified_url": "https://arasenstadion.no/",
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 1,
+    "evidence_complete": 1,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://arasenstadion.no/",
+        "domain": "arasenstadion.no",
+        "outcome": "verified",
+        "score": 0.95,
+        "reason": "full legal name on homepage plus registered postcode and street on the site",
+        "final_url": "https://arasenstadion.no/",
+        "content_sha256": "ef2dd068e9105899e29acdb4d4a60b60e1ae6660adbbbde02b2e8653eb532803"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://arasen-stadion.no/",
+        "domain": "arasen-stadion.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "998645557",
+    "requests": 11,
+    "runtime_ms": 6509,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://sibygg.no/",
+        "domain": "sibygg.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://sibygg.no/",
+        "content_sha256": "7164c749629881e6991f11daaf94f85bf6d32f534d67825dbbb061ef32d45f48"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://agatheiendom.no/",
+        "domain": "agatheiendom.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://agath-eiendom.no/",
+        "domain": "agath-eiendom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "922606315",
+    "requests": 1,
+    "runtime_ms": 51,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://leanssushiwok.no/",
+        "domain": "leanssushiwok.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://leans-sushi-wok.no/",
+        "domain": "leans-sushi-wok.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "934822846",
+    "requests": 1,
+    "runtime_ms": 265,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://livingroros.no/",
+        "domain": "livingroros.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://living-roros.no/",
+        "domain": "living-roros.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "989865102",
+    "requests": 1,
+    "runtime_ms": 46,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://midtnorskomradesikring.no/",
+        "domain": "midtnorskomradesikring.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://midt-norsk-omradesikring.no/",
+        "domain": "midt-norsk-omradesikring.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "930342548",
+    "requests": 1,
+    "runtime_ms": 186,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://lundebyinvest.no/",
+        "domain": "lundebyinvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://lundeby-invest.no/",
+        "domain": "lundeby-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "930622273",
+    "requests": 1,
+    "runtime_ms": 154,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://eirikaaseboholding.no/",
+        "domain": "eirikaaseboholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://eirik-aasebo-holding.no/",
+        "domain": "eirik-aasebo-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "919525916",
+    "requests": 1,
+    "runtime_ms": 49,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://grnexp.no/",
+        "domain": "grnexp.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://grn-exp.no/",
+        "domain": "grn-exp.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "929978757",
+    "requests": 3,
+    "runtime_ms": 1828,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "ambiguous",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://msktrade.no/",
+        "domain": "msktrade.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://msktrade.no/",
+        "content_sha256": "eb8cabebae4508a51f4f95784ea1f083fca4261b0a7c2574f4c61a2dcc9ee284"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://msk-trade.no/",
+        "domain": "msk-trade.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "989653903",
+    "requests": 7,
+    "runtime_ms": 3024,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://minbit.no/",
+        "domain": "minbit.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://www.vindafjordtomteselskap.no/",
+        "content_sha256": "8b0988e45898eba4725baa2a40031ef5e632da51cba3e233a19cb3d4071814d2"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://roatomteselskap.no/",
+        "domain": "roatomteselskap.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://roa-tomteselskap.no/",
+        "domain": "roa-tomteselskap.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "920014623",
+    "requests": 1,
+    "runtime_ms": 43,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://feltheimholding.no/",
+        "domain": "feltheimholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://feltheim-holding.no/",
+        "domain": "feltheim-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "877122492",
+    "requests": 1,
+    "runtime_ms": 54,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://schjelderupellerhusenslegat.no/",
+        "domain": "schjelderupellerhusenslegat.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://schjelderup-ellerhusens-legat.no/",
+        "domain": "schjelderup-ellerhusens-legat.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "921825978",
+    "requests": 3,
+    "runtime_ms": 22840,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://lillekampenkafe.no/",
+        "domain": "lillekampenkafe.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://lillekampen-kafe.no/",
+        "domain": "lillekampen-kafe.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "934057708",
+    "requests": 1,
+    "runtime_ms": 267,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://aasmundrudinvest.no/",
+        "domain": "aasmundrudinvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://aasmundrud-invest.no/",
+        "domain": "aasmundrud-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "928314065",
+    "requests": 1,
+    "runtime_ms": 46,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://ylrholding.no/",
+        "domain": "ylrholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://ylr-holding.no/",
+        "domain": "ylr-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "817510302",
+    "requests": 1,
+    "runtime_ms": 164,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://cognixarinvest.no/",
+        "domain": "cognixarinvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://cognixar-invest.no/",
+        "domain": "cognixar-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "988937509",
+    "requests": 1,
+    "runtime_ms": 0,
+    "candidates": 0,
+    "by_source": {},
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [],
+    "registry_contact_fields": [
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "923533699",
+    "requests": 1,
+    "runtime_ms": 30,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://gvaluestone.no/",
+        "domain": "gvaluestone.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "916928521",
+    "requests": 4,
+    "runtime_ms": 3014,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable",
+        "no_dns"
+      ],
+      "subunit_website": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "subunit_website",
+        "url": "https://www.hudlegekontoret.no/",
+        "domain": "hudlegekontoret.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://mesnahudklinikk.no/",
+        "domain": "mesnahudklinikk.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://mesna-hudklinikk.no/",
+        "domain": "mesna-hudklinikk.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "992084995",
+    "requests": 5,
+    "runtime_ms": 4594,
+    "candidates": 1,
+    "by_source": {
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://auto24.no/",
+        "domain": "auto24.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://auto24.no/",
+        "content_sha256": "e15d59e20d869ab0c040fb2f72f44683c70e39b8b88d7ce943eacefc02153af3"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "930815470",
+    "requests": 1,
+    "runtime_ms": 0,
+    "candidates": 0,
+    "by_source": {},
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "837011132",
+    "requests": 1,
+    "runtime_ms": 36,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://efginvestholding.no/",
+        "domain": "efginvestholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://efg-invest-holding.no/",
+        "domain": "efg-invest-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "928273407",
+    "requests": 1,
+    "runtime_ms": 153,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://solheimbyggtjenester.no/",
+        "domain": "solheimbyggtjenester.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://solheim-byggtjenester.no/",
+        "domain": "solheim-byggtjenester.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "937280017",
+    "requests": 3,
+    "runtime_ms": 1472,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://fossli.no/",
+        "domain": "fossli.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://fossli.no/",
+        "content_sha256": "5a6b7b60b85c155eb21d8219c66bcce2f127dff8c25a33c913aeb8d5ffb39759"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://fosslieiendom.no/",
+        "domain": "fosslieiendom.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://fossli-eiendom.no/",
+        "domain": "fossli-eiendom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "830963642",
+    "requests": 1,
+    "runtime_ms": 37,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://vibjornventure.no/",
+        "domain": "vibjornventure.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://vibjorn-venture.no/",
+        "domain": "vibjorn-venture.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "922332053",
+    "requests": 1,
+    "runtime_ms": 64,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://treleaseconsulting.no/",
+        "domain": "treleaseconsulting.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://trelease-consulting.no/",
+        "domain": "trelease-consulting.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "924471360",
+    "requests": 5,
+    "runtime_ms": 11261,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "ambiguous",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://ttcbygg.no/",
+        "domain": "ttcbygg.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://www.ttcbygg.no/",
+        "content_sha256": "643dc630de0ec30702d0dd1ed536414853e976510524f7675cbf4e633d9b4e6a"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://ttc-bygg.no/",
+        "domain": "ttc-bygg.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "927852942",
+    "requests": 1,
+    "runtime_ms": 0,
+    "candidates": 0,
+    "by_source": {},
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "985993971",
+    "requests": 11,
+    "runtime_ms": 14014,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://maskinsenter.no/",
+        "domain": "maskinsenter.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://www.maskinsenter.no/",
+        "content_sha256": "40b8aa17485bf14304a14ada82ff35e0946ce8108467650f8d8112a0897d04f8"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://parhesteneeiendom.no/",
+        "domain": "parhesteneeiendom.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://parhestene-eiendom.no/",
+        "domain": "parhestene-eiendom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "999318940",
+    "requests": 1,
+    "runtime_ms": 37,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://tingeiendom.no/",
+        "domain": "tingeiendom.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://ting-eiendom.no/",
+        "domain": "ting-eiendom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "931141236",
+    "requests": 1,
+    "runtime_ms": 61,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://thireiendom.no/",
+        "domain": "thireiendom.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://thir-eiendom.no/",
+        "domain": "thir-eiendom.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "932949687",
+    "requests": 1,
+    "runtime_ms": 162,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://asveien113.no/",
+        "domain": "asveien113.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://asveien-113.no/",
+        "domain": "asveien-113.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "991843949",
+    "requests": 1,
+    "runtime_ms": 46,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://hageberslitransport.no/",
+        "domain": "hageberslitransport.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://hage-bersli-transport.no/",
+        "domain": "hage-bersli-transport.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "986757368",
+    "requests": 9,
+    "runtime_ms": 7906,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "verified",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [
+      "name_domain_guess"
+    ],
+    "covered": true,
+    "verified_url": "https://annenvri.no/",
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 1,
+    "evidence_complete": 1,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://annenvri.no/",
+        "domain": "annenvri.no",
+        "outcome": "verified",
+        "score": 0.95,
+        "reason": "full legal name on homepage plus registered postcode and street on the site",
+        "final_url": "https://annenvri.no/",
+        "content_sha256": "e1b3f6cb71111cc4e09f4c05fdda6be1a06688466510fa53f88d5acab597f26a"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://annen-vri.no/",
+        "domain": "annen-vri.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "931849573",
+    "requests": 1,
+    "runtime_ms": 47,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://byggmestersindrefosshopland.no/",
+        "domain": "byggmestersindrefosshopland.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://byggmester-sindre-foss-hopland.no/",
+        "domain": "byggmester-sindre-foss-hopland.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "934010361",
+    "requests": 3,
+    "runtime_ms": 1998,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "ambiguous"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 1,
+    "identity_rejections": 1,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://groove.no/",
+        "domain": "groove.no",
+        "outcome": "ambiguous",
+        "score": 0.3,
+        "reason": "no organisation number and no name-plus-registered-address corroboration",
+        "final_url": "https://groove.no/",
+        "content_sha256": "a1897d48872cc935d6fecf80c59746945457612ef1a6a6fb607f29faf71958d7"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "915999670",
+    "requests": 3,
+    "runtime_ms": 2937,
+    "candidates": 3,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ],
+      "registry_email": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "registry_email",
+        "url": "https://ost-tek.no/",
+        "domain": "ost-tek.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://sveinhageholding.no/",
+        "domain": "sveinhageholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://svein-hage-holding.no/",
+        "domain": "svein-hage-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "911837013",
+    "requests": 1,
+    "runtime_ms": 36,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://steenhansseninvest.no/",
+        "domain": "steenhansseninvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://steen-hanssen-invest.no/",
+        "domain": "steen-hanssen-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "912347141",
+    "requests": 1,
+    "runtime_ms": 160,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://nilsenholding.no/",
+        "domain": "nilsenholding.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://nilsen-holding.no/",
+        "domain": "nilsen-holding.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "916155581",
+    "requests": 1,
+    "runtime_ms": 61,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://murmesterkristiankarlsen.no/",
+        "domain": "murmesterkristiankarlsen.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://murmester-kristian-karlsen.no/",
+        "domain": "murmester-kristian-karlsen.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "epostadresse",
+      "mobil"
+    ],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "833085662",
+    "requests": 3,
+    "runtime_ms": 1851,
+    "candidates": 1,
+    "by_source": {
+      "name_domain_guess": [
+        "unavailable"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://avivitae.no/",
+        "domain": "avivitae.no",
+        "outcome": "unavailable",
+        "score": 0.0,
+        "reason": "candidate site not available",
+        "final_url": null,
+        "content_sha256": null
+      }
+    ],
+    "registry_contact_fields": [],
+    "unmeasured": false
+  },
+  {
+    "organisation_number": "990760098",
+    "requests": 1,
+    "runtime_ms": 47,
+    "candidates": 2,
+    "by_source": {
+      "name_domain_guess": [
+        "no_dns",
+        "no_dns"
+      ]
+    },
+    "verified_sources": [],
+    "covered": false,
+    "verified_url": null,
+    "ambiguous": 0,
+    "identity_rejections": 0,
+    "published_identity_mismatches": 0,
+    "evidence_items": 0,
+    "evidence_complete": 0,
+    "results": [
+      {
+        "source": "name_domain_guess",
+        "url": "https://vardogerinvest.no/",
+        "domain": "vardogerinvest.no",
+        "outcome": "no_dns"
+      },
+      {
+        "source": "name_domain_guess",
+        "url": "https://vardoger-invest.no/",
+        "domain": "vardoger-invest.no",
+        "outcome": "no_dns"
+      }
+    ],
+    "registry_contact_fields": [
+      "mobil",
+      "telefon"
+    ],
+    "unmeasured": false
+  }
+]

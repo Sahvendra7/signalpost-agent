@@ -27,3 +27,11 @@ Frozen code for all live measurements: **commit `461bdbf0c5518f58455f11c123aa546
 | github.com (git) | allowed |
 
 Result: Steps 2–7 cannot be measured from this container. Every live figure is `UNMEASURED`.
+
+## Network re-check (2026-10-02 23:41 UTC, Phase 4A)
+
+data.brreg.no 200, builderr.ai 200, company websites 200, pam-stilling-feed.nav.no reachable (404 on `/`),
+api.search.brave.com reachable (no key). Free-source measurements were run. See
+`docs/live-source-expansion-results.md`. Measurement-only additions (frozen code untouched):
+`scripts/instrument_source_experiments.py` (wire-level wrapper) and `scripts/measure_filings_depth.py`
+(corrected filings re-measurement).

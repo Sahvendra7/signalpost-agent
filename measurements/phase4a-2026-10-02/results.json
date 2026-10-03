@@ -1,0 +1,162 @@
+{
+  "sample": "out/experiments/sample.jsonl",
+  "companies": 100,
+  "identity_anchored": 100,
+  "baseline": {
+    "coverage": {
+      "per_area": {
+        "filings": 1.0,
+        "leadership": 1.0,
+        "locations": 1.0,
+        "websites": 0.17,
+        "hiring_activity": 1.0
+      },
+      "mean_area_coverage": 0.834,
+      "companies_all_five": 17,
+      "companies_all_five_rate": 0.17
+    },
+    "requests": 590,
+    "runtime_ms": 76542,
+    "available_claims": 3947
+  },
+  "experiments": {
+    "brreg_activity": {
+      "summary": {
+        "companies": 100,
+        "companies_measured": 100,
+        "companies_covered": 100,
+        "coverage_rate": 1.0,
+        "requests_total": 180,
+        "requests_per_company": 1.8,
+        "runtime_per_company": {
+          "n": 100,
+          "p50_ms": 1325.0,
+          "p95_ms": 1607.0,
+          "max_ms": 5625
+        },
+        "evidence_items": 3562,
+        "evidence_complete_rate": 1.0,
+        "identity_rejections": 0,
+        "published_identity_mismatches": 0,
+        "transport_failures": 0,
+        "dated_events_total": 3562,
+        "dated_events_per_company_mean": 35.62,
+        "dated_events_per_covered_company_mean": 35.62,
+        "companies_informative": 100,
+        "companies_recent_365d": 100,
+        "events_with_change_detail": 369,
+        "change_types": [
+          "Endring",
+          "Ny",
+          "Ukjent"
+        ],
+        "earliest_event": "2018-04-23T21:01:31.006Z"
+      },
+      "measured": true
+    },
+    "filings": {
+      "summary": {
+        "companies": 100,
+        "companies_measured": 100,
+        "companies_covered": 100,
+        "coverage_rate": 1.0,
+        "requests_total": 399,
+        "requests_per_company": 3.99,
+        "runtime_per_company": {
+          "n": 100,
+          "p50_ms": 12601.0,
+          "p95_ms": 12633.0,
+          "max_ms": 12699
+        },
+        "evidence_items": 1556,
+        "evidence_complete_rate": 1.0,
+        "identity_rejections": 0,
+        "published_identity_mismatches": 0,
+        "transport_failures": 0,
+        "financial_values_total": 1456,
+        "financial_values_per_company_mean": 14.56,
+        "financial_values_per_covered_company_mean": 14.56,
+        "latest_filing_rate": 0.99,
+        "multiple_years_rate": 0.94,
+        "prior_year_structured_rate": 0.0,
+        "revenue_rate": 0.77,
+        "operating_result_rate": 0.98,
+        "balance_sheet_rate": 0.99,
+        "wage_costs_rate": 0.69,
+        "period_correct_rate": 0.0606,
+        "pdf_retrieved_rate": 0.0,
+        "pdf_text_parsed_rate": 0.0,
+        "pdf_image_only_rate": 0.0,
+        "starter_values_total": 670,
+        "registry_employee_rate": 0.14,
+        "business_description_rate": 1.0
+      },
+      "measured": true
+    },
+    "site_discovery": {
+      "summary": {
+        "companies": 83,
+        "companies_measured": 83,
+        "companies_covered": 5,
+        "coverage_rate": 0.0602,
+        "requests_total": 206,
+        "requests_per_company": 2.482,
+        "runtime_per_company": {
+          "n": 83,
+          "p50_ms": 153.0,
+          "p95_ms": 17578.0,
+          "max_ms": 24075
+        },
+        "evidence_items": 5,
+        "evidence_complete_rate": 1.0,
+        "identity_rejections": 13,
+        "published_identity_mismatches": 0,
+        "transport_failures": 0,
+        "by_source": {
+          "name_domain_guess": {
+            "candidates": 145,
+            "verified": 5,
+            "ambiguous": 6
+          },
+          "registry_email": {
+            "candidates": 9,
+            "verified": 0,
+            "ambiguous": 7
+          },
+          "subunit_website": {
+            "candidates": 1,
+            "verified": 0,
+            "ambiguous": 0
+          }
+        },
+        "registry_contact_fields_seen": [
+          "epostadresse",
+          "mobil",
+          "telefon"
+        ],
+        "population_without_registry_website": 83
+      },
+      "measured": true
+    }
+  },
+  "combined_without_search": {
+    "per_area": {
+      "filings": 1.0,
+      "leadership": 1.0,
+      "locations": 1.0,
+      "websites": 0.22,
+      "hiring_activity": 1.0
+    },
+    "mean_area_coverage": 0.844,
+    "companies_all_five": 22,
+    "companies_all_five_rate": 0.22,
+    "unmeasured_sources": [
+      "nav_jobs"
+    ]
+  },
+  "incremental_area_coverage": {
+    "hiring_activity_from_brreg_activity": 0.0,
+    "hiring_activity_from_nav_jobs": "UNMEASURED",
+    "websites_from_non_search_discovery": 0.05
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "total_wall_s": 581.51,
+  "phase_wall_s": {
+    "setup": 5.1,
+    "baseline": 76.55,
+    "between": 0.07,
+    "brreg_activity": 21.24,
+    "filings": 419.91,
+    "site_discovery": 59.46
+  },
+  "phases": {
+    "baseline": {
+      "logical_requests": 590,
+      "attempts": 590,
+      "retries": 0,
+      "redirect_hops": 9,
+      "bytes": 16901559,
+      "transport_errors": 0,
+      "status": {
+        "200": 496,
+        "404": 99,
+        "429": 2,
+        "403": 2
+      },
+      "hosts": {
+        "data.brreg.no": 500,
+        "www.sjoloftet.no": 2,
+        "www.bmuj.no": 6,
+        "thon.no": 10,
+        "www.thon.no": 2,
+        "www.skansehytta.no": 2,
+        "www.ekberglous.com": 6,
+        "www.vitagile.no": 2,
+        "www.obf.no": 10,
+        "kilishockey.no": 6,
+        "www.kilishockey.no": 2,
+        "autorisertlandmaler.no": 4,
+        "stiftelsencrux.no": 10,
+        "www.stiftelsencrux.no": 2,
+        "www.hako-elektro.no": 8,
+        "jedevold-moller.no": 2,
+        "bate.no": 6,
+        "www.bate.no": 2,
+        "www.gronsand.no": 4,
+        "www.klpeiendom.no": 3,
+        "www.kimanwoman.no": 10
+      }
+    },
+    "brreg_activity": {
+      "logical_requests": 180,
+      "attempts": 180,
+      "retries": 0,
+      "redirect_hops": 0,
+      "bytes": 908968,
+      "transport_errors": 0,
+      "status": {
+        "200": 180
+      },
+      "hosts": {
+        "data.brreg.no": 180
+      }
+    },
+    "filings": {
+      "logical_requests": 399,
+      "attempts": 399,
+      "retries": 0,
+      "redirect_hops": 0,
+      "bytes": 421055,
+      "transport_errors": 0,
+      "status": {
+        "200": 199,
+        "404": 100,
+        "406": 100
+      },
+      "hosts": {
+        "data.brreg.no": 399
+      }
+    },
+    "site_discovery": {
+      "logical_requests": 206,
+      "attempts": 206,
+      "retries": 0,
+      "redirect_hops": 17,
+      "bytes": 5370193,
+      "transport_errors": 24,
+      "status": {
+        "200": 177,
+        "404": 12,
+        "None": 24,
+        "403": 8,
+        "202": 2
+      },
+      "hosts": {
+        "data.brreg.no": 83,
+        "www.eiendom.no": 2,
+        "eiendom.no": 2,
+        "brattsjy.no": 8,
+        "stoplight.no": 2,
+        "lokaltre.no": 2,
+        "spirendesign.no": 4,
+        "eidsvollbilvask.no": 2,
+        "kaffepause.no": 2,
+        "fossinnovations.no": 2,
+        "godtselskap.no": 2,
+        "www.drage.no": 6,
+        "drage.no": 2,
+        "think.no": 2,
+        "frisknaa.no": 2,
+        "lyserom.no": 2,
+        "www.lyserom.no": 5,
+        "verizon.net": 2,
+        "blioptimal.no": 2,
+        "storbilsenter.no": 4,
+        "kurtsimonsen.no": 2,
+        "sibygg.no": 10,
+        "www.blioptimal.no": 9,
+        "arasenstadion.no": 6,
+        "illinginvest.no": 2,
+        "msktrade.no": 2,
+        "www.vindafjordtomteselskap.no": 6,
+        "minbit.no": 2,
+        "www.hudlegekontoret.no": 1,
+        "auto24.no": 4,
+        "mesnahudklinikk.no": 2,
+        "fossli.no": 2,
+        "www.maskinsenter.no": 10,
+        "maskinsenter.no": 2,
+        "annenvri.no": 9,
+        "groove.no": 2,
+        "www.ost-tek.com": 2,
+        "ost-tek.no": 2,
+        "www.ttcbygg.no": 4,
+        "ttcbygg.no": 2,
+        "lillekampenkafe.no": 2,
+        "avivitae.no": 2
+      }
+    }
+  }
+}
