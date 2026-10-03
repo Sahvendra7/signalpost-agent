@@ -365,6 +365,47 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     return True
 
 
+# Optional LLM layer (llm/): fact_type -> (category, field). Only present when that layer ran.
+LLM_FACT_FIELDS = {
+    "business_description": ("description", "website_business_description"),
+    "product_or_service": ("description", "website_product_or_service"),
+    "certification": ("description", "website_certification"),
+    "person_role": ("leadership", "website_named_role"),
+    "office_location": ("locations", "website_office_location"),
+    "contact_email": ("identity", "website_contact_email"),
+    "contact_phone": ("identity", "website_contact_phone"),
+    "founded_year": ("identity", "website_founded_year_statement"),
+    "employee_count_statement": ("identity", "website_employee_count_statement"),
+}
+
+
+def _llm_claims(claims: ClaimSet, llm: dict[str, Any] | None) -> None:
+    """Claims the LLM layer extracted and the validators accepted. The cited source is always the captured
+    page (url, retrieval time, sha256) and the span is quoted verbatim from it: the model is never a source."""
+    extraction = (llm or {}).get("extraction") or {}
+    if not extraction:
+        return
+    base = {"derivation": "llm_extraction", "llm_model": llm.get("model")}
+    for fact in extraction.get("facts") or []:
+        category, field = LLM_FACT_FIELDS[fact["fact_type"]]
+        extra = {**base, "fact_type": fact["fact_type"], "evidence_span": fact["evidence_span"]}
+        for key in ("date_if_explicit", "role_normalization", "corroborating_spans"):
+            if fact.get(key):
+                extra[key] = fact[key]
+        page = _page_record(fact["source_url"], fact["content_sha256"], fact["retrieved_at"])
+        claims.add(category, field, fact["value"], page, fact["evidence_span"], confidence=fact["confidence"], method="llm_extraction_validated", extra=extra)
+    for item in extraction.get("profiles") or []:
+        page = _page_record(item["source_page"], item["content_sha256"], item["retrieved_at"])
+        claims.add("websites", "social_profile", {"platform": item["platform"], "url": item["profile_url"]}, page, item["evidence_span"], confidence=min(0.8, float(item.get("identity_score") or 0.8)), method="llm_extracted_site_link", extra={**base, "evidence_span": item["evidence_span"]})
+    for item in extraction.get("activities") or []:
+        page = _page_record(item["source_url"], item["content_sha256"], item["retrieved_at"])
+        body = {"title": item["title"], "publication_date": item["publication_date"], "date_kind": "stated_on_page", "summary": item.get("summary")}
+        claims.add("public_activity", "site_activity", {key: val for key, val in body.items() if val is not None}, page, item["evidence_span"], confidence=0.8, method="llm_extraction_validated", extra={**base, "evidence_span": item["evidence_span"], "event_date": item["publication_date"]})
+    # An available LLM claim supersedes the deterministic "checked, nothing found" state for the same field.
+    filled = {(item["category"], item["field"]) for item in claims.claims if item.get("derivation") == "llm_extraction"}
+    claims.claims = [item for item in claims.claims if item["availability"] == "available" or (item["category"], item["field"]) not in filled]
+
+
 def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None = None) -> ClaimSet:
     claims = ClaimSet(snapshot_root=snapshot_root)
     records = profile.get("evidence", {})
@@ -378,6 +419,8 @@ def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None =
     v1_published = website.get("status") == "available" and bool(((website.get("value") or {}).get("identity_assessment") or {}).get("publishable"))
     site_verified = _site_research_claims(claims, records.get("site_research"), v1_site_published=v1_published)
     _website_claims(claims, records.get("website"), view, site_verified=site_verified and not v1_published)
+    if profile.get("llm"):
+        _llm_claims(claims, profile["llm"])
     return claims
 
 

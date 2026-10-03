@@ -24,6 +24,11 @@ The public universe contains 411,160 eligible companies. Run the starter on 100 
 
 Design and rationale: `docs/architecture.md`, `docs/research.md`, `docs/source-matrix.md`.
 
+An optional, provider-agnostic LLM layer (`src/norway_company_agent/llm/`, `docs/llm-layer.md`) is prepared
+but **off**: the batch command never loads it, and it is used only by the A/B experiment scripts
+(`scripts/run_llm_experiment.py --llm-enabled|--llm-disabled`, `scripts/compare_llm_ab.py`) once `LLM_*`
+credentials are supplied.
+
 ## First run: try one saved example
 
 Requires Python 3.12+. Open a terminal inside this extracted folder.

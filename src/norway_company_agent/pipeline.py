@@ -192,8 +192,12 @@ def research_company(
     fetcher: Fetcher,
     website_fetcher: WebsiteFetcher,
     site_session: SiteSession | None = None,
+    llm_layer: Any = None,
 ) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
-    """Research one company. Never raises: failures become explicit module states and errors."""
+    """Research one company. Never raises: failures become explicit module states and errors.
+
+    `llm_layer` (llm.LLMLayer) is optional and off by default; with it absent or disabled this function is
+    the deterministic V2 pipeline, unchanged."""
     started = time.monotonic()
     errors: list[dict[str, Any]] = []
     profile = base_profile or {"organisation_number": org, "evidence": {}}
@@ -236,6 +240,12 @@ def research_company(
     for module in modules:
         if module not in profile["evidence"]:
             profile["evidence"][module] = evidence(module, "source_error", "pipeline", "https://data.brreg.no/", note=f"Not completed: {errors[-1]['code'] if errors else 'unknown'}")
+    if llm_layer is not None and llm_layer.enabled and identity_anchored(profile):
+        try:
+            llm_layer.enrich_company(profile, site_session)
+        except Exception as exc:  # the layer never raises; if it does, its output is dropped, not the company
+            profile.pop("llm", None)
+            profile["llm_error"] = f"{type(exc).__name__}: {str(exc)[:200]}"
     operations = {
         "requests": sum(item.attempts for item in metrics) + int(website_metrics.get("requests", 0)) + site_requests,
         "bytes": sum(item.bytes_received for item in metrics) + int(website_metrics.get("bytes", 0)),
@@ -243,6 +253,9 @@ def research_company(
         "runtime_ms": int((time.monotonic() - started) * 1000),
         "third_party_cost_usd": 0,
     }
+    if profile.get("llm"):
+        llm = profile["llm"]
+        operations.update({"llm_calls": llm["calls"], "llm_input_tokens": llm["input_tokens"], "llm_output_tokens": llm["output_tokens"]})
     profile["run_metrics"] = {key: value for key, value in operations.items() if key != "latencies_ms"}
     return profile, operations, errors
 
@@ -284,6 +297,7 @@ def run_batch(
     reuse_profiles: dict[str, dict[str, Any]] | None = None,
     site_fetcher: Callable[..., Any] = fetch_bytes,
     resolver: Callable[[str], bool] | None = None,
+    llm_layer: Any = None,
 ) -> dict[str, Any]:
     modules = list(modules or DEFAULT_MODULES)
     batch_started_at = utc_now()
@@ -303,7 +317,7 @@ def run_batch(
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0, "resumed": True}
             return org, {"profile": reused, "operations": operations, "errors": [], "started_at": company_started_at, "completed_at": utc_now()}
         try:
-            profile, operations, errors = research_company(org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session)
+            profile, operations, errors = research_company(org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session, llm_layer=llm_layer)
         except Exception as exc:  # second boundary: research_company should not raise, but never trust it
             profile = {"organisation_number": org, "evidence": {}}
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0}
@@ -326,6 +340,9 @@ def run_batch(
         validation["checks"]["expected_count_matches_input"] = expected_count == len(rows)
         validation["passed"] = validation["passed"] and expected_count == len(rows)
     report = batch_report(envelopes, results, run_id=run_id, started_at=batch_started_at, runtime_ms=int((time.monotonic() - batch_started) * 1000), modules=modules, registry_metadata=registry_metadata, validation=validation, input_rows=len(rows))
+    if llm_layer is not None and llm_layer.enabled:
+        report["llm"] = llm_layer.report()
+        report["operations"]["llm_calls"] = report["llm"]["calls"]
     return {"envelopes": envelopes, "profiles": profiles, "report": report}
 
 
@@ -378,6 +395,11 @@ def _envelope_for_row(
         for module in modules
     }
     operations = {key: value for key, value in result["operations"].items() if key != "latencies_ms"}
+    extra: dict[str, Any] = {}
+    if profile.get("llm"):
+        extra["llm"] = _llm_envelope_summary(profile["llm"])
+        if (profile["llm"].get("synthesis") or {}).get("sections"):
+            extra["company_synthesis"] = profile["llm"]["synthesis"]
     return build_envelope(
         row.organisation_number,
         run={"run_id": run_id, "started_at": result["started_at"], "completed_at": result["completed_at"], "terminal_status": "completed" if anchored else "failed"},
@@ -392,8 +414,21 @@ def _envelope_for_row(
             "category_coverage": category_coverage(claim_set.claims),
             "area_coverage": area_coverage(claim_set.claims),
             "modules": module_states,
+            **extra,
         },
     )
+
+
+def _llm_envelope_summary(llm: dict[str, Any]) -> dict[str, Any]:
+    extraction = llm.get("extraction") or {}
+    return {
+        "status": llm.get("status"), "model": llm.get("model"), "calls": llm.get("calls"),
+        "input_tokens": llm.get("input_tokens"), "output_tokens": llm.get("output_tokens"),
+        "skip_reasons": llm.get("skip_reasons"), "failures": llm.get("failures"), "budget_stops": llm.get("budget_stops"),
+        "accepted": {key: len(extraction.get(key) or []) for key in ("facts", "profiles", "activities")},
+        "rejected": len(extraction.get("rejected") or []),
+        "classification_disagreements": extraction.get("classification_disagreements") or [],
+    }
 
 
 def batch_report(

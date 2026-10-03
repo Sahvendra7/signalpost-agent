@@ -217,6 +217,11 @@ class SiteSession:
             self._pages[url] = result
         return result
 
+    def cached(self, url: str) -> ByteFetch | None:
+        """A page this run already fetched, or None. Read-only: never fetches, never touches a budget."""
+        with self._lock:
+            return self._pages.get(to_uri(url))
+
     def allowed(self, url: str, budget: CompanyBudget) -> bool | None:
         parts = urllib.parse.urlsplit(url)
         origin = f"{parts.scheme}://{parts.netloc}"
