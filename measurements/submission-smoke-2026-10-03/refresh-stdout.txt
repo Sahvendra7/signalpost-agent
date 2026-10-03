@@ -1,0 +1,23 @@
+{
+  "run_id": "submission-refresh-c5c6a32",
+  "input_rows": 100,
+  "emitted_envelopes": 100,
+  "terminal_status_counts": {
+    "completed": 100
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "public_activity": 0.06,
+    "registry_activity": 1.0,
+    "relationships": 0.03,
+    "websites": 0.22
+  },
+  "runtime_ms": 162183,
+  "validation_passed": true
+}
+exit=0
