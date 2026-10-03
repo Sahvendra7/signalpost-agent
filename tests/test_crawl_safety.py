@@ -161,3 +161,61 @@ class CrawlDelayGroupTests(unittest.TestCase):
         own = website.USER_AGENT.split("/")[0]
         self.assertEqual(delay(f"User-agent: *\nCrawl-delay: 4\n\nUser-agent: {own}\nCrawl-delay: 1\n"), 1.0)
         self.assertEqual(delay("User-agent: a\nUser-agent: *\nCrawl-delay: 3 # slow\n"), 3.0)
+
+
+class PlatformHostTests(unittest.TestCase):
+    PLATFORMS = ("https://www.facebook.com/x", "https://m.facebook.com/x", "https://www.instagram.com/x/", "https://no.linkedin.com/company/x",
+                 "https://www.youtube.com/@x", "https://youtu.be/x", "https://x.com/x", "https://www.tiktok.com/@x")
+
+    def test_platform_hosts_are_refused_before_any_lookup(self):
+        with mock.patch("socket.getaddrinfo", side_effect=AssertionError("no DNS lookup for a platform host")):
+            for url in self.PLATFORMS:
+                with self.subTest(url), self.assertRaisesRegex(ValueError, "Restricted platform"):
+                    website.assert_public_url(url)
+
+    def test_redirect_to_a_platform_is_refused(self):
+        handler = website.SafeRedirectHandler()
+        for url in self.PLATFORMS:
+            with self.subTest(url), self.assertRaisesRegex(ValueError, "Restricted platform"):
+                handler.redirect_request(None, None, 302, "Found", {}, url)
+
+    def test_lookalike_hosts_are_not_platforms(self):
+        for host in ("facebook.com.evil.no", "myfacebook.com", "linkedin-kurs.no", "fjordtest.no"):
+            self.assertFalse(website.restricted_platform(host), host)
+
+    def test_site_session_reports_platform_hosts(self):
+        web = FakeWeb({})
+        session = SiteSession(web, resolver=lambda host: True, url_guard=website.assert_public_url)
+        self.assertEqual(session.get("https://www.facebook.com/fjordtest", CompanyBudget(10, 10)), ("blocked_platform_host", None))
+        self.assertEqual(web.calls, [])
+
+
+class FakeResponse:
+    def __init__(self, url, body):
+        self.url, self.body, self.status = url, body, 200
+        self.headers = {"content-type": "text/html; charset=utf-8"}
+
+    def read(self, limit=-1):
+        return self.body
+
+    def geturl(self):
+        return self.url
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        return False
+
+
+class V1CrawlDelayTests(unittest.TestCase):
+    def test_crawl_delay_fetches_homepage_only_after_waiting(self):
+        home = b'<html><head><title>Fjordtest</title></head><body><a href="/om-oss">Om oss</a><a href="/kontakt">Kontakt</a> Org.nr 923 609 016</body></html>'
+        robots = ByteFetch("https://x.no/robots.txt", 200, 1, b"User-agent: *\nCrawl-delay: 3\n", "text/plain", {}, "c" * 64, NOW, 1)
+        with mock.patch.object(website, "assert_public_url"), mock.patch("norway_company_agent.http.fetch_bytes", return_value=robots), \
+                mock.patch.object(website.SAFE_OPENER, "open", return_value=FakeResponse("https://x.no/", home)) as opener, mock.patch.object(website.time, "sleep") as sleep:
+            record, metrics = website.fetch_website("https://x.no/")
+        self.assertEqual(record["status"], "available")
+        sleep.assert_called_once_with(3.0)
+        self.assertEqual(opener.call_count, 1, "secondary pages are not fetched under a Crawl-delay")
+        self.assertTrue(all("Crawl-delay" in item["error"] for item in record["value"]["crawl_errors"]))

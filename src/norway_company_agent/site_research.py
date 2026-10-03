@@ -288,7 +288,7 @@ class SiteSession:
             self.url_guard(origin + "/")
             state = "ok"
         except ValueError as exc:
-            state = "no_dns" if "did not resolve" in str(exc) else "blocked_non_public_host"
+            state = "no_dns" if "did not resolve" in str(exc) else "blocked_platform_host" if "Restricted platform" in str(exc) else "blocked_non_public_host"
         with self._lock:
             self._public[origin] = state
         return state

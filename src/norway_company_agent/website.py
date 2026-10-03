@@ -37,11 +37,26 @@ PRIORITY_TERMS = (
 )
 
 
+# Builderr source policy: these platforms are never fetched (a profile is recorded from the verified site's
+# own outbound link only). Enforced for initial URLs and for every redirect hop.
+RESTRICTED_PLATFORM_DOMAINS = frozenset({
+    "linkedin.com", "facebook.com", "fb.com", "fb.me", "instagram.com", "youtube.com", "youtu.be",
+    "x.com", "twitter.com", "t.co", "tiktok.com", "threads.net",
+})
+
+
+def restricted_platform(host: str) -> bool:
+    host = host.lower().rstrip(".")
+    return any(host == domain or host.endswith("." + domain) for domain in RESTRICTED_PLATFORM_DOMAINS)
+
+
 def assert_public_url(url: str) -> None:
     parsed = urllib.parse.urlparse(url)
     host = (parsed.hostname or "").lower().rstrip(".")
     if parsed.scheme not in {"http", "https"} or not host:
         raise ValueError("Only public HTTP(S) URLs are allowed")
+    if restricted_platform(host):
+        raise ValueError(f"Restricted platform host is never fetched: {host}")
     if host == "localhost" or host.endswith(".localhost") or host.endswith(".local"):
         raise ValueError("Local hosts are blocked")
     try:
@@ -93,7 +108,7 @@ def _registered_domain(url: str) -> str:
 
 
 ROBOTS_MAX_BYTES = 512_000  # RFC 9309 2.5: parse at least the first 500 KiB
-MAX_CRAWL_DELAY_SECONDS = 10.0  # a longer Crawl-delay cannot be honoured inside a company budget: skip instead
+MAX_CRAWL_DELAY_SECONDS = 30.0  # half the 60 s company budget; a longer Crawl-delay is skipped, never violated
 
 
 def robots_policy(status: int, body: bytes | None) -> tuple[urllib.robotparser.RobotFileParser | None, str]:
@@ -403,6 +418,10 @@ def fetch_website(url: str | None, *, timeout: float = 15.0, max_bytes: int = 2_
         page_latencies = [elapsed]
         homepage_domain = value["registered_domain"]
         for page_url in _priority_links(final_url, soup):
+            if delay:
+                # Crawl-delay applies: the homepage only. Deeper pages are left to site research, which paces them.
+                crawl_errors.append({"url": page_url, "error": f"skipped: robots.txt Crawl-delay {delay:g}s"})
+                continue
             page, page_social, page_requests, page_bytes, page_elapsed, page_error = _fetch_secondary_page(
                 page_url,
                 homepage_domain=homepage_domain,
