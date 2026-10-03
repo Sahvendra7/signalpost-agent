@@ -98,10 +98,43 @@ def strategy_queries(profile: dict[str, Any], strategy: str) -> list[str]:
         return [f"site:{guess}" for guess in name_domain_guesses(name)[:1]]
     if strategy == "E_name_municipality":
         return [f'"{name}" {municipality}'.strip()]
+    if strategy == "Q1_name_orgnr":
+        return [f'"{name}" "{org}"']
+    if strategy == "Q2_name_linkedin":
+        return [f'"{name}" LinkedIn']
+    if strategy == "Q3_name_facebook":
+        return [f'"{name}" Facebook']
+    if strategy == "Q4_name_instagram":
+        return [f'"{name}" Instagram']
+    if strategy == "Q5_name_norway":
+        return [f'"{name}" Norway']
+    if strategy == "Q6_orgnr":
+        return [f'"{org}"']
     raise ValueError(f"unknown strategy {strategy}")
 
 
 STRATEGIES = ("A_name_norway", "B_name_orgnr", "C_orgnr", "D_site_guess", "E_name_municipality")
+QUERY_FAMILIES = ("Q1_name_orgnr", "Q2_name_linkedin", "Q3_name_facebook", "Q4_name_instagram", "Q5_name_norway", "Q6_orgnr")
+DIRECTORY_HOSTS = BLOCKED_DISCOVERY_HOSTS - {"linkedin.com", "facebook.com", "instagram.com", "x.com", "twitter.com", "youtube.com", "tiktok.com"} | {
+    "proff.no", "purehelp.no", "1881.no", "gulesider.no", "firmalisten.no", "companywall.no", "firmadatabasen.no", "sokfirma.no",
+    "yra.no", "northdata.com", "nor47business.com", "brreg.no", "enirogule.no", "kompass.com", "dnb.com", "opencorporates.com",
+    "finn.no", "bizlookup.no", "regnskapstall.no", "allabolag.se", "infobel.com", "bedriftsdatabasen.no",
+}
+
+
+def classify_search_result(url: str, officially_linked_profiles: set[str]) -> str:
+    """Cheap pre-crawl class of a search result. Websites still need classify_site() before FIRST_PARTY."""
+    from ..website import normalize_social_url
+
+    social = normalize_social_url(url)
+    if social:
+        return "OFFICIALLY_LINKED" if social["url"] in officially_linked_profiles else "AMBIGUOUS"
+    host_domain = _registered_domain(normalize_homepage(url) or "") if url else None
+    if not host_domain:
+        return "AMBIGUOUS"
+    if host_domain in DIRECTORY_HOSTS:
+        return "DIRECTORY"
+    return "WEBSITE_CANDIDATE"
 
 
 def candidate_domains(results: list[dict[str, Any]], *, limit: int = 3) -> list[str]:
