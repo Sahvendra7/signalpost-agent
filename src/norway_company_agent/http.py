@@ -72,14 +72,16 @@ class ByteFetch:
         return json.loads(self.raw) if self.raw else None
 
 
-def fetch_bytes(url: str, *, headers: dict[str, str] | None = None, timeout: float = 30.0, attempts: int = 3, max_bytes: int = 30_000_000) -> ByteFetch:
-    """Raw GET with retries on transport errors and 5xx/429; 4xx is returned as-is (it is an answer)."""
+def fetch_bytes(url: str, *, headers: dict[str, str] | None = None, timeout: float = 30.0, attempts: int = 3, max_bytes: int = 30_000_000, opener: urllib.request.OpenerDirector | None = None) -> ByteFetch:
+    """Raw GET with retries on transport errors and 5xx/429; 4xx is returned as-is (it is an answer).
+
+    With `opener` (e.g. website.SAFE_OPENER) a redirect the opener refuses (ValueError) is returned as an error."""
     last_error = "request failed"
     for attempt in range(attempts):
         started = time.monotonic()
         request = urllib.request.Request(url, headers={"User-Agent": "builderr-signalpost-poc/0.1 (+https://builderr.ai)", **(headers or {})})
         try:
-            with urllib.request.urlopen(request, timeout=timeout) as response:
+            with (opener.open(request, timeout=timeout) if opener is not None else urllib.request.urlopen(request, timeout=timeout)) as response:
                 raw = response.read(max_bytes + 1)
                 if len(raw) > max_bytes:
                     return ByteFetch(url, response.status, int((time.monotonic() - started) * 1000), None, "", {}, None, _utc_now(), attempt + 1, error="response exceeds byte limit")
@@ -91,6 +93,10 @@ def fetch_bytes(url: str, *, headers: dict[str, str] | None = None, timeout: flo
             last_error = f"HTTP {exc.code}"
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
             last_error = type(exc).__name__
+        except ValueError as exc:
+            if opener is None:
+                raise
+            return ByteFetch(url, 0, int((time.monotonic() - started) * 1000), None, "", {}, None, _utc_now(), attempt + 1, error=f"blocked: {exc}")
         if attempt + 1 < attempts:
             time.sleep(0.5 * (2**attempt))
     return ByteFetch(url, 0, 0, None, "", {}, None, _utc_now(), attempts, error=last_error)

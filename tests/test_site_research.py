@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT / "tests"))
 from norway_company_agent.contract import validate_envelope  # noqa: E402
 from norway_company_agent.evidence import evidence  # noqa: E402
 from norway_company_agent.http import ByteFetch  # noqa: E402
-from norway_company_agent.site_research import SiteSession, discovery_candidates, research_company_site  # noqa: E402
+from norway_company_agent.site_research import CompanyBudget, SiteSession, discovery_candidates, research_company_site  # noqa: E402
 
 NOW = "2026-10-03T12:00:00Z"
 ORG = "923609016"
@@ -115,6 +115,58 @@ class ResearchTests(unittest.TestCase):
         self.assertEqual(result.candidates[0]["outcome"], "robots_disallowed")
         result = research_company_site(profile(email="post@fjordtest.no"), SiteSession(FakeWeb(site_pages()), resolver=lambda host: True), max_requests=1)
         self.assertEqual(result.status, "budget_exhausted")
+
+
+class OutboundPolicyTests(unittest.TestCase):
+    def test_non_public_hosts_are_never_fetched(self):
+        def guard(url):
+            if "intranet" in url:
+                raise ValueError("Private, loopback, link-local, multicast, and reserved addresses are blocked")
+            if "gone" in url:
+                raise ValueError("Hostname did not resolve")
+
+        web = FakeWeb(site_pages())
+        session = SiteSession(web, resolver=lambda host: True, url_guard=guard)
+        budget = CompanyBudget(10, 10)
+        self.assertEqual(session.get("https://intranet-fjordtest.no/", budget), ("blocked_non_public_host", None))
+        self.assertEqual(session.get("https://gone-fjordtest.no/", budget), ("no_dns", None))
+        self.assertEqual(session.get("https://fjordtest.no/", budget)[0], "ok")
+        self.assertEqual(web.calls, ["https://fjordtest.no/robots.txt", "https://fjordtest.no/"])
+
+    def test_redirect_to_a_private_address_is_refused(self):
+        import http.server
+        import threading
+
+        from norway_company_agent.http import fetch_bytes
+        from norway_company_agent.website import SAFE_OPENER
+
+        class Redirect(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):
+                self.send_response(302)
+                self.send_header("Location", "http://169.254.169.254/latest/meta-data/")
+                self.end_headers()
+
+            def log_message(self, *args):
+                pass
+
+        server = http.server.HTTPServer(("127.0.0.1", 0), Redirect)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        try:
+            result = fetch_bytes(f"http://127.0.0.1:{server.server_port}/", attempts=2, timeout=5, opener=SAFE_OPENER)
+        finally:
+            server.shutdown()
+        self.assertIsNone(result.raw)
+        self.assertTrue(result.error.startswith("blocked:"), result.error)
+        self.assertEqual(result.attempts, 1, "a refused redirect is not retried")
+
+    def test_live_batch_fetcher_is_guarded(self):
+        import inspect
+
+        from norway_company_agent import pipeline
+
+        source = inspect.getsource(pipeline.run_batch)
+        self.assertIn("url_guard=assert_public_url if live", source)
+        self.assertIn("opener=SAFE_OPENER", source)
 
 
 class PipelineV2Tests(unittest.TestCase):

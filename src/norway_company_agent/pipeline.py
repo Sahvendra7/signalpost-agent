@@ -4,6 +4,7 @@ Retrieval is injected (`fetcher`, `website_fetcher`) so the whole pipeline runs 
 """
 from __future__ import annotations
 
+import functools
 import gzip
 import hashlib
 import json
@@ -26,7 +27,7 @@ from .operations import latency_summary
 from .refresh import diff_profile
 from .site_research import SiteSession, research_company_site
 from .sampling import iter_bulk
-from .website import fetch_website
+from .website import SAFE_OPENER, assert_public_url, fetch_website
 
 DEFAULT_MODULES = ("registry", "registry_live", "financials", "roles", "group", "locations", "website", "site_research")
 V1_MODULES = DEFAULT_MODULES[:-1]
@@ -304,7 +305,13 @@ def run_batch(
     batch_started = time.monotonic()
     store = SnapshotStore(snapshot_root)
     wrapped = store.wrap(fetcher)
-    session = SiteSession(fetcher=store.wrap_bytes(site_fetcher), resolver=resolver) if "site_research" in modules else None
+    session = None
+    if "site_research" in modules:
+        # The live fetcher gets the same outbound policy as the v1 website module: public hosts only,
+        # and redirects re-checked. Injected (offline) fetchers are left as they are.
+        live = site_fetcher is fetch_bytes
+        fetch = functools.partial(fetch_bytes, opener=SAFE_OPENER) if live else site_fetcher
+        session = SiteSession(fetcher=store.wrap_bytes(fetch), resolver=resolver, url_guard=assert_public_url if live else None)
     unique_orgs = list(dict.fromkeys(row.organisation_number for row in rows if row.organisation_number))
     bulk_profiles, registry_metadata = load_bulk_profiles(bulk_path, set(unique_orgs)) if "registry" in modules else ({}, {"bulk": "not requested"})
 

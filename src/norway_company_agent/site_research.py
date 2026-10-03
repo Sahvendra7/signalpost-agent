@@ -187,9 +187,11 @@ def to_uri(url: str) -> str:
 class SiteSession:
     """Run-wide robots and page caches, so a domain is fetched once per run however many companies point at it."""
 
-    def __init__(self, fetcher: Callable[..., ByteFetch] = fetch_bytes, resolver: Callable[[str], bool] | None = None):
+    def __init__(self, fetcher: Callable[..., ByteFetch] = fetch_bytes, resolver: Callable[[str], bool] | None = None, url_guard: Callable[[str], None] | None = None):
         self.fetcher = fetcher
         self.resolver = resolver or _resolves
+        self.url_guard = url_guard  # raises ValueError for a non-public URL (website.assert_public_url)
+        self._public: dict[str, str] = {}
         self._lock = threading.Lock()
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
         self._pages: dict[str, ByteFetch] = {}
@@ -241,8 +243,30 @@ class SiteSession:
                 self._robots[origin] = parser
         return bool(parser and parser.can_fetch(USER_AGENT, url))
 
+    def public(self, url: str) -> str:
+        """Outbound URL policy: only hosts resolving to global addresses are fetched (cached per origin).
+        Returns "ok", "no_dns" or "blocked_non_public_host"."""
+        if self.url_guard is None:
+            return "ok"
+        parts = urllib.parse.urlsplit(url)
+        origin = f"{parts.scheme}://{parts.netloc}"
+        with self._lock:
+            if origin in self._public:
+                return self._public[origin]
+        try:
+            self.url_guard(origin + "/")
+            state = "ok"
+        except ValueError as exc:
+            state = "no_dns" if "did not resolve" in str(exc) else "blocked_non_public_host"
+        with self._lock:
+            self._public[origin] = state
+        return state
+
     def get(self, url: str, budget: CompanyBudget, accept: str = HTML_ACCEPT) -> tuple[str, ByteFetch | None]:
         url = to_uri(url)
+        policy = self.public(url)
+        if policy != "ok":
+            return policy, None
         allowed = self.allowed(url, budget)
         if allowed is None:
             return "budget_exhausted", None
