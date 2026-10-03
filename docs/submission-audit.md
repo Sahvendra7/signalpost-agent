@@ -1,12 +1,20 @@
 # Signalpost V1 submission audit
 
+> **Historical audit, superseded.** This audit tested code `c5c6a32`. It is not the final submission
+> candidate. **Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317` (tag
+> `submission-candidate-1`). **Code under test for the final validation:** `4f827ee`. `78d1c2f` is
+> code-identical to `4f827ee` and adds only documentation and final-validation material. See
+> `docs/final-submission-manifest.md` and `measurements/final-validation-2026-10-03/README.md`. Test counts,
+> runtimes and limitations below are as measured on `c5c6a32`. Some limitations listed here were later fixed
+> (`docs/official-submission-checklist.md`, "Status after validity hardening").
+
 **Result: PASS.** All 20 checks pass after one blocking defect was fixed (check 18 below).
 
 | | |
 |---|---|
 | Audited 2026-10-03 against | https://builderr.ai/challenges/signalpost and its evaluation contract (`/docs/signalpost-evaluation-harness.md`, scoring version 2) |
-| Requested target commit | `99d09d9cd05e9a8b09f4ec322351a5ad08529e7d` |
-| **Code commit tested (clean room)** | **`c5c6a32a6a25fe7205d48b72701af2291d721b82`**. This is `99d09d9` plus the outbound-URL-policy fix. This document and `measurements/submission-smoke-2026-10-03/` are added in the next commit, which changes no code. |
+| Target commit requested for this audit (historical) | `99d09d9cd05e9a8b09f4ec322351a5ad08529e7d` |
+| **Code commit tested (clean room)** | **`c5c6a32a6a25fe7205d48b72701af2291d721b82`**. This is `99d09d9` plus the outbound-URL-policy fix. This document and `measurements/submission-smoke-2026-10-03/` are added in the next commit, `403a9c1`, which changes no code. |
 | Test count (clean room) | **224 passed, 5 subtests passed** (`uv run --with pytest pytest -q`) |
 | Smoke-test location | `measurements/submission-smoke-2026-10-03/` (`report.json`, `envelopes.jsonl.gz`, `refresh-report.json`, `refresh-envelopes.jsonl.gz`, `input-companies.jsonl`, `refresh-replay.json`, stdout logs) |
 | Third-party cost | **$0** per official run |

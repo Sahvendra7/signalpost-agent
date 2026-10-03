@@ -1,5 +1,8 @@
 # Official source compliance (official-contract audit)
 
+> Historical audit. **Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317`. **Code under test
+> for the final validation:** `4f827ee`, code-identical to `78d1c2f`. See `docs/final-submission-manifest.md`.
+
 Audit date: 2026-10-03. Code audited: `403a9c1` (code identical to `c5c6a32`). Source keys (`BRIEF`, `EVAL`,
 `SOURCES`, `PLAYBOOK`, `HARNESS`, `PAGE`, `KIT`, `SAMPLE`, `RULES`) and the SHA-256 of each fetched document are
 listed in `docs/official-requirements-matrix.md`.

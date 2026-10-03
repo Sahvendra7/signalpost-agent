@@ -1,8 +1,20 @@
 # Final validation after validity hardening (2026-10-03)
 
-**Code under test:** `4f827ee`. Every number below was measured on that commit. Nothing here is an
+**Code under test:** `4f827ee7813db166b0c03dabec5c9d61da5b9a99`. Every number below was measured on that commit. Nothing here is an
 official score, and no unpublished limit is estimated. Builderr's sample input is not committed: only its
 SHA-256 appears, and host lists for its companies are not committed.
+
+**Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317` (tag `submission-candidate-1`).
+`78d1c2f` is code-identical to `4f827ee`. It adds only this directory and the status section of
+`docs/official-submission-checklist.md`. No run in this directory was executed on `78d1c2f` itself. See
+`docs/final-submission-manifest.md`.
+
+**Smoke test for the final code:** `live-100` below is the 100-company smoke test on `4f827ee`. It has 100 inputs, 100
+envelopes and 100 `completed` results, input order is preserved, and validation passed with 0 contract findings.
+Runtime was 118.3 s. Peak memory was not recorded in these runs. The last recorded peak RSS figures are 222 MiB for 100
+companies (`c5c6a32`, `docs/submission-audit.md`) and 399 MiB for 1,200 companies (`403a9c1`,
+`docs/official-submission-checklist.md` §C2). Tests in the clean room on `4f827ee` were 303 passed, 68 subtests passed.
+The older smoke test in `measurements/submission-smoke-2026-10-03/` ran on `c5c6a32` and is historical.
 
 **Inputs:**
 
