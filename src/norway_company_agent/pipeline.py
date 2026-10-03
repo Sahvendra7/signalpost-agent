@@ -11,7 +11,8 @@ import json
 import threading
 import time
 import traceback
-from concurrent.futures import ThreadPoolExecutor
+import copy
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
@@ -33,6 +34,8 @@ DEFAULT_MODULES = ("registry", "registry_live", "financials", "roles", "group", 
 V1_MODULES = DEFAULT_MODULES[:-1]
 NON_FETCH_MODULES = {"registry", "accounting_obligation", "website", "site_research"}
 BULK_URL = "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv"
+DEADLINE_SKIP_NOTE = "deadline: skipped to keep the batch within its time budget"
+DEADLINE_NOT_STARTED_NOTE = "deadline: company not researched before the batch deadline"
 ORG_WEIGHTS = (3, 2, 7, 6, 5, 4, 3, 2)
 
 Fetcher = Callable[[str], FetchResult]
@@ -194,6 +197,9 @@ def research_company(
     website_fetcher: WebsiteFetcher,
     site_session: SiteSession | None = None,
     llm_layer: Any = None,
+    degrade: bool = False,
+    site_deadline: float | None = None,
+    progress: dict[str, dict[str, Any]] | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
     """Research one company. Never raises: failures become explicit module states and errors.
 
@@ -203,6 +209,8 @@ def research_company(
     errors: list[dict[str, Any]] = []
     profile = base_profile or {"organisation_number": org, "evidence": {}}
     profile.setdefault("evidence", {})
+    if progress is not None:
+        progress[org] = profile  # lets the batch salvage facts already fetched if the hard deadline hits
     if "registry" in modules and "registry" not in profile["evidence"]:
         profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note="Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)")
     metrics: list[FetchResult] = []
@@ -226,15 +234,21 @@ def research_company(
             errors.append(mismatch)
         if "accounting_obligation" in modules:
             profile["evidence"]["accounting_obligation"] = accounting_obligation_assessment(profile)
-        if "website" in modules:
+        if "website" in modules and degrade:
+            profile["evidence"]["website"] = evidence("website", "source_error", "registry_linked_company_website", "https://data.brreg.no/enhetsregisteret/api/enheter", note=DEADLINE_SKIP_NOTE)
+        elif "website" in modules:
             stage = "website"
             website_record, website_metrics = website_fetcher(profile.get("website"))
             profile["evidence"]["website"] = apply_website_identity_gate(profile, website_record)["website"]
     except Exception as exc:  # isolation boundary: one bad company/source never ends the batch
         errors.append({"code": "pipeline_exception", "stage": stage, "message": f"{type(exc).__name__}: {str(exc)[:200]}", "trace_tail": traceback.format_exc(limit=2)[-400:]})
-    if "site_research" in modules and site_session is not None and identity_anchored(profile):
+    site_seconds = None if site_deadline is None else site_deadline - time.monotonic()
+    if "site_research" in modules and (degrade or (site_seconds is not None and site_seconds < 5)):
+        profile["evidence"]["site_research"] = evidence("site_research", "source_error", "company_site", "https://data.brreg.no/enhetsregisteret/api/enheter", note=DEADLINE_SKIP_NOTE)
+        errors.append({"code": "deadline_degraded", "stage": "site_research", "message": "Website research skipped to keep the batch within its deadline"})
+    elif "site_research" in modules and site_session is not None and identity_anchored(profile):
         try:
-            site_record, site_requests = _site_research(profile, site_session)
+            site_record, site_requests = _site_research(profile, site_session, max_seconds=min(60.0, site_seconds) if site_seconds is not None else 60.0)
             profile["evidence"]["site_research"] = site_record
         except Exception as exc:  # own boundary: website work never costs the official facts
             errors.append({"code": "pipeline_exception", "stage": "site_research", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
@@ -261,11 +275,11 @@ def research_company(
     return profile, operations, errors
 
 
-def _site_research(profile: dict[str, Any], session: SiteSession) -> tuple[dict[str, Any], int]:
+def _site_research(profile: dict[str, Any], session: SiteSession, max_seconds: float = 60.0) -> tuple[dict[str, Any], int]:
     website = profile["evidence"].get("website") or {}
     value = website.get("value") or {}
     registry_url = value.get("final_url") if website.get("status") == "available" and (value.get("identity_assessment") or {}).get("publishable") else None
-    result = research_company_site(profile, session, registry_verified_url=registry_url)
+    result = research_company_site(profile, session, registry_verified_url=registry_url, max_seconds=max_seconds)
     body = {key: getattr(result, key) for key in result.__dataclass_fields__}
     if result.status == "verified":
         first = result.pages[0] if result.pages else {}
@@ -299,7 +313,18 @@ def run_batch(
     site_fetcher: Callable[..., Any] = fetch_bytes,
     resolver: Callable[[str], bool] | None = None,
     llm_layer: Any = None,
+    deadline_seconds: float | None = None,
+    grace_seconds: float = 60.0,
+    on_result: Callable[[list[dict[str, Any]], dict[str, Any] | None], None] | None = None,
+    stop_event: threading.Event | None = None,
 ) -> dict[str, Any]:
+    """Research every row and return one terminal envelope per row, in input order.
+
+    `on_result(envelopes, profile)` is called from the calling thread as soon as each company (and every
+    input row that names it) reaches a terminal state, so callers can persist results incrementally.
+    With `deadline_seconds`, new companies degrade to official-only research when the observed rate says
+    full research will not fit, nothing new starts inside the last `grace_seconds`, and at the deadline
+    unfinished companies get envelopes built from the official facts they already fetched."""
     modules = list(modules or DEFAULT_MODULES)
     batch_started_at = utc_now()
     batch_started = time.monotonic()
@@ -316,6 +341,40 @@ def run_batch(
     bulk_profiles, registry_metadata = load_bulk_profiles(bulk_path, set(unique_orgs)) if "registry" in modules else ({}, {"bulk": "not requested"})
 
     results: dict[str, dict[str, Any]] = {}
+    started = time.monotonic()
+    hard_deadline = started + deadline_seconds if deadline_seconds else None
+    progress: dict[str, dict[str, Any]] = {}
+    runtimes: list[float] = []
+    state = {"degraded": 0, "not_started": 0, "salvaged": 0, "stop_reason": None}
+    lock = threading.Lock()
+    pending_count = [len(unique_orgs)]
+
+    def remaining() -> float | None:
+        return None if hard_deadline is None else hard_deadline - time.monotonic()
+
+    def should_degrade() -> bool:
+        """Degrade new companies to official-only when full research is projected to miss the deadline."""
+        left = remaining()
+        if left is None:
+            return False
+        with lock:
+            if not runtimes:
+                return left < grace_seconds * 2
+            mean = sum(runtimes) / len(runtimes)
+            projected = pending_count[0] * mean / max(1, workers)
+        return projected > left - grace_seconds
+
+    def deadline_result(org: str, base: dict[str, Any] | None, code: str, note: str) -> dict[str, Any]:
+        profile = base or {"organisation_number": org, "evidence": {}}
+        profile.setdefault("evidence", {})
+        if "registry" in modules and "registry" not in profile["evidence"]:
+            profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note="Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)")
+        for module in modules:
+            if module not in profile["evidence"]:
+                profile["evidence"][module] = evidence(module, "source_error", "pipeline", "https://data.brreg.no/", note=note)
+        operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0}
+        now = utc_now()
+        return {"profile": profile, "operations": operations, "errors": [{"code": code, "stage": "scheduling", "message": note}], "started_at": now, "completed_at": now}
 
     def work(org: str) -> tuple[str, dict[str, Any]]:
         company_started_at = utc_now()
@@ -323,34 +382,105 @@ def run_batch(
         if reused is not None:
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0, "resumed": True}
             return org, {"profile": reused, "operations": operations, "errors": [], "started_at": company_started_at, "completed_at": utc_now()}
+        left = remaining()
+        if (stop_event is not None and stop_event.is_set()) or (left is not None and left < grace_seconds):
+            with lock:
+                state["not_started"] += 1
+            return org, deadline_result(org, bulk_profiles.get(org), "deadline_exceeded", DEADLINE_NOT_STARTED_NOTE)
+        degrade = should_degrade()
+        if degrade:
+            with lock:
+                state["degraded"] += 1
         try:
-            profile, operations, errors = research_company(org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session, llm_layer=llm_layer)
+            profile, operations, errors = research_company(
+                org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session, llm_layer=llm_layer,
+                degrade=degrade, site_deadline=(hard_deadline - grace_seconds) if hard_deadline is not None else None, progress=progress,
+            )
         except Exception as exc:  # second boundary: research_company should not raise, but never trust it
             profile = {"organisation_number": org, "evidence": {}}
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0}
             errors = [{"code": "pipeline_exception", "stage": "research", "message": f"{type(exc).__name__}: {str(exc)[:200]}"}]
+        if not degrade:
+            with lock:
+                runtimes.append(operations.get("runtime_ms", 0) / 1000)
         return org, {"profile": profile, "operations": operations, "errors": errors, "started_at": company_started_at, "completed_at": utc_now()}
 
-    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
-        for org, result in pool.map(work, unique_orgs):
-            results[org] = result
-
-    envelopes = []
-    profiles = []
+    rows_by_org: dict[str, list[InputRow]] = {}
     for row in rows:
-        envelopes.append(_envelope_for_row(row, results.get(row.organisation_number or ""), run_id=run_id, modules=modules, previous_profiles=previous_profiles, snapshot_root=snapshot_root))
-    for org in unique_orgs:
-        profiles.append(results[org]["profile"])
+        if row.organisation_number:
+            rows_by_org.setdefault(row.organisation_number, []).append(row)
+    envelopes_by_position: dict[int, dict[str, Any]] = {}
+
+    def emit(org: str | None, result: dict[str, Any] | None, targets: list[InputRow]) -> None:
+        if not targets:
+            return
+        batch = [_envelope_for_row(row, result, run_id=run_id, modules=modules, previous_profiles=previous_profiles, snapshot_root=snapshot_root) for row in targets]
+        for row, envelope in zip(targets, batch):
+            envelopes_by_position[row.position] = envelope
+        if on_result is not None:
+            on_result(batch, result["profile"] if result is not None else None)
+
+    emit(None, None, [row for row in rows if not row.organisation_number])
+    pool = ThreadPoolExecutor(max_workers=max(1, workers))
+    futures = {pool.submit(work, org): org for org in unique_orgs}
+    waiting = set(futures)
+    try:
+        while waiting:
+            left = remaining()
+            if stop_event is not None and stop_event.is_set():
+                state["stop_reason"] = "interrupted"
+                break
+            if left is not None and left <= 0:
+                state["stop_reason"] = "deadline"
+                break
+            done, waiting = wait(waiting, timeout=1.0 if left is None else max(0.05, min(1.0, left)), return_when=FIRST_COMPLETED)
+            for future in done:
+                org, result = future.result()
+                results[org] = result
+                with lock:
+                    pending_count[0] -= 1
+                emit(org, result, rows_by_org[org])
+    finally:
+        pool.shutdown(wait=False, cancel_futures=True)
+    for future in waiting:  # hard stop: salvage whatever official facts the company already has
+        org = futures[future]
+        code = "interrupted" if state["stop_reason"] == "interrupted" else "deadline_exceeded"
+        partial = _snapshot_profile(progress.get(org))
+        if partial is not None:
+            state["salvaged"] += 1
+        result = deadline_result(org, partial if partial is not None else bulk_profiles.get(org), code, f"{code}: research did not finish before the batch stopped")
+        results[org] = result
+        emit(org, result, rows_by_org[org])
+
+    envelopes = [envelopes_by_position[row.position] for row in rows]
+    profiles = [results[org]["profile"] for org in unique_orgs]
 
     validation = validate_batch(envelopes, [_input_key(row) for row in rows], snapshot_root=snapshot_root)
     if expected_count is not None:
         validation["checks"]["expected_count_matches_input"] = expected_count == len(rows)
         validation["passed"] = validation["passed"] and expected_count == len(rows)
     report = batch_report(envelopes, results, run_id=run_id, started_at=batch_started_at, runtime_ms=int((time.monotonic() - batch_started) * 1000), modules=modules, registry_metadata=registry_metadata, validation=validation, input_rows=len(rows))
+    report["deadline"] = {
+        "deadline_seconds": deadline_seconds, "grace_seconds": grace_seconds if deadline_seconds else None,
+        "stop_reason": state["stop_reason"], "companies_degraded_to_official_only": state["degraded"],
+        "companies_not_started": state["not_started"], "companies_salvaged_at_hard_stop": state["salvaged"],
+    }
     if llm_layer is not None and llm_layer.enabled:
         report["llm"] = llm_layer.report()
         report["operations"]["llm_calls"] = report["llm"]["calls"]
     return {"envelopes": envelopes, "profiles": profiles, "report": report}
+
+
+def _snapshot_profile(profile: dict[str, Any] | None) -> dict[str, Any] | None:
+    """Copy a profile that a worker thread may still be writing; records are replaced whole, so retry on races."""
+    if profile is None:
+        return None
+    for _ in range(5):
+        try:
+            return copy.deepcopy(profile)
+        except RuntimeError:
+            time.sleep(0.01)
+    return None
 
 
 def _input_key(row: InputRow) -> str | None:
