@@ -1,0 +1,749 @@
+{
+  "fixed": {
+    "v1": {
+      "exit": 0,
+      "wall_s": 61.3,
+      "runtime_ms": 59901,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 596,
+      "bytes": 17682319,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 9,
+        "public_footprint": 3,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 3,
+      "verified_facts": 3950,
+      "profiles": 4,
+      "dated_activities": 0,
+      "job_postings": 0,
+      "careers_pages": 0,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "929336038": {
+          "url": "https://www.sjoloftet.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "987796154": {
+          "url": "https://www.bmuj.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "980807568": {
+          "url": "https://www.skansehytta.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "912362086": {
+          "url": "https://www.vitagile.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "875606662": {
+          "url": "https://kilishockey.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "975387011": {
+          "url": "https://stiftelsencrux.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "965558268": {
+          "url": "https://www.hako-elektro.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "920186114": {
+          "url": "https://jedevold-moller.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "919378875": {
+          "url": "https://www.gronsand.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3369.0,
+        "p95_ms": 10854.0,
+        "max_ms": 19670
+      }
+    },
+    "v2": {
+      "exit": 0,
+      "wall_s": 163.9,
+      "runtime_ms": 162506,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 794,
+      "bytes": 17205499,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 14,
+        "public_footprint": 10,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 10,
+      "verified_facts": 3997,
+      "profiles": 9,
+      "dated_activities": 34,
+      "job_postings": 0,
+      "careers_pages": 3,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "929336038": {
+          "url": "https://www.sjoloftet.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "987796154": {
+          "url": "https://www.bmuj.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "980807568": {
+          "url": "https://www.skansehytta.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "920772099": {
+          "url": "https://spirendesign.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "912362086": {
+          "url": "https://www.vitagile.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "914719704": {
+          "url": "https://frisknaa.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + registry e-mail domain"
+        },
+        "921136501": {
+          "url": "https://lyserom.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "927818094": {
+          "url": "https://blioptimal.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "875606662": {
+          "url": "https://kilishockey.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "975387011": {
+          "url": "https://stiftelsencrux.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "965558268": {
+          "url": "https://www.hako-elektro.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "920186114": {
+          "url": "https://jedevold-moller.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "919378875": {
+          "url": "https://www.gronsand.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "986757368": {
+          "url": "https://annenvri.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3682.0,
+        "p95_ms": 37286.0,
+        "max_ms": 57006
+      }
+    }
+  },
+  "s20261101": {
+    "v1": {
+      "exit": 0,
+      "wall_s": 59.7,
+      "runtime_ms": 58434,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 568,
+      "bytes": 5561516,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 3,
+        "public_footprint": 2,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 2,
+      "verified_facts": 3876,
+      "profiles": 2,
+      "dated_activities": 0,
+      "job_postings": 0,
+      "careers_pages": 0,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "812429582": {
+          "url": "https://conow.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "998243432": {
+          "url": "https://orklaregnskap.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "936176062": {
+          "url": "https://www.klyra.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3317.0,
+        "p95_ms": 12024.0,
+        "max_ms": 27202
+      }
+    },
+    "v2": {
+      "exit": 0,
+      "wall_s": 127.9,
+      "runtime_ms": 126673,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 705,
+      "bytes": 5256460,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 9,
+        "public_footprint": 6,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 6,
+      "verified_facts": 3922,
+      "profiles": 8,
+      "dated_activities": 33,
+      "job_postings": 0,
+      "careers_pages": 2,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "990524580": {
+          "url": "https://autoroyal.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "812429582": {
+          "url": "https://conow.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "999611249": {
+          "url": "https://triens.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "998243432": {
+          "url": "https://www.orklaregnskap.no/",
+          "class": "REGISTRY_LINKED",
+          "source": "registry_hjemmeside",
+          "method": "site_identity_v2",
+          "evidence": "REGISTRY_LINKED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "848838322": {
+          "url": "https://aandal-maskin.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "935014328": {
+          "url": "https://mediaproduksjon.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "985519307": {
+          "url": "https://varanger-kraftfiber.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "936176062": {
+          "url": "https://www.klyra.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "987650184": {
+          "url": "https://fokuselektro.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3479.0,
+        "p95_ms": 23403.0,
+        "max_ms": 73352
+      }
+    }
+  },
+  "s20261102": {
+    "v1": {
+      "exit": 0,
+      "wall_s": 53.7,
+      "runtime_ms": 52570,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 566,
+      "bytes": 6883384,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 4,
+        "public_footprint": 2,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 2,
+      "verified_facts": 3971,
+      "profiles": 4,
+      "dated_activities": 0,
+      "job_postings": 0,
+      "careers_pages": 0,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "942338333": {
+          "url": "https://www.klepsvik-sonn.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "979340206": {
+          "url": "https://www.vbknordic.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "913519604": {
+          "url": "https://festutstyr.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "925503215": {
+          "url": "https://www.vasser.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3310.0,
+        "p95_ms": 9810.0,
+        "max_ms": 16410
+      }
+    },
+    "v2": {
+      "exit": 0,
+      "wall_s": 154.3,
+      "runtime_ms": 152964,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 773,
+      "bytes": 6883212,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 11,
+        "public_footprint": 7,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 7,
+      "verified_facts": 4003,
+      "profiles": 14,
+      "dated_activities": 13,
+      "job_postings": 0,
+      "careers_pages": 2,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "935763622": {
+          "url": "https://solsteininfra.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "981902467": {
+          "url": "https://jolsterbetongbygg.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "942338333": {
+          "url": "https://www.klepsvik-sonn.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "883759702": {
+          "url": "https://fdvhuset.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "998641896": {
+          "url": "https://gronvoldbygg.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "979340206": {
+          "url": "https://www.vbknordic.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "915034659": {
+          "url": "https://klimanette.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "913519604": {
+          "url": "https://festutstyr.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: single distinctive legal-name token appears in homepage identity evidence with substantive content"
+        },
+        "925503215": {
+          "url": "https://www.vasser.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "934254392": {
+          "url": "https://transtec.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "932730200": {
+          "url": "https://plannit.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 4049.0,
+        "p95_ms": 36356.0,
+        "max_ms": 65814
+      }
+    }
+  },
+  "s20261103": {
+    "v1": {
+      "exit": 0,
+      "wall_s": 59.8,
+      "runtime_ms": 58507,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 556,
+      "bytes": 5720512,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 3,
+        "public_footprint": 1,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 1,
+      "verified_facts": 3867,
+      "profiles": 1,
+      "dated_activities": 0,
+      "job_postings": 0,
+      "careers_pages": 0,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {},
+      "websites": {
+        "929074009": {
+          "url": "https://www.mulligangolf.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "912492575": {
+          "url": "https://www.haugel.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "928657523": {
+          "url": "https://www.vivify.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3307.0,
+        "p95_ms": 7151.0,
+        "max_ms": 15690
+      }
+    },
+    "v2": {
+      "exit": 0,
+      "wall_s": 111.4,
+      "runtime_ms": 110215,
+      "inputs": 100,
+      "envelopes": 100,
+      "validation_passed": true,
+      "envelopes_failing_hash_or_contract": 0,
+      "requests": 718,
+      "bytes": 5720518,
+      "areas": {
+        "filings": 100,
+        "leadership": 100,
+        "locations": 100,
+        "websites": 10,
+        "public_footprint": 7,
+        "hiring": 0
+      },
+      "companies_all_five_areas": 7,
+      "verified_facts": 3887,
+      "profiles": 7,
+      "dated_activities": 5,
+      "job_postings": 0,
+      "careers_pages": 2,
+      "terminal": {
+        "completed": 100
+      },
+      "error_codes": {
+        "pipeline_exception": 1
+      },
+      "websites": {
+        "919653477": {
+          "url": "https://vokser.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "986739874": {
+          "url": "https://aasbetong.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "995748983": {
+          "url": "https://www.maaemo.no/",
+          "class": "REGISTRY_LINKED",
+          "source": "registry_hjemmeside",
+          "method": "site_identity_v2",
+          "evidence": "REGISTRY_LINKED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "922767459": {
+          "url": "https://skoglundmaskin.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "929074009": {
+          "url": "https://www.mulligangolf.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: all normalized legal-name tokens appear together in homepage identity evidence"
+        },
+        "912492575": {
+          "url": "https://www.haugel.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        },
+        "920918204": {
+          "url": "https://stoaautorep.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "823147112": {
+          "url": "https://knelektro.no/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "name_domain_guess",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C2: exact legal name + registered postcode and street + own-domain mailbox"
+        },
+        "991368000": {
+          "url": "https://ralstonbau.com/",
+          "class": "FIRST_PARTY_CONFIRMED",
+          "source": "registry_email",
+          "method": "site_identity_v2",
+          "evidence": "FIRST_PARTY_CONFIRMED: C1: organisation number in the site's own footer/contact/legal text"
+        },
+        "928657523": {
+          "url": "https://www.vivify.no/",
+          "class": "REGISTRY_LINKED (v1 gate)",
+          "source": "registry_hjemmeside",
+          "method": "deterministic_name_org_evidence_v2",
+          "evidence": "identity: exact organisation number appears in homepage identity evidence"
+        }
+      },
+      "company_runtime": {
+        "n": 100,
+        "p50_ms": 3595.0,
+        "p95_ms": 21660.0,
+        "max_ms": 57305
+      }
+    }
+  }
+}
