@@ -321,8 +321,11 @@ def _website_claims(claims: ClaimSet, record: dict[str, Any] | None, view: dict[
         claims.add("websites", "social_profile", {"platform": link["platform"], "url": link["url"]}, record, f"outbound link on company site: {link['url']}", confidence=min(score, social_score), method="company_site_outbound_link")
 
 
-def _page_record(page_url: str, sha: str | None, retrieved_at: str | None) -> dict[str, Any]:
-    return {"status": "available", "source_url": page_url, "content_sha256": sha, "retrieved_at": retrieved_at, "source_class": "company_site"}
+def _page_record(page_url: str, sha: str | None, retrieved_at: str | None, carried: bool = False) -> dict[str, Any]:
+    record = {"status": "available", "source_url": page_url, "content_sha256": sha, "retrieved_at": retrieved_at, "source_class": "company_site"}
+    if carried:
+        record["carried_forward"] = True
+    return record
 
 
 def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1_site_published: bool) -> bool:
@@ -338,26 +341,27 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         return False
     identity_class = value.get("identity_class")
     reasons = "; ".join(value.get("identity_reasons") or [])
+    carried = bool(record.get("carried_forward"))
     first_page = (value.get("pages") or [{}])[0]
-    home = _page_record(value.get("site_url"), first_page.get("content_sha256"), first_page.get("retrieved_at"))
+    home = _page_record(value.get("site_url"), first_page.get("content_sha256"), first_page.get("retrieved_at"), carried)
     confidence = 1.0 if "organisation number" in reasons else 0.95
     if not v1_site_published:
         claims.add("websites", "official_website", value.get("site_url"), home, f"{identity_class}: {reasons}", confidence=confidence, method="site_identity_v2", extra={"identity_class": identity_class, "identity_source": value.get("identity_source")})
     for profile in value.get("profiles") or []:
-        page = _page_record(profile.get("found_on"), profile.get("content_sha256"), profile.get("retrieved_at"))
+        page = _page_record(profile.get("found_on"), profile.get("content_sha256"), profile.get("retrieved_at"), carried)
         claims.add("websites", "social_profile", {"platform": profile["platform"], "url": profile["url"]}, page, f"outbound link on verified site page {profile.get('found_on')}", confidence=min(confidence, float(profile.get("identity_score") or confidence)), method="verified_site_linked_profile")
     if value.get("careers_page"):
         claims.add("websites", "careers_page", value["careers_page"], home, f"careers link on {value.get('site_url')}", confidence=confidence, method="verified_site_link")
     activities = value.get("activities") or []
     for item in activities:
-        page = _page_record(item.get("page_url"), item.get("content_sha256"), item.get("retrieved_at"))
+        page = _page_record(item.get("page_url"), item.get("content_sha256"), item.get("retrieved_at"), carried)
         body = {"title": item.get("title"), "url": item.get("url"), "publication_date": item.get("date"), "date_kind": item.get("date_kind"), "summary": item.get("summary")}
         claims.add("public_activity", "site_activity", {key: val for key, val in body.items() if val is not None}, page, f"{item.get('method')}: {item.get('date')} {str(item.get('title') or '')[:120]}", confidence=confidence, method=str(item.get("method")), extra={"event_date": item.get("date")})
     if not activities:
         claims.absent("public_activity", "site_activity", "not_available", "Verified website checked; no source-dated activity found")
     jobs = value.get("jobs") or []
     for job in jobs:
-        page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"))
+        page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"), carried)
         body = {"title": job.get("title"), "url": job.get("url"), "date_posted": job.get("date_posted"), "valid_through": job.get("valid_through")}
         claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, f"schema.org JobPosting: {job.get('title')}", confidence=confidence, method="jsonld_JobPosting")
     if not jobs:

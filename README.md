@@ -19,7 +19,9 @@ The public universe contains 411,160 eligible companies. Run the starter on 100 
 - publishes registry-linked website facts only when the exact-entity identity gate passes; otherwise
   `ambiguous`;
 - optionally stores the exact captured bytes (`--snapshot-dir`) so every hash can be re-verified offline;
-- diffs against a previous run (`--previous-profiles`); outages and reordered lists are never changes;
+- diffs against a previous run (`--previous-profiles`): typed `added`/`removed`/`changed`/`unverified`/`unavailable`
+  events; a failed source keeps its last supported value with its original evidence, and reordered lists
+  are never changes (`docs/refresh-semantics.md`);
 - writes a run report with category coverage, module states, error codes, requests, latency and cost.
 
 Design and rationale: `docs/architecture.md`, `docs/research.md`, `docs/source-matrix.md`.

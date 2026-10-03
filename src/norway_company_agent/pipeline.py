@@ -25,7 +25,7 @@ from .http import FetchResult, fetch_bytes, fetch_json
 from .identity import apply_website_identity_gate
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
-from .refresh import diff_profile
+from .refresh import carry_forward, claim_changes
 from .site_research import SiteSession, research_company_site
 from .sampling import iter_bulk
 from .website import SAFE_OPENER, assert_public_url, fetch_website
@@ -509,16 +509,28 @@ def _envelope_for_row(
         )
     profile = result["profile"]
     errors.extend(result["errors"])
+    previous = (previous_profiles or {}).get(row.organisation_number or "")
+    refresh_outcome = {"carried": [], "unverified": []}
+    if previous is not None:
+        try:
+            refresh_outcome = carry_forward(previous, profile)
+        except Exception as exc:
+            errors.append({"code": "refresh_carry_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     try:
         claim_set = claims_from_profile(profile, snapshot_root=snapshot_root)
     except Exception as exc:  # extraction must never cost the row its terminal envelope
         claim_set = ClaimSet(snapshot_root=snapshot_root)
         errors.append({"code": "extraction_exception", "stage": "claims", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     changes: list[dict[str, Any]] = []
-    previous = (previous_profiles or {}).get(row.organisation_number or "")
+    refresh_block: dict[str, Any] = {"compared": False, "reason": "no previous profile supplied for this company"}
     if previous is not None:
         try:
-            changes = diff_profile(previous, profile)
+            previous_claims = claims_from_profile(previous, snapshot_root=snapshot_root)
+            changes, refresh_block = claim_changes(previous_claims.claims, previous_claims.evidence, claim_set.claims, claim_set.evidence,
+                                                   carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=profile["evidence"])
+            for module in refresh_outcome["carried"]:
+                attempt = profile["evidence"][module].get("current_attempt") or {}
+                errors.append({"code": "source_unavailable_value_retained", "stage": module, "message": f"{module} failed in this run ({attempt.get('status')}: {attempt.get('note')}); last supported value retained"})
         except Exception as exc:
             errors.append({"code": "refresh_diff_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     anchored = identity_anchored(profile)
@@ -526,8 +538,8 @@ def _envelope_for_row(
         errors.append({"code": "identity_unresolved", "stage": "identity", "message": "Neither the bulk snapshot nor the live registry returned this organisation number"})
     module_states = {
         module: {
-            "state": evidence_terminal_state(profile["evidence"].get(module)),
-            "note": (profile["evidence"].get(module) or {}).get("note"),
+            "state": "carried_forward" if (profile["evidence"].get(module) or {}).get("carried_forward") and module in refresh_outcome["carried"] else evidence_terminal_state(profile["evidence"].get(module)),
+            "note": ((profile["evidence"].get(module) or {}).get("current_attempt") or {}).get("note") if module in refresh_outcome["carried"] else (profile["evidence"].get(module) or {}).get("note"),
         }
         for module in modules
     }
@@ -550,6 +562,7 @@ def _envelope_for_row(
             "input_position": row.position,
             "category_coverage": category_coverage(claim_set.claims),
             "area_coverage": area_coverage(claim_set.claims),
+            "refresh": refresh_block,
             "modules": module_states,
             **extra,
         },

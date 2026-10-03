@@ -393,14 +393,18 @@ class RefreshContractTests(unittest.TestCase):
         changed = {ORG_A: entity_body(ORG_A, "Fjordtest Programvare AS", employees=5)}
         second = run([ORG_A], FakeBrreg(changed), previous_profiles={ORG_A: first["profiles"][0]})
         changes = second["envelopes"][0]["changes"]
-        self.assertEqual([item["field"] for item in changes], ["registry.employees"])
+        self.assertEqual([(item["change_type"], item["field"]) for item in changes], [("changed", "registry_employee_count")])
         self.assertEqual((changes[0]["old_value"], changes[0]["new_value"]), (3, 5))
-        self.assertTrue(changes[0]["old_content_sha256"] and changes[0]["new_content_sha256"])
+        self.assertTrue(changes[0]["previous_evidence"]["content_sha256"] and changes[0]["evidence"]["content_sha256"])
 
-    def test_outage_on_refresh_is_not_a_change(self):
+    def test_outage_on_refresh_is_not_a_change_and_keeps_values(self):
         first = run([ORG_A], FakeBrreg(self.entities))
         second = run([ORG_A], offline_network_down, previous_profiles={ORG_A: first["profiles"][0]})
-        self.assertEqual(second["envelopes"][0]["changes"], [])
+        envelope = second["envelopes"][0]
+        self.assertEqual({item["change_type"] for item in envelope["changes"]}, {"unavailable"})
+        self.assertEqual(envelope["refresh"]["counts"]["changed"] + envelope["refresh"]["counts"]["removed"], 0)
+        legal_name = next(claim for claim in envelope["claims"] if claim["field"] == "legal_name")
+        self.assertEqual((legal_name["availability"], legal_name["value"], legal_name["carried_forward"]), ("available", "Fjordtest Programvare AS", True))
 
     def test_reordered_source_list_is_not_a_change(self):
         source = evidence("roles", "available", "official_roles", "https://x.test", content_sha256="a" * 64)
