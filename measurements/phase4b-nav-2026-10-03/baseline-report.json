@@ -1,0 +1,125 @@
+{
+  "run_id": "experiment-baseline",
+  "started_at": "2026-10-03T03:48:05.652370Z",
+  "completed_at": "2026-10-03T03:49:19.940169Z",
+  "runtime_ms": 74285,
+  "input_rows": 100,
+  "emitted_envelopes": 100,
+  "unique_companies_researched": 100,
+  "terminal_status_counts": {
+    "completed": 100
+  },
+  "modules": [
+    "registry",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website"
+  ],
+  "registry": {
+    "bulk": null
+  },
+  "category_coverage": {
+    "activity": {
+      "available": 100
+    },
+    "description": {
+      "available": 100
+    },
+    "filings": {
+      "available": 100
+    },
+    "identity": {
+      "available": 100
+    },
+    "leadership": {
+      "available": 100
+    },
+    "locations": {
+      "available": 100
+    },
+    "relationships": {
+      "not_available": 97,
+      "available": 3
+    },
+    "websites": {
+      "not_available": 83,
+      "available": 17
+    }
+  },
+  "category_available_rate": {
+    "activity": 1.0,
+    "description": 1.0,
+    "filings": 1.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "relationships": 0.03,
+    "websites": 0.17
+  },
+  "module_states": {
+    "financials": {
+      "complete": 99,
+      "not_found": 1
+    },
+    "group": {
+      "not_found": 97,
+      "complete": 3
+    },
+    "locations": {
+      "complete": 100
+    },
+    "registry": {
+      "not_found": 100
+    },
+    "registry_live": {
+      "complete": 100
+    },
+    "roles": {
+      "complete": 100
+    },
+    "website": {
+      "not_found": 83,
+      "source_error": 2,
+      "complete": 14,
+      "blocked_policy": 1
+    }
+  },
+  "error_codes": {},
+  "claims": {
+    "available_total": 3947,
+    "available_per_company_mean": 39.47,
+    "evidence_total": 3947,
+    "changes_total": 0
+  },
+  "operations": {
+    "requests": 590,
+    "bytes": 15652520,
+    "request_latency": {
+      "n": 545,
+      "p50_ms": 654.0,
+      "p95_ms": 942.0,
+      "max_ms": 3248
+    },
+    "company_runtime": {
+      "n": 100,
+      "p50_ms": 3288.0,
+      "p95_ms": 11143.0,
+      "max_ms": 19917
+    },
+    "third_party_cost_usd": 0,
+    "llm_calls": 0
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "one_envelope_per_input_row": true,
+      "envelopes_follow_input_order": true,
+      "all_terminal": true,
+      "all_envelopes_valid": true
+    },
+    "findings": {}
+  }
+}

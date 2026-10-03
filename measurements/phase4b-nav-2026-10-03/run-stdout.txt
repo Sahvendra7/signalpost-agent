@@ -1,0 +1,45 @@
+{
+  "sample": "out/experiments/sample.jsonl",
+  "companies": 100,
+  "identity_anchored": 100,
+  "baseline": {
+    "coverage": {
+      "per_area": {
+        "filings": 1.0,
+        "leadership": 1.0,
+        "locations": 1.0,
+        "websites": 0.17,
+        "hiring_activity": 1.0
+      },
+      "mean_area_coverage": 0.834,
+      "companies_all_five": 17,
+      "companies_all_five_rate": 0.17
+    },
+    "requests": 590,
+    "runtime_ms": 74285,
+    "available_claims": 3947
+  },
+  "combined_without_search": {
+    "per_area": {
+      "filings": 1.0,
+      "leadership": 1.0,
+      "locations": 1.0,
+      "websites": 0.17,
+      "hiring_activity": 1.0
+    },
+    "mean_area_coverage": 0.834,
+    "companies_all_five": 17,
+    "companies_all_five_rate": 0.17,
+    "unmeasured_sources": [
+      "brreg_activity",
+      "filings",
+      "site_discovery"
+    ]
+  },
+  "incremental_area_coverage": {
+    "hiring_activity_from_brreg_activity": "UNMEASURED",
+    "hiring_activity_from_nav_jobs": 0.0,
+    "websites_from_non_search_discovery": "UNMEASURED"
+  }
+}
+nav_jobs measured

@@ -1,7 +1,8 @@
 # Live source-expansion results (Phase 4A: free sources)
 
 **Status: MEASURED (free sources only).** First live run, 2026-10-02 23:43–23:52 UTC, plus a corrected
-filings re-measurement (23:55–00:09 UTC). NAV and Brave are **UNMEASURED** (not run, see below).
+filings re-measurement (23:55–00:09 UTC). NAV measured in Phase 4B (2026-10-03, public experiment token,
+same sample; details in `docs/nav-experiment-results.md`). Brave is **UNMEASURED** (no key).
 
 | Item | Value |
 |---|---|
@@ -27,7 +28,8 @@ corrected filings run).
 | + Additional open-accounts fields (same response) | 99 | **0** (DEEPER FACT COVERAGE) | +4,463 numeric fields (baseline publishes 1,877) | +0 in production (re-fetch for measurement: 100) | +0 | ≈ +0 s (parse only) | $0 | 0 |
 | + Filing copy PDF (latest year) | 100 | **0** (DEEPER: document evidence only) | 100 PDFs retrieved, **0 text-extractable** (all image-only) | +200 | +200 | +829.6 s (1 worker, 2.1 s pacing) | $0 | 0 |
 | + Free website discovery (83 companies without a registry URL) | 5 accepted by gate, **4 after manual audit** | **+4 websites** (+5 by gate) | 4 verified official sites (5 by gate) | +206 (+123 DNS lookups) | +206 | +59.5 s | $0 | **1** (third-party fan site accepted) |
-| + NAV job feed | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | — | UNMEASURED |
+| + NAV jobs, S1 name prefilter + orgnr check (Phase 4B) | 1 (hiring) | **+1 hiring** (0 → 1) | 1 job | +41 | +41 | +67.9 s | $0 | 0 |
+| + NAV jobs, S2 full orgnr index (Phase 4B) | 2 (hiring) | **+2 hiring** (0 → 2), both via subunit orgnr | 2 jobs | +9,764 | +9,764 | ≈ +754 s | $0 | 0 |
 | + Brave search (A–E) | UNMEASURED (no key) | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED |
 
 Retries were 0 in every phase. No request returned 5xx. Two website 429s and two 403s in the
@@ -178,7 +180,7 @@ least one candidate that resolved and was crawled.
 | `name_domain_guess` | 145 | 123 | 11 | 6 | 0 | 5 |
 | `registry_email` (domain of the registry `epostadresse`) | 9 | 0 | 2 | 7 | 0 | 0 |
 | `subunit_website` | 1 | 0 | 1 | 0 | 0 | 0 |
-| `nav_employer_site` | not run (NAV skipped) | | | | | |
+| `nav_employer_site` | 0 candidates (Phase 4B: `employer.homepage` empty on both accepted ads) | | | | | |
 | **Total** | **155** | 123 | 14 | 13 | 0 | **5** |
 
 Registry contact fields seen in the open entity record: `epostadresse`, `telefon`, `mobil`.
@@ -215,7 +217,7 @@ kurtsimonsen.no → storbilsenter.no). None was published.
 
 | Source | Status | Reason |
 |---|---|---|
-| NAV job feed (`pam-stilling-feed.nav.no`) | **UNMEASURED** | Instructed not to run in Phase 4A. The host is reachable, but no NAV token is configured. |
+| NAV job feed (`pam-stilling-feed.nav.no`) | **Measured in Phase 4B** | `docs/nav-experiment-results.md`: +1 to +2 companies of hiring coverage; classified OPTIONAL. |
 | Brave search | **UNMEASURED** | No `BRAVE_SEARCH_API_KEY` / `BRAVE_API_KEY` in the environment. Not run, and no substitute provider was used. |
 
 ## 7. Quality checks
@@ -242,3 +244,12 @@ kurtsimonsen.no → storbilsenter.no). None was published.
 - Request and attempt counts from the wire log match the frozen per-experiment counters exactly
   (baseline 590, Brreg 180, E2 399, discovery 206).
 - No experimental metric here is converted into a Builderr score.
+
+## Phase 4B addendum (2026-10-03)
+
+- NAV: see `docs/nav-experiment-results.md`. Feed scan 39 pages, 374,300 entries, 9,724 active ads,
+  184.1 MB, 65–68 s. S1 covers 1 company, S2 covers 2, both through registered subunits. 0 wrong employers.
+  Classification: **OPTIONAL**.
+- The website false match (976744667 → arasenstadion.no) is analysed in `docs/website-identity-analysis.md`.
+  Root cause: rule (b) proves aboutness, not control. Under the proposed class model the audited discovery
+  result would be 4 accepted, 4 correct, 0 wrong (not implemented).

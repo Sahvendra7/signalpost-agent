@@ -1,0 +1,76 @@
+{
+  "total_wall_s": 142.28,
+  "phase_wall_s": {
+    "setup": 0.67,
+    "baseline": 74.29,
+    "between": 67.73,
+    "nav_jobs": 0.25
+  },
+  "phases": {
+    "baseline": {
+      "logical_requests": 590,
+      "attempts": 590,
+      "retries": 0,
+      "redirect_hops": 9,
+      "bytes": 16902733,
+      "transport_errors": 0,
+      "status": {
+        "200": 496,
+        "404": 99,
+        "429": 2,
+        "403": 2
+      },
+      "hosts": {
+        "data.brreg.no": 500,
+        "www.sjoloftet.no": 2,
+        "www.bmuj.no": 6,
+        "www.skansehytta.no": 2,
+        "thon.no": 10,
+        "www.thon.no": 2,
+        "www.ekberglous.com": 6,
+        "www.vitagile.no": 2,
+        "www.obf.no": 10,
+        "kilishockey.no": 6,
+        "www.kilishockey.no": 2,
+        "autorisertlandmaler.no": 4,
+        "stiftelsencrux.no": 10,
+        "www.stiftelsencrux.no": 2,
+        "www.hako-elektro.no": 8,
+        "jedevold-moller.no": 2,
+        "bate.no": 6,
+        "www.bate.no": 2,
+        "www.gronsand.no": 4,
+        "www.klpeiendom.no": 3,
+        "www.kimanwoman.no": 10
+      }
+    },
+    "between": {
+      "logical_requests": 40,
+      "attempts": 40,
+      "retries": 0,
+      "redirect_hops": 0,
+      "bytes": 184128957,
+      "transport_errors": 0,
+      "status": {
+        "200": 40
+      },
+      "hosts": {
+        "pam-stilling-feed.nav.no": 40
+      }
+    },
+    "nav_jobs": {
+      "logical_requests": 1,
+      "attempts": 1,
+      "retries": 0,
+      "redirect_hops": 0,
+      "bytes": 6678,
+      "transport_errors": 0,
+      "status": {
+        "200": 1
+      },
+      "hosts": {
+        "pam-stilling-feed.nav.no": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "nav_token_mode": "public_experiment",
+  "token_source": "https://pam-stilling-feed.nav.no/api/publicToken (unauthenticated, documented by NAV for experiments)",
+  "token_acquisition_ms": 477,
+  "scan": {
+    "pages": 39,
+    "entries": 374300,
+    "unique_ads": 92916,
+    "active_ads": 9724,
+    "stop_reason": "end_of_feed",
+    "requests": 39,
+    "startup_latency_ms": 4765,
+    "total_scan_s": 65.21,
+    "bytes": 184128623,
+    "page_ms_p50": 1232,
+    "page_bytes_max": 4956133,
+    "python_peak_memory_mb": 122.0,
+    "statuses": {
+      "200": 39
+    }
+  },
+  "detail_sample": {
+    "seed": 20261003,
+    "sampled_active_ads": 300,
+    "requests": 300,
+    "with_employer_orgnr": 291,
+    "with_employer_orgnr_rate": 0.97,
+    "inactive_when_detail_fetched": 0,
+    "seconds": 124.37,
+    "ms_per_detail": 414.6,
+    "bytes": 1958838,
+    "bytes_per_detail": 6529
+  },
+  "full_orgnr_index": {
+    "active_ads_fetched": 9724,
+    "http_200": 9724,
+    "attempts": 9724,
+    "retries": 0,
+    "seconds": 688.89,
+    "workers": 4,
+    "bytes": 60953838,
+    "inactive_on_detail": 0,
+    "expired_on_detail": 45,
+    "active_with_employer_orgnr": 9397,
+    "target_orgnr_set_size": 208,
+    "matched_ads": 2,
+    "companies_covered": 2,
+    "companies": [
+      "928590445",
+      "975387011"
+    ],
+    "matches_via_entity_orgnr": 0,
+    "matches_via_subunit_orgnr": 2,
+    "matches": [
+      {
+        "organisation_number": "928590445",
+        "employer_orgnr": "928609987",
+        "employer_scope": "subunit",
+        "employer_name": "Maritim B\u00e5tutstyr Karm\u00f8y",
+        "header_business_name": "Maritim B\u00e5tutstyr Karm\u00f8y",
+        "title": "Butikkselger med b\u00e5tkunnskaper",
+        "published": "2026-08-13T18:56:27+02:00",
+        "expires": "2026-10-31T00:00:00+01:00",
+        "source_url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/2bb2c26f-b551-4424-9240-2a98d2bded3b",
+        "retrieved_at": "2026-10-03T03:55:55.322589Z",
+        "content_sha256": "43c670b0474d7379f153571a7be5cceb313662effd0973d2631526c34a51c5fb",
+        "employer_homepage": ""
+      },
+      {
+        "organisation_number": "975387011",
+        "employer_orgnr": "973112406",
+        "employer_scope": "subunit",
+        "employer_name": "Stiftelsen CRUX",
+        "header_business_name": "Stiftelsen CRUX",
+        "title": "Sykepleier/Vernepleier",
+        "published": "2026-09-24T00:00:00+02:00",
+        "expires": "2026-10-12T00:00:00+02:00",
+        "source_url": "https://pam-stilling-feed.nav.no/api/v1/feedentry/e4669236-a573-42ca-b8fd-670de946aa1f",
+        "retrieved_at": "2026-10-03T04:02:31.365479Z",
+        "content_sha256": "f87218c904819580061edaa871de772404ae7e73aa019942c6272f4bcf488a8e",
+        "employer_homepage": ""
+      }
+    ]
+  },
+  "nav_website_candidates": {
+    "companies_with_candidate": 0,
+    "companies_with_candidate_and_no_registry_website": 0,
+    "companies_verified": 0,
+    "companies_verified_new_website": 0,
+    "candidates_rejected_or_ambiguous": 0
+  }
+}

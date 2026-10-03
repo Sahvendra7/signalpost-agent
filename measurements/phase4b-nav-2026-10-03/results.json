@@ -1,0 +1,82 @@
+{
+  "sample": "out/experiments/sample.jsonl",
+  "companies": 100,
+  "identity_anchored": 100,
+  "baseline": {
+    "coverage": {
+      "per_area": {
+        "filings": 1.0,
+        "leadership": 1.0,
+        "locations": 1.0,
+        "websites": 0.17,
+        "hiring_activity": 1.0
+      },
+      "mean_area_coverage": 0.834,
+      "companies_all_five": 17,
+      "companies_all_five_rate": 0.17
+    },
+    "requests": 590,
+    "runtime_ms": 74285,
+    "available_claims": 3947
+  },
+  "experiments": {
+    "nav_jobs": {
+      "summary": {
+        "companies": 100,
+        "companies_measured": 100,
+        "companies_covered": 1,
+        "coverage_rate": 0.01,
+        "requests_total": 1,
+        "requests_per_company": 0.01,
+        "runtime_per_company": {
+          "n": 100,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "max_ms": 245
+        },
+        "evidence_items": 1,
+        "evidence_complete_rate": 1.0,
+        "identity_rejections": 0,
+        "published_identity_mismatches": 0,
+        "transport_failures": 0,
+        "jobs_total": 1,
+        "jobs_per_company_mean": 0.01,
+        "jobs_per_covered_company_mean": 1.0,
+        "feed_pages": 39,
+        "feed_entries": 374300,
+        "active_ads": 9724,
+        "feed_stop_reason": "end_of_feed",
+        "shared_scan_requests": 40,
+        "name_candidates": 1,
+        "false_employer_name_matches_rejected": 0,
+        "candidates_without_orgnr": 0,
+        "jobs_via_subunit_orgnr": 1,
+        "full_orgnr_index_cost_requests": 9763,
+        "measured": true
+      },
+      "measured": true
+    }
+  },
+  "combined_without_search": {
+    "per_area": {
+      "filings": 1.0,
+      "leadership": 1.0,
+      "locations": 1.0,
+      "websites": 0.17,
+      "hiring_activity": 1.0
+    },
+    "mean_area_coverage": 0.834,
+    "companies_all_five": 17,
+    "companies_all_five_rate": 0.17,
+    "unmeasured_sources": [
+      "brreg_activity",
+      "filings",
+      "site_discovery"
+    ]
+  },
+  "incremental_area_coverage": {
+    "hiring_activity_from_brreg_activity": "UNMEASURED",
+    "hiring_activity_from_nav_jobs": 0.0,
+    "websites_from_non_search_discovery": "UNMEASURED"
+  }
+}
