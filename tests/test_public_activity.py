@@ -92,6 +92,8 @@ class DateAndFeedTests(unittest.TestCase):
         items = public_activity.html_items(html, "https://x.no/nyheter/")
         self.assertEqual({item["date"] for item in items}, {"2026-07-01T07:00:00Z", "2026-06-20"})
         self.assertIn("https://x.no/nyheter/vi-ansetter", {item["url"] for item in items})
+        shared = '<article><h1>Presserom</h1><a href="https://www.facebook.com/sharer/sharer.php?u=x">Del</a><time datetime="2026-09-15T09:26:53+00:00"></time></article>'
+        self.assertEqual(public_activity.html_items(shared, "https://x.no/presse/")[0]["url"], "https://x.no/presse/", "share-button links are never item URLs")
 
 
 def byte_result(url, status, raw=b"", content_type="text/html"):

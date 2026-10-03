@@ -1,4 +1,4 @@
-# Recall analysis (Phase 4A, free sources)
+# Recall analysis (Phases 4A–4C)
 
 Data: `docs/live-source-expansion-results.md` (100 companies, seed 20261002, frozen `461bdbf`).
 This is a measurement summary. It does not compute or estimate a Builderr score and does not propose
@@ -19,8 +19,8 @@ runtime), and are penalised by any wrong-company match.
 | Leadership | 100 | 0 | — | 100 | yes |
 | Locations | 100 | 0 | — | 100 | yes |
 | Websites | 8 crawled-verified (17 registry URLs) | 83–92 | non-search discovery | 12 audited (13 by gate) | yes |
-| Hiring | 0 | 100 | none free in this phase (NAV UNMEASURED) | 0 | yes (category) |
-| Public activity | 0 confirmed | 100 | Brreg update history | 0 confirmed; 100 if `registry_activity` counts | **UNCONFIRMED** |
+| Hiring | 0 | 100 | NAV job feed (Phase 4B, public experiment token) | 1 (S1) / 2 (S2) | yes (category); NAV credential UNCONFIRMED |
+| Public activity / footprint | 2 (site-linked profiles) | 98 | Brreg update history; site-linked profiles + dated site activity (Phase 4C) | 5 (sample footprint definition); 9 profile-or-dated; 100 only if `registry_activity` counts | **UNCONFIRMED** scoring mapping; the official sample's footprint flag = ≥1 external profile handle |
 
 The official-registry categories are already at the company-coverage ceiling on this sample. The
 gaps in company coverage are websites, hiring and public activity: the external categories.
@@ -49,6 +49,20 @@ Readings:
   the baseline's wall time per company. All 100 PDFs were image-only, so no facts are extractable
   without OCR.
 
+## Fifth area (hiring & public activity): Phase 4B–4C ranking
+
+| Rank | Source | Incremental companies | Extra requests | Extra runtime | Wrong matches | Credential / policy |
+|---|---|---|---|---|---|---|
+| 1 | Verified site → site-linked profile (official sample's footprint logic) | **+3** | +60 | +18.2 s | 0 | none; explicitly permitted first-party source |
+| 2 | Verified site → dated first-party activity (feeds, JSON-LD) | +4 beyond profiles (+7 total) | (same crawl) | (same) | 0 | none |
+| 3 | NAV S1 | +1 | +41 | +67.9 s | 0 | public experiment token |
+| 4 | NAV S2 | +2 | +9,764 | ≈ +754 s | 0 | public experiment token |
+| — | Brave search | UNMEASURED | — | — | — | needs key |
+
+The free fifth-area path is capped by website coverage. All 3 new profile companies came from discovered
+first-party sites, so **website coverage (12/100) is now the binding constraint for two areas at once**
+(websites and footprint). 88 companies have no verified site.
+
 ## Precision observations
 
 - Baseline: 0 identity failures, 0 dangling evidence, 0 false refresh changes.
@@ -68,11 +82,13 @@ weakest dimension across entrants. It is not used to estimate this agent's score
 
 ## Remaining unknowns
 
-1. NAV hiring coverage, precision and request cost: UNMEASURED.
-2. Brave or any search-based website discovery: UNMEASURED (no key).
+1. NAV: measured (Phase 4B), +1–2 companies; OPTIONAL.
+2. Brave or any search-based website discovery: UNMEASURED (no key). Eligible under the adaptive rule: 91/100.
 3. Whether `registry_activity` / `roles_last_changed` count as public activity.
 4. Whether registry fields count as "external field families" for recall.
 5. Whether the verified pool contains the extra open-accounts fields.
 6. Whether registry-listed but uncrawled URLs count as website coverage. Baseline: 17 listed vs 8 verified.
 7. Variance: one 100-company sample. Discovery's +4 on n = 83 has a wide interval.
-8. Website discovery's `nav_employer_site` candidate source was not exercised (it depends on NAV).
+8. Website discovery's `nav_employer_site` candidate source: exercised in Phase 4B; 0 candidates (empty `employer.homepage`).
+9. Whether the evaluation contract scores a site-linked profile as public activity (the official sample's display does).
+10. Gate v2 is validated on 5 live candidates only.

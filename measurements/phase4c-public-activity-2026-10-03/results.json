@@ -1,0 +1,88 @@
+{
+  "label": "public_activity",
+  "SCORING_MAPPING": "UNCONFIRMED",
+  "population": 100,
+  "baseline": {
+    "verified_website": 8,
+    "site_linked_profile": 2,
+    "confirmed_hiring": 0,
+    "dated_public_activity": 0
+  },
+  "gate_v2_discovered": {
+    "candidates": 5,
+    "accepted": 4,
+    "classes": {
+      "https://spirendesign.no/": "FIRST_PARTY",
+      "https://www.lyserom.no/": "FIRST_PARTY",
+      "https://www.blioptimal.no/": "FIRST_PARTY",
+      "https://arasenstadion.no/": "FAN_COMMUNITY",
+      "https://annenvri.no/": "FIRST_PARTY"
+    },
+    "requests": 23,
+    "seconds": 7.97
+  },
+  "verified_sites": {
+    "total": 12,
+    "registry_linked": 8,
+    "discovered_first_party": 4
+  },
+  "free_path": {
+    "companies_with_verified_site": 12,
+    "companies_with_accepted_profile": 5,
+    "companies_with_dated_activity": 6,
+    "companies_with_recent_activity_365d": 3,
+    "companies_with_profile_or_dated": 9,
+    "profiles_accepted": 8,
+    "profiles_ambiguous": 4,
+    "profiles_by_platform": {
+      "facebook": 5,
+      "instagram": 1,
+      "linkedin": 1,
+      "youtube": 1
+    },
+    "activities_dated": 33,
+    "activities_undated": 0,
+    "careers_pages_found": 0,
+    "requests": 37,
+    "seconds": 10.22,
+    "robots_blocked_urls": 0,
+    "errors": {}
+  },
+  "newly_covered_vs_baseline": {
+    "footprint_definition_profile": [
+      "920772099",
+      "921136501",
+      "927818094"
+    ],
+    "profile_or_dated": [
+      "875606662",
+      "919378875",
+      "920186114",
+      "920772099",
+      "921136501",
+      "927818094",
+      "986757368"
+    ]
+  },
+  "totals": {
+    "verified_sites": 12,
+    "fifth_category_footprint_definition": 5,
+    "fifth_category_profile_or_dated": 9
+  },
+  "search": {
+    "provider": "none",
+    "eligible_adaptive_companies": 91,
+    "eligible_reason": {
+      "no_verified_site": 88,
+      "site_but_no_profile_or_activity": 3
+    },
+    "by_design_cost_usd": {
+      "naive_all_families_100": 3.0,
+      "naive_one_family_100": 0.5,
+      "adaptive_max_all_families": 2.73,
+      "adaptive_max_one_family": 0.455
+    },
+    "status": "UNMEASURED: no BRAVE_SEARCH_API_KEY"
+  },
+  "wall_seconds": 18.25
+}

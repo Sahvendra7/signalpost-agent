@@ -179,7 +179,7 @@ def main() -> None:
             "footprint_definition_profile": sorted(set(free["profile"]) - set(baseline["site_linked_profile"])),
             "profile_or_dated": sorted(set(free["any"]) - set(baseline["site_linked_profile"])),
         },
-        "totals": {key: len(value) for key, value in total.items()},
+        "totals": {key: (value if isinstance(value, int) else len(value)) for key, value in total.items()},
         "search": search_result,
         "wall_seconds": round(time.monotonic() - started, 2),
     }

@@ -1,0 +1,120 @@
+[
+  {
+    "organisation_number": "920772099",
+    "url": "https://spirendesign.no/",
+    "class": "FIRST_PARTY",
+    "publishable": true,
+    "reasons": [
+      "C1: organisation number in the site's own footer/contact/legal text"
+    ],
+    "signals": {
+      "org_in_identity_text": true,
+      "org_anywhere": true,
+      "other_org_numbers": 0,
+      "own_domain_mailbox": [
+        "spirendesign.no"
+      ],
+      "foreign_mailbox": [],
+      "registry_email_domain_match": false,
+      "legal_name_in_heading": true,
+      "registered_postcode": true,
+      "registered_street": true
+    },
+    "requests": 4,
+    "runtime_ms": 6866
+  },
+  {
+    "organisation_number": "921136501",
+    "url": "https://www.lyserom.no/",
+    "class": "FIRST_PARTY",
+    "publishable": true,
+    "reasons": [
+      "C1: organisation number in the site's own footer/contact/legal text"
+    ],
+    "signals": {
+      "org_in_identity_text": true,
+      "org_anywhere": true,
+      "other_org_numbers": 0,
+      "own_domain_mailbox": [],
+      "foreign_mailbox": [],
+      "registry_email_domain_match": false,
+      "legal_name_in_heading": true,
+      "registered_postcode": true,
+      "registered_street": true
+    },
+    "requests": 5,
+    "runtime_ms": 3708
+  },
+  {
+    "organisation_number": "927818094",
+    "url": "https://www.blioptimal.no/",
+    "class": "FIRST_PARTY",
+    "publishable": true,
+    "reasons": [
+      "C2: exact legal name + registered postcode and street + own-domain mailbox"
+    ],
+    "signals": {
+      "org_in_identity_text": false,
+      "org_anywhere": false,
+      "other_org_numbers": 0,
+      "own_domain_mailbox": [
+        "blioptimal.no"
+      ],
+      "foreign_mailbox": [],
+      "registry_email_domain_match": false,
+      "legal_name_in_heading": true,
+      "registered_postcode": true,
+      "registered_street": true
+    },
+    "requests": 5,
+    "runtime_ms": 5058
+  },
+  {
+    "organisation_number": "976744667",
+    "url": "https://arasenstadion.no/",
+    "class": "FAN_COMMUNITY",
+    "publishable": false,
+    "reasons": [
+      "fan/unofficial marker in title, h1 or meta"
+    ],
+    "signals": {
+      "org_in_identity_text": false,
+      "org_anywhere": false,
+      "other_org_numbers": 0,
+      "own_domain_mailbox": [],
+      "foreign_mailbox": [
+        "lsk.no"
+      ],
+      "registry_email_domain_match": false,
+      "legal_name_in_heading": true,
+      "registered_postcode": true,
+      "registered_street": true
+    },
+    "requests": 4,
+    "runtime_ms": 6889
+  },
+  {
+    "organisation_number": "986757368",
+    "url": "https://annenvri.no/",
+    "class": "FIRST_PARTY",
+    "publishable": true,
+    "reasons": [
+      "C2: exact legal name + registered postcode and street + own-domain mailbox"
+    ],
+    "signals": {
+      "org_in_identity_text": false,
+      "org_anywhere": false,
+      "other_org_numbers": 0,
+      "own_domain_mailbox": [
+        "annenvri.no"
+      ],
+      "foreign_mailbox": [],
+      "registry_email_domain_match": false,
+      "legal_name_in_heading": true,
+      "registered_postcode": true,
+      "registered_street": true
+    },
+    "requests": 5,
+    "runtime_ms": 4616
+  }
+]

@@ -103,9 +103,11 @@ def html_items(html: str, base_url: str) -> list[dict[str, Any]]:
         date = parse_date(time_node.get("datetime")) if time_node else None
         if not date:
             continue
-        anchor = article.select_one("a[href]")
+        own = [urllib.parse.urljoin(base_url, anchor["href"]) for anchor in article.select("a[href]")]
+        own = [url for url in own if _registered_domain(url) == _registered_domain(base_url) and url.startswith(("http://", "https://"))]
         heading = article.select_one("h1, h2, h3, h4")
-        items.append({"title": (heading.get_text(" ", strip=True)[:200] if heading else None), "url": urllib.parse.urljoin(base_url, anchor["href"]) if anchor else base_url, "date": date, "date_kind": "published", "method": "article_time_datetime"})
+        # Only the company's own domain can be the item URL; share buttons and platform links never are.
+        items.append({"title": (heading.get_text(" ", strip=True)[:200] if heading else None), "url": own[0] if own else base_url, "date": date, "date_kind": "published", "method": "article_time_datetime"})
     return items
 
 

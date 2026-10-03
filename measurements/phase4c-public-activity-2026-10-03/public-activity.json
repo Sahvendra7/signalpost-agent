@@ -1,0 +1,825 @@
+[
+  {
+    "organisation_number": "875606662",
+    "site_url": "https://kilishockey.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 4,
+    "statuses": {
+      "200": 4
+    },
+    "runtime_ms": 5403,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/KILtoppfotball",
+        "found_on": "https://kilishockey.no/",
+        "page_sha256": "dcd2d067da105990864b83bdc81e6f42abddc553df0803f99cbd680f092bb8cf",
+        "retrieved_at": "2026-10-03T09:54:45.771306Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.3,
+        "identity_reason": "social handle lacks strong exact-entity name evidence",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "AMBIGUOUS"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/kiltoppfotball",
+        "found_on": "https://kilishockey.no/",
+        "page_sha256": "dcd2d067da105990864b83bdc81e6f42abddc553df0803f99cbd680f092bb8cf",
+        "retrieved_at": "2026-10-03T09:54:45.771306Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.3,
+        "identity_reason": "social handle lacks strong exact-entity name evidence",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "AMBIGUOUS"
+      }
+    ],
+    "platforms_accepted": [],
+    "activities_dated": [
+      {
+        "title": "Verdensdagen for psykisk helse",
+        "url": "https://kilishockey.no/verdensdagen-for-psykisk-helse/",
+        "date": "2026-10-02T12:06:43Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "Verdensdagen for psykisk helse"
+      },
+      {
+        "title": "Hockeydag i Kongshallen – Kimmas showkamp og serieåpning",
+        "url": "https://kilishockey.no/hockeydag-i-kongshallen-kimmas-showkamp-og-serieapning/",
+        "date": "2026-09-08T14:04:09Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "Hockeydag i Kongshallen – Kimmas showkamp og serieåpning"
+      },
+      {
+        "title": "SESONGKORT 26/27",
+        "url": "https://kilishockey.no/sesongkort-26-27/",
+        "date": "2026-06-05T13:11:39Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "SESONGKORT 26/27"
+      },
+      {
+        "title": "PRESSEMELDING.",
+        "url": "https://kilishockey.no/pressemelding/",
+        "date": "2026-05-29T13:29:11Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "PRESSEMELDING."
+      },
+      {
+        "title": "Vår nye assistent trener på A-lag, Jim Sandvik",
+        "url": "https://kilishockey.no/var-nye-assistent-trener-pa-a-lag/",
+        "date": "2026-05-11T11:35:37Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "Vår nye assistent trener på A-lag, Jim Sandvik"
+      },
+      {
+        "title": "SPORTSLIG UTVALG KONGSVINGER IL ISHOCKEY",
+        "url": "https://kilishockey.no/sportslig-utvalg-kongsvinger-il-ishockey/",
+        "date": "2026-04-29T16:50:16Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "SPORTSLIG UTVALG KONGSVINGER IL ISHOCKEY"
+      },
+      {
+        "title": "Sesongavslutning 25/26",
+        "url": "https://kilishockey.no/3030-2/",
+        "date": "2026-04-16T13:14:28Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "Sesongavslutning 25/26"
+      },
+      {
+        "title": "Tom Ivar Hesbråten fortsetter som A-lagstrener 26/27",
+        "url": "https://kilishockey.no/tom-ivar-hesbraten-fortsetter-som-a-lagstrener-26-27/",
+        "date": "2026-04-15T12:48:43Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "Tom Ivar Hesbråten fortsetter som A-lagstrener 26/27"
+      },
+      {
+        "title": "HockeyLiga1 – Serieforeningen for 1. divisjon",
+        "url": "https://kilishockey.no/hockeyliga1-serieforeningen-for-1-divisjon/",
+        "date": "2026-04-11T09:55:58Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "HockeyLiga1 – Serieforeningen for 1. divisjon"
+      },
+      {
+        "title": "ÅRSMØTE KIL ISHOCKEY 2026",
+        "url": "https://kilishockey.no/arsmote-kil-ishockey-2026/",
+        "date": "2026-03-31T13:11:35Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://kilishockey.no/feed/",
+        "content_sha256": "b22715c7e33fb1c684785564e0c69f3437449af4b3f9bb6dd4d83dabc15f5603",
+        "retrieved_at": "2026-10-03T09:54:46.954954Z",
+        "excerpt": "ÅRSMØTE KIL ISHOCKEY 2026"
+      }
+    ],
+    "activities_undated": 0,
+    "activities_recent_365d": 10,
+    "latest_activity": "2026-10-02T12:06:43Z",
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": true,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "912362086",
+    "site_url": "https://www.vitagile.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 2,
+    "statuses": {
+      "404": 1,
+      "200": 1
+    },
+    "runtime_ms": 1575,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [],
+    "activities_dated": [],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": null,
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": false,
+    "covered_any": false
+  },
+  {
+    "organisation_number": "919378875",
+    "site_url": "https://www.gronsand.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 3,
+    "statuses": {
+      "200": 3
+    },
+    "runtime_ms": 927,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/gronsand",
+        "found_on": "https://www.gronsand.no/",
+        "page_sha256": "311e3c04c508ad3361b0fddac157f5024f557a9af0093f7ac6a731865b6a7223",
+        "retrieved_at": "2026-10-03T09:54:43.891053Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.3,
+        "identity_reason": "social handle lacks strong exact-entity name evidence",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "AMBIGUOUS"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/gronsandgjestagard",
+        "found_on": "https://www.gronsand.no/",
+        "page_sha256": "311e3c04c508ad3361b0fddac157f5024f557a9af0093f7ac6a731865b6a7223",
+        "retrieved_at": "2026-10-03T09:54:43.891053Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.3,
+        "identity_reason": "social handle lacks strong exact-entity name evidence",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "AMBIGUOUS"
+      }
+    ],
+    "platforms_accepted": [],
+    "activities_dated": [
+      {
+        "title": "Tennis og DiscGolf er ÅPNET for sesongen",
+        "url": "https://www.gronsand.no/post/tennis-og-discgolf-er-%C3%A5pnet-for-sesongen",
+        "date": "2019-04-09T14:13:23Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Tennis og DiscGolf er ÅPNET for sesongen"
+      },
+      {
+        "title": "Skikafé og Litauisk kafe",
+        "url": "https://www.gronsand.no/post/skikaf%C3%A9-og-litauisk-kafe",
+        "date": "2019-04-02T15:02:10Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Skikafé og Litauisk kafe"
+      },
+      {
+        "title": "20% på lokalleie i februar, mars og april",
+        "url": "https://www.gronsand.no/post/20-p%C3%A5-lokalleie-i-februar-mars-og-april",
+        "date": "2019-02-08T09:33:53Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "20% på lokalleie i februar, mars og april"
+      },
+      {
+        "title": "Caamora Norway sang julen inn på søndag",
+        "url": "https://www.gronsand.no/post/caamora-norway-sang-julen-inn-p%C3%A5-s%C3%B8ndag",
+        "date": "2018-12-04T20:40:31Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Caamora Norway sang julen inn på søndag"
+      },
+      {
+        "title": "Julaften alene sammen",
+        "url": "https://www.gronsand.no/post/julaften-alene-sammen",
+        "date": "2018-12-04T20:24:10Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Julaften alene sammen"
+      },
+      {
+        "title": "Sommernatt ved fjorden",
+        "url": "https://www.gronsand.no/post/sommernatt-ved-fjorden",
+        "date": "2018-09-27T12:26:48Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Sommernatt ved fjorden"
+      },
+      {
+        "title": "Perler på en snurr",
+        "url": "https://www.gronsand.no/post/perler-p%C3%A5-en-snurr",
+        "date": "2018-09-27T12:19:33Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Perler på en snurr"
+      },
+      {
+        "title": "Offisiell lansering av DiscGolfbanen på Grønsand",
+        "url": "https://www.gronsand.no/post/offisiell-lansering-av-discgolfbanen-p%C3%A5-gr%C3%B8nsand",
+        "date": "2018-09-02T19:53:05Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Offisiell lansering av DiscGolfbanen på Grønsand"
+      },
+      {
+        "title": "PopUp Salgsutstilling på Grønsand Gjestegårde",
+        "url": "https://www.gronsand.no/post/popup-salgsutstilling-p%C3%A5-gr%C3%B8nsand-gjesteg%C3%A5rde",
+        "date": "2018-07-30T13:26:50Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "PopUp Salgsutstilling på Grønsand Gjestegårde"
+      },
+      {
+        "title": "Tenniskurset i juni ble en stor suksess",
+        "url": "https://www.gronsand.no/post/tenniskurset-i-juni-ble-en-stor-suksess",
+        "date": "2018-06-19T15:13:31Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Tenniskurset i juni ble en stor suksess"
+      },
+      {
+        "title": "17. mai på Grønsand 2018",
+        "url": "https://www.gronsand.no/post/17-mai-p%C3%A5-gr%C3%B8nsand-2018",
+        "date": "2018-05-17T17:43:05Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "17. mai på Grønsand 2018"
+      },
+      {
+        "title": "Kulturkveld på Grønsand Gjestegård",
+        "url": "https://www.gronsand.no/post/kulturkveld-p%C3%A5-gr%C3%B8nsand-gjesteg%C3%A5rd",
+        "date": "2018-03-11T21:28:22Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Kulturkveld på Grønsand Gjestegård"
+      },
+      {
+        "title": "Suksess for Barneskirennet på Grønsand",
+        "url": "https://www.gronsand.no/post/suksess-for-barneskirennet-pa-gronsand",
+        "date": "2018-02-22T16:01:29Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Suksess for Barneskirennet på Grønsand"
+      },
+      {
+        "title": "Grønsand Gjestegård skal skape liv og røre på Storsand. Sammen med Eplegården og Sundby gård satser",
+        "url": "https://www.gronsand.no/post/grnsand-gjestegrd-skal-skape-liv-og-rre-pa-storsand-1",
+        "date": "2018-01-30T10:24:31Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Grønsand Gjestegård skal skape liv og røre på Storsand. Sammen med Eplegården og Sundby gård satser"
+      },
+      {
+        "title": "Grønsand Gjestegård starter Søndagskafe",
+        "url": "https://www.gronsand.no/post/gronsand-gjestegard-starter-sondagskafe",
+        "date": "2018-01-26T13:16:25Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.gronsand.no/blog-feed.xml",
+        "content_sha256": "314f8250f4adf2741db7c354165ff785910989eb672a3fc9cc9b22f371fe67a7",
+        "retrieved_at": "2026-10-03T09:54:44.278373Z",
+        "excerpt": "Grønsand Gjestegård starter Søndagskafe"
+      }
+    ],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": "2019-04-09T14:13:23Z",
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": true,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "920186114",
+    "site_url": "https://jedevold-moller.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 3,
+    "statuses": {
+      "200": 3
+    },
+    "runtime_ms": 6332,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [],
+    "activities_dated": [
+      {
+        "title": "Tildeling av stipender 2026",
+        "url": "https://jedevold-moller.no/tildeling-av-stipender-2026/",
+        "date": "2026-06-11T08:59:14Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://jedevold-moller.no/feed/",
+        "content_sha256": "3f9a3184d2578310b00a89192bb194d2f092e565263d313d8a45888c930e2faa",
+        "retrieved_at": "2026-10-03T09:54:49.823201Z",
+        "excerpt": "Tildeling av stipender 2026"
+      },
+      {
+        "title": "Utlysing 2026",
+        "url": "https://jedevold-moller.no/johan-e-devold-mollers-stiftelse-ble-opprettet-31-januar-2018-i-alesund/",
+        "date": "2018-07-09T17:09:24Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://jedevold-moller.no/feed/",
+        "content_sha256": "3f9a3184d2578310b00a89192bb194d2f092e565263d313d8a45888c930e2faa",
+        "retrieved_at": "2026-10-03T09:54:49.823201Z",
+        "excerpt": "Utlysing 2026"
+      },
+      {
+        "title": "Stiftelsen etablert",
+        "url": "https://jedevold-moller.no/post-3/",
+        "date": "2018-03-25T20:17:13Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://jedevold-moller.no/feed/",
+        "content_sha256": "3f9a3184d2578310b00a89192bb194d2f092e565263d313d8a45888c930e2faa",
+        "retrieved_at": "2026-10-03T09:54:49.823201Z",
+        "excerpt": "Stiftelsen etablert"
+      },
+      {
+        "title": "Utdeling av stipend for høsten 2025",
+        "url": "https://jedevold-moller.no/post-2/",
+        "date": "2018-03-25T20:16:49Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://jedevold-moller.no/feed/",
+        "content_sha256": "3f9a3184d2578310b00a89192bb194d2f092e565263d313d8a45888c930e2faa",
+        "retrieved_at": "2026-10-03T09:54:49.823201Z",
+        "excerpt": "Utdeling av stipend for høsten 2025"
+      }
+    ],
+    "activities_undated": 0,
+    "activities_recent_365d": 1,
+    "latest_activity": "2026-06-11T08:59:14Z",
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": true,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "965558268",
+    "site_url": "https://www.hako-elektro.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 2,
+    "statuses": {
+      "200": 2
+    },
+    "runtime_ms": 1914,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [],
+    "activities_dated": [],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": null,
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": false,
+    "covered_any": false
+  },
+  {
+    "organisation_number": "975387011",
+    "site_url": "https://stiftelsencrux.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 5,
+    "statuses": {
+      "200": 5
+    },
+    "runtime_ms": 10211,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/stiftelsencrux",
+        "found_on": "https://stiftelsencrux.no/",
+        "page_sha256": "08e5bc5e8562d08d3eacff0eb0a50593bb8df6cb5e031677f54337e1b595ff46",
+        "retrieved_at": "2026-10-03T09:54:46.991635Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/company/stiftelsen-crux-hovedkontor",
+        "found_on": "https://stiftelsencrux.no/",
+        "page_sha256": "08e5bc5e8562d08d3eacff0eb0a50593bb8df6cb5e031677f54337e1b595ff46",
+        "retrieved_at": "2026-10-03T09:54:46.991635Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      }
+    ],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [
+      "facebook",
+      "linkedin"
+    ],
+    "activities_dated": [
+      {
+        "title": "Presserom",
+        "url": "https://stiftelsencrux.no/media/hovedkontoret/5.jpg",
+        "date": "2026-09-15T09:26:53Z",
+        "date_kind": "published",
+        "method": "article_time_datetime",
+        "page_url": "https://stiftelsencrux.no/om-crux/presserom",
+        "content_sha256": "ff8552ca8aada6f227300b7ac8d8a0f4f5381aa6c0d0665c4962055cb0a64c60",
+        "retrieved_at": "2026-10-03T09:54:48.959626Z",
+        "excerpt": "Presserom"
+      },
+      {
+        "title": "Lokale pressekontakter",
+        "url": "https://stiftelsencrux.no/om-crux/presserom/lokale-pressekontakter",
+        "date": "2026-09-17T09:53:53Z",
+        "date_kind": "published",
+        "method": "article_time_datetime",
+        "page_url": "https://stiftelsencrux.no/om-crux/presserom/lokale-pressekontakter",
+        "content_sha256": "8c08a0e813a92386df4c1dc5eedb737bce0fd3d858be3bb650fe3b8ea21e45d4",
+        "retrieved_at": "2026-10-03T09:54:50.760987Z",
+        "excerpt": "Lokale pressekontakter"
+      }
+    ],
+    "activities_undated": 0,
+    "activities_recent_365d": 2,
+    "latest_activity": "2026-09-17T09:53:53Z",
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": true,
+    "covered_dated_activity": true,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "980807568",
+    "site_url": "https://www.skansehytta.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 2,
+    "statuses": {
+      "200": 2
+    },
+    "runtime_ms": 1327,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [],
+    "activities_dated": [],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": null,
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": false,
+    "covered_any": false
+  },
+  {
+    "organisation_number": "987796154",
+    "site_url": "https://www.bmuj.no/",
+    "site_class": "REGISTRY_LINKED",
+    "requests": 3,
+    "statuses": {
+      "200": 3
+    },
+    "runtime_ms": 1191,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/ByggmesterUlfJohannessenAs",
+        "found_on": "https://www.bmuj.no/",
+        "page_sha256": "f4edd3c635bc10620805ad4121d5b19315fe8ebd46a6f87c3149d26c3eda9a91",
+        "retrieved_at": "2026-10-03T09:54:45.787040Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      }
+    ],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [
+      "facebook"
+    ],
+    "activities_dated": [],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": null,
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": true,
+    "covered_dated_activity": false,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "920772099",
+    "site_url": "https://spirendesign.no/",
+    "site_class": "FIRST_PARTY",
+    "requests": 3,
+    "statuses": {
+      "200": 3
+    },
+    "runtime_ms": 4293,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/spirendesign",
+        "found_on": "https://spirendesign.no/",
+        "page_sha256": "443a193025bf1146ec9e702e2bf83db19fa887cbf1199dfc82f15c42419a2d53",
+        "retrieved_at": "2026-10-03T09:54:48.375434Z",
+        "via_jsonld_sameas": true,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/spirendesign",
+        "found_on": "https://spirendesign.no/",
+        "page_sha256": "443a193025bf1146ec9e702e2bf83db19fa887cbf1199dfc82f15c42419a2d53",
+        "retrieved_at": "2026-10-03T09:54:48.375434Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://youtube.com/@spirendesignas4987",
+        "found_on": "https://spirendesign.no/",
+        "page_sha256": "443a193025bf1146ec9e702e2bf83db19fa887cbf1199dfc82f15c42419a2d53",
+        "retrieved_at": "2026-10-03T09:54:48.375434Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      }
+    ],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [
+      "facebook",
+      "instagram",
+      "youtube"
+    ],
+    "activities_dated": [],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": null,
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": true,
+    "covered_dated_activity": false,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "921136501",
+    "site_url": "https://www.lyserom.no/",
+    "site_class": "FIRST_PARTY",
+    "requests": 3,
+    "statuses": {
+      "200": 3
+    },
+    "runtime_ms": 3164,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/lyserom",
+        "found_on": "https://www.lyserom.no/",
+        "page_sha256": "b5c48b2d2deb896ef02bc1545b95ee2256e7220a9c28be8d32d39c47a1428193",
+        "retrieved_at": "2026-10-03T09:54:47.165011Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      }
+    ],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [
+      "facebook"
+    ],
+    "activities_dated": [],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": null,
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": true,
+    "covered_dated_activity": false,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "927818094",
+    "site_url": "https://www.blioptimal.no/",
+    "site_class": "FIRST_PARTY",
+    "requests": 3,
+    "statuses": {
+      "404": 1,
+      "200": 2
+    },
+    "runtime_ms": 3191,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/BliOptimal",
+        "found_on": "https://www.blioptimal.no/",
+        "page_sha256": "ee6a2e5cf2bba8832fafb6ce896ff947f3cc6f495abb87f869318a02fb158294",
+        "retrieved_at": "2026-10-03T09:54:48.296554Z",
+        "via_jsonld_sameas": false,
+        "identity_score": 0.98,
+        "identity_reason": "normalized legal-name sequence appears in the social handle",
+        "relationship": "verified_company_website -> officially_linked_social_profile",
+        "class": "OFFICIALLY_LINKED"
+      }
+    ],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [
+      "facebook"
+    ],
+    "activities_dated": [
+      {
+        "title": "Klinikk Askim og Bli Optimal",
+        "url": "https://www.blioptimal.no/index.php/2017/02/14/klinikk-askim-og-bli-optimal/",
+        "date": "2017-02-14T09:42:57Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://www.blioptimal.no/index.php/feed/",
+        "content_sha256": "8a5d7321f17a765929c7c8443e90011121179c1748d08ab7bd264452bb074571",
+        "retrieved_at": "2026-10-03T09:54:49.438738Z",
+        "excerpt": "Klinikk Askim og Bli Optimal"
+      }
+    ],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": "2017-02-14T09:42:57Z",
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": true,
+    "covered_dated_activity": true,
+    "covered_any": true
+  },
+  {
+    "organisation_number": "986757368",
+    "site_url": "https://annenvri.no/",
+    "site_class": "FIRST_PARTY",
+    "requests": 4,
+    "statuses": {
+      "200": 4
+    },
+    "runtime_ms": 3609,
+    "error": null,
+    "robots_blocked": [],
+    "profiles_accepted": [],
+    "profiles_ambiguous": [],
+    "platforms_accepted": [],
+    "activities_dated": [
+      {
+        "title": "Velkommen til Annen Vri",
+        "url": "https://annenvri.no/2021/07/14/velkommen-til-annen-vri/",
+        "date": "2021-07-14T13:46:24Z",
+        "date_kind": "published",
+        "method": "site_feed",
+        "page_url": "https://annenvri.no/feed/",
+        "content_sha256": "4470e9e2dbdbc9f29a8e319b238f8f2143476f77a5763ac1b81ccaefc454b320",
+        "retrieved_at": "2026-10-03T09:54:51.328586Z",
+        "excerpt": "Velkommen til Annen Vri"
+      }
+    ],
+    "activities_undated": 0,
+    "activities_recent_365d": 0,
+    "latest_activity": "2021-07-14T13:46:24Z",
+    "other_official_pages": {},
+    "platform_activity_collection": "not attempted: LinkedIn/Meta restricted by Builderr source policy; YouTube feeds disallowed by robots.txt",
+    "covered_profile": false,
+    "covered_dated_activity": true,
+    "covered_any": true
+  }
+]

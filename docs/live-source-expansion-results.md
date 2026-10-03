@@ -30,7 +30,8 @@ corrected filings run).
 | + Free website discovery (83 companies without a registry URL) | 5 accepted by gate, **4 after manual audit** | **+4 websites** (+5 by gate) | 4 verified official sites (5 by gate) | +206 (+123 DNS lookups) | +206 | +59.5 s | $0 | **1** (third-party fan site accepted) |
 | + NAV jobs, S1 name prefilter + orgnr check (Phase 4B) | 1 (hiring) | **+1 hiring** (0 → 1) | 1 job | +41 | +41 | +67.9 s | $0 | 0 |
 | + NAV jobs, S2 full orgnr index (Phase 4B) | 2 (hiring) | **+2 hiring** (0 → 2), both via subunit orgnr | 2 jobs | +9,764 | +9,764 | ≈ +754 s | $0 | 0 |
-| + Brave search (A–E) | UNMEASURED (no key) | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED |
+| + Website → site-linked profiles + dated first-party activity (Phase 4C, gate v2) | 5 profile / 9 profile-or-dated (fifth area) | **+3** (sample footprint definition) / +7 (profile or dated); SCORING_MAPPING UNCONFIRMED | 8 profiles + 33 dated activities | +60 | +60 | +18.2 s | $0 | 0 (audited; gate v2 rejects arasenstadion.no) |
+| + Brave search (A–E, Q1–Q6) | UNMEASURED (no key) | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | UNMEASURED | by design $0.005/query | UNMEASURED |
 
 Retries were 0 in every phase. No request returned 5xx. Two website 429s and two 403s in the
 baseline were answered on the first attempt; `fetch_bytes` does not retry 4xx.
@@ -253,3 +254,15 @@ kurtsimonsen.no → storbilsenter.no). None was published.
 - The website false match (976744667 → arasenstadion.no) is analysed in `docs/website-identity-analysis.md`.
   Root cause: rule (b) proves aboutness, not control. Under the proposed class model the audited discovery
   result would be 4 accepted, 4 correct, 0 wrong (not implemented).
+
+## Phase 4C addendum (2026-10-03): fifth area
+
+- Official sample analysis: Builderr's `footprint` dimension ("Hiring & activity") is true exactly for companies
+  with ≥1 external profile handle (52/100, 0 mismatches). All 87 `approved` handles are social links on
+  identity-verified company sites. See `docs/public-activity-experiment.md`.
+- Free path (verified site → site-linked profiles + dated first-party activity): fifth area 2 → **5**
+  (sample definition) or 2 → **9** (profile or dated), +60 requests, +18.2 s, $0, 0 wrong matches.
+- Gate v2 (`docs/website-identity-policy-v2.md`) keeps 4/4 correct discovered sites and rejects
+  arasenstadion.no as FAN_COMMUNITY.
+- Brave: UNMEASURED (no key). 91/100 companies would be eligible for adaptive search
+  (`docs/search-experiment-results.md`).
