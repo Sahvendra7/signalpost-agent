@@ -66,11 +66,13 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sample", action="append", required=True, help="label=path")
     parser.add_argument("--out", required=True)
+    parser.add_argument("--versions", default="v1,v2", help="Re-run only these; others are kept from comparison.json")
     args = parser.parse_args()
-    results = {}
+    previous = Path(args.out, "comparison.json")
+    results = json.loads(previous.read_text()) if previous.exists() else {}
     for item in args.sample:
         label, path = item.split("=", 1)
-        for version in ("v1", "v2"):
+        for version in [item for item in args.versions.split(",") if item]:
             results.setdefault(label, {})[version] = run(version, Path(path), Path(args.out) / label / version)
             print(label, version, json.dumps({k: v for k, v in results[label][version].items() if k != "websites"}), flush=True)
         Path(args.out, "comparison.json").write_text(json.dumps(results, indent=2, ensure_ascii=False) + "\n")

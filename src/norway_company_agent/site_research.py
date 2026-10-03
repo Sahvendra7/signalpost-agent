@@ -170,6 +170,20 @@ class CompanyBudget:
         return True
 
 
+def to_uri(url: str) -> str:
+    """IRI -> URI: IDNA host and percent-encoded path/query, so Norwegian letters never reach urllib raw."""
+    parts = urllib.parse.urlsplit(url)
+    host = parts.hostname or ""
+    try:
+        host = host.encode("idna").decode("ascii")
+    except UnicodeError:
+        pass
+    netloc = host + (f":{parts.port}" if parts.port else "")
+    path = urllib.parse.quote(parts.path, safe="/%:@!$&'()*+,;=-._~")
+    query = urllib.parse.quote(parts.query, safe="=&%:@!$'()*+,;/?-._~")
+    return urllib.parse.urlunsplit((parts.scheme, netloc, path, query, ""))
+
+
 class SiteSession:
     """Run-wide robots and page caches, so a domain is fetched once per run however many companies point at it."""
 
@@ -223,6 +237,7 @@ class SiteSession:
         return bool(parser and parser.can_fetch(USER_AGENT, url))
 
     def get(self, url: str, budget: CompanyBudget, accept: str = HTML_ACCEPT) -> tuple[str, ByteFetch | None]:
+        url = to_uri(url)
         allowed = self.allowed(url, budget)
         if allowed is None:
             return "budget_exhausted", None

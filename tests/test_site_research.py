@@ -61,6 +61,17 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual([(item["source"], item["domain"]) for item in candidates], [("registry_email", "fjordtest.no"), ("name_domain_guess", "fjordtestprogramvare.no"), ("name_domain_guess", "fjordtest-programvare.no")])
 
 
+class UriTests(unittest.TestCase):
+    def test_norwegian_letters_are_encoded_before_fetching(self):
+        from norway_company_agent.site_research import to_uri
+
+        self.assertEqual(to_uri("https://www.bærum-bil.no/om-oss/kontakt-ære?q=å"), "https://" + "www.bærum-bil.no".encode("idna").decode() + "/om-oss/kontakt-%C3%A6re?q=%C3%A5")
+        self.assertEqual(to_uri("https://fjordtest.no/kontakt/"), "https://fjordtest.no/kontakt/")
+        web = FakeWeb({})
+        research_company_site(profile(subunits=[{"organisation_number": "973000001", "website": "www.bærum-bil.no"}]), SiteSession(web, resolver=lambda host: False))
+        self.assertTrue(all(url.isascii() for url in web.calls))
+
+
 class ResearchTests(unittest.TestCase):
     def test_registry_email_domain_verified_and_enriched(self):
         web = FakeWeb(site_pages())
