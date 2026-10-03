@@ -22,6 +22,8 @@ The public universe contains 411,160 eligible companies. Run the starter on 100 
 - diffs against a previous run (`--previous-profiles`): typed `added`/`removed`/`changed`/`unverified`/`unavailable`
   events; a failed source keeps its last supported value with its original evidence, and reordered lists
   are never changes (`docs/refresh-semantics.md`);
+- adds a deterministic, source-cited company summary to every envelope (`docs/company-summary.md`);
+- optionally writes a self-contained offline HTML viewer (`--viewer-output`, `docs/viewer.md`);
 - writes a run report with category coverage, module states, error codes, requests, latency and cost.
 
 Design and rationale: `docs/architecture.md`, `docs/research.md`, `docs/source-matrix.md`.

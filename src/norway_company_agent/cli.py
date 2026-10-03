@@ -14,6 +14,7 @@ from pathlib import Path
 from .batch import profile_complete_for_modules
 from .pipeline import DEFAULT_MODULES, read_input_rows, run_batch
 from .streaming import JsonlStream, read_jsonl_tolerant
+from .viewer import write_viewer
 
 # Fail-safe default only: Builderr has not published the official time budget. The evaluator (or anyone
 # running the command) should set SIGNALPOST_DEADLINE_SECONDS / --deadline-seconds to the real budget minus
@@ -59,6 +60,7 @@ def main(argv: list[str] | None = None, **injected) -> None:
                         help="Batch wall-clock budget (default: $SIGNALPOST_DEADLINE_SECONDS or 2700). 0 disables the deadline.")
     parser.add_argument("--grace-seconds", type=float, default=float(os.environ.get("SIGNALPOST_GRACE_SECONDS", DEFAULT_GRACE_SECONDS)),
                         help="No new company starts inside the last N seconds (default: $SIGNALPOST_GRACE_SECONDS or 60)")
+    parser.add_argument("--viewer-output", help="Also write a self-contained offline HTML viewer of the results here")
     args = parser.parse_args(argv)
 
     modules = [item.strip() for item in args.modules.split(",") if item.strip()]
@@ -113,6 +115,11 @@ def main(argv: list[str] | None = None, **injected) -> None:
     report["resumed_profiles"] = len(reuse)
     Path(args.report).parent.mkdir(parents=True, exist_ok=True)
     Path(args.report).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if args.viewer_output:
+        try:
+            write_viewer(Path(args.viewer_output), result["envelopes"], report)
+        except Exception as exc:  # the viewer is a convenience; it never fails a completed run
+            print(f"viewer not written: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
     summary = {key: report[key] for key in ("run_id", "input_rows", "emitted_envelopes", "terminal_status_counts", "category_available_rate", "runtime_ms", "deadline")}
     summary["validation_passed"] = report["validation"]["passed"]
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
