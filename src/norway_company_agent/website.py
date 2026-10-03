@@ -55,6 +55,11 @@ def assert_public_url(url: str) -> None:
 
 
 class SafeRedirectHandler(urllib.request.HTTPRedirectHandler):
+    """Every redirect target must be a public HTTP(S) URL; at most 5 hops (RFC 9309 asks for at least 5)."""
+
+    max_redirections = 5
+    max_repeats = 2
+
     def redirect_request(self, req: Any, fp: Any, code: int, msg: str, headers: Any, newurl: str) -> Any:
         assert_public_url(newurl)
         return super().redirect_request(req, fp, code, msg, headers, newurl)
@@ -75,28 +80,100 @@ def normalize_homepage(value: str | None) -> str | None:
     return urllib.parse.urlunparse((parsed.scheme, parsed.netloc, parsed.path or "/", "", "", ""))
 
 
+# Public suffix list: only the snapshot bundled in the pinned tldextract wheel (docs/dependencies.md).
+# No suffix-list URLs and no cache directory, so domain parsing never contacts publicsuffix.org (or
+# GitHub) and never writes to ~/.cache. The default `tldextract.extract` would download the live list.
+SUFFIX_EXTRACTOR = tldextract.TLDExtract(suffix_list_urls=(), cache_dir=None, fallback_to_snapshot=True)
+
+
 def _registered_domain(url: str) -> str:
     parsed = urllib.parse.urlparse(url)
-    ext = tldextract.extract(parsed.hostname or "")
+    ext = SUFFIX_EXTRACTOR(parsed.hostname or "")
     return ext.top_domain_under_public_suffix
 
 
-def _robots_allowed(url: str, timeout: float) -> bool:
+ROBOTS_MAX_BYTES = 512_000  # RFC 9309 2.5: parse at least the first 500 KiB
+MAX_CRAWL_DELAY_SECONDS = 10.0  # a longer Crawl-delay cannot be honoured inside a company budget: skip instead
+
+
+def robots_policy(status: int, body: bytes | None) -> tuple[urllib.robotparser.RobotFileParser | None, str]:
+    """robots.txt fetch outcome -> (parser or None for disallow-all, reason). RFC 9309 2.3.1:
+    200 parse; 4xx "unavailable" may crawl, except 401/403 which are treated as disallow (as CPython's
+    RobotFileParser does); 429, 5xx and network failure "unreachable" -> complete disallow."""
+    if status == 200:
+        lines = (body or b"")[:ROBOTS_MAX_BYTES].decode("utf-8", errors="replace").splitlines()
+        parser = urllib.robotparser.RobotFileParser()
+        parser.parse(lines)
+        parser.signalpost_crawl_delay = _group_crawl_delay(lines)  # type: ignore[attr-defined]
+        return parser, "robots_ok"
+    if status in (401, 403):
+        return None, "robots_forbidden"
+    if 400 <= status < 500 and status != 429:
+        parser = urllib.robotparser.RobotFileParser()
+        parser.parse([])
+        return parser, "robots_absent"
+    return None, "robots_unreachable"
+
+
+def _group_crawl_delay(lines: list[str]) -> float | None:
+    """Crawl-delay for our agent group (else the * group). CPython's parser drops non-integer values."""
+    token = USER_AGENT.split("/")[0].casefold()
+    delays: dict[str, float] = {}
+    agents: list[str] = []
+    in_rules = False
+    for line in lines:
+        key, _, value = line.split("#", 1)[0].partition(":")
+        key, value = key.strip().casefold(), value.strip()
+        if key == "user-agent":
+            if in_rules:
+                agents, in_rules = [], False
+            agents.append(value.casefold())
+        elif key:
+            in_rules = True
+            if key == "crawl-delay":
+                try:
+                    delay = float(value)
+                except ValueError:
+                    continue
+                for agent in agents:
+                    if agent == "*" or (agent and agent in token):
+                        delays.setdefault("own" if agent != "*" else "*", delay)
+    return delays.get("own", delays.get("*"))
+
+
+def crawl_delay(parser: urllib.robotparser.RobotFileParser | None) -> float:
+    if parser is None:
+        return 0.0
+    value = getattr(parser, "signalpost_crawl_delay", None)
+    if value is None:
+        try:
+            value = parser.crawl_delay(USER_AGENT)
+        except (TypeError, ValueError):
+            value = None
+    try:
+        return max(0.0, float(value)) if value is not None else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _robots_check(url: str, timeout: float) -> tuple[bool, str, float]:
+    """(allowed, reason, crawl delay seconds) for one URL, one robots.txt request (redirects re-checked)."""
+    from .http import fetch_bytes
+
     assert_public_url(url)
     parsed = urllib.parse.urlparse(url)
     robots_url = urllib.parse.urlunparse((parsed.scheme, parsed.netloc, "/robots.txt", "", "", ""))
-    parser = urllib.robotparser.RobotFileParser()
-    parser.set_url(robots_url)
-    try:
-        request = urllib.request.Request(robots_url, headers={"User-Agent": USER_AGENT})
-        with SAFE_OPENER.open(request, timeout=timeout) as response:
-            parser.parse(response.read().decode("utf-8", errors="replace").splitlines())
-        return parser.can_fetch(USER_AGENT, url)
-    except Exception:
-        # An unavailable robots file is not permission to ignore explicit site terms; callers retain
-        # the URL and can route uncertain domains to review. For this bounded homepage POC, allow one
-        # ordinary GET when robots.txt is absent rather than crawl deeper.
-        return True
+    response = fetch_bytes(robots_url, headers={"User-Agent": USER_AGENT, "Accept": "text/plain"}, timeout=timeout, attempts=1, max_bytes=ROBOTS_MAX_BYTES * 4, opener=SAFE_OPENER)
+    parser, reason = robots_policy(response.status, response.raw)
+    if parser is None:
+        return False, reason, 0.0
+    if not parser.can_fetch(USER_AGENT, url):
+        return False, "robots_disallowed", 0.0
+    return True, reason, crawl_delay(parser)
+
+
+def _robots_allowed(url: str, timeout: float) -> bool:
+    return _robots_check(url, timeout)[0]
 
 
 def _social_links(base_url: str, soup: BeautifulSoup) -> list[dict[str, str]]:
@@ -277,8 +354,14 @@ def fetch_website(url: str | None, *, timeout: float = 15.0, max_bytes: int = 2_
         assert_public_url(normalized)
     except ValueError as exc:
         return evidence("website", "blocked", "registry_linked_company_website", normalized, note=str(exc)), {"requests": 0, "bytes": 0, "latencies_ms": []}
-    if not _robots_allowed(normalized, timeout):
-        return evidence("website", "blocked", "registry_linked_company_website", normalized, note="robots.txt disallows this user agent"), {"requests": 1, "bytes": 0, "latencies_ms": []}
+    allowed, robots_reason, delay = _robots_check(normalized, timeout)
+    if not allowed:
+        notes = {"robots_disallowed": "robots.txt disallows this user agent", "robots_forbidden": "robots.txt returned 401/403 (treated as disallow)", "robots_unreachable": "robots.txt unreachable (5xx/429/network; RFC 9309: assume disallow)"}
+        return evidence("website", "blocked", "registry_linked_company_website", normalized, note=notes.get(robots_reason, robots_reason)), {"requests": 1, "bytes": 0, "latencies_ms": []}
+    if delay > MAX_CRAWL_DELAY_SECONDS:
+        return evidence("website", "blocked", "registry_linked_company_website", normalized, note=f"robots.txt Crawl-delay {delay:g}s exceeds the per-company budget; not fetched"), {"requests": 1, "bytes": 0, "latencies_ms": []}
+    if delay:
+        time.sleep(delay)  # Crawl-delay between the robots.txt request and the homepage request
     started = time.monotonic()
     request = urllib.request.Request(normalized, headers={"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml"})
     try:

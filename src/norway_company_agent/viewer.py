@@ -76,7 +76,8 @@ def project(envelope: dict[str, Any]) -> dict[str, Any]:
         "input": envelope.get("input_organisation_number"),
         "pos": envelope.get("input_position"),
         "status": (envelope.get("run") or {}).get("terminal_status"),
-        "company_status": envelope.get("company_status"),
+        "company_status": (envelope.get("company_status") or {}).get("state"),
+        "status_reasons": (envelope.get("company_status") or {}).get("reasons") or [],
         "identity": identity,
         "overview": summary.get("overview"),
         "sparse": summary.get("sparse"),
@@ -178,7 +179,7 @@ th{color:var(--muted);font-weight:500;font-size:12px}
  <div id="controls">
   <input id="q" type="search" placeholder="Search name or organisation number" aria-label="Search">
   <div class="row">
-   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="completed">Completed</option><option value="failed">Failed</option></select>
+   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="complete">Complete</option><option value="partial">Partial</option><option value="identity_unresolved">Identity unresolved</option><option value="invalid_input">Invalid input</option><option value="failed">Run failed</option></select>
    <select id="fflag" aria-label="Flag filter"><option value="">All companies</option><option value="errors">With errors</option><option value="changes">With changes</option><option value="website">Verified website</option><option value="sparse">Registry only (sparse)</option><option value="carried">Values retained (outage)</option></select>
   </div>
   <div id="count"></div>
@@ -209,6 +210,7 @@ const safeUrl = (u) => typeof u === "string" && /^https?:\/\//i.test(u) ? u : nu
 const day = (t) => t ? String(t).slice(0, 10) : "date unknown";
 const name = (c) => (c.identity && c.identity.legal_name) || "(identity not resolved)";
 const statusBadge = (c) => el("span", {class: "badge " + (c.status === "completed" ? "ok" : "bad")}, c.status || "unknown");
+const companyBadge = (c) => c.company_status ? el("span", {class: "badge " + (c.company_status === "complete" ? "ok" : c.company_status === "partial" ? "warn" : "bad")}, c.company_status.replace(/_/g, " ")) : null;
 
 $("title").textContent = DATA.title;
 $("runmeta").textContent = [DATA.run.run_id && ("run " + DATA.run.run_id), DATA.run.started_at && ("started " + DATA.run.started_at), DATA.companies.length + " rows"].filter(Boolean).join(" · ");
@@ -227,13 +229,13 @@ function render() {
   const list = $("list"); list.replaceChildren();
   let shown = 0;
   DATA.companies.forEach((c, index) => {
-    if (st && c.status !== st) return;
+    if (st && c.company_status !== st && c.status !== st) return;
     if (fl && !flags[fl](c)) return;
     if (q && !(name(c).toLowerCase().includes(q) || String(c.org || c.input || "").includes(q.replace(/\s/g, "")))) return;
     shown++;
     const li = el("li", {role: "option", tabindex: "0", "aria-selected": String(index === selected)},
       el("div", {class: "name"}, name(c)),
-      el("div", {class: "sub"}, String(c.org || c.input || "no number"), statusBadge(c), c.errors.length ? el("span", {class: "badge warn"}, c.errors.length + " error" + (c.errors.length > 1 ? "s" : "")) : null, c.sparse ? el("span", {class: "badge"}, "registry only") : null));
+      el("div", {class: "sub"}, String(c.org || c.input || "no number"), statusBadge(c), companyBadge(c), c.errors.length ? el("span", {class: "badge warn"}, c.errors.length + " error" + (c.errors.length > 1 ? "s" : "")) : null, c.sparse ? el("span", {class: "badge"}, "registry only") : null));
     li.addEventListener("click", () => select(index));
     li.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(index); } });
     list.append(li);
@@ -271,10 +273,11 @@ function select(index) {
   back.addEventListener("click", () => { document.body.classList.remove("showing"); });
   d.append(back);
   d.append(el("h2", {}, name(c)));
-  d.append(el("div", {class: "sub"}, "Organisation number " + (c.org || c.input || "?"), statusBadge(c), c.company_status ? el("span", {class: "badge"}, "company: " + c.company_status) : null, "input row " + c.pos));
+  d.append(el("div", {class: "sub"}, "Organisation number " + (c.org || c.input || "?"), statusBadge(c), companyBadge(c), "input row " + c.pos));
   const id = c.identity || {};
   d.append(el("section", {}, el("h3", {}, "Identity"), el("dl", {class: "kv"},
-    Object.entries(id).filter(([, v]) => v !== null && v !== undefined && typeof v !== "object").map(([k, v]) => [el("dt", {}, k.replace(/_/g, " ")), el("dd", {}, String(v))]))));
+    Object.entries(id).filter(([, v]) => v !== null && v !== undefined && typeof v !== "object").map(([k, v]) => [el("dt", {}, k.replace(/_/g, " ")), el("dd", {}, String(v))])),
+    c.status_reasons.length ? el("div", {class: "sub"}, "Status reasons: " + c.status_reasons.join("; ")) : null));
   if (c.overview) d.append(el("p", {class: "overview"}, c.overview));
   for (const sec of c.sections) d.append(el("section", {}, el("h3", {}, sec.title), sec.statements.map((s) => statement(c, s))));
   const facts = c.claims.filter((x) => x.state === "available");

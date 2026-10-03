@@ -10,8 +10,9 @@ Stages per company (adaptive; stops early):
      sitemap.xml only when the homepage exposes neither. Extracts site-linked social profiles, dated
      activity, and schema.org JobPostings.
 Platform pages (LinkedIn, Facebook, Instagram, YouTube) are never fetched: a profile is recorded from the
-verified site's own link. Dates are kept only when the source states them. robots.txt is honoured, and
-401/403 on robots.txt means disallow. Every fetched page keeps url, sha256 and retrieval time for evidence.
+verified site's own link. Dates are kept only when the source states them. robots.txt is honoured (RFC 9309:
+401/403, 429, 5xx and network failure mean disallow; Crawl-delay is honoured inside the company budget).
+Every fetched page keeps url, sha256 and retrieval time for evidence.
 """
 from __future__ import annotations
 
@@ -32,7 +33,7 @@ from bs4 import BeautifulSoup
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens, assess_social_identity
 from .site_identity import FREE_MAIL, classify_site
-from .website import USER_AGENT, _registered_domain, _social_links, normalize_homepage, structured_social_links
+from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, _social_links, crawl_delay, normalize_homepage, robots_policy, structured_social_links
 
 DIRECTORY_HOSTS = {
     "proff.no", "purehelp.no", "1881.no", "gulesider.no", "firmalisten.no", "companywall.no", "firmadatabasen.no",
@@ -193,7 +194,10 @@ class SiteSession:
         self.url_guard = url_guard  # raises ValueError for a non-public URL (website.assert_public_url)
         self._public: dict[str, str] = {}
         self._lock = threading.Lock()
-        self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._robots: dict[str, tuple[urllib.robotparser.RobotFileParser | None, str]] = {}
+        self._delays: dict[str, float] = {}
+        self._last_request: dict[str, float] = {}
+        self._origin_locks: dict[str, threading.Lock] = {}
         self._pages: dict[str, ByteFetch] = {}
         self._dns: dict[str, bool] = {}
 
@@ -225,23 +229,50 @@ class SiteSession:
             return self._pages.get(to_uri(url))
 
     def allowed(self, url: str, budget: CompanyBudget) -> bool | None:
+        return self.robots(url, budget)[0]
+
+    def robots(self, url: str, budget: CompanyBudget) -> tuple[bool | None, str]:
+        """(allowed, reason); allowed is None when the budget ran out before robots.txt could be read.
+        Semantics in website.robots_policy (RFC 9309): 401/403, 429, 5xx and network failure disallow."""
         parts = urllib.parse.urlsplit(url)
         origin = f"{parts.scheme}://{parts.netloc}"
         with self._lock:
             known = origin in self._robots
-            parser = self._robots.get(origin)
+            parser, reason = self._robots.get(origin) or (None, "")
         if not known:
             response = self._fetch(origin + "/robots.txt", budget, "text/plain")
             if response is None:
-                return None  # budget exhausted
-            if response.status in (401, 403):
-                parser = None
-            else:
-                parser = urllib.robotparser.RobotFileParser()
-                parser.parse((response.raw or b"").decode("utf-8", errors="replace").splitlines() if response.status == 200 else [])
+                return None, "budget_exhausted"
+            parser, reason = robots_policy(response.status, response.raw)
             with self._lock:
-                self._robots[origin] = parser
-        return bool(parser and parser.can_fetch(USER_AGENT, url))
+                self._robots[origin] = (parser, reason)
+                self._delays[origin] = crawl_delay(parser)
+                self._last_request[origin] = time.monotonic()
+        if parser is None:
+            return False, reason
+        if not parser.can_fetch(USER_AGENT, url):
+            return False, "robots_disallowed"
+        return True, reason
+
+    def pace(self, url: str, budget: CompanyBudget) -> bool:
+        """Honour robots.txt Crawl-delay per origin. False when waiting would overrun the company budget."""
+        parts = urllib.parse.urlsplit(url)
+        origin = f"{parts.scheme}://{parts.netloc}"
+        with self._lock:
+            delay = self._delays.get(origin, 0.0)
+            if not delay:
+                return True
+            origin_lock = self._origin_locks.setdefault(origin, threading.Lock())
+        if delay > MAX_CRAWL_DELAY_SECONDS:
+            return False
+        with origin_lock:  # requests to one origin are serialised while a Crawl-delay applies
+            wait = self._last_request.get(origin, 0.0) + delay - time.monotonic()
+            if wait > 0:
+                if time.monotonic() + wait >= budget.deadline:
+                    return False
+                time.sleep(wait)
+            self._last_request[origin] = time.monotonic()
+        return True
 
     def public(self, url: str) -> str:
         """Outbound URL policy: only hosts resolving to global addresses are fetched (cached per origin).
@@ -267,11 +298,13 @@ class SiteSession:
         policy = self.public(url)
         if policy != "ok":
             return policy, None
-        allowed = self.allowed(url, budget)
+        allowed, reason = self.robots(url, budget)
         if allowed is None:
             return "budget_exhausted", None
         if not allowed:
-            return "robots_disallowed", None
+            return ("robots_disallowed" if reason == "robots_disallowed" else reason), None
+        if url not in self._pages and not self.pace(url, budget):
+            return "crawl_delay_exceeds_budget", None
         result = self._fetch(url, budget, accept)
         if result is None:
             return "budget_exhausted", None

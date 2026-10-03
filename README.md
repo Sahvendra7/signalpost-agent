@@ -6,9 +6,12 @@ The public universe contains 411,160 eligible companies. Run the starter on 100 
 
 ## What it does
 
-- reads a batch of Norwegian organisation numbers (JSONL, JSON or text) and emits **exactly one terminal
+- reads a batch of Norwegian organisation numbers (JSONL, JSON, CSV with a header, or text; `docs/input-and-snapshot.md`) and emits **exactly one terminal
   envelope per input row**, in input order, in the `OUTPUT_CONTRACT.md` shape (`run`, `claims`,
   `evidence`, `changes`, `errors`, `operations`);
+- streams each envelope as soon as its company finishes and enforces a batch deadline
+  (`--deadline-seconds` / `SIGNALPOST_DEADLINE_SECONDS`, fail-safe default 2,700 s; `docs/deadline-and-streaming.md`);
+- leads each envelope with an `identity` block and a `company_status` (`docs/identity-and-status.md`);
 - never aborts the batch: malformed or duplicate rows, companies absent from the bulk file, failing
   sources and parser exceptions become explicit claim states and `errors` entries;
 - anchors identity by organisation number in the Brønnøysund bulk snapshot or, when absent, the live

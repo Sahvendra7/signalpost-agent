@@ -23,7 +23,9 @@ from .identity import apply_website_identity_gate
 from .inputs import InputRow, mod11_valid, read_input_rows  # noqa: F401  (re-exported)
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
+from .privacy import redacting_fetcher
 from .refresh import carry_forward, claim_changes
+from .status import company_status, identity_block
 from .synthesis import company_summary
 from .site_research import SiteSession, research_company_site
 from .sampling import iter_bulk
@@ -297,7 +299,7 @@ def run_batch(
     batch_started_at = utc_now()
     batch_started = time.monotonic()
     store = SnapshotStore(snapshot_root)
-    wrapped = store.wrap(fetcher)
+    wrapped = store.wrap(redacting_fetcher(fetcher))  # birth dates are dropped before hashing or storage
     session = None
     if "site_research" in modules:
         # The live fetcher gets the same outbound policy as the v1 website module: public hosts only,
@@ -459,6 +461,9 @@ def _input_key(row: InputRow) -> str | None:
 
 def _envelope_for_row(row: InputRow, result: dict[str, Any] | None, **kwargs: Any) -> dict[str, Any]:
     envelope = _research_envelope(row, result, **kwargs)
+    identity = identity_block(envelope)
+    # Identity and the company-level status lead the envelope; module states stay under `modules`.
+    envelope = {"organisation_number": envelope["organisation_number"], "identity": identity, "company_status": company_status(envelope, identity), **envelope}
     try:
         envelope["company_summary"] = company_summary(envelope)
     except Exception as exc:  # the summary must never cost the row its terminal envelope
