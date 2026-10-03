@@ -62,7 +62,7 @@ The manifest selector can create a local test batch of any size. Use 100 rows fo
 
 ```bash
 uv sync
-curl -L 'https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv' -o brreg-enheter.csv
+curl -L 'https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv' -o brreg-enheter.csv.gz  # Brreg serves gzip
 curl -L 'https://builderr.ai/signalpost-company-universe-2025.jsonl.gz' -o signalpost-universe.jsonl.gz
 
 uv run python select_entry_batch.py \
@@ -75,7 +75,7 @@ cp entry-companies.jsonl smoke-companies.jsonl
 
 uv run python scripts/run_competition_batch.py \
   --organisations smoke-companies.jsonl \
-  --bulk brreg-enheter.csv \
+  --bulk brreg-enheter.csv.gz \
   --profiles-output out/smoke-profiles.jsonl \
   --output out/smoke-envelopes.jsonl \
   --report out/smoke-report.json \
@@ -86,7 +86,7 @@ uv run python scripts/run_competition_batch.py \
 # Refresh: re-run later against the previous profiles; material changes appear in each envelope.
 uv run python scripts/run_competition_batch.py \
   --organisations smoke-companies.jsonl \
-  --bulk brreg-enheter.csv \
+  --bulk brreg-enheter.csv.gz \
   --previous-profiles out/smoke-profiles.jsonl \
   --profiles-output out/smoke-profiles-2.jsonl \
   --output out/smoke-envelopes-2.jsonl \
@@ -96,7 +96,7 @@ uv run python scripts/run_competition_batch.py \
 # You may test at larger scale locally, but Builderr supplies the official batch for scoring.
 uv run python scripts/run_competition_batch.py \
   --organisations entry-companies.jsonl \
-  --bulk brreg-enheter.csv \
+  --bulk brreg-enheter.csv.gz \
   --profiles-output out/profiles.jsonl \
   --output out/envelopes.jsonl \
   --report out/run-report.json \
@@ -108,7 +108,8 @@ uv run --with pytest pytest -q
 
 The published archive was clean-room verified on August 24, 2026: 104 tests and 5 subtests passed, followed by a one-company live BRREG smoke run with one terminal envelope, five requests and zero silent drops.
 
-`--bulk` is optional (the live registry is used for identity when it is absent) and `--expected-count` is a
+`--bulk` is optional: the live registry is used for identity when it is absent, and also when the file is
+missing, not gzip or unreadable (reported as `registry.snapshot_status: invalid` and warned on stderr, never fatal) and `--expected-count` is a
 guard that is reported, never a reason to drop rows. The command needs outbound HTTPS to `data.brreg.no`
 and to company websites; with no network every envelope is still emitted, with sources marked `failed`.
 

@@ -5,15 +5,12 @@ Retrieval is injected (`fetcher`, `website_fetcher`) so the whole pipeline runs 
 from __future__ import annotations
 
 import functools
-import gzip
 import hashlib
-import json
 import threading
 import time
 import traceback
 import copy
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
-from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
 
@@ -23,6 +20,7 @@ from .contract import ClaimSet, build_envelope, snapshot_relative_path, validate
 from .evidence import evidence, utc_now
 from .http import FetchResult, fetch_bytes, fetch_json
 from .identity import apply_website_identity_gate
+from .inputs import InputRow, mod11_valid, read_input_rows  # noqa: F401  (re-exported)
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .refresh import carry_forward, claim_changes
@@ -37,98 +35,66 @@ NON_FETCH_MODULES = {"registry", "accounting_obligation", "website", "site_resea
 BULK_URL = "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv"
 DEADLINE_SKIP_NOTE = "deadline: skipped to keep the batch within its time budget"
 DEADLINE_NOT_STARTED_NOTE = "deadline: company not researched before the batch deadline"
-ORG_WEIGHTS = (3, 2, 7, 6, 5, 4, 3, 2)
 
 Fetcher = Callable[[str], FetchResult]
 WebsiteFetcher = Callable[[str | None], tuple[dict[str, Any], dict[str, Any]]]
 
 
-@dataclass
-class InputRow:
-    position: int
-    raw: Any
-    organisation_number: str | None
-    errors: list[dict[str, Any]] = field(default_factory=list)
-    annotations: dict[str, Any] = field(default_factory=dict)
-
-
-def mod11_valid(org: str) -> bool:
-    if len(org) != 9 or not org.isdigit():
-        return False
-    remainder = sum(int(digit) * weight for digit, weight in zip(org[:8], ORG_WEIGHTS)) % 11
-    check = 0 if remainder == 0 else 11 - remainder
-    return check != 10 and check == int(org[8])
-
-
-def read_input_rows(path: str | Path) -> list[InputRow]:
-    """Tolerant reader: every non-blank input line becomes exactly one row, valid or not."""
-    source = Path(path)
-    opener = gzip.open if source.suffix == ".gz" else open
-    with opener(source, "rt", encoding="utf-8-sig") as handle:
-        text = handle.read()
-    stem_suffix = Path(source.stem).suffix if source.suffix == ".gz" else source.suffix
-    values: list[Any] = []
-    if stem_suffix == ".json":
-        body = json.loads(text)
-        values = body if isinstance(body, list) else body.get("organisation_numbers", [])
-    else:
-        for line in text.splitlines():
-            if not line.strip():
-                continue
-            if stem_suffix == ".jsonl" or line.lstrip().startswith(("{", '"')):
-                try:
-                    values.append(json.loads(line))
-                except json.JSONDecodeError:
-                    values.append(line.strip())
-            else:
-                values.append(line.strip())
-    rows = []
-    first_seen: dict[str, int] = {}
-    for position, value in enumerate(values):
-        org_value = value.get("organisation_number", value.get("organisasjonsnummer")) if isinstance(value, dict) else value
-        digits = "".join(character for character in str(org_value or "") if character.isdigit())
-        row = InputRow(position=position, raw=org_value, organisation_number=digits if len(digits) == 9 else None)
-        if isinstance(value, dict):
-            row.annotations = {key: value[key] for key in ("evaluation_split", "sample_slice") if value.get(key) is not None}
-        if row.organisation_number is None:
-            row.errors.append({"code": "invalid_organisation_number", "stage": "input", "message": f"Input is not a 9-digit organisation number: {str(org_value)[:40]!r}"})
-        else:
-            if not mod11_valid(row.organisation_number):
-                row.errors.append({"code": "checksum_mismatch", "stage": "input", "message": "Organisation number fails the mod-11 check; researched anyway"})
-            if row.organisation_number in first_seen:
-                row.errors.append({"code": "duplicate_input", "stage": "input", "message": f"Same organisation number as input row {first_seen[row.organisation_number]}; researched once"})
-            else:
-                first_seen[row.organisation_number] = position
-        rows.append(row)
-    return rows
+REGISTRY_ABSENT_NOTE = "Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)"
+GZIP_MAGIC = b"\x1f\x8b"
 
 
 def load_bulk_profiles(path: str | Path | None, wanted: set[str]) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
-    """Profiles for `wanted` orgs found in the bulk snapshot. Missing orgs are not an error here."""
+    """Profiles for `wanted` orgs found in the optional bulk snapshot (gzip CSV). Never raises.
+
+    No snapshot: identity comes from the live registry (`snapshot_status: absent`). A missing file, a file
+    that is not gzip, or one that cannot be read to the end is `invalid`: nothing from it is used, every
+    company falls back to the live registry, and the reason is reported separately. Missing orgs are not
+    an error here."""
     if not path:
-        return {}, {"bulk": None}
+        return {}, {"bulk": None, "snapshot_status": "absent", "fallback": "live_registry"}
     source = Path(path)
-    digest = hashlib.sha256()
-    with source.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1 << 20), b""):
-            digest.update(chunk)
-    snapshot_sha256 = digest.hexdigest()
-    retrieved_at = utc_now()
-    found: dict[str, dict[str, Any]] = {}
-    scanned = 0
-    for profile in iter_bulk(source):
-        scanned += 1
-        org = profile["organisation_number"]
-        if org not in wanted:
-            continue
-        raw = profile.pop("raw", {})
-        profile["evidence"] = {
-            "registry": evidence("registry", "available", "official_registry_bulk", BULK_URL, value=raw, retrieved_at=retrieved_at, content_sha256=snapshot_sha256, source_row_key=org),
-        }
-        found[org] = profile
-        if len(found) == len(wanted):
-            break
-    return found, {"registry_snapshot_sha256": snapshot_sha256, "registry_rows_scanned": scanned, "requested": len(wanted), "found_in_bulk": len(found)}
+
+    def invalid(reason: str) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+        return {}, {"bulk": source.name, "snapshot_status": "invalid", "reason": reason, "fallback": "live_registry"}
+
+    try:
+        if not source.is_file():
+            return invalid("snapshot file not found")
+        digest = hashlib.sha256()
+        with source.open("rb") as handle:
+            if handle.read(2) != GZIP_MAGIC:
+                return invalid("snapshot is not gzip-compressed (expected Brreg's gzip CSV download)")
+            handle.seek(0)
+            for chunk in iter(lambda: handle.read(1 << 20), b""):
+                digest.update(chunk)
+        snapshot_sha256 = digest.hexdigest()
+        retrieved_at = utc_now()
+        found: dict[str, dict[str, Any]] = {}
+        scanned = 0
+        for profile in iter_bulk(source):
+            scanned += 1
+            org = profile["organisation_number"]
+            if org not in wanted:
+                continue
+            raw = profile.pop("raw", {})
+            profile["evidence"] = {
+                "registry": evidence("registry", "available", "official_registry_bulk", BULK_URL, value=raw, retrieved_at=retrieved_at, content_sha256=snapshot_sha256, source_row_key=org),
+            }
+            found[org] = profile
+            if len(found) == len(wanted):
+                break
+    except Exception as exc:  # corrupt/truncated gzip, wrong CSV shape, bad encoding: never abort the batch
+        return invalid(f"snapshot could not be read: {type(exc).__name__}: {str(exc)[:160]}")
+    return found, {"bulk": source.name, "snapshot_status": "used", "registry_snapshot_sha256": snapshot_sha256, "registry_rows_scanned": scanned, "requested": len(wanted), "found_in_bulk": len(found)}
+
+
+def registry_absent_note(metadata: dict[str, Any]) -> str:
+    if metadata.get("snapshot_status") == "invalid":
+        return f"Registry snapshot invalid ({metadata.get('reason')}); identity from the live registry"
+    if metadata.get("snapshot_status") == "absent":
+        return "No registry snapshot supplied; identity from the live registry"
+    return REGISTRY_ABSENT_NOTE
 
 
 class SnapshotStore:
@@ -201,6 +167,7 @@ def research_company(
     degrade: bool = False,
     site_deadline: float | None = None,
     progress: dict[str, dict[str, Any]] | None = None,
+    registry_note: str = REGISTRY_ABSENT_NOTE,
 ) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
     """Research one company. Never raises: failures become explicit module states and errors.
 
@@ -213,7 +180,7 @@ def research_company(
     if progress is not None:
         progress[org] = profile  # lets the batch salvage facts already fetched if the hard deadline hits
     if "registry" in modules and "registry" not in profile["evidence"]:
-        profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note="Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)")
+        profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note=registry_note)
     metrics: list[FetchResult] = []
     website_metrics = {"requests": 0, "bytes": 0, "latencies_ms": []}
     fetch_modules = set(modules) - NON_FETCH_MODULES
@@ -340,6 +307,7 @@ def run_batch(
         session = SiteSession(fetcher=store.wrap_bytes(fetch), resolver=resolver, url_guard=assert_public_url if live else None)
     unique_orgs = list(dict.fromkeys(row.organisation_number for row in rows if row.organisation_number))
     bulk_profiles, registry_metadata = load_bulk_profiles(bulk_path, set(unique_orgs)) if "registry" in modules else ({}, {"bulk": "not requested"})
+    registry_note = registry_absent_note(registry_metadata)
 
     results: dict[str, dict[str, Any]] = {}
     started = time.monotonic()
@@ -369,7 +337,7 @@ def run_batch(
         profile = base or {"organisation_number": org, "evidence": {}}
         profile.setdefault("evidence", {})
         if "registry" in modules and "registry" not in profile["evidence"]:
-            profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note="Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)")
+            profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note=registry_note)
         for module in modules:
             if module not in profile["evidence"]:
                 profile["evidence"][module] = evidence(module, "source_error", "pipeline", "https://data.brreg.no/", note=note)
@@ -396,6 +364,7 @@ def run_batch(
             profile, operations, errors = research_company(
                 org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session, llm_layer=llm_layer,
                 degrade=degrade, site_deadline=(hard_deadline - grace_seconds) if hard_deadline is not None else None, progress=progress,
+                registry_note=registry_note,
             )
         except Exception as exc:  # second boundary: research_company should not raise, but never trust it
             profile = {"organisation_number": org, "evidence": {}}
@@ -515,7 +484,7 @@ def _research_envelope(
             claims=[],
             evidence=[],
             errors=errors or [{"code": "not_researched", "stage": "input", "message": "Row could not be researched"}],
-            extra={"input_organisation_number": _input_key(row), "input_position": row.position, "category_coverage": {}},
+            extra={"input_organisation_number": _input_key(row), "input_position": row.position, "input_record": row.record, "category_coverage": {}},
         )
     profile = result["profile"]
     errors.extend(result["errors"])
@@ -570,6 +539,7 @@ def _research_envelope(
         extra={
             "input_organisation_number": _input_key(row),
             "input_position": row.position,
+            "input_record": row.record,
             "category_coverage": category_coverage(claim_set.claims),
             "area_coverage": area_coverage(claim_set.claims),
             "refresh": refresh_block,

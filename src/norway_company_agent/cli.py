@@ -122,6 +122,10 @@ def main(argv: list[str] | None = None, **injected) -> None:
             print(f"viewer not written: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
     summary = {key: report[key] for key in ("run_id", "input_rows", "emitted_envelopes", "terminal_status_counts", "category_available_rate", "runtime_ms", "deadline")}
     summary["validation_passed"] = report["validation"]["passed"]
+    registry = report.get("registry") or {}
+    summary["registry_snapshot"] = registry.get("snapshot_status") or registry.get("bulk")
+    if registry.get("snapshot_status") == "invalid":
+        print(f"warning: registry snapshot not used ({registry.get('reason')}); every company used the live registry", file=sys.stderr, flush=True)
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)
     code = 0 if report["validation"]["passed"] else 1
     if threading.active_count() > 1:
