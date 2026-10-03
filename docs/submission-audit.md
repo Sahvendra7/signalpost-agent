@@ -1,9 +1,8 @@
 # Signalpost V1 submission audit
 
 > **Historical audit, superseded.** This audit tested code `c5c6a32`. It is not the final submission
-> candidate. **Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317` (tag
-> `submission-candidate-1`). **Code under test for the final validation:** `4f827ee`. `78d1c2f` is
-> code-identical to `4f827ee` and adds only documentation and final-validation material. See
+> candidate. **Final submission candidate: the commit tagged `submission-candidate-1`.** **Code under test for the final
+> validation:** `4f827ee`. The tagged commit is code-identical to `4f827ee` and differs only in documentation. See
 > `docs/final-submission-manifest.md` and `measurements/final-validation-2026-10-03/README.md`. Test counts,
 > runtimes and limitations below are as measured on `c5c6a32`. Some limitations listed here were later fixed
 > (`docs/official-submission-checklist.md`, "Status after validity hardening").

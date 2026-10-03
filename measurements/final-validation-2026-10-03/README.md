@@ -4,10 +4,8 @@
 official score, and no unpublished limit is estimated. Builderr's sample input is not committed: only its
 SHA-256 appears, and host lists for its companies are not committed.
 
-**Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317` (tag `submission-candidate-1`).
-`78d1c2f` is code-identical to `4f827ee`. It adds only this directory and the status section of
-`docs/official-submission-checklist.md`. No run in this directory was executed on `78d1c2f` itself. See
-`docs/final-submission-manifest.md`.
+**Final submission candidate: the commit tagged `submission-candidate-1`.** It is code-identical to `4f827ee` and differs only in documentation. No run in this directory
+was executed on the tagged commit itself. Every number below comes from `4f827ee`. See `docs/final-submission-manifest.md`.
 
 **Smoke test for the final code:** `live-100` below is the 100-company smoke test on `4f827ee`. It has 100 inputs, 100
 envelopes and 100 `completed` results, input order is preserved, and validation passed with 0 contract findings.

@@ -6,6 +6,7 @@ method: `docs/submission-audit.md`.
 
 These files are kept unchanged as a historical record. They do **not** measure the final submission candidate.
 
-- **Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317` (tag `submission-candidate-1`).
-- **Code under test for the final validation:** `4f827ee`. `78d1c2f` is code-identical to it.
+- **Final submission candidate: the commit tagged `submission-candidate-1`.**
+- **Code under test for the final validation:** `4f827ee`. The tagged commit is code-identical to it and differs only
+  in documentation.
 - **Smoke test for the final code:** `measurements/final-validation-2026-10-03/live-100/`.

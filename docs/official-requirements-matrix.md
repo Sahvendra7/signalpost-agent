@@ -1,7 +1,7 @@
 # Official requirements matrix (official-contract audit)
 
-> Historical audit. **Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317`. **Code under test
-> for the final validation:** `4f827ee`, code-identical to `78d1c2f`. See `docs/final-submission-manifest.md`.
+> Historical audit. **Final submission candidate: the commit tagged `submission-candidate-1`.** **Code under test for the final
+> validation:** `4f827ee`, code-identical to the tagged commit. See `docs/final-submission-manifest.md`.
 
 Audit date: 2026-10-03. Audited code: `403a9c1`, whose code is identical to `c5c6a32` (`99d09d9` plus the
 outbound-URL-policy fix). No research behaviour was changed for this audit. Only Builderr's own

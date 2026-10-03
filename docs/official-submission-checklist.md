@@ -1,8 +1,8 @@
 # Official submission checklist (official-contract audit)
 
-> **Final submission candidate:** `78d1c2f2be0decbb90311f4827b226752c74f317` (tag `submission-candidate-1`).
-> **Code under test for the final validation:** `4f827ee`. `78d1c2f` is code-identical to `4f827ee` and adds only
-> documentation and final-validation material. Summary: `docs/final-submission-manifest.md`. The audit below
+> **Final submission candidate: the commit tagged `submission-candidate-1`.**
+> **Code under test for the final validation:** `4f827ee`. The tagged commit is code-identical to `4f827ee` and differs
+> only in documentation. Summary: `docs/final-submission-manifest.md`. The audit below
 > (gate result, sections A–E) is the **historical** record for `403a9c1`. Rows changed since then are listed in
 > "Status after validity hardening".
 
@@ -36,7 +36,7 @@ The audit below is kept as recorded for `403a9c1`. The hardening work changed th
 | 23 UX | FAIL | **PASS** | Static offline viewer (`docs/viewer.md`). |
 | 5 Envelope-level state | KNOWN LIMITATION | **PASS** | `identity` and `company_status` (`docs/identity-and-status.md`). |
 | 11, 27 Smoke-test result | PASS (`c5c6a32`) | **PASS on the final code** | Live 100-company smoke test on `4f827ee`: 100/100 terminal results, input order preserved, validation passed (`measurements/final-validation-2026-10-03/live-100/`). The `c5c6a32` smoke test is historical. |
-| 26 Exact commit reachable | KNOWN LIMITATION (action) | **PASS** | Tag `submission-candidate-1` → `78d1c2f2be0decbb90311f4827b226752c74f317`, pushed to `origin`. |
+| 26 Exact commit reachable | KNOWN LIMITATION (action) | **PASS** | Tag `submission-candidate-1` on the final candidate, pushed to `origin`. |
 
 **Remaining blockers that need Builderr** (none can be resolved from the repository):
 
