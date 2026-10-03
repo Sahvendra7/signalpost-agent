@@ -10,6 +10,45 @@ partial output (row 12). Three rows are **FAIL** against official text: a failed
 value (`HARNESS`), and there is no synthesis and no viewer (12 + 8 scored points). Each is explained below with the
 change it needs. Nothing was fixed in this audit, by instruction.
 
+## Status after validity hardening (2026-10-03, code `4f827ee`)
+
+The audit below is kept as recorded for `403a9c1`. The hardening work changed these rows. Measurements:
+`measurements/final-validation-2026-10-03/README.md`.
+
+| Row | Was | Now | Change |
+| --- | --- | --- | --- |
+| 12 Time budget | OPEN RISK | **Mitigated; budget still unpublished** | Batch deadline (default 2,700 s, fail-safe), degradation, grace window and hard stop. Streaming, fsynced output. Live timeout test: 100/100 rows in 38 s with a 45 s deadline. |
+| 8 Prior outputs | KNOWN LIMITATION | Unchanged | Running the same command again still overwrites its own output paths. Use new paths with `--previous-profiles`. |
+| 15 Input schema | KNOWN LIMITATION | **PASS** | Seven identifier aliases, CSV with a header, conflicting or malformed rows become terminal error rows (`docs/input-and-snapshot.md`). |
+| 16 `--bulk` non-gzip abort | KNOWN LIMITATION | **PASS** | An invalid snapshot falls back to the live registry and never aborts. Builderr's frozen-snapshot format is still unconfirmed. |
+| 17 Public-suffix fetch | KNOWN LIMITATION | **PASS** | Pinned bundled snapshot. 0 requests to publicsuffix.org in the live runs (`docs/dependencies.md`). |
+| 18 robots / Crawl-delay | KNOWN LIMITATION | **PASS for robots and Crawl-delay; Brreg throttle still open** | RFC 9309 semantics, Crawl-delay honoured, redirects capped at 5, platform hosts refused at every hop (`docs/crawl-safety-and-privacy.md`). |
+| 19 Birth dates in snapshots | Decision needed | **PASS** | Redacted before hashing and storage. 0 in 6,011 live snapshot files. |
+| 20 Failed refresh keeps the value | FAIL | **PASS** | Carry-forward with the original evidence (`docs/refresh-semantics.md`). Live refresh: 0 false changes across 3,998 facts. |
+| 21 Typed changes | KNOWN LIMITATION | **PASS** | Typed events: added, removed, changed, unverified, unavailable. Both sides carry evidence; site facts included. |
+| 22 Synthesis | FAIL | **PASS (deterministic)** | `company_summary` in every envelope (`docs/company-summary.md`). |
+| 23 UX | FAIL | **PASS** | Static offline viewer (`docs/viewer.md`). |
+| 5 Envelope-level state | KNOWN LIMITATION | **PASS** | `identity` and `company_status` (`docs/identity-and-status.md`). |
+
+**Remaining blockers that need Builderr** (none can be resolved from the repository):
+
+1. **Time budget.** The official time and resource budget is unpublished. The evaluator must set
+   `SIGNALPOST_DEADLINE_SECONDS` to it, and the default is only a fail-safe.
+2. **Frozen registry snapshot.** Its format and delivery are unconfirmed. The command accepts Brreg's gzip
+   CSV, or none at all.
+3. **Additive envelope fields.** It is unconfirmed whether the evaluator accepts or ignores these fields:
+   `identity`, `company_status`, `company_summary`, `refresh`, `input_record`, `modules`, `area_coverage`.
+4. **Area mapping.** The scoring mapping for `public_footprint` is unconfirmed (`docs/official-scoring-model.md`).
+
+**Known limitations we accept** (not blockers):
+
+- Wrong-company precision has only been audited by us.
+- Per-site terms are not checked.
+- There is no client-side Brreg throttle.
+- DNS rebinding between the address check and the connection is not prevented.
+- The 1,200-company viewer is 13.4 MB.
+- Recall optimisation has not been started, by instruction.
+
 Labels: **PASS** (verified in this audit); **KNOWN/ACCEPTED LIMITATION** (documented, low risk, accepted unless the
 user decides otherwise); **OPEN RISK: fix before submission** (cannot be verified against an unpublished limit, and
 the failure mode is total); **FAIL: fix before submission** (official text not met, explained, change named).

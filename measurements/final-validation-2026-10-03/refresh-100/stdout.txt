@@ -1,0 +1,32 @@
+{
+  "run_id": "final-refresh-100",
+  "input_rows": 100,
+  "emitted_envelopes": 100,
+  "terminal_status_counts": {
+    "completed": 100
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "public_activity": 0.06,
+    "registry_activity": 1.0,
+    "relationships": 0.03,
+    "websites": 0.23
+  },
+  "runtime_ms": 121032,
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "validation_passed": true,
+  "registry_snapshot": "absent"
+}
+exit 0
