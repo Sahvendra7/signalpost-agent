@@ -47,11 +47,13 @@ def identity_block(envelope: dict[str, Any]) -> dict[str, Any]:
 
 
 def company_status(envelope: dict[str, Any], identity: dict[str, Any]) -> dict[str, Any]:
-    """complete | partial | identity_unresolved | invalid_input, with the reasons behind it."""
+    """complete | partial | not_researched | identity_unresolved | invalid_input, with the reasons behind it."""
     codes = {error.get("code") for error in envelope.get("errors") or []}
     modules = envelope.get("modules") or {}
     if codes & INPUT_ERROR_CODES and not identity["anchored"]:
         return {"state": "invalid_input", "reasons": sorted(codes & INPUT_ERROR_CODES)}
+    if not identity["anchored"] and codes & DEADLINE_CODES:
+        return {"state": "not_researched", "reasons": sorted(codes & DEADLINE_CODES)}
     if not identity["anchored"]:
         return {"state": "identity_unresolved", "reasons": ["the registry returned no record for this organisation number"]}
     reasons = [f"{name}: {state['state']}" for name, state in sorted(modules.items()) if name != "registry" and state.get("state") not in ANSWERED_STATES]

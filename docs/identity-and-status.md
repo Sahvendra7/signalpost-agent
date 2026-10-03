@@ -17,12 +17,13 @@ the envelope's own claims, errors and module states. No LLM touches them.
   record.
 - `carried_forward`: true when the registry was down in this run and the identity is the last verified one.
 
-`company_status.state` takes one of four values:
+`company_status.state` takes one of five values:
 
 | State | Meaning |
 | --- | --- |
 | `complete` | Identity anchored. Every source answered (`complete`, `not_found` or `not_applicable`). |
 | `partial` | Identity anchored. At least one source failed, was blocked, was carried forward or was cut by the deadline. `reasons` lists which. |
+| `not_researched` | The batch deadline or an interruption stopped the run before this company's registry record was fetched (`deadline_exceeded` / `interrupted`). |
 | `identity_unresolved` | The registry returned no record for this organisation number. |
 | `invalid_input` | The row has no usable organisation number (`invalid_organisation_number`, `missing_organisation_number`, `conflicting_identifiers` or `malformed_input_row`). |
 

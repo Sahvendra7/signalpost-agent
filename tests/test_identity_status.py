@@ -66,6 +66,16 @@ class IdentityStatusTests(unittest.TestCase):
         self.assertEqual(invalid["company_status"], {"state": "invalid_input", "reasons": ["invalid_organisation_number"]})
         self.assertEqual(invalid["identity"]["input_organisation_number"], "12345")
 
+    def test_rows_cut_by_the_deadline_are_not_researched_not_unresolved(self):
+        from norway_company_agent.status import company_status, identity_block
+        from norway_company_agent.synthesis import company_summary
+
+        envelope = {"organisation_number": ORG, "claims": [], "evidence": [], "errors": [{"code": "deadline_exceeded", "stage": "deadline", "message": "x"}], "modules": {}}
+        identity = identity_block(envelope)
+        envelope["company_status"] = company_status(envelope, identity)
+        self.assertEqual(envelope["company_status"], {"state": "not_researched", "reasons": ["deadline_exceeded"]})
+        self.assertTrue(company_summary(envelope)["overview"].startswith("Not researched: the batch stopped"))
+
     def test_other_org_record_is_never_the_identity(self):
         brreg = FakeBrreg({ORG: entity(OTHER, name="Feil Selskap AS")})
         envelope = one(brreg)

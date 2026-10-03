@@ -318,7 +318,12 @@ def company_summary(envelope: dict[str, Any]) -> dict[str, Any]:
     found = [AREA_LABELS[area] for area in AREA_LABELS if coverage.get(area)]
     sparse = not legal_name or not any(coverage.get(area) for area in ("websites", "public_footprint", "hiring"))
     overview = None
-    if not legal_name:
+    state = (envelope.get("company_status") or {}).get("state")
+    if not legal_name and state == "not_researched":
+        overview = "Not researched: the batch stopped (deadline or interruption) before this company's registry record was fetched; nothing is reported about it."
+    elif not legal_name and state == "invalid_input":
+        overview = "Not researched: the input row has no usable organisation number."
+    elif not legal_name:
         overview = "No verified registry identity was found for this organisation number; nothing is reported about it."
     elif sparse:
         overview = "Public information found was limited to official registry records: " + ", ".join(["registry identity"] + found) + "."

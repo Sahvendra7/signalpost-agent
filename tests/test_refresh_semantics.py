@@ -131,6 +131,27 @@ class CarryForwardUnitTests(unittest.TestCase):
         self.assertEqual(carry_forward(previous, current), {"carried": [], "unverified": ["site_research"]})
         self.assertNotIn("carried_forward", current["evidence"]["site_research"])
 
+    def test_registry_linked_site_is_carried_when_the_registry_website_gate_is_down(self):
+        # Found in the final live refresh: v1 website got HTTP 429, so site research could not use the registry
+        # identity gate and classified the same site AMBIGUOUS. That is an outage, not an identity change.
+        old_site = self.site("available")
+        old_site["value"]["identity_class"] = "REGISTRY_LINKED"
+        old_web = evidence("website", "available", "registry_linked_company_website", "https://fjordtest.no/", value={"identity_assessment": {"publishable": True}}, content_sha256="d" * 64)
+        previous = {"organisation_number": ORG, "evidence": {"site_research": old_site, "website": old_web}}
+        current = {"organisation_number": ORG, "evidence": {
+            "site_research": self.site("not_found", candidates=[{"domain": "fjordtest.no", "outcome": "AMBIGUOUS"}]),
+            "website": evidence("website", "source_error", "registry_linked_company_website", "https://fjordtest.no/", note="HTTP 429"),
+        }}
+        self.assertEqual(carry_forward(previous, current), {"carried": ["website", "site_research"], "unverified": []})
+        self.assertTrue(current["evidence"]["site_research"]["carried_forward"])
+
+    def test_registry_linked_site_failing_identity_with_gate_up_is_unverified(self):
+        old_site = self.site("available")
+        old_site["value"]["identity_class"] = "REGISTRY_LINKED"
+        previous = {"organisation_number": ORG, "evidence": {"site_research": old_site}}
+        current = {"organisation_number": ORG, "evidence": {"site_research": self.site("not_found", candidates=[{"domain": "fjordtest.no", "outcome": "AMBIGUOUS"}])}}
+        self.assertEqual(carry_forward(previous, current), {"carried": [], "unverified": ["site_research"]})
+
     def test_no_previous_is_a_noop(self):
         current = {"organisation_number": ORG, "evidence": {}}
         self.assertEqual(carry_forward(None, current), {"carried": [], "unverified": []})

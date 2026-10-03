@@ -62,6 +62,9 @@ class InProcessDeadlineTests(unittest.TestCase):
         self.assertTrue(all(e["run"]["terminal_status"] in {"completed", "failed"} for e in output["envelopes"]))
         self.assertTrue(all(validate_envelope(e) == [] for e in output["envelopes"]))
         self.assertGreater(output["report"]["deadline"]["companies_not_started"] + output["report"]["deadline"]["companies_salvaged_at_hard_stop"], 0)
+        self.assertIn(output["report"]["deadline"]["stop_reason"], {"deadline", "grace_window"})
+        unanchored = [e for e in output["envelopes"] if not e["identity"]["anchored"]]
+        self.assertTrue(all(e["company_status"]["state"] == "not_researched" for e in unanchored), "a deadline cut is not an unresolved identity")
 
     def test_hard_stop_salvages_official_facts_already_fetched(self):
         orgs = valid_orgs(2)
@@ -188,7 +191,7 @@ class ProcessKillTests(unittest.TestCase):
             self.assertEqual(len(rows), self.COUNT)
             report = json.loads((directory / "report.json").read_text())
             self.assertEqual(report["deadline"]["deadline_seconds"], 2.0)
-            self.assertIn(report["deadline"]["stop_reason"], {"deadline", None})
+            self.assertIn(report["deadline"]["stop_reason"], {"deadline", "grace_window", None})
             self.assertTrue(report["validation"]["passed"])
 
 

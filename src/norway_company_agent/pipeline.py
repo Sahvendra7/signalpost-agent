@@ -434,7 +434,7 @@ def run_batch(
     report = batch_report(envelopes, results, run_id=run_id, started_at=batch_started_at, runtime_ms=int((time.monotonic() - batch_started) * 1000), modules=modules, registry_metadata=registry_metadata, validation=validation, input_rows=len(rows))
     report["deadline"] = {
         "deadline_seconds": deadline_seconds, "grace_seconds": grace_seconds if deadline_seconds else None,
-        "stop_reason": state["stop_reason"], "companies_degraded_to_official_only": state["degraded"],
+        "stop_reason": state["stop_reason"] or ("grace_window" if state["not_started"] else None), "companies_degraded_to_official_only": state["degraded"],
         "companies_not_started": state["not_started"], "companies_salvaged_at_hard_stop": state["salvaged"],
     }
     if llm_layer is not None and llm_layer.enabled:

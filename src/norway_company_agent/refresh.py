@@ -154,7 +154,10 @@ def carry_forward(previous: dict[str, Any] | None, current: dict[str, Any]) -> d
             outcome["unverified"].append(module)
             continue
         if module == "site_research" and new_status == "not_found":
-            if _site_outage(old, new):
+            # A REGISTRY_LINKED site was verified through the registry-website identity gate. When that module
+            # could not re-check (outage, carried above), discovery alone cannot re-verify it: an outage, not a change.
+            registry_gate_down = (old.get("value") or {}).get("identity_class") == "REGISTRY_LINKED" and "website" in outcome["carried"]
+            if registry_gate_down or _site_outage(old, new):
                 outage = True
             else:
                 outcome["unverified"].append(module)

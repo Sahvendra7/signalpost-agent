@@ -179,7 +179,7 @@ th{color:var(--muted);font-weight:500;font-size:12px}
  <div id="controls">
   <input id="q" type="search" placeholder="Search name or organisation number" aria-label="Search">
   <div class="row">
-   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="complete">Complete</option><option value="partial">Partial</option><option value="identity_unresolved">Identity unresolved</option><option value="invalid_input">Invalid input</option><option value="failed">Run failed</option></select>
+   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="complete">Complete</option><option value="partial">Partial</option><option value="not_researched">Not researched (deadline)</option><option value="identity_unresolved">Identity unresolved</option><option value="invalid_input">Invalid input</option><option value="failed">Run failed</option></select>
    <select id="fflag" aria-label="Flag filter"><option value="">All companies</option><option value="errors">With errors</option><option value="changes">With changes</option><option value="website">Verified website</option><option value="sparse">Registry only (sparse)</option><option value="carried">Values retained (outage)</option></select>
   </div>
   <div id="count"></div>

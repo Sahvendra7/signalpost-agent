@@ -26,7 +26,8 @@ isolated to its own row. The report's `deadline` block records:
 
 - `deadline_seconds`;
 - `grace_seconds`;
-- `stop_reason`;
+- `stop_reason`: `deadline` (hard stop), `interrupted` (signal), `grace_window` (companies left unstarted
+  inside the grace window) or `null`;
 - `companies_degraded_to_official_only`;
 - `companies_not_started`;
 - `companies_salvaged_at_hard_stop`.
