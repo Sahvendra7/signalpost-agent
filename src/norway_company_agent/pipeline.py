@@ -26,6 +26,7 @@ from .identity import apply_website_identity_gate
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .refresh import carry_forward, claim_changes
+from .synthesis import company_summary
 from .site_research import SiteSession, research_company_site
 from .sampling import iter_bulk
 from .website import SAFE_OPENER, assert_public_url, fetch_website
@@ -487,7 +488,16 @@ def _input_key(row: InputRow) -> str | None:
     return row.organisation_number or (str(row.raw) if row.raw is not None else None)
 
 
-def _envelope_for_row(
+def _envelope_for_row(row: InputRow, result: dict[str, Any] | None, **kwargs: Any) -> dict[str, Any]:
+    envelope = _research_envelope(row, result, **kwargs)
+    try:
+        envelope["company_summary"] = company_summary(envelope)
+    except Exception as exc:  # the summary must never cost the row its terminal envelope
+        envelope["errors"].append({"code": "summary_failed", "stage": "summary", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
+    return envelope
+
+
+def _research_envelope(
     row: InputRow,
     result: dict[str, Any] | None,
     *,
