@@ -30,7 +30,7 @@ from bs4 import BeautifulSoup
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens
 from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, job_postings, parse_date  # noqa: F401  (re-exported)
-from .site_identity import FREE_MAIL, classify_site
+from .site_identity import FREE_MAIL, classify_site, manager_designated
 from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
 
 DIRECTORY_HOSTS = {
@@ -44,6 +44,7 @@ CAREER_HINTS = ("ledige-stillinger", "ledige stillinger", "karriere", "career", 
 HTML_ACCEPT = "text/html,application/xhtml+xml"
 MAX_PAGE_BYTES = 3_000_000
 MAX_ARTICLE_FETCHES = 3  # article pages followed from a news listing that states no dates
+MANAGER_SITE_MAX_NEWS = 5  # a business manager's site serves many entities: only its most recent dated items
 
 
 # ---------- fetching with robots, caches and budgets ----------
@@ -273,6 +274,7 @@ class SiteResult:
     careers_page: str | None = None
     careers_checked: list[dict[str, Any]] = field(default_factory=list)
     articles_fetched: int = 0
+    manager: dict[str, Any] | None = None  # MANAGER_DESIGNATED: the registered forretningsfører operating the site
     extraction_rejections: dict[str, int] = field(default_factory=dict)
     rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     requests: int = 0
@@ -341,8 +343,22 @@ def research_company_site(
                 result.candidates.append({**candidate, "outcome": state})
                 continue
             final_domain = _registered_domain(candidate_pages[0][1].url) or candidate["domain"]
-            verdict = classify_site(target, candidate["domain"], [response.raw.decode("utf-8", errors="replace") for _, response in candidate_pages], registry_email=live.get("email"))
-            result.candidates.append({**candidate, "outcome": verdict["class"], "reason": verdict["reasons"][0], "final_domain": final_domain})
+            html_pages = [response.raw.decode("utf-8", errors="replace") for _, response in candidate_pages]
+            verdict = classify_site(target, candidate["domain"], html_pages, registry_email=live.get("email"))
+            manager = manager_designated(target, candidate["domain"], html_pages, verdict, registry_email=live.get("email")) if candidate["source"] == "registry_hjemmeside" else None
+            result.candidates.append({**candidate, "outcome": "MANAGER_DESIGNATED" if manager else verdict["class"], "reason": verdict["reasons"][0], "final_domain": final_domain})
+            if manager:
+                result.status = "verified"
+                result.site_url = candidate["url"]
+                result.identity_class = "MANAGER_DESIGNATED"
+                result.identity_source = candidate["source"]
+                result.manager = manager
+                result.identity_reasons = [
+                    f"website named in the entity's own registry record and operated by its registered forretningsfører {manager['name']} "
+                    f"({manager['organisation_number']}), whose organisation number is on the site"
+                ]
+                pages = candidate_pages
+                break
             if verdict["publishable"]:
                 result.status = "verified"
                 result.site_url = candidate["url"]
@@ -433,5 +449,18 @@ def apply_site_facts(result: SiteResult, facts: Any) -> None:
     result.activities = facts.activities
     result.jobs = facts.jobs
     result.careers_checked = facts.careers_checked
-    result.extraction_rejections = facts.rejections
+    result.extraction_rejections = dict(facts.rejections)
     result.rejected_examples = facts.rejected_examples
+    if result.identity_class == "MANAGER_DESIGNATED":
+        # The site belongs to the business manager and serves many entities: only its most recent dated news is
+        # published as the designated website's activity; the manager's own profiles, vacancies and careers page
+        # are never attributed to the managed entity.
+        held = "profile of the business manager's site; not attributed to the managed entity"
+        result.ambiguous_profiles += [{**item, "identity_reason": held} for item in result.profiles]
+        counts = result.extraction_rejections
+        if result.profiles:
+            counts["social:manager_site_profile"] = counts.get("social:manager_site_profile", 0) + len(result.profiles)
+        if result.jobs:
+            counts["job:manager_site_vacancy"] = counts.get("job:manager_site_vacancy", 0) + len(result.jobs)
+        result.profiles, result.jobs, result.careers_page, result.careers_checked = [], [], None, []
+        result.activities = sorted(result.activities, key=lambda item: str(item.get("date") or ""), reverse=True)[:MANAGER_SITE_MAX_NEWS]

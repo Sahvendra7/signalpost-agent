@@ -267,7 +267,11 @@ def company_summary(envelope: dict[str, Any]) -> dict[str, Any]:
     website = one("official_website")
     if website:
         via = f" ({website['identity_class']})" if website.get("identity_class") else ""
-        out.say("public_footprint", f"Verified company website{via}: {website['value']}.", [website])
+        operator = website.get("operated_by")
+        if operator:
+            out.say("public_footprint", f"Website named in the registry record and operated by the registered business manager {operator['name']} (organisation number {operator['organisation_number']}): {website['value']}.", [website])
+        else:
+            out.say("public_footprint", f"Verified company website{via}: {website['value']}.", [website])
     listed_site = one("registry_listed_website")
     if listed_site and not website:
         out.say("public_footprint", f"The registry lists the website {listed_site['value']}; it was not verified as this company's own site.", [listed_site])

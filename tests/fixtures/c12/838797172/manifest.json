@@ -9,7 +9,7 @@
   "source_type": "registry_linked_company_website",
   "source_class": "registry_linked_company_website",
   "source_url": "https://www.granne.no/",
-  "retrieved_at": "2026-10-04T22:50:14.696460Z",
+  "retrieved_at": "2026-10-04T23:00:30.649691Z",
   "value": {
    "requested_url": "https://www.granne.no/",
    "final_url": "https://www.granne.no/",
@@ -127,91 +127,91 @@
    "status": 200,
    "file": "1e0ee25edb389e7c.json.gz",
    "content_sha256": "1e0ee25edb389e7ca340c289756f8bcbff290ae3ee8b9a157a0ce1603798c809",
-   "retrieved_at": "2026-10-04T22:50:06.563166Z"
+   "retrieved_at": "2026-10-04T23:00:22.667340Z"
   },
   "https://data.brreg.no/regnskapsregisteret/regnskap/838797172": {
    "kind": "brreg",
    "status": 500,
    "file": null,
    "content_sha256": null,
-   "retrieved_at": "2026-10-04T22:50:09.796486Z"
+   "retrieved_at": "2026-10-04T23:00:25.910377Z"
   },
   "https://data.brreg.no/enhetsregisteret/api/enheter/838797172/roller": {
    "kind": "brreg",
    "status": 200,
    "file": "a97990ba933de8dc.json.gz",
    "content_sha256": "a97990ba933de8dc72735ba7d9fd0f282606d806f60830c7ed4668fab2e62510",
-   "retrieved_at": "2026-10-04T22:50:12.179329Z"
+   "retrieved_at": "2026-10-04T23:00:27.935665Z"
   },
   "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/838797172": {
    "kind": "brreg",
    "status": 404,
    "file": "e3b0c44298fc1c14.json.gz",
    "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-   "retrieved_at": "2026-10-04T22:50:10.524978Z"
+   "retrieved_at": "2026-10-04T23:00:26.596294Z"
   },
   "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=838797172&size=1000": {
    "kind": "brreg",
    "status": 200,
    "file": "dcaaee07a9b4fcfd.json.gz",
    "content_sha256": "dcaaee07a9b4fcfdf598c8d371fbe767267726fcc84e5c573356b615b5139f8f",
-   "retrieved_at": "2026-10-04T22:50:11.477574Z"
+   "retrieved_at": "2026-10-04T23:00:27.268715Z"
   },
   "https://www.granne.no/": {
    "kind": "site",
    "status": 200,
    "file": "037f8b673e571fc5.html.gz",
    "content_sha256": "037f8b673e571fc5ce922c22eff081ac62c86b7e9f965e996f72d1b68dcf10bd",
-   "retrieved_at": "2026-10-04T22:50:15.436298Z"
+   "retrieved_at": "2026-10-04T23:00:31.093682Z"
   },
   "https://www.granne.no/kontakt": {
    "kind": "site",
    "status": 200,
    "file": "fd4aa9798ae41506.html.gz",
    "content_sha256": "fd4aa9798ae41506b0d7a5629855c312351102ea2d639cef44903e57c3a45a85",
-   "retrieved_at": "2026-10-04T22:50:15.671140Z"
+   "retrieved_at": "2026-10-04T23:00:31.320866Z"
   },
   "https://www.granne.no/privacy": {
    "kind": "site",
    "status": 200,
    "file": "ff00c5a46f922e37.html.gz",
    "content_sha256": "ff00c5a46f922e37b5954090c752ea70dd679e130123c748c003d87bc771adf2",
-   "retrieved_at": "2026-10-04T22:50:15.863880Z"
+   "retrieved_at": "2026-10-04T23:00:31.501248Z"
   },
   "https://www.granne.no/aktuelt": {
    "kind": "site",
    "status": 200,
    "file": "eb3bf08734a6599b.html.gz",
    "content_sha256": "eb3bf08734a6599ba5bf03aab9d65eee116755e7924d2ffd1d2c1303fe0dad5a",
-   "retrieved_at": "2026-10-04T22:50:16.084714Z"
+   "retrieved_at": "2026-10-04T23:00:31.712780Z"
   },
   "https://www.granne.no/ledige-stillinger": {
    "kind": "site",
    "status": 200,
    "file": "566e6b4175673aeb.html.gz",
    "content_sha256": "566e6b4175673aebec10818f74cd6c92a26c7d73894bf5162edf3e396a6b11fc",
-   "retrieved_at": "2026-10-04T22:50:16.359143Z"
+   "retrieved_at": "2026-10-04T23:00:31.927447Z"
   },
   "https://www.granne.no/artikler/teknisk-forum:-setter-fokus-pa-korrosjon-i-fiskeflaten": {
    "kind": "site",
    "status": 200,
    "file": "f52cb7a2e3ffad2d.html.gz",
    "content_sha256": "f52cb7a2e3ffad2d144f3c03749f3fc82b1fd33824b0b48783eab92bb11a3d96",
-   "retrieved_at": "2026-10-04T22:50:17.280615Z"
+   "retrieved_at": "2026-10-04T23:00:33.021413Z"
   },
   "https://www.granne.no/artikler/brannovelse-om-bord-i-sunderoy": {
    "kind": "site",
    "status": 200,
    "file": "e32035f73cdaef3e.html.gz",
    "content_sha256": "e32035f73cdaef3ebbbf4bd0f9c58a063e04af889cb76724ac8a02a3937f45f1",
-   "retrieved_at": "2026-10-04T22:50:17.619211Z"
+   "retrieved_at": "2026-10-04T23:00:33.216285Z"
   },
   "https://www.granne.no/artikler/fiske-i-russisk-sone:-hva-betyr-det-for-forsikringen": {
    "kind": "site",
    "status": 200,
    "file": "1bf5b379ce062f78.html.gz",
    "content_sha256": "1bf5b379ce062f78d2d2c4a5318b896012405ff514a9dcbb112cbf743e81fa36",
-   "retrieved_at": "2026-10-04T22:50:17.970059Z"
+   "retrieved_at": "2026-10-04T23:00:33.393849Z"
   }
  }
 }

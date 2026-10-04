@@ -674,19 +674,32 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     for index, page in enumerate(pages):
         if page.kind != "html":
             continue
-        candidates.extend((item, page) for item in html_items(page.html, page.url))
+        items = html_items(page.html, page.url)
+        if index == 0:
+            # A homepage's own published_time / WebPage date describes the page, not a news item.
+            home = page.url.split("#")[0].rstrip("/")
+            items = [item for item in items if str(item.get("url") or "").split("#")[0].rstrip("/") != home]
+        candidates.extend((item, page) for item in items)
         if is_news_page(page.url) or index == 0:
             candidates.extend((item, page) for item in listing_items(page, require_news_link=not is_news_page(page.url)))
     priority = {"jsonld_datePublished": 0, "meta_article_published_time": 1, "article_time_datetime": 2, "site_feed": 3, "listing_visible_date": 4}
     kept: dict[tuple[str, str], dict[str, Any]] = {}
+    kept_urls: set[tuple[str, str]] = set()
     for item, page in sorted(candidates, key=lambda pair: priority.get(pair[0].get("method"), 9)):
         reason = validate_activity(item, page)
         if reason:
             out.reject("activity", reason, item, page)
             continue
         key = (str(item["date"])[:10], fold(item["title"]))
-        if key in kept:
+        # One article is one claim: the same article URL and date under another title form (JSON-LD headline vs
+        # the page <title> with a site-name suffix) is the same item. A listing page's own URL is not a key.
+        url = str(item.get("url") or "").split("#")[0].rstrip("/")
+        is_listing_self = item.get("method") == "listing_visible_date" and url == page.url.split("#")[0].rstrip("/")
+        url_key = (url, str(item["date"])[:10]) if url and not is_listing_self else None
+        if key in kept or (url_key and url_key in kept_urls):
             continue
+        if url_key:
+            kept_urls.add(url_key)
         summary = item.get("summary")
         if summary and not page.contains(summary) and not content_words(summary) <= set(words(page.text)):
             summary = None

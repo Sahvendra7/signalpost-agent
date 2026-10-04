@@ -18,6 +18,7 @@ from helpers.c12_replay import Fixture  # noqa: E402
 from norway_company_agent.contract import validate_envelope  # noqa: E402
 from norway_company_agent.inputs import InputRow  # noqa: E402
 from norway_company_agent.pipeline import run_batch  # noqa: E402
+from norway_company_agent.site_identity import classify_site, manager_designated  # noqa: E402
 from norway_company_agent.site_facts import CapturedPage, article_links, extract_site_facts, job_listings, listing_items, validate_activity  # noqa: E402
 
 SHA = "a" * 64
@@ -76,6 +77,70 @@ class C12RegressionTests(unittest.TestCase):
         self.assertEqual([claim["availability"] for claim in news], ["not_available"], "no captured article states a date")
         articles = [url for url in fixture.calls if "/artikler/" in url]
         self.assertTrue(1 <= len(articles) <= 3, "article pages are followed only from the dateless listing, at most three")
+
+
+class ManagerDesignatedTests(unittest.TestCase):
+    """A registry-designated website run by the entity's registered business manager (C12 case 813396092)."""
+
+    def test_813396092_bori_aktuelt_dated_news_on_the_designated_manager_site(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            envelope, _ = replay("813396092", root)
+            website = available(envelope, "official_website")[0]
+            self.assertEqual(website["value"], "https://www.bori.no/")
+            self.assertEqual(website["identity_class"], "MANAGER_DESIGNATED")
+            self.assertEqual(website["operated_by"], {"organisation_number": "989987011", "name": "BORI BBL", "registry_role": "forretningsfører"})
+            self.assertLess(website["confidence"], 0.95)
+            news = available(envelope, "news_item")
+            self.assertTrue(1 <= len(news) <= 5, "only the manager site's most recent dated items")
+            for claim in news:
+                self.assertTrue(claim["value"]["url"].startswith("https://www.bori.no/"))
+                self.assertIn("/aktuelt/", claim["value"]["url"])
+                cited = CapturedPage(claim["source_page"], cited_bytes(envelope, claim, root), "", "")
+                self.assertTrue(cited.contains(claim["value"]["title"]), "the title occurs in the cited captured page")
+                self.assertTrue(cited.contains(claim["value"]["date_text"]) or claim["value"]["date_text"] in cited.html, "the date is stated in the cited page")
+            self.assertEqual(len({(claim["value"]["url"], claim["value"]["publication_date"][:10]) for claim in news}), len(news), "one article, one claim")
+            self.assertEqual(validate_envelope(envelope, snapshot_root=root), [])
+        states = {claim["field"]: claim["availability"] for claim in envelope["claims"] if claim["field"] in ("social_profile", "job_posting", "careers_page")}
+        self.assertEqual(states, {"social_profile": "not_applicable", "job_posting": "not_applicable"}, "the manager's profiles and vacancies are not the sameie's")
+
+    PAGE = '<html><head><title>Forvalter BBL</title></head><body><p>Kontakt: post@forvalter.no</p>{extra}</body></html>'
+
+    def entity(self, manager_number: str | None = "989987011", role: str = "FFØR") -> dict:
+        roles = [{"role_code": role, "name": ["FORVALTER BBL"], "organisation_number": manager_number}] if manager_number else []
+        return {"organisation_number": "913396091", "name": "SAMEIET TESTGÅRDEN", "business_address": {},
+                "evidence": {"roles": {"value": {"roles": roles}}}}
+
+    def check(self, entity: dict, extra: str, email: str | None = "forvaltning@forvalter.no"):
+        html = [self.PAGE.format(extra=extra)]
+        verdict = classify_site(entity, "forvalter.no", html, registry_email=email)
+        return verdict, manager_designated(entity, "forvalter.no", html, verdict, registry_email=email)
+
+    def test_all_official_links_required(self):
+        verdict, manager = self.check(self.entity(), "<footer>Org.nr. 989 987 011</footer>")
+        self.assertEqual(verdict["class"], "AMBIGUOUS")
+        self.assertEqual(manager["organisation_number"], "989987011")
+        self.assertIsNotNone(self.check(self.entity(), '<template><a href="mailto:989987011@forvalter.no">faktura</a></template>')[1], "contact-dialog template counts")
+
+    def test_any_missing_link_rejects(self):
+        cases = {
+            "manager number not on the site": (self.entity(), "<footer>Org.nr. 999 888 777</footer>", "forvaltning@forvalter.no"),
+            "number only inside a script": (self.entity(), "<script>var id=989987011;</script>", "forvaltning@forvalter.no"),
+            "not the registered forretningsfører (accountant only)": (self.entity(role="REGN"), "<footer>989 987 011</footer>", "forvaltning@forvalter.no"),
+            "no registered manager": (self.entity(None), "<footer>989 987 011</footer>", "forvaltning@forvalter.no"),
+        }
+        for label, (entity, extra, email) in cases.items():
+            with self.subTest(label):
+                self.assertIsNone(self.check(entity, extra, email)[1])
+
+    def test_no_control_signal_or_contrary_identity_rejects(self):
+        html = ['<html><body><p>Kontakt oss på skjema.</p><footer>989 987 011</footer></body></html>']
+        verdict = classify_site(self.entity(), "forvalter.no", html, registry_email="styret@gmail.com")
+        self.assertIsNone(manager_designated(self.entity(), "forvalter.no", html, verdict, registry_email="styret@gmail.com"), "no registry e-mail on the site's domain and no own mailbox")
+        directory = ['<html><body>' + "".join(f"<p>Org {n} 123 45{i}</p>" for i, n in enumerate(("911", "922", "933", "944"))) + '<p>post@forvalter.no</p><footer>989 987 011</footer></body></html>']
+        verdict = classify_site(self.entity(), "forvalter.no", directory, registry_email="forvaltning@forvalter.no")
+        self.assertEqual(verdict["class"], "DIRECTORY")
+        self.assertIsNone(manager_designated(self.entity(), "forvalter.no", directory, verdict, registry_email="forvaltning@forvalter.no"))
 
 
 class SocialRules(unittest.TestCase):

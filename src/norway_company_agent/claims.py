@@ -344,9 +344,17 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     carried = bool(record.get("carried_forward"))
     first_page = (value.get("pages") or [{}])[0]
     home = _page_record(value.get("site_url"), first_page.get("content_sha256"), first_page.get("retrieved_at"), carried)
-    confidence = 1.0 if "organisation number" in reasons else 0.95
+    manager = value.get("manager") if identity_class == "MANAGER_DESIGNATED" else None
+    confidence = 0.9 if manager else 1.0 if "organisation number" in reasons else 0.95
     if not v1_site_published:
-        claims.add("websites", "official_website", value.get("site_url"), home, f"{identity_class}: {reasons}", confidence=confidence, method="site_identity_v2", extra={"identity_class": identity_class, "identity_source": value.get("identity_source")})
+        extra = {"identity_class": identity_class, "identity_source": value.get("identity_source")}
+        if manager:
+            extra["operated_by"] = {"organisation_number": manager["organisation_number"], "name": manager["name"], "registry_role": "forretningsfører"}
+        claims.add("websites", "official_website", value.get("site_url"), home, f"{identity_class}: {reasons}", confidence=confidence, method="site_identity_v2", extra=extra)
+    if manager:
+        held = f"Website is operated by the registered business manager {manager['name']} ({manager['organisation_number']}); its {{}} are not attributed to this entity"
+        claims.absent("public_activity", "social_profile", "not_applicable", held.format("social profiles"))
+        claims.absent("hiring", "job_posting", "not_applicable", held.format("vacancies"))
     # Every fact below inherits the identity of the verified site above; its evidence is the captured page it
     # was read from, and its value occurs in that page (site_facts.validate_*).
     profiles = [item for item in value.get("profiles") or [] if item.get("canonical_url")]  # pre-Revision-1 records carry a rewritten URL: not published
