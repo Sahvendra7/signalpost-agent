@@ -315,10 +315,7 @@ def _website_claims(claims: ClaimSet, record: dict[str, Any] | None, view: dict[
     claims.add("websites", "official_website", value.get("final_url") or record.get("source_url"), record, f"identity: {reasons}", confidence=score, method=method)
     if value.get("description"):
         claims.add("description", "website_description", value["description"], record, f"meta description: {value['description'][:200]}", confidence=score, method="html_meta_description")
-    assessments = {item.get("url"): item for item in value.get("social_link_assessments") or []}
-    for link in value.get("social_links") or []:
-        social_score = float((assessments.get(link["url"]) or {}).get("identity_score") or score)
-        claims.add("websites", "social_profile", {"platform": link["platform"], "url": link["url"]}, record, f"outbound link on company site: {link['url']}", confidence=min(score, social_score), method="company_site_outbound_link")
+    # Social profiles are published from the site stage (exact linked URL, public_activity), not from this record.
 
 
 def _page_record(page_url: str, sha: str | None, retrieved_at: str | None, carried: bool = False) -> dict[str, Any]:
@@ -326,6 +323,9 @@ def _page_record(page_url: str, sha: str | None, retrieved_at: str | None, carri
     if carried:
         record["carried_forward"] = True
     return record
+
+
+SITE_FAMILIES = (("public_activity", "social_profile"), ("public_activity", "news_item"), ("hiring", "job_posting"))
 
 
 def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1_site_published: bool) -> bool:
@@ -336,8 +336,8 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     if record.get("status") != "available":
         reason = record.get("note") or "No verified company website"
         if not v1_site_published:
-            claims.absent("public_activity", "site_activity", availability_for(record), reason)
-            claims.absent("hiring", "job_posting", availability_for(record), reason)
+            for category, field in SITE_FAMILIES:
+                claims.absent(category, field, availability_for(record), reason)
         return False
     identity_class = value.get("identity_class")
     reasons = "; ".join(value.get("identity_reasons") or [])
@@ -347,25 +347,43 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     confidence = 1.0 if "organisation number" in reasons else 0.95
     if not v1_site_published:
         claims.add("websites", "official_website", value.get("site_url"), home, f"{identity_class}: {reasons}", confidence=confidence, method="site_identity_v2", extra={"identity_class": identity_class, "identity_source": value.get("identity_source")})
-    for profile in value.get("profiles") or []:
+    # Every fact below inherits the identity of the verified site above; its evidence is the captured page it
+    # was read from, and its value occurs in that page (site_facts.validate_*).
+    profiles = [item for item in value.get("profiles") or [] if item.get("canonical_url")]  # pre-Revision-1 records carry a rewritten URL: not published
+    for profile in profiles:
         page = _page_record(profile.get("found_on"), profile.get("content_sha256"), profile.get("retrieved_at"), carried)
-        claims.add("websites", "social_profile", {"platform": profile["platform"], "url": profile["url"]}, page, f"outbound link on verified site page {profile.get('found_on')}", confidence=min(confidence, float(profile.get("identity_score") or confidence)), method="verified_site_linked_profile")
+        claims.add(
+            "public_activity", "social_profile", profile["url"], page, f"outbound link on verified site page {profile.get('found_on')}: {profile.get('evidence_span')}",
+            confidence=min(confidence, float(profile.get("identity_score") or confidence)), method="verified_site_outbound_link",
+            extra={"platform": profile["platform"], "canonical_url": profile["canonical_url"], "source_page": profile.get("found_on"), "evidence_span": profile.get("evidence_span"), "identity_basis": profile.get("identity_reason")},
+        )
+    if not profiles:
+        ambiguous = value.get("ambiguous_profiles") or []
+        if ambiguous:
+            claims.absent("public_activity", "social_profile", "ambiguous", f"{len(ambiguous)} profile link(s) on the verified site not corroborated as this company's own")
+        else:
+            claims.absent("public_activity", "social_profile", "not_available", "Verified website checked; no Facebook, Instagram, LinkedIn or YouTube profile link found")
     if value.get("careers_page"):
         claims.add("websites", "careers_page", value["careers_page"], home, f"careers link on {value.get('site_url')}", confidence=confidence, method="verified_site_link")
-    activities = value.get("activities") or []
+    activities = [item for item in value.get("activities") or [] if item.get("title") and item.get("date")]
     for item in activities:
         page = _page_record(item.get("page_url"), item.get("content_sha256"), item.get("retrieved_at"), carried)
-        body = {"title": item.get("title"), "url": item.get("url"), "publication_date": item.get("date"), "date_kind": item.get("date_kind"), "summary": item.get("summary")}
-        claims.add("public_activity", "site_activity", {key: val for key, val in body.items() if val is not None}, page, f"{item.get('method')}: {item.get('date')} {str(item.get('title') or '')[:120]}", confidence=confidence, method=str(item.get("method")), extra={"event_date": item.get("date")})
+        body = {"title": item.get("title"), "url": item.get("url"), "publication_date": item.get("date"), "date_text": item.get("date_text"), "date_kind": item.get("date_kind"), "summary": item.get("summary")}
+        span = f"{item.get('method')}: {item.get('date_text') or item.get('date')} {str(item.get('title') or '')[:120]}"
+        claims.add("public_activity", "news_item", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=str(item.get("method")), extra={"event_date": item.get("date"), "source_page": item.get("page_url")})
     if not activities:
-        claims.absent("public_activity", "site_activity", "not_available", "Verified website checked; no source-dated activity found")
+        claims.absent("public_activity", "news_item", "not_available", "Verified website checked; no news or activity item with a date stated on the page found")
     jobs = value.get("jobs") or []
     for job in jobs:
         page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"), carried)
-        body = {"title": job.get("title"), "url": job.get("url"), "date_posted": job.get("date_posted"), "valid_through": job.get("valid_through")}
-        claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, f"schema.org JobPosting: {job.get('title')}", confidence=confidence, method="jsonld_JobPosting")
+        body = {key: job.get(key) for key in ("title", "url", "date_posted", "valid_through", "application_deadline", "location")}
+        method = str(job.get("method") or "jsonld_JobPosting")
+        span = f"schema.org JobPosting: {job.get('title')}" if method == "jsonld_JobPosting" else f"position listed on careers page {job.get('page_url')}: {job.get('title')}"
+        claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=method, extra={"source_page": job.get("page_url")})
     if not jobs:
-        claims.absent("hiring", "job_posting", "not_available", "Verified website checked; no schema.org JobPosting found")
+        checked = value.get("careers_checked") or []
+        reason = f"Verified website checked; careers page {checked[0]['url']}: {checked[0]['reason']}" if checked else "Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
+        claims.absent("hiring", "job_posting", "not_available", reason)
     return True
 
 
@@ -400,11 +418,11 @@ def _llm_claims(claims: ClaimSet, llm: dict[str, Any] | None) -> None:
         claims.add(category, field, fact["value"], page, fact["evidence_span"], confidence=fact["confidence"], method="llm_extraction_validated", extra=extra)
     for item in extraction.get("profiles") or []:
         page = _page_record(item["source_page"], item["content_sha256"], item["retrieved_at"])
-        claims.add("websites", "social_profile", {"platform": item["platform"], "url": item["profile_url"]}, page, item["evidence_span"], confidence=min(0.8, float(item.get("identity_score") or 0.8)), method="llm_extracted_site_link", extra={**base, "evidence_span": item["evidence_span"]})
+        claims.add("public_activity", "social_profile", item["profile_url"], page, item["evidence_span"], confidence=min(0.8, float(item.get("identity_score") or 0.8)), method="llm_extracted_site_link", extra={**base, "platform": item["platform"], "evidence_span": item["evidence_span"]})
     for item in extraction.get("activities") or []:
         page = _page_record(item["source_url"], item["content_sha256"], item["retrieved_at"])
         body = {"title": item["title"], "publication_date": item["publication_date"], "date_kind": "stated_on_page", "summary": item.get("summary")}
-        claims.add("public_activity", "site_activity", {key: val for key, val in body.items() if val is not None}, page, item["evidence_span"], confidence=0.8, method="llm_extraction_validated", extra={**base, "evidence_span": item["evidence_span"], "event_date": item["publication_date"]})
+        claims.add("public_activity", "news_item", {key: val for key, val in body.items() if val is not None}, page, item["evidence_span"], confidence=0.8, method="llm_extraction_validated", extra={**base, "evidence_span": item["evidence_span"], "event_date": item["publication_date"]})
     # An available LLM claim supersedes the deterministic "checked, nothing found" state for the same field.
     filled = {(item["category"], item["field"]) for item in claims.claims if item.get("derivation") == "llm_extraction"}
     claims.claims = [item for item in claims.claims if item["availability"] == "available" or (item["category"], item["field"]) not in filled]
@@ -449,8 +467,8 @@ AREAS = ("filings", "leadership", "locations", "websites", "public_footprint", "
 
 
 def area_coverage(claims: list[dict[str, Any]]) -> dict[str, bool]:
-    """Builderr's five areas plus hiring split out. public_footprint = site-linked profile or dated site
-    activity (official sample's footprint logic counts profiles; SCORING_MAPPING UNCONFIRMED)."""
+    """Builderr's five areas plus hiring split out. public_footprint = site-linked social profile or dated site
+    activity, both `public_activity` claims (official sample's footprint logic counts profiles)."""
     available = [item for item in claims if item.get("availability") == "available"]
     has = lambda category, fields=None: any(item.get("category") == category and (fields is None or item["field"] in fields) and not (item["field"].endswith("_count") and item.get("value") == 0) for item in available)  # noqa: E731
     return {
@@ -458,6 +476,6 @@ def area_coverage(claims: list[dict[str, Any]]) -> dict[str, bool]:
         "leadership": has("leadership"),
         "locations": has("locations"),
         "websites": has("websites", {"official_website"}),
-        "public_footprint": has("websites", {"social_profile"}) or has("public_activity"),
+        "public_footprint": has("public_activity"),
         "hiring": has("hiring"),
     }

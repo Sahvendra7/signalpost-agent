@@ -245,10 +245,13 @@ def normalize_social_url(url: str) -> dict[str, str] | None:
     parts = [part.strip() for part in parsed.path.split("/") if part.strip()]
     lowered = [part.casefold() for part in parts]
     rejected_first = {
-        "facebook": {"sharer", "sharer.php", "share.php", "dialog", "policy.php", "privacy", "events", "groups", "plugins"},
-        "instagram": {"p", "reel", "reels", "stories", "explore"},
+        "facebook": {"sharer", "sharer.php", "share.php", "dialog", "policy.php", "privacy", "events", "groups", "plugins",
+                     "watch", "hashtag", "login", "login.php", "home.php", "photo.php", "story.php", "permalink.php", "media", "help", "legal", "terms"},
+        "instagram": {"p", "reel", "reels", "stories", "explore", "accounts", "tv"},
         "x": {"intent", "share", "home", "search", "i"},
     }
+    if platform == "facebook" and lowered[:1] == ["pg"]:
+        parts, lowered = parts[1:], lowered[1:]  # facebook.com/pg/<page>/about is the same page as facebook.com/<page>
     if not parts or lowered[0] in rejected_first.get(platform, set()):
         return None
     if platform == "facebook" and lowered[0] == "profile.php":
@@ -273,6 +276,12 @@ def normalize_social_url(url: str) -> dict[str, str] | None:
     }[platform]
     if platform == "linkedin":
         parts = parts[:2]
+    elif platform == "facebook":
+        # One page, many sub-paths (/about, /posts/123, /photos): the page is the first segment, except the
+        # legacy /pages/<name>/<id> and /people/<name>/<id> forms, which need all three.
+        parts = parts[:3] if lowered[0] in {"pages", "people"} else parts[:1]
+    elif platform == "instagram":
+        parts = parts[:1]
     elif platform == "youtube":
         parts = parts[:1] if parts[0].startswith("@") else parts[:2]
     return {"platform": platform, "url": f"https://{canonical_host}/{'/'.join(parts)}"}

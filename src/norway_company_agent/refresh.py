@@ -25,8 +25,8 @@ SOURCE_CLASS_MODULE = {
     "company_site": "site_research",
 }
 NON_PUBLISHABLE_SITE_CLASSES = {"AMBIGUOUS", "THIRD_PARTY", "FAN_COMMUNITY", "DIRECTORY"}
-MULTI_VALUE_FIELDS = {"subunit", "social_profile", "site_activity", "job_posting", "annual_accounts_copy"}
-INFORMATIONAL_FIELDS = {"site_activity", "roles_last_changed", "role_count", "subunit_count"}
+MULTI_VALUE_FIELDS = {"subunit", "social_profile", "site_activity", "news_item", "job_posting", "annual_accounts_copy"}
+INFORMATIONAL_FIELDS = {"site_activity", "news_item", "roles_last_changed", "role_count", "subunit_count"}
 
 
 TRACKED_FIELDS: dict[str, tuple[str, ...]] = {
@@ -178,10 +178,18 @@ def carry_forward(previous: dict[str, Any] | None, current: dict[str, Any]) -> d
     return outcome
 
 
+def _identity_value(claim: dict[str, Any]) -> Any:
+    """What makes a claim the same fact across runs: a social profile is its canonical profile, so a site that
+    re-links the same page with a trailing slash or a tracking parameter is not a change."""
+    if claim.get("field") == "social_profile" and claim.get("canonical_url"):
+        return claim["canonical_url"]
+    return _canonical(claim.get("value"))
+
+
 def _claim_key(claim: dict[str, Any]) -> str:
     qualifiers = {key: claim.get(key) for key in ("period", "account_type", "currency") if claim.get(key) is not None}
     if claim.get("category") == "leadership" and claim["field"] != "role_count" or claim["field"] in MULTI_VALUE_FIELDS:
-        return json.dumps([claim["category"], claim["field"], _canonical(claim.get("value")), qualifiers], sort_keys=True, ensure_ascii=False, default=str)
+        return json.dumps([claim["category"], claim["field"], _identity_value(claim), qualifiers], sort_keys=True, ensure_ascii=False, default=str)
     return json.dumps([claim["category"], claim["field"], qualifiers], sort_keys=True, ensure_ascii=False, default=str)
 
 
@@ -242,7 +250,7 @@ def claim_changes(
         if before is None:
             if not after.get("carried_forward"):
                 event("added", after, None, after)
-        elif _canonical(before.get("value")) != _canonical(after.get("value")):
+        elif _identity_value(before) != _identity_value(after) or after.get("field") != "social_profile" and _canonical(before.get("value")) != _canonical(after.get("value")):
             event("changed", after, before, after)
         else:
             counts["unchanged"] += 1

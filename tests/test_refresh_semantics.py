@@ -97,7 +97,7 @@ class WebsiteRefreshTests(unittest.TestCase):
         brreg = FakeBrreg({SITE_ORG: body})
         common = {"resolver": lambda host: True, "org": SITE_ORG}
         env1, prof1 = run(brreg, site_fetcher=FakeWeb(site_pages()), **common)
-        self.assertTrue(claim(env1, "social_profile") and claim(env1, "site_activity") and claim(env1, "official_website"))
+        self.assertTrue(claim(env1, "social_profile") and claim(env1, "news_item") and claim(env1, "official_website"))
 
         env2, prof2 = run(brreg, prof1, site_fetcher=FakeWeb({}), **common)  # every site request fails
         self.assertEqual(claim(env2, "social_profile")["value"], claim(env1, "social_profile")["value"])

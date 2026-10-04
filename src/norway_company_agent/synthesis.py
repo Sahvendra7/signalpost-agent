@@ -141,7 +141,22 @@ def _quote(text: Any, limit: int = 400) -> str:
 
 
 def _job(value: dict[str, Any]) -> str:
-    return f"{value.get('title')} (posted {value.get('date_posted') or 'undated'})"
+    details = [f"posted {value['date_posted']}" if value.get("date_posted") else "posting date not stated"]
+    if value.get("application_deadline"):
+        details.append(f"application deadline {value['application_deadline']}")
+    if value.get("location"):
+        details.append(str(value["location"]))
+    return f"{value.get('title')} ({', '.join(details)})"
+
+
+def _platform(claim: dict[str, Any]) -> str:
+    value = claim.get("value")
+    return str(claim.get("platform") or (value.get("platform") if isinstance(value, dict) else "") or "")
+
+
+def _profile_url(claim: dict[str, Any]) -> str:
+    value = claim.get("value")
+    return str(value.get("url") if isinstance(value, dict) else value)
 
 
 def _join(names: list[str]) -> str:
@@ -256,14 +271,14 @@ def company_summary(envelope: dict[str, Any]) -> dict[str, Any]:
     listed_site = one("registry_listed_website")
     if listed_site and not website:
         out.say("public_footprint", f"The registry lists the website {listed_site['value']}; it was not verified as this company's own site.", [listed_site])
-    profiles = sorted(by_field.get("social_profile") or [], key=lambda claim: (claim["value"].get("platform"), claim["value"].get("url")))
+    profiles = sorted(by_field.get("social_profile") or [], key=lambda claim: (_platform(claim), _profile_url(claim)))
     if profiles:
-        linked = _join([f"{claim['value']['platform']} {claim['value']['url']}" for claim in profiles])
+        linked = _join([f"{_platform(claim)} {_profile_url(claim)}" for claim in profiles])
         out.say("public_footprint", f"Profiles linked from the verified website: {linked}.", profiles)
     careers = one("careers_page")
     if careers:
         out.say("public_footprint", f"Careers page: {careers['value']}.", [careers])
-    activity = sorted(by_field.get("site_activity") or [], key=lambda claim: (str(claim["value"].get("publication_date") or ""), str(claim["value"].get("url") or "")), reverse=True)
+    activity = sorted((by_field.get("news_item") or []) + (by_field.get("site_activity") or []), key=lambda claim: (str(claim["value"].get("publication_date") or ""), str(claim["value"].get("url") or "")), reverse=True)
     if activity:
         newest = activity[0]["value"]
         out.say("public_footprint", f"{len(activity)} dated item{'s' if len(activity) != 1 else ''} on the verified website; the most recent is dated {str(newest.get('publication_date') or '')[:10]}: {_quote(newest.get('title') or newest.get('url'), 160)}.", activity)

@@ -31,6 +31,12 @@ def _value_text(value: Any) -> str:
         text = f"{value.get('code')} {value.get('description') or ''}".strip()
     elif isinstance(value, dict) and value.get("url") and value.get("platform"):
         text = f"{value['platform']}: {value['url']}"
+    elif isinstance(value, dict) and value.get("title"):
+        stated = value.get("publication_date") or value.get("date_posted")
+        details = [str(value[key]) for key in ("location",) if value.get(key)]
+        if value.get("application_deadline"):
+            details.append(f"deadline {value['application_deadline']}")
+        text = (f"{str(stated)[:10]} — " if stated else "") + str(value["title"]) + (f" ({', '.join(details)})" if details else "") + (f" — {value['url']}" if value.get("url") else "")
     else:
         text = json.dumps(value, ensure_ascii=False, sort_keys=True, default=str)
     return text if len(text) <= VALUE_LIMIT else text[:VALUE_LIMIT] + "…"

@@ -257,7 +257,7 @@ class BatchContractTests(unittest.TestCase):
         page = website_record("https://fjordgroup.no/", title="Fjord Group", text="Fjord Group is a family of companies across Norway with offices in many cities.", social=[{"platform": "linkedin", "url": "https://linkedin.com/company/fjordgroup"}])
         envelope = run([ORG_A], brreg, make_website_fetcher({"fjordgroup.no": page}))["envelopes"][0]
         self.assertEqual(by_field(envelope, "official_website")[0]["availability"], "ambiguous")
-        self.assertEqual(by_field(envelope, "social_profile"), [])
+        self.assertEqual([claim for claim in by_field(envelope, "social_profile") if claim["availability"] == "available"], [])
         self.assertEqual(by_field(envelope, "website_description"), [])
 
     def test_exact_site_publishes_site_facts(self):
@@ -267,7 +267,9 @@ class BatchContractTests(unittest.TestCase):
         website = by_field(envelope, "official_website")[0]
         self.assertEqual(website["availability"], "available")
         self.assertEqual(website["confidence"], 1.0)
-        self.assertEqual(by_field(envelope, "social_profile")[0]["value"]["url"], "https://linkedin.com/company/fjordtest-programvare")
+        # Revision 1: social profiles come only from the site stage's captured pages (exact linked URL). The v1
+        # record's rewritten URL (not in any captured page) is never published.
+        self.assertEqual([claim for claim in by_field(envelope, "social_profile") if claim["availability"] == "available"], [])
 
     def test_network_failure_keeps_bulk_identity_and_marks_sources_failed(self):
         with tempfile.TemporaryDirectory() as directory:

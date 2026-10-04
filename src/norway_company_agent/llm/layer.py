@@ -174,7 +174,7 @@ class LLMLayer:
         data = self._call(record, "extraction", EXTRACTION_SYSTEM, extraction_prompt(profile, pages, self.config.max_input_chars), deadline)
         if data is None:
             return
-        known_urls = {item.get("url") for item in (site.get("profiles") or []) + (site.get("ambiguous_profiles") or []) if item.get("url")}
+        known_urls = {item.get("canonical_url") or item.get("url") for item in (site.get("profiles") or []) + (site.get("ambiguous_profiles") or []) if item.get("url")}
         result = validate_extraction(data, pages, profile, known_profile_urls=known_urls, known_activities=site.get("activities") or [])
         profiles, ambiguous = self._gate_profiles(profile, result.profiles)
         record["extraction"] = {

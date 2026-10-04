@@ -7,8 +7,8 @@ Stages per company (adaptive; stops early):
   2. identity: homepage + up to two contact/about pages -> site_identity.classify_site (policy v2). The first
      FIRST_PARTY_CONFIRMED candidate wins; the rest are not fetched.
   3. enrichment of the verified site: declared RSS/Atom feed, one news page, one careers page, and
-     sitemap.xml only when the homepage exposes neither. Extracts site-linked social profiles, dated
-     activity, and schema.org JobPostings.
+     sitemap.xml only when the homepage exposes neither. site_facts.extract_site_facts then reads the captured
+     pages for site-linked social profiles, dated activity and job postings (no further requests).
 Platform pages (LinkedIn, Facebook, Instagram, YouTube) are never fetched: a profile is recorded from the
 verified site's own link. Dates are kept only when the source states them. robots.txt is honoured (RFC 9309:
 401/403, 429, 5xx and network failure mean disallow; Crawl-delay is honoured inside the company budget).
@@ -16,7 +16,6 @@ Every fetched page keeps url, sha256 and retrieval time for evidence.
 """
 from __future__ import annotations
 
-import json
 import re
 import socket
 import threading
@@ -24,16 +23,15 @@ import time
 import urllib.parse
 import urllib.robotparser
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
-from email.utils import parsedate_to_datetime
 from typing import Any, Callable
 
 from bs4 import BeautifulSoup
 
 from .http import ByteFetch, fetch_bytes
-from .identity import _tokens, assess_social_identity
+from .identity import _tokens
+from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, job_postings, parse_date  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site
-from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, _social_links, crawl_delay, normalize_homepage, robots_policy, structured_social_links
+from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
 
 DIRECTORY_HOSTS = {
     "proff.no", "purehelp.no", "1881.no", "gulesider.no", "firmalisten.no", "companywall.no", "firmadatabasen.no",
@@ -43,115 +41,9 @@ DIRECTORY_HOSTS = {
 IDENTITY_HINTS = ("kontakt", "contact", "om-oss", "om oss", "about", "personvern", "privacy")
 NEWS_HINTS = ("nyheter", "aktuelt", "news", "blogg", "blog", "artikler", "presse", "press")
 CAREER_HINTS = ("ledige-stillinger", "ledige stillinger", "karriere", "career", "jobb-hos", "jobbe-hos", "stillinger", "/jobs", "jobb")
-ARTICLE_TYPES = {"Article", "NewsArticle", "BlogPosting", "Report", "PressRelease"}
 HTML_ACCEPT = "text/html,application/xhtml+xml"
 MAX_PAGE_BYTES = 3_000_000
-
-
-# ---------- dates and extraction (pure) ----------
-
-def parse_date(value: Any) -> str | None:
-    """ISO-8601 UTC for an unambiguous source date; a bare YYYY-MM-DD stays a date. Never guesses."""
-    text = str(value or "").strip()
-    if not text:
-        return None
-    try:
-        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
-    except ValueError:
-        try:
-            parsed = parsedate_to_datetime(text)
-        except (TypeError, ValueError, IndexError):
-            return None
-    if parsed is None:
-        return None
-    if parsed.tzinfo is None:
-        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
-            return text if "1995-01-01" <= text <= (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%d") else None
-        parsed = parsed.replace(tzinfo=timezone.utc)
-    if parsed > datetime.now(timezone.utc) + timedelta(days=1) or parsed.year < 1995:
-        return None
-    return parsed.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-
-def feed_items(xml: bytes) -> list[dict[str, Any]]:
-    soup = BeautifulSoup(xml, "xml")
-    items = []
-    for node in soup.find_all(["item", "entry"])[:50]:
-        title = node.find("title")
-        link = node.find("link")
-        href = (link.get("href") or link.get_text(strip=True)) if link else None
-        published = node.find(["pubDate", "published", "dc:date", "date"])
-        updated = node.find("updated")
-        date = parse_date(published.get_text(strip=True)) if published else None
-        kind = "published"
-        if not date and updated:
-            date, kind = parse_date(updated.get_text(strip=True)), "updated"
-        summary = node.find(["description", "summary"])
-        snippet = BeautifulSoup(summary.get_text(" ", strip=True), "lxml").get_text(" ", strip=True)[:240] if summary else None
-        items.append({"title": title.get_text(" ", strip=True)[:200] if title else None, "url": href, "date": date, "date_kind": kind if date else None, "summary": snippet, "method": "site_feed"})
-    return items
-
-
-def _jsonld_nodes(soup: BeautifulSoup):
-    for script in soup.select('script[type="application/ld+json"]'):
-        try:
-            payload = json.loads(script.string or "")
-        except (json.JSONDecodeError, TypeError):
-            continue
-        stack = [payload]
-        while stack:
-            node = stack.pop()
-            if isinstance(node, dict):
-                yield node
-                stack.extend(value for value in node.values() if isinstance(value, (dict, list)))
-            elif isinstance(node, list):
-                stack.extend(node)
-
-
-def _types(node: dict) -> set[str]:
-    kinds = node.get("@type")
-    return {str(kind) for kind in (kinds if isinstance(kinds, list) else [kinds]) if kind}
-
-
-def html_items(html: str, base_url: str) -> list[dict[str, Any]]:
-    soup = BeautifulSoup(html, "lxml")
-    own_domain = _registered_domain(base_url)
-    items: list[dict[str, Any]] = []
-    for node in _jsonld_nodes(soup):
-        if _types(node) & ARTICLE_TYPES:
-            date = parse_date(node.get("datePublished"))
-            raw_url = node.get("url") or node.get("mainEntityOfPage")
-            url = urllib.parse.urljoin(base_url, raw_url) if isinstance(raw_url, str) else base_url
-            if date:
-                items.append({"title": str(node.get("headline") or node.get("name") or "")[:200] or None, "url": url if _registered_domain(url) == own_domain else base_url, "date": date, "date_kind": "published", "summary": str(node.get("description") or "")[:240] or None, "method": "jsonld_datePublished"})
-    meta = soup.select_one('meta[property="article:published_time"]')
-    if meta and parse_date(meta.get("content")):
-        items.append({"title": soup.title.get_text(" ", strip=True)[:200] if soup.title else None, "url": base_url, "date": parse_date(meta.get("content")), "date_kind": "published", "summary": None, "method": "meta_article_published_time"})
-    for article in soup.select("article")[:30]:
-        node = article.select_one("time[datetime]")
-        date = parse_date(node.get("datetime")) if node else None
-        if not date:
-            continue
-        own = [urllib.parse.urljoin(base_url, anchor["href"]) for anchor in article.select("a[href]")]
-        own = [url for url in own if url.startswith(("http://", "https://")) and _registered_domain(url) == own_domain]
-        heading = article.select_one("h1, h2, h3, h4")
-        items.append({"title": heading.get_text(" ", strip=True)[:200] if heading else None, "url": own[0] if own else base_url, "date": date, "date_kind": "published", "summary": None, "method": "article_time_datetime"})
-    return items
-
-
-def job_postings(html: str, base_url: str) -> list[dict[str, Any]]:
-    """schema.org JobPosting published on the company's own site (hiring facts with source dates)."""
-    soup = BeautifulSoup(html, "lxml")
-    jobs = []
-    for node in _jsonld_nodes(soup):
-        if "JobPosting" not in _types(node):
-            continue
-        title = str(node.get("title") or "").strip()
-        if not title:
-            continue
-        valid = parse_date(node.get("validThrough"))
-        jobs.append({"title": title[:200], "date_posted": parse_date(node.get("datePosted")), "valid_through": valid, "url": node.get("url") if isinstance(node.get("url"), str) else base_url, "method": "jsonld_JobPosting"})
-    return jobs
+MAX_ARTICLE_FETCHES = 3  # article pages followed from a news listing that states no dates
 
 
 # ---------- fetching with robots, caches and budgets ----------
@@ -379,6 +271,10 @@ class SiteResult:
     activities: list[dict[str, Any]] = field(default_factory=list)
     jobs: list[dict[str, Any]] = field(default_factory=list)
     careers_page: str | None = None
+    careers_checked: list[dict[str, Any]] = field(default_factory=list)
+    articles_fetched: int = 0
+    extraction_rejections: dict[str, int] = field(default_factory=dict)
+    rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     requests: int = 0
     cache_hits: int = 0
     runtime_ms: int = 0
@@ -500,44 +396,42 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
                     careers.append(url)
     result.careers_page = careers[0] if careers else None
     fetched: list[tuple[str, ByteFetch]] = list(pages)
+    feed_pages: list[CapturedPage] = []
     for url in list(dict.fromkeys(feeds))[:1]:
         state, response = session.get(url, budget, accept="application/rss+xml,application/atom+xml,application/xml,text/xml")
         if state == "ok":
-            for item in feed_items(response.raw):
-                result.activities.append({**item, "page_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at})
+            feed_pages.append(CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at, kind="feed"))
+    news_page: CapturedPage | None = None
     for url in list(dict.fromkeys(news))[:1] + list(dict.fromkeys(careers))[:1]:
         state, response = session.get(url, budget)
         if state == "ok":
             fetched.append((url, response))
-    profiles: dict[str, dict[str, Any]] = {}
-    for url, response in fetched:
-        html = response.raw.decode("utf-8", errors="replace")
-        for item in html_items(html, url):
-            result.activities.append({**item, "page_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at})
-        for job in job_postings(html, url):
-            result.jobs.append({**job, "page_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at})
-        page_soup = BeautifulSoup(html, "lxml")
-        links = _social_links(url, page_soup)
-        try:
-            import extruct
-
-            same_as = structured_social_links(extruct.extract(html, base_url=url, syntaxes=["json-ld"]))
-        except Exception:
-            same_as = []
-        for link in links + same_as:
-            entry = profiles.setdefault(link["url"], {**link, "found_on": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at, "via_jsonld_sameas": False})
-            if link in same_as:
-                entry["via_jsonld_sameas"] = True
-    for link in profiles.values():
-        gate = assess_social_identity(profile, link)
-        record = {**link, "identity_score": gate["identity_score"], "identity_reason": gate["reason"], "relationship": f"{result.identity_class} website -> officially linked profile"}
-        (result.profiles if gate["publishable"] or link["via_jsonld_sameas"] else result.ambiguous_profiles).append(record)
-    seen = set()
-    unique = []
-    for item in result.activities:
-        key = (item.get("url"), item.get("date"), item.get("title"))
-        if item.get("date") and key not in seen:
-            seen.add(key)
-            unique.append(item)
-    result.activities = unique
+            if url in news and news_page is None:
+                news_page = CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at)
+    captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
+    facts = extract_site_facts(profile, captured, feed_pages)
+    if not facts.activities and news_page is not None:
+        # The news listing states no dates: the dates are on the article pages it links (same verified site).
+        # Fetch at most MAX_ARTICLE_FETCHES of them through the same budget, robots and Crawl-delay controls.
+        for url in article_links(news_page, MAX_ARTICLE_FETCHES):
+            state, response = session.get(url, budget)
+            if state == "ok":
+                fetched.append((url, response))
+                result.articles_fetched += 1
+        if result.articles_fetched:
+            captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
+            facts = extract_site_facts(profile, captured, feed_pages)
+    apply_site_facts(result, facts)
     result.pages = [_page_record(url, response) for url, response in fetched]
+
+
+def apply_site_facts(result: SiteResult, facts: Any) -> None:
+    """Store the validated first-party facts on the site result (the profile record claims are built from)."""
+    relationship = f"{result.identity_class} website -> officially linked profile"
+    result.profiles = [{**item, "relationship": relationship} for item in facts.profiles]
+    result.ambiguous_profiles = [{**item, "relationship": relationship} for item in facts.ambiguous_profiles]
+    result.activities = facts.activities
+    result.jobs = facts.jobs
+    result.careers_checked = facts.careers_checked
+    result.extraction_rejections = facts.rejections
+    result.rejected_examples = facts.rejected_examples

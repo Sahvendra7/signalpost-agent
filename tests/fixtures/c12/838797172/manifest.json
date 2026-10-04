@@ -1,0 +1,217 @@
+{
+ "organisation_number": "838797172",
+ "name": "GRANNE FORSIKRING",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.granne.no/",
+  "retrieved_at": "2026-10-04T22:50:14.696460Z",
+  "value": {
+   "requested_url": "https://www.granne.no/",
+   "final_url": "https://www.granne.no/",
+   "registered_domain": "granne.no",
+   "title": "Granne - Marin Forsikring",
+   "description": "Granne er det nære forsikringsselskapet.",
+   "main_text_excerpt": "Granne forsikring tilbyr skreddersydde sjøforsikringsløsninger.\nVi kombinerer solid forsikringsfaglig kompetanse med dyp operativ forståelse.\nVi jobber tett med kundene våre i den daglige driften og vet hvor avgjørende sikkerhet er – og hvor viktig det er å få fartøy raskt og trygt tilbake i operativ drift når noe skjer.\nGjennom skadeforebygging, beredskap, teknisk støtte og aktiv claims-ledelse tar vi ansvar før, under og etter en hendelse.\nNyttig informasjon\n- Allminnelige kontraktsbetingelser for reparasjonsarbeid på skip og offshorefartøyer ved norske verksteder.av 2. desember 1985 (Revidert 1997) \n Utarbeidet av Norges Rederiforbund og Skips- og Offshoreverftenes Landsforening (nå TBL-Skip).Verkstedklausul 2020, Cefor Form 282 Under henvisning til § 3-28 i Nordisk Sjøforsikringsplan av 2013 (Planen) gis følgende pålegg ved reparasjon av skipet: 1. Benytt siste versjon av standardkontrakten utarbeidet av Rederiforbundet og Teknologibedriftenes Landsforening av 2.12.1985 (revidert 1997). (Se link under). 2. Sørg for at beløpet i standardkontraktens § 10, som regulerer ansvarsgrensen ved skadeforvoldelse settes til minimum NOK 25 millioner og at beløpet i § 11 som regulerer ansvar for mangler settes til minimum reparasjonsarbeidets kostnad. 3. Dersom skipets takserte forsikringsverdi (Planens § 2-3) er mindre enn NOK 25 millioner, skal verkstedets ansvar for skadeforvoldelse etter standardkontraktens § 10 ikke settes lavere enn den takserte forsikringsverdien (inklusive Hull- og/ eller Freight Interest, hvis dette ble tatt ut under samme polise). Benyttes ikke ovenstående vilkår, svarer assurandøren kun for tap og ansvar som om kontrakten som nevnt i pkt. 1 var benyttet. Ved anvendelse av lavere ansvarsgrense enn nevnt i pkt. 2 og 3 nedsettes assurandørens ansvar med et beløp tilsvarende differansen mellom ansvarsgrensene som nevnt i pkt. 2 og 3 og de ansvarsgrensene som er avtalt i den reparasjonskontrakten partene faktisk har inngått, jfr. Planens § 4-15 (b). Assurandøren kan, etter eget skjønn, bekrefte skriftlig at sikrede kan avvike fra ansvarsbeløpene under nr. 2 og 3. mot betaling av en tilleggspremie.\n- Særskilte vilkår - Russlands territorialgrenseForsikringene gjelder ikke dersom fartøyet befinner seg innenfor Russlands territorialgrense på 12 nautiske mil og etter de linjer som er trukket opp for angivelsen av dette territorialfarvannet. Det medfører at alle forsikringer umiddelbart vil opphøre å gjelde for fartøyet, redskapen, last og mannskap knyttet til fartøyet . I Russland sine økonomiske soner vil fiske kunne representere en fareøkning og vilkårene for reassuranse kan falle bort på kort varsel før eller etter avtalens inngåelse eller fornyelse. Dette vil kunne medføre at forsikringene på fartøyet mv. opphører med umiddelbar virkning når dere eventuelt får skriftlig varsel om slikt opphør\n- Opplagsklausul og opplagsmanual.Pålegg om tiltak ved opplag av kyst- og fiskefartøy som ikke har full bemanning under opplag. I tillegg til Nordisk Sjøforsikringsplans (Planen) kapittel 17-5, pkt. c gjelder følgende sikkerhetsforskrift under fartøyets opplag, landligge og verkstedsopphold ved kai.: \n  - Rederiet skal ha en plan for opplaget som inkluderer bemanning for maritim drift på 1 times varsel eller kortere, dersom den offisielle værtjenesten for området varsler sterk vind og bølgehøyde som kan utsette fartøyet for uvanlig fare.\n  - Fartøyet skal alltid være godt fortøyd i forhold til forventet vær, strøm og havnens beskaffenhet.\n  - Fartøyet skal være utstyrt med alarm for brann og vannstand med automatisk oppringing til tilsynsperson.\n  - Fartøyet skal ha tilsyn av person som går om bord minimum en gang daglig.\n Hvis ikke sikkerhetsforskriften blir oppfylt, kan assurandørens ansvar settes ned eller falle helt bort, jfr. Planens § 3-25. Som et hjelpemiddel har vi laget en steg-for-steg opplagsmanual. Manualen kan fylles ut og sendes til oss i Granne dersom det er planlagt opplag.\n- Marine cyber tillegg1. Med mindre annet følger av paragraf 3 under skal denne forsikringen ikke dekke tap, skade, ansvar eller kostnader direkte eller indirekte forårsaket av, eller medvirket til, eller oppstått ved bruk eller drift av datamaskiner, datasystemer, datamaskinprogramvare, ondsinnet kode, datavirus, dataprosesser eller andre elektroniske systemer hvor bruken eller driften har som mål å påføre skade. 2. I henhold til vilkårene, begrensningene og eksklusjonene i polisen som denne klausulen er et tillegg til, skal erstatningen som ellers er tilgjengelig herunder ikke begrenses av bruk eller drift av datamaskiner, datasystemer, datamaskinprogramvare, dataprosesser eller andre elektroniske systemer om denne bruken eller driften ikke har som mål å forårsake skade. 3. Når denne klausulen er et tillegg til poliser som dekker krigsrisiko, borgerkrig, revolusjon, opprør eller borgerstrid som oppstår derfra, eller en fiendtlig handling av eller mot en krigersk makt, eller terrorisme eller en person som handler fra e",
+   "identity_text_excerpt": "",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/granneforsikring"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/granneforsikring"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "037f8b673e571fc5ce922c22eff081ac62c86b7e9f965e996f72d1b68dcf10bd",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.granne.no/",
+     "title": "Granne - Marin Forsikring",
+     "main_text_excerpt": "Granne forsikring tilbyr skreddersydde sjøforsikringsløsninger.\nVi kombinerer solid forsikringsfaglig kompetanse med dyp operativ forståelse.\nVi jobber tett med kundene våre i den daglige driften og vet hvor avgjørende sikkerhet er – og hvor viktig det er å få fartøy raskt og trygt tilbake i operativ drift når noe skjer.\nGjennom skadeforebygging, beredskap, teknisk støtte og aktiv claims-ledelse tar vi ansvar før, under og etter en hendelse.\nNyttig informasjon\n- Allminnelige kontraktsbetingelser for reparasjonsarbeid på skip og offshorefartøyer ved norske verksteder.av 2. desember 1985 (Revidert 1997) \n Utarbeidet av Norges Rederiforbund og Skips- og Offshoreverftenes Landsforening (nå TBL-Skip).Verkstedklausul 2020, Cefor Form 282 Under henvisning til § 3-28 i Nordisk Sjøforsikringsplan av 2013 (Planen) gis følgende pålegg ved reparasjon av skipet: 1. Benytt siste versjon av standardkontrakten utarbeidet av Rederiforbundet og Teknologibedriftenes Landsforening av 2.12.1985 (revidert 1997). (Se link under). 2. Sørg for at beløpet i standardkontraktens § 10, som regulerer ansvarsgrensen ved skadeforvoldelse settes til minimum NOK 25 millioner og at beløpet i § 11 som regulerer ansvar for mangler settes til minimum reparasjonsarbeidets kostnad. 3. Dersom skipets takserte forsikringsverdi (Planens § 2-3) er mindre enn NOK 25 millioner, skal verkstedets ansvar for skadeforvoldelse etter standardkontraktens § 10 ikke settes lavere enn den takserte forsikringsverdien (inklusive Hull- og/ eller Freight Interest, hvis dette ble tatt ut under samme polise). Benyttes ikke ovenstående vilkår, svarer assurandøren kun for tap og ansvar som om kontrakten som nevnt i pkt. 1 var benyttet. Ved anvendelse av lavere ansvarsgrense enn nevnt i pkt. 2 og 3 nedsettes assurandørens ansvar med et beløp tilsvarende differansen mellom ansvarsgrensene som nevnt i pkt. 2 og 3 og de ansvarsgrensene som er avtalt i den reparasjonskontrakten partene faktisk har inngått, jfr. Planens § 4-15 (b). Assurandøren kan, etter eget skjønn, bekrefte skriftlig at sikrede kan avvike fra ansvarsbeløpene under nr. 2 og 3. mot betaling av en tilleggspremie.\n- Særskilte vilkår - Russlands territorialgrenseForsikringene gjelder ikke dersom fartøyet befinner seg innenfor Russlands territorialgrense på 12 nautiske mil og etter de linjer som er trukket opp for angivelsen av dette territorialfarvannet. Det medfører at alle forsikringer umiddelbart vil opphøre å gjelde for fartøyet, redskapen, last og mannskap knyttet til fartøyet . I Russland sine økonomiske soner vil fiske kunne representere en fareøkning og vilkårene for reassuranse kan falle bort på kort varsel før eller etter avtalens inngåelse eller fornyelse. Dette vil kunne medføre at forsikringene på fartøyet mv. opphører med umiddelbar virkning når dere eventuelt får skriftlig varsel om slikt opphør\n- Opplagsklausul og opplagsmanual.Pålegg om tiltak ved opplag av kyst- og fiskefartøy som ikke har full bemanning under opplag. I tillegg til Nordisk Sjøforsikringsplans (Planen) kapittel 17-5, pkt. c gjelder følgende sikkerhetsforskrift under fartøyets opplag, landligge og verkstedsopphold ved kai.: \n  - Rederiet skal ha en plan for opplaget som inkluderer bemanning for maritim drift på 1 times varsel eller kortere, dersom den offisielle værtjenesten for området varsler sterk vind og bølgehøyde som kan utsette fartøyet for uvanlig fare.\n  - Fartøyet skal alltid være godt fortøyd i forhold til forventet vær, strøm og havnens beskaffenhet.\n  - Fartøyet skal være utstyrt med alarm for brann og vannstand med automatisk oppringing til tilsynsperson.\n  - Fartøyet skal ha tilsyn av person som går om bord minimum en gang daglig.\n Hvis ikke sikkerhetsforskriften blir oppfylt, kan assurandørens ansvar settes ned eller falle helt bort, jfr. Planens § 3-25. Som et hjelpemiddel har vi laget en steg-for-steg opplagsmanual. Manualen kan fylles ut og sendes til oss i Granne dersom det er planlagt opplag.\n- Marine cyber tillegg1. Med mindre annet følger av paragraf 3 under skal denne forsikringen ikke dekke tap, skade, ansvar eller kostnader direkte eller indirekte forårsaket av, eller medvirket til, eller oppstått ved bruk eller drift av datamaskiner, datasystemer, datamaskinprogramvare, ondsinnet kode, datavirus, dataprosesser eller andre elektroniske systemer hvor bruken eller driften har som mål å påføre skade. 2. I henhold til vilkårene, begrensningene og eksklusjonene i polisen som denne klausulen er et tillegg til, skal erstatningen som ellers er tilgjengelig herunder ikke begrenses av bruk eller drift av datamaskiner, datasystemer, datamaskinprogramvare, dataprosesser eller andre elektroniske systemer om denne bruken eller driften ikke har som mål å forårsake skade. 3. Når denne klausulen er et tillegg til poliser som dekker krigsrisiko, borgerkrig, revolusjon, opprør eller borgerstrid som oppstår derfra, eller en fiendtlig handling av eller mot en krigersk makt, eller terrorisme eller en person som handler fra e",
+     "content_sha256": "037f8b673e571fc5ce922c22eff081ac62c86b7e9f965e996f72d1b68dcf10bd"
+    },
+    {
+     "url": "https://www.granne.no/kontakt",
+     "title": "Kontakt",
+     "main_text_excerpt": "Kontakt oss\nSpesialister på maritime forsikringer. Nær, involvert og real.\nDu kan kontakte oss på flere ulike måter.\nTelefon: 70 10 12 50\nEpost: post@granne.no\nSend inn kontaktskjema, så tar vi kontakt med deg:\nBesøk ett av våre kontorer:\nÅlesund\nKongens gate 23, 6002 Ålesund\nFosnavåg\nHolmsildgata 5, 6090 Fosnavåg",
+     "identity_text_excerpt": "",
+     "content_sha256": "fd4aa9798ae41506b0d7a5629855c312351102ea2d639cef44903e57c3a45a85"
+    },
+    {
+     "url": "https://www.granne.no/aktuelt",
+     "title": "Aktuelt",
+     "main_text_excerpt": "Få gode råd fra en forsikringsrådgiver som kjenner deg og ditt nærmiljø.",
+     "identity_text_excerpt": "",
+     "content_sha256": "eb3bf08734a6599ba5bf03aab9d65eee116755e7924d2ffd1d2c1303fe0dad5a"
+    },
+    {
+     "url": "https://www.granne.no/innsikt-og-nyheter",
+     "title": "Innsikt og nyheter",
+     "main_text_excerpt": "Her finner du siste nytt fra Granne, sammen med råd og innsikt som kan hjelpe deg å ta tryggere valg i hverdagen.",
+     "identity_text_excerpt": "",
+     "content_sha256": "2cc311023b60d3e7d61b9fbc9dcf688d02063cdfa0d01180179141ff67c18f27"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "granne",
+     "forsikring"
+    ],
+    "matched_tokens": [
+     "forsikring",
+     "granne"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/granneforsikring"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/granneforsikring"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/granneforsikring",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "granne",
+      "forsikring"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/granneforsikring",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "granne",
+      "forsikring"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "037f8b673e571fc5ce922c22eff081ac62c86b7e9f965e996f72d1b68dcf10bd",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/838797172": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1e0ee25edb389e7c.json.gz",
+   "content_sha256": "1e0ee25edb389e7ca340c289756f8bcbff290ae3ee8b9a157a0ce1603798c809",
+   "retrieved_at": "2026-10-04T22:50:06.563166Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/838797172": {
+   "kind": "brreg",
+   "status": 500,
+   "file": null,
+   "content_sha256": null,
+   "retrieved_at": "2026-10-04T22:50:09.796486Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/838797172/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "a97990ba933de8dc.json.gz",
+   "content_sha256": "a97990ba933de8dc72735ba7d9fd0f282606d806f60830c7ed4668fab2e62510",
+   "retrieved_at": "2026-10-04T22:50:12.179329Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/838797172": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-10-04T22:50:10.524978Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=838797172&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "dcaaee07a9b4fcfd.json.gz",
+   "content_sha256": "dcaaee07a9b4fcfdf598c8d371fbe767267726fcc84e5c573356b615b5139f8f",
+   "retrieved_at": "2026-10-04T22:50:11.477574Z"
+  },
+  "https://www.granne.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "037f8b673e571fc5.html.gz",
+   "content_sha256": "037f8b673e571fc5ce922c22eff081ac62c86b7e9f965e996f72d1b68dcf10bd",
+   "retrieved_at": "2026-10-04T22:50:15.436298Z"
+  },
+  "https://www.granne.no/kontakt": {
+   "kind": "site",
+   "status": 200,
+   "file": "fd4aa9798ae41506.html.gz",
+   "content_sha256": "fd4aa9798ae41506b0d7a5629855c312351102ea2d639cef44903e57c3a45a85",
+   "retrieved_at": "2026-10-04T22:50:15.671140Z"
+  },
+  "https://www.granne.no/privacy": {
+   "kind": "site",
+   "status": 200,
+   "file": "ff00c5a46f922e37.html.gz",
+   "content_sha256": "ff00c5a46f922e37b5954090c752ea70dd679e130123c748c003d87bc771adf2",
+   "retrieved_at": "2026-10-04T22:50:15.863880Z"
+  },
+  "https://www.granne.no/aktuelt": {
+   "kind": "site",
+   "status": 200,
+   "file": "eb3bf08734a6599b.html.gz",
+   "content_sha256": "eb3bf08734a6599ba5bf03aab9d65eee116755e7924d2ffd1d2c1303fe0dad5a",
+   "retrieved_at": "2026-10-04T22:50:16.084714Z"
+  },
+  "https://www.granne.no/ledige-stillinger": {
+   "kind": "site",
+   "status": 200,
+   "file": "566e6b4175673aeb.html.gz",
+   "content_sha256": "566e6b4175673aebec10818f74cd6c92a26c7d73894bf5162edf3e396a6b11fc",
+   "retrieved_at": "2026-10-04T22:50:16.359143Z"
+  },
+  "https://www.granne.no/artikler/teknisk-forum:-setter-fokus-pa-korrosjon-i-fiskeflaten": {
+   "kind": "site",
+   "status": 200,
+   "file": "f52cb7a2e3ffad2d.html.gz",
+   "content_sha256": "f52cb7a2e3ffad2d144f3c03749f3fc82b1fd33824b0b48783eab92bb11a3d96",
+   "retrieved_at": "2026-10-04T22:50:17.280615Z"
+  },
+  "https://www.granne.no/artikler/brannovelse-om-bord-i-sunderoy": {
+   "kind": "site",
+   "status": 200,
+   "file": "e32035f73cdaef3e.html.gz",
+   "content_sha256": "e32035f73cdaef3ebbbf4bd0f9c58a063e04af889cb76724ac8a02a3937f45f1",
+   "retrieved_at": "2026-10-04T22:50:17.619211Z"
+  },
+  "https://www.granne.no/artikler/fiske-i-russisk-sone:-hva-betyr-det-for-forsikringen": {
+   "kind": "site",
+   "status": 200,
+   "file": "1bf5b379ce062f78.html.gz",
+   "content_sha256": "1bf5b379ce062f78d2d2c4a5318b896012405ff514a9dcbb112cbf743e81fa36",
+   "retrieved_at": "2026-10-04T22:50:17.970059Z"
+  }
+ }
+}
