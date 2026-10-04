@@ -215,6 +215,14 @@ class NewsRules(unittest.TestCase):
         self.assertEqual(len(facts.activities), 1)
         self.assertEqual(facts.activities[0]["method"], "jsonld_datePublished")
 
+    def test_homepage_page_level_dates_dropped_but_homepage_article_cards_kept(self):
+        # Regression found in the 1,200 measurement (985032726): <article><time> cards on the homepage without
+        # their own link are news items; the homepage's own article:published_time is not.
+        home = page("https://fjell-data.no/", """<html><head><meta property="article:published_time" content="2026-01-02T08:00:00Z"><title>Fjell Data AS</title></head>
+        <body><article><h3>Revejakta har startet</h3><time datetime="2026-07-24">24. juli 2026</time></article></body></html>""")
+        facts = extract_site_facts({"name": "Fjell Data AS"}, [home])
+        self.assertEqual([(item["title"], item["method"]) for item in facts.activities], [("Revejakta har startet", "article_time_datetime")])
+
     def test_article_links_from_a_dateless_listing(self):
         html = """<html><body><nav><a href="/aktuelt/">Aktuelt</a></nav><main>
         <a href="/artikler/brannovelse-om-bord"><h3>Brannøvelse om bord i Sunderøy</h3></a><a href="/artikler/brannovelse-om-bord">Les mer</a>

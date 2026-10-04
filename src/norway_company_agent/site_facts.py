@@ -678,7 +678,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         if index == 0:
             # A homepage's own published_time / WebPage date describes the page, not a news item.
             home = page.url.split("#")[0].rstrip("/")
-            items = [item for item in items if str(item.get("url") or "").split("#")[0].rstrip("/") != home]
+            items = [item for item in items if item.get("method") == "article_time_datetime" or str(item.get("url") or "").split("#")[0].rstrip("/") != home]
         candidates.extend((item, page) for item in items)
         if is_news_page(page.url) or index == 0:
             candidates.extend((item, page) for item in listing_items(page, require_news_link=not is_news_page(page.url)))
