@@ -82,7 +82,9 @@ class C12RegressionTests(unittest.TestCase):
 class ManagerDesignatedTests(unittest.TestCase):
     """A registry-designated website run by the entity's registered business manager (C12 case 813396092)."""
 
-    def test_813396092_bori_aktuelt_dated_news_on_the_designated_manager_site(self):
+    def test_813396092_bori_site_association_kept_manager_news_not_attributed(self):
+        """bori.no is associated with SAMEIE JESSHEIM PARK DRIFT (its registry record names it; BORI BBL is its
+        forretningsfører), but bori.no/aktuelt is BORI BBL's own news: none of it names the sameie."""
         with tempfile.TemporaryDirectory() as raw:
             root = Path(raw)
             envelope, _ = replay("813396092", root)
@@ -91,18 +93,59 @@ class ManagerDesignatedTests(unittest.TestCase):
             self.assertEqual(website["identity_class"], "MANAGER_DESIGNATED")
             self.assertEqual(website["operated_by"], {"organisation_number": "989987011", "name": "BORI BBL", "registry_role": "forretningsfører"})
             self.assertLess(website["confidence"], 0.95)
-            news = available(envelope, "news_item")
-            self.assertTrue(1 <= len(news) <= 5, "only the manager site's most recent dated items")
-            for claim in news:
-                self.assertTrue(claim["value"]["url"].startswith("https://www.bori.no/"))
-                self.assertIn("/aktuelt/", claim["value"]["url"])
-                cited = CapturedPage(claim["source_page"], cited_bytes(envelope, claim, root), "", "")
-                self.assertTrue(cited.contains(claim["value"]["title"]), "the title occurs in the cited captured page")
-                self.assertTrue(cited.contains(claim["value"]["date_text"]) or claim["value"]["date_text"] in cited.html, "the date is stated in the cited page")
-            self.assertEqual(len({(claim["value"]["url"], claim["value"]["publication_date"][:10]) for claim in news}), len(news), "one article, one claim")
             self.assertEqual(validate_envelope(envelope, snapshot_root=root), [])
-        states = {claim["field"]: claim["availability"] for claim in envelope["claims"] if claim["field"] in ("social_profile", "job_posting", "careers_page")}
-        self.assertEqual(states, {"social_profile": "not_applicable", "job_posting": "not_applicable"}, "the manager's profiles and vacancies are not the sameie's")
+        states = {claim["field"]: (claim["availability"], claim.get("reason") or "") for claim in envelope["claims"] if claim["field"] in ("social_profile", "news_item", "job_posting", "careers_page")}
+        self.assertEqual({field: state for field, (state, _) in states.items()}, {"social_profile": "not_applicable", "news_item": "not_applicable", "job_posting": "not_applicable"},
+                         "the manager's profiles, news and vacancies are not the sameie's")
+        self.assertIn("3 dated item(s) on the site, none naming it", states["news_item"][1])
+
+    def manager_result(self, items: list[dict], pages: list[CapturedPage]):
+        from norway_company_agent.site_research import SiteResult, apply_site_facts
+        from norway_company_agent.site_facts import SiteFacts
+        result = SiteResult(status="verified", site_url="https://www.forvalter.no/", identity_class="MANAGER_DESIGNATED",
+                            manager={"organisation_number": "989987011", "name": "FORVALTER BBL"})
+        facts = SiteFacts()
+        facts.activities = items
+        facts.jobs = [{"title": "Forvaltningskonsulent", "url": "https://www.forvalter.no/jobb/1", "page_url": "https://www.forvalter.no/jobb"}]
+        apply_site_facts(result, facts, self.entity(), pages)
+        return result
+
+    def test_manager_news_published_only_when_the_item_names_the_entity(self):
+        listing_url = "https://www.forvalter.no/aktuelt"
+        article_url = "https://www.forvalter.no/aktuelt/rehabilitering-testgarden"
+        listing = page(listing_url, "<html><body><h1>Aktuelt</h1><p>Vi forvalter blant annet Sameiet Testgården.</p></body></html>")
+        article = page(article_url, "<html><body><h1>Fasaden rehabiliteres</h1><p>Styret i Sameiet Testgården har vedtatt rehabilitering. Org.nr. 913 396 091.</p></body></html>")
+        other = page("https://www.forvalter.no/aktuelt/annet", "<html><body><h1>Testgården borettslag får ny lekeplass</h1></body></html>")
+        item = lambda title, url, where, **extra: {"title": title, "url": url, "date": "2026-09-30", "page_url": where.url, **extra}
+        result = self.manager_result([
+            item("Usbl etablerer Eida Eiendomsmegling", listing_url + "/eida", listing),
+            item("Bli medlem: vi spanderer kontingenten", listing_url + "/medlem", listing),
+            item("Testgården borettslag får ny lekeplass", other.url, other),
+            item("Fasaden rehabiliteres", article_url, article),
+            item("Nytt fra Sameiet Testgården", listing_url + "/nytt", listing),
+            item("Årsmøte", listing_url + "/arsmote", listing, summary="Innkalling for 913396091."),
+        ], [listing, article, other])
+        kept = {entry["title"]: entry["subject_basis"] for entry in result.activities}
+        self.assertEqual(kept, {
+            "Fasaden rehabiliteres": "organisation number 913396091 in the item's article page",
+            "Nytt fra Sameiet Testgården": "legal name SAMEIET TESTGÅRDEN in the item's title",
+            "Årsmøte": "organisation number 913396091 in the item's summary",
+        }, "the manager's own news, distinctive words alone and the listing page's text are not attribution")
+        self.assertEqual(result.extraction_rejections["activity:manager_news_not_about_entity"], 3)
+        self.assertEqual((result.jobs, result.careers_page), ([], None), "the manager's vacancies are never the entity's")
+
+    def test_records_without_subject_basis_are_not_published(self):
+        """A stored manager-site record from before the attribution rule (no subject_basis) publishes no news."""
+        from norway_company_agent.claims import ClaimSet, _site_research_claims
+        claims = ClaimSet()
+        record = {"status": "available", "value": {
+            "site_url": "https://www.forvalter.no/", "identity_class": "MANAGER_DESIGNATED", "identity_reasons": ["x"],
+            "manager": {"organisation_number": "989987011", "name": "FORVALTER BBL"}, "pages": [{"content_sha256": SHA, "retrieved_at": "2026-10-04T12:00:00Z"}],
+            "activities": [{"title": "Usbl etablerer Eida Eiendomsmegling", "date": "2026-09-30", "page_url": "https://www.forvalter.no/aktuelt", "content_sha256": SHA, "retrieved_at": "2026-10-04T12:00:00Z"}],
+        }}
+        _site_research_claims(claims, record, v1_site_published=False)
+        news = [claim for claim in claims.claims if claim["field"] == "news_item"]
+        self.assertEqual([claim["availability"] for claim in news], ["not_applicable"])
 
     PAGE = '<html><head><title>Forvalter BBL</title></head><body><p>Kontakt: post@forvalter.no</p>{extra}</body></html>'
 

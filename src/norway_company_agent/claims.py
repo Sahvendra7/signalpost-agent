@@ -355,6 +355,7 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         held = f"Website is operated by the registered business manager {manager['name']} ({manager['organisation_number']}); its {{}} are not attributed to this entity"
         claims.absent("public_activity", "social_profile", "not_applicable", held.format("social profiles"))
         claims.absent("hiring", "job_posting", "not_applicable", held.format("vacancies"))
+        held_news = int((value.get("extraction_rejections") or {}).get("activity:manager_news_not_about_entity") or 0)
     # Every fact below inherits the identity of the verified site above; its evidence is the captured page it
     # was read from, and its value occurs in that page (site_facts.validate_*).
     profiles = [item for item in value.get("profiles") or [] if item.get("canonical_url")]  # pre-Revision-1 records carry a rewritten URL: not published
@@ -374,12 +375,21 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     if value.get("careers_page"):
         claims.add("websites", "careers_page", value["careers_page"], home, f"careers link on {value.get('site_url')}", confidence=confidence, method="verified_site_link")
     activities = [item for item in value.get("activities") or [] if item.get("title") and item.get("date")]
+    if manager:
+        # The manager's news is not news about the entity: only items that name it (records from before this rule
+        # carry no subject_basis and are not published).
+        activities = [item for item in activities if item.get("subject_basis")]
     for item in activities:
         page = _page_record(item.get("page_url"), item.get("content_sha256"), item.get("retrieved_at"), carried)
         body = {"title": item.get("title"), "url": item.get("url"), "publication_date": item.get("date"), "date_text": item.get("date_text"), "date_kind": item.get("date_kind"), "summary": item.get("summary")}
         span = f"{item.get('method')}: {item.get('date_text') or item.get('date')} {str(item.get('title') or '')[:120]}"
-        claims.add("public_activity", "news_item", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=str(item.get("method")), extra={"event_date": item.get("date"), "source_page": item.get("page_url")})
-    if not activities:
+        extra = {"event_date": item.get("date"), "source_page": item.get("page_url")}
+        if item.get("subject_basis"):
+            extra["subject_basis"] = item["subject_basis"]
+        claims.add("public_activity", "news_item", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=str(item.get("method")), extra=extra)
+    if not activities and manager:
+        claims.absent("public_activity", "news_item", "not_applicable", held.format("news items") + f" unless an item names it ({held_news} dated item(s) on the site, none naming it)")
+    elif not activities:
         claims.absent("public_activity", "news_item", "not_available", "Verified website checked; no news or activity item with a date stated on the page found")
     jobs = value.get("jobs") or []
     for job in jobs:

@@ -33,7 +33,7 @@ from typing import Any
 
 from bs4 import BeautifulSoup
 
-from .evidence_text import content_words, date_matches, fold, span_in_text, url_in_source, words
+from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
 
@@ -634,6 +634,31 @@ def validate_activity(item: dict[str, Any], page: CapturedPage) -> str | None:
             return "date_not_stated_in_page"
     elif not (str(item["date_text"]) in page.html or str(item["date_text"]) in page.unescaped or page.contains(item["date_text"])):
         return "date_not_stated_in_page"
+    return None
+
+
+def item_names_entity(profile: dict[str, Any], item: dict[str, Any], pages: dict[str, CapturedPage]) -> str | None:
+    """Where a news item on a site the entity does not own (a business manager's) explicitly names the entity as
+    its subject, else None. Being on the designated website is not attribution: the manager's own news, campaigns
+    and announcements are about the manager. Only two official identifiers count, and only in the item itself:
+      * the entity's organisation number, or
+      * its full legal name as a phrase (not its distinctive words alone: a manager runs several entities of one
+        housing complex, e.g. "X BORETTSLAG" and "SAMEIET X DRIFT").
+    The item itself is its title and summary, plus its own article page when that page is the cited one; a
+    listing page's text is never used, since it carries every other item."""
+    org = re.sub(r"\D", "", str(profile.get("organisation_number") or ""))
+    name = fold(profile.get("name"))
+    texts = [("title", item.get("title")), ("summary", item.get("summary"))]
+    page = pages.get(str(item.get("page_url") or ""))
+    if page is not None and page.kind == "html" and str(item.get("url") or "").split("#")[0].rstrip("/") == page.url.split("#")[0].rstrip("/"):
+        texts.append(("article page", page.text))
+    for where, text in texts:
+        if not text:
+            continue
+        if len(org) == 9 and org in digit_runs(text):
+            return f"organisation number {org} in the item's {where}"
+        if name and re.search(r"(?<![^\W_])" + re.escape(name) + r"(?![^\W_])", fold(text)):
+            return f"legal name {profile.get('name')} in the item's {where}"
     return None
 
 

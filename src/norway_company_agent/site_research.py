@@ -29,7 +29,7 @@ from bs4 import BeautifulSoup
 
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens
-from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, job_postings, parse_date  # noqa: F401  (re-exported)
+from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site, manager_designated
 from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
 
@@ -44,7 +44,7 @@ CAREER_HINTS = ("ledige-stillinger", "ledige stillinger", "karriere", "career", 
 HTML_ACCEPT = "text/html,application/xhtml+xml"
 MAX_PAGE_BYTES = 3_000_000
 MAX_ARTICLE_FETCHES = 3  # article pages followed from a news listing that states no dates
-MANAGER_SITE_MAX_NEWS = 5  # a business manager's site serves many entities: only its most recent dated items
+MANAGER_SITE_MAX_NEWS = 5  # a business manager's site serves many entities: at most this many items that name the entity
 
 
 # ---------- fetching with robots, caches and budgets ----------
@@ -437,11 +437,11 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
         if result.articles_fetched:
             captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
             facts = extract_site_facts(profile, captured, feed_pages)
-    apply_site_facts(result, facts)
+    apply_site_facts(result, facts, profile, captured + feed_pages)
     result.pages = [_page_record(url, response) for url, response in fetched]
 
 
-def apply_site_facts(result: SiteResult, facts: Any) -> None:
+def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | None = None, pages: list[CapturedPage] | None = None) -> None:
     """Store the validated first-party facts on the site result (the profile record claims are built from)."""
     relationship = f"{result.identity_class} website -> officially linked profile"
     result.profiles = [{**item, "relationship": relationship} for item in facts.profiles]
@@ -452,9 +452,10 @@ def apply_site_facts(result: SiteResult, facts: Any) -> None:
     result.extraction_rejections = dict(facts.rejections)
     result.rejected_examples = facts.rejected_examples
     if result.identity_class == "MANAGER_DESIGNATED":
-        # The site belongs to the business manager and serves many entities: only its most recent dated news is
-        # published as the designated website's activity; the manager's own profiles, vacancies and careers page
-        # are never attributed to the managed entity.
+        # The site is associated with the entity (its registry record names it), but it belongs to the business
+        # manager and serves many entities. The association is the website claim; the manager's own content is not
+        # the entity's: its profiles, vacancies and careers page never, and its news only when an item explicitly
+        # names the managed entity (site_facts.item_names_entity).
         held = "profile of the business manager's site; not attributed to the managed entity"
         result.ambiguous_profiles += [{**item, "identity_reason": held} for item in result.profiles]
         counts = result.extraction_rejections
@@ -463,4 +464,12 @@ def apply_site_facts(result: SiteResult, facts: Any) -> None:
         if result.jobs:
             counts["job:manager_site_vacancy"] = counts.get("job:manager_site_vacancy", 0) + len(result.jobs)
         result.profiles, result.jobs, result.careers_page, result.careers_checked = [], [], None, []
-        result.activities = sorted(result.activities, key=lambda item: str(item.get("date") or ""), reverse=True)[:MANAGER_SITE_MAX_NEWS]
+        by_url = {page.url: page for page in pages or []}
+        about = []
+        for item in result.activities:
+            basis = item_names_entity(profile or {}, item, by_url)
+            if basis:
+                about.append({**item, "subject_basis": basis})
+            else:
+                counts["activity:manager_news_not_about_entity"] = counts.get("activity:manager_news_not_about_entity", 0) + 1
+        result.activities = sorted(about, key=lambda item: str(item.get("date") or ""), reverse=True)[:MANAGER_SITE_MAX_NEWS]
