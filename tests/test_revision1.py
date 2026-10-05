@@ -124,14 +124,17 @@ class ManagerDesignatedTests(unittest.TestCase):
             item("Fasaden rehabiliteres", article_url, article),
             item("Nytt fra Sameiet Testgården", listing_url + "/nytt", listing),
             item("Årsmøte", listing_url + "/arsmote", listing, summary="Innkalling for 913396091."),
+            item("Sameiet Testgården II får nye vinduer", listing_url + "/ii", listing),
+            item("Dugnad i Sameiet Testgården Drift", listing_url + "/drift", listing),
+            item("Sameiet Testgården 2 velger nytt styre", listing_url + "/2", listing),
         ], [listing, article, other])
         kept = {entry["title"]: entry["subject_basis"] for entry in result.activities}
         self.assertEqual(kept, {
             "Fasaden rehabiliteres": "organisation number 913396091 in the item's article page",
             "Nytt fra Sameiet Testgården": "legal name SAMEIET TESTGÅRDEN in the item's title",
             "Årsmøte": "organisation number 913396091 in the item's summary",
-        }, "the manager's own news, distinctive words alone and the listing page's text are not attribution")
-        self.assertEqual(result.extraction_rejections["activity:manager_news_not_about_entity"], 3)
+        }, "the manager's own news, distinctive words alone, a longer name of another entity and the listing page's text are not attribution")
+        self.assertEqual(result.extraction_rejections["activity:manager_news_not_about_entity"], 6)
         self.assertEqual((result.jobs, result.careers_page), ([], None), "the manager's vacancies are never the entity's")
 
     def test_records_without_subject_basis_are_not_published(self):

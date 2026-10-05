@@ -657,9 +657,21 @@ def item_names_entity(profile: dict[str, Any], item: dict[str, Any], pages: dict
             continue
         if len(org) == 9 and org in digit_runs(text):
             return f"organisation number {org} in the item's {where}"
-        if name and re.search(r"(?<![^\W_])" + re.escape(name) + r"(?![^\W_])", fold(text)):
+        if name and any(not _extends_name(fold(text)[match.end():]) for match in re.finditer(r"(?<![^\W_])" + re.escape(name) + r"(?![^\W_])", fold(text))):
             return f"legal name {profile.get('name')} in the item's {where}"
     return None
+
+
+# A word after a legal name that makes it another entity's name: "SAMEIET X" is not "SAMEIET X II", "SAMEIET X 2",
+# "SAMEIET X DRIFT" or "SAMEIET X BORETTSLAG" (one complex, several registered entities, one manager).
+NAME_CONTINUATIONS = {"as", "asa", "sa", "da", "ans", "bbl", "brl", "borettslag", "borettslaget", "sameie", "sameiet", "boligsameie",
+                      "boligsameiet", "eierseksjonssameie", "eierseksjonssameiet", "drift", "avd", "avdeling", "felles", "garasjelag",
+                      "velforening", "huseierforening", "i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x"}
+
+
+def _extends_name(rest: str) -> bool:
+    following = re.match(r"\s*([^\W_]+)", rest)
+    return bool(following) and (following.group(1).isdigit() or following.group(1) in NAME_CONTINUATIONS)
 
 
 def validate_job(job: dict[str, Any], page: CapturedPage) -> str | None:
