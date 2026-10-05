@@ -43,7 +43,9 @@ ORGANISATION_TYPES = {"Organization", "Corporation", "LocalBusiness", "Store", "
 MAX_ITEMS_PER_PAGE = 30
 MAX_JOBS_PER_PAGE = 50
 
-NEWS_PATH = re.compile(r"(?:^|[/_-])(?:nyheter|nyhet|aktuelt|news|blogg|blog|artikler|artikkel|presse|press|pressemeldinger|pressemelding)(?:$|[/_.-])")
+NEWS_WORDS = ("nyheter", "nyhet", "aktuelt", "news", "blogg", "blog", "artikler", "artikkel", "article", "articles", "presse", "press",
+              "pressemeldinger", "pressemelding", "post", "posts", "innlegg", "magasin", "nyhetsarkiv")
+NEWS_PATH = re.compile(r"(?:^|[/_-])(?:" + "|".join(NEWS_WORDS) + r")(?:$|[/_.-])")
 CAREER_PATH = re.compile(r"(?:^|/)(?:[\w-]*-)?(?:ledige-stillinger|stillinger|stilling|karriere|career|careers|jobs|jobb|jobbe|vacancies|vacancy|open-positions|rekruttering|join-us|work-with-us)(?:$|[/_.-])")
 CAREER_HEADINGS = ("ledige stillinger", "stillinger", "karriere", "careers", "career", "jobs", "vacancies", "jobb hos", "jobbe hos", "open positions")
 STRONG_JOB_PATH = re.compile(r"(?:^|[/_-])(?:stilling|stillinger|stillingsannonse|jobs?|vacanc(?:y|ies)|positions?|utlysning)(?:[/_-][^/]{3,})")
@@ -138,6 +140,14 @@ def is_shared_site_section(url: str) -> bool:
 
 def is_news_page(url: str) -> bool:
     return bool(NEWS_PATH.search(urllib.parse.urlsplit(url).path.casefold()))
+
+
+def is_article_path(url: str) -> bool:
+    """A single article under a news section (/artikkel/<slug>, /aktuelt/<slug>), as opposed to the section's listing
+    page, where the news word is the last path segment (/om-oss/nyheter, /aktuelt)."""
+    segments = [part.casefold() for part in urllib.parse.urlsplit(url).path.split("/") if part]
+    news_at = [index for index, part in enumerate(segments) if NEWS_PATH.search("/" + part)]
+    return bool(news_at) and news_at[-1] < len(segments) - 1
 
 
 def is_careers_page(page: CapturedPage) -> bool:
@@ -611,6 +621,8 @@ def validate_activity(item: dict[str, Any], page: CapturedPage) -> str | None:
     title = _clean(item.get("title") or "")
     if not title:
         return "no_title"
+    if _generic(title):
+        return "generic_title"
     if not page.contains(title):
         return "title_not_in_page"
     if not item.get("date") or not item.get("date_text"):
@@ -701,8 +713,15 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             # A homepage's own published_time / WebPage date describes the page, not a news item.
             home = page.url.split("#")[0].rstrip("/")
             items = [item for item in items if item.get("method") == "article_time_datetime" or str(item.get("url") or "").split("#")[0].rstrip("/") != home]
+        if index > 0:
+            # Page-level dates (JSON-LD, article:published_time) count only on news pages: CMSs stamp every page
+            # (contact, careers, "about") with them, which does not make those pages news.
+            for item in items:
+                if item.get("method") in ("jsonld_datePublished", "meta_article_published_time") and not (is_news_page(page.url) or is_news_page(str(item.get("url") or ""))):
+                    out.reject("activity", "page_date_on_non_news_page", item, page)
+            items = [item for item in items if item.get("method") not in ("jsonld_datePublished", "meta_article_published_time") or is_news_page(page.url) or is_news_page(str(item.get("url") or ""))]
         candidates.extend((item, page) for item in items)
-        own_article = any(item.get("method") in ("jsonld_datePublished", "meta_article_published_time") and str(item.get("url") or "").split("#")[0].rstrip("/") == page.url.split("#")[0].rstrip("/") for item in items)
+        own_article = is_article_path(page.url) and any(item.get("method") in ("jsonld_datePublished", "meta_article_published_time") for item in items)
         if (is_news_page(page.url) or index == 0) and not own_article:
             # Listing pages only: an article page's own dates (lists of milestones, related links) are not items.
             candidates.extend((item, page) for item in listing_items(page, require_news_link=not is_news_page(page.url)))

@@ -207,6 +207,16 @@ class AuditRegressions(unittest.TestCase):
         facts = extract_site_facts({"name": "ALTINGET AS"}, [page("https://altinget.no/", "<html><body>Altinget</body></html>"), article])
         self.assertEqual([item["title"] for item in facts.activities], ["30 milepæler for Altinget i Norge"])
 
+    def test_cms_page_dates_do_not_make_pages_news_and_listings_still_parse(self):
+        # 816945852 (usbl.no): Yoast types every page as a dated Article. The /om-oss/nyheter listing must still be
+        # read for its items; its own "Nyheter" headline and a dated careers page are not news items.
+        stamp = '<script type="application/ld+json">{{"@type":"Article","headline":"{0}","datePublished":"2019-11-09T10:00:00+01:00"}}</script>'
+        listing = page("https://www.usbl.no/om-oss/nyheter", "<html><head>" + stamp.format("Nyheter") + """</head><body><main><h1>Nyheter</h1>
+            <div><a href="/om-oss/nyheter/eida"><h3>Usbl etablerer Eida Eiendomsmegling</h3></a><span>10.08.2026</span></div></main></body></html>""")
+        careers = page("https://www.usbl.no/om-oss/jobb-hos-oss", "<html><head>" + stamp.format("Bli en del av laget!") + "</head><body><h1>Bli en del av laget!</h1></body></html>")
+        facts = extract_site_facts({"name": "BOLIGBYGGELAGET USBL"}, [page("https://www.usbl.no/", "<html><body>Usbl</body></html>"), listing, careers])
+        self.assertEqual([item["title"] for item in facts.activities], ["Usbl etablerer Eida Eiendomsmegling"])
+
     def test_author_and_staff_links_are_never_the_item(self):
         # 980429849 Edge Branding ("Yvonne Aasbø" -> /ansatte/...), 928934977 Altinget (/person/...).
         html = """<html><body><main><h1>Aktuelt</h1>
