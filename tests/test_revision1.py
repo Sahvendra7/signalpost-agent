@@ -177,6 +177,55 @@ class SocialRules(unittest.TestCase):
         self.assertEqual(self.facts(agency).profiles, [])
 
 
+class AuditRegressions(unittest.TestCase):
+    """Defects found by the manual audit of the same-day 1,200-company measurement; each must stay fixed."""
+
+    def test_section_of_a_shared_domain_does_not_inherit_the_owner_profiles(self):
+        # 971531983 NHF REGION INNLANDET: verified site https://www.handball.no/regioner/regioninnlandet/ links the
+        # federation's own profiles in its chrome; "handball" occurring in "norgeshandballforbund" is not identity.
+        region = page("https://www.handball.no/regioner/regioninnlandet/", """<html><body><footer>
+            <a href="https://www.facebook.com/norgeshandballforbund">Facebook</a><a href="https://www.instagram.com/norgeshandballforbund/">Instagram</a>
+            <a href="https://www.facebook.com/nhfregioninnlandet">Region Innlandet</a></footer></body></html>""")
+        facts = extract_site_facts({"name": "NHF REGION INNLANDET"}, [region])
+        self.assertEqual([item["url"] for item in facts.profiles], ["https://www.facebook.com/nhfregioninnlandet"], "only the legal-name handle")
+
+    def test_language_homepage_is_not_a_shared_section(self):
+        home = page("https://smarthotel.no/no", '<html><body><a href="https://www.facebook.com/smarthotelnorge">f</a></body></html>')
+        self.assertEqual([item["url"] for item in extract_site_facts({"name": "SMARTHOTEL FORUS AS"}, [home]).profiles], ["https://www.facebook.com/smarthotelnorge"])
+
+    def test_domain_name_must_begin_or_end_the_handle(self):
+        home = page("https://handball.no/", '<html><body><a href="https://www.facebook.com/norgeshandballforbund">f</a><a href="https://www.instagram.com/handballnorge/">i</a></body></html>')
+        # Legal name unrelated to either handle, so only the domain-name rule can apply.
+        self.assertEqual([item["url"] for item in extract_site_facts({"name": "BALLSPORT DRIFT AS"}, [home]).profiles], ["https://www.instagram.com/handballnorge/"])
+
+    def test_dated_list_inside_an_article_is_not_a_news_listing(self):
+        # 928934977 Altinget: an article listing 30 dated milestones produced one "news item" per milestone.
+        article = page("https://altinget.no/artikkel/30-milepaeler", """<html><head><meta property="article:published_time" content="2026-09-07T06:00:00Z"><title>30 milepæler for Altinget i Norge</title></head>
+        <body><main><h1>30 milepæler for Altinget i Norge</h1>
+        <div><h3>29. Dok 8-forslag, regjeringskrise og landsmøter</h3><span>24.08.2026</span></div>
+        <div><h3>1. Med et tastetrykk fra ministeren åpner Altinget</h3><span>03.10.2022</span></div></main></body></html>""")
+        facts = extract_site_facts({"name": "ALTINGET AS"}, [page("https://altinget.no/", "<html><body>Altinget</body></html>"), article])
+        self.assertEqual([item["title"] for item in facts.activities], ["30 milepæler for Altinget i Norge"])
+
+    def test_author_and_staff_links_are_never_the_item(self):
+        # 980429849 Edge Branding ("Yvonne Aasbø" -> /ansatte/...), 928934977 Altinget (/person/...).
+        html = """<html><body><main><h1>Aktuelt</h1>
+        <div class="card"><a href="/ansatte/yvonne-aasbo">Yvonne Aasbø</a><span>30.09.2026</span></div>
+        <div class="card"><h3>Stønadslandet Norge: store geografiske forskjeller</h3><a href="/person/solveig-ruud">Solveig Ruud</a><a href="/aktuelt/stonadslandet">Les saken</a><span>07.09.2026</span></div>
+        </main></body></html>"""
+        items = listing_items(page("https://fjell-data.no/aktuelt/", html), require_news_link=False)
+        self.assertEqual([(item["title"], item["url"]) for item in items], [("Stønadslandet Norge: store geografiske forskjeller", "https://fjell-data.no/aktuelt/stonadslandet")])
+
+    def test_application_and_careers_links_are_not_job_titles(self):
+        # 998549833 Northern Beat ("Registrer din søknad"), 813302632 Arkwright ("Careers in Oslo").
+        html = """<html><body><main><h1>Karriere</h1>
+        <a href="https://northernbeat.recman.no/job.php?job_id=236687&apply_only">Registrer din søknad</a>
+        <a href="https://emp.jobylon.com/jobs/280573-arkwright-consulting-rekruttering/">Careers in Oslo</a>
+        <a href="https://fjelldata.webcruiter.no/Main2/Recruit/Public/99">Senior utvikler backend</a></main></body></html>"""
+        jobs, _ = job_listings(page("https://fjell-data.no/karriere/", html))
+        self.assertEqual([job["title"] for job in jobs], ["Senior utvikler backend"])
+
+
 class NewsRules(unittest.TestCase):
     LISTING = "https://fjell-data.no/aktuelt/"
 

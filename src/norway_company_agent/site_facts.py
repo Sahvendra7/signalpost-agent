@@ -76,6 +76,12 @@ JOB_CUES = re.compile(
     r"|arbeidssted|lokasjon|location|full[- ]time|part[- ]time|permanent|apply by|deadline",
     re.I,
 )
+GENERIC_JOB_TITLE = re.compile(
+    r"^(?:registrer|send|lever|last opp|søk|apply|submit|upload|register)\b"
+    r"|^(?:careers?|karriere|jobs?|jobb(?:e)? (?:hos|i)|ledige stillinger|stillinger|vacancies|open positions)\b"
+    r"|åpen søknad|open application|generell søknad|spontan",
+)
+AUTHOR_PATH = re.compile(r"/(?:ansatte|ansatt|person|personer|people|author|authors|forfatter|forfattere|medarbeidere|employees|staff|profil|profile|team)(?:/|$)")
 LOCATION_LABEL = re.compile(r"^(?:arbeidssted|sted|lokasjon|location|kontorsted|kontor)\s*:?\s*(.*)$", re.I)
 _DROP_TAGS = ("script", "style", "noscript", "template", "svg")
 _CHROME_TAGS = ("header", "nav", "footer")
@@ -118,6 +124,16 @@ class CapturedPage:
     def contains(self, value: Any) -> bool:
         """`value` occurs (folded) in the page's visible text or, for structured data, in its unescaped source."""
         return bool(value) and (span_in_text(value, self.text) or span_in_text(value, self.unescaped))
+
+
+HOME_SEGMENTS = {"no", "nb", "nn", "en", "sv", "se", "da", "dk", "de", "index.html", "index.htm", "index.php", "hjem", "home", "forside", "start", "default.aspx"}
+
+
+def is_shared_site_section(url: str) -> bool:
+    """The verified website is a section of a larger domain (a federation's region page, a chain's branch page),
+    not a homepage: two or more path segments, or one that is not a language or index page."""
+    segments = [part for part in urllib.parse.urlsplit(url).path.split("/") if part]
+    return len(segments) >= 2 or (len(segments) == 1 and segments[0].casefold() not in HOME_SEGMENTS)
 
 
 def is_news_page(url: str) -> bool:
@@ -303,19 +319,24 @@ def _handle(item: dict[str, Any]) -> str:
     return _compact(path.split("/company/", 1)[-1] if item["platform"] == "linkedin" else path)
 
 
-def social_identity(profile: dict[str, Any], occurrence: dict[str, Any], site_domain: str) -> tuple[float | None, str]:
+def social_identity(profile: dict[str, Any], occurrence: dict[str, Any], site_domain: str, *, shared_site: bool = False) -> tuple[float | None, str]:
     """(score, reason) when the linked profile is corroborated as the company's own; (None, reason) otherwise.
-    Being linked from the verified site is necessary, never sufficient on its own."""
-    if occurrence["via"] == "jsonld_sameas" and occurrence.get("jsonld_owner"):
+    Being linked from the verified site is necessary, never sufficient on its own.
+
+    `shared_site`: the verified website is a section of a larger organisation's domain (a club's or a chain's
+    subpage). The site's own links then belong to the domain owner, so only the legal-name gate can accept a
+    profile there; the domain-name rule and the owner's structured data are not used."""
+    if occurrence["via"] == "jsonld_sameas" and occurrence.get("jsonld_owner") and not shared_site:
         return 0.95, "listed in sameAs of the verified site's own Organization structured data"
     gate = assess_social_identity(profile, {"url": occurrence["canonical_url"]})
     if gate["publishable"]:
         return float(gate["identity_score"]), str(gate["reason"])
+    if shared_site:
+        return None, "verified site is a section of a shared domain; the handle does not carry the legal name"
     label = _compact(site_domain.split(".", 1)[0]) if site_domain else ""
-    path = urllib.parse.urlparse(occurrence["canonical_url"]).path
-    handle = _compact(path.split("/company/", 1)[-1] if occurrence["platform"] == "linkedin" else path)
-    if label and (handle == label or (len(label) >= 6 and label in handle)):
-        return 0.95, "verified website's domain name appears in the social handle"
+    handle = _handle(occurrence)
+    if label and (handle == label or len(label) >= 6 and (handle.startswith(label) or handle.endswith(label))):
+        return 0.95, "verified website's domain name begins or ends the social handle"
     return None, str(gate["reason"])
 
 
@@ -407,17 +428,17 @@ def _card_item(start: Any, iso: str, page: CapturedPage, own_domain: str, requir
         if card_dates - {iso}:
             return None  # climbed past this item into a list of items
         headings = [heading for heading in node.select("h1, h2, h3, h4, h5") if _good_title(heading.get_text(" ", strip=True))]
-        links = [(anchor, target) for anchor, target in _internal_links(node, page.url, own_domain) if _good_title(anchor.get_text(" ", strip=True)) or anchor.find(["h1", "h2", "h3", "h4", "h5"])]
+        links = [(anchor, target) for anchor, target in _internal_links(node, page.url, own_domain) if not AUTHOR_PATH.search(urllib.parse.urlsplit(target).path.casefold()) and (_good_title(anchor.get_text(" ", strip=True)) or anchor.find(["h1", "h2", "h3", "h4", "h5"]))]
         if node.name == "a" and node.get("href"):
             target = urllib.parse.urljoin(page.url, str(node["href"]).strip()).split("#")[0]
-            if _registered_domain(target) == own_domain:
+            if _registered_domain(target) == own_domain and not AUTHOR_PATH.search(urllib.parse.urlsplit(target).path.casefold()):
                 links.insert(0, (node, target))
         if headings or links:
             title = _clean(headings[0].get_text(" ", strip=True)) if headings else _clean(links[0][0].get_text(" ", strip=True))
             if not _good_title(title):
                 return None
             linked = next((target for anchor, target in links if fold(title) in fold(anchor.get_text(" ", strip=True)) or anchor.find_parent(["h1", "h2", "h3", "h4", "h5"]) is not None and fold(anchor.get_text(" ", strip=True)) == fold(title)), None)
-            url = linked or (links[0][1] if links else page.url)
+            url = linked or next((target for _, target in links if is_news_page(target)), None) or (links[0][1] if links else page.url)
             if require_news_link and not (links and is_news_page(url)):
                 return None  # homepage: only items that link to the site's own news pages
             summary = None
@@ -523,7 +544,7 @@ def job_listings(page: CapturedPage) -> tuple[list[dict[str, Any]], str | None]:
         if _generic(title) or not title:
             heading = card.find(["h2", "h3", "h4", "h5"]) if card is not anchor else None
             title = _clean(heading.get_text(" ", strip=True)) if heading else ""
-        if not title or _generic(title) or len(title) > 120 or len(words(title)) > 14 or date_matches(title) or not re.search(r"[^\W\d_]{3,}", title):
+        if not title or _generic(title) or GENERIC_JOB_TITLE.search(fold(title)) or len(title) > 120 or len(words(title)) > 14 or date_matches(title) or not re.search(r"[^\W\d_]{3,}", title):
             continue
         card_text = _clean(card.get_text(" "))
         strong = ats or bool(STRONG_JOB_PATH.search(urllib.parse.urlsplit(target).path.casefold()))
@@ -620,6 +641,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         return out
     site_domain = _registered_domain(pages[0].url)
     legal_core = _tokens(profile.get("name"))
+    shared_site = is_shared_site_section(pages[0].url)
 
     # Social profiles: one claim per (platform, canonical profile), the plainest link as the value.
     groups: dict[tuple[str, str], list[dict[str, Any]]] = {}
@@ -637,7 +659,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             continue
         score, reason = None, "no corroboration"
         for occurrence in sorted(group, key=lambda item: item["via"] != "jsonld_sameas"):
-            score, reason = social_identity(profile, occurrence, site_domain)
+            score, reason = social_identity(profile, occurrence, site_domain, shared_site=shared_site)
             if score is not None:
                 break
         record = {
@@ -680,7 +702,9 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             home = page.url.split("#")[0].rstrip("/")
             items = [item for item in items if item.get("method") == "article_time_datetime" or str(item.get("url") or "").split("#")[0].rstrip("/") != home]
         candidates.extend((item, page) for item in items)
-        if is_news_page(page.url) or index == 0:
+        own_article = any(item.get("method") in ("jsonld_datePublished", "meta_article_published_time") and str(item.get("url") or "").split("#")[0].rstrip("/") == page.url.split("#")[0].rstrip("/") for item in items)
+        if (is_news_page(page.url) or index == 0) and not own_article:
+            # Listing pages only: an article page's own dates (lists of milestones, related links) are not items.
             candidates.extend((item, page) for item in listing_items(page, require_news_link=not is_news_page(page.url)))
     priority = {"jsonld_datePublished": 0, "meta_article_published_time": 1, "article_time_datetime": 2, "site_feed": 3, "listing_visible_date": 4}
     kept: dict[tuple[str, str], dict[str, Any]] = {}
