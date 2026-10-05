@@ -477,6 +477,8 @@ def _card_item(start: Any, iso: str, page: CapturedPage, own_domain: str, requir
                 return None
             linked = next((target for anchor, target in links if fold(title) in fold(anchor.get_text(" ", strip=True)) or anchor.find_parent(["h1", "h2", "h3", "h4", "h5"]) is not None and fold(anchor.get_text(" ", strip=True)) == fold(title)), None)
             url = linked or next((target for _, target in links if is_news_page(target)), None) or (links[0][1] if links else page.url)
+            if headings and headings[0].name == "h1" and is_article_path(page.url):
+                url = page.url  # an article page's own <h1> and date: the item is the page, not a related or breadcrumb link
             if require_news_link and not (links and is_news_page(url)):
                 return None  # homepage: only items that link to the site's own news pages
             summary = None

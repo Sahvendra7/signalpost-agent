@@ -314,6 +314,13 @@ class FinalAuditRegressions(unittest.TestCase):
         facts = extract_site_facts({"name": "FJELL DATA AS"}, [home, listing], [feed])
         self.assertEqual([(item["date"][:10], item["method"]) for item in facts.activities], [("2025-09-18", "site_feed")])
 
+    def test_an_article_page_heading_is_the_page_itself(self):
+        # 925503215 Vasser (related-article link), 931624032 All Gravy (breadcrumb to /blog) became the item URL.
+        html = """<html><body><main><article><a href="/blogg">Blogg</a><h1>CMS i 2026: trenger vi fortsatt et publiseringssystem?</h1>
+            <span>17. september 2026</span><p>Les også: <a href="/blogg/hva-er-et-cms">Hva er et CMS?</a></p></article></main></body></html>"""
+        items = listing_items(page("https://www.vasser.no/blogg/cms-i-2026", html), require_news_link=False)
+        self.assertEqual([(item["title"], item["url"]) for item in items], [("CMS i 2026: trenger vi fortsatt et publiseringssystem?", "https://www.vasser.no/blogg/cms-i-2026")])
+
     def test_author_and_category_archive_links_are_never_items(self):
         # 917939527 Ålhytta (?author=...), 923143785 Arkitekt Sandmark (/category/byggesak/).
         html = """<html><body><main>
