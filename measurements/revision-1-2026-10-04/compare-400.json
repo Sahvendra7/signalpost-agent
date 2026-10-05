@@ -1,0 +1,97 @@
+{
+ "baseline": {
+  "run": "v1b-400",
+  "commit": "104c3c45d9aef303d3112749a44de5aaf38bca8e",
+  "companies": 400,
+  "company_coverage": {
+   "website": 46,
+   "social": 26,
+   "fifth_area": 31,
+   "activity": 17
+  },
+  "claims": {
+   "total_available": 15813,
+   "social": 40,
+   "activity": 85
+  },
+  "claims_per_covered_company": {
+   "social": 1.54,
+   "activity": 5.0,
+   "jobs": 0
+  },
+  "evidence_not_contained": {
+   "social": 38,
+   "activity_date_text_not_recorded": 85
+  },
+  "website_identity_classes": {
+   "deterministic_name_org_evidence_v2": 19,
+   "FIRST_PARTY_CONFIRMED": 26,
+   "REGISTRY_LINKED": 1
+  },
+  "extraction_rejections": {},
+  "articles_fetched": 0,
+  "requests": 2829,
+  "runtime_ms": 395838,
+  "validation_passed": true,
+  "terminal": {
+   "completed": 400
+  },
+  "platform_hosts_contacted": []
+ },
+ "revision_1": {
+  "run": "r1g-400",
+  "commit": "58fee4eb3e4c552ac7b994eb17b55a6d18331495",
+  "companies": 400,
+  "company_coverage": {
+   "website": 51,
+   "social": 27,
+   "fifth_area": 36,
+   "activity": 22
+  },
+  "claims": {
+   "total_available": 15851,
+   "social": 40,
+   "activity": 118
+  },
+  "claims_per_covered_company": {
+   "social": 1.48,
+   "activity": 5.36,
+   "jobs": 0
+  },
+  "evidence_not_contained": {},
+  "website_identity_classes": {
+   "deterministic_name_org_evidence_v2": 19,
+   "FIRST_PARTY_CONFIRMED": 26,
+   "MANAGER_DESIGNATED": 5,
+   "REGISTRY_LINKED": 1
+  },
+  "extraction_rejections": {
+   "activity:page_date_on_non_news_page": 21,
+   "social:manager_site_profile": 14,
+   "social:handle_not_corroborated": 10,
+   "activity:generic_title": 2
+  },
+  "articles_fetched": 7,
+  "requests": 2853,
+  "runtime_ms": 419245,
+  "validation_passed": true,
+  "terminal": {
+   "completed": 400
+  },
+  "platform_hosts_contacted": []
+ },
+ "companies_gained": {
+  "website": 5,
+  "social": 1,
+  "activity": 7,
+  "jobs": 0
+ },
+ "companies_lost": {
+  "website": 0,
+  "social": 0,
+  "activity": 2,
+  "jobs": 0
+ },
+ "fifth_area_gained": 5,
+ "fifth_area_lost": 0
+}

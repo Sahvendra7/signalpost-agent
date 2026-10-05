@@ -1,0 +1,162 @@
+{
+  "run_id": "r1-v1b-400",
+  "started_at": "2026-10-05T11:19:36.598437Z",
+  "completed_at": "2026-10-05T11:26:12.451588Z",
+  "runtime_ms": 395838,
+  "input_rows": 400,
+  "emitted_envelopes": 400,
+  "unique_companies_researched": 400,
+  "terminal_status_counts": {
+    "completed": 400
+  },
+  "modules": [
+    "registry",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website",
+    "site_research"
+  ],
+  "registry": {
+    "bulk": null,
+    "snapshot_status": "absent",
+    "fallback": "live_registry"
+  },
+  "category_coverage": {
+    "description": {
+      "available": 400
+    },
+    "filings": {
+      "available": 400
+    },
+    "hiring": {
+      "not_available": 400
+    },
+    "identity": {
+      "available": 400
+    },
+    "leadership": {
+      "available": 400
+    },
+    "locations": {
+      "available": 400
+    },
+    "public_activity": {
+      "not_available": 383,
+      "available": 17
+    },
+    "registry_activity": {
+      "available": 400
+    },
+    "relationships": {
+      "not_available": 372,
+      "available": 28
+    },
+    "websites": {
+      "not_available": 329,
+      "available": 71
+    }
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "public_activity": 0.0425,
+    "registry_activity": 1.0,
+    "relationships": 0.07,
+    "websites": 0.1775
+  },
+  "area_coverage": {
+    "filings": 400,
+    "leadership": 400,
+    "locations": 400,
+    "websites": 46,
+    "public_footprint": 31,
+    "hiring": 0
+  },
+  "companies_all_five_areas": 31,
+  "module_states": {
+    "financials": {
+      "complete": 398,
+      "not_found": 1,
+      "source_error": 1
+    },
+    "group": {
+      "not_found": 372,
+      "complete": 28
+    },
+    "locations": {
+      "complete": 400
+    },
+    "registry": {
+      "not_found": 400
+    },
+    "registry_live": {
+      "complete": 400
+    },
+    "roles": {
+      "complete": 400
+    },
+    "site_research": {
+      "not_found": 354,
+      "complete": 46
+    },
+    "website": {
+      "not_found": 355,
+      "complete": 37,
+      "blocked_policy": 3,
+      "source_error": 1,
+      "blocked_robots": 4
+    }
+  },
+  "error_codes": {},
+  "claims": {
+    "available_total": 15813,
+    "available_per_company_mean": 39.53,
+    "evidence_total": 15799,
+    "changes_total": 0
+  },
+  "operations": {
+    "requests": 2829,
+    "bytes": 35024694,
+    "request_latency": {
+      "n": 2119,
+      "p50_ms": 670.0,
+      "p95_ms": 897.0,
+      "max_ms": 3278
+    },
+    "company_runtime": {
+      "n": 400,
+      "p50_ms": 3668.0,
+      "p95_ms": 26336.0,
+      "max_ms": 50395
+    },
+    "third_party_cost_usd": 0,
+    "llm_calls": 0
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "one_envelope_per_input_row": true,
+      "envelopes_follow_input_order": true,
+      "all_terminal": true,
+      "all_envelopes_valid": true,
+      "expected_count_matches_input": true
+    },
+    "findings": {}
+  },
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "resumed_profiles": 0
+}
