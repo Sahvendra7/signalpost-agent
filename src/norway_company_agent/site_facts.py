@@ -84,6 +84,10 @@ GENERIC_JOB_TITLE = re.compile(
     r"|åpen søknad|open application|generell søknad|spontan",
 )
 AUTHOR_PATH = re.compile(r"/(?:ansatte|ansatt|person|personer|people|author|authors|forfatter|forfattere|medarbeidere|employees|staff|profil|profile|team)(?:/|$)")
+# Taxonomy pages (a category, tag or topic archive) and author archives are never an item's title or URL.
+ARCHIVE_PATH = re.compile(r"/(?:category|categories|kategori|kategorier|tag|tags|emne|emner|tema|stikkord|topics?)(?:/|$)")
+WEEKDAYS = {"mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag", "søndag", "monday", "tuesday", "wednesday", "thursday", "friday",
+            "saturday", "sunday", "man", "tir", "ons", "tor", "fre", "lør", "søn", "mon", "tue", "wed", "thu", "fri", "sat", "sun"}
 LOCATION_LABEL = re.compile(r"^(?:arbeidssted|sted|lokasjon|location|kontorsted|kontor)\s*:?\s*(.*)$", re.I)
 _DROP_TAGS = ("script", "style", "noscript", "template", "svg")
 _CHROME_TAGS = ("header", "nav", "footer")
@@ -151,6 +155,8 @@ def is_article_path(url: str) -> bool:
 
 
 def is_careers_page(page: CapturedPage) -> bool:
+    if is_news_page(page.url):
+        return False  # a news archive of job ads (/aktuelt/tema/ledig-stilling) is not the careers page: old ads stay listed
     if CAREER_PATH.search(urllib.parse.unquote(urllib.parse.urlsplit(page.url).path).casefold()):
         return True
     soup = page.soup()
@@ -388,6 +394,28 @@ def _good_title(text: str) -> bool:
     return 2 <= len(content_words(text)) and len(words(text)) <= 30 and len(text) <= 200 and not _generic(text) and not date_matches(text)
 
 
+def _not_an_item_link(target: str) -> bool:
+    parts = urllib.parse.urlsplit(target)
+    path = parts.path.casefold()
+    return bool(AUTHOR_PATH.search(path) or ARCHIVE_PATH.search(path) or re.search(r"(?:^|&)(?:author|tag|category|cat)=", parts.query.casefold()))
+
+
+def date_stamp(before: str, after: str) -> bool:
+    """A listing date counts only as a stamp: alone in its text, or with a publication cue, a weekday, a byline or a
+    label. A date inside running text ("Fra 1. januar 2026 fjernes ...", "ble opprettet 31. januar 2018",
+    "seminar 26.-27. september 2024") is what the item is about, not when it was published."""
+    before, after = fold(before).strip(), fold(after).strip()
+    if len(words(after)) > 6:
+        return False
+    if not before:
+        return True
+    if re.search(r"\d", before) or len(words(before)) > 4:
+        return False
+    if set(words(before)) <= WEEKDAYS | {"publisert", "published", "posted", "postet", "dato", "date", "den"}:
+        return True
+    return before.startswith(("av ", "by ", "skrevet av")) or before[-1] in "|·•/–—:-,"
+
+
 def _internal_links(node: Any, page_url: str, own_domain: str) -> list[tuple[Any, str]]:
     links = []
     page = page_url.split("#")[0].rstrip("/")
@@ -413,7 +441,7 @@ def listing_items(page: CapturedPage, *, require_news_link: bool) -> list[dict[s
             continue
         for iso, matched, start, _end in date_matches(text):
             prefix = fold(text[max(0, start - 30):start])
-            if any(cue in prefix for cue in UPDATED_CUES + DEADLINE_CUES):
+            if any(cue in prefix for cue in UPDATED_CUES + DEADLINE_CUES) or not date_stamp(text[:start], text[_end:]):
                 continue
             item = _card_item(string.parent, iso, page, own_domain, require_news_link)
             if item is None:
@@ -438,10 +466,10 @@ def _card_item(start: Any, iso: str, page: CapturedPage, own_domain: str, requir
         if card_dates - {iso}:
             return None  # climbed past this item into a list of items
         headings = [heading for heading in node.select("h1, h2, h3, h4, h5") if _good_title(heading.get_text(" ", strip=True))]
-        links = [(anchor, target) for anchor, target in _internal_links(node, page.url, own_domain) if not AUTHOR_PATH.search(urllib.parse.urlsplit(target).path.casefold()) and (_good_title(anchor.get_text(" ", strip=True)) or anchor.find(["h1", "h2", "h3", "h4", "h5"]))]
+        links = [(anchor, target) for anchor, target in _internal_links(node, page.url, own_domain) if not _not_an_item_link(target) and (_good_title(anchor.get_text(" ", strip=True)) or anchor.find(["h1", "h2", "h3", "h4", "h5"]))]
         if node.name == "a" and node.get("href"):
             target = urllib.parse.urljoin(page.url, str(node["href"]).strip()).split("#")[0]
-            if _registered_domain(target) == own_domain and not AUTHOR_PATH.search(urllib.parse.urlsplit(target).path.casefold()):
+            if _registered_domain(target) == own_domain and not _not_an_item_link(target):
                 links.insert(0, (node, target))
         if headings or links:
             title = _clean(headings[0].get_text(" ", strip=True)) if headings else _clean(links[0][0].get_text(" ", strip=True))
@@ -764,18 +792,23 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             candidates.extend((item, page) for item in listing_items(page, require_news_link=not is_news_page(page.url)))
     priority = {"jsonld_datePublished": 0, "meta_article_published_time": 1, "article_time_datetime": 2, "site_feed": 3, "listing_visible_date": 4}
     kept: dict[tuple[str, str], dict[str, Any]] = {}
-    kept_urls: set[tuple[str, str]] = set()
+    kept_urls: set[str] = set()
+    section = urllib.parse.urlsplit(pages[0].url).path.rstrip("/") + "/" if shared_site else None
     for item, page in sorted(candidates, key=lambda pair: priority.get(pair[0].get("method"), 9)):
         reason = validate_activity(item, page)
+        if not reason and section and not (urllib.parse.urlsplit(str(item.get("url") or page.url)).path.rstrip("/") + "/").startswith(section):
+            reason = "outside_site_section"  # the verified site is a section of a shared domain: the owner's news is not its news
         if reason:
             out.reject("activity", reason, item, page)
             continue
         key = (str(item["date"])[:10], fold(item["title"]))
-        # One article is one claim: the same article URL and date under another title form (JSON-LD headline vs
-        # the page <title> with a site-name suffix) is the same item. A listing page's own URL is not a key.
+        # One article is one claim: the same article URL under another title form (JSON-LD headline vs the page
+        # <title> with a site-name suffix) or with another date is the same item, and the most authoritative date
+        # wins (structured > feed > visible listing text). A card without its own link (its URL is the page it is
+        # on) is keyed by date and title only.
         url = str(item.get("url") or "").split("#")[0].rstrip("/")
-        is_listing_self = item.get("method") == "listing_visible_date" and url == page.url.split("#")[0].rstrip("/")
-        url_key = (url, str(item["date"])[:10]) if url and not is_listing_self else None
+        no_own_link = item.get("method") in ("listing_visible_date", "article_time_datetime") and url == page.url.split("#")[0].rstrip("/")
+        url_key = url if url and not no_own_link else None
         if key in kept or (url_key and url_key in kept_urls):
             continue
         if url_key:

@@ -282,6 +282,64 @@ class AuditRegressions(unittest.TestCase):
         self.assertEqual([job["title"] for job in jobs], ["Senior utvikler backend"])
 
 
+class FinalAuditRegressions(unittest.TestCase):
+    """Defects found by the manual audit of the final same-day 1,200 and 400 runs (Revision 1 candidate)."""
+
+    def test_a_date_inside_running_text_is_not_a_publication_date(self):
+        # 998243432 Orkla Regnskap, 926642510 Aksjefabrikken, 920186114 Devold Møllers stiftelse, 883759702 FDVhuset.
+        cards = {
+            "orkla": '<a href="/2025/09/18/skattetrekkskontoen/"><h3>Skattetrekkskontoen blir avviklet</h3></a><p>Fra 1. januar 2026 fjernes kravet om at forskuddstrekk skal overføres til en skattetrekkskonto.</p>',
+            "aksjefabrikken": '<a href="/elementor-5202/"><h3>Forretningsvilkår for forskuddsbetaling over nett</h3></a><p>Aksjefabrikken AS, org.nr. 926 642 510. Gjeldende fra 1. august 2026.</p>',
+            "devold": '<a href="/post-3/"><h3>Stiftelsen etablert</h3></a><p>Stiftelsen ble opprettet 31. januar 2018</p>',
+            "fdvhuset": '<a href="/blogg/famac-seminar/"><h3>FAMAC seminar, Sola Strand Hotell</h3></a><p>FAMAC-seminar 26. – 27. september 2024</p>',
+        }
+        for label, card in cards.items():
+            with self.subTest(label):
+                self.assertEqual(listing_items(page("https://fjell-data.no/aktuelt/", f"<html><body><main><div>{card}</div></main></body></html>"), require_news_link=False), [])
+
+    def test_date_stamps_with_cues_weekdays_bylines_and_labels_are_kept(self):
+        # 925114510 Skan-Kontroll ("fredag 4. september 2026"), 985701547 Wican ("September 25, 2026 • 4 min lesetid").
+        stamps = ["fredag 4. september 2026", "September 25, 2026 • 4 min lesetid", "Publisert 12. mars 2026 av Kari Nordmann", "Nyheter | 12.03.2026", "5. mai 2016"]
+        for stamp in stamps:
+            with self.subTest(stamp):
+                html = f'<html><body><main><div><a href="/aktuelt/ny-avtale/"><h3>Ny avtale med kommunen</h3></a><span>{stamp}</span></div></main></body></html>'
+                self.assertEqual(len(listing_items(page("https://fjell-data.no/aktuelt/", html), require_news_link=False)), 1)
+
+    def test_one_article_url_is_one_claim_and_the_structured_date_wins(self):
+        feed = page("https://fjell-data.no/feed/", """<rss><channel><item><title>Ny avtale med kommunen</title>
+            <link>https://fjell-data.no/2025/09/18/ny-avtale/</link><pubDate>Thu, 18 Sep 2025 08:18:56 +0000</pubDate></item></channel></rss>""", kind="feed")
+        listing = page("https://fjell-data.no/aktuelt/", """<html><body><main><div><a href="/2025/09/18/ny-avtale/"><h3>Ny avtale med kommunen (oppdatert)</h3></a>
+            <span>3. oktober 2025</span></div></main></body></html>""")
+        home = page("https://fjell-data.no/", "<html><body><a href='/aktuelt/'>Aktuelt</a></body></html>")
+        facts = extract_site_facts({"name": "FJELL DATA AS"}, [home, listing], [feed])
+        self.assertEqual([(item["date"][:10], item["method"]) for item in facts.activities], [("2025-09-18", "site_feed")])
+
+    def test_author_and_category_archive_links_are_never_items(self):
+        # 917939527 Ålhytta (?author=...), 923143785 Arkitekt Sandmark (/category/byggesak/).
+        html = """<html><body><main>
+            <div><a href="/inspirasjon-artikler?author=545fb58de4b073a05b4eb41d">Erlend Hagen</a><span>20. desember 2023</span></div>
+            <div><a href="/category/byggesak/">Byggesak og regelverk</a><span>22. oktober 2023</span></div>
+            </main></body></html>"""
+        self.assertEqual(listing_items(page("https://fjell-data.no/aktuelt/", html), require_news_link=False), [])
+
+    def test_section_of_a_shared_domain_does_not_inherit_the_owner_news(self):
+        # 930870781 Læringsverkstedet Tveit: verified site /barnehage/tveit; the chain's blog post is not its news.
+        section = page("https://laringsverkstedet.no/barnehage/tveit", """<html><body><main>
+            <div><a href="https://laringsverkstedet.no/blogg/juridisk-og-baerekraft"><h3>Juridisk og bærekraft</h3></a><span>19. mars 2024</span></div>
+            <div><a href="https://laringsverkstedet.no/barnehage/tveit/nyheter/sommerfest"><h3>Sommerfest på Tveit</h3></a><span>12. juni 2026</span></div>
+            </main></body></html>""")
+        facts = extract_site_facts({"name": "LÆRINGSVERKSTEDET TVEIT BARNEHAGE AS"}, [section])
+        self.assertEqual([item["title"] for item in facts.activities], ["Sommerfest på Tveit"])
+        self.assertEqual(facts.rejections.get("activity:outside_site_section"), 1)
+
+    def test_a_news_archive_of_job_ads_is_not_a_careers_page(self):
+        # 980429849 Edge Branding: /aktuelt/tema/ledig-stilling lists old ads; its careers page lists no position.
+        archive = page("https://edgebranding.no/aktuelt/tema/ledig-stilling", """<html><body><main><h1>Aktuelt</h1>
+            <div><a href="/aktuelt/ledig-stilling-performance"><h3>Er du vår nye Performance-spesialist?</h3></a><span>Ledig stilling</span></div>
+            </main></body></html>""")
+        self.assertEqual(extract_site_facts({"name": "EDGE BRANDING AS"}, [page("https://edgebranding.no/", "<html></html>"), archive]).jobs, [])
+
+
 class NewsRules(unittest.TestCase):
     LISTING = "https://fjell-data.no/aktuelt/"
 

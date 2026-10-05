@@ -29,7 +29,7 @@ from bs4 import BeautifulSoup
 
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens
-from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
+from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, is_shared_site_section, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site, manager_designated
 from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
 
@@ -383,15 +383,22 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
     home_url, home = pages[0]
     domain = _registered_domain(home_url)
     soup = BeautifulSoup(home.raw.decode("utf-8", errors="replace"), "lxml")
+    # A verified site that is a section of a shared domain (a chain's branch page) reads only pages inside its section:
+    # the domain owner's news, feed and careers pages are not the entity's.
+    section = urllib.parse.urlsplit(home_url).path.rstrip("/") + "/" if is_shared_site_section(home_url) else None
+
+    def inside(url: str) -> bool:
+        return section is None or (urllib.parse.urlsplit(url).path.rstrip("/") + "/").startswith(section)
+
     feeds, news, careers = [], [], []
     for link in soup.select('link[rel~="alternate"][href]'):
         if any(kind in str(link.get("type") or "") for kind in ("rss", "atom")):
             url = urllib.parse.urljoin(home_url, link["href"])
-            if _registered_domain(url) == domain and "comments" not in url:
+            if _registered_domain(url) == domain and "comments" not in url and inside(url):
                 feeds.append(url)
     for anchor in soup.select("a[href]"):
         url = urllib.parse.urljoin(home_url, anchor["href"]).split("#")[0]
-        if not url.startswith("http") or _registered_domain(url) != domain or url.rstrip("/") == home_url.rstrip("/"):
+        if not url.startswith("http") or _registered_domain(url) != domain or url.rstrip("/") == home_url.rstrip("/") or not inside(url):
             continue
         label = (urllib.parse.urlsplit(url).path + " " + anchor.get_text(" ", strip=True)).casefold()
         if any(hint in label for hint in NEWS_HINTS):
@@ -404,7 +411,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
             for loc in BeautifulSoup(sitemap.raw, "xml").find_all("loc")[:500]:
                 url = loc.get_text(strip=True)
                 path = urllib.parse.urlsplit(url).path.casefold()
-                if _registered_domain(url) != domain:
+                if _registered_domain(url) != domain or not inside(url):
                     continue
                 if any(hint in path for hint in NEWS_HINTS) and path.count("/") <= 2:
                     news.append(url)
@@ -429,7 +436,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
     if not facts.activities and news_page is not None:
         # The news listing states no dates: the dates are on the article pages it links (same verified site).
         # Fetch at most MAX_ARTICLE_FETCHES of them through the same budget, robots and Crawl-delay controls.
-        for url in article_links(news_page, MAX_ARTICLE_FETCHES):
+        for url in [url for url in article_links(news_page, MAX_ARTICLE_FETCHES * 3) if inside(url)][:MAX_ARTICLE_FETCHES]:
             state, response = session.get(url, budget)
             if state == "ok":
                 fetched.append((url, response))
