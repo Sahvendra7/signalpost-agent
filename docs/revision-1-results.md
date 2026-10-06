@@ -1,5 +1,10 @@
 # Revision 1 results: existing website evidence as material claims
 
+> **Superseded by `docs/revision-1-final.md`** (final candidate code `a5e06ce`). The business-manager rule described
+> below was narrowed: the website association is kept, but the manager's news is attributed only when an item names
+> the managed entity. Three further audit rounds fixed eight defect classes in the core extraction. The figures below
+> (code `58fee4e`) are historical.
+
 **Revision 1 has not been submitted, and no score is claimed.** These are local engineering measurements.
 They show what the code now publishes. They do not show how Builderr will score it: its pool, its matching
 rules and its family definitions are not published (`docs/official-scoring-model.md`).

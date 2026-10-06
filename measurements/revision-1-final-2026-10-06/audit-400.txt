@@ -1,0 +1,61 @@
+
+=== 919378875 GRØNSAND GJESTEGÅRD AS | site=https://www.gronsand.no/ None 
+  + social :: http://www.facebook.com/gronsand :: https://www.gronsand.no/ 
+  + social :: https://instagram.com/gronsandgjestagard :: https://www.gronsand.no/ 
+
+=== 990524580 CS NETTHANDEL AS | site=https://autoroyal.no/ FIRST_PARTY_CONFIRMED 
+  - ('news', 'bildeler til alle bilmerker | originaldeler | autoroyal.no', '2020-03-17')
+  - ('news', 'personvernerklæring | autoroyal.no', '2020-03-17')
+
+=== 953459817 SØRE SKEISVANN BORETTSLAG | site=https://www.vestbo.no/ MANAGER_DESIGNATED VESTBO BBL
+  + official_website :: https://www.vestbo.no/ ::  
+
+=== 998243432 ORKLA REGNSKAP AS | site=https://orklaregnskap.no/ None 
+  - ('news', 'jobb - orkla regnskap as', '2021-07-10')
+  - ('news', 'kontakt - orkla regnskap as', '2021-07-10')
+  - ('news', 'om oss - orkla regnskap as', '2021-07-09')
+  - ('news', 'orkla regnskap as - regnskapstjenester av høy kvalitet', '2021-04-26')
+
+=== 948485516 AL BLIKSRUD BORETTSLAG | site=https://www.usbl.no/ MANAGER_DESIGNATED BOLIGBYGGELAGET USBL
+  + official_website :: https://www.usbl.no/ ::  
+
+=== 985519307 VARANGER KRAFTFIBER AS | site=https://varanger-kraftfiber.no/ FIRST_PARTY_CONFIRMED 
+  + social :: https://www.youtube.com/@varangerkraftfiber/videos :: https://varanger-kraftfiber.no/ 
+  - ('news', 'kontakt oss', '2025-08-26')
+  - ('news', 'om varanger kraftfiber', '2017-10-31')
+  - ('social', 'youtube.com/@varangerkraftfiber')
+
+=== 883759702 FDVHUSET AS | site=https://fdvhuset.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "FAMAC Joins Forces with Smart Building Collective to Revolutionize Real Estate Management", "url": "https://www.fdvhuset.no/nb_no/blogg/famac-joins-forces-with-smart-building-collective-to-revolutionize-real-estate-mana :: https://fdvhuset.no/blogg 
+  + news :: {"title": "FAMAC seminar 26.- 27. oktober Scandic Hell, Stjørdal", "url": "https://www.fdvhuset.no/nb_no/blogg/famac-seminar-26-27-oktober-scandic-hell-stjordal/", "publication_date": "2023-08-09"} :: https://fdvhuset.no/blogg 
+  + news :: {"title": "FDVhuset har oppnådd gullstandard med ISO 27001 og 9001 sertifisering", "url": "https://www.fdvhuset.no/nb_no/blogg/fdvhuset-har-oppnadd-gullstandard-med-iso-27001-og-9001-sertifisering/", "publication_date": "2023-10-0 :: https://fdvhuset.no/blogg 
+  + news :: {"title": "Fem grunner til å velge FAMAC for din FDV-dokumentasjon", "url": "https://www.fdvhuset.no/nb_no/blogg/fem-grunner-til-a-velge-famac-for-din-fdv-dokumentasjon/", "publication_date": "2023-11-24"} :: https://fdvhuset.no/blogg 
+  + news :: {"title": "Fremtidens byggforvaltning. Hvorfor er dette viktig for deg?", "url": "https://www.fdvhuset.no/nb_no/blogg/fremtidens-byggforvaltning-hvorfor-er-dette-viktig-for-deg/", "publication_date": "2023-08-09"} :: https://fdvhuset.no/blogg 
+  + news :: {"title": "Få tilgang til FDVekspertenes oppskrift på suksess", "url": "https://www.fdvhuset.no/nb_no/blogg/fa-tilgang-til-fdvekspertenes-oppskrift-pa-suksess/", "publication_date": "2023-04-07"} :: https://fdvhuset.no/blogg 
+  + news :: {"title": "Utforsk 3 av de nyeste oppdateringene i FAMAC", "url": "https://www.fdvhuset.no/nb_no/blogg/utforsk-3-av-de-nyeste-oppdateringene-i-famac/", "publication_date": "2025-03-19"} :: https://fdvhuset.no/blogg 
+
+=== 998641896 GRØNVOLD BYGG AS | site=https://gronvoldbygg.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "Gaselle-bedrift 2017", "url": "https://gronvoldbygg.no/nyheter/gaselle-bedrift-2017", "publication_date": "2017-09-20"} :: https://gronvoldbygg.no/ 
+  + news :: {"title": "Superwood — gjennomimpregnert gran", "url": "https://gronvoldbygg.no/nyheter", "publication_date": "2016-05-05"} :: https://gronvoldbygg.no/nyheter 
+  + news :: {"title": "Systemhus sponser Verdenscupen på ski", "url": "https://gronvoldbygg.no/nyheter/systemhus-sponser-verdenscupen-pa-ski", "publication_date": "2016-12-05"} :: https://gronvoldbygg.no/ 
+  + news :: {"title": "Vi er leverandør av Fjord og Fjellhytter", "url": "https://gronvoldbygg.no/nyheter", "publication_date": "2016-05-05"} :: https://gronvoldbygg.no/nyheter 
+
+=== 956392101 NY-LANDÅS BORETTSLAG AVD G | site=https://www.vestbo.no/ MANAGER_DESIGNATED VESTBO BBL
+  + official_website :: https://www.vestbo.no/ ::  
+
+=== 932448459 ROMERIKE VVS AS | site=https://romerikevvs.no/ FIRST_PARTY_CONFIRMED 
+  - ('social', 'facebook.com/p/romerike-vvs-61553018621414')
+
+=== 925503215 VASSER AS | site=https://www.vasser.no/ None 
+  + news :: {"title": "CMS i 2026: trenger vi fortsatt et publiseringssystem?", "url": "https://www.vasser.no/blogg/cms-i-2026", "publication_date": "2026-09-17"} :: https://www.vasser.no/blogg/cms-i-2026 
+  + news :: {"title": "Hva er AEO (AI Engine Optimization)?", "url": "https://www.vasser.no/blogg/hva-er-aeo-ai-engine-optimization", "publication_date": "2026-09-14"} :: https://www.vasser.no/blogg/hva-er-aeo-ai-engine-optimization 
+  - ('social', 'x.com/vasserdigital')
+
+=== 985321469 HAMBORGSTRØM BORETTSLAG | site=https://www.nbbo.no/ MANAGER_DESIGNATED NEDRE BUSKERUD BOLIGBYGGELAG
+  + official_website :: https://www.nbbo.no/ ::  
+
+=== 961440777 BATTERIVEIEN BORETTSLAG | site=https://www.usbl.no/ MANAGER_DESIGNATED BOLIGBYGGELAGET USBL
+  + official_website :: https://www.usbl.no/ ::  
+
+=== 991368000 RALSTON BAU AS | site=https://ralstonbau.com/ FIRST_PARTY_CONFIRMED 
+  - ('news', 'crafting privacy | \tralston bau', '2019-03-15')

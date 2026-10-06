@@ -1,0 +1,32 @@
+{
+  "run_id": "r1final-v1-400",
+  "input_rows": 400,
+  "emitted_envelopes": 400,
+  "terminal_status_counts": {
+    "completed": 400
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "public_activity": 0.0425,
+    "registry_activity": 1.0,
+    "relationships": 0.07,
+    "websites": 0.18
+  },
+  "runtime_ms": 417655,
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "validation_passed": true,
+  "registry_snapshot": "absent"
+}
+exit 0

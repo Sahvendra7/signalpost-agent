@@ -1,0 +1,273 @@
+
+=== 925925691 TIMELESS AS | site=https://timelesstattoo.no/ None 
+  - ('social', 'tiktok.com/@timeless_tattoo')
+  - ('social', 'x.com/timelesstattoo3')
+  - ('social', 'youtube.com/channel/uc7s9csuogbbixk5asknijyg')
+
+=== 998944007 GLANZ AS | site=https://www.glanz.no/ REGISTRY_LINKED 
+  + official_website :: https://www.glanz.no/ ::  
+  + social :: https://www.facebook.com/glanz.no :: https://www.glanz.no/ 
+  + social :: https://www.instagram.com/glanz.as :: https://www.glanz.no/ 
+
+=== 985701547 WICAN IT AS | site=https://www.wican.no/ None 
+  + news :: {"title": "Ekspanderer med rådgivning for KI", "url": "https://www.wican.no/aktuelt", "publication_date": "2026-09-25"} :: https://www.wican.no/aktuelt 
+
+=== 925710032 EIERSEKSJONSSAMEIET MUNKEGÅRDEN | site=https://www.vestbo.no/ MANAGER_DESIGNATED VESTBO BBL
+  + official_website :: https://www.vestbo.no/ ::  
+
+=== 930870781 LÆRINGSVERKSTEDET TVEIT BARNEHAGE AS | site=https://laringsverkstedet.no/barnehage/tveit FIRST_PARTY_CONFIRMED 
+  - ('careers_page', 'https://laringsverkstedet.no/jobb-hos-læringsverkstedet')
+  - ('social', 'facebook.com/laringsverkstedet')
+  - ('social', 'instagram.com/laringsverkstedet')
+  - ('social', 'linkedin.com/company/l%c3%a6ringsverkstedet')
+  - ('social', 'youtube.com/@lringsverkstedet3778')
+
+=== 922955220 ÅRDAL ENERGI HOLDING AS | site=https://www.ardal-energi.no/ None 
+  + news :: {"title": "Ny logo for Årdal Energi", "url": "https://www.ardal-energi.no/aktuelt/2026/3/12/ny-logo-for-rdal-energi", "publication_date": "2026-03-12"} :: https://www.ardal-energi.no/ 
+  + news :: {"title": "Sel eigardelen i Offerdal kraftverk", "url": "https://www.ardal-energi.no/aktuelt/2026/3/27/sel-eigardelen-i-offerdal-kraftverk", "publication_date": "2026-03-27"} :: https://www.ardal-energi.no/ 
+  + news :: {"title": "Årdal Industripark tek form", "url": "https://www.ardal-energi.no/aktuelt/2025/4/28/rdal-industripark-tek-form", "publication_date": "2025-04-28"} :: https://www.ardal-energi.no/ 
+  - ('news', 'saman skapar me verdiar', '2026-05-07')
+
+=== 816945852 SAMEIET VARDENTOPPEN 3 | site=https://www.usbl.no/ MANAGER_DESIGNATED BOLIGBYGGELAGET USBL
+  + official_website :: https://www.usbl.no/ ::  
+
+=== 921065906 ELPOINTNOR AS | site=https://elpointnor.no/ FIRST_PARTY_CONFIRMED 
+  + official_website :: https://elpointnor.no/ ::  
+
+=== 892061092 SAMEIET LILLETVEDT | site=https://www.vestbo.no/ MANAGER_DESIGNATED VESTBO BBL
+  + official_website :: https://www.vestbo.no/ ::  
+
+=== 982156254 ENGGATEN BORETTSLAG | site=https://www.nbbo.no/ MANAGER_DESIGNATED NEDRE BUSKERUD BOLIGBYGGELAG
+  + official_website :: https://www.nbbo.no/ ::  
+
+=== 982787033 AGRAFF ARKITEKTUR AS | site=https://www.agraff.no/ REGISTRY_LINKED 
+  + official_website :: https://www.agraff.no/ ::  
+  + social :: https://www.instagram.com/agraffarkitekter/ :: https://www.agraff.no/ 
+  - ('official_website', 'https://agraff.no')
+
+=== 927654210 SKOGMO PARK BOLIGSAMEIE 1 | site=https://www.bori.no/ MANAGER_DESIGNATED BORI BBL
+  + official_website :: https://www.bori.no/ ::  
+
+=== 919884452 VIERMIE AS | site=https://viermie.no/ None 
+  + news :: {"title": "Det du må vite om Norgespris", "url": "https://viermie.no/det-du-ma-vite-om-norgespris/", "publication_date": "2025-09-08"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Lars styrer nettselskap i særklasse", "url": "https://viermie.no/lars-styrer-nettselskap-i-saerklasse/", "publication_date": "2024-12-03"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Lynnedslag ga usedvanlig mange strømutfall", "url": "https://viermie.no/lynnedslag-ga-usedvanlig-mange-stromutfall/", "publication_date": "2025-08-06"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Røros E-verk Nett skifter navn til Viermie", "url": "https://viermie.no/roros-e-verk-nett-skifter-navn-til-viermie/", "publication_date": "2025-06-23"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Satser på bedre samarbeid om solenergi", "url": "https://viermie.no/satser-pa-bedre-samarbeid-om-solenergi/", "publication_date": "2023-06-29"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Sommerstudenter får ingeniørerfaring hos Viermie", "url": "https://viermie.no/sommerstudenter-far-ingeniorerfaring-hos-viermie/", "publication_date": "2025-07-18"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Stillferdig Siksjø sørger for sikkerheten", "url": "https://viermie.no/stillferdig-siksjo-sorger-for-sikkerheten/", "publication_date": "2024-03-22"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Tverrfaglig tilsynsbesøk skal gi bedre service", "url": "https://viermie.no/tverrfaglig-tilsynsbesok-skal-gi-bedre-service/", "publication_date": "2025-03-31"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Viermie linjerydder for å sikre strømforsyningen", "url": "https://viermie.no/viermie-linjerydder-for-a-sikre-stromforsyningen/", "publication_date": "2025-04-30"} :: https://viermie.no/nyheter/ 
+  + news :: {"title": "Viermie samarbeider med Omexom om boligkontroller", "url": "https://viermie.no/viermie-samarbeider-med-omexom-om-boligkontroller/", "publication_date": "2025-09-30"} :: https://viermie.no/nyheter/ 
+  - ('news', 'ledige stillinger | viermie', '2025-06-18')
+  - ('news', 'om viermie', '2025-06-17')
+
+=== 920929257 TONY TREFELLING AS | site=https://tonytrefelling.no/ FIRST_PARTY_CONFIRMED 
+  - ('news', 'hjem - tony trefelling as - profesjonell trepleie siden 1999', '2017-07-11')
+  - ('news', 'kontakt oss - tony trefelling as', '2017-07-11')
+  - ('news', 'om tony trefelling - tony trefelling as', '2017-07-11')
+  - ('social', 'facebook.com/pg/tonytrefelling/reviews')
+
+=== 998518539 BYGGMESTER JØRGEN A. DVERSNES AS | site=https://dversnes.no/ FIRST_PARTY_CONFIRMED 
+  + social :: https://www.facebook.com/byggmesterdversnes/ :: https://dversnes.no/ 
+
+=== 928934977 ALTINGET AS | site=https://altinget.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "30 milepæler for Altinget i Norge - Altinget", "url": "https://altinget.no/artikkel/30-milepaeler-for-altinget-i-norge", "publication_date": "2026-09-07T03:00:00Z"} :: https://altinget.no/artikkel/30-milepaeler-for-altinget-i-norge 
+  + news :: {"title": "Frp vil prege den politiske høsten – med Sverige som forbilde - Altinget", "url": "https://altinget.no/artikkel/frp-vil-prege-den-politiske-hoesten-med-sverige-som-forbilde", "publication_date": "2026-09-04T03:00:00Z"} :: https://altinget.no/artikkel/frp-vil-prege-den-politiske-hoesten-med-sverige-som-forbilde 
+  + news :: {"title": "Stønadslandet Norge: Store geografiske forskjeller  - Altinget", "url": "https://altinget.no/artikkel/stoenadslandet-norge-store-geografiske-forskjeller", "publication_date": "2026-09-07T03:00:00Z"} :: https://altinget.no/artikkel/stoenadslandet-norge-store-geografiske-forskjeller 
+
+=== 929805100 GRIDBOX AS | site=https://gridbox.no/ FIRST_PARTY_CONFIRMED 
+  - ('news', 'fordelene med moderne off-grid strøm: brukervennlighet i fokus - gridbox as', '2024-08-21')
+
+=== 988009911 HYDAL AS | site=https://hydal.no/ FIRST_PARTY_CONFIRMED 
+  + social :: https://no.linkedin.com/company/hydal :: https://hydal.no/ 
+  - ('social', 'linkedin.com/company/hydal')
+
+=== 917939527 ÅLHYTTA AS | site=https://www.aalhytta.no/ None 
+  + news :: {"title": "De klassiske ålhyttegardinene", "url": "https://www.aalhytta.no/inspirasjon-artikler/de-klassiske-lhyttegardinene", "publication_date": "2021-09-13"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Den stilrene kubehylla som glir inn i alle rom", "url": "https://www.aalhytta.no/inspirasjon-artikler/stilren-og-praktisk-kubehylle", "publication_date": "2022-02-24"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Energieffektive oppgraderinger på eldre hytter", "url": "https://www.aalhytta.no/inspirasjon-artikler/energieffektive-oppgraderinger-pa-eldre-hytter", "publication_date": "2022-10-05"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Gjør spiseplassen komplett med en plassbygd sittebenk", "url": "https://www.aalhytta.no/inspirasjon-artikler/gjor-spiseplassen-komplett-med-en-plassbygd-sittebenk", "publication_date": "2022-03-11"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "God belysning på hytta med riktige lamper", "url": "https://www.aalhytta.no/inspirasjon-artikler/god-belysning-pa-hytta-med-riktige-lamper", "publication_date": "2021-12-13"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Hvorfor velge en nøkkelferdig hytte?", "url": "https://www.aalhytta.no/nokkelferdig-hytte", "publication_date": "2021-08-19"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Lager kortreist interiør til Ålhytta", "url": "https://www.aalhytta.no/inspirasjon-artikler/lager-kortreist-interior-til-aalhytta", "publication_date": "2021-09-24"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Med mobil varmestyring holder Karin kontroll på forbruket sitt", "url": "https://www.aalhytta.no/inspirasjon-artikler/med-mobil-varmestyring-holder-karin-kontroll-p-forbruket-sitt", "publication_date": "2023-01-04"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Ny visningshytte på Hellerud", "url": "https://www.aalhytta.no/inspirasjon-artikler/anneks-p-hellerud-lm7bl", "publication_date": "2026-01-21"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Nye visningshytter på Norsk hyttesenter", "url": "https://www.aalhytta.no/inspirasjon-artikler/uthus-til-jul-f56mm", "publication_date": "2025-02-06"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Nytt anneks på Hellerud", "url": "https://www.aalhytta.no/inspirasjon-artikler/anneks-p-hellerud", "publication_date": "2025-05-06"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Odd og Kristin leier med glede ut hytta", "url": "https://www.aalhytta.no/inspirasjon-artikler/odd-og-kristin-leier-med-glede-ut-hytta", "publication_date": "2023-03-29"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Odd Runar har bygd seks Ålhytter på familietomten", "url": "https://www.aalhytta.no/inspirasjon-artikler/odd-runar-har-bygd-seks-ulike-aalhytter-pa-familietomten", "publication_date": "2022-04-07"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Skreddersy hytta til din tomt", "url": "https://www.aalhytta.no/modulhytter", "publication_date": "2022-02-15"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Smart romutnyttelse med plassbygde møbler", "url": "https://www.aalhytta.no/inspirasjon-artikler/smart-romutnyttelse-med-plassbygde-mobler", "publication_date": "2021-10-01"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Ta smarte energigrep på hytta", "url": "https://www.aalhytta.no/inspirasjon-artikler/spar-stroem-paa-hytta", "publication_date": "2022-09-12"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Uthus til jul", "url": "https://www.aalhytta.no/inspirasjon-artikler/uthus-til-jul", "publication_date": "2023-12-20"} :: https://www.aalhytta.no/inspirasjon-artikler 
+  + news :: {"title": "Vi åpner prøvebohyttene for besøk i høstferien", "url": "https://www.aalhytta.no/inspirasjon-artikler/vi-aapner-provebohyttene-for-besok-i-hostferien", "publication_date": "2026-09-18"} :: https://www.aalhytta.no/ 
+  + news :: {"title": "Ålhytta eiendomsmegling", "url": "https://www.aalhytta.no/inspirasjon-artikler/anneks-p-hellerud-lm7bl-abm9t", "publication_date": "2026-03-26"} :: https://www.aalhytta.no/ 
+  + news :: {"title": "Ålhyttatunet åpner på Hellerudsletta", "url": "https://www.aalhytta.no/inspirasjon-artikler/aalhyttatunet-aapner-paa-hellerudsletta", "publication_date": "2026-09-19"} :: https://www.aalhytta.no/ 
+  - ('news', '', '2021-08-19')
+  - ('news', '', '2021-09-13')
+  - ('news', '', '2021-09-24')
+  - ('news', '', '2021-10-01')
+  - ('news', '', '2021-12-13')
+  - ('news', '', '2022-02-15')
+  - ('news', '', '2022-02-24')
+  - ('news', '', '2022-03-11')
+  - ('news', '', '2022-04-07')
+  - ('news', '', '2022-09-12')
+  - ('news', '', '2022-10-05')
+  - ('news', '', '2023-01-04')
+  - ('news', '', '2023-03-29')
+  - ('news', '', '2023-12-20')
+  - ('news', '', '2025-02-06')
+  - ('news', '', '2025-05-06')
+  - ('news', '', '2026-01-21')
+  - ('news', '', '2026-03-26')
+  - ('news', '', '2026-09-18')
+  - ('news', '', '2026-09-19')
+
+=== 914738547 SPITZBERGEN ADVENTURES AS | site=https://spitzbergen-adventures.com/ None 
+  - ('social', 'youtube.com/channel/ucviflft_pvr1c7og60eq_cq')
+
+=== 938147183 KYNNA BRUK AS | site=https://kynnabruk.no/ FIRST_PARTY_CONFIRMED 
+  + social :: https://www.facebook.com/kynnabruk :: https://www.kynnabruk.no/kontakt 
+
+=== 930797790 DINPEDAGOG AS | site=https://dinpedagog.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "ADHD-hjerner finnes i mange varianter – og alle har kvaliteter", "url": "https://www.dinpedagog.no/blog/adhd-hjerner-finnes-i-mange-varianter-og-alle-har-kvaliteter-2", "publication_date": "2026-04-30"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "AuDHD - som en konstant indre konflikt?", "url": "https://www.dinpedagog.no/blog/audhd-som-en-konstant-indre-konflikt", "publication_date": "2025-06-02"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "AuDHD: Hvorfor får du det ikke til – selv når du vet hva du skal gjøre?", "url": "https://www.dinpedagog.no/blog/audhd-hvorfor-far-du-det-ikke-til-selv-nar-du-vet-hva-du-skal-gjore", "publication_date": "2026-04-30"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Fra \"litt intens\" til AuDHD med PDA – en historie du ikke vil gå glipp av", "url": "https://www.dinpedagog.no/blog/medhjerteforhjernen", "publication_date": "2025-05-12"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Hva gjør du hvis fastlegen din ikke tror på ADHD-symptomene dine?", "url": "https://www.dinpedagog.no/blog/fastlege-ikke-utredning", "publication_date": "2025-03-14"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Hva kan du gjøre dersom du får avslag på henvisning om utredning av ADHD?", "url": "https://www.dinpedagog.no/blog/rettighetsklage", "publication_date": "2025-03-07"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Høytfungerende med ADHD: Når mestringsstrategiene ikke holder lenger", "url": "https://www.dinpedagog.no/blog/hoytfungerende-ADHD", "publication_date": "2025-03-14"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Misforståelser og underlige oppfatninger om AuDHD", "url": "https://www.dinpedagog.no/blog/audud-misforst%C3%A5elser", "publication_date": "2026-05-06"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Når ADHD setter seg i kroppen – som ingen finner årsaken til", "url": "https://www.dinpedagog.no/blog/ADHD-skjulte-smerter", "publication_date": "2025-08-18"} :: https://www.dinpedagog.no/blog 
+  + news :: {"title": "Planlegging av fremtidige aktiviteter med dagens kapasitet", "url": "https://www.dinpedagog.no/blog/planlegging-av-fremtidige-aktiviteter", "publication_date": "2026-08-24"} :: https://www.dinpedagog.no/blog 
+
+=== 983535852 OPPLÆRINGSKONTORET FOR TØMRERFAGET I ØSTFOLD | site=https://blitomrer.no/ None 
+  + official_website :: https://blitomrer.no/ ::  
+  - ('official_website', 'https://www.blitomrer.no')
+
+=== 911608103 FELLESKJØPET AGRI SA | site=https://www.felleskjopet.no/ None 
+  + news :: {"title": "Rydd i hagen med en løvblåser", "url": "https://www.felleskjopet.no/artikler/hage/rydd-i-hagen-med-en-loevblaaser", "publication_date": "2025-11-17"} :: https://www.felleskjopet.no/artikler/hage/rydd-i-hagen-med-en-loevblaaser 
+  + social :: https://www.facebook.com/felleskjopet/ :: https://karriere.felleskjopet.no/FKA 
+  + social :: https://www.instagram.com/felleskjopet/ :: https://karriere.felleskjopet.no/FKA 
+
+=== 987632976 BORETTSLAGET BOLSTADHAGEN 21 | site=https://www.nbbo.no/ MANAGER_DESIGNATED NEDRE BUSKERUD BOLIGBYGGELAG
+  + official_website :: https://www.nbbo.no/ ::  
+
+=== 886784082 TALERFORUM NORGE AS | site=https://www.talerforum.no/ None 
+  - ('social', 'x.com/talerforum_no')
+
+=== 921990820 WORKINNTOPPEN C1 BOLIGSAMEIE | site=https://www.agioforvaltning.no/ MANAGER_DESIGNATED AGIO FORVALTNING AS
+  + news :: {"title": "Forvaltningsavtale med Workinntoppen C1 Boligsameie", "url": "https://agioforvaltning.no/2024/04/11/forvaltningsavtale-med-workinntoppen-c1-boligsameie/", "publication_date": "2024-04-11T12:53:18Z"} :: https://agioforvaltning.no/feed/ legal name WORKINNTOPPEN C1 BOLIGSAMEIE in the item's title
+  + official_website :: https://www.agioforvaltning.no/ ::  
+
+=== 921267193 NORDIC BOATS AS | site=https://nordicboats.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "Kjøpe båt? Den ultimate guiden til ditt båtkjøp", "url": "https://nordicboats.no/artikler/kjope-bat-guide", "publication_date": "2026-02-12"} :: https://nordicboats.no/artikler 
+
+=== 887841772 SOMBRA FILM NUF | site=https://www.sombrafilm.com/ None 
+  + news :: {"title": "SONY FS7, First shoot.", "url": "http://www.sombrafilm.com/blog/sony-fs7-first-shoot", "publication_date": "2015-11-02"} :: http://www.sombrafilm.com/blog.html 
+
+=== 992763434 NORWEGIAN SEALS AS | site=https://www.norwegianseals.no/ None 
+  + news :: {"title": "Carco Group Acquires 100% Stake in Norwegian Seals.", "url": "https://www.norwegianseals.no/news", "publication_date": "2024-08-14"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "Entrepreneur Award in Klepp", "url": "https://www.norwegianseals.no/news", "publication_date": "2026-01-02"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "ISO 9001:2015!", "url": "https://www.norwegianseals.no/news", "publication_date": "2025-06-02"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "New measuring machine", "url": "https://www.norwegianseals.no/news", "publication_date": "2024-08-30"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "OTD 2024", "url": "https://www.norwegianseals.no/news", "publication_date": "2024-10-04"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "OTD 2025", "url": "https://www.norwegianseals.no/news", "publication_date": "2025-10-01"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "Things are happening at Norwegian Seals", "url": "https://www.norwegianseals.no/news", "publication_date": "2025-09-05"} :: https://www.norwegianseals.no/news 
+  + news :: {"title": "𝐀 𝐒𝐢𝐠𝐧𝐢𝐟𝐢𝐜𝐚𝐧𝐭 𝐌𝐢𝐥𝐞𝐬𝐭𝐨𝐧𝐞 𝐟𝐨𝐫 𝐍𝐨𝐫𝐰𝐞𝐠𝐢𝐚𝐧 𝐒𝐞𝐚𝐥𝐬", "url": "https://www.norwegianseals.no/news", "publication_date": "2025-11-13"} :: https://www.norwegianseals.no/news 
+
+=== 925852481 GREEN MINERALS AS | site=https://greenminerals.no/ FIRST_PARTY_CONFIRMED 
+  + social :: https://www.linkedin.com/company/greenminerals/mycompany/?viewAsMember=true :: https://greenminerals.no/ 
+  - ('news', 'about - green minerals', '2020-11-16')
+  - ('news', 'contact us - green minerals', '2024-04-22')
+  - ('social', 'linkedin.com/company/greenminerals')
+
+=== 925114510 AS SKAN-KONTROLL | site=https://www.skan-kontroll.no/ None 
+  + news :: {"title": "50-årsjubileum", "url": "https://www.skan-kontroll.no/aktuelt/", "publication_date": "2024-10-08"} :: https://www.skan-kontroll.no/aktuelt/ 
+  + news :: {"title": "ISO 9001:2015 og ISO 14001:2015", "url": "https://www.skan-kontroll.no/aktuelt/", "publication_date": "2026-09-04"} :: https://www.skan-kontroll.no/aktuelt/ 
+  + news :: {"title": "Mennesket Bak Uniformen", "url": "https://www.skan-kontroll.no/aktuelt/", "publication_date": "2024-03-21"} :: https://www.skan-kontroll.no/aktuelt/ 
+
+=== 998549833 NORTHERN BEAT AS | site=https://www.northernbeat.no/ None 
+  - ('social', 'x.com/northernbeat_no')
+
+=== 980429849 EDGE BRANDING AS | site=https://edgebranding.no/ None 
+  + news :: {"title": "AEO-strategi: Hvor bør du egentlig begynne?", "url": "https://edgebranding.no/aktuelt/aeo-strategi-hvor-boer-du-egentlig-begynne", "publication_date": "2026-09-11"} :: https://edgebranding.no/aktuelt/aeo-strategi-hvor-boer-du-egentlig-begynne 
+  + news :: {"title": "Line Høines Olsen blir ny Head of Performance i Edge Branding", "url": "https://edgebranding.no/aktuelt/line-hoeines-olsen-blir-ny-head-of-performance-i-edge-branding", "publication_date": "2026-09-30"} :: https://edgebranding.no/aktuelt/line-hoeines-olsen-blir-ny-head-of-performance-i-edge-branding 
+  + social :: https://no.linkedin.com/company/edge-branding-no :: https://edgebranding.no/ 
+  - ('social', 'linkedin.com/company/edge-branding-no')
+
+=== 940088720 VELDRE ALMENNING | site=https://veldre-almenning.no/ FIRST_PARTY_CONFIRMED 
+  - ('news', '', '2024-06-27')
+
+=== 923143785 ARKITEKT SANDMARK AS | site=https://arkitektsandmark.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "Byggesøknader tar tid", "url": "https://www.arkitektsandmark.no/byggesoknader-tar-tid/", "publication_date": "2023-10-22"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Dette er grunnen til at du bør tinglyse alle privatrettslige erklæringer", "url": "https://www.arkitektsandmark.no/dette-er-grunnen-til-at-du-bor-tinglyse-alle-privatrettslige-erklaeringer/", "publication_date": "2025-0 :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Er dette søknadspliktig eller ikke?", "url": "https://www.arkitektsandmark.no/er-dette-soknadspliktig-eller-ikke/", "publication_date": "2023-10-22"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Fortetting handler ikke bare om flere boliger – det handler om å utvikle tomter på en god måte", "url": "https://www.arkitektsandmark.no/fortetting-et-samfunnsansvar/", "publication_date": "2026-05-06"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Hva menes med tilgjengelig bolig", "url": "https://www.arkitektsandmark.no/hva-menes-med-tilgjengelig-bolig/", "publication_date": "2023-10-22"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Hvordan regner jeg ut utnyttelsesgraden?", "url": "https://www.arkitektsandmark.no/hvordan-regne-ut-utnyttelsesgraden/", "publication_date": "2025-04-05"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Hvordan skal du forholde deg til kvikkleire i din byggesak?", "url": "https://www.arkitektsandmark.no/kvikkleire-i-din-byggesak/", "publication_date": "2025-04-05"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Hvordan veiloven påvirker hvor du kan bygge nytt", "url": "https://www.arkitektsandmark.no/hvordan-veiloven-pavirker-hvor-du-kan-bygge-nytt/", "publication_date": "2024-01-18"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Hvorfor fikk ikke jeg nabovarsel?", "url": "https://www.arkitektsandmark.no/hvorfor-fikk-ikke-jeg-nabovarsel/", "publication_date": "2023-10-22"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Jeg vil bygge selv – Hva må jeg gjøre?", "url": "https://www.arkitektsandmark.no/jeg-vil-bygge-selv-hva-ma-jeg-gjore/", "publication_date": "2024-04-24"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Nabovarsel – hva skal med?", "url": "https://www.arkitektsandmark.no/nabovarsel-hva-skal-med/", "publication_date": "2023-10-22"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Ord og uttrykk du bør kunne", "url": "https://www.arkitektsandmark.no/ord-og-uttrykk-du-bor-kunne/", "publication_date": "2024-01-18"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Planlegg din drømmebolig med funksjonstreet", "url": "https://www.arkitektsandmark.no/funksjonstre/", "publication_date": "2024-01-18"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+  + news :: {"title": "Startpakke for planlegging av ny bolig", "url": "https://www.arkitektsandmark.no/black-friday-startpakke-for-planlegging-av-ny-bolig/", "publication_date": "2025-04-05"} :: https://www.arkitektsandmark.no/privatkunder-innlegg/ 
+
+=== 916866070 SENIORENE AS | site=https://seniorene.no/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "Fordi du fortjener det", "url": "https://www.seniorene.no/blogg/julegave-fra-seniorene-0-0-1-0-0", "publication_date": "2025-03-04"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Hvem er Seniorene?", "url": "https://www.seniorene.no/blogg/hvem-er-seniorene-1", "publication_date": "2026-05-12"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Jobb er viktig for alle", "url": "https://www.seniorene.no/blogg/julegave-fra-seniorene-0-1-0-0", "publication_date": "2025-05-09"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Ny jobb som pensjonist", "url": "https://www.seniorene.no/blogg/ny-jobb-som-pensjonist", "publication_date": "2025-11-05"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Pensjonist og deltidsjobb", "url": "https://www.seniorene.no/blogg/pensjonist-og-deltidsjobb", "publication_date": "2026-02-26"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Seniorene Omsorg", "url": "https://www.seniorene.no/blogg/seniorene-omsorg", "publication_date": "2026-01-29"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Vi er blitt Gaselle bedrift", "url": "https://www.seniorene.no/blogg/vi-er-blitt-gaselle-bedrift", "publication_date": "2026-02-09"} :: https://www.seniorene.no/blogg 
+  + news :: {"title": "Å føle seg nyttig er viktigere enn vi tror", "url": "https://www.seniorene.no/blogg/å-føle-seg-nyttig-er-viktigere-enn-vi-tror", "publication_date": "2026-05-22"} :: https://www.seniorene.no/blogg 
+
+=== 848373672 NYNODATA AS | site=https://nynodata.no/ None 
+  - ('news', 'contact - nynodata as', '2023-09-27')
+  - ('news', 'nynodata as - frå bokmål til nynorsk med nyno og norsøk!', '2023-09-19')
+  - ('news', 'om | nynodata support - nynodata as', '2025-04-29')
+
+=== 916974051 OUTDOOR NORWAY AS | site=https://www.outdoornorway.com/ None 
+  + news :: {"title": "Alta, Norway Northern Lights: Complete Guide to Seeing the Aurora", "url": "https://www.outdoornorway.com/blog/alta-norway-northern-lights", "publication_date": "2026-09-07"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Are There Polar Bears in Norway? Where They Live & How to See Them", "url": "https://www.outdoornorway.com/blog/are-there-polar-bears-in-norway", "publication_date": "2026-09-21"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Bergen Fjords: The Best Fjords to Visit From Bergen", "url": "https://www.outdoornorway.com/blog/bergen-fjords", "publication_date": "2026-10-05"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Bergen Weather by Month: What to Expect Year-Round", "url": "https://www.outdoornorway.com/blog/bergen-weather-by-month", "publication_date": "2026-09-23"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Bergen, Norway in Winter: Things to Do & Complete Travel Guide", "url": "https://www.outdoornorway.com/blog/bergen-norway-winter", "publication_date": "2026-09-14"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Can You See the Northern Lights in Bergen, Norway?", "url": "https://www.outdoornorway.com/blog/can-you-see-the-northern-lights-in-bergen-norway", "publication_date": "2026-09-15"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Hardangerfjord, Norway: The Complete Travel Guide", "url": "https://www.outdoornorway.com/blog/hardangerfjord-norway", "publication_date": "2026-09-29"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "How Outdoor Norway Keeps You Safe on Your Tour", "url": "https://www.outdoornorway.com/blog/how-outdoor-norway-keeps-you-safe-on-your-tour", "publication_date": "2026-09-17"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "Tromsø, Norway Northern Lights: Complete Guide to Seeing the Aurora", "url": "https://www.outdoornorway.com/blog/tromso-norway-northern-lights", "publication_date": "2026-09-10"} :: https://www.outdoornorway.com/blog 
+  + news :: {"title": "What Is Norway Known For? 25 Things Norway Is Famous For", "url": "https://www.outdoornorway.com/blog/what-is-norway-known-for", "publication_date": "2026-09-18"} :: https://www.outdoornorway.com/blog 
+  - ('social', 'facebook.com/diaryofsid')
+  - ('social', 'facebook.com/francomarcio')
+  - ('social', 'instagram.com/diaryofsid')
+  - ('social', 'instagram.com/marciofranco1')
+  - ('social', 'x.com/diaryofsid')
+  - ('social', 'x.com/outdoornorway')
+
+=== 919263490 SAMEIET ÅSVEIEN KIRKEMOGATA | site=https://www.agioforvaltning.no/ MANAGER_DESIGNATED AGIO FORVALTNING AS
+  + official_website :: https://www.agioforvaltning.no/ ::  
+
+=== 931624032 ALL GRAVY NO AS | site=https://allgravy.com/ FIRST_PARTY_CONFIRMED 
+  + news :: {"title": "6 Best Restaurant Staff Apps for Multi-Location Teams (2026)", "url": "https://allgravy.com/post/best-restaurant-staff-apps", "publication_date": "2026-09-18"} :: https://allgravy.com/post/best-restaurant-staff-apps 
+  + news :: {"title": "What is All Gravy? The communications and learning app built for hospitality teams", "url": "https://allgravy.com/post/what-is-all-gravy-communications-learning-app-hospitality", "publication_date": "2026-03-18"} :: https://allgravy.com/post/what-is-all-gravy-communications-learning-app-hospitality 
+  + news :: {"title": "Why Gen Z Quits Your Restaurant (11 Real Reasons)", "url": "https://allgravy.com/post/why-gen-z-quits", "publication_date": "2025-10-10"} :: https://allgravy.com/post/why-gen-z-quits 
+  + social :: https://youtube.com/@all-gravy :: https://allgravy.com/ 
+
+=== 917755256 NEMUS MEDICAL SKØYEN AS | site=https://nemus.no/klinikk/nemus-skoyen/ None 
+  - ('careers_page', 'https://nemus.no/ledige-stillinger')
+  - ('news', 'hoftesmerter: årsaker, vanlige tilstander og øvelser for sterke hofter', '2026-09-17')
+  - ('news', 'høstens vaksinasjoner', '2026-09-17')
+  - ('news', 'kiropraktor søkes til nemus bislett', '2026-10-05')
+  - ('news', 'kiropraktor/turnuskiropraktor søkes til nemus arendal', '2026-09-15')
+  - ('news', 'nemus bekkestua søker kiropraktor', '2026-10-05')
+  - ('news', 'nemus drammen søker terapeut', '2026-08-27')
+  - ('news', 'nemus sortland søker kiropraktor', '2026-09-18')
+  - ('news', 'nemus talentnettverk', '2026-10-01')
+  - ('news', 'skuldersmerter – årsaker, behandling og hjelp på bekkestua', '2026-08-21')
+  - ('news', 'vikar for fastlege i november', '2026-10-02')

@@ -1,5 +1,8 @@
 # Final submission manifest
 
+> This manifest describes **V1**, the officially evaluated `submission-candidate-1` (`104c3c4`). The Revision 1
+> candidate (code `a5e06ce`, not submitted) is described in `docs/revision-1-final.md` §6.
+
 | | |
 |---|---|
 | Repository | https://github.com/Sahvendra7/signalpost-agent |
