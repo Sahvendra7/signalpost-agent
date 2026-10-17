@@ -417,6 +417,8 @@ def run_batch(
                 emit(org, result, rows_by_org[org])
     finally:
         pool.shutdown(wait=False, cancel_futures=True)
+    if state["stop_reason"] is None and state["not_started"] and stop_event is not None and stop_event.is_set():
+        state["stop_reason"] = "interrupted"  # the stop drained the queue (workers returned not-started) before the loop saw it
     for future in waiting:  # hard stop: salvage whatever official facts the company already has
         org = futures[future]
         code = "interrupted" if state["stop_reason"] == "interrupted" else "deadline_exceeded"
