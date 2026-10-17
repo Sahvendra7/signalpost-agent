@@ -1,0 +1,71 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0
+rootdir: /tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/wt-cand
+configfile: pyproject.toml
+collected 359 items
+
+tests/test_c300.py .................                                     [  4%]
+tests/test_contract.py ..........................                        [ 11%]
+tests/test_crawl_safety.py ...................                           [ 17%]
+tests/test_deadline_streaming.py .......F                                [ 19%]
+tests/test_experiments.py ....................                           [ 25%]
+tests/test_identity_adversarial.py ..........                            [ 27%]
+tests/test_identity_status.py .......                                    [ 29%]
+tests/test_input_robustness.py ...............                           [ 33%]
+tests/test_llm_layer.py ...............................                  [ 42%]
+tests/test_poc.py ...................................................... [ 57%]
+..................................................                       [ 71%]
+tests/test_privacy.py ....                                               [ 72%]
+tests/test_public_activity.py ..............                             [ 76%]
+tests/test_public_suffix.py ..                                           [ 77%]
+tests/test_refresh_semantics.py ............                             [ 80%]
+tests/test_revision1.py ....................................             [ 90%]
+tests/test_site_research.py .............                                [ 94%]
+tests/test_starter_characterization.py .......                           [ 96%]
+tests/test_synthesis.py .........                                        [ 98%]
+tests/test_viewer.py .....                                               [100%]
+
+=================================== FAILURES ===================================
+________ ProcessKillTests.test_sigterm_writes_every_row_in_input_order _________
+
+self = <test_deadline_streaming.ProcessKillTests testMethod=test_sigterm_writes_every_row_in_input_order>
+
+    def test_sigterm_writes_every_row_in_input_order(self):
+        with tempfile.TemporaryDirectory() as raw:
+            directory = Path(raw)
+            process = self.start(directory)
+            self.wait_lines(directory / "env.jsonl", 10)
+            process.send_signal(signal.SIGTERM)
+            process.wait(20)
+            self.assertEqual(process.returncode, 0, process.stderr.read().decode()[-2000:])
+            rows = [json.loads(line) for line in (directory / "env.jsonl").read_text().splitlines()]
+            expected = [json.loads(line)["organisation_number"] for line in (directory / "in.jsonl").read_text().splitlines()]
+            self.assertEqual([row["input_organisation_number"] for row in rows], expected)
+            self.assertTrue(any("interrupted" in codes(row) or "deadline_exceeded" in codes(row) for row in rows))
+            report = json.loads((directory / "report.json").read_text())
+>           self.assertEqual(report["deadline"]["stop_reason"], "interrupted")
+E           AssertionError: 'grace_window' != 'interrupted'
+E           - grace_window
+E           + interrupted
+
+tests/test_deadline_streaming.py:176: AssertionError
+- generated xml file: /tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/c300r/suite/cand-warm-11.xml -
+============================= slowest 15 durations =============================
+11.42s call     tests/test_deadline_streaming.py::ProcessKillTests::test_sigkill_early_middle_and_late_keeps_completed_results
+2.51s call     tests/test_deadline_streaming.py::ProcessKillTests::test_cli_deadline_flag_and_env_default
+2.45s call     tests/test_c300.py::ViewerExposure::test_documented_command_writes_the_viewer_by_default
+2.36s call     tests/test_deadline_streaming.py::ProcessKillTests::test_sigterm_writes_every_row_in_input_order
+2.02s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_deadline_leaves_every_row_terminal_and_valid
+2.01s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_results_are_emitted_as_each_company_finishes
+1.72s call     tests/test_revision1.py::ManagerDesignatedTests::test_813396092_bori_site_association_kept_manager_news_not_attributed
+1.50s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_hard_stop_salvages_official_facts_already_fetched
+1.31s call     tests/test_c300.py::ViewerExposure::test_compare_search_and_deep_links_in_a_headless_browser
+1.01s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_projected_overrun_degrades_new_companies_to_official_only
+0.99s call     tests/test_viewer.py::ViewerTests::test_renders_in_a_headless_browser
+0.96s call     tests/test_viewer.py::ViewerTests::test_cli_writes_viewer
+0.90s call     tests/test_crawl_safety.py::SiteSessionRobotsTests::test_crawl_delay_spaces_requests_to_one_origin
+0.73s call     tests/test_c300.py::SynthesisRegression::test_every_statement_is_supported_by_its_cited_claims
+0.68s call     tests/test_public_suffix.py::PublicSuffixTests::test_no_network_and_no_cache_when_parsing_domains
+=========================== short test summary info ============================
+FAILED tests/test_deadline_streaming.py::ProcessKillTests::test_sigterm_writes_every_row_in_input_order
+======================== 1 failed, 358 passed in 38.19s ========================

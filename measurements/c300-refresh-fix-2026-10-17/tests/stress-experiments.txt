@@ -1,0 +1,10 @@
+2/20 failed  05d7566: SIGTERM test, CPU load
+10/10 failed  05d7566: SIGKILL test, fsync slowed
+2/20 failed  candidate 8fba893 (control, same session as race-fix): SIGTERM test, CPU load
+0/20 failed  race-fix 2e83f18: SIGKILL test, fsync slowed
+0/20 failed  race-fix 2e83f18: SIGTERM test, CPU load
+0/20 failed  candidate 8fba893 working tree: SIGKILL test, normal
+0/10 failed  candidate: SIGTERM test, __pycache__ removed
+2/10 failed  candidate: SIGTERM test, CPU load (8 busy loops on 4 CPUs)
+0/10 failed  candidate: SIGTERM test, fsync slowed
+20/20 failed  candidate: SIGKILL test, fsync slowed 30 ms

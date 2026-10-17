@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0 -- /root/.cache/uv/builds-v0/.tmpUhY3CH/bin/python
+rootdir: /home/user/signalpost-agent
+configfile: pyproject.toml
+collecting ... collected 25 items / 22 deselected / 3 selected
+
+tests/test_refresh_semantics.py::WebsiteRefreshTests::test_site_returning_after_an_outage_reports_only_genuine_changes_once PASSED [ 33%]
+tests/test_refresh_semantics.py::WebsiteRefreshTests::test_unreadable_registry_linked_site_is_an_outage_not_a_change PASSED [ 66%]
+tests/test_site_research.py::ResearchTests::test_unreadable_registry_verified_site_is_an_outage PASSED [100%]
+
+======================= 3 passed, 22 deselected in 0.66s =======================

@@ -1,0 +1,196 @@
+{
+ "final-100": {
+  "commit": "8fba8933d55e2630091b4da3ac25acc714a83cec",
+  "started": "2026-10-17T07:42:04Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 97,
+   "partial": 3
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3993,
+  "runtime_s": 124.7,
+  "requests": 765,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 9,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 2585,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 90,
+  "summary_periods_not_compared": 3,
+  "summary_employee_count_unknown": 84,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/live/out/final-100/envelopes.viewer.html",
+   "bytes": 1375639,
+   "companies": 100,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "final-100-refresh": {
+  "commit": "8fba8933d55e2630091b4da3ac25acc714a83cec",
+  "started": "2026-10-17T07:44:10Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 98,
+   "partial": 2
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3997,
+  "runtime_s": 126.9,
+  "requests": 772,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 10,
+   "hiring": 0
+  },
+  "changes_total": 2,
+  "change_types": {
+   "added": 2
+  },
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 2587,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 90,
+  "summary_periods_not_compared": 3,
+  "summary_employee_count_unknown": 84,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/live/out/final-100-refresh/envelopes.viewer.html",
+   "bytes": 1384150,
+   "companies": 100,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "final-911771098": {
+  "commit": "8fba8933d55e2630091b4da3ac25acc714a83cec",
+  "started": "2026-10-17T07:46:18Z",
+  "envelopes": 1,
+  "input_rows": 1,
+  "terminal_status": {
+   "completed": 1
+  },
+  "company_status": {
+   "complete": 1
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 62,
+  "runtime_s": 7.0,
+  "requests": 16,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 1,
+   "leadership": 1,
+   "locations": 1,
+   "websites": 1,
+   "public_footprint": 1,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 29,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 1,
+  "summary_periods_not_compared": 0,
+  "summary_employee_count_unknown": 1,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/live/out/final-911771098/envelopes.viewer.html",
+   "bytes": 44302,
+   "companies": 1,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "r1_vs_new_site_facts": {
+  "runs": [
+   "r1-100",
+   "final-100"
+  ],
+  "companies_with_any_difference": [
+   "929336038"
+  ],
+  "only_in_r1": {
+   "929336038": [
+    [
+     "careers_page",
+     "https://www.sjoloftet.no/jobb-hos-oss"
+    ],
+    [
+     "social_profile",
+     "https://www.facebook.com/sjoloftet/?__tn__=kC-R&eid=ARBNFQzJRooseN-kVcmlENQc45b2AjWuoF3GgIgNJy37zF4FZwRwvulmo23fjVwxmC4MwNXndEe007FD&hc_ref=ARQzwcERJgwIrj4D-Psi4aofASOPhWFdIe9DJZ7iydkxbRAPeNpu8T3RTLNpp6WePro&fref=nf&__xts__[0]=68.ARBg0US4_ZaslxeETc5F8S0dwH0_3RFbFnvUC2EKzCOKPqGWZZ2qCRBM261ioSMK3nQOScOTPpe4wZFhXq6cXpJZlWf29Q7PWPFGeftEBINlf4PpXuVT8b9JS1zcfQHtg5FCP8olIVgNeAiNMR22OjZ5gJFQ4vUOvMZygVfkFNk7TsCPbdhIsQH31MizKKZuOWZWwXucN5Y_PNqdzUgHBD6P-87Tsm-iisOANgovBHYoHtyypIKO2lHZhRB3Gt_Fvhya6_y6MOR3vjVfqrOdQAbv5fJy7Q8EKylESXNLZatIzZ72-_qrgLJKil6zKojvtlk9PQNhnzTfu8nwlS5RCrxZvYAqqXZhLap74v6zVXNbnuOrIoE05JI"
+    ]
+   ]
+  },
+  "only_in_new": {}
+ },
+ "911771098": {
+  "run": "final-911771098",
+  "official_website": [
+   "https://hjsandnes.wordpress.com/"
+  ],
+  "social_profile": [
+   [
+    "ambiguous",
+    null,
+    "5 profile link(s) on the verified site not corroborated as this company's own"
+   ]
+  ],
+  "news_items": 20,
+  "wordpress_profile_urls_in_envelope": []
+ }
+}

@@ -1,0 +1,78 @@
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 5 packages in 8ms
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0
+rootdir: /tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/clean
+configfile: pyproject.toml
+collected 359 items
+
+tests/test_c300.py .................                                     [  4%]
+tests/test_contract.py ..........................                        [ 11%]
+tests/test_crawl_safety.py ...................                           [ 17%]
+tests/test_deadline_streaming.py ........                               [ 19%]
+tests/test_experiments.py ....................                           [ 25%]
+tests/test_identity_adversarial.py ..........                            [ 27%]
+tests/test_identity_status.py .......                                    [ 29%]
+tests/test_input_robustness.py ...............                           [ 33%]
+tests/test_llm_layer.py ...............................                  [ 42%]
+tests/test_poc.py ...................................................... [ 57%]
+..................................................                       [ 71%]
+tests/test_privacy.py ....                                               [ 72%]
+tests/test_public_activity.py ..............                             [ 76%]
+tests/test_public_suffix.py ..                                           [ 77%]
+tests/test_refresh_semantics.py ............                             [ 80%]
+tests/test_revision1.py ....................................             [ 90%]
+tests/test_site_research.py .............                                [ 94%]
+tests/test_starter_characterization.py .......                           [ 96%]
+tests/test_synthesis.py .........                                        [ 98%]
+tests/test_viewer.py .....                                               [100%]
+
+=================================== FAILURES ===================================
+_ ProcessKillTests.test_sigkill_early_middle_and_late_keeps_completed_results [near end] _
+
+self = <test_deadline_streaming.ProcessKillTests testMethod=test_sigkill_early_middle_and_late_keeps_completed_results>
+
+    def test_sigkill_early_middle_and_late_keeps_completed_results(self):
+        for label, threshold in (("first 10", 3), ("middle", 30), ("near end", 55)):
+            with self.subTest(label), tempfile.TemporaryDirectory() as raw:
+                directory = Path(raw)
+                process = self.start(directory)
+                seen = self.wait_lines(directory / "env.jsonl", threshold)
+                process.send_signal(signal.SIGKILL)
+                process.wait(10)
+                self.check_persisted(directory / "env.jsonl", seen)
+>               self.check_persisted_profiles(directory / "prof.jsonl", seen)
+
+tests/test_deadline_streaming.py:157: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_deadline_streaming.ProcessKillTests testMethod=test_sigkill_early_middle_and_late_keeps_completed_results>
+path = PosixPath('/tmp/tmpzzedf23i/prof.jsonl'), at_least = 55
+
+    def check_persisted_profiles(self, path: Path, at_least: int):
+        rows = read_jsonl_tolerant(path)
+>       self.assertGreaterEqual(len(rows), at_least)
+E       AssertionError: 54 not greater than or equal to 55
+
+tests/test_deadline_streaming.py:161: AssertionError
+- generated xml file: /tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/c300r/suite/cleanroom-1-cold.xml -
+============================= slowest 15 durations =============================
+11.31s call     tests/test_deadline_streaming.py::ProcessKillTests::test_sigkill_early_middle_and_late_keeps_completed_results
+2.51s call     tests/test_deadline_streaming.py::ProcessKillTests::test_cli_deadline_flag_and_env_default
+2.32s call     tests/test_c300.py::ViewerExposure::test_documented_command_writes_the_viewer_by_default
+2.12s call     tests/test_deadline_streaming.py::ProcessKillTests::test_sigterm_writes_every_row_in_input_order
+2.02s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_deadline_leaves_every_row_terminal_and_valid
+2.01s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_results_are_emitted_as_each_company_finishes
+1.59s call     tests/test_c300.py::ViewerExposure::test_compare_search_and_deep_links_in_a_headless_browser
+1.50s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_hard_stop_salvages_official_facts_already_fetched
+1.42s call     tests/test_revision1.py::ManagerDesignatedTests::test_813396092_bori_site_association_kept_manager_news_not_attributed
+1.18s call     tests/test_viewer.py::ViewerTests::test_renders_in_a_headless_browser
+1.01s call     tests/test_deadline_streaming.py::InProcessDeadlineTests::test_projected_overrun_degrades_new_companies_to_official_only
+0.90s call     tests/test_crawl_safety.py::SiteSessionRobotsTests::test_crawl_delay_spaces_requests_to_one_origin
+0.87s call     tests/test_viewer.py::ViewerTests::test_cli_writes_viewer
+0.75s call     tests/test_public_suffix.py::PublicSuffixTests::test_no_network_and_no_cache_when_parsing_domains
+0.72s call     tests/test_revision1.py::C12RegressionTests::test_838797172_granne_social_and_honest_hiring_and_news_states
+=========================== short test summary info ============================
+SUBFAILED[near end] tests/test_deadline_streaming.py::ProcessKillTests::test_sigkill_early_middle_and_late_keeps_completed_results
+======================== 1 failed, 359 passed in 39.40s ========================

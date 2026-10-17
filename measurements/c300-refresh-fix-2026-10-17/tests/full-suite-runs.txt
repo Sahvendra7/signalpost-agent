@@ -1,0 +1,37 @@
+# Full-suite runs (tests/suite_run.sh). first-after-edit, cleanroom-*, cand-*: candidate code 8fba893. racefix2-*: optional
+# branch 2e83f18. Logs: the two failures are kept as flake-*.log. Earlier racefix runs of a broken test version were discarded
+# (see docs/c300-refresh-fix.md §4). 'N failed, M passed' counts a failing subtest as the failure.
+first-after-edit exit=0 secs=39.7 ============================= 359 passed in 39.24s =============================
+cleanroom-1-cold exit=1 secs=40.4 ======================== 1 failed, 359 passed in 39.40s ========================
+cleanroom-2 exit=0 secs=38.2 ============================= 359 passed in 37.72s =============================
+cleanroom-3 exit=0 secs=37.6 ============================= 359 passed in 37.06s =============================
+cand-cold-1 exit=0 secs=38.7 ============================= 359 passed in 38.06s =============================
+cand-cold-2 exit=0 secs=38.4 ============================= 359 passed in 37.96s =============================
+cand-cold-3 exit=0 secs=38.7 ============================= 359 passed in 38.22s =============================
+cand-cold-4 exit=0 secs=37.6 ============================= 359 passed in 37.17s =============================
+cand-cold-5 exit=0 secs=38.2 ============================= 359 passed in 37.74s =============================
+cand-cold-6 exit=0 secs=38.3 ============================= 359 passed in 37.74s =============================
+cand-warm-1 exit=0 secs=37.2 ============================= 359 passed in 36.70s =============================
+cand-warm-2 exit=0 secs=38.1 ============================= 359 passed in 37.61s =============================
+cand-warm-3 exit=0 secs=37.9 ============================= 359 passed in 37.46s =============================
+cand-warm-4 exit=0 secs=38.1 ============================= 359 passed in 37.56s =============================
+cand-warm-5 exit=0 secs=37.9 ============================= 359 passed in 37.40s =============================
+cand-warm-6 exit=0 secs=38.9 ============================= 359 passed in 38.44s =============================
+cand-warm-7 exit=0 secs=37.9 ============================= 359 passed in 37.39s =============================
+cand-warm-8 exit=0 secs=38.5 ============================= 359 passed in 38.04s =============================
+cand-warm-9 exit=0 secs=38.2 ============================= 359 passed in 37.76s =============================
+cand-warm-10 exit=0 secs=38.8 ============================= 359 passed in 38.24s =============================
+cand-warm-11 exit=1 secs=38.8 ======================== 1 failed, 358 passed in 38.19s ========================
+cand-warm-12 exit=0 secs=38.9 ============================= 359 passed in 38.39s =============================
+racefix2-cold-1 exit=0 secs=38.5 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.07s =============================
+racefix2-cold-2 exit=0 secs=38.0 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 37.55s =============================
+racefix2-cold-3 exit=0 secs=39.4 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.97s =============================
+racefix2-warm-1 exit=0 secs=38.6 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.06s =============================
+racefix2-warm-2 exit=0 secs=38.8 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.26s =============================
+racefix2-warm-3 exit=0 secs=38.5 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 37.96s =============================
+racefix2-warm-4 exit=0 secs=39.1 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.65s =============================
+racefix2-warm-5 exit=0 secs=39.2 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.75s =============================
+racefix2-warm-6 exit=0 secs=38.8 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.27s =============================
+racefix2-warm-7 exit=0 secs=39.0 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.51s =============================
+racefix2-warm-8 exit=0 secs=39.0 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.51s =============================
+racefix2-warm-9 exit=0 secs=38.6 ok | junit tests=451 failures=0 errors=0 skipped=0 | ============================= 360 passed in 38.00s =============================
