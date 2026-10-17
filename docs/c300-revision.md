@@ -189,15 +189,22 @@ subdomain-hosted verified site, so their output is unchanged by this rule.
 - Focused: `tests/test_c300.py` has 17 tests and 8 subtests. 5 of its 7 social-identity tests fail on `05d7566`; the
   other 2 pin behaviour that was already correct.
 - Full suite on `6487205`: **356 passed, 91 subtests passed**, up from 339 / 83.
-- Two of about 20 full-suite runs (on `7492f32`) had one intermittent failure each. Neither error message was
-  captured. Neither reproduced in 14 clean full-suite runs since then (one under concurrent load), nor in 25 loops of
-  the deadline/streaming, viewer and C300 modules (25/25 clean; the later loops ran on `6487205`):
-  - the first was `test_deadline_streaming::test_sigterm_writes_every_row_in_input_order`, which also passed in 18
-    isolated runs;
-  - the second was a single subtest, which pytest did not name in the summary line.
+- **Intermittent failure, not explained.** 3 of 57 full-suite runs of the new code each had one failure, and no error
+  message was captured:
+  - `test_deadline_streaming::test_sigterm_writes_every_row_in_input_order`, on `7492f32`;
+  - a single unnamed subtest, on `7492f32`;
+  - a single unnamed subtest in the clean-room run below, on `240f91c`.
 
-  Both look timing-related. For comparison, the `05d7566` suite passed 10 of 10 loops. With so few failures this does
-  not show whether the new code made them more likely.
+  Each was the first suite run after a cold start: right after code edits, after the live runs, and in a fresh clone
+  with an empty uv cache. None reproduced in the 54 other full runs (30 of them in a loop under concurrent load), in
+  25 loops of the deadline/streaming, viewer and C300 modules, or in 18 isolated runs of the SIGTERM test.
+  `05d7566` passed 40 of 40 full runs. The subtest-based tests that depend on timing are the existing SIGKILL test
+  and the new headless-browser test. It cannot be ruled out that the new tests (two Chromium sessions, CLI
+  subprocesses) or the default viewer make a cold-start timing failure more likely. No product behaviour was found
+  to differ between runs.
+- **Clean room:** a fresh clone of `240f91c` with an empty uv cache. `uv sync --locked` succeeded. Test runs: the
+  first had 356 passed and 1 subtest failed (above); the next 33 had 356 passed and 91 subtests passed. The
+  documented command on 3 companies exited 0, validation passed, and the run wrote `envelopes.viewer.html`.
 
 | Required regression | Test (`tests/test_c300.py`) |
 | --- | --- |
