@@ -94,10 +94,11 @@ def main(argv: list[str] | None = None, **injected) -> None:
     signal.signal(signal.SIGINT, request_stop)
 
     def on_result(envelopes, profile):
-        for envelope in envelopes:
-            envelope_stream.append(envelope)
+        # The profile first: a persisted envelope then always has its profile, also after a kill between the two writes.
         if profile is not None:
             profile_stream.append(profile)
+        for envelope in envelopes:
+            envelope_stream.append(envelope)
 
     result = run_batch(
         rows,

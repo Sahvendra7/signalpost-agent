@@ -116,6 +116,43 @@ class InProcessDeadlineTests(unittest.TestCase):
         self.assertTrue(output["report"]["validation"]["passed"])
 
 
+class StreamOrderTests(unittest.TestCase):
+    ORDER_SCRIPT = """
+import sys
+from pathlib import Path
+sys.path[:0] = [sys.argv[1] + "/src", sys.argv[1] + "/tests"]
+from norway_company_agent.streaming import JsonlStream
+original = JsonlStream.append
+log = open(sys.argv[2], "a", encoding="utf-8")
+def append(stream, row):
+    log.write(("profile" if Path(stream._handle.name).name == "prof.jsonl" else "envelope") + " " + row["organisation_number"] + "\\n")
+    log.flush()
+    return original(stream, row)
+JsonlStream.append = append
+sys.argv = [sys.argv[0]] + sys.argv[3:]
+exec(compile(open(HELPER, encoding="utf-8").read(), HELPER, "exec"), {"__name__": "__main__", "__file__": HELPER})
+"""
+
+    def test_each_profile_is_persisted_before_its_envelope(self):
+        # Root cause of the intermittent SIGKILL subtest failure ("54 not greater than or equal to 55"): the envelope was
+        # fsynced before its profile, so a kill between the two left one envelope without a profile. The CLI runs in its
+        # own process: in-process, cli.main may os._exit when other threads are alive.
+        with tempfile.TemporaryDirectory() as raw:
+            directory = Path(raw)
+            script = directory / "order.py"
+            script.write_text(self.ORDER_SCRIPT.replace("HELPER", repr(str(HELPER))), encoding="utf-8")
+            args = [sys.executable, str(script), str(ROOT), str(directory / "order.txt"), "--count", "3", "--write-input", str(directory / "in.jsonl"), "--",
+                    "--organisations", str(directory / "in.jsonl"), "--output", str(directory / "env.jsonl"), "--profiles-output", str(directory / "prof.jsonl"),
+                    "--report", str(directory / "report.json"), "--run-id", "order", "--workers", "1", "--no-viewer"]
+            completed = subprocess.run(args, capture_output=True, text=True, timeout=120)
+            self.assertEqual(completed.returncode, 0, completed.stderr[-2000:])
+            order = [tuple(line.split()) for line in (directory / "order.txt").read_text().splitlines()]
+        orgs = sorted({org for _, org in order})
+        self.assertEqual(len(orgs), 3)
+        for org in orgs:
+            self.assertLess(order.index(("profile", org)), order.index(("envelope", org)), org)
+
+
 class ProcessKillTests(unittest.TestCase):
     COUNT = 60
 
