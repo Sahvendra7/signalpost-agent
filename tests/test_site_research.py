@@ -117,6 +117,20 @@ class ResearchTests(unittest.TestCase):
         result = research_company_site(profile(email="post@fjordtest.no"), SiteSession(FakeWeb(site_pages()), resolver=lambda host: True), max_requests=1)
         self.assertEqual(result.status, "budget_exhausted")
 
+    def test_unreadable_registry_verified_site_is_an_outage(self):
+        from norway_company_agent.pipeline import _site_research
+
+        pages = site_pages()
+        pages["https://fjordtest.no/robots.txt"] = (503, b"")
+        for session, max_requests, state in ((SiteSession(FakeWeb(pages)), 30, "robots_unreachable"), (SiteSession(FakeWeb(site_pages())), 0, "budget_exhausted")):
+            result = research_company_site(profile(), session, registry_verified_url="https://fjordtest.no/", max_requests=max_requests)
+            self.assertEqual((result.status, result.pages, result.candidates[0]["outcome"]), ("unreadable", [], state))
+        target = profile()
+        target["evidence"]["website"] = evidence("website", "available", "registry_linked_company_website", "https://fjordtest.no/", value={"final_url": "https://fjordtest.no/", "identity_assessment": {"publishable": True}}, content_sha256="c" * 64)
+        record, _ = _site_research(target, SiteSession(FakeWeb(pages)))
+        self.assertEqual((record["status"], record["source_url"]), ("source_error", "https://fjordtest.no/"))
+        self.assertIn("could not be checked in this run (robots_unreachable)", record["note"])
+
 
 class OutboundPolicyTests(unittest.TestCase):
     def test_non_public_hosts_are_never_fetched(self):

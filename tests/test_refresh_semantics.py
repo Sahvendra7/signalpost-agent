@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "tests"))
 
 from helpers.fakeweb import FakeBrreg, entity, injected, valid_orgs  # noqa: E402
+from norway_company_agent.claims import SITE_FAMILIES  # noqa: E402
 from norway_company_agent.contract import validate_envelope  # noqa: E402
 from norway_company_agent.evidence import evidence  # noqa: E402
 from norway_company_agent.pipeline import InputRow, run_batch  # noqa: E402
@@ -112,6 +113,59 @@ class WebsiteRefreshTests(unittest.TestCase):
         env3, _ = run(brreg, prof2, site_fetcher=FakeWeb(pages), **common)
         self.assertIn(("removed", "social_profile"), {(item["change_type"], item.get("field")) for item in env3["changes"]})
         self.assertIsNone(claim(env3, "social_profile"))
+
+    def test_unreadable_registry_linked_site_is_an_outage_not_a_change(self):
+        # Found in the C300 revision validation (929336038, 2026-10-17): the robots.txt of a REGISTRY_LINKED site was
+        # unreachable in one run, so no page was read. The site stage still reported the site as checked
+        # ("not_available" site facts) and a refresh reported the previous profile and careers page as removed.
+        from test_contract import make_website_fetcher, website_record
+        from test_site_research import ORG as SITE_ORG, FakeWeb, site_pages
+
+        body = entity(SITE_ORG, name="Fjordtest Programvare AS")
+        body["hjemmeside"] = "fjordtest.no"
+        brreg = FakeBrreg({SITE_ORG: body})
+        v1 = website_record("https://fjordtest.no/", title="Fjordtest Programvare AS", text=f"Fjordtest Programvare AS org.nr {SITE_ORG}")
+        common = {"org": SITE_ORG, "resolver": lambda host: True, "website_fetcher": make_website_fetcher({"fjordtest.no": v1})}
+        outage = site_pages()
+        outage["https://fjordtest.no/robots.txt"] = (503, b"")
+
+        def website(envelope):
+            item = claim(envelope, "official_website")
+            return {key: item.get(key) for key in ("value", "confidence", "method", "evidence_ids", "carried_forward")}
+
+        env1, prof1 = run(brreg, site_fetcher=FakeWeb(site_pages()), **common)
+        self.assertEqual(prof1["evidence"]["site_research"]["value"]["identity_class"], "REGISTRY_LINKED")
+        for field in ("official_website", "careers_page", "social_profile", "news_item", "job_posting"):
+            self.assertTrue(claim(env1, field), field)
+
+        # The outage alone: the site families could not be checked; the v1 registry-gate website claim is unchanged.
+        fresh, fresh_profile = run(brreg, site_fetcher=FakeWeb(outage), **common)
+        record = fresh_profile["evidence"]["site_research"]
+        self.assertEqual(record["status"], "source_error")
+        self.assertIn("robots_unreachable", record["note"])
+        for _, field in SITE_FAMILIES:
+            states = [(item["availability"], item["reason"]) for item in fresh["claims"] if item["field"] == field]
+            self.assertEqual(len(states), 1, field)
+            self.assertEqual(states[0][0], "failed", field)
+            self.assertIn("could not be checked", states[0][1])
+        self.assertEqual(website(fresh), website(env1))
+        self.assertEqual(fresh["modules"]["site_research"]["state"], "source_error")
+        self.assertEqual(validate_envelope(fresh), [])
+
+        # Refresh: the previous site facts are carried forward with their values; nothing is reported removed.
+        env2, _ = run(brreg, prof1, site_fetcher=FakeWeb(outage), **common)
+        self.assertNotIn("removed", types(env2))
+        self.assertEqual(set(types(env2)), {"unavailable"})
+        unavailable = [item for item in env2["changes"] if item["change_type"] == "unavailable"]
+        self.assertEqual([item["module"] for item in unavailable], ["site_research"])
+        self.assertEqual(unavailable[0]["current_attempt"]["status"], "source_error")
+        self.assertEqual(unavailable[0]["fields_retained"], ["careers_page", "job_posting", "news_item", "social_profile"])
+        for field in ("careers_page", "social_profile", "news_item", "job_posting"):
+            kept = claim(env2, field)
+            self.assertEqual((kept["value"], kept.get("carried_forward")), (claim(env1, field)["value"], True), field)
+        self.assertEqual(website(env2), website(env1))
+        self.assertEqual(env2["modules"]["site_research"]["state"], "carried_forward")
+        self.assertEqual(validate_envelope(env2), [])
 
 
 class CarryForwardUnitTests(unittest.TestCase):
