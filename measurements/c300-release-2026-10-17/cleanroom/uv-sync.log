@@ -1,0 +1,53 @@
+Using CPython 3.13.14 interpreter at: /usr/bin/python3.13
+Creating virtual environment at: .venv
+Resolved 111 packages in 2ms
+Downloading babel (9.7MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading lxml (5.0MiB)
+ Downloading pydantic-core
+   Building jstyleson==0.0.2
+ Downloading lxml
+ Downloading babel
+      Built jstyleson==0.0.2
+Prepared 40 packages in 1.25s
+Installed 40 packages in 35ms
+ + annotated-types==0.8.0
+ + babel==2.18.0
+ + beautifulsoup4==4.15.0
+ + certifi==2026.7.22
+ + charset-normalizer==3.5.1
+ + courlan==1.4.0
+ + dateparser==1.4.2
+ + extruct==0.18.0
+ + filelock==3.32.3
+ + html-text==0.7.1
+ + html5lib==1.1
+ + htmldate==1.10.0
+ + idna==3.19
+ + jstyleson==0.0.2
+ + justext==3.0.2
+ + lxml==6.1.2
+ + lxml-html-clean==0.4.5
+ + mf2py==2.0.1
+ + pydantic==2.13.4
+ + pydantic-core==2.46.4
+ + pyparsing==3.3.2
+ + pypdf==6.16.1
+ + pyrdfa3==3.6.5
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.3.post1
+ + rdflib==7.6.0
+ + regex==2026.7.19
+ + requests==2.34.2
+ + requests-file==3.0.1
+ + six==1.17.0
+ + soupsieve==2.9.2
+ + tld==0.13.2
+ + tldextract==5.3.2
+ + trafilatura==2.2.0
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+ + tzlocal==5.4.4
+ + urllib3==2.7.0
+ + w3lib==2.4.1
+ + webencodings==0.6.1

@@ -1,0 +1,9 @@
+full-cold-1 exit=0 secs=47.0 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 46.55s =============================
+full-warm-1 exit=0 secs=42.0 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 41.44s =============================
+full-warm-2 exit=0 secs=42.4 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 41.83s =============================
+full-cold-2 exit=0 secs=42.9 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 42.37s =============================
+full-warm-3 exit=0 secs=42.9 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 42.31s =============================
+full-warm-4 exit=0 secs=42.6 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 42.05s =============================
+cleanroom-1 exit=0 secs=44.0 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 42.78s =============================
+cleanroom-2 exit=0 secs=42.4 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 41.89s =============================
+cleanroom-3 exit=0 secs=41.2 ok | junit tests=452 failures=0 errors=0 skipped=0 | ============================= 361 passed in 40.67s =============================

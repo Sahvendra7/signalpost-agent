@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0 -- /root/.cache/uv/builds-v0/.tmpiDLwfu/bin/python
+rootdir: /tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/wt-fixed
+configfile: pyproject.toml
+collecting ... collected 10 items
+
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_deadline_leaves_every_row_terminal_and_valid PASSED [ 10%]
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_hard_stop_salvages_official_facts_already_fetched PASSED [ 20%]
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_projected_overrun_degrades_new_companies_to_official_only PASSED [ 30%]
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_results_are_emitted_as_each_company_finishes PASSED [ 40%]
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_stop_event_emits_every_remaining_row PASSED [ 50%]
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_stop_that_drains_the_queue_while_the_loop_waits_is_reported_as_interrupted PASSED [ 60%]
+tests/test_deadline_streaming.py::StreamOrderTests::test_each_profile_is_persisted_before_its_envelope PASSED [ 70%]
+tests/test_deadline_streaming.py::ProcessKillTests::test_cli_deadline_flag_and_env_default PASSED [ 80%]
+tests/test_deadline_streaming.py::ProcessKillTests::test_sigkill_early_middle_and_late_keeps_completed_results 
+tests/test_deadline_streaming.py::ProcessKillTests::test_sigkill_early_middle_and_late_keeps_completed_results PASSED [ 90%]
+tests/test_deadline_streaming.py::ProcessKillTests::test_sigterm_writes_every_row_in_input_order PASSED [100%]
+
+==================== 10 passed, 3 subtests passed in 26.45s ====================

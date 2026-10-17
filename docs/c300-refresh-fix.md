@@ -1,4 +1,4 @@
-# C300 candidate with the refresh fix
+# C300 release candidate: refresh fix and race fix
 
 **Not submitted.** No score is claimed. Every number below is a local measurement made on 2026-10-17.
 
@@ -7,11 +7,103 @@
 | C300 code under test (base) | `648720516ced747412817ecf1c38ce1de75296da` |
 | C300 candidate and its documentation (base of this branch) | `369fccd13eda73014b8f6a8888c67a5c4e6a3b5f` |
 | Refresh fix, as developed on older Revision 1 code | `7a8cebac99d9e06b5e610f1e5967365be44a592c` (branch `claude/pensive-wright-kh4sz8`) |
-| **Code under test** | **`8fba8933d55e2630091b4da3ac25acc714a83cec`** |
-| **Candidate** | The head of `claude/c300-refresh-fix` that adds this document. It is code-identical to `8fba893`: `git diff 8fba893 HEAD -- src tests scripts pyproject.toml uv.lock` is empty. |
-| Optional, not in the candidate | `2e83f18ba8b81892414e4602d052b4ba21432b8d` (branch `claude/c300-refresh-fix-test-races`): fixes the two races behind the intermittent test failures (§4) |
+| Refresh-fix code (§1–§4) | `8fba8933d55e2630091b4da3ac25acc714a83cec`; its candidate `7879be3f79e691593b85e0c6e59fe7637c77b557` is **superseded** |
+| Race fix, as developed | `2e83f18ba8b81892414e4602d052b4ba21432b8d` (branch `claude/c300-refresh-fix-test-races`) |
+| **Final code under test** (§0) | **`71fa494c2f2b774a6bdec4669577243429f7f36c`**: `8fba893` plus the race fix |
+| **Final release candidate** | The head of `claude/c300-refresh-fix` that adds this section. It is code-identical to `71fa494`: `git diff 71fa494 HEAD -- src tests scripts pyproject.toml uv.lock` is empty. Its full SHA is recorded in the release report; a commit cannot contain its own SHA. |
 
-`main` and the V1 tag `submission-candidate-1` are untouched.
+`main` (`5575d0c`) and the V1 tag `submission-candidate-1` (`104c3c4`) are untouched. No Gemini configuration or
+instruction file is in the candidate.
+
+**Where each measurement ran.** §0 ran on `71fa494`. §1–§4 ran on `8fba893` and are kept as the record of the refresh
+fix. None ran on the documentation commit itself, which differs from `71fa494` only in `docs/`, `measurements/` and
+`HANDOFF.md`.
+
+## 0. Final release: the race fix integrated (code `71fa494`)
+
+### Changes
+
+Only `cli.py`, `pipeline.py` and `tests/test_deadline_streaming.py` changed. The source is identical to `2e83f18`.
+Relative to `8fba893`, `src/` differs only in `cli.py` (+3/−2) and `pipeline.py` (+2).
+
+| Change | Effect |
+| --- | --- |
+| `cli.on_result` | Each company's profile is appended and fsynced **before** its result line. A process killed between the two writes can no longer leave a published result without its profile. After a kill, the profiles file can at most hold one more company than the results file, and `--resume` then reuses that profile. |
+| `run_batch` | When a stop request (SIGTERM) arrives while the main loop is inside `wait()`, the remaining workers return "not started" and the queue drains before the loop looks again. The report then records `stop_reason: "interrupted"` instead of falling back to `grace_window`. This applies only when some company was actually not started. The envelopes were already correct. |
+| `StreamOrderTests` (from `2e83f18`) | Runs the CLI in a subprocess and checks that every profile is written before its result line |
+| `test_stop_that_drains_the_queue_while_the_loop_waits_is_reported_as_interrupted` (new) | Reproduces the stop race on every run: the patched `wait()` sets the stop and returns only once the queue is drained. This is the only addition beyond `2e83f18`, because the stop race otherwise had only a timing-dependent test. |
+
+### Focused regressions: unfixed (`7879be3`) against fixed (`71fa494`)
+
+Measurements are in `measurements/c300-release-2026-10-17/`. The stress runs ran interleaved, an unfixed run then a
+fixed run, under identical conditions. Each run's stdout, stderr and exit code are kept, and a run without a pytest
+summary would have counted as a failure (none occurred).
+
+| Check | Unfixed `7879be3` | Fixed `71fa494` |
+| --- | --- | --- |
+| Deterministic: profile before result line (`StreamOrderTests`) | **fails** (`1 not less than 0`) | passes |
+| Deterministic: stop that drains the queue during `wait()` | **fails** (`'grace_window' != 'interrupted'`) | passes; 15 of 15 repeats |
+| SIGKILL test, fsync slowed by 30 ms, 20 runs | **20 failed** (`2 not greater than or equal to 3`: a result without its profile) | 20 passed |
+| SIGTERM test under CPU load (8 busy loops on 4 CPUs), 30 runs | **1 failed** (`'grace_window' != 'interrupted'`), 29 passed | 30 passed |
+
+1 against 0 in 30 load runs is weak evidence on its own. The deterministic test is what proves the stop fix.
+
+### Final validation on `71fa494`, in the requested order
+
+| # | Step | Result |
+| --- | --- | --- |
+| 1 | `tests/test_deadline_streaming.py` | 10 passed, 3 subtests passed |
+| 2 | `tests/test_refresh_semantics.py` | 12 passed (includes the three outage and refresh regressions) |
+| 3 | Full suite, complete output and JUnit kept, 6 runs (2 cold, 4 warm) | **6 of 6 passed**: 361 tests and 91 subtests (452 JUnit cases), 0 failures, 0 errors, 0 skipped. The headless-Chromium tests ran. |
+| 4 | Fresh `git clone` of the branch at `71fa494`, empty `UV_CACHE_DIR`, `uv sync --locked` | Install OK. Full suite **3 of 3 passed**, including the first (cold) run. The documented command on 3 companies exited 0, validation passed, and it wrote the viewer. |
+| 5 | Documented command (via `run_final.sh`: 8 workers, no `--bulk`, snapshots, host audit) on the fixed 100 (SHA-256 `80eb79e6…`), its refresh with `--previous-profiles`, and 911771098 | See below |
+| 6 | Evidence validation (`analyse.py`: contract, every snapshot hash, summary support, hosts, viewer), offline refresh replay, result/profile consistency, secret scan | See below |
+
+| | 100 | Refresh of the 100 | 911771098 (WordPress case) |
+| --- | --- | --- | --- |
+| Terminal results / input order | 100 `completed` / yes | 100 `completed` / yes | 1 `completed` / yes |
+| Results / profiles; every result has its profile; duplicates | 100 / 100; yes; none | 100 / 100; yes; none | 1 / 1; yes; none |
+| Validation; contract findings with every snapshot hash re-verified | passed; 0 (3,997) | passed; 0 (3,997) | passed; 0 (62) |
+| Summary statements / unsupported | 2,586 / **0** | 2,586 / **0** | 29 / **0** |
+| Period comparisons / not comparable / employee count unknown / shown as 0 | 90 / 3 / 84 / 0 | 90 / 3 / 84 / 0 | 1 / 0 / 1 / 0 |
+| Viewer written by the documented command | yes | yes | yes |
+| Change events | — | **0** | — |
+| Runtime / requests / cost | 130.4 s / 769 / $0 | 127.4 s / 770 / $0 | 7.2 s / 16 / $0 |
+| Platform, Brave, NAV or wordpress.com hosts | none | none | none |
+| stderr | empty | empty | empty |
+
+- **WordPress/LinkedIn stays rejected.** 911771098 keeps its verified website and 20 dated posts. Its social profile is
+  `ambiguous`, and no WordPress.com profile URL appears in the envelope.
+- **Site facts against the previous candidate's run (`8fba893`):** identical for 99 of 100 companies. The difference
+  is 929336038 Sjøloftet, whose site answered in this run but had an outage in that one (§3). It now has the same
+  Facebook profile and careers page as C300.
+- **Outages keep old facts.** The live refresh had no outage to observe (0 events). The behaviour is covered by the
+  three refresh regression tests (step 2) and was seen live on `8fba893` (§3).
+- **Offline refresh replay** (`scripts/run_refresh_replay.py`): 2 of 2 expected changes, 0 false, idempotent,
+  `qualification_passed: true`.
+- **Secrets:** no hit in the repository tree or in any file the agent writes (envelopes, profiles, reports, viewers,
+  logs). The only pattern hits were inside 7 snapshot files, which are byte-exact copies of third-party public pages
+  (e.g. a site's own client-side map key). Snapshots are not committed. No Brave, NAV or LLM variable is set.
+- **The 1,200-company batch was not re-run.** The race fix changes only the order of two writes and one report label
+  after a stop, and the 100-company run showed no defect or runtime concern.
+
+### Known limitations
+
+- **No official score.** Builderr's pool, matching rules, runtime budget and registry snapshot format are not
+  published (`docs/official-scoring-model.md`). The deadline default (2,700 s) is a fail-safe; the evaluator must set
+  `SIGNALPOST_DEADLINE_SECONDS`.
+- **External coverage remains low.** On the fixed 100: websites 14, public footprint 10, hiring 0. Website discovery
+  was deliberately not changed.
+- **Live drift.** Company sites change between runs (Sjøloftet above). Single-run site facts can differ from any earlier
+  run.
+- **Row-level code after SIGTERM.** Companies not started because of a stop request carry the error code
+  `deadline_exceeded` with the note "deadline: company not researched before the batch deadline". Only the report's `stop_reason` says `interrupted`. This
+  is pre-existing, and was left unchanged to keep the release narrow.
+- **After a SIGKILL,** the profiles file may hold one company more than the results file. This is by design now; the
+  reverse can no longer happen.
+- **Snapshots** contain whatever the captured public pages contain, including those sites' own client-side keys.
+- **Test environment.** The headless-viewer tests need `node` and a global `playwright`; without them they are skipped,
+  not failed.
 
 ## 1. What was ported, and how
 
@@ -120,7 +212,7 @@ experiments (`tests/stress-experiments.txt`):
 **Conclusions:**
 
 - Both races predate C300.
-- The refresh fix does not touch either path and **does not resolve them**. They remain in the candidate.
+- The refresh fix does not touch either path and **does not resolve them**. They remained in `8fba893`; §0 fixes them in `71fa494`.
 - No test was removed, skipped or weakened.
 
 **The optional fix** (`2e83f18`, not in the candidate) has two parts:
@@ -130,4 +222,4 @@ experiments (`tests/stress-experiments.txt`):
 
 It adds one subprocess test (`StreamOrderTests`, which fails on the candidate). It passed 12 of 12 full-suite runs (3
 cold, 9 warm; 360 tests and 91 subtests). A first version of that test called the CLI in-process. The CLI can `os._exit` when other threads are alive, which ended pytest silently with exit code 0 partway through the suite. Those 9 runs were discarded. The test now runs the CLI in a subprocess, and `tests/suite_run.sh` reports any run without a pytest summary or JUnit file as TRUNCATED. The optional fix changes no output of a normal run. After a kill it changes only which file
-gets the last line, and after a SIGTERM only the report label. Including it is the owner's decision.
+gets the last line, and after a SIGTERM only the report label. The owner decided to include it (§0).

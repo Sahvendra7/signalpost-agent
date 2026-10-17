@@ -12,7 +12,7 @@ This is where the work stands for whoever continues on another machine or accoun
 | V1 | `104c3c4`, tag `submission-candidate-1`. C12: 57.87/100 (recall 8.87, precision 29, synthesis 12, UX 8) |
 | Revision 1 | `05d7566` (code `a5e06ce`), submitted by the owner. Builderr C300 directional row (2026-10-17): 56.85/100 (recall 26.18, precision 28.27, synthesis 2.40, UX 0). Which tree Builderr processed is not determinable from the available metadata. |
 | C300 revision candidate | Code `6487205` (code commits `7492f32`, `6487205`); the docs/measurements commit on top is code-identical. Not submitted, not scored. See `docs/c300-revision.md`. |
-| **C300 + refresh-fix candidate** | Branch `claude/c300-refresh-fix`. Code `8fba893` (C300 plus the ported refresh fix from `7a8ceba`); the docs/measurements commit on top is code-identical. **Not submitted, not scored.** See `docs/c300-refresh-fix.md`. Optional race fix for the intermittent test failures: `2e83f18` on `claude/c300-refresh-fix-test-races`. |
+| **Final release candidate** | Branch `claude/c300-refresh-fix`. Code `71fa494` (C300 `6487205` + refresh fix `8fba893` + race fix); the docs commit on top is code-identical. **Not submitted, not scored.** See `docs/c300-refresh-fix.md` §0 and `docs/final-submission-manifest.md`. Superseded: `7879be3` (code `8fba893`). |
 
 ## Read in this order
 

@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0 -- /root/.cache/uv/builds-v0/.tmpjHt1ye/bin/python
+rootdir: /tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/wt-fixed
+configfile: pyproject.toml
+collecting ... collected 12 items
+
+tests/test_refresh_semantics.py::RefreshScenarioTests::test_added_and_removed_roles_are_typed PASSED [  8%]
+tests/test_refresh_semantics.py::RefreshScenarioTests::test_genuine_404_is_a_removal_not_an_outage PASSED [ 16%]
+tests/test_refresh_semantics.py::RefreshScenarioTests::test_outage_persisting_over_two_runs_keeps_original_evidence_date PASSED [ 25%]
+tests/test_refresh_semantics.py::RefreshScenarioTests::test_run1_good_run2_outage_run3_change_run4_same PASSED [ 33%]
+tests/test_refresh_semantics.py::WebsiteRefreshTests::test_site_facts_carried_on_outage_then_removed_when_gone PASSED [ 41%]
+tests/test_refresh_semantics.py::WebsiteRefreshTests::test_site_returning_after_an_outage_reports_only_genuine_changes_once PASSED [ 50%]
+tests/test_refresh_semantics.py::WebsiteRefreshTests::test_unreadable_registry_linked_site_is_an_outage_not_a_change PASSED [ 58%]
+tests/test_refresh_semantics.py::CarryForwardUnitTests::test_no_previous_is_a_noop PASSED [ 66%]
+tests/test_refresh_semantics.py::CarryForwardUnitTests::test_registry_linked_site_failing_identity_with_gate_up_is_unverified PASSED [ 75%]
+tests/test_refresh_semantics.py::CarryForwardUnitTests::test_registry_linked_site_is_carried_when_the_registry_website_gate_is_down PASSED [ 83%]
+tests/test_refresh_semantics.py::CarryForwardUnitTests::test_site_failing_identity_is_unverified_not_carried PASSED [ 91%]
+tests/test_refresh_semantics.py::CarryForwardUnitTests::test_unreachable_site_is_carried PASSED [100%]
+
+============================== 12 passed in 1.11s ==============================

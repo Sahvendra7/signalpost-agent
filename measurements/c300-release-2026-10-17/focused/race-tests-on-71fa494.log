@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0 -- /root/.cache/uv/builds-v0/.tmp51Jz1Z/bin/python
+rootdir: /home/user/signalpost-agent
+configfile: pyproject.toml
+collecting ... collected 10 items / 8 deselected / 2 selected
+
+tests/test_deadline_streaming.py::InProcessDeadlineTests::test_stop_that_drains_the_queue_while_the_loop_waits_is_reported_as_interrupted PASSED [ 50%]
+tests/test_deadline_streaming.py::StreamOrderTests::test_each_profile_is_persisted_before_its_envelope PASSED [100%]
+
+======================= 2 passed, 8 deselected in 3.74s ========================

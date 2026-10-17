@@ -1,14 +1,35 @@
 # Final submission manifest
 
-> This manifest describes **V1**, the officially evaluated `submission-candidate-1` (`104c3c4`). Revision 1 (code
-> `a5e06ce`, docs commit `05d7566`) is described in `docs/revision-1-final.md` §6. The **C300 revision candidate**
-> (code `6487205`, not submitted) is described in `docs/c300-revision.md` §G. Its run command is the same as below and
-> also writes `out/envelopes.viewer.html`. The repository's default branch `main` is an older tree: name the commit.
+## Current release candidate: C300 + refresh fix + race fix (not submitted)
 
 | | |
 |---|---|
 | Repository | https://github.com/Sahvendra7/signalpost-agent |
-| **Final submission candidate** | The commit tagged `submission-candidate-1`. Its full SHA is given by `git rev-parse submission-candidate-1` and stated in the submission email. |
+| Branch | `claude/c300-refresh-fix` (not `main`; `main` is an older tree, so name the commit) |
+| **Release candidate commit** | The head of `claude/c300-refresh-fix` that adds this section (documentation only). Its full SHA is stated in the release report and the submission email; a commit cannot contain its own SHA. |
+| **Code under test** | **`71fa494c2f2b774a6bdec4669577243429f7f36c`**. The candidate is code-identical to it: `git diff 71fa494 <candidate> -- src tests scripts pyproject.toml uv.lock` is empty. |
+| Code lineage | C300 `6487205`, then the refresh fix `8fba893` (ported from `7a8ceba`), then the race fix `71fa494` (ported from `2e83f18`) |
+| Install | `uv sync --locked` |
+| Run (documented command; writes `<output>.viewer.html` too) | `uv run python scripts/run_competition_batch.py --organisations <BATCH.jsonl> --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --snapshot-dir out/snapshots --run-id <RUN_ID>` |
+| Tests on `71fa494` | Full suite 6 of 6 runs passed, plus 3 of 3 in the clean room: 361 tests and 91 subtests each, 0 failures, 0 skipped |
+| Clean room on `71fa494` | Fresh clone, empty uv cache, `uv sync --locked` OK; documented command OK, with the viewer written |
+| 100-company check on `71fa494` | 100/100 `completed` in input order; 0 contract findings (3,997 hashes re-verified); 0 unsupported summary statements; viewer written; refresh with 0 events; no platform, Brave or NAV host |
+| Default external cost / APIs | $0. Only the public Brønnøysund registry APIs and the companies' own websites. |
+| LLM / Brave / NAV | Off / not used / not used |
+| Details and known limitations | `docs/c300-refresh-fix.md` §0 |
+
+No measurement ran on the documentation commit itself; all ran on `71fa494`.
+
+## V1 (officially evaluated; historical)
+
+> The rest of this manifest describes **V1**, the officially evaluated `submission-candidate-1` (`104c3c4`). That tag
+> is unchanged. Revision 1 (code `a5e06ce`, docs commit `05d7566`) is described in `docs/revision-1-final.md` §6. The
+> C300 revision (code `6487205`) is described in `docs/c300-revision.md` §G.
+
+| | |
+|---|---|
+| Repository | https://github.com/Sahvendra7/signalpost-agent |
+| V1 submission | The commit tagged `submission-candidate-1`. Its full SHA is given by `git rev-parse submission-candidate-1` and stated in the submission email. |
 | Tag | `submission-candidate-1` |
 | **Code under test** (all validation runs below) | `4f827ee7813db166b0c03dabec5c9d61da5b9a99` |
 | Candidate relation | Code-identical to `4f827ee`; differs only in documentation. `git diff 4f827ee submission-candidate-1` touches only `docs/`, `measurements/` and `AGENTS.md` (a note for coding agents; not used by the run). |
