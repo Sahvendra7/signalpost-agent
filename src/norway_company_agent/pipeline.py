@@ -254,6 +254,9 @@ def _site_research(profile: dict[str, Any], session: SiteSession, max_seconds: f
     if result.status == "verified":
         first = result.pages[0] if result.pages else {}
         record = evidence("site_research", "available", "company_site", result.site_url, value=body, content_sha256=first.get("content_sha256"), retrieved_at=first.get("retrieved_at"))
+    elif result.status == "unreadable":
+        state = result.candidates[-1].get("outcome") if result.candidates else "unknown"
+        record = evidence("site_research", "source_error", "company_site", result.site_url, value=body, note=f"Registry-linked website could not be checked in this run ({state}); no page was read")
     elif result.status == "budget_exhausted":
         record = evidence("site_research", "source_error", "company_site", "https://data.brreg.no/enhetsregisteret/api/enheter", value=body, note="budget_exhausted before a website could be verified")
     else:

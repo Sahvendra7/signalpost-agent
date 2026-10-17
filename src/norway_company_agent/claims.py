@@ -342,9 +342,11 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     value = record.get("value") or {}
     if record.get("status") != "available":
         reason = record.get("note") or "No verified company website"
-        if not v1_site_published:
+        state = availability_for(record)
+        # A site stage that could not run leaves the site facts unchecked, also when the v1 gate published the website.
+        if not v1_site_published or state in ("failed", "blocked"):
             for category, field in SITE_FAMILIES:
-                claims.absent(category, field, availability_for(record), reason)
+                claims.absent(category, field, state, reason)
         return False
     identity_class = value.get("identity_class")
     reasons = "; ".join(value.get("identity_reasons") or [])

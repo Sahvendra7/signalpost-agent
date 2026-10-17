@@ -260,7 +260,7 @@ def discovery_candidates(profile: dict[str, Any]) -> list[dict[str, str]]:
 
 @dataclass
 class SiteResult:
-    status: str  # verified | none_verified | budget_exhausted
+    status: str  # verified | none_verified | budget_exhausted | unreadable (the registry-verified site could not be read)
     site_url: str | None = None
     identity_class: str | None = None
     identity_reasons: list[str] = field(default_factory=list)
@@ -327,7 +327,9 @@ def research_company_site(
         state, pages = _identity_pages(session, registry_verified_url, budget)
         result.site_url, result.identity_class, result.identity_source = registry_verified_url, "REGISTRY_LINKED", "registry_hjemmeside"
         result.identity_reasons = ["registry-listed website verified by the registry identity gate"]
-        result.status = "verified"
+        # A verified site this run could not read (robots.txt, transport, budget) was not checked at all: an outage,
+        # not a site without facts.
+        result.status = "verified" if state == "ok" else "unreadable"
         if state != "ok":
             result.candidates.append({"source": "registry_hjemmeside", "url": registry_verified_url, "outcome": state})
     else:
@@ -373,7 +375,7 @@ def research_company_site(
     else:
         result.pages = [_page_record(url, response) for url, response in pages]
     result.requests, result.cache_hits, result.budget_exhausted = budget.requests, budget.cache_hits, budget.exhausted
-    if result.status != "verified" and budget.exhausted:
+    if result.status == "none_verified" and budget.exhausted:
         result.status = "budget_exhausted"
     result.runtime_ms = int((time.monotonic() - started) * 1000)
     return result

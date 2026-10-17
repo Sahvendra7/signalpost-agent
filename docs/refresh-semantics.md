@@ -25,7 +25,10 @@ A source that **answers** is not an outage. A registry or accounts `404` (`not_f
 saying the record is gone, so the facts are `removed`.
 
 Company website (site research): when the run cannot re-check the previously verified site (transport
-failure, robots, budget), the site facts are carried. When the run reaches the same domain and the site
+failure, robots, budget), the site facts are carried. This includes a `REGISTRY_LINKED` site (verified by
+the v1 registry gate) that the site stage could not read at all, for example because its robots.txt was
+unreachable. That stage is recorded as `source_error`, with a note naming the state, and its site facts are
+`failed` ("could not be checked"), never `not_available`. When the run reaches the same domain and the site
 identity policy now classifies it as non-publishable (`AMBIGUOUS`, `THIRD_PARTY`, `FAN_COMMUNITY`,
 `DIRECTORY`), the facts are **not** carried, because re-publishing them could attach the wrong company.
 They become `unverified` events instead. The same applies to the registry-linked website (v1) when its
