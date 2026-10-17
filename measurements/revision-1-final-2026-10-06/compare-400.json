@@ -1,0 +1,124 @@
+{
+ "baseline": {
+  "run": "v1-400",
+  "commit": "104c3c45d9aef303d3112749a44de5aaf38bca8e",
+  "companies": 400,
+  "company_coverage": {
+   "website": 46,
+   "social": 25,
+   "fifth_area": 30,
+   "activity": 17
+  },
+  "claims": {
+   "total_available": 15809,
+   "social": 39,
+   "activity": 85
+  },
+  "claims_per_covered_company": {
+   "social": 1.56,
+   "activity": 5.0,
+   "jobs": 0
+  },
+  "evidence_not_contained": {
+   "social": 37,
+   "activity_date_text_not_recorded": 85
+  },
+  "website_identity_classes": {
+   "deterministic_name_org_evidence_v2": 17,
+   "FIRST_PARTY_CONFIRMED": 27,
+   "REGISTRY_LINKED": 2
+  },
+  "extraction_rejections": {},
+  "articles_fetched": 0,
+  "requests": 2844,
+  "runtime_ms": 417655,
+  "validation_passed": true,
+  "terminal": {
+   "completed": 400
+  },
+  "platform_hosts_contacted": []
+ },
+ "revision_1": {
+  "run": "r1-400",
+  "commit": "a5e06ce5e989ffeafa1c50937a10fa4bc4a1fbb4",
+  "companies": 400,
+  "company_coverage": {
+   "website": 51,
+   "social": 26,
+   "fifth_area": 30,
+   "activity": 17
+  },
+  "claims": {
+   "total_available": 15818,
+   "social": 39,
+   "activity": 88
+  },
+  "claims_per_covered_company": {
+   "social": 1.5,
+   "activity": 5.18,
+   "jobs": 0
+  },
+  "evidence_not_contained": {},
+  "website_identity_classes": {
+   "deterministic_name_org_evidence_v2": 18,
+   "FIRST_PARTY_CONFIRMED": 27,
+   "MANAGER_DESIGNATED": 5,
+   "REGISTRY_LINKED": 1
+  },
+  "extraction_rejections": {
+   "activity:manager_news_not_about_entity": 90,
+   "activity:page_date_on_non_news_page": 20,
+   "social:manager_site_profile": 14,
+   "social:handle_not_corroborated": 10,
+   "activity:generic_title": 2
+  },
+  "articles_fetched": 10,
+  "requests": 2854,
+  "runtime_ms": 448281,
+  "validation_passed": true,
+  "terminal": {
+   "completed": 400
+  },
+  "platform_hosts_contacted": []
+ },
+ "companies_gained": {
+  "website": 5,
+  "social": 1,
+  "activity": 2,
+  "jobs": 0
+ },
+ "companies_lost": {
+  "website": 0,
+  "social": 0,
+  "activity": 2,
+  "jobs": 0
+ },
+ "fifth_area_gained": 0,
+ "fifth_area_lost": 0,
+ "gained_orgs": {
+  "website": [
+   "948485516",
+   "953459817",
+   "956392101",
+   "961440777",
+   "985321469"
+  ],
+  "social": [
+   "919378875"
+  ],
+  "activity": [
+   "925503215",
+   "998641896"
+  ],
+  "jobs": []
+ },
+ "lost_orgs": {
+  "website": [],
+  "social": [],
+  "activity": [
+   "990524580",
+   "991368000"
+  ],
+  "jobs": []
+ }
+}

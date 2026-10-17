@@ -257,7 +257,7 @@ class BatchContractTests(unittest.TestCase):
         page = website_record("https://fjordgroup.no/", title="Fjord Group", text="Fjord Group is a family of companies across Norway with offices in many cities.", social=[{"platform": "linkedin", "url": "https://linkedin.com/company/fjordgroup"}])
         envelope = run([ORG_A], brreg, make_website_fetcher({"fjordgroup.no": page}))["envelopes"][0]
         self.assertEqual(by_field(envelope, "official_website")[0]["availability"], "ambiguous")
-        self.assertEqual(by_field(envelope, "social_profile"), [])
+        self.assertEqual([claim for claim in by_field(envelope, "social_profile") if claim["availability"] == "available"], [])
         self.assertEqual(by_field(envelope, "website_description"), [])
 
     def test_exact_site_publishes_site_facts(self):
@@ -267,7 +267,9 @@ class BatchContractTests(unittest.TestCase):
         website = by_field(envelope, "official_website")[0]
         self.assertEqual(website["availability"], "available")
         self.assertEqual(website["confidence"], 1.0)
-        self.assertEqual(by_field(envelope, "social_profile")[0]["value"]["url"], "https://linkedin.com/company/fjordtest-programvare")
+        # Revision 1: social profiles come only from the site stage's captured pages (exact linked URL). The v1
+        # record's rewritten URL (not in any captured page) is never published.
+        self.assertEqual([claim for claim in by_field(envelope, "social_profile") if claim["availability"] == "available"], [])
 
     def test_network_failure_keeps_bulk_identity_and_marks_sources_failed(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -393,14 +395,18 @@ class RefreshContractTests(unittest.TestCase):
         changed = {ORG_A: entity_body(ORG_A, "Fjordtest Programvare AS", employees=5)}
         second = run([ORG_A], FakeBrreg(changed), previous_profiles={ORG_A: first["profiles"][0]})
         changes = second["envelopes"][0]["changes"]
-        self.assertEqual([item["field"] for item in changes], ["registry.employees"])
+        self.assertEqual([(item["change_type"], item["field"]) for item in changes], [("changed", "registry_employee_count")])
         self.assertEqual((changes[0]["old_value"], changes[0]["new_value"]), (3, 5))
-        self.assertTrue(changes[0]["old_content_sha256"] and changes[0]["new_content_sha256"])
+        self.assertTrue(changes[0]["previous_evidence"]["content_sha256"] and changes[0]["evidence"]["content_sha256"])
 
-    def test_outage_on_refresh_is_not_a_change(self):
+    def test_outage_on_refresh_is_not_a_change_and_keeps_values(self):
         first = run([ORG_A], FakeBrreg(self.entities))
         second = run([ORG_A], offline_network_down, previous_profiles={ORG_A: first["profiles"][0]})
-        self.assertEqual(second["envelopes"][0]["changes"], [])
+        envelope = second["envelopes"][0]
+        self.assertEqual({item["change_type"] for item in envelope["changes"]}, {"unavailable"})
+        self.assertEqual(envelope["refresh"]["counts"]["changed"] + envelope["refresh"]["counts"]["removed"], 0)
+        legal_name = next(claim for claim in envelope["claims"] if claim["field"] == "legal_name")
+        self.assertEqual((legal_name["availability"], legal_name["value"], legal_name["carried_forward"]), ("available", "Fjordtest Programvare AS", True))
 
     def test_reordered_source_list_is_not_a_change(self):
         source = evidence("roles", "available", "official_roles", "https://x.test", content_sha256="a" * 64)

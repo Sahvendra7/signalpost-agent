@@ -1,0 +1,150 @@
+{
+ "baseline": {
+  "run": "v1-1200",
+  "commit": "104c3c45d9aef303d3112749a44de5aaf38bca8e",
+  "companies": 1200,
+  "company_coverage": {
+   "website": 122,
+   "social": 66,
+   "fifth_area": 78,
+   "activity": 25,
+   "jobs": 1
+  },
+  "claims": {
+   "social": 136,
+   "total_available": 47952,
+   "activity": 162,
+   "jobs": 1
+  },
+  "claims_per_covered_company": {
+   "social": 2.06,
+   "activity": 6.48,
+   "jobs": 1.0
+  },
+  "evidence_not_contained": {
+   "social": 124,
+   "activity_date_text_not_recorded": 141,
+   "activity": 21
+  },
+  "website_identity_classes": {
+   "FIRST_PARTY_CONFIRMED": 68,
+   "deterministic_name_org_evidence_v2": 52,
+   "REGISTRY_LINKED": 2
+  },
+  "extraction_rejections": {},
+  "articles_fetched": 0,
+  "requests": 8364,
+  "runtime_ms": 1224475,
+  "validation_passed": true,
+  "terminal": {
+   "completed": 1200
+  },
+  "platform_hosts_contacted": []
+ },
+ "revision_1": {
+  "run": "r1-1200",
+  "commit": "a5e06ce5e989ffeafa1c50937a10fa4bc4a1fbb4",
+  "companies": 1200,
+  "company_coverage": {
+   "website": 132,
+   "social": 68,
+   "fifth_area": 85,
+   "activity": 36,
+   "jobs": 1
+  },
+  "claims": {
+   "social": 126,
+   "total_available": 48006,
+   "activity": 218,
+   "jobs": 1
+  },
+  "claims_per_covered_company": {
+   "social": 1.85,
+   "activity": 6.06,
+   "jobs": 1.0
+  },
+  "evidence_not_contained": {},
+  "website_identity_classes": {
+   "FIRST_PARTY_CONFIRMED": 69,
+   "deterministic_name_org_evidence_v2": 52,
+   "REGISTRY_LINKED": 3,
+   "MANAGER_DESIGNATED": 8
+  },
+  "extraction_rejections": {
+   "activity:manager_news_not_about_entity": 109,
+   "social:handle_not_corroborated": 67,
+   "social:manager_site_profile": 21,
+   "activity:no_title": 21,
+   "activity:page_date_on_non_news_page": 20,
+   "activity:generic_title": 1
+  },
+  "articles_fetched": 25,
+  "requests": 8400,
+  "runtime_ms": 1223121,
+  "validation_passed": true,
+  "terminal": {
+   "completed": 1200
+  },
+  "platform_hosts_contacted": []
+ },
+ "companies_gained": {
+  "website": 10,
+  "social": 3,
+  "activity": 13,
+  "jobs": 0
+ },
+ "companies_lost": {
+  "website": 0,
+  "social": 1,
+  "activity": 2,
+  "jobs": 0
+ },
+ "fifth_area_gained": 9,
+ "fifth_area_lost": 2,
+ "gained_orgs": {
+  "website": [
+   "816945852",
+   "892061092",
+   "919263490",
+   "921065906",
+   "921990820",
+   "925710032",
+   "927654210",
+   "982156254",
+   "987632976",
+   "998944007"
+  ],
+  "social": [
+   "938147183",
+   "998518539",
+   "998944007"
+  ],
+  "activity": [
+   "887841772",
+   "911608103",
+   "916866070",
+   "916974051",
+   "921267193",
+   "921990820",
+   "925114510",
+   "928934977",
+   "930797790",
+   "931624032",
+   "980429849",
+   "985701547",
+   "992763434"
+  ],
+  "jobs": []
+ },
+ "lost_orgs": {
+  "website": [],
+  "social": [
+   "930870781"
+  ],
+  "activity": [
+   "917755256",
+   "920929257"
+  ],
+  "jobs": []
+ }
+}

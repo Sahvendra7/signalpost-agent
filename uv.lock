@@ -1136,7 +1136,7 @@ requires-dist = [
     { name = "pypdf", specifier = ">=6,<7" },
     { name = "scrapy", marker = "extra == 'crawler'", specifier = ">=2.13,<3" },
     { name = "scrapy-playwright", marker = "extra == 'crawler'", specifier = ">=0.0.44,<1" },
-    { name = "tldextract", specifier = ">=5.3,<6" },
+    { name = "tldextract", specifier = "==5.3.2" },
     { name = "torch", marker = "extra == 'sentiment'", specifier = ">=2.5,<3" },
     { name = "trafilatura", specifier = ">=2.0,<3" },
     { name = "transformers", marker = "extra == 'sentiment'", specifier = ">=4.51,<5" },

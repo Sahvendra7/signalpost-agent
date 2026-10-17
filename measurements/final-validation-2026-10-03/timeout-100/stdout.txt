@@ -1,0 +1,33 @@
+{
+  "run_id": "final-timeout-100",
+  "input_rows": 100,
+  "emitted_envelopes": 100,
+  "terminal_status_counts": {
+    "completed": 85,
+    "failed": 15
+  },
+  "category_available_rate": {
+    "description": 0.85,
+    "filings": 0.85,
+    "hiring": 0.0,
+    "identity": 0.85,
+    "leadership": 0.85,
+    "locations": 0.85,
+    "public_activity": 0.0,
+    "registry_activity": 0.85,
+    "relationships": 0.03,
+    "websites": 0.14
+  },
+  "runtime_ms": 38027,
+  "deadline": {
+    "deadline_seconds": 45.0,
+    "grace_seconds": 10.0,
+    "stop_reason": "grace_window",
+    "companies_degraded_to_official_only": 77,
+    "companies_not_started": 15,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "validation_passed": true,
+  "registry_snapshot": "absent"
+}
+exit 0

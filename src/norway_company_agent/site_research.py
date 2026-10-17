@@ -7,15 +7,15 @@ Stages per company (adaptive; stops early):
   2. identity: homepage + up to two contact/about pages -> site_identity.classify_site (policy v2). The first
      FIRST_PARTY_CONFIRMED candidate wins; the rest are not fetched.
   3. enrichment of the verified site: declared RSS/Atom feed, one news page, one careers page, and
-     sitemap.xml only when the homepage exposes neither. Extracts site-linked social profiles, dated
-     activity, and schema.org JobPostings.
+     sitemap.xml only when the homepage exposes neither. site_facts.extract_site_facts then reads the captured
+     pages for site-linked social profiles, dated activity and job postings (no further requests).
 Platform pages (LinkedIn, Facebook, Instagram, YouTube) are never fetched: a profile is recorded from the
-verified site's own link. Dates are kept only when the source states them. robots.txt is honoured, and
-401/403 on robots.txt means disallow. Every fetched page keeps url, sha256 and retrieval time for evidence.
+verified site's own link. Dates are kept only when the source states them. robots.txt is honoured (RFC 9309:
+401/403, 429, 5xx and network failure mean disallow; Crawl-delay is honoured inside the company budget).
+Every fetched page keeps url, sha256 and retrieval time for evidence.
 """
 from __future__ import annotations
 
-import json
 import re
 import socket
 import threading
@@ -23,16 +23,15 @@ import time
 import urllib.parse
 import urllib.robotparser
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
-from email.utils import parsedate_to_datetime
 from typing import Any, Callable
 
 from bs4 import BeautifulSoup
 
 from .http import ByteFetch, fetch_bytes
-from .identity import _tokens, assess_social_identity
-from .site_identity import FREE_MAIL, classify_site
-from .website import USER_AGENT, _registered_domain, _social_links, normalize_homepage, structured_social_links
+from .identity import _tokens
+from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, is_shared_site_section, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
+from .site_identity import FREE_MAIL, classify_site, manager_designated
+from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
 
 DIRECTORY_HOSTS = {
     "proff.no", "purehelp.no", "1881.no", "gulesider.no", "firmalisten.no", "companywall.no", "firmadatabasen.no",
@@ -42,115 +41,10 @@ DIRECTORY_HOSTS = {
 IDENTITY_HINTS = ("kontakt", "contact", "om-oss", "om oss", "about", "personvern", "privacy")
 NEWS_HINTS = ("nyheter", "aktuelt", "news", "blogg", "blog", "artikler", "presse", "press")
 CAREER_HINTS = ("ledige-stillinger", "ledige stillinger", "karriere", "career", "jobb-hos", "jobbe-hos", "stillinger", "/jobs", "jobb")
-ARTICLE_TYPES = {"Article", "NewsArticle", "BlogPosting", "Report", "PressRelease"}
 HTML_ACCEPT = "text/html,application/xhtml+xml"
 MAX_PAGE_BYTES = 3_000_000
-
-
-# ---------- dates and extraction (pure) ----------
-
-def parse_date(value: Any) -> str | None:
-    """ISO-8601 UTC for an unambiguous source date; a bare YYYY-MM-DD stays a date. Never guesses."""
-    text = str(value or "").strip()
-    if not text:
-        return None
-    try:
-        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
-    except ValueError:
-        try:
-            parsed = parsedate_to_datetime(text)
-        except (TypeError, ValueError, IndexError):
-            return None
-    if parsed is None:
-        return None
-    if parsed.tzinfo is None:
-        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", text):
-            return text if "1995-01-01" <= text <= (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%d") else None
-        parsed = parsed.replace(tzinfo=timezone.utc)
-    if parsed > datetime.now(timezone.utc) + timedelta(days=1) or parsed.year < 1995:
-        return None
-    return parsed.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-
-def feed_items(xml: bytes) -> list[dict[str, Any]]:
-    soup = BeautifulSoup(xml, "xml")
-    items = []
-    for node in soup.find_all(["item", "entry"])[:50]:
-        title = node.find("title")
-        link = node.find("link")
-        href = (link.get("href") or link.get_text(strip=True)) if link else None
-        published = node.find(["pubDate", "published", "dc:date", "date"])
-        updated = node.find("updated")
-        date = parse_date(published.get_text(strip=True)) if published else None
-        kind = "published"
-        if not date and updated:
-            date, kind = parse_date(updated.get_text(strip=True)), "updated"
-        summary = node.find(["description", "summary"])
-        snippet = BeautifulSoup(summary.get_text(" ", strip=True), "lxml").get_text(" ", strip=True)[:240] if summary else None
-        items.append({"title": title.get_text(" ", strip=True)[:200] if title else None, "url": href, "date": date, "date_kind": kind if date else None, "summary": snippet, "method": "site_feed"})
-    return items
-
-
-def _jsonld_nodes(soup: BeautifulSoup):
-    for script in soup.select('script[type="application/ld+json"]'):
-        try:
-            payload = json.loads(script.string or "")
-        except (json.JSONDecodeError, TypeError):
-            continue
-        stack = [payload]
-        while stack:
-            node = stack.pop()
-            if isinstance(node, dict):
-                yield node
-                stack.extend(value for value in node.values() if isinstance(value, (dict, list)))
-            elif isinstance(node, list):
-                stack.extend(node)
-
-
-def _types(node: dict) -> set[str]:
-    kinds = node.get("@type")
-    return {str(kind) for kind in (kinds if isinstance(kinds, list) else [kinds]) if kind}
-
-
-def html_items(html: str, base_url: str) -> list[dict[str, Any]]:
-    soup = BeautifulSoup(html, "lxml")
-    own_domain = _registered_domain(base_url)
-    items: list[dict[str, Any]] = []
-    for node in _jsonld_nodes(soup):
-        if _types(node) & ARTICLE_TYPES:
-            date = parse_date(node.get("datePublished"))
-            raw_url = node.get("url") or node.get("mainEntityOfPage")
-            url = urllib.parse.urljoin(base_url, raw_url) if isinstance(raw_url, str) else base_url
-            if date:
-                items.append({"title": str(node.get("headline") or node.get("name") or "")[:200] or None, "url": url if _registered_domain(url) == own_domain else base_url, "date": date, "date_kind": "published", "summary": str(node.get("description") or "")[:240] or None, "method": "jsonld_datePublished"})
-    meta = soup.select_one('meta[property="article:published_time"]')
-    if meta and parse_date(meta.get("content")):
-        items.append({"title": soup.title.get_text(" ", strip=True)[:200] if soup.title else None, "url": base_url, "date": parse_date(meta.get("content")), "date_kind": "published", "summary": None, "method": "meta_article_published_time"})
-    for article in soup.select("article")[:30]:
-        node = article.select_one("time[datetime]")
-        date = parse_date(node.get("datetime")) if node else None
-        if not date:
-            continue
-        own = [urllib.parse.urljoin(base_url, anchor["href"]) for anchor in article.select("a[href]")]
-        own = [url for url in own if url.startswith(("http://", "https://")) and _registered_domain(url) == own_domain]
-        heading = article.select_one("h1, h2, h3, h4")
-        items.append({"title": heading.get_text(" ", strip=True)[:200] if heading else None, "url": own[0] if own else base_url, "date": date, "date_kind": "published", "summary": None, "method": "article_time_datetime"})
-    return items
-
-
-def job_postings(html: str, base_url: str) -> list[dict[str, Any]]:
-    """schema.org JobPosting published on the company's own site (hiring facts with source dates)."""
-    soup = BeautifulSoup(html, "lxml")
-    jobs = []
-    for node in _jsonld_nodes(soup):
-        if "JobPosting" not in _types(node):
-            continue
-        title = str(node.get("title") or "").strip()
-        if not title:
-            continue
-        valid = parse_date(node.get("validThrough"))
-        jobs.append({"title": title[:200], "date_posted": parse_date(node.get("datePosted")), "valid_through": valid, "url": node.get("url") if isinstance(node.get("url"), str) else base_url, "method": "jsonld_JobPosting"})
-    return jobs
+MAX_ARTICLE_FETCHES = 3  # article pages followed from a news listing that states no dates
+MANAGER_SITE_MAX_NEWS = 5  # a business manager's site serves many entities: at most this many items that name the entity
 
 
 # ---------- fetching with robots, caches and budgets ----------
@@ -193,7 +87,10 @@ class SiteSession:
         self.url_guard = url_guard  # raises ValueError for a non-public URL (website.assert_public_url)
         self._public: dict[str, str] = {}
         self._lock = threading.Lock()
-        self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._robots: dict[str, tuple[urllib.robotparser.RobotFileParser | None, str]] = {}
+        self._delays: dict[str, float] = {}
+        self._last_request: dict[str, float] = {}
+        self._origin_locks: dict[str, threading.Lock] = {}
         self._pages: dict[str, ByteFetch] = {}
         self._dns: dict[str, bool] = {}
 
@@ -225,23 +122,50 @@ class SiteSession:
             return self._pages.get(to_uri(url))
 
     def allowed(self, url: str, budget: CompanyBudget) -> bool | None:
+        return self.robots(url, budget)[0]
+
+    def robots(self, url: str, budget: CompanyBudget) -> tuple[bool | None, str]:
+        """(allowed, reason); allowed is None when the budget ran out before robots.txt could be read.
+        Semantics in website.robots_policy (RFC 9309): 401/403, 429, 5xx and network failure disallow."""
         parts = urllib.parse.urlsplit(url)
         origin = f"{parts.scheme}://{parts.netloc}"
         with self._lock:
             known = origin in self._robots
-            parser = self._robots.get(origin)
+            parser, reason = self._robots.get(origin) or (None, "")
         if not known:
             response = self._fetch(origin + "/robots.txt", budget, "text/plain")
             if response is None:
-                return None  # budget exhausted
-            if response.status in (401, 403):
-                parser = None
-            else:
-                parser = urllib.robotparser.RobotFileParser()
-                parser.parse((response.raw or b"").decode("utf-8", errors="replace").splitlines() if response.status == 200 else [])
+                return None, "budget_exhausted"
+            parser, reason = robots_policy(response.status, response.raw)
             with self._lock:
-                self._robots[origin] = parser
-        return bool(parser and parser.can_fetch(USER_AGENT, url))
+                self._robots[origin] = (parser, reason)
+                self._delays[origin] = crawl_delay(parser)
+                self._last_request[origin] = time.monotonic()
+        if parser is None:
+            return False, reason
+        if not parser.can_fetch(USER_AGENT, url):
+            return False, "robots_disallowed"
+        return True, reason
+
+    def pace(self, url: str, budget: CompanyBudget) -> bool:
+        """Honour robots.txt Crawl-delay per origin. False when waiting would overrun the company budget."""
+        parts = urllib.parse.urlsplit(url)
+        origin = f"{parts.scheme}://{parts.netloc}"
+        with self._lock:
+            delay = self._delays.get(origin, 0.0)
+            if not delay:
+                return True
+            origin_lock = self._origin_locks.setdefault(origin, threading.Lock())
+        if delay > MAX_CRAWL_DELAY_SECONDS:
+            return False
+        with origin_lock:  # requests to one origin are serialised while a Crawl-delay applies
+            wait = self._last_request.get(origin, 0.0) + delay - time.monotonic()
+            if wait > 0:
+                if time.monotonic() + wait >= budget.deadline:
+                    return False
+                time.sleep(wait)
+            self._last_request[origin] = time.monotonic()
+        return True
 
     def public(self, url: str) -> str:
         """Outbound URL policy: only hosts resolving to global addresses are fetched (cached per origin).
@@ -257,7 +181,7 @@ class SiteSession:
             self.url_guard(origin + "/")
             state = "ok"
         except ValueError as exc:
-            state = "no_dns" if "did not resolve" in str(exc) else "blocked_non_public_host"
+            state = "no_dns" if "did not resolve" in str(exc) else "blocked_platform_host" if "Restricted platform" in str(exc) else "blocked_non_public_host"
         with self._lock:
             self._public[origin] = state
         return state
@@ -267,11 +191,13 @@ class SiteSession:
         policy = self.public(url)
         if policy != "ok":
             return policy, None
-        allowed = self.allowed(url, budget)
+        allowed, reason = self.robots(url, budget)
         if allowed is None:
             return "budget_exhausted", None
         if not allowed:
-            return "robots_disallowed", None
+            return ("robots_disallowed" if reason == "robots_disallowed" else reason), None
+        if url not in self._pages and not self.pace(url, budget):
+            return "crawl_delay_exceeds_budget", None
         result = self._fetch(url, budget, accept)
         if result is None:
             return "budget_exhausted", None
@@ -346,6 +272,11 @@ class SiteResult:
     activities: list[dict[str, Any]] = field(default_factory=list)
     jobs: list[dict[str, Any]] = field(default_factory=list)
     careers_page: str | None = None
+    careers_checked: list[dict[str, Any]] = field(default_factory=list)
+    articles_fetched: int = 0
+    manager: dict[str, Any] | None = None  # MANAGER_DESIGNATED: the registered forretningsfører operating the site
+    extraction_rejections: dict[str, int] = field(default_factory=dict)
+    rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     requests: int = 0
     cache_hits: int = 0
     runtime_ms: int = 0
@@ -412,8 +343,22 @@ def research_company_site(
                 result.candidates.append({**candidate, "outcome": state})
                 continue
             final_domain = _registered_domain(candidate_pages[0][1].url) or candidate["domain"]
-            verdict = classify_site(target, candidate["domain"], [response.raw.decode("utf-8", errors="replace") for _, response in candidate_pages], registry_email=live.get("email"))
-            result.candidates.append({**candidate, "outcome": verdict["class"], "reason": verdict["reasons"][0], "final_domain": final_domain})
+            html_pages = [response.raw.decode("utf-8", errors="replace") for _, response in candidate_pages]
+            verdict = classify_site(target, candidate["domain"], html_pages, registry_email=live.get("email"))
+            manager = manager_designated(target, candidate["domain"], html_pages, verdict, registry_email=live.get("email")) if candidate["source"] == "registry_hjemmeside" else None
+            result.candidates.append({**candidate, "outcome": "MANAGER_DESIGNATED" if manager else verdict["class"], "reason": verdict["reasons"][0], "final_domain": final_domain})
+            if manager:
+                result.status = "verified"
+                result.site_url = candidate["url"]
+                result.identity_class = "MANAGER_DESIGNATED"
+                result.identity_source = candidate["source"]
+                result.manager = manager
+                result.identity_reasons = [
+                    f"website named in the entity's own registry record and operated by its registered forretningsfører {manager['name']} "
+                    f"({manager['organisation_number']}), whose organisation number is on the site"
+                ]
+                pages = candidate_pages
+                break
             if verdict["publishable"]:
                 result.status = "verified"
                 result.site_url = candidate["url"]
@@ -438,15 +383,22 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
     home_url, home = pages[0]
     domain = _registered_domain(home_url)
     soup = BeautifulSoup(home.raw.decode("utf-8", errors="replace"), "lxml")
+    # A verified site that is a section of a shared domain (a chain's branch page) reads only pages inside its section:
+    # the domain owner's news, feed and careers pages are not the entity's.
+    section = urllib.parse.urlsplit(home_url).path.rstrip("/") + "/" if is_shared_site_section(home_url) else None
+
+    def inside(url: str) -> bool:
+        return section is None or (urllib.parse.urlsplit(url).path.rstrip("/") + "/").startswith(section)
+
     feeds, news, careers = [], [], []
     for link in soup.select('link[rel~="alternate"][href]'):
         if any(kind in str(link.get("type") or "") for kind in ("rss", "atom")):
             url = urllib.parse.urljoin(home_url, link["href"])
-            if _registered_domain(url) == domain and "comments" not in url:
+            if _registered_domain(url) == domain and "comments" not in url and inside(url):
                 feeds.append(url)
     for anchor in soup.select("a[href]"):
         url = urllib.parse.urljoin(home_url, anchor["href"]).split("#")[0]
-        if not url.startswith("http") or _registered_domain(url) != domain or url.rstrip("/") == home_url.rstrip("/"):
+        if not url.startswith("http") or _registered_domain(url) != domain or url.rstrip("/") == home_url.rstrip("/") or not inside(url):
             continue
         label = (urllib.parse.urlsplit(url).path + " " + anchor.get_text(" ", strip=True)).casefold()
         if any(hint in label for hint in NEWS_HINTS):
@@ -459,7 +411,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
             for loc in BeautifulSoup(sitemap.raw, "xml").find_all("loc")[:500]:
                 url = loc.get_text(strip=True)
                 path = urllib.parse.urlsplit(url).path.casefold()
-                if _registered_domain(url) != domain:
+                if _registered_domain(url) != domain or not inside(url):
                     continue
                 if any(hint in path for hint in NEWS_HINTS) and path.count("/") <= 2:
                     news.append(url)
@@ -467,44 +419,64 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
                     careers.append(url)
     result.careers_page = careers[0] if careers else None
     fetched: list[tuple[str, ByteFetch]] = list(pages)
+    feed_pages: list[CapturedPage] = []
     for url in list(dict.fromkeys(feeds))[:1]:
         state, response = session.get(url, budget, accept="application/rss+xml,application/atom+xml,application/xml,text/xml")
         if state == "ok":
-            for item in feed_items(response.raw):
-                result.activities.append({**item, "page_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at})
+            feed_pages.append(CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at, kind="feed"))
+    news_page: CapturedPage | None = None
     for url in list(dict.fromkeys(news))[:1] + list(dict.fromkeys(careers))[:1]:
         state, response = session.get(url, budget)
         if state == "ok":
             fetched.append((url, response))
-    profiles: dict[str, dict[str, Any]] = {}
-    for url, response in fetched:
-        html = response.raw.decode("utf-8", errors="replace")
-        for item in html_items(html, url):
-            result.activities.append({**item, "page_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at})
-        for job in job_postings(html, url):
-            result.jobs.append({**job, "page_url": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at})
-        page_soup = BeautifulSoup(html, "lxml")
-        links = _social_links(url, page_soup)
-        try:
-            import extruct
-
-            same_as = structured_social_links(extruct.extract(html, base_url=url, syntaxes=["json-ld"]))
-        except Exception:
-            same_as = []
-        for link in links + same_as:
-            entry = profiles.setdefault(link["url"], {**link, "found_on": url, "content_sha256": response.content_sha256, "retrieved_at": response.retrieved_at, "via_jsonld_sameas": False})
-            if link in same_as:
-                entry["via_jsonld_sameas"] = True
-    for link in profiles.values():
-        gate = assess_social_identity(profile, link)
-        record = {**link, "identity_score": gate["identity_score"], "identity_reason": gate["reason"], "relationship": f"{result.identity_class} website -> officially linked profile"}
-        (result.profiles if gate["publishable"] or link["via_jsonld_sameas"] else result.ambiguous_profiles).append(record)
-    seen = set()
-    unique = []
-    for item in result.activities:
-        key = (item.get("url"), item.get("date"), item.get("title"))
-        if item.get("date") and key not in seen:
-            seen.add(key)
-            unique.append(item)
-    result.activities = unique
+            if url in news and news_page is None:
+                news_page = CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at)
+    captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
+    facts = extract_site_facts(profile, captured, feed_pages)
+    if not facts.activities and news_page is not None:
+        # The news listing states no dates: the dates are on the article pages it links (same verified site).
+        # Fetch at most MAX_ARTICLE_FETCHES of them through the same budget, robots and Crawl-delay controls.
+        for url in [url for url in article_links(news_page, MAX_ARTICLE_FETCHES * 3) if inside(url)][:MAX_ARTICLE_FETCHES]:
+            state, response = session.get(url, budget)
+            if state == "ok":
+                fetched.append((url, response))
+                result.articles_fetched += 1
+        if result.articles_fetched:
+            captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
+            facts = extract_site_facts(profile, captured, feed_pages)
+    apply_site_facts(result, facts, profile, captured + feed_pages)
     result.pages = [_page_record(url, response) for url, response in fetched]
+
+
+def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | None = None, pages: list[CapturedPage] | None = None) -> None:
+    """Store the validated first-party facts on the site result (the profile record claims are built from)."""
+    relationship = f"{result.identity_class} website -> officially linked profile"
+    result.profiles = [{**item, "relationship": relationship} for item in facts.profiles]
+    result.ambiguous_profiles = [{**item, "relationship": relationship} for item in facts.ambiguous_profiles]
+    result.activities = facts.activities
+    result.jobs = facts.jobs
+    result.careers_checked = facts.careers_checked
+    result.extraction_rejections = dict(facts.rejections)
+    result.rejected_examples = facts.rejected_examples
+    if result.identity_class == "MANAGER_DESIGNATED":
+        # The site is associated with the entity (its registry record names it), but it belongs to the business
+        # manager and serves many entities. The association is the website claim; the manager's own content is not
+        # the entity's: its profiles, vacancies and careers page never, and its news only when an item explicitly
+        # names the managed entity (site_facts.item_names_entity).
+        held = "profile of the business manager's site; not attributed to the managed entity"
+        result.ambiguous_profiles += [{**item, "identity_reason": held} for item in result.profiles]
+        counts = result.extraction_rejections
+        if result.profiles:
+            counts["social:manager_site_profile"] = counts.get("social:manager_site_profile", 0) + len(result.profiles)
+        if result.jobs:
+            counts["job:manager_site_vacancy"] = counts.get("job:manager_site_vacancy", 0) + len(result.jobs)
+        result.profiles, result.jobs, result.careers_page, result.careers_checked = [], [], None, []
+        by_url = {page.url: page for page in pages or []}
+        about = []
+        for item in result.activities:
+            basis = item_names_entity(profile or {}, item, by_url)
+            if basis:
+                about.append({**item, "subject_basis": basis})
+            else:
+                counts["activity:manager_news_not_about_entity"] = counts.get("activity:manager_news_not_about_entity", 0) + 1
+        result.activities = sorted(about, key=lambda item: str(item.get("date") or ""), reverse=True)[:MANAGER_SITE_MAX_NEWS]

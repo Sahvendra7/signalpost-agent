@@ -1,0 +1,223 @@
+{
+ "organisation_number": "813396092",
+ "name": "SAMEIE JESSHEIM PARK DRIFT",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.bori.no/",
+  "retrieved_at": "2026-10-04T23:00:37.784239Z",
+  "value": {
+   "requested_url": "https://www.bori.no/",
+   "final_url": "https://www.bori.no/",
+   "registered_domain": "bori.no",
+   "title": "Hjem - BORI BBL",
+   "description": "Vi bygger boliger med forkjøpsrett og leverer forretningsførsel for BORI-medlemmer over hele landet. Les mer om boliger og medlemsfordeler.",
+   "main_text_excerpt": "Rom for opplevelser\nFå drømmeboligen med forkjøpsrett fra BORI.\nForkjøpsretten lar deg snike i boligkøen. Den som har vært medlem lengst, får boligen.\nVi hjelper borettslag og sameier over hele landet med forretningsførsel, HMS og løpende styrearbeid.\nMed boligkjøpsmodellene LeieEie og DelEie med Sparing kan vi kjøpe inntil 20 prosent av enhetene i ditt boligprosjekt - slik at du får finansieringen du trenger.\nBli BORI-medlem: Vi spanderer årskontingenten ut året\nHar du vurdert å bli medlem, eller ønsker du å gi et medlemskap i gave? Nå er det en ekstra god anledning til å bli medlem.\nDigital sikkerhet i borettslag og sameier: Hva kan styret gjøre?\nStadig flere tjenester brukes digitalt, og antallet svindelforsøk øker. Selv om styret ikke har ansvar for beboernes digitale sikkerhet, kan dere bidra til en tryggere digital hverdag gjennom å gjøre beboerne kjent med sikkerhetsløsningene som følger med Altibox.\nDin første bolig starter med en god plan\nSom BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\nSlik logger du deg på Nabonett\nSom medlem i BORI og/eller beboer i et forvaltet boligselskap kan du logge deg inn i Nabonett for å finne både medlemsbevis og/eller informasjon om din bolig.\nGode lånebetingelser\nBORI har inngått et samarbeid med Romerike Sparebank som garanterer deg som BORI-medlem avtalevilkår innenfor topp 5 i markedet referert til finansportalen.no – også over tid. Romerike Sparebank justerer i henhold til Finansportalen.no kvartalsvis.",
+   "identity_text_excerpt": "BORI BBL Våre lokasjoner Lillestrøm Mysen Flere kontaktpunkter 63 89 02 00 firmapost@bori.no Mandag - fredag 08:00 - 16:00 1. juni - 31. august 08:00 - 15:30 Medlemsservice 09:00 - 14:00 Om BORI Kontakt oss Aktuelt Jobb i BORI Presse Personvern Egenerklærling om hvitvasking Vilkår fordelsprogram",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "25c27de3151a137fef2d95bb10ddc8bb4de9d8eacfe2051552dcb4b5433ae35c",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.bori.no/",
+     "title": "Hjem - BORI BBL",
+     "main_text_excerpt": "Rom for opplevelser\nFå drømmeboligen med forkjøpsrett fra BORI.\nForkjøpsretten lar deg snike i boligkøen. Den som har vært medlem lengst, får boligen.\nVi hjelper borettslag og sameier over hele landet med forretningsførsel, HMS og løpende styrearbeid.\nMed boligkjøpsmodellene LeieEie og DelEie med Sparing kan vi kjøpe inntil 20 prosent av enhetene i ditt boligprosjekt - slik at du får finansieringen du trenger.\nBli BORI-medlem: Vi spanderer årskontingenten ut året\nHar du vurdert å bli medlem, eller ønsker du å gi et medlemskap i gave? Nå er det en ekstra god anledning til å bli medlem.\nDigital sikkerhet i borettslag og sameier: Hva kan styret gjøre?\nStadig flere tjenester brukes digitalt, og antallet svindelforsøk øker. Selv om styret ikke har ansvar for beboernes digitale sikkerhet, kan dere bidra til en tryggere digital hverdag gjennom å gjøre beboerne kjent med sikkerhetsløsningene som følger med Altibox.\nDin første bolig starter med en god plan\nSom BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\nSlik logger du deg på Nabonett\nSom medlem i BORI og/eller beboer i et forvaltet boligselskap kan du logge deg inn i Nabonett for å finne både medlemsbevis og/eller informasjon om din bolig.\nGode lånebetingelser\nBORI har inngått et samarbeid med Romerike Sparebank som garanterer deg som BORI-medlem avtalevilkår innenfor topp 5 i markedet referert til finansportalen.no – også over tid. Romerike Sparebank justerer i henhold til Finansportalen.no kvartalsvis.",
+     "content_sha256": "25c27de3151a137fef2d95bb10ddc8bb4de9d8eacfe2051552dcb4b5433ae35c"
+    },
+    {
+     "url": "https://www.bori.no/om-bori/kontakt-oss/",
+     "title": "Kontakt oss - BORI BBL",
+     "main_text_excerpt": "Kontakt oss\nHer finner du oss:\nKontakt BORI sitt hovedkontor i Lillestrøm.\nKontakt BORI sitt lokalkontor i Mysen.\nAndre kontaktpunkter:\nKontaktskjema\n\"*\" obligatorisk felt\nAdresser\nBesøksadresse: Tærudgata 16, inngang A, Lillestrøm.\nPostadresse: Postboks 323, 2001 Lillestrøm\nFakturaadresse\nBORI ønsker primært fakturaer på EHF. Adressen er da organisasjonsnummeret.\nVi kan imidlertid også motta på e-post. Adressen er da 989987011@bori.no\nÅpningstider\nMandag – fredag, kl. 8 – 16\nSommertid, kl. 9 – 14:30 (1.6 – 31.8)\nTelefon\nE-post: firmapost@bori.no\nTelefon: Sentralbord, 63 89 02 00\nTelefontid Medlemsservice, man – fre, kl. 9 – 14\nVakttelefon Toma Eiendomsdrift AS (kl. 16 – 18)\n64 84 37 00\nAdresser\nBesøksadresse: Storgata 13, Mysen\nPostadresse: Postboks 323, 2001 Lillestrøm\nBesøksadresse: Tærudgata 16, inngang A, Lillestrøm\nPostadresse: Postboks 323, 2001 Lillestrøm\nTelefon\n63 89 02 00\nE-post\nBoligutvikling: bolig@bori.no\nProsjekt: prosjekt@bori.no",
+     "identity_text_excerpt": "BORI BBL Våre lokasjoner Lillestrøm Mysen Flere kontaktpunkter 63 89 02 00 firmapost@bori.no Mandag - fredag 08:00 - 16:00 1. juni - 31. august 08:00 - 15:30 Medlemsservice 09:00 - 14:00 Om BORI Kontakt oss Aktuelt Jobb i BORI Presse Personvern Egenerklærling om hvitvasking Vilkår fordelsprogram",
+     "content_sha256": "c8a2092f3846e6f23ca9c0af798c4b82300eb815ae882f1d3ce6bc57a8ab3ce2"
+    },
+    {
+     "url": "https://www.bori.no/om-bori/presse/",
+     "title": "Presse - BORI BBL",
+     "main_text_excerpt": "Presse\nPressekontakt\nPressebilder\nBildene kan brukes vederlagsfritt, forutsatt at de brukes ved redaksjonell omtale av BORI og at fotografen krediteres.\nAdresser\nBesøksadresse: Tærudgata 16, inngang A, Lillestrøm.\nPostadresse: Postboks 323, 2001 Lillestrøm\nFakturaadresse\nBORI ønsker primært fakturaer på EHF. Adressen er da organisasjonsnummeret.\nVi kan imidlertid også motta på e-post. Adressen er da 989987011@bori.no\nÅpningstider\nMandag – fredag, kl. 8 – 16\nSommertid, kl. 9 – 14:30 (1.6 – 31.8)\nTelefon\nE-post: firmapost@bori.no\nTelefon: Sentralbord, 63 89 02 00\nTelefontid Medlemsservice, man – fre, kl. 9 – 14\nVakttelefon Toma Eiendomsdrift AS (kl. 16 – 18)\n64 84 37 00\nAdresser\nBesøksadresse: Storgata 13, Mysen\nPostadresse: Postboks 323, 2001 Lillestrøm",
+     "identity_text_excerpt": "BORI BBL Våre lokasjoner Lillestrøm Mysen Flere kontaktpunkter 63 89 02 00 firmapost@bori.no Mandag - fredag 08:00 - 16:00 1. juni - 31. august 08:00 - 15:30 Medlemsservice 09:00 - 14:00 Om BORI Kontakt oss Aktuelt Jobb i BORI Presse Personvern Egenerklærling om hvitvasking Vilkår fordelsprogram",
+     "content_sha256": "3f12f00ba8167c19c4aca0e6a45ea3cd487fa077dbd4b1466700963bf8f1550f"
+    },
+    {
+     "url": "https://www.bori.no/aktuelt/",
+     "title": "Aktuelt - BORI BBL",
+     "main_text_excerpt": "Aktuelt\nHer kan du lese om boligprosjekter, medlemsfordeler, siste nytt fra lokalmiljøet, kommende arrangementer, og få økonomiske tips og praktiske råd til ditt hjem.\nBli BORI-medlem: Vi spanderer årskontingenten ut året\nHar du vurdert å bli medlem, eller ønsker du å gi et medlemskap i gave? Nå er det en ekstra god anledning til å bli medlem.\nDigital sikkerhet i borettslag og sameier: Hva kan styret gjøre?\nStadig flere tjenester brukes digitalt, og antallet svindelforsøk øker. Selv om styret ikke har ansvar for beboernes digitale sikkerhet, kan dere bidra til en tryggere digital hverdag gjennom å gjøre beboerne kjent med sikkerhetsløsningene som følger med Altibox.\nViBORI\nHva gjør et sted til et hjem - å være, å leke, å bo, å leve? Bli med hjem til BORI.\nDin første bolig starter med en god plan\nSom BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\nVelkommen til årets juleforestilling, Scrooge – et juleeventyr\nSom BORI-medlem kan du sikre deg billetter til forestillingen for kun kr 150 per stykk. Våre juleforestillinger er alltid populære, så pass på å sikre deg billetter før det blir utsolgt.\nBuffer og sparekonto: Slik får styret bedre kontroll på økonomien\nUforutsette kostnader kan oppstå i alle borettslag og sameier. Med en god buffer på driftskonto og ekstra midler på sparekonto står styret bedre rustet til å håndtere vannlekkasjer, akutte reparasjoner, økte kostnader og forsinkede innbetalinger.\nEn markedsdag for mer enn gode kupp\nDa Sagdalen Borettslag på Strømmen inviterte til markedsdag for første gang, var målet større enn å gi brukte ting nye eiere. Styret ønsket å skape en møteplass der naboer kunne bli bedre kjent.\nNy mulighet i Eikeparken\nBenyttet du ikke muligheten sist? Nå kan du melde forkjøpsrett på trinn 2 i Eikeparken i Stavanger. Dette er boliger for familier i alle livssituasjoner og aldersgrupper. Med nærhet til skoler, barnehager og bussvei.\nNye medlemsfordeler i fordelsprogrammet\nSom BORI-medlem har du tilgang til en rekke fordeler som kan gi deg gode besparelser i hverdagen. Nå blir det enda enklere å dra nytte av medlemskapet når du handler på nett, gjennom nye samarbeidspartnere og flere fordeler i nettbutikker.\nSlik ble prosjektet en salgssuksess med BORI Fleks\nNår kjøperen selv kan velge borettslag eller sameie, blir boligene aktuelle for flere. Det gir kortere tid til spaden kan settes i jorda. Derfor tror utbyggeren at løsninger som BORI Fleks er kommet for å bli.",
+     "identity_text_excerpt": "BORI BBL Våre lokasjoner Lillestrøm Mysen Flere kontaktpunkter 63 89 02 00 firmapost@bori.no Mandag - fredag 08:00 - 16:00 1. juni - 31. august 08:00 - 15:30 Medlemsservice 09:00 - 14:00 Om BORI Kontakt oss Aktuelt Jobb i BORI Presse Personvern Egenerklærling om hvitvasking Vilkår fordelsprogram",
+     "content_sha256": "85c5d362b173740697227df17eb10e9afb7c1e874a16093801484ed2e3e62e76"
+    },
+    {
+     "url": "https://www.bori.no/medlem/aktuelt/bli-bori-medlem-vi-spanderer-arskontingenten-ut-aret/",
+     "title": "Bli BORI-medlem: Vi spanderer årskontingenten ut året - BORI BBL",
+     "main_text_excerpt": "Bli BORI-medlem: Vi spanderer årskontingenten ut året\nHar du vurdert å bli medlem, eller ønsker du å gi et medlemskap i gave? Nå er det en ekstra god anledning til å bli medlem.\nKun kr 300 ved innmelding\nFra 1. oktober og ut året spanderer vi årskontingenten for nye medlemmer. Dermed betaler du kun kr 300 (lovpålagt andelskapital, som er en engangskostnad ved innmelding). Årskontingenten på kr 350 for voksen og kr 175 for barn/ungdom dekker vi.\nEt medlemskap i BORI gir deg fordeler både på boligmarkedet og i hverdagen, og kan være en fin gave til noen du er glad i.\nØnsker du å gi et medlemskap i gave, kan du kontakte oss på medlem@bori.no.\nDin første bolig starter med en god plan\nSom BORI-medlem får du tilgang til gode betingelser på boliglån i Romerike Sparebank. Kombinert med personlig rådgivning, høy BSU-rente og lokal tilstedeværelse kan det gjøre veien til egen bolig litt enklere.\nVelkommen til årets juleforestilling, Scrooge – et juleeventyr\nSom BORI-medlem kan du sikre deg billetter til forestillingen for kun kr 150 per stykk. Våre juleforestillinger er alltid populære, så pass på å sikre deg billetter før det blir utsolgt.\nNy mulighet i Eikeparken\nBenyttet du ikke muligheten sist? Nå kan du melde forkjøpsrett på trinn 2 i Eikeparken i Stavanger. Dette er boliger for familier i alle livssituasjoner og aldersgrupper. Med nærhet til skoler, barnehager og bussvei.\nNye medlemsfordeler i fordelsprogrammet\nSom BORI-medlem har du tilgang til en rekke fordeler som kan gi deg gode besparelser i hverdagen. Nå blir det enda enklere å dra nytte av medlemskapet når du handler på nett, gjennom nye samarbeidspartnere og flere fordeler i nettbutikker.",
+     "identity_text_excerpt": "BORI BBL Våre lokasjoner Lillestrøm Mysen Flere kontaktpunkter 63 89 02 00 firmapost@bori.no Mandag - fredag 08:00 - 16:00 1. juni - 31. august 08:00 - 15:30 Medlemsservice 09:00 - 14:00 Om BORI Kontakt oss Aktuelt Jobb i BORI Presse Personvern Egenerklærling om hvitvasking Vilkår fordelsprogram",
+     "content_sha256": "b4e51749d1094da26be9862a9a76e208746e7323df8c9b5038257fbd280c8878"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "related_or_uncertain",
+    "score": 0.3,
+    "publishable": false,
+    "legal_name_tokens": [
+     "sameie",
+     "jessheim",
+     "park",
+     "drift"
+    ],
+    "matched_tokens": [
+     "sameie"
+    ],
+    "reasons": [
+     "registry-linked URL lacks strong exact-entity identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/boribbl"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bori_boligbyggelag"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bori-bbl"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/boribbl",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bori_boligbyggelag",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bori-bbl",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "25c27de3151a137fef2d95bb10ddc8bb4de9d8eacfe2051552dcb4b5433ae35c",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/813396092": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "7770925b3984b41c.json.gz",
+   "content_sha256": "7770925b3984b41c786191b9d1223eca43b166d07ed99638b4d8db5db99dd87c",
+   "retrieved_at": "2026-10-04T23:00:22.672595Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/813396092": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "d5e44bfff9576b2a.json.gz",
+   "content_sha256": "d5e44bfff9576b2a72504529f79961d3a35ada3db45ec5007067cce7617823f1",
+   "retrieved_at": "2026-10-04T23:00:23.323601Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/813396092/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "f94928613f2c7081.json.gz",
+   "content_sha256": "f94928613f2c7081955eb5d8d09b91a12d7671bca9ec9fb933f272fe666abc5e",
+   "retrieved_at": "2026-10-04T23:00:25.385425Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/813396092": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-10-04T23:00:24.070155Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=813396092&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "60ad6fef0aef68be.json.gz",
+   "content_sha256": "60ad6fef0aef68bec5a853073620daa8fa957bb54e45dfd3d338f21042286143",
+   "retrieved_at": "2026-10-04T23:00:24.721217Z"
+  },
+  "https://www.bori.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "25c27de3151a137f.html.gz",
+   "content_sha256": "25c27de3151a137fef2d95bb10ddc8bb4de9d8eacfe2051552dcb4b5433ae35c",
+   "retrieved_at": "2026-10-04T23:00:39.191284Z"
+  },
+  "https://www.bori.no/om-bori/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "c8a2092f3846e6f2.html.gz",
+   "content_sha256": "c8a2092f3846e6f23ca9c0af798c4b82300eb815ae882f1d3ce6bc57a8ab3ce2",
+   "retrieved_at": "2026-10-04T23:00:40.263304Z"
+  },
+  "https://www.bori.no/personvernerklaering/": {
+   "kind": "site",
+   "status": 200,
+   "file": "6bad027925c836bd.html.gz",
+   "content_sha256": "6bad027925c836bdf045b177a681116dabbf3b98ef4fb23350db909790c03325",
+   "retrieved_at": "2026-10-04T23:00:40.926392Z"
+  },
+  "https://www.bori.no/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "85c5d362b1737406.html.gz",
+   "content_sha256": "85c5d362b173740697227df17eb10e9afb7c1e874a16093801484ed2e3e62e76",
+   "retrieved_at": "2026-10-04T23:00:41.893737Z"
+  },
+  "https://www.bori.no/om-bori/jobb-i-bori/": {
+   "kind": "site",
+   "status": 200,
+   "file": "7bdcf4f8a6847c9e.html.gz",
+   "content_sha256": "7bdcf4f8a6847c9ee95e5c7b6a47996d9d46e58ce758410bc034d7c960724111",
+   "retrieved_at": "2026-10-04T23:00:42.858513Z"
+  },
+  "https://www.bori.no/medlem/aktuelt/bli-bori-medlem-vi-spanderer-arskontingenten-ut-aret/": {
+   "kind": "site",
+   "status": 200,
+   "file": "b4e51749d1094da2.html.gz",
+   "content_sha256": "b4e51749d1094da26be9862a9a76e208746e7323df8c9b5038257fbd280c8878",
+   "retrieved_at": "2026-10-04T23:00:44.189594Z"
+  },
+  "https://www.bori.no/styret/aktuelt/digital-sikkerhet-i-borettslag-og-sameier-hva-kan-styret-gjore/": {
+   "kind": "site",
+   "status": 200,
+   "file": "7e214c3d03eb8146.html.gz",
+   "content_sha256": "7e214c3d03eb81465ac4c6cce71d2a957ddca7711355293c2a109c47781ccd18",
+   "retrieved_at": "2026-10-04T23:00:45.169229Z"
+  },
+  "https://www.bori.no/medlem/aktuelt/din-forste-bolig-starter-med-en-god-plan/": {
+   "kind": "site",
+   "status": 200,
+   "file": "5849bb8680446fea.html.gz",
+   "content_sha256": "5849bb8680446feae4673a0d25e4bcebe4574ec68f14d5b92f2e48f8b1e2c089",
+   "retrieved_at": "2026-10-04T23:00:46.069444Z"
+  }
+ }
+}

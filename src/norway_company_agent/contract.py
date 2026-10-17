@@ -104,6 +104,10 @@ class ClaimSet:
             "key": key[:24],
         }
         claim.update(extra or {})
+        if (record or {}).get("carried_forward"):
+            # The source failed in this run; the value is the last supported one, with its original evidence.
+            claim["carried_forward"] = True
+            claim["last_verified_at"] = (record or {}).get("retrieved_at")
         self.claims.append(claim)
         return True
 

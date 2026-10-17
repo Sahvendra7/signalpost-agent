@@ -1,0 +1,188 @@
+{
+ "organisation_number": "811730912",
+ "name": "MTM SKOGSERVICE AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.mtm-skogservice.no/",
+  "retrieved_at": "2026-10-04T23:00:32.874570Z",
+  "value": {
+   "requested_url": "https://www.mtm-skogservice.no/",
+   "final_url": "https://www.mtm-skogservice.no/",
+   "registered_domain": "mtm-skogservice.no",
+   "title": "MTM Skogservice AS",
+   "description": "Butikken for smyg & åtejegere",
+   "main_text_excerpt": "Utvalgte produkter\nHikmicro Monokular Lynx LQ35L 3.0 LRF\nTermisk monokular 640x512 m/LRF\nHikmicro Monokular Lynx LH35 3.0\nTermisk monokular 384x288\nHikmicro Monokular Lynx LH25 3.0\nTermisk monokular 384x288\nHikmicro Monokular Lynx LH19 3.0\nTermisk monokular 384x288\nHikmicro Monokular Lynx LH15 3.0\nTermisk monokular 320x240\nHikmicro Monokular Lynx LE10 3.0\nHikmicro Lynx 3.0 har nytt design med kortere lengde og lavere vekt, denne er enkel å ta med seg!\nHikmicro Actionkamera A7E - NYHET!!!\nLettvekts actionkamera, skikkelig shotkam konkurrent - Tidligst levering juli 2026\nHikmicro NEOS Kikkertsikte NH35L\nLett og kompakt termisk kikkertsikte - Levering tidligst Juli 2026\nHikmicro NEOS Kikkertsikte NH25L - NYHET!!!\nNEOS er et lett og kompakt termisk kikkertsikte - Levering tidligst Juli 2026\nHikmicro NEOS Kikkertsikte NE25 - NYHET!!!\nLett og kompakt termisk kikkertsikte - Levering tidligst Juli 2026\nVeggfeste Tracker Luna\n3D printet veggfeste for Tracker Luna",
+   "identity_text_excerpt": "Movegen 24 , 2170 Fenstad 40303071 post@mtm-skogservice.no",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/MtmSkogservice"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/mtmskogservice"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "a083d260b2cc471f73cfccd86e4c2c790c996cb04ba5327427f69a4140ecee5c",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.mtm-skogservice.no/",
+     "title": "MTM Skogservice AS",
+     "main_text_excerpt": "Utvalgte produkter\nHikmicro Monokular Lynx LQ35L 3.0 LRF\nTermisk monokular 640x512 m/LRF\nHikmicro Monokular Lynx LH35 3.0\nTermisk monokular 384x288\nHikmicro Monokular Lynx LH25 3.0\nTermisk monokular 384x288\nHikmicro Monokular Lynx LH19 3.0\nTermisk monokular 384x288\nHikmicro Monokular Lynx LH15 3.0\nTermisk monokular 320x240\nHikmicro Monokular Lynx LE10 3.0\nHikmicro Lynx 3.0 har nytt design med kortere lengde og lavere vekt, denne er enkel å ta med seg!\nHikmicro Actionkamera A7E - NYHET!!!\nLettvekts actionkamera, skikkelig shotkam konkurrent - Tidligst levering juli 2026\nHikmicro NEOS Kikkertsikte NH35L\nLett og kompakt termisk kikkertsikte - Levering tidligst Juli 2026\nHikmicro NEOS Kikkertsikte NH25L - NYHET!!!\nNEOS er et lett og kompakt termisk kikkertsikte - Levering tidligst Juli 2026\nHikmicro NEOS Kikkertsikte NE25 - NYHET!!!\nLett og kompakt termisk kikkertsikte - Levering tidligst Juli 2026\nVeggfeste Tracker Luna\n3D printet veggfeste for Tracker Luna",
+     "content_sha256": "a083d260b2cc471f73cfccd86e4c2c790c996cb04ba5327427f69a4140ecee5c"
+    },
+    {
+     "url": "https://www.mtm-skogservice.no/sider/om-oss",
+     "title": "MTM-Skogservice AS - alt til din åtejakt | MTM Skogservice AS",
+     "main_text_excerpt": "Kategorier\nOm oss\nNettbutikk som har spesialisert seg innen produkter til jakt, både før og etter felt vilt.\nNettbutikken skal tilby de produkter vi mener skal gjøre en jakt mer suksessfull og trygg.\nVi er lidenskapelig opptatt av jakt og vilt.\nVillsvinet er på vei inn i Norge for fullt og da må man imøtekomme denne utfordringen gjennom kloke valg innen forvaltning. \nVi Håper at vår gode kundeservice og store interesse for feltet vil gi deg det du er ute etter. \nVi skal tilby deg som jeger de beste produktene for å være mer suksessfull innenfor ditt jaktområde.\nNettbutikken er i en utviklingsfase for å kunne tilby nye produkter til de fleste jaktformer. Mye spennende i vente fremover. Det vil bli publisert tilbehør som gjør forvaltningen enklere å drive og jakten både tryggere og mer effektiv.\nVi håper at vårt store engasjement for jakt og fangst skal smitte over på deg som jeger.\nFølg oss gjerne på Facebook for oppdateringer om nye produkter osv.: www.facebook.com/MtmSkogservice\nInstagram: mtmskogservice\nRing oss i dag for en hyggelig og uforpliktende samtale: 40303071\nNB! Om dere velger å hente varen deres på utsalgsstedet må dette avtales via tlf 40303071 eller post@mtm-skogservice.no\nSkriv gjerne produktanmeldelser på kjøpte produkter gjennom vår nettside. Vi ønsker konstruktive tilbakemeldinger for å forbedre produktutvalget våres. Vi er avhengig av slike tilbakemeldinger for å kunne yte bedre service til dere.\nVelkommen til vår butikk!",
+     "identity_text_excerpt": "Movegen 24 , 2170 Fenstad 40303071 post@mtm-skogservice.no",
+     "content_sha256": "4cae43f96b133d868b4c1b4eb772c8720dd3a7dc540f5f881eeb4de5c0575292"
+    },
+    {
+     "url": "https://www.mtm-skogservice.no/side/kontakt_oss",
+     "title": "Kontakt oss | MTM Skogservice AS",
+     "main_text_excerpt": "Kontakt oss\nFyll ut feltene nedenfor og vi vil svare deg så fort vi kan.\nPå forhånd takk, og ha fortsatt en riktig fin dag.\nE-postadresse: post@mtm-skogservice.no",
+     "identity_text_excerpt": "Movegen 24 , 2170 Fenstad 40303071 post@mtm-skogservice.no",
+     "content_sha256": "00b66811a522c72a726eb3aee0cfe7fe2b066ca6fb97b9e490978a268c4832a4"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "mtm",
+     "skogservice"
+    ],
+    "matched_tokens": [
+     "mtm",
+     "skogservice"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/MtmSkogservice"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/mtmskogservice"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/channel/UCWQ6axV2SNSqhA0JVoTZk-w"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/MtmSkogservice",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "mtm",
+      "skogservice"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/mtmskogservice",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "mtm",
+      "skogservice"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/channel/UCWQ6axV2SNSqhA0JVoTZk-w",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "a083d260b2cc471f73cfccd86e4c2c790c996cb04ba5327427f69a4140ecee5c",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/811730912": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "a5f80af4a4a0ef8b.json.gz",
+   "content_sha256": "a5f80af4a4a0ef8bd28bb41753b7e1184b8ffff38c0dde35da77b2db9104458b",
+   "retrieved_at": "2026-10-04T23:00:22.727806Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/811730912": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "009382cfa5648654.json.gz",
+   "content_sha256": "009382cfa5648654eb354a820ee111b2e528de48a37e2fb4828fb45da0fb2bdd",
+   "retrieved_at": "2026-10-04T23:00:23.385451Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/811730912/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "d487628ae2e24773.json.gz",
+   "content_sha256": "d487628ae2e247731f9bb33738abf597cdba869a589b81ba593102ea037bf84e",
+   "retrieved_at": "2026-10-04T23:00:25.384204Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/811730912": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-10-04T23:00:24.063031Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=811730912&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "0c427165bcdedef7.json.gz",
+   "content_sha256": "0c427165bcdedef7148612e523891f05351d954c18b558431ce659c9f0ad6780",
+   "retrieved_at": "2026-10-04T23:00:24.718900Z"
+  },
+  "https://www.mtm-skogservice.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "09b967ddbe380bac.html.gz",
+   "content_sha256": "09b967ddbe380bac81008091a87d1f5f9b58553a204885ff43c33ab2d748e1a9",
+   "retrieved_at": "2026-10-04T23:00:34.632630Z"
+  },
+  "https://www.mtm-skogservice.no/sider/om-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "38d4c0f077dc4909.html.gz",
+   "content_sha256": "38d4c0f077dc4909bac176ffeb8bb88dfd7941409789a7be94d0ca99441379c2",
+   "retrieved_at": "2026-10-04T23:00:35.713208Z"
+  },
+  "https://www.mtm-skogservice.no/side/kontakt_oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "16e384fb5154ced5.html.gz",
+   "content_sha256": "16e384fb5154ced5c4af3eea07a95b81ef75a721c6a5409c932260a21f9f7960",
+   "retrieved_at": "2026-10-04T23:00:36.657889Z"
+  }
+ }
+}

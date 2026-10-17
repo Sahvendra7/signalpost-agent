@@ -77,6 +77,42 @@ def page_signals(html: str) -> dict[str, Any]:
     }
 
 
+def registered_managers(profile: dict[str, Any]) -> list[dict[str, str]]:
+    """Organisations Brreg lists as the entity's forretningsfører (business manager), with organisation number."""
+    roles = (((profile.get("evidence") or {}).get("roles") or {}).get("value") or {}).get("roles") or []
+    out = []
+    for role in roles:
+        number = re.sub(r"\D", "", str(role.get("organisation_number") or ""))
+        if role.get("role_code") == "FFØR" and len(number) == 9 and not role.get("inactive"):
+            name = role.get("name")
+            out.append({"organisation_number": number, "name": " ".join(name) if isinstance(name, list) else str(name or "")})
+    return out
+
+
+def manager_designated(profile: dict[str, Any], site_domain: str, pages_html: list[str], verdict: dict[str, Any], *, registry_email: str | None = None) -> dict[str, Any] | None:
+    """The registry-designated website of an entity run by a registered business manager (housing cooperatives,
+    sameier): a chain of official facts, never a name match. All are required:
+      1. the entity's own Brreg record names this website (the caller passes only the registry_hjemmeside candidate);
+      2. Brreg lists an organisation as the entity's forretningsfører;
+      3. that organisation's number is printed on the captured pages (the site is the manager's own);
+      4. a control signal ties the entity's contact to the site (registry e-mail domain = site, or own-domain mailbox);
+      5. the identity gate found nothing contrary (AMBIGUOUS only; never THIRD_PARTY, FAN_COMMUNITY or DIRECTORY).
+    Returns the manager when all hold, else None."""
+    if verdict.get("class") != "AMBIGUOUS":
+        return None
+    signals = verdict.get("signals") or {}
+    if not (signals.get("registry_email_domain_match") or signals.get("own_domain_mailbox")):
+        return None
+    # The site's own markup, scripts and styles removed: visible text, <template> content (contact dialogs) and
+    # attributes such as mailto: addresses. Only one specific, known number is looked for.
+    markup = " ".join(re.sub(r"(?is)<(script|style)\b.*?</\1\s*>", " ", html) for html in pages_html if html)
+    printed = {"".join(match) for match in ORG_SHAPE.findall(markup)}
+    for manager in registered_managers(profile):
+        if manager["organisation_number"] in printed:
+            return manager
+    return None
+
+
 def classify_site(profile: dict[str, Any], site_domain: str, pages_html: list[str], *, registry_email: str | None = None) -> dict[str, Any]:
     org = re.sub(r"\D", "", str(profile.get("organisation_number") or ""))
     signals = [page_signals(html) for html in pages_html if html]

@@ -5,14 +5,12 @@ Retrieval is injected (`fetcher`, `website_fetcher`) so the whole pipeline runs 
 from __future__ import annotations
 
 import functools
-import gzip
 import hashlib
-import json
 import threading
 import time
 import traceback
-from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass, field
+import copy
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
 from typing import Any, Callable
 
@@ -22,9 +20,13 @@ from .contract import ClaimSet, build_envelope, snapshot_relative_path, validate
 from .evidence import evidence, utc_now
 from .http import FetchResult, fetch_bytes, fetch_json
 from .identity import apply_website_identity_gate
+from .inputs import InputRow, mod11_valid, read_input_rows  # noqa: F401  (re-exported)
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
-from .refresh import diff_profile
+from .privacy import redacting_fetcher
+from .refresh import carry_forward, claim_changes
+from .status import company_status, identity_block
+from .synthesis import company_summary
 from .site_research import SiteSession, research_company_site
 from .sampling import iter_bulk
 from .website import SAFE_OPENER, assert_public_url, fetch_website
@@ -33,98 +35,68 @@ DEFAULT_MODULES = ("registry", "registry_live", "financials", "roles", "group", 
 V1_MODULES = DEFAULT_MODULES[:-1]
 NON_FETCH_MODULES = {"registry", "accounting_obligation", "website", "site_research"}
 BULK_URL = "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv"
-ORG_WEIGHTS = (3, 2, 7, 6, 5, 4, 3, 2)
+DEADLINE_SKIP_NOTE = "deadline: skipped to keep the batch within its time budget"
+DEADLINE_NOT_STARTED_NOTE = "deadline: company not researched before the batch deadline"
 
 Fetcher = Callable[[str], FetchResult]
 WebsiteFetcher = Callable[[str | None], tuple[dict[str, Any], dict[str, Any]]]
 
 
-@dataclass
-class InputRow:
-    position: int
-    raw: Any
-    organisation_number: str | None
-    errors: list[dict[str, Any]] = field(default_factory=list)
-    annotations: dict[str, Any] = field(default_factory=dict)
-
-
-def mod11_valid(org: str) -> bool:
-    if len(org) != 9 or not org.isdigit():
-        return False
-    remainder = sum(int(digit) * weight for digit, weight in zip(org[:8], ORG_WEIGHTS)) % 11
-    check = 0 if remainder == 0 else 11 - remainder
-    return check != 10 and check == int(org[8])
-
-
-def read_input_rows(path: str | Path) -> list[InputRow]:
-    """Tolerant reader: every non-blank input line becomes exactly one row, valid or not."""
-    source = Path(path)
-    opener = gzip.open if source.suffix == ".gz" else open
-    with opener(source, "rt", encoding="utf-8-sig") as handle:
-        text = handle.read()
-    stem_suffix = Path(source.stem).suffix if source.suffix == ".gz" else source.suffix
-    values: list[Any] = []
-    if stem_suffix == ".json":
-        body = json.loads(text)
-        values = body if isinstance(body, list) else body.get("organisation_numbers", [])
-    else:
-        for line in text.splitlines():
-            if not line.strip():
-                continue
-            if stem_suffix == ".jsonl" or line.lstrip().startswith(("{", '"')):
-                try:
-                    values.append(json.loads(line))
-                except json.JSONDecodeError:
-                    values.append(line.strip())
-            else:
-                values.append(line.strip())
-    rows = []
-    first_seen: dict[str, int] = {}
-    for position, value in enumerate(values):
-        org_value = value.get("organisation_number", value.get("organisasjonsnummer")) if isinstance(value, dict) else value
-        digits = "".join(character for character in str(org_value or "") if character.isdigit())
-        row = InputRow(position=position, raw=org_value, organisation_number=digits if len(digits) == 9 else None)
-        if isinstance(value, dict):
-            row.annotations = {key: value[key] for key in ("evaluation_split", "sample_slice") if value.get(key) is not None}
-        if row.organisation_number is None:
-            row.errors.append({"code": "invalid_organisation_number", "stage": "input", "message": f"Input is not a 9-digit organisation number: {str(org_value)[:40]!r}"})
-        else:
-            if not mod11_valid(row.organisation_number):
-                row.errors.append({"code": "checksum_mismatch", "stage": "input", "message": "Organisation number fails the mod-11 check; researched anyway"})
-            if row.organisation_number in first_seen:
-                row.errors.append({"code": "duplicate_input", "stage": "input", "message": f"Same organisation number as input row {first_seen[row.organisation_number]}; researched once"})
-            else:
-                first_seen[row.organisation_number] = position
-        rows.append(row)
-    return rows
+REGISTRY_ABSENT_NOTE = "Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)"
+GZIP_MAGIC = b"\x1f\x8b"
 
 
 def load_bulk_profiles(path: str | Path | None, wanted: set[str]) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
-    """Profiles for `wanted` orgs found in the bulk snapshot. Missing orgs are not an error here."""
+    """Profiles for `wanted` orgs found in the optional bulk snapshot (gzip CSV). Never raises.
+
+    No snapshot: identity comes from the live registry (`snapshot_status: absent`). A missing file, a file
+    that is not gzip, or one that cannot be read to the end is `invalid`: nothing from it is used, every
+    company falls back to the live registry, and the reason is reported separately. Missing orgs are not
+    an error here."""
     if not path:
-        return {}, {"bulk": None}
+        return {}, {"bulk": None, "snapshot_status": "absent", "fallback": "live_registry"}
     source = Path(path)
-    digest = hashlib.sha256()
-    with source.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1 << 20), b""):
-            digest.update(chunk)
-    snapshot_sha256 = digest.hexdigest()
-    retrieved_at = utc_now()
-    found: dict[str, dict[str, Any]] = {}
-    scanned = 0
-    for profile in iter_bulk(source):
-        scanned += 1
-        org = profile["organisation_number"]
-        if org not in wanted:
-            continue
-        raw = profile.pop("raw", {})
-        profile["evidence"] = {
-            "registry": evidence("registry", "available", "official_registry_bulk", BULK_URL, value=raw, retrieved_at=retrieved_at, content_sha256=snapshot_sha256, source_row_key=org),
-        }
-        found[org] = profile
-        if len(found) == len(wanted):
-            break
-    return found, {"registry_snapshot_sha256": snapshot_sha256, "registry_rows_scanned": scanned, "requested": len(wanted), "found_in_bulk": len(found)}
+
+    def invalid(reason: str) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+        return {}, {"bulk": source.name, "snapshot_status": "invalid", "reason": reason, "fallback": "live_registry"}
+
+    try:
+        if not source.is_file():
+            return invalid("snapshot file not found")
+        digest = hashlib.sha256()
+        with source.open("rb") as handle:
+            if handle.read(2) != GZIP_MAGIC:
+                return invalid("snapshot is not gzip-compressed (expected Brreg's gzip CSV download)")
+            handle.seek(0)
+            for chunk in iter(lambda: handle.read(1 << 20), b""):
+                digest.update(chunk)
+        snapshot_sha256 = digest.hexdigest()
+        retrieved_at = utc_now()
+        found: dict[str, dict[str, Any]] = {}
+        scanned = 0
+        for profile in iter_bulk(source):
+            scanned += 1
+            org = profile["organisation_number"]
+            if org not in wanted:
+                continue
+            raw = profile.pop("raw", {})
+            profile["evidence"] = {
+                "registry": evidence("registry", "available", "official_registry_bulk", BULK_URL, value=raw, retrieved_at=retrieved_at, content_sha256=snapshot_sha256, source_row_key=org),
+            }
+            found[org] = profile
+            if len(found) == len(wanted):
+                break
+    except Exception as exc:  # corrupt/truncated gzip, wrong CSV shape, bad encoding: never abort the batch
+        return invalid(f"snapshot could not be read: {type(exc).__name__}: {str(exc)[:160]}")
+    return found, {"bulk": source.name, "snapshot_status": "used", "registry_snapshot_sha256": snapshot_sha256, "registry_rows_scanned": scanned, "requested": len(wanted), "found_in_bulk": len(found)}
+
+
+def registry_absent_note(metadata: dict[str, Any]) -> str:
+    if metadata.get("snapshot_status") == "invalid":
+        return f"Registry snapshot invalid ({metadata.get('reason')}); identity from the live registry"
+    if metadata.get("snapshot_status") == "absent":
+        return "No registry snapshot supplied; identity from the live registry"
+    return REGISTRY_ABSENT_NOTE
 
 
 class SnapshotStore:
@@ -194,6 +166,10 @@ def research_company(
     website_fetcher: WebsiteFetcher,
     site_session: SiteSession | None = None,
     llm_layer: Any = None,
+    degrade: bool = False,
+    site_deadline: float | None = None,
+    progress: dict[str, dict[str, Any]] | None = None,
+    registry_note: str = REGISTRY_ABSENT_NOTE,
 ) -> tuple[dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
     """Research one company. Never raises: failures become explicit module states and errors.
 
@@ -203,8 +179,10 @@ def research_company(
     errors: list[dict[str, Any]] = []
     profile = base_profile or {"organisation_number": org, "evidence": {}}
     profile.setdefault("evidence", {})
+    if progress is not None:
+        progress[org] = profile  # lets the batch salvage facts already fetched if the hard deadline hits
     if "registry" in modules and "registry" not in profile["evidence"]:
-        profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note="Organisation number absent from the supplied bulk snapshot (or no snapshot supplied)")
+        profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note=registry_note)
     metrics: list[FetchResult] = []
     website_metrics = {"requests": 0, "bytes": 0, "latencies_ms": []}
     fetch_modules = set(modules) - NON_FETCH_MODULES
@@ -226,15 +204,21 @@ def research_company(
             errors.append(mismatch)
         if "accounting_obligation" in modules:
             profile["evidence"]["accounting_obligation"] = accounting_obligation_assessment(profile)
-        if "website" in modules:
+        if "website" in modules and degrade:
+            profile["evidence"]["website"] = evidence("website", "source_error", "registry_linked_company_website", "https://data.brreg.no/enhetsregisteret/api/enheter", note=DEADLINE_SKIP_NOTE)
+        elif "website" in modules:
             stage = "website"
             website_record, website_metrics = website_fetcher(profile.get("website"))
             profile["evidence"]["website"] = apply_website_identity_gate(profile, website_record)["website"]
     except Exception as exc:  # isolation boundary: one bad company/source never ends the batch
         errors.append({"code": "pipeline_exception", "stage": stage, "message": f"{type(exc).__name__}: {str(exc)[:200]}", "trace_tail": traceback.format_exc(limit=2)[-400:]})
-    if "site_research" in modules and site_session is not None and identity_anchored(profile):
+    site_seconds = None if site_deadline is None else site_deadline - time.monotonic()
+    if "site_research" in modules and (degrade or (site_seconds is not None and site_seconds < 5)):
+        profile["evidence"]["site_research"] = evidence("site_research", "source_error", "company_site", "https://data.brreg.no/enhetsregisteret/api/enheter", note=DEADLINE_SKIP_NOTE)
+        errors.append({"code": "deadline_degraded", "stage": "site_research", "message": "Website research skipped to keep the batch within its deadline"})
+    elif "site_research" in modules and site_session is not None and identity_anchored(profile):
         try:
-            site_record, site_requests = _site_research(profile, site_session)
+            site_record, site_requests = _site_research(profile, site_session, max_seconds=min(60.0, site_seconds) if site_seconds is not None else 60.0)
             profile["evidence"]["site_research"] = site_record
         except Exception as exc:  # own boundary: website work never costs the official facts
             errors.append({"code": "pipeline_exception", "stage": "site_research", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
@@ -261,11 +245,11 @@ def research_company(
     return profile, operations, errors
 
 
-def _site_research(profile: dict[str, Any], session: SiteSession) -> tuple[dict[str, Any], int]:
+def _site_research(profile: dict[str, Any], session: SiteSession, max_seconds: float = 60.0) -> tuple[dict[str, Any], int]:
     website = profile["evidence"].get("website") or {}
     value = website.get("value") or {}
     registry_url = value.get("final_url") if website.get("status") == "available" and (value.get("identity_assessment") or {}).get("publishable") else None
-    result = research_company_site(profile, session, registry_verified_url=registry_url)
+    result = research_company_site(profile, session, registry_verified_url=registry_url, max_seconds=max_seconds)
     body = {key: getattr(result, key) for key in result.__dataclass_fields__}
     if result.status == "verified":
         first = result.pages[0] if result.pages else {}
@@ -299,12 +283,23 @@ def run_batch(
     site_fetcher: Callable[..., Any] = fetch_bytes,
     resolver: Callable[[str], bool] | None = None,
     llm_layer: Any = None,
+    deadline_seconds: float | None = None,
+    grace_seconds: float = 60.0,
+    on_result: Callable[[list[dict[str, Any]], dict[str, Any] | None], None] | None = None,
+    stop_event: threading.Event | None = None,
 ) -> dict[str, Any]:
+    """Research every row and return one terminal envelope per row, in input order.
+
+    `on_result(envelopes, profile)` is called from the calling thread as soon as each company (and every
+    input row that names it) reaches a terminal state, so callers can persist results incrementally.
+    With `deadline_seconds`, new companies degrade to official-only research when the observed rate says
+    full research will not fit, nothing new starts inside the last `grace_seconds`, and at the deadline
+    unfinished companies get envelopes built from the official facts they already fetched."""
     modules = list(modules or DEFAULT_MODULES)
     batch_started_at = utc_now()
     batch_started = time.monotonic()
     store = SnapshotStore(snapshot_root)
-    wrapped = store.wrap(fetcher)
+    wrapped = store.wrap(redacting_fetcher(fetcher))  # birth dates are dropped before hashing or storage
     session = None
     if "site_research" in modules:
         # The live fetcher gets the same outbound policy as the v1 website module: public hosts only,
@@ -314,8 +309,43 @@ def run_batch(
         session = SiteSession(fetcher=store.wrap_bytes(fetch), resolver=resolver, url_guard=assert_public_url if live else None)
     unique_orgs = list(dict.fromkeys(row.organisation_number for row in rows if row.organisation_number))
     bulk_profiles, registry_metadata = load_bulk_profiles(bulk_path, set(unique_orgs)) if "registry" in modules else ({}, {"bulk": "not requested"})
+    registry_note = registry_absent_note(registry_metadata)
 
     results: dict[str, dict[str, Any]] = {}
+    started = time.monotonic()
+    hard_deadline = started + deadline_seconds if deadline_seconds else None
+    progress: dict[str, dict[str, Any]] = {}
+    runtimes: list[float] = []
+    state = {"degraded": 0, "not_started": 0, "salvaged": 0, "stop_reason": None}
+    lock = threading.Lock()
+    pending_count = [len(unique_orgs)]
+
+    def remaining() -> float | None:
+        return None if hard_deadline is None else hard_deadline - time.monotonic()
+
+    def should_degrade() -> bool:
+        """Degrade new companies to official-only when full research is projected to miss the deadline."""
+        left = remaining()
+        if left is None:
+            return False
+        with lock:
+            if not runtimes:
+                return left < grace_seconds * 2
+            mean = sum(runtimes) / len(runtimes)
+            projected = pending_count[0] * mean / max(1, workers)
+        return projected > left - grace_seconds
+
+    def deadline_result(org: str, base: dict[str, Any] | None, code: str, note: str) -> dict[str, Any]:
+        profile = base or {"organisation_number": org, "evidence": {}}
+        profile.setdefault("evidence", {})
+        if "registry" in modules and "registry" not in profile["evidence"]:
+            profile["evidence"]["registry"] = evidence("registry", "not_found", "official_registry_bulk", BULK_URL, note=registry_note)
+        for module in modules:
+            if module not in profile["evidence"]:
+                profile["evidence"][module] = evidence(module, "source_error", "pipeline", "https://data.brreg.no/", note=note)
+        operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0}
+        now = utc_now()
+        return {"profile": profile, "operations": operations, "errors": [{"code": code, "stage": "scheduling", "message": note}], "started_at": now, "completed_at": now}
 
     def work(org: str) -> tuple[str, dict[str, Any]]:
         company_started_at = utc_now()
@@ -323,41 +353,125 @@ def run_batch(
         if reused is not None:
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0, "resumed": True}
             return org, {"profile": reused, "operations": operations, "errors": [], "started_at": company_started_at, "completed_at": utc_now()}
+        left = remaining()
+        if (stop_event is not None and stop_event.is_set()) or (left is not None and left < grace_seconds):
+            with lock:
+                state["not_started"] += 1
+            return org, deadline_result(org, bulk_profiles.get(org), "deadline_exceeded", DEADLINE_NOT_STARTED_NOTE)
+        degrade = should_degrade()
+        if degrade:
+            with lock:
+                state["degraded"] += 1
         try:
-            profile, operations, errors = research_company(org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session, llm_layer=llm_layer)
+            profile, operations, errors = research_company(
+                org, bulk_profiles.get(org), modules, fetcher=wrapped, website_fetcher=website_fetcher, site_session=session, llm_layer=llm_layer,
+                degrade=degrade, site_deadline=(hard_deadline - grace_seconds) if hard_deadline is not None else None, progress=progress,
+                registry_note=registry_note,
+            )
         except Exception as exc:  # second boundary: research_company should not raise, but never trust it
             profile = {"organisation_number": org, "evidence": {}}
             operations = {"requests": 0, "bytes": 0, "latencies_ms": [], "runtime_ms": 0, "third_party_cost_usd": 0}
             errors = [{"code": "pipeline_exception", "stage": "research", "message": f"{type(exc).__name__}: {str(exc)[:200]}"}]
+        if not degrade:
+            with lock:
+                runtimes.append(operations.get("runtime_ms", 0) / 1000)
         return org, {"profile": profile, "operations": operations, "errors": errors, "started_at": company_started_at, "completed_at": utc_now()}
 
-    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
-        for org, result in pool.map(work, unique_orgs):
-            results[org] = result
-
-    envelopes = []
-    profiles = []
+    rows_by_org: dict[str, list[InputRow]] = {}
     for row in rows:
-        envelopes.append(_envelope_for_row(row, results.get(row.organisation_number or ""), run_id=run_id, modules=modules, previous_profiles=previous_profiles, snapshot_root=snapshot_root))
-    for org in unique_orgs:
-        profiles.append(results[org]["profile"])
+        if row.organisation_number:
+            rows_by_org.setdefault(row.organisation_number, []).append(row)
+    envelopes_by_position: dict[int, dict[str, Any]] = {}
+
+    def emit(org: str | None, result: dict[str, Any] | None, targets: list[InputRow]) -> None:
+        if not targets:
+            return
+        batch = [_envelope_for_row(row, result, run_id=run_id, modules=modules, previous_profiles=previous_profiles, snapshot_root=snapshot_root) for row in targets]
+        for row, envelope in zip(targets, batch):
+            envelopes_by_position[row.position] = envelope
+        if on_result is not None:
+            on_result(batch, result["profile"] if result is not None else None)
+
+    emit(None, None, [row for row in rows if not row.organisation_number])
+    pool = ThreadPoolExecutor(max_workers=max(1, workers))
+    futures = {pool.submit(work, org): org for org in unique_orgs}
+    waiting = set(futures)
+    try:
+        while waiting:
+            left = remaining()
+            if stop_event is not None and stop_event.is_set():
+                state["stop_reason"] = "interrupted"
+                break
+            if left is not None and left <= 0:
+                state["stop_reason"] = "deadline"
+                break
+            done, waiting = wait(waiting, timeout=1.0 if left is None else max(0.05, min(1.0, left)), return_when=FIRST_COMPLETED)
+            for future in done:
+                org, result = future.result()
+                results[org] = result
+                with lock:
+                    pending_count[0] -= 1
+                emit(org, result, rows_by_org[org])
+    finally:
+        pool.shutdown(wait=False, cancel_futures=True)
+    for future in waiting:  # hard stop: salvage whatever official facts the company already has
+        org = futures[future]
+        code = "interrupted" if state["stop_reason"] == "interrupted" else "deadline_exceeded"
+        partial = _snapshot_profile(progress.get(org))
+        if partial is not None:
+            state["salvaged"] += 1
+        result = deadline_result(org, partial if partial is not None else bulk_profiles.get(org), code, f"{code}: research did not finish before the batch stopped")
+        results[org] = result
+        emit(org, result, rows_by_org[org])
+
+    envelopes = [envelopes_by_position[row.position] for row in rows]
+    profiles = [results[org]["profile"] for org in unique_orgs]
 
     validation = validate_batch(envelopes, [_input_key(row) for row in rows], snapshot_root=snapshot_root)
     if expected_count is not None:
         validation["checks"]["expected_count_matches_input"] = expected_count == len(rows)
         validation["passed"] = validation["passed"] and expected_count == len(rows)
     report = batch_report(envelopes, results, run_id=run_id, started_at=batch_started_at, runtime_ms=int((time.monotonic() - batch_started) * 1000), modules=modules, registry_metadata=registry_metadata, validation=validation, input_rows=len(rows))
+    report["deadline"] = {
+        "deadline_seconds": deadline_seconds, "grace_seconds": grace_seconds if deadline_seconds else None,
+        "stop_reason": state["stop_reason"] or ("grace_window" if state["not_started"] else None), "companies_degraded_to_official_only": state["degraded"],
+        "companies_not_started": state["not_started"], "companies_salvaged_at_hard_stop": state["salvaged"],
+    }
     if llm_layer is not None and llm_layer.enabled:
         report["llm"] = llm_layer.report()
         report["operations"]["llm_calls"] = report["llm"]["calls"]
     return {"envelopes": envelopes, "profiles": profiles, "report": report}
 
 
+def _snapshot_profile(profile: dict[str, Any] | None) -> dict[str, Any] | None:
+    """Copy a profile that a worker thread may still be writing; records are replaced whole, so retry on races."""
+    if profile is None:
+        return None
+    for _ in range(5):
+        try:
+            return copy.deepcopy(profile)
+        except RuntimeError:
+            time.sleep(0.01)
+    return None
+
+
 def _input_key(row: InputRow) -> str | None:
     return row.organisation_number or (str(row.raw) if row.raw is not None else None)
 
 
-def _envelope_for_row(
+def _envelope_for_row(row: InputRow, result: dict[str, Any] | None, **kwargs: Any) -> dict[str, Any]:
+    envelope = _research_envelope(row, result, **kwargs)
+    identity = identity_block(envelope)
+    # Identity and the company-level status lead the envelope; module states stay under `modules`.
+    envelope = {"organisation_number": envelope["organisation_number"], "identity": identity, "company_status": company_status(envelope, identity), **envelope}
+    try:
+        envelope["company_summary"] = company_summary(envelope)
+    except Exception as exc:  # the summary must never cost the row its terminal envelope
+        envelope["errors"].append({"code": "summary_failed", "stage": "summary", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
+    return envelope
+
+
+def _research_envelope(
     row: InputRow,
     result: dict[str, Any] | None,
     *,
@@ -375,20 +489,32 @@ def _envelope_for_row(
             claims=[],
             evidence=[],
             errors=errors or [{"code": "not_researched", "stage": "input", "message": "Row could not be researched"}],
-            extra={"input_organisation_number": _input_key(row), "input_position": row.position, "category_coverage": {}},
+            extra={"input_organisation_number": _input_key(row), "input_position": row.position, "input_record": row.record, "category_coverage": {}},
         )
     profile = result["profile"]
     errors.extend(result["errors"])
+    previous = (previous_profiles or {}).get(row.organisation_number or "")
+    refresh_outcome = {"carried": [], "unverified": []}
+    if previous is not None:
+        try:
+            refresh_outcome = carry_forward(previous, profile)
+        except Exception as exc:
+            errors.append({"code": "refresh_carry_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     try:
         claim_set = claims_from_profile(profile, snapshot_root=snapshot_root)
     except Exception as exc:  # extraction must never cost the row its terminal envelope
         claim_set = ClaimSet(snapshot_root=snapshot_root)
         errors.append({"code": "extraction_exception", "stage": "claims", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     changes: list[dict[str, Any]] = []
-    previous = (previous_profiles or {}).get(row.organisation_number or "")
+    refresh_block: dict[str, Any] = {"compared": False, "reason": "no previous profile supplied for this company"}
     if previous is not None:
         try:
-            changes = diff_profile(previous, profile)
+            previous_claims = claims_from_profile(previous, snapshot_root=snapshot_root)
+            changes, refresh_block = claim_changes(previous_claims.claims, previous_claims.evidence, claim_set.claims, claim_set.evidence,
+                                                   carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=profile["evidence"])
+            for module in refresh_outcome["carried"]:
+                attempt = profile["evidence"][module].get("current_attempt") or {}
+                errors.append({"code": "source_unavailable_value_retained", "stage": module, "message": f"{module} failed in this run ({attempt.get('status')}: {attempt.get('note')}); last supported value retained"})
         except Exception as exc:
             errors.append({"code": "refresh_diff_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     anchored = identity_anchored(profile)
@@ -396,8 +522,8 @@ def _envelope_for_row(
         errors.append({"code": "identity_unresolved", "stage": "identity", "message": "Neither the bulk snapshot nor the live registry returned this organisation number"})
     module_states = {
         module: {
-            "state": evidence_terminal_state(profile["evidence"].get(module)),
-            "note": (profile["evidence"].get(module) or {}).get("note"),
+            "state": "carried_forward" if (profile["evidence"].get(module) or {}).get("carried_forward") and module in refresh_outcome["carried"] else evidence_terminal_state(profile["evidence"].get(module)),
+            "note": ((profile["evidence"].get(module) or {}).get("current_attempt") or {}).get("note") if module in refresh_outcome["carried"] else (profile["evidence"].get(module) or {}).get("note"),
         }
         for module in modules
     }
@@ -418,8 +544,10 @@ def _envelope_for_row(
         extra={
             "input_organisation_number": _input_key(row),
             "input_position": row.position,
+            "input_record": row.record,
             "category_coverage": category_coverage(claim_set.claims),
             "area_coverage": area_coverage(claim_set.claims),
+            "refresh": refresh_block,
             "modules": module_states,
             **extra,
         },

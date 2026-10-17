@@ -17,14 +17,14 @@ from __future__ import annotations
 
 import json
 import re
-import unicodedata
 import urllib.parse
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from typing import Any
 
 from bs4 import BeautifulSoup
 
+from ..evidence_text import MAX_SPAN_CHARS, MONTHS, content_words, digit_runs, explicit_dates, fold, number_set, span_in_text, supported_by, words  # noqa: F401  (re-exported)
 from ..website import normalize_social_url
 
 PAGE_CLASSES = ("FIRST_PARTY", "THIRD_PARTY", "FAN_COMMUNITY", "DIRECTORY", "AMBIGUOUS")
@@ -35,7 +35,6 @@ FACT_TYPES = (
 ROLE_CATEGORIES = ("ceo", "chair", "board_member", "cfo", "cto", "coo", "founder", "owner", "manager", "other")
 PROFILE_PLATFORMS = ("linkedin", "facebook", "instagram", "youtube")
 SECTION_HEADINGS = ("overview", "business", "leadership", "locations", "financials", "web_presence", "recent_activity")
-MAX_SPAN_CHARS = 300
 MAX_ITEMS = 40
 MAX_PAGE_CHARS = 6_000
 MIN_CONFIDENCE = 0.5
@@ -57,75 +56,12 @@ _ROLE_LOOKUP = {" ".join(re.findall(r"[^\W_]+", title)): category for title, cat
 # Registry role codes (claims.ROLE_FIELDS) that name the same office as a website role category.
 REGISTRY_ROLE_FOR_CATEGORY = {"ceo": ("DAGL",), "chair": ("LEDE",)}
 
-MONTHS = {
-    "januar": 1, "january": 1, "jan": 1, "februar": 2, "february": 2, "feb": 2, "mars": 3, "march": 3, "mar": 3,
-    "april": 4, "apr": 4, "mai": 5, "may": 5, "juni": 6, "june": 6, "jun": 6, "juli": 7, "july": 7, "jul": 7,
-    "august": 8, "aug": 8, "september": 9, "sep": 9, "sept": 9, "oktober": 10, "october": 10, "okt": 10, "oct": 10,
-    "november": 11, "nov": 11, "desember": 12, "december": 12, "des": 12, "dec": 12,
-}
-_MONTH = "|".join(sorted(MONTHS, key=len, reverse=True))
-_DATE_PATTERNS = (
-    (re.compile(r"(?<!\d)(\d{4})-(\d{2})-(\d{2})(?!\d)"), ("y", "m", "d")),
-    (re.compile(r"(?<!\d)(\d{1,2})[./](\d{1,2})[./](\d{4})(?!\d)"), ("d", "m", "y")),
-    (re.compile(rf"(?<!\d)(\d{{1,2}})\.?\s+({_MONTH})\.?,?\s+(\d{{4}})(?!\d)", re.I), ("d", "M", "y")),
-    (re.compile(rf"\b({_MONTH})\.?\s+(\d{{1,2}}),?\s+(\d{{4}})(?!\d)", re.I), ("M", "d", "y")),
-)
 _EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+")
 _ROLE_CUES = re.compile(r"daglig leder|adm\.? ?dir|administrerende|\bceo\b|chief executive|styreleder|chairman|gründer|grunnlegger|founder|\bcfo\b|\bcto\b|økonomisjef|innehaver", re.I)
 _SOCIAL_CUES = {"linkedin": "linkedin.com", "facebook": "facebook.com", "instagram": "instagram.com", "youtube": "youtube.com"}
 
 
-# ---------- text helpers ----------
-
-def fold(text: Any) -> str:
-    value = unicodedata.normalize("NFKC", str(text or "")).casefold()
-    value = re.sub(r"[‐-―−]", "-", value)
-    value = re.sub(r"[‘’‚‛′]", "'", value)
-    value = re.sub(r"[“”„‟″]", '"', value)
-    return re.sub(r"\s+", " ", value).strip()
-
-
-def words(text: Any) -> list[str]:
-    return re.findall(r"[^\W_]+", fold(text))
-
-
-def content_words(text: Any) -> set[str]:
-    return {word for word in words(text) if len(word) >= 3 or word.isdigit()}
-
-
-def digit_runs(text: Any) -> list[str]:
-    joined = re.sub(r"(?<=\d)[\s  .,](?=\d{3}(?!\d))", "", str(text or ""))
-    return re.findall(r"\d+", joined)
-
-
-def span_in_text(span: Any, text: str) -> bool:
-    folded = fold(span)
-    return 3 <= len(folded) <= MAX_SPAN_CHARS and folded in fold(text)
-
-
-def number_set(text: Any) -> set[str]:
-    return {run.lstrip("0") or "0" for run in digit_runs(text)}
-
-
-def supported_by(value: Any, span: str) -> bool:
-    """Every content word and every number of `value` occurs in `span` (numbers compared whole, not as substrings)."""
-    return content_words(value) <= set(words(span)) and number_set(value) <= number_set(span)
-
-
-def explicit_dates(text: str) -> set[str]:
-    """Calendar dates stated in `text` (ISO, d.m.yyyy, '1. september 2026', 'September 1, 2026'). No inference."""
-    found = set()
-    for pattern, order in _DATE_PATTERNS:
-        for match in pattern.finditer(text or ""):
-            parts = dict(zip(order, match.groups(), strict=True))
-            try:
-                month = MONTHS[parts["M"].casefold()] if "M" in parts else int(parts["m"])
-                value = date(int(parts["y"]), month, int(parts["d"]))
-            except (KeyError, ValueError):
-                continue
-            if 1995 <= value.year and value <= datetime.now(timezone.utc).date():
-                found.add(value.isoformat())
-    return found
+# Text, date and span checks are shared with the deterministic extractors (evidence_text.py).
 
 
 def _as_iso_date(value: Any) -> str | None:
@@ -315,9 +251,10 @@ def _validate_profile(item: dict[str, Any], page: PageContent, out: ExtractionRe
     normalized = normalize_social_url(str(item.get("profile_url") or ""))
     if not normalized or normalized["platform"] != platform:
         return out.reject("profile", "not_a_profile_url", item)
-    linked = {entry["url"] for entry in (normalize_social_url(href) for href in page.links) if entry}
+    linked = {entry["url"]: href for href in reversed(page.links) if (entry := normalize_social_url(href))}
     if normalized["url"] not in linked:
         return out.reject("profile", "not_linked_from_verified_page", item)
+    exact = linked[normalized["url"]]  # the page's own link is published, never the model's or our rewritten form
     span = item.get("evidence_span")
     if not isinstance(span, str) or not (span_in_text(span, page.text) or fold(span) in {fold(href) for href in page.links}):
         return out.reject("profile", "evidence_span_not_in_page", item)
@@ -325,7 +262,7 @@ def _validate_profile(item: dict[str, Any], page: PageContent, out: ExtractionRe
         out.duplicates += 1
         return None
     known.add(normalized["url"])
-    return {"profile_url": normalized["url"], "platform": platform, "source_page": page.source_url, **_provenance(page, span), "first_party_linked": True}
+    return {"profile_url": exact, "canonical_url": normalized["url"], "platform": platform, "source_page": page.source_url, **_provenance(page, span), "first_party_linked": True}
 
 
 def _validate_activity(item: dict[str, Any], page: PageContent, out: ExtractionResult, known: list[dict[str, Any]]) -> dict[str, Any] | None:
