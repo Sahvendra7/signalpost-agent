@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:">
+<meta name="referrer" content="no-referrer">
+<title>Signalpost results</title>
+<style>
+:root{--bg:#f7f7f5;--panel:#fff;--ink:#1d1d1b;--muted:#5f5f5a;--line:#deded8;--accent:#1f5f8b;--ok:#2d7a3e;--warn:#8a5f00;--bad:#b3261e;--chip:#eeeeea}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--panel:#1d1d1c;--ink:#ecece8;--muted:#a3a39c;--line:#353532;--accent:#7cb4dc;--ok:#7cc48a;--warn:#e0b450;--bad:#f08b84;--chip:#2a2a28}}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;z-index:9;background:var(--panel);padding:6px 10px;border-radius:6px}
+header{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:16px;margin:0}header .meta{color:var(--muted);font-size:12px}
+main{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);height:calc(100% - 46px)}
+#side{border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;background:var(--panel)}
+#controls{padding:10px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+input[type=search],select{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+label.sr{position:absolute;left:-9999px}
+.row{display:flex;gap:6px}.row select{flex:1;min-width:0}
+#count{color:var(--muted);font-size:12px}
+.btn{padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);font:inherit;cursor:pointer}
+.btn[disabled]{opacity:.5;cursor:default}.btn.primary{border-color:var(--accent);color:var(--accent)}
+#list{overflow:auto;flex:1;margin:0;padding:0;list-style:none}
+#list li{padding:8px 12px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;gap:8px;align-items:flex-start}
+#list li>div{flex:1;min-width:0}
+#list li:hover,#list li:focus{background:var(--chip);outline:none}#list li[aria-selected=true]{background:var(--chip);box-shadow:inset 3px 0 var(--accent)}
+#list input[type=checkbox]{margin-top:3px;width:18px;height:18px}
+.name{font-weight:600;overflow-wrap:anywhere}.sub{color:var(--muted);font-size:12px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;padding:0 6px;border-radius:9px;font-size:11px;background:var(--chip);color:var(--muted)}
+.badge.ok{color:var(--ok)}.badge.bad{color:var(--bad)}.badge.warn{color:var(--warn)}
+#detail{overflow:auto;padding:16px 20px;min-width:0}
+#detail h2{margin:0 0 4px;font-size:20px;overflow-wrap:anywhere}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}
+section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:12px 0;min-width:0}
+section h3{margin:0 0 8px;font-size:14px}
+section h4{margin:10px 0 4px;font-size:13px;color:var(--muted)}
+.stmt{margin:4px 0;padding-left:12px;border-left:2px solid var(--line);overflow-wrap:anywhere}
+.stmt button{all:unset;cursor:pointer;color:var(--accent);font-size:12px;margin-left:6px}.stmt button:focus-visible{outline:2px solid var(--accent)}
+.src{font-size:12px;color:var(--muted);margin:4px 0 6px 0;padding:6px 8px;background:var(--bg);border-radius:6px;overflow-wrap:anywhere}
+.wrap{overflow-x:auto;max-width:100%}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;vertical-align:top;padding:5px 6px;border-bottom:1px solid var(--line);overflow-wrap:anywhere;word-break:normal}
+th{color:var(--muted);font-weight:500;font-size:12px}
+td small{display:block;color:var(--muted);font-size:11px}
+table.cmp th[scope=row]{position:sticky;left:0;background:var(--panel);min-width:120px}table.cmp td{min-width:150px}
+.overview{padding:8px 10px;border-radius:6px;background:var(--chip)}
+.empty{color:var(--muted);padding:30px 0;text-align:center}
+.back{display:none}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:2px 12px}.kv dt{color:var(--muted)}.kv dd{margin:0;overflow-wrap:anywhere}
+@media (max-width:760px){
+ main{grid-template-columns:minmax(0,1fr);height:auto}
+ #side{border-right:0}#list{overflow:visible}
+ body.showing #side{display:none}body.showing .back{display:inline-block}
+ body:not(.showing) #detail{display:none}
+ #detail{padding:12px 16px}
+ table.facts thead{display:none}table.facts tr{display:block;border-bottom:1px solid var(--line);padding:4px 0}table.facts td{display:block;border:0;padding:2px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#detail">Skip to company details</a>
+<header><h1 id="title"></h1><span class="meta" id="runmeta"></span></header>
+<main>
+<div id="side">
+ <div id="controls" role="search">
+  <label class="sr" for="q">Search companies</label>
+  <input id="q" type="search" placeholder="Search name or organisation number" aria-label="Search">
+  <div class="row">
+   <label class="sr" for="fstatus">Status filter</label>
+   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="complete">Complete</option><option value="partial">Partial</option><option value="not_researched">Not researched (deadline)</option><option value="identity_unresolved">Identity unresolved</option><option value="invalid_input">Invalid input</option><option value="failed">Run failed</option></select>
+   <label class="sr" for="fflag">Flag filter</label>
+   <select id="fflag" aria-label="Flag filter"><option value="">All companies</option><option value="website">Verified website</option><option value="footprint">Profiles or dated activity</option><option value="changes">With changes</option><option value="failures">Source failures</option><option value="errors">With errors</option><option value="sparse">Registry only (sparse)</option><option value="carried">Values retained (outage)</option></select>
+  </div>
+  <div class="row">
+   <label class="sr" for="sort">Sort</label>
+   <select id="sort" aria-label="Sort"><option value="input">Input order</option><option value="name">Name A–Z</option><option value="revenue">Revenue, highest first</option><option value="facts">Most facts first</option></select>
+   <button id="cmpbtn" class="btn primary" type="button" disabled>Compare (0)</button>
+  </div>
+  <div id="count" aria-live="polite"></div>
+ </div>
+ <ul id="list" role="listbox" aria-label="Companies"></ul>
+</div>
+<div id="detail" tabindex="-1"><div class="empty">Select a company, or tick up to four and press Compare.</div></div>
+</main>
+<script type="application/json" id="data">{"title":"Signalpost results","run":{"run_id":"c300-final-911771098","started_at":"2026-10-17T06:30:46.099471Z","input_rows":1,"runtime_ms":6555},"compare_rows":["Legal form","Registry status","Founded","Business address","Industry (NACE)","Employees (registry)","Most recent accounts","Revenue","Operating result","Net result","Equity","Chief executive","Board chair","Verified website","Linked profiles","Dated website items","Job postings","Unknown or unconfirmed"],"companies":[{"org":"911771098","input":"911771098","pos":0,"status":"completed","company_status":"complete","status_reasons":[],"identity":{"organisation_number":"911771098","input_organisation_number":"911771098","anchored":true,"method":"exact organisation-number match in Enhetsregisteret","legal_name":"HANS JØRGEN SANDNES AS","legal_form":"AS","registry_status":"registered","source_class":"official_registry_live","source_url":"https://data.brreg.no/enhetsregisteret/api/enheter/911771098","retrieved_at":"2026-10-17T06:30:46.968352Z","content_sha256":"bfea794669c7edaa7a7e5c0b0b7136088164b951fcfc09d249cfe62c168e272a","evidence_id":"ev-3718a9b1805a765cd3c1","carried_forward":false},"overview":null,"sparse":false,"src":[["https://hjsandnes.wordpress.com/","company_site","2026-10-17T06:30:51.552575Z","559d3d5cc4309280a3c658957594a4e9aa50c0303d3878f474b2e6e5c644799f"],["https://data.brreg.no/regnskapsregisteret/regnskap/911771098","official_annual_accounts","2026-10-17T06:30:47.648586Z","3e8e66da24d4ad82567fe23fa0f82bddc6b1b9bbbb146b5aeacffd9f4ac51563"],["https://data.brreg.no/enhetsregisteret/api/enheter/911771098/roller","official_roles","2026-10-17T06:30:49.684056Z","a33ebe5e2d9d58b97df5e403197107db6a3d4e5f0cd4df4dd7fe41c8723d1486"],["https://data.brreg.no/enhetsregisteret/api/enheter/911771098","official_registry_live","2026-10-17T06:30:46.968352Z","bfea794669c7edaa7a7e5c0b0b7136088164b951fcfc09d249cfe62c168e272a"],["https://hjsandnes.wordpress.com/","registry_linked_company_website","2026-10-17T06:30:51.198507Z","c7484657b54fa63f25c2a9257f5d2c5f2fcf959bcbea0c784b25ae67daf86aa6"],["https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=911771098&size=1000","official_subunits","2026-10-17T06:30:49.001612Z","de94f73cd8980f63b1e0152efab1a222b2f8fa33c8fb48e8c811310d614d1260"]],"ev":[[0,"article_time_datetime: 2017-10-11T16:15:34+00:00 Original «Brave Little Tailor» av Bill Tytla"],[1,"regnskap[id=5632383].profit_before_tax=43710.0 (2024-01-01..2024-12-31, NOK)"],[0,"article_time_datetime: 2016-10-11T19:59:16+00:00 Operasjon Spøkelse"],[0,"article_time_datetime: 2018-06-20T12:09:49+00:00 Inbetween"],[2,"roller[VARA]=Sven Erik Sandnes"],[3,"enheter.aktivitet=Illustrasjon og tegning til bøker, film og reklame, samt foredrag og formidling av litteratur, kunst og animasjon. Konsulenttjenester til film"],[1,"regnskap[id=6524715].profit_before_tax=140731.0 (2025-01-01..2025-12-31, NOK)"],[0,"article_time_datetime: 2016-06-18T14:21:50+00:00 «Jakten på Jungelens Dronning»"],[1,"regnskap[id=5632383].debt=40187.0 (2024-01-01..2024-12-31, NOK)"],[1,"regnskap[id=5632383].revenue=150000.0 (2024-01-01..2024-12-31, NOK)"],[1,"regnskap[id=4732881].equity=2409198.0 (2023-01-01..2023-12-31, NOK)"],[0,"article_time_datetime: 2017-04-19T20:31:21+00:00 Når bøkene lever sitt eget liv."],[0,"article_time_datetime: 2016-02-12T08:20:56+00:00 Operasjon Sirkus"],[1,"regnskap[id=4732881].profit_before_tax=514179.0 (2023-01-01..2023-12-31, NOK)"],[1,"regnskap[id=4732881].operating_result=264052.0 (2023-01-01..2023-12-31, NOK)"],[3,"enheter.navn=HANS JØRGEN SANDNES AS"],[1,"regnskap[id=5632383].equity=2443305.0 (2024-01-01..2024-12-31, NOK)"],[0,"article_time_datetime: 2015-11-26T20:38:45+00:00 Senkveld med Thomas og Harald – og Detektivbyrå nr. 2"],[3,"enheter.organisasjonsnummer=911771098"],[2,"roller.active_count=4"],[0,"article_time_datetime: 2016-09-23T19:45:01+00:00 Original «Bambi» av Clair Weeks"],[2,"roller[MEDL]=Camilla Holtan Sandnes"],[3,"enheter.underAvvikling=false"],[1,"regnskap[id=6524715].equity=2403077.0 (2025-01-01..2025-12-31, NOK)"],[1,"regnskap[id=4732881].debt=148329.0 (2023-01-01..2023-12-31, NOK)"],[0,"article_time_datetime: 2017-12-21T22:05:58+00:00 God tegnefilmjul!"],[0,"article_time_datetime: 2018-03-14T12:52:28+00:00 Detektivbyrå nr. 2 som brettspill"],[1,"regnskap[id=6524715].assets=2463557.0 (2025-01-01..2025-12-31, NOK)"],[3,"enheter.naeringskode1=90.120"],[3,"enheter.registreringsdatoEnhetsregisteret=2013-04-05"],[0,"article_time_datetime: 2017-10-11T16:22:41+00:00 Operasjon Mumie"],[3,"enheter.sisteInnsendteAarsregnskap=2025"],[1,"regnskap[id=5632383].assets=2483492.0 (2024-01-01..2024-12-31, NOK)"],[0,"article_time_datetime: 2019-10-17T19:49:20+00:00 Operasjon Radius"],[2,"roller[DAGL]=Hans Jørgen Sandnes"],[4,"meta description: Barnebokillustratør, animatør og tegnefilmskaper i Sandnes Media. Bor sammen med kone, to barn, og en ukulelebass."],[0,"article_time_datetime: 2020-04-25T21:58:10+00:00 Krypto – Ned i dypet"],[0,"article_time_datetime: 2019-10-17T19:57:57+00:00 Navnebringeren"],[3,"enheter.vedtektsfestetFormaal=Kjøp, salg og utvikling av fast eiendom og andre produkter som naturlig faller sammen med dette. Virksomheten skal også delta i, o"],[5,"underenheter.count=1"],[1,"regnskap[id=6524715].annual_result=109771.0 (2025-01-01..2025-12-31, NOK)"],[3,"enheter.forretningsadresse=Hystadveien 212B, 3230, SANDEFJORD"],[3,"enheter.stiftelsesdato=2013-01-03"],[2,"roller[LEDE]=Hans Jørgen Sandnes"],[2,"rollegrupper.sistEndret=2013-04-05"],[1,"regnskap[id=4732881].revenue=292500.0 (2023-01-01..2023-12-31, NOK)"],[0,"article_time_datetime: 2026-07-02T08:52:18+00:00 Følg med videre på sandnes-media.no"],[3,"enheter.organisasjonsform.kode=AS"],[3,"enheter.konkurs=false"],[1,"regnskap[id=6524715].operating_result=95329.0 (2025-01-01..2025-12-31, NOK)"],[3,"enheter.hjemmeside=hjsandnes.wordpress.com"],[0,"article_time_datetime: 2015-12-11T12:42:12+00:00 «Mormor og de åtte ungene» julehefte 2015"],[1,"regnskap[id=4732881].assets=2557527.0 (2023-01-01..2023-12-31, NOK)"],[0,"article_time_datetime: 2017-05-11T19:55:50+00:00 Den helt sanne historien om hvordan DET ALLER BESTE ble til"],[1,"regnskap[id=5632383].annual_result=34107.0 (2024-01-01..2024-12-31, NOK)"],[0,"article_time_datetime: 2018-08-17T19:00:58+00:00 Du store verden"],[1,"regnskap[id=4732881].annual_result=454438.0 (2023-01-01..2023-12-31, NOK)"],[1,"regnskap[id=5632383].operating_result=6553.0 (2024-01-01..2024-12-31, NOK)"],[0,"article_time_datetime: 2015-10-23T11:28:48+00:00 Animasjon fra Geitekillingen som kunne telle til ti"],[0,"article_time_datetime: 2015-10-23T11:44:33+00:00 Skisser og ferdige sider til «Operasjon Plastpose»"],[5,"underenheter[919876050]=HANS JØRGEN SANDNES AS"],[4,"identity: all normalized legal-name tokens appear together in homepage identity evidence"],[1,"regnskap[id=6524715].revenue=150000.0 (2025-01-01..2025-12-31, NOK)"],[1,"regnskap[id=6524715].debt=60480.0 (2025-01-01..2025-12-31, NOK)"]],"sections":[["At a glance",[["HANS JØRGEN SANDNES AS (organisation number 911771098) is a private limited company (AS) registered in Enhetsregisteret, with its business address in SANDEFJORD, founded 2013-01-03.",[15,18,41,42,47],0],["What it does: in its registered words, “Illustrasjon og tegning til bøker, film og reklame, samt foredrag og formidling av litteratur, kunst og animasjon. Konsulenttjenester til filmprosjekter…”; registered industry NACE 90.120 (Skapende kunstnerisk virksomhet innenfor visuell kunst).",[5,28],0],["Most recent figures (company accounts, reporting period 2025-01-01 to 2025-12-31): revenue NOK 150,000; net result NOK 109,771; equity NOK 2,403,077.",[23,40,62],0],["Employee count: unknown (not published in the registry record; not zero).",[],0],["Public footprint: verified website https://hjsandnes.wordpress.com/; 20 dated website items, the most recent dated 2026-07-02.",[46,61],0]]],["What the company does",[["Registered activity (Enhetsregisteret, verbatim): “Illustrasjon og tegning til bøker, film og reklame, samt foredrag og formidling av litteratur, kunst og animasjon. Konsulenttjenester til filmprosjekter, eiendomsprosjekter og medievirksomheter.”",[5],0],["Statutory purpose (vedtektsfestet formål, verbatim): “Kjøp, salg og utvikling av fast eiendom og andre produkter som naturlig faller sammen med dette. Virksomheten skal også delta i, og utvikle, andre selskaper og prosjekter som i hovedsak har illustrasjon, film, forlags- og medie-virksomhet som sitt forretningsområde.”",[38],0],["Registered industry code (NACE) 90.120: Skapende kunstnerisk virksomhet innenfor visuell kunst.",[28],0],["The company's verified website describes itself as: “Barnebokillustratør, animatør og tegnefilmskaper i Sandnes Media. Bor sammen med kone, to barn, og en ukulelebass.”",[35],0]]],["Key company facts",[["HANS JØRGEN SANDNES AS (organisation number 911771098), legal form AS (aksjeselskap).",[15,18,47],0],["Founded: 2013-01-03.",[42],0],["Registered in Enhetsregisteret: 2013-04-05.",[29],0],["Employee count: not published. Source note: The registry record has no registered employee count (harRegistrertAntallAnsatte=false); unknown, not zero.",[],0],["Not registered as bankrupt or under liquidation in Enhetsregisteret.",[22,48],0]]],["Leadership",[["Chief executive (daglig leder): Hans Jørgen Sandnes.",[34],0],["Board chair (styrets leder): Hans Jørgen Sandnes.",[43],0],["Board members (styremedlem): Camilla Holtan Sandnes.",[21],0],["Deputy board members (varamedlem): Sven Erik Sandnes.",[4],0]]],["Locations",[["Business address: Hystadveien 212B, 3230 SANDEFJORD.",[41],0],["Registered subunits (1): HANS JØRGEN SANDNES AS (organisation number 919876050), Hystadveien 212B, 3230 SANDEFJORD.",[39,60],0]]],["Financial snapshot",[["Latest annual accounts: 2025, the year Enhetsregisteret records as last submitted; the most recent figures below are for that year.",[31],0],["Most recent figures in the accounts register (company accounts), reporting period 2025-01-01 to 2025-12-31: Revenue NOK 150,000; operating result NOK 95,329; profit before tax NOK 140,731; net result NOK 109,771; total assets NOK 2,463,557; equity NOK 2,403,077; total debt NOK 60,480. Earlier reporting periods with figures in the accounts register: 2024-01-01 to 2024-12-31; 2023-01-01 to 2023-12-31.",[6,9,23,27,40,45,49,62,63],0]]],["Website and public footprint",[["Verified company website: https://hjsandnes.wordpress.com/.",[61],0],["20 dated items on the verified website; the most recent is dated 2026-07-02: “Følg med videre på sandnes-media.no”.",[0,2,3,7,11,12,17,20,25,26,30,33,36,37,46,51,53,55,58,59],0]]],["What changed",[["Compared with the preceding reporting period (2024-01-01 to 2024-12-31), the company accounts for 2025-01-01 to 2025-12-31 show: revenue unchanged (NOK 150,000 to NOK 150,000); operating result higher (NOK 6,553 to NOK 95,329); net result higher (NOK 34,107 to NOK 109,771); equity lower (NOK 2,443,305 to NOK 2,403,077).",[9,16,23,40,49,54,57,62],0],["Enhetsregisteret's roles register records its most recent change to the registered roles on 2013-04-05; it does not say what changed.",[44],0],["No previous run was supplied, so changes since an earlier observation by this agent are not assessed.",[],0]]],["What remains unknown",[["Checked, nothing found: job postings, the employee count (not published in the registry; unknown, not zero), a registered group structure (konsernstruktur).",[],0],["Found but not confirmed as this company, so not reported: social profiles linked from a verified website.",[],0]]]],"claims":[["identity","organisation_number","available","911771098",[18],"",0,""],["identity","legal_name","available","HANS JØRGEN SANDNES AS",[15],"",0,""],["identity","legal_form","available","AS",[47],"",0,""],["identity","industry","available","90.120 Skapende kunstnerisk virksomhet innenfor visuell kunst",[28],"",0,""],["identity","bankrupt","available","false",[48],"",0,""],["identity","under_liquidation","available","false",[22],"",0,""],["identity","registry_employee_count","not_available","",[],"",0,"The registry record has no registered employee count (harRegistrertAntallAnsatte=false); unknown, not zero"],["identity","founded_date","available","2013-01-03",[42],"",0,""],["identity","registry_registration_date","available","2013-04-05",[29],"",0,""],["description","registered_activity","available","Illustrasjon og tegning til bøker, film og reklame, samt foredrag og formidling av litteratur, kunst og animasjon. Konsulenttjenester til filmprosjekter, eiendomsprosjekter og medievirksomheter.",[5],"",0,""],["description","statutory_purpose","available","Kjøp, salg og utvikling av fast eiendom og andre produkter som naturlig faller sammen med dette. Virksomheten skal også delta i, og utvikle, andre selskaper og prosjekter som i hovedsak har illustrasjon, film, forlags- og medie-virksomhet som sitt forretningsområde.",[38],"",0,""],["locations","business_address","available","Hystadveien 212B, 3230 SANDEFJORD",[41],"",0,""],["websites","registry_listed_website","available","hjsandnes.wordpress.com",[50],"",0,""],["filings","latest_filed_accounts_year","available","2025",[31],"",0,""],["filings","revenue","available","292500.0",[45],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","operating_result","available","264052.0",[14],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","profit_before_tax","available","514179.0",[13],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","net_result","available","454438.0",[56],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","total_assets","available","2557527.0",[52],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","equity","available","2409198.0",[10],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","total_debt","available","148329.0",[24],"2023-01-01–2023-12-31 SELSKAP NOK",0,""],["filings","revenue","available","150000.0",[9],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","operating_result","available","6553.0",[57],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","profit_before_tax","available","43710.0",[1],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","net_result","available","34107.0",[54],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","total_assets","available","2483492.0",[32],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","equity","available","2443305.0",[16],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","total_debt","available","40187.0",[8],"2024-01-01–2024-12-31 SELSKAP NOK",0,""],["filings","revenue","available","150000.0",[62],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["filings","operating_result","available","95329.0",[49],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["filings","profit_before_tax","available","140731.0",[6],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["filings","net_result","available","109771.0",[40],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["filings","total_assets","available","2463557.0",[27],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["filings","equity","available","2403077.0",[23],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["filings","total_debt","available","60480.0",[63],"2025-01-01–2025-12-31 SELSKAP NOK",0,""],["leadership","role_count","available","4",[19],"",0,""],["leadership","ceo","available","Hans Jørgen Sandnes — Daglig leder",[34],"",0,""],["leadership","board_chair","available","Hans Jørgen Sandnes — Styrets leder",[43],"",0,""],["leadership","board_member","available","Camilla Holtan Sandnes — Styremedlem",[21],"",0,""],["leadership","board_deputy_member","available","Sven Erik Sandnes — Varamedlem",[4],"",0,""],["registry_activity","roles_last_changed","available","2013-04-05",[44],"",0,""],["locations","subunit_count","available","1",[39],"",0,""],["locations","subunit","available","HANS JØRGEN SANDNES AS (org. 919876050)",[60],"",0,""],["relationships","group_structure","not_available","",[],"",0,"HTTP 404"],["public_activity","social_profile","ambiguous","",[],"",0,"5 profile link(s) on the verified site not corroborated as this company's own"],["public_activity","news_item","available","2026-07-02 — Følg med videre på sandnes-media.no — https://hjsandnes.wordpress.com/2026/07/02/folg-med-videre-pa-sandnes-media-no/",[46],"",0,""],["public_activity","news_item","available","2020-04-25 — Krypto – Ned i dypet — https://hjsandnes.wordpress.com/2020/04/25/krypto-ned-i-dypet/",[36],"",0,""],["public_activity","news_item","available","2019-10-17 — Navnebringeren — https://hjsandnes.wordpress.com/2019/10/17/navnebringeren/",[37],"",0,""],["public_activity","news_item","available","2019-10-17 — Operasjon Radius — https://hjsandnes.wordpress.com/2019/10/17/operasjon-radius/",[33],"",0,""],["public_activity","news_item","available","2018-08-17 — Du store verden — https://hjsandnes.wordpress.com/2018/08/17/du-store-verden/",[55],"",0,""],["public_activity","news_item","available","2018-06-20 — Inbetween — https://hjsandnes.wordpress.com/2018/06/20/inbetween/",[3],"",0,""],["public_activity","news_item","available","2018-03-14 — Detektivbyrå nr. 2 som brettspill — https://hjsandnes.wordpress.com/2018/03/14/detektivbyra-nr-2-som-brettspill/",[26],"",0,""],["public_activity","news_item","available","2017-12-21 — God tegnefilmjul! — https://hjsandnes.wordpress.com/2017/12/21/god-tegnefilmjul/",[25],"",0,""],["public_activity","news_item","available","2017-10-11 — Operasjon Mumie — https://hjsandnes.wordpress.com/2017/10/11/operasjon-mumie/",[30],"",0,""],["public_activity","news_item","available","2017-10-11 — Original «Brave Little Tailor» av Bill Tytla — https://hjsandnes.wordpress.com/2017/10/11/original-brave-little-tailor-av-bill-tytla/",[0],"",0,""],["public_activity","news_item","available","2017-05-11 — Den helt sanne historien om hvordan DET ALLER BESTE ble til — https://hjsandnes.wordpress.com/2017/05/11/den-helt-utrolige-historien-om-hvordan-det-aller-beste-ble-til/",[53],"",0,""],["public_activity","news_item","available","2017-04-19 — Når bøkene lever sitt eget liv. — https://hjsandnes.wordpress.com/2017/04/19/nar-bokene-lever-sitt-eget-liv/",[11],"",0,""],["public_activity","news_item","available","2016-10-11 — Operasjon Spøkelse — https://hjsandnes.wordpress.com/2016/10/11/operasjon-spokelse/",[2],"",0,""],["public_activity","news_item","available","2016-09-23 — Original «Bambi» av Clair Weeks — https://hjsandnes.wordpress.com/2016/09/23/original-bambi-av-clair-weeks/",[20],"",0,""],["public_activity","news_item","available","2016-06-18 — «Jakten på Jungelens Dronning» — https://hjsandnes.wordpress.com/2016/06/18/jakten-pa-jungelens-dronning/",[7],"",0,""],["public_activity","news_item","available","2016-02-12 — Operasjon Sirkus — https://hjsandnes.wordpress.com/2016/02/12/operasjon-sirkus/",[12],"",0,""],["public_activity","news_item","available","2015-12-11 — «Mormor og de åtte ungene» julehefte 2015 — https://hjsandnes.wordpress.com/2015/12/11/mormor-og-de-atte-ungene-julehefte-2015/",[51],"",0,""],["public_activity","news_item","available","2015-11-26 — Senkveld med Thomas og Harald – og Detektivbyrå nr. 2 — https://hjsandnes.wordpress.com/2015/11/26/senkveld-med-thomas-og-harald-og-detektivbyra-nr-2/",[17],"",0,""],["public_activity","news_item","available","2015-10-23 — Skisser og ferdige sider til «Operasjon Plastpose» — https://hjsandnes.wordpress.com/2015/10/23/skisser-og-ferdige-sider-til-operasjon-plastpose/",[59],"",0,""],["public_activity","news_item","available","2015-10-23 — Animasjon fra Geitekillingen som kunne telle til ti — https://hjsandnes.wordpress.com/2015/10/23/animasjon-fra-geitekillingen-som-kunne-telle-til-ti/",[58],"",0,""],["hiring","job_posting","not_available","",[],"",0,"Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"],["websites","official_website","available","https://hjsandnes.wordpress.com/",[61],"",0,""],["description","website_description","available","Barnebokillustratør, animatør og tegnefilmskaper i Sandnes Media. Bor sammen med kone, to barn, og en ukulelebass.",[35],"",0,""]],"changes":[],"errors":[],"modules":{"registry":["not_found","No registry snapshot supplied; identity from the live registry"],"registry_live":["complete",null],"financials":["complete",null],"roles":["complete",null],"group":["not_found","HTTP 404"],"locations":["complete",null],"website":["complete","Company-controlled claim layer; not an official registry fact"],"site_research":["complete",null]},"refresh":{"compared":false,"reason":"no previous profile supplied for this company"},"areas":["filings","leadership","locations","websites","public_footprint"],"cmp":[["AS (private limited company)",47],["registered",15],["2013-01-03",42],["Hystadveien 212B, 3230 SANDEFJORD",41],["90.120 Skapende kunstnerisk virksomhet innenfor visuell kunst",28],["unknown (not published; not zero)",-1],["2025-01-01 to 2025-12-31 (company accounts)",62],["NOK 150,000",62],["NOK 95,329",49],["NOK 109,771",40],["NOK 2,403,077",23],["Hans Jørgen Sandnes",34],["Hans Jørgen Sandnes",43],["https://hjsandnes.wordpress.com/",61],["found, not confirmed",-1],["20, most recent 2026-07-02",46],["none found",-1],["4: group structure, job posting, registry employee count, social profile",-1]]}]}</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("data").textContent);
+for (const c of DATA.companies) {  // re-hydrate the compact projection (see viewer.project)
+  c.evidence = c.ev.map(([s, span]) => ({url: c.src[s][0], class: c.src[s][1], at: c.src[s][2], sha: c.src[s][3], span}));
+  c.sections = c.sections.map(([title, statements]) => ({title, statements: statements.map(([text, ev, carried]) => ({text, ev, carried: !!carried}))}));
+  c.claims = c.claims.map(([cat, field, state, value, ev, period, carried, reason]) => ({cat, field, state, value, ev, period, carried: !!carried, reason}));
+  c.modules = Object.fromEntries(Object.entries(c.modules).map(([k, [state, note]]) => [k, {state, note}]));
+  c.areas = Object.fromEntries(c.areas.map((a) => [a, true]));
+  c.revenue = c.cmp[7][1] >= 0 ? Number(c.cmp[7][0].replace(/[^0-9.-]/g, "")) : -Infinity;  // compare row 7: most recent revenue
+  c.factCount = c.claims.filter((x) => x.state === "available").length;
+}
+const MAX_COMPARE = 4;
+const GROUPS = [
+  ["Identity and description", ["identity", "description", "relationships"]],
+  ["Financials", ["filings"]],
+  ["Leadership", ["leadership", "registry_activity"]],
+  ["Locations", ["locations"]],
+  ["Website and public activity", ["websites", "public_activity", "hiring"]],
+];
+const $ = (id) => document.getElementById(id);
+function el(tag, attrs, ...kids) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) { if (v === null || v === undefined || v === false) continue; if (k === "class") node.className = v; else node.setAttribute(k, v); }
+  for (const kid of kids.flat(Infinity)) { if (kid === null || kid === undefined || kid === false) continue; node.append(kid instanceof Node ? kid : document.createTextNode(String(kid))); }
+  return node;
+}
+const safeUrl = (u) => typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+const host = (u) => { try { return new URL(u).hostname; } catch (e) { return u || "?"; } };
+const day = (t) => t ? String(t).slice(0, 10) : "date unknown";
+const name = (c) => (c.identity && c.identity.legal_name) || "(identity not resolved)";
+const statusBadge = (c) => el("span", {class: "badge " + (c.status === "completed" ? "ok" : "bad")}, c.status || "unknown");
+const companyBadge = (c) => c.company_status ? el("span", {class: "badge " + (c.company_status === "complete" ? "ok" : c.company_status === "partial" ? "warn" : "bad")}, c.company_status.replace(/_/g, " ")) : null;
+const setHash = (hash) => { try { history.replaceState(null, "", hash); } catch (e) { /* file:// may refuse; navigation still works */ } };
+const narrow = () => window.matchMedia("(max-width: 760px)").matches;
+const failedSources = (c) => Object.entries(c.modules).filter(([, v]) => v.state === "failed" || v.state === "blocked").map(([k]) => k);
+
+$("title").textContent = DATA.title;
+$("runmeta").textContent = [DATA.run.run_id && ("run " + DATA.run.run_id), DATA.run.started_at && ("started " + DATA.run.started_at), DATA.companies.length + " rows", "offline view: every fact links to its source and retrieval date"].filter(Boolean).join(" · ");
+
+const flags = {
+  errors: (c) => c.errors.length > 0,
+  changes: (c) => c.changes.some((x) => x.change_type !== "unavailable"),
+  website: (c) => !!c.areas.websites,
+  footprint: (c) => !!c.areas.public_footprint,
+  failures: (c) => failedSources(c).length > 0,
+  sparse: (c) => !!c.sparse,
+  carried: (c) => c.claims.some((x) => x.carried),
+};
+let selected = null, shownOrder = [];
+const compare = [];
+function visible() {
+  const q = $("q").value.trim().toLowerCase();
+  const st = $("fstatus").value, fl = $("fflag").value, sort = $("sort").value;
+  const rows = [];
+  DATA.companies.forEach((c, index) => {
+    if (st && c.company_status !== st && c.status !== st) return;
+    if (fl && !flags[fl](c)) return;
+    if (q && !(name(c).toLowerCase().includes(q) || String(c.org || c.input || "").includes(q.replace(/\s/g, "")))) return;
+    rows.push(index);
+  });
+  const by = {name: (a, b) => name(DATA.companies[a]).localeCompare(name(DATA.companies[b]), "nb"), revenue: (a, b) => DATA.companies[b].revenue - DATA.companies[a].revenue, facts: (a, b) => DATA.companies[b].factCount - DATA.companies[a].factCount}[sort];
+  return by ? rows.sort((a, b) => by(a, b) || a - b) : rows;
+}
+function render() {
+  const list = $("list"); list.replaceChildren();
+  shownOrder = visible();
+  for (const index of shownOrder) {
+    const c = DATA.companies[index];
+    const box = el("input", {type: "checkbox", "aria-label": "Compare " + name(c), checked: compare.includes(index) ? "checked" : null});
+    box.addEventListener("click", (e) => { e.stopPropagation(); toggleCompare(index, box.checked); });
+    const li = el("li", {role: "option", tabindex: "0", "aria-selected": String(index === selected), "data-index": String(index)}, box, el("div", {},
+      el("div", {class: "name"}, name(c)),
+      el("div", {class: "sub"}, String(c.org || c.input || "no number"), statusBadge(c), companyBadge(c), c.errors.length ? el("span", {class: "badge warn"}, c.errors.length + " error" + (c.errors.length > 1 ? "s" : "")) : null, failedSources(c).length ? el("span", {class: "badge warn"}, "source failed") : null, c.sparse ? el("span", {class: "badge"}, "registry only") : null)));
+    li.addEventListener("click", () => select(index));
+    li.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(index); }
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); const next = e.key === "ArrowDown" ? li.nextElementSibling : li.previousElementSibling; if (next) next.focus(); }
+    });
+    list.append(li);
+  }
+  $("count").textContent = shownOrder.length + " of " + DATA.companies.length + " shown";
+  $("cmpbtn").textContent = "Compare (" + compare.length + ")";
+  $("cmpbtn").disabled = compare.length < 2;
+}
+function toggleCompare(index, on) {
+  const at = compare.indexOf(index);
+  if (on && at < 0) { if (compare.length >= MAX_COMPARE) { render(); $("count").textContent = "At most " + MAX_COMPARE + " companies can be compared."; return; } compare.push(index); }
+  if (!on && at >= 0) compare.splice(at, 1);
+  render();
+}
+function sources(c, ids) {
+  return el("div", {class: "src"}, ids.map((id) => {
+    const ev = c.evidence[id];
+    if (!ev) return el("div", {}, "evidence " + id + " (not in envelope)");
+    const url = safeUrl(ev.url);
+    return el("div", {}, "SOURCE: ", url ? el("a", {href: url, target: "_blank", rel: "noopener noreferrer"}, ev.url) : (ev.url || "?"),
+      " · ", ev.class || "", " · DATE: retrieved ", day(ev.at), " · sha256 ", (ev.sha || "").slice(0, 12), ev.span ? el("div", {}, "span: " + ev.span) : null);
+  }));
+}
+function sourceLink(c, id) {
+  const ev = c.evidence[id];
+  if (!ev) return null;
+  const url = safeUrl(ev.url);
+  return el("small", {}, url ? el("a", {href: url, target: "_blank", rel: "noopener noreferrer", title: ev.url + (ev.span ? " — " + ev.span : "")}, host(ev.url)) : (ev.url || ""), " · retrieved " + day(ev.at));
+}
+function statement(c, s) {
+  const box = el("div", {class: "stmt"}, s.text, s.carried ? el("span", {class: "badge warn"}, "retained from earlier run") : null);
+  if (s.ev.length) {
+    let open = null;
+    const btn = el("button", {type: "button", "aria-expanded": "false"}, "sources (" + s.ev.length + ")");
+    btn.addEventListener("click", () => { if (open) { open.remove(); open = null; btn.setAttribute("aria-expanded", "false"); } else { open = sources(c, s.ev); box.append(open); btn.setAttribute("aria-expanded", "true"); } });
+    box.append(btn);
+  }
+  return box;
+}
+function table(headers, rows, cls) {
+  return el("div", {class: "wrap"}, el("table", {class: cls || null}, el("thead", {}, el("tr", {}, headers.map((h) => el("th", {scope: "col"}, h)))), el("tbody", {}, rows.map((r) => el("tr", {}, r.map((v, i) => el("td", {"data-label": headers[i]}, v)))))));
+}
+function navButtons(index) {
+  const at = shownOrder.indexOf(index);
+  const back = el("button", {id: "back", class: "btn back", type: "button"}, "← Companies");
+  back.addEventListener("click", () => { document.body.classList.remove("showing"); setHash(location.pathname + location.search); const item = document.querySelector('#list li[data-index="' + index + '"]'); if (item) item.focus(); });
+  const prev = el("button", {class: "btn", type: "button", disabled: at <= 0 ? "disabled" : null}, "‹ Previous");
+  const next = el("button", {class: "btn", type: "button", disabled: at < 0 || at >= shownOrder.length - 1 ? "disabled" : null}, "Next ›");
+  prev.addEventListener("click", () => select(shownOrder[at - 1]));
+  next.addEventListener("click", () => select(shownOrder[at + 1]));
+  const pick = el("button", {class: "btn", type: "button", "aria-pressed": String(compare.includes(index))}, compare.includes(index) ? "Remove from comparison" : "Add to comparison");
+  pick.addEventListener("click", () => { toggleCompare(index, !compare.includes(index)); select(index); });
+  return el("div", {class: "nav"}, back, prev, next, pick);
+}
+function select(index, fromHash) {
+  if (index === undefined || !DATA.companies[index]) return;
+  const fromList = document.activeElement && document.activeElement.closest && document.activeElement.closest("#list");
+  selected = index;
+  const c = DATA.companies[index];
+  const d = $("detail");
+  d.replaceChildren();
+  d.append(navButtons(index));
+  d.append(el("h2", {id: "company-name"}, name(c)));
+  d.append(el("div", {class: "sub"}, "Organisation number " + (c.org || c.input || "?"), statusBadge(c), companyBadge(c), "input row " + c.pos));
+  if (c.overview) d.append(el("p", {class: "overview"}, c.overview));
+  for (const sec of c.sections) d.append(el("section", {}, el("h3", {}, sec.title), sec.statements.map((s) => statement(c, s))));
+  const id = c.identity || {};
+  d.append(el("section", {}, el("h3", {}, "Identity anchor (registry record)"), el("dl", {class: "kv"},
+    Object.entries(id).filter(([, v]) => v !== null && v !== undefined && typeof v !== "object").map(([k, v]) => [el("dt", {}, k.replace(/_/g, " ")), el("dd", {}, String(v))])),
+    c.status_reasons.length ? el("div", {class: "sub"}, "Status reasons: " + c.status_reasons.join("; ")) : null));
+  const facts = c.claims.filter((x) => x.state === "available");
+  const grouped = GROUPS.map(([title, cats]) => [title, facts.filter((x) => cats.includes(x.cat))]).filter(([, items]) => items.length);
+  d.append(el("section", {}, el("h3", {}, "Facts (" + facts.length + ") — FACT → SOURCE → DATE"), grouped.map(([title, items]) => [el("h4", {}, title + " (" + items.length + ")"),
+    table(["Field", "Value", "Period", "Source", "Retrieved"], items.map((x) => {
+      const ev = c.evidence[x.ev[0]] || {}; const url = safeUrl(ev.url);
+      return [x.field.replace(/_/g, " ") + (x.carried ? " (retained)" : ""), x.value, x.period, url ? el("a", {href: url, target: "_blank", rel: "noopener noreferrer", title: url}, host(url) + " · " + (ev.class || "source").replace(/_/g, " ")) : (ev.class || ""), day(ev.at)];
+    }), "facts")])));
+  const unknown = c.claims.filter((x) => x.state !== "available");
+  if (unknown.length) d.append(el("section", {}, el("h3", {}, "Unknowns (" + unknown.length + ")"), table(["Category", "Field", "State", "Reason"], unknown.map((x) => [x.cat, x.field.replace(/_/g, " "), x.state.replace(/_/g, " "), x.reason || ""]), "facts")));
+  d.append(el("section", {}, el("h3", {}, "Changes since previous run"), c.refresh && c.refresh.compared ? (c.changes.length ? table(["Type", "Field / module", "Old", "New", "Period", "Dates"], c.changes.map((x) => [x.change_type, x.field || x.module, x.old_value || (x.fields_retained ? "retained: " + x.fields_retained.join(", ") : ""), x.new_value || "", x.period ? x.period.from + "–" + x.period.to : "", [x.previous_at && ("was " + day(x.previous_at)), x.source_at && ("now " + day(x.source_at)), x.last_verified_at && ("last verified " + day(x.last_verified_at))].filter(Boolean).join(" · ")]), "facts") : el("div", {}, "No changes.")) : el("div", {}, (c.refresh && c.refresh.reason) || "Not compared.")));
+  if (c.errors.length) d.append(el("section", {}, el("h3", {}, "Errors (" + c.errors.length + ")"), table(["Code", "Stage", "Message"], c.errors.map((x) => [x.code, x.stage || "", x.message || ""]), "facts")));
+  d.append(el("section", {}, el("h3", {}, "Sources consulted"), table(["Module", "State", "Note"], Object.entries(c.modules).map(([k, v]) => [k, el("span", {class: "badge " + (v.state === "failed" || v.state === "blocked" ? "bad" : "ok")}, v.state || ""), v.note || ""]), "facts")));
+  document.body.classList.add("showing");
+  if (!fromHash && c.org) setHash("#org=" + c.org);
+  d.scrollTop = 0;
+  render();
+  const item = document.querySelector('#list li[data-index="' + index + '"]');
+  if (narrow() && !fromHash) d.focus({preventScroll: true});
+  else if (fromList && item) item.focus();  // keyboard users keep their place in the list
+}
+function showCompare(fromHash) {
+  if (compare.length < 2) return;
+  selected = null;
+  const d = $("detail");
+  d.replaceChildren();
+  const back = el("button", {id: "back", class: "btn back", type: "button"}, "← Companies");
+  back.addEventListener("click", () => { document.body.classList.remove("showing"); setHash(location.pathname + location.search); });
+  const clear = el("button", {class: "btn", type: "button"}, "Clear comparison");
+  clear.addEventListener("click", () => { compare.splice(0, compare.length); setHash(location.pathname + location.search); d.replaceChildren(el("div", {class: "empty"}, "Comparison cleared.")); document.body.classList.remove("showing"); render(); });
+  d.append(el("div", {class: "nav"}, back, clear), el("h2", {id: "company-name"}, "Comparing " + compare.length + " companies"),
+    el("p", {class: "sub"}, "Each value is the company's own cited fact; the link under it opens the source, with its retrieval date. A dash or a reason means the fact is not known — not zero."));
+  const cols = compare.map((i) => DATA.companies[i]);
+  const head = el("tr", {}, el("th", {scope: "col"}, "Field"), cols.map((c, n) => {
+    const open = el("button", {class: "btn", type: "button"}, name(c));
+    open.addEventListener("click", () => select(compare[n]));
+    return el("th", {scope: "col"}, open, el("small", {}, String(c.org || "")));
+  }));
+  const body = DATA.compare_rows.map((label, r) => el("tr", {}, el("th", {scope: "row"}, label), cols.map((c) => { const [text, ev] = c.cmp[r]; return el("td", {}, text, ev >= 0 ? sourceLink(c, ev) : null); })));
+  d.append(el("section", {}, el("div", {class: "wrap"}, el("table", {class: "cmp"}, el("thead", {}, head), el("tbody", {}, body)))));
+  document.body.classList.add("showing");
+  const orgs = cols.map((c) => c.org).filter(Boolean);
+  if (!fromHash) setHash("#compare=" + orgs.join(","));
+  d.scrollTop = 0;
+  render();
+}
+$("cmpbtn").addEventListener("click", () => showCompare());
+for (const id of ["q", "fstatus", "fflag", "sort"]) $(id).addEventListener("input", render);
+const byOrg = new Map(DATA.companies.map((c, i) => [String(c.org), i]));
+function fromHash() {
+  const hash = decodeURIComponent(location.hash.slice(1));
+  if (hash.startsWith("org=") && byOrg.has(hash.slice(4))) { select(byOrg.get(hash.slice(4)), true); return true; }
+  if (hash.startsWith("compare=")) {
+    compare.splice(0, compare.length, ...hash.slice(8).split(",").filter((o) => byOrg.has(o)).map((o) => byOrg.get(o)).slice(0, MAX_COMPARE));
+    if (compare.length >= 2) { showCompare(true); return true; }
+  }
+  return false;
+}
+window.addEventListener("hashchange", fromHash);
+render();
+if (!fromHash() && DATA.companies.length && !narrow()) select(0, true);
+</script>
+</body>
+</html>

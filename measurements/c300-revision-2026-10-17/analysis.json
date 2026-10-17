@@ -1,0 +1,437 @@
+{
+ "final-100": {
+  "commit": "648720516ced747412817ecf1c38ce1de75296da",
+  "started": "2026-10-17T06:26:40Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 98,
+   "partial": 2
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3997,
+  "runtime_s": 122.3,
+  "requests": 768,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 10,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 2586,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 90,
+  "summary_periods_not_compared": 3,
+  "summary_employee_count_unknown": 84,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/final-100/envelopes.viewer.html",
+   "bytes": 1376887,
+   "companies": 100,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "final-100-refresh": {
+  "commit": "648720516ced747412817ecf1c38ce1de75296da",
+  "started": "2026-10-17T06:28:44Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 98,
+   "partial": 2
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3997,
+  "runtime_s": 119.7,
+  "requests": 770,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 10,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 2586,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 90,
+  "summary_periods_not_compared": 3,
+  "summary_employee_count_unknown": 84,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/final-100-refresh/envelopes.viewer.html",
+   "bytes": 1382687,
+   "companies": 100,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "final-911771098": {
+  "commit": "648720516ced747412817ecf1c38ce1de75296da",
+  "started": "2026-10-17T06:30:45Z",
+  "envelopes": 1,
+  "input_rows": 1,
+  "terminal_status": {
+   "completed": 1
+  },
+  "company_status": {
+   "complete": 1
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 62,
+  "runtime_s": 6.6,
+  "requests": 16,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 1,
+   "leadership": 1,
+   "locations": 1,
+   "websites": 1,
+   "public_footprint": 1,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 29,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 1,
+  "summary_periods_not_compared": 0,
+  "summary_employee_count_unknown": 1,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/final-911771098/envelopes.viewer.html",
+   "bytes": 44299,
+   "companies": 1,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "new-100": {
+  "commit": "7492f3274e85b1d4408d848f05e901dbef2e7de7",
+  "started": "2026-10-17T06:00:39Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 98,
+   "partial": 2
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3993,
+  "runtime_s": 125.3,
+  "requests": 764,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 9,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 2584,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 90,
+  "summary_periods_not_compared": 3,
+  "summary_employee_count_unknown": 84,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/new-100/envelopes.viewer.html",
+   "bytes": 1375413,
+   "companies": 100,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "new-100-refresh": {
+  "commit": "7492f3274e85b1d4408d848f05e901dbef2e7de7",
+  "started": "2026-10-17T06:02:46Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 97,
+   "partial": 3
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3995,
+  "runtime_s": 120.4,
+  "requests": 761,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 9,
+   "hiring": 0
+  },
+  "changes_total": 2,
+  "change_types": {
+   "unavailable": 2
+  },
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 2587,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 90,
+  "summary_periods_not_compared": 3,
+  "summary_employee_count_unknown": 84,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/new-100-refresh/envelopes.viewer.html",
+   "bytes": 1382940,
+   "companies": 100,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {
+   "source_unavailable_value_retained": 2
+  }
+ },
+ "new-911771098": {
+  "commit": "7492f3274e85b1d4408d848f05e901dbef2e7de7",
+  "started": "2026-10-17T06:04:47Z",
+  "envelopes": 1,
+  "input_rows": 1,
+  "terminal_status": {
+   "completed": 1
+  },
+  "company_status": {
+   "complete": 1
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 62,
+  "runtime_s": 6.8,
+  "requests": 16,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 1,
+   "leadership": 1,
+   "locations": 1,
+   "websites": 1,
+   "public_footprint": 1,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 29,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 1,
+  "summary_periods_not_compared": 0,
+  "summary_employee_count_unknown": 1,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/new-911771098/envelopes.viewer.html",
+   "bytes": 44298,
+   "companies": 1,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "new-929336038-recheck": {
+  "commit": "7492f3274e85b1d4408d848f05e901dbef2e7de7",
+  "started": "2026-10-17T06:05:19Z",
+  "envelopes": 1,
+  "input_rows": 1,
+  "terminal_status": {
+   "completed": 1
+  },
+  "company_status": {
+   "complete": 1
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 50,
+  "runtime_s": 10.7,
+  "requests": 21,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 1,
+   "leadership": 1,
+   "locations": 1,
+   "websites": 1,
+   "public_footprint": 1,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v2"
+  ],
+  "summary_statements": 31,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 1,
+  "summary_periods_not_compared": 0,
+  "summary_employee_count_unknown": 0,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": {
+   "written": true,
+   "path": "/tmp/claude-0/-home-user-signalpost-agent/2c240a54-7cae-4ac2-980b-98ee132d9a29/scratchpad/live/out/new-929336038-recheck/envelopes.viewer.html",
+   "bytes": 39225,
+   "companies": 1,
+   "self_contained": true
+  },
+  "viewer_file_exists": true,
+  "errors": {}
+ },
+ "r1-100": {
+  "commit": "05d7566cbdf0c2b5324194d28ffbfe718f902521",
+  "started": "2026-10-17T05:58:30Z",
+  "envelopes": 100,
+  "input_rows": 100,
+  "terminal_status": {
+   "completed": 100
+  },
+  "company_status": {
+   "complete": 98,
+   "partial": 2
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": 0,
+  "evidence_entries_hash_checked": 3997,
+  "runtime_s": 127.6,
+  "requests": 769,
+  "third_party_cost_usd": 0,
+  "area_coverage": {
+   "filings": 100,
+   "leadership": 100,
+   "locations": 100,
+   "websites": 14,
+   "public_footprint": 10,
+   "hiring": 0
+  },
+  "changes_total": 0,
+  "change_types": {},
+  "summary_method": [
+   "deterministic_template_v1"
+  ],
+  "summary_statements": 1908,
+  "summary_unsupported_statements": 0,
+  "summary_unsupported_examples": [],
+  "summary_with_period_comparison": 0,
+  "summary_periods_not_compared": 0,
+  "summary_employee_count_unknown": 0,
+  "summary_zero_employee_statements": 0,
+  "platform_hosts_contacted": [],
+  "wordpress_com_contacted": false,
+  "brave_or_nav_hosts": [],
+  "viewer": null,
+  "viewer_file_exists": false,
+  "errors": {}
+ },
+ "r1_vs_new_site_facts": {
+  "runs": [
+   "r1-100",
+   "final-100"
+  ],
+  "companies_with_any_difference": [],
+  "only_in_r1": {},
+  "only_in_new": {}
+ },
+ "911771098": {
+  "run": "final-911771098",
+  "official_website": [
+   "https://hjsandnes.wordpress.com/"
+  ],
+  "social_profile": [
+   [
+    "ambiguous",
+    null,
+    "5 profile link(s) on the verified site not corroborated as this company's own"
+   ]
+  ],
+  "news_items": 20,
+  "wordpress_profile_urls_in_envelope": []
+ }
+}

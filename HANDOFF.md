@@ -8,27 +8,17 @@ This is where the work stands for whoever continues on another machine or accoun
 | --- | --- |
 | Repository | `Sahvendra7/signalpost-agent` |
 | Working branch | `claude/awesome-sagan-m2lppu` (everything below is pushed) |
-| Last officially evaluated commit | V1 `104c3c4`, tag `submission-candidate-1` |
-| C12 score (V1 only) | 57.87/100 (recall 8.87/50, precision 29/30, synthesis 12/12, UX 8/8); qualification needs 65 |
-| **Revision 1 candidate** | Code `a5e06ce`; the docs commit on top is code-identical. Built, audited and measured. **Not submitted, not scored.** |
-
-## Revision 1 commits
-
-| Commit | What it does |
-| --- | --- |
-| `a0cb079` | Core: social, dated news and jobs from verified sites become typed, evidence-contained claims |
-| `83321ea` | `MANAGER_DESIGNATED`: the registry-designated site of a registered business manager (the BORI case) |
-| `0093419`, `3c946d9`, `58fee4e` | Precision fixes from the first manual audits |
-| `45c41ee` | First results docs (superseded) |
-| `0f24dc3`, `a459120` | Manager rule narrowed: website association kept; manager news only when an item names the entity |
-| `051f2d3`, `a5e06ce` | Precision fixes from the final audits (shared-section confinement, date stamps, one article = one claim, archive links, news archives are not careers pages, article page URL) |
+| GitHub default branch | `main` = `5575d0c`, an older tree **without** the summary, the viewer and Revision 1. A runner that clones the URL without a commit gets it (`docs/c300-revision.md` §A1). |
+| V1 | `104c3c4`, tag `submission-candidate-1`. C12: 57.87/100 (recall 8.87, precision 29, synthesis 12, UX 8) |
+| Revision 1 | `05d7566` (code `a5e06ce`), submitted by the owner. Builderr C300 directional row (2026-10-17): 56.85/100 (recall 26.18, precision 28.27, synthesis 2.40, UX 0). Which tree Builderr processed is not determinable from the available metadata. |
+| **C300 revision candidate** | Code `6487205` (code commits `7492f32`, `6487205`); the docs/measurements commit on top is code-identical. **Not submitted, not scored.** See `docs/c300-revision.md`. |
 
 ## Read in this order
 
-1. `docs/revision-1-final.md`: final candidate, manager-rule decision, audit, same-day comparison, submission
-   check and recommendation.
-2. `docs/c12-gap-analysis.md`: why found information was not scoring.
-3. `docs/official-submission-checklist.md` and `docs/official-scoring-model.md`: contract and scoring.
+1. `docs/c300-revision.md`: C300 diagnosis (synthesis, UX, the WordPress/LinkedIn case), the fixes, validation and
+   release check.
+2. `docs/revision-1-final.md`: Revision 1 (exact social URLs, dated news, jobs, manager rule) and its audit.
+3. `docs/c12-gap-analysis.md`, `docs/official-submission-checklist.md` and `docs/official-scoring-model.md`.
 
 ## Standing rules, kept throughout
 
@@ -37,7 +27,8 @@ This is where the work stands for whoever continues on another machine or accoun
 - Never fetch LinkedIn, Facebook, Instagram, YouTube, X or TikTok.
 - Never trust name-only identity, and never fabricate.
 - A business manager's own content is never the managed entity's, unless the item names that entity.
-- A source outage is never a company change.
+- A hosting platform's own pages and profiles are never its tenant's (`site_facts.in_site_scope`).
+- A source outage is never a company change; a missing number is unknown, never zero.
 - Do not commit Builderr's sample data (only its hash).
 - Never claim a score Builderr has not given.
 
@@ -45,11 +36,13 @@ This is where the work stands for whoever continues on another machine or accoun
 
 ```bash
 uv sync --locked
-uv run --with pytest pytest -q   # expect 339 passed
+uv run --with pytest pytest -q   # expect 356 passed, 91 subtests passed
 ```
 
-## Open decisions and next steps
+## Open decisions and next steps (owner)
 
-- Decide whether and when to submit Revision 1 (code `a5e06ce`) to Builderr. Nothing has been submitted.
-- The remaining recall bottleneck is website discovery. Most companies still have no discovered website, and
-  Revision 1 deliberately did not touch discovery.
+- Decide whether to submit the C300 revision before October 18. Name the exact commit in the submission, and either
+  make the submission branch the GitHub default branch or state the commit explicitly, so that `main` (`5575d0c`) is
+  not what gets run.
+- The remaining recall bottleneck is website discovery. Most companies still have no discovered website, and no
+  revision so far has touched discovery.

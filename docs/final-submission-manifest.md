@@ -1,7 +1,9 @@
 # Final submission manifest
 
-> This manifest describes **V1**, the officially evaluated `submission-candidate-1` (`104c3c4`). The Revision 1
-> candidate (code `a5e06ce`, not submitted) is described in `docs/revision-1-final.md` §6.
+> This manifest describes **V1**, the officially evaluated `submission-candidate-1` (`104c3c4`). Revision 1 (code
+> `a5e06ce`, docs commit `05d7566`) is described in `docs/revision-1-final.md` §6. The **C300 revision candidate**
+> (code `6487205`, not submitted) is described in `docs/c300-revision.md` §G. Its run command is the same as below and
+> also writes `out/envelopes.viewer.html`. The repository's default branch `main` is an older tree: name the commit.
 
 | | |
 |---|---|

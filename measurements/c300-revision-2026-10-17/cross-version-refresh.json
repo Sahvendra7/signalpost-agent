@@ -1,0 +1,25 @@
+{
+ "code": "6487205",
+ "previous": "r1-100 (05d7566) profiles",
+ "new-100": {
+  "change_counts": {
+   "removed": 2
+  },
+  "events": [
+   {
+    "org": "929336038",
+    "type": "removed",
+    "field": "social_profile"
+   },
+   {
+    "org": "929336038",
+    "type": "removed",
+    "field": "careers_page"
+   }
+  ]
+ },
+ "final-100": {
+  "change_counts": {},
+  "events": []
+ }
+}
