@@ -335,6 +335,14 @@ class ViewerExposure(unittest.TestCase):
             _, report = self.run_cli(directory, "--no-viewer")
             self.assertFalse((directory / "out/envelopes.viewer.html").exists())
             self.assertEqual(report["viewer"], {"written": False, "path": None, "reason": "disabled (--no-viewer)"})
+        with tempfile.TemporaryDirectory() as raw:
+            directory = Path(raw)
+            (directory / "blocked").mkdir()  # a directory where the viewer file should go: rendering cannot be written
+            (directory / "blocked" / "keep").write_text("x")
+            _, report = self.run_cli(directory, "--viewer-output", str(directory / "blocked"))
+            self.assertFalse(report["viewer"]["written"], "a failed viewer never fails the run or loses the report")
+            self.assertTrue(report["viewer"]["reason"])
+            self.assertTrue(report["validation"]["passed"])
 
     def test_comparison_cells_cite_sources_and_keep_unknowns_unknown(self):
         from norway_company_agent.viewer import COMPARE_ROWS, project

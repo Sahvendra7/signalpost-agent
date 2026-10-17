@@ -34,6 +34,13 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
     temporary.replace(path)
 
 
+def write_report(path: Path, report: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
 def read_profiles(path: str | None) -> dict[str, dict]:
     if not path or not Path(path).exists():
         return {}
@@ -115,9 +122,11 @@ def main(argv: list[str] | None = None, **injected) -> None:
     report = result["report"]
     report["resumed_profiles"] = len(reuse)
     # The viewer is part of every documented run (a reviewer opens it from the run's own output directory), but it
-    # never fails a completed run: the envelopes above are already durable.
+    # never fails a completed run: the envelopes, profiles and report are durable before it is rendered, and the
+    # report is rewritten with its outcome afterwards.
     viewer_path = None if args.no_viewer else Path(args.viewer_output) if args.viewer_output else Path(args.output).with_suffix(".viewer.html")
-    report["viewer"] = {"written": False, "path": str(viewer_path) if viewer_path else None, "reason": "disabled (--no-viewer)" if viewer_path is None else None}
+    report["viewer"] = {"written": False, "path": str(viewer_path) if viewer_path else None, "reason": "disabled (--no-viewer)" if viewer_path is None else "not yet written"}
+    write_report(Path(args.report), report)
     if viewer_path is not None:
         try:
             write_viewer(viewer_path, result["envelopes"], report)
@@ -125,8 +134,7 @@ def main(argv: list[str] | None = None, **injected) -> None:
         except Exception as exc:
             report["viewer"]["reason"] = f"{type(exc).__name__}: {str(exc)[:200]}"
             print(f"viewer not written: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
-    Path(args.report).parent.mkdir(parents=True, exist_ok=True)
-    Path(args.report).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        write_report(Path(args.report), report)
     summary = {key: report[key] for key in ("run_id", "input_rows", "emitted_envelopes", "terminal_status_counts", "category_available_rate", "runtime_ms", "deadline")}
     summary["viewer"] = report["viewer"].get("path") if report["viewer"].get("written") else None
     summary["validation_passed"] = report["validation"]["passed"]
