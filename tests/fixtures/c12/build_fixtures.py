@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Build the C12 regression fixtures from a real run's captured evidence (no new requests, nothing edited).
 
-    uv run python tests/fixtures/c12/build_fixtures.py RUN_PROFILES.jsonl SNAPSHOT_DIR ORG [ORG ...]
+    uv run python tests/fixtures/c12/build_fixtures.py [--into FIXTURE_DIR] RUN_PROFILES.jsonl SNAPSHOT_DIR ORG [ORG ...]
+
+`--into` writes the fixtures under another directory (default: this one); the C300 cases live in ../c300.
 
 For each organisation the fixture holds the exact bytes the crawler captured (gzip), keyed by URL, with the
 SHA-256 and retrieval time of the capture: the Brreg responses (roles already have birth dates removed by
@@ -21,12 +23,16 @@ HERE = Path(__file__).resolve().parent
 
 
 def main() -> None:
-    profiles_path, snapshot_dir, *orgs = sys.argv[1:]
+    args = sys.argv[1:]
+    base = HERE
+    if args[:1] == ["--into"]:
+        base, args = Path(args[1]), args[2:]
+    profiles_path, snapshot_dir, *orgs = args
     snapshots = Path(snapshot_dir)
     profiles = {json.loads(line)["organisation_number"]: json.loads(line) for line in Path(profiles_path).read_text(encoding="utf-8").splitlines()}
     for org in orgs:
         profile = profiles[org]
-        target = HERE / org
+        target = base / org
         target.mkdir(parents=True, exist_ok=True)
         entries: dict[str, dict] = {}
 

@@ -142,6 +142,29 @@ def is_shared_site_section(url: str) -> bool:
     return len(segments) >= 2 or (len(segments) == 1 and segments[0].casefold() not in HOME_SEGMENTS)
 
 
+def _host(url: str) -> str:
+    return (urllib.parse.urlsplit(url).hostname or "").casefold().rstrip(".").removeprefix("www.")
+
+
+def owns_registered_domain(site_url: str) -> bool:
+    """The verified website sits on its registrable domain (example.no, www.example.no). A site on any other
+    subdomain (hjsandnes.wordpress.com, kirkenes.barnehage.no) is one tenant or unit of someone else's domain."""
+    domain = _registered_domain(site_url)
+    return not domain or _host(site_url) == domain
+
+
+def in_site_scope(url: str, site_url: str) -> bool:
+    """`url` belongs to the verified website at `site_url`. A site on its registrable domain owns every host under
+    it; a subdomain site owns only its own host: the hosting platform's or parent's pages, structured data and
+    profiles (wordpress.com's LinkedIn page for a *.wordpress.com blog) are not the company's."""
+    domain = _registered_domain(site_url)
+    if not domain:
+        return _host(url) == _host(site_url)
+    if _registered_domain(url) != domain:
+        return False
+    return owns_registered_domain(site_url) or _host(url) == _host(site_url)
+
+
 def is_news_page(url: str) -> bool:
     return bool(NEWS_PATH.search(urllib.parse.urlsplit(url).path.casefold()))
 
@@ -277,17 +300,17 @@ def _compact(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", folded)
 
 
-def _organisation_owns(node: dict, site_domain: str, legal_core: list[str]) -> bool:
-    """A JSON-LD Organization node describes the company itself: its url is the verified domain, or its name
-    carries every legal-name token. A web agency or partner node (other url, other name) does not."""
+def _organisation_owns(node: dict, site_url: str, legal_core: list[str]) -> bool:
+    """A JSON-LD Organization node describes the company itself: its url is on the verified website, or its name
+    carries every legal-name token. A web agency, partner or hosting-platform node (other url, other name) does not."""
     url = node.get("url") or node.get("@id")
-    if isinstance(url, str) and url.startswith(("http://", "https://")) and _registered_domain(url) == site_domain:
+    if isinstance(url, str) and url.startswith(("http://", "https://")) and in_site_scope(url, site_url):
         return True
     name = node.get("name") or node.get("legalName")
     return bool(legal_core) and isinstance(name, str) and set(legal_core) <= set(_tokens(name))
 
 
-def social_occurrences(page: CapturedPage, page_index: int, site_domain: str, legal_core: list[str]) -> list[dict[str, Any]]:
+def social_occurrences(page: CapturedPage, page_index: int, site_url: str, legal_core: list[str]) -> list[dict[str, Any]]:
     """Every allowed-platform profile link on one captured page, exactly as linked, in document order."""
     soup = page.soup()
     out: list[dict[str, Any]] = []
@@ -316,7 +339,7 @@ def social_occurrences(page: CapturedPage, page_index: int, site_domain: str, le
         if not (_types(node) & ORGANISATION_TYPES):
             continue
         same_as = node.get("sameAs")
-        owner = _organisation_owns(node, site_domain, legal_core)
+        owner = _organisation_owns(node, site_url, legal_core)
         for raw in same_as if isinstance(same_as, list) else [same_as]:
             if not isinstance(raw, str):
                 continue
@@ -340,8 +363,9 @@ def social_identity(profile: dict[str, Any], occurrence: dict[str, Any], site_do
     Being linked from the verified site is necessary, never sufficient on its own.
 
     `shared_site`: the verified website is a section of a larger organisation's domain (a club's or a chain's
-    subpage). The site's own links then belong to the domain owner, so only the legal-name gate can accept a
-    profile there; the domain-name rule and the owner's structured data are not used."""
+    subpage) or one subdomain of it (a hosting platform's tenant). The domain's links and name then belong to the
+    domain owner, so only the legal-name gate can accept a profile there; the domain-name rule and the owner's
+    structured data are not used."""
     if occurrence["via"] == "jsonld_sameas" and occurrence.get("jsonld_owner") and not shared_site:
         return 0.95, "listed in sameAs of the verified site's own Organization structured data"
     gate = assess_social_identity(profile, {"url": occurrence["canonical_url"]})
@@ -718,16 +742,25 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     out = SiteFacts()
     if not pages:
         return out
-    site_domain = _registered_domain(pages[0].url)
+    site_url = pages[0].url
+    site_domain = _registered_domain(site_url)
     legal_core = _tokens(profile.get("name"))
-    shared_site = is_shared_site_section(pages[0].url)
+    section_site = is_shared_site_section(site_url)
+    subdomain_site = not owns_registered_domain(site_url)
+    shared_site = section_site or subdomain_site
+    # Only pages of the verified website itself carry its facts: a page of the hosting platform or parent domain
+    # that the crawl reached (a "Blog at WordPress.com" footer link) is someone else's site.
+    for page in [page for page in [*pages, *(feeds or [])] if not in_site_scope(page.url, site_url)]:
+        out.reject("page", "outside_verified_site", {"url": page.url}, page)
+    pages = [page for page in pages if in_site_scope(page.url, site_url)]
+    feeds = [feed for feed in feeds or [] if in_site_scope(feed.url, site_url)]
 
     # Social profiles: one claim per (platform, canonical profile), the plainest link as the value.
     groups: dict[tuple[str, str], list[dict[str, Any]]] = {}
     for index, page in enumerate(pages):
         if page.kind != "html":
             continue
-        for occurrence in social_occurrences(page, index, site_domain, legal_core):
+        for occurrence in social_occurrences(page, index, site_url, legal_core):
             groups.setdefault((occurrence["platform"], _profile_key(occurrence)), []).append(occurrence)
     accepted: list[dict[str, Any]] = []
     for (platform, canonical), group in sorted(groups.items()):
@@ -756,7 +789,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     # Cross-links: a site that links several profiles on one platform (club teams, group companies, partners)
     # keeps only the exact handles there (handle == legal name or verified domain name); the rest stay
     # ambiguous. With no exact handle, only those scored >= 0.98 survive.
-    labels = {_compact("".join(legal_core)), _compact(site_domain.split(".", 1)[0]) if site_domain else ""} - {""}
+    labels = {_compact("".join(legal_core)), _compact(site_domain.split(".", 1)[0]) if site_domain and not subdomain_site else ""} - {""}
     for platform in SOCIAL_PLATFORMS:
         same = [item for item in accepted if item["platform"] == platform]
         if len(same) > 2:
@@ -795,11 +828,14 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     priority = {"jsonld_datePublished": 0, "meta_article_published_time": 1, "article_time_datetime": 2, "site_feed": 3, "listing_visible_date": 4}
     kept: dict[tuple[str, str], dict[str, Any]] = {}
     kept_urls: set[str] = set()
-    section = urllib.parse.urlsplit(pages[0].url).path.rstrip("/") + "/" if shared_site else None
+    section = urllib.parse.urlsplit(site_url).path.rstrip("/") + "/" if section_site else None
     for item, page in sorted(candidates, key=lambda pair: priority.get(pair[0].get("method"), 9)):
         reason = validate_activity(item, page)
         if not reason and section and not (urllib.parse.urlsplit(str(item.get("url") or page.url)).path.rstrip("/") + "/").startswith(section):
             reason = "outside_site_section"  # the verified site is a section of a shared domain: the owner's news is not its news
+        item_url = str(item.get("url") or page.url)
+        if not reason and subdomain_site and _registered_domain(item_url) == site_domain and not in_site_scope(item_url, site_url):
+            reason = "outside_verified_site"  # a tenant site's link to the platform's or a sibling tenant's article
         if reason:
             out.reject("activity", reason, item, page)
             continue

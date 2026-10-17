@@ -38,11 +38,14 @@ class SummaryTests(unittest.TestCase):
         self.assertFalse(summary["llm_used"])
         evidence_ids = {item["id"] for item in envelope["evidence"]}
         claim_keys = {item["key"] for item in envelope["claims"]}
-        for item in summary["sections"][:6]:
+        unknown_keys = {item["key"] for item in envelope["claims"] if item["availability"] != "available"}
+        for item in summary["sections"][:7]:
             for statement in item["statements"]:
                 if statement["evidence_ids"]:
                     self.assertLessEqual(set(statement["evidence_ids"]), evidence_ids)
                     self.assertLessEqual(set(statement["claim_keys"]), claim_keys)
+                elif statement["claim_keys"]:
+                    self.assertLessEqual(set(statement["claim_keys"]), unknown_keys, "an uncited statement reports non-available claims only")
                 else:
                     self.assertRegex(statement["text"], r"^(Checked; nothing found|Could not be checked|Candidates were found|Not applicable|Not checked)")
 
@@ -59,7 +62,7 @@ class SummaryTests(unittest.TestCase):
         finance = " ".join(texts(envelope, "financial_snapshot"))
         self.assertIn("reporting period 2025-01-01 to 2025-12-31", finance)
         self.assertIn("Revenue NOK 1,000", finance)
-        self.assertIn("Latest annual accounts year registered: 2025.", finance)
+        self.assertIn("Latest annual accounts: 2025, the year Enhetsregisteret records as last submitted; the most recent figures below are for that year.", finance)
         self.assertIn("“Utvikling av programvare”", " ".join(texts(envelope, "what_the_company_does")))
 
     def test_no_value_appears_that_is_not_in_a_claim(self):
@@ -79,7 +82,7 @@ class SummaryTests(unittest.TestCase):
     def test_unknown_is_distinguished_from_absent(self):
         down, _ = run(FakeBrreg({ORG: entity(ORG)}, down={"/roller"}))
         self.assertEqual(texts(down, "leadership"), ["Could not be checked in this run (source failed or blocked); nothing is reported."])
-        self.assertTrue(any(text.startswith("Could not be checked in this run:") for text in texts(down, "what_remains_unknown")))
+        self.assertTrue(any(text.startswith("Could not be checked in this run (the source failed or was blocked): registered roles (failed)") for text in texts(down, "what_remains_unknown")))
         none_found, _ = run(FakeBrreg({ORG: entity(ORG)}))
         self.assertTrue(any(text.startswith("Checked, nothing found:") and "job posting" in text for text in texts(none_found, "what_remains_unknown")))
 
@@ -98,7 +101,10 @@ class SummaryTests(unittest.TestCase):
         self.assertTrue(ceo["carried_forward"])
         self.assertTrue(any("Retained from an earlier run" in text for text in texts(outage, "what_remains_unknown")))
         first, _ = run(FakeBrreg({ORG: entity(ORG)}))
-        self.assertEqual(texts(first, "what_changed"), ["Not assessed: no previous run was supplied for this company."])
+        self.assertEqual(texts(first, "what_changed"), [
+            "Enhetsregisteret's roles register records its most recent change to the registered roles on 2024-05-01; it does not say what changed.",
+            "No previous run was supplied, so changes since an earlier observation by this agent are not assessed.",
+        ])
 
     def test_live_measured_envelopes_summarise_without_error(self):
         import gzip

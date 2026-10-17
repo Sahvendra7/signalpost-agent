@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from .contract import ClaimSet, availability_for
+from .site_facts import in_site_scope
 
 CATEGORIES = ("identity", "description", "filings", "leadership", "locations", "websites", "public_activity", "hiring", "relationships", "registry_activity")
 
@@ -167,7 +168,13 @@ def _identity_claims(claims: ClaimSet, profile: dict[str, Any]) -> dict[str, Any
     if employees is not None:
         claims.add("identity", "registry_employee_count", employees, record, span("antallAnsatte", employees))
     else:
-        claims.absent("identity", "registry_employee_count", "not_available", "The registry record carries no employee count")
+        # A missing count is unknown, never zero. Brreg says whether a count is registered at all.
+        registered = _bool(view.get("has_registered_employees"))
+        reason = {
+            True: "The registry record says an employee count is registered (harRegistrertAntallAnsatte=true) but publishes no number; unknown, not zero",
+            False: "The registry record has no registered employee count (harRegistrertAntallAnsatte=false); unknown, not zero",
+        }.get(registered, "The registry record carries no employee count; unknown, not zero")
+        claims.absent("identity", "registry_employee_count", "not_available", reason)
     for key, field, source_key in (("founded_date", "founded_date", "stiftelsesdato"), ("registered_date", "registry_registration_date", "registreringsdatoEnhetsregisteret")):
         if _present(view.get(key)):
             claims.add("identity", field, view[key], record, span(source_key, view[key]))
@@ -357,8 +364,12 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         claims.absent("hiring", "job_posting", "not_applicable", held.format("vacancies"))
         held_news = int((value.get("extraction_rejections") or {}).get("activity:manager_news_not_about_entity") or 0)
     # Every fact below inherits the identity of the verified site above; its evidence is the captured page it
-    # was read from, and its value occurs in that page (site_facts.validate_*).
-    profiles = [item for item in value.get("profiles") or [] if item.get("canonical_url")]  # pre-Revision-1 records carry a rewritten URL: not published
+    # was read from, and its value occurs in that page (site_facts.validate_*). A fact read from a page outside the
+    # verified site (a stored record from before site_facts.in_site_scope, e.g. a hosting platform's own page) is
+    # never published, so a refresh or carried-forward record cannot republish it.
+    site_url = str(value.get("site_url") or "")
+    on_site = lambda url: in_site_scope(str(url or ""), site_url)  # noqa: E731
+    profiles = [item for item in value.get("profiles") or [] if item.get("canonical_url") and on_site(item.get("found_on"))]  # pre-Revision-1 records carry a rewritten URL: not published
     for profile in profiles:
         page = _page_record(profile.get("found_on"), profile.get("content_sha256"), profile.get("retrieved_at"), carried)
         claims.add(
@@ -372,9 +383,9 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
             claims.absent("public_activity", "social_profile", "ambiguous", f"{len(ambiguous)} profile link(s) on the verified site not corroborated as this company's own")
         else:
             claims.absent("public_activity", "social_profile", "not_available", "Verified website checked; no Facebook, Instagram, LinkedIn or YouTube profile link found")
-    if value.get("careers_page"):
+    if value.get("careers_page") and on_site(value["careers_page"]):
         claims.add("websites", "careers_page", value["careers_page"], home, f"careers link on {value.get('site_url')}", confidence=confidence, method="verified_site_link")
-    activities = [item for item in value.get("activities") or [] if item.get("title") and item.get("date")]
+    activities = [item for item in value.get("activities") or [] if item.get("title") and item.get("date") and on_site(item.get("page_url"))]
     if manager:
         # The manager's news is not news about the entity: only items that name it (records from before this rule
         # carry no subject_basis and are not published).
@@ -391,7 +402,7 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         claims.absent("public_activity", "news_item", "not_applicable", held.format("news items") + f" unless an item names it ({held_news} dated item(s) on the site, none naming it)")
     elif not activities:
         claims.absent("public_activity", "news_item", "not_available", "Verified website checked; no news or activity item with a date stated on the page found")
-    jobs = value.get("jobs") or []
+    jobs = [job for job in value.get("jobs") or [] if on_site(job.get("page_url"))]
     for job in jobs:
         page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"), carried)
         body = {key: job.get(key) for key in ("title", "url", "date_posted", "valid_through", "application_deadline", "location")}

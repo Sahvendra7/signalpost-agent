@@ -60,7 +60,8 @@ def main(argv: list[str] | None = None, **injected) -> None:
                         help="Batch wall-clock budget (default: $SIGNALPOST_DEADLINE_SECONDS or 2700). 0 disables the deadline.")
     parser.add_argument("--grace-seconds", type=float, default=float(os.environ.get("SIGNALPOST_GRACE_SECONDS", DEFAULT_GRACE_SECONDS)),
                         help="No new company starts inside the last N seconds (default: $SIGNALPOST_GRACE_SECONDS or 60)")
-    parser.add_argument("--viewer-output", help="Also write a self-contained offline HTML viewer of the results here")
+    parser.add_argument("--viewer-output", help="Self-contained offline HTML viewer of the results (default: next to --output, <output name>.viewer.html)")
+    parser.add_argument("--no-viewer", action="store_true", help="Do not write the HTML viewer")
     args = parser.parse_args(argv)
 
     modules = [item.strip() for item in args.modules.split(",") if item.strip()]
@@ -113,14 +114,21 @@ def main(argv: list[str] | None = None, **injected) -> None:
     write_jsonl(Path(args.output), result["envelopes"])
     report = result["report"]
     report["resumed_profiles"] = len(reuse)
+    # The viewer is part of every documented run (a reviewer opens it from the run's own output directory), but it
+    # never fails a completed run: the envelopes above are already durable.
+    viewer_path = None if args.no_viewer else Path(args.viewer_output) if args.viewer_output else Path(args.output).with_suffix(".viewer.html")
+    report["viewer"] = {"written": False, "path": str(viewer_path) if viewer_path else None, "reason": "disabled (--no-viewer)" if viewer_path is None else None}
+    if viewer_path is not None:
+        try:
+            write_viewer(viewer_path, result["envelopes"], report)
+            report["viewer"] = {"written": True, "path": str(viewer_path), "bytes": viewer_path.stat().st_size, "companies": len(result["envelopes"]), "self_contained": True}
+        except Exception as exc:
+            report["viewer"]["reason"] = f"{type(exc).__name__}: {str(exc)[:200]}"
+            print(f"viewer not written: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
     Path(args.report).parent.mkdir(parents=True, exist_ok=True)
     Path(args.report).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    if args.viewer_output:
-        try:
-            write_viewer(Path(args.viewer_output), result["envelopes"], report)
-        except Exception as exc:  # the viewer is a convenience; it never fails a completed run
-            print(f"viewer not written: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
     summary = {key: report[key] for key in ("run_id", "input_rows", "emitted_envelopes", "terminal_status_counts", "category_available_rate", "runtime_ms", "deadline")}
+    summary["viewer"] = report["viewer"].get("path") if report["viewer"].get("written") else None
     summary["validation_passed"] = report["validation"]["passed"]
     registry = report.get("registry") or {}
     summary["registry_snapshot"] = registry.get("snapshot_status") or registry.get("bulk")

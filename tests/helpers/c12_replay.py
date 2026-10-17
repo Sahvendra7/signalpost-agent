@@ -1,4 +1,5 @@
-"""Replay a C12 fixture (tests/fixtures/c12/<org>/) through the real pipeline: exact captured bytes, no network."""
+"""Replay a captured fixture (tests/fixtures/c12/<org>/, tests/fixtures/c300/<org>/) through the real pipeline: exact
+captured bytes, no network."""
 from __future__ import annotations
 
 import copy
@@ -9,20 +10,22 @@ from pathlib import Path
 from norway_company_agent.http import ByteFetch, FetchResult
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "c12"
+C300_FIXTURES = FIXTURES.parent / "c300"
 ROBOTS = b"User-agent: *\nAllow: /\n"
 
 
 class Fixture:
-    def __init__(self, org: str):
+    def __init__(self, org: str, base: Path = FIXTURES):
         self.org = org
-        self.manifest = json.loads((FIXTURES / org / "manifest.json").read_text(encoding="utf-8"))
+        self.base = base
+        self.manifest = json.loads((base / org / "manifest.json").read_text(encoding="utf-8"))
         self.calls: list[str] = []
 
     def raw(self, url: str) -> bytes | None:
         entry = self.manifest["entries"].get(url)
         if not entry or not entry.get("file"):
             return None
-        return gzip.decompress((FIXTURES / self.org / entry["file"]).read_bytes())
+        return gzip.decompress((self.base / self.org / entry["file"]).read_bytes())
 
     def brreg(self, url: str) -> FetchResult:
         self.calls.append(url)
