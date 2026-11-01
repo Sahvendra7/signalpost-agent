@@ -25,7 +25,7 @@ from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .privacy import redacting_fetcher
 from .provenance import code_version
-from .refresh import carry_forward, claim_changes, refine_removals, stamp_first_seen
+from .refresh import carry_forward, claim_changes, refine_additions, refine_removals, site_was_read, stamp_first_seen
 from .status import company_status, identity_block
 from .synthesis import company_summary
 from .site_research import SiteSession, research_company_site
@@ -519,6 +519,7 @@ def _research_envelope(
     refresh_block: dict[str, Any] = {"compared": False, "reason": "no previous run supplied for this company"}
     baseline_envelope = (previous_envelopes or {}).get(row.organisation_number or "")
     baseline_claims: list[dict[str, Any]] | None = None
+    baseline_site_read = True  # no baseline: nothing is called new anyway
     if baseline_envelope is not None:
         # V3 §B8: compare with what was actually published in the previous run (the historical record), so a fact the
         # current rules withdraw shows up as a retraction instead of disappearing silently.
@@ -529,6 +530,8 @@ def _research_envelope(
             base_run = baseline_envelope.get("run") or {}
             refine_removals(changes, refresh_block, baseline_claims, profile["evidence"].get("site_research"),
                             baseline_code=base_run.get("code_version"), current_code=code_version())
+            baseline_site_read = site_was_read(((baseline_envelope.get("modules") or {}).get("site_research") or {}).get("state"))
+            refine_additions(changes, refresh_block, baseline_site_read=baseline_site_read)
             refresh_block["baseline"] = {"kind": "published_envelope", "run_id": base_run.get("run_id"), "started_at": base_run.get("started_at"),
                                          "code_version": base_run.get("code_version")}
             for module in refresh_outcome["carried"]:
@@ -543,6 +546,8 @@ def _research_envelope(
             changes, refresh_block = claim_changes(previous_claims.claims, previous_claims.evidence, claim_set.claims, claim_set.evidence,
                                                    carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=profile["evidence"])
             refine_removals(changes, refresh_block, previous_claims.claims, profile["evidence"].get("site_research"), current_code=code_version())
+            baseline_site_read = site_was_read(record=(previous.get("evidence") or {}).get("site_research") or {})
+            refine_additions(changes, refresh_block, baseline_site_read=baseline_site_read)
             refresh_block["baseline"] = {"kind": "previous_profile", "note": "previous facts re-derived from the previous profile with the current rules; "
                                          "withdrawn facts are visible only when the previous published envelopes are supplied"}
             for module in refresh_outcome["carried"]:
@@ -552,7 +557,8 @@ def _research_envelope(
             errors.append({"code": "refresh_diff_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     started = result["started_at"]
     new_counts = stamp_first_seen(claim_set.claims, baseline_claims, run_id=run_id, started_at=started,
-                                  baseline_run=(baseline_envelope or {}).get("run") if baseline_envelope is not None else {"run_id": None, "started_at": None})
+                                  baseline_run=(baseline_envelope or {}).get("run") if baseline_envelope is not None else {"run_id": None, "started_at": None},
+                                  baseline_site_read=baseline_site_read)
     if baseline_claims is not None:
         refresh_block["new_items"] = new_counts
     anchored = identity_anchored(profile)

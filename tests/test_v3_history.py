@@ -124,6 +124,33 @@ class PublishedBaseline(unittest.TestCase):
         self.assertEqual(refreshed["refresh"]["new_items"]["news_item"], 1)
 
 
+class FirstObservation(unittest.TestCase):
+    """Live release run, 929336038: the baseline's website returned an HTTP error, the refresh read it. Its profile and
+    careers page were reported "added" and the profile "new" — they were simply not observable before."""
+
+    def test_items_on_a_site_the_baseline_could_not_read_are_first_observations(self):
+        current = PublishedBaseline.run_v3(None, KILIS)
+        baseline = copy.deepcopy(current)
+        baseline["claims"] = [claim for claim in baseline["claims"] if claim["field"] not in ("news_item", "social_profile", "careers_page")]
+        baseline["modules"]["site_research"] = {"state": "source_error", "note": "Registry-linked website could not be checked in this run (http_error)"}
+        refreshed = PublishedBaseline.run_v3(None, KILIS, baseline)
+        site_changes = [change for change in refreshed["changes"] if change.get("field") in ("news_item", "social_profile", "careers_page")]
+        self.assertTrue(site_changes)
+        self.assertEqual({change["change_type"] for change in site_changes}, {"first_observed"})
+        self.assertFalse(any(claim.get("is_new") for claim in refreshed["claims"]))
+        self.assertEqual(refreshed["refresh"]["counts"].get("added", 0), 0)
+        self.assertEqual(validate_envelope(refreshed), [])
+
+    def test_after_a_read_baseline_additions_stay_new(self):
+        current = PublishedBaseline.run_v3(None, KILIS)
+        baseline = copy.deepcopy(current)
+        dropped = next(claim for claim in baseline["claims"] if claim["field"] == "news_item" and claim["availability"] == "available")
+        baseline["claims"].remove(dropped)
+        self.assertEqual(baseline["modules"]["site_research"]["state"], "complete")
+        refreshed = PublishedBaseline.run_v3(None, KILIS, baseline)
+        self.assertEqual([change["change_type"] for change in refreshed["changes"] if change.get("field") == "news_item"], ["added"])
+
+
 class CommandLineHistory(unittest.TestCase):
     def test_the_documented_command_keeps_history_and_uses_it_as_the_baseline(self):
         from norway_company_agent.cli import main

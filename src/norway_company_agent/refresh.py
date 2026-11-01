@@ -351,6 +351,29 @@ def refine_removals(events: list[dict[str, Any]], summary: dict[str, Any], basel
             counts["not_rechecked"] = counts.get("not_rechecked", 0) + 1
 
 
+def refine_additions(events: list[dict[str, Any]], summary: dict[str, Any], *, baseline_site_read: bool) -> None:
+    """The mirror of `not_rechecked` (in place): when the baseline run never read the company's website (its site
+    research failed or found no verified site), a site fact present now was simply not observable then. It is a
+    `first_observed` item, not one that is "new since the last run"."""
+    if baseline_site_read:
+        return
+    counts = summary.setdefault("counts", {})
+    for event in events:
+        if event.get("change_type") == "added" and str(event.get("field")) in SITE_FAMILIES:
+            event["change_type"] = "first_observed"
+            event["materiality"] = "informational"
+            event["basis"] = "The previous run could not read this company's website, so this is the first time the item was seen; it may not be new."
+            counts["added"] = counts.get("added", 0) - 1
+            counts["first_observed"] = counts.get("first_observed", 0) + 1
+
+
+def site_was_read(module_state: Any = None, record: dict[str, Any] | None = None) -> bool:
+    """Did a run read the company's website? From a published envelope's module state, or a profile's evidence record."""
+    if record is not None:
+        return record.get("status") == "available"
+    return module_state == "complete"
+
+
 def _canonical_social(event: dict[str, Any]) -> str | None:
     from .website import normalize_social_url
     normalized = normalize_social_url(str(event.get("old_value") or ""))
@@ -358,7 +381,7 @@ def _canonical_social(event: dict[str, Any]) -> str | None:
 
 
 def stamp_first_seen(claims: list[dict[str, Any]], baseline_claims: list[dict[str, Any]] | None, *, run_id: str, started_at: str,
-                     baseline_run: dict[str, Any] | None) -> dict[str, int]:
+                     baseline_run: dict[str, Any] | None, baseline_site_read: bool = True) -> dict[str, int]:
     """first_seen_at / first_seen_run_id on social profiles, news items and job postings. `is_new` only when a baseline
     exists for this company and the fact was not in it; without a baseline a fact is a first observation, never "new"."""
     previous = {_claim_key(claim): claim for claim in baseline_claims or [] if claim.get("availability") == "available"}
@@ -374,7 +397,7 @@ def stamp_first_seen(claims: list[dict[str, Any]], baseline_claims: list[dict[st
                 claim["first_seen_at"], claim["first_seen_run_id"] = seen_at, seen_run
         else:
             claim["first_seen_at"], claim["first_seen_run_id"] = started_at, run_id
-            if baseline_claims is not None:
+            if baseline_claims is not None and baseline_site_read:  # unread then: a first observation, not "new"
                 claim["is_new"] = True
                 new_counts[claim["field"]] += 1
     return new_counts

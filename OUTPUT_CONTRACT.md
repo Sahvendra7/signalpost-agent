@@ -61,6 +61,7 @@ fields reads V3 envelopes as before. `contract.validate_envelope` checks the two
 | `changes[]` | `change_type: retracted` | The previous run published the item, this run still found it, and a rule now withholds it. Carries `rule`, `basis`, `code_version` and `previous_code_version`. It never says the earlier item was verified. |
 | `changes[]` | `change_type: not_rechecked` | The page the item came from was not read in this run. Informational; not a removal. |
 | `changes[]` | `change_type: removed` | Now strictly: the page was read again and the item is gone. |
+| `changes[]` | `change_type: first_observed` | The previous run could not read the company's website, so a site item seen now is a first observation, not necessarily new. Informational. Such items get no `is_new`. |
 
 Held-back items stay visible as non-available claims, for example `ambiguous` or `not_applicable` social profiles,
 with a `reason`. They are never published as facts.

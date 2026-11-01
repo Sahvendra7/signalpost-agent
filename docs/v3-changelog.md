@@ -339,3 +339,30 @@ Tests:
 - `tests/test_v3_app_security.py`: every control in §B12.
 
 Screenshots: `docs/screenshots/app-*.png`.
+
+## Phase 8 — release validation
+
+**Fix: additions after an unread website are `first_observed`, not new.**
+- **Found by** the live refresh of the 100-company check. For 929336038 (Sjøloftet), the first run's website request
+  failed with an HTTP error, so site research ended in `source_error`. The refresh read the site. Its Facebook profile
+  and careers page were reported as `added`, and the profile as `is_new`, although the first run never saw the site.
+- **Change.**
+  - When the baseline's site research did not complete (failed, or no verified website), site-family additions
+    become `first_observed` (informational, with a basis), and no site item is marked `is_new`.
+  - `refresh.counts` gains `first_observed`.
+  - This mirrors `not_rechecked` for removals.
+  - The contract allows the new change type. The viewer labels it "First seen (website not read last time)" and keeps
+    it out of What's New.
+- **Verification.** Rebuilding that refresh from the captured profiles against the first run's published envelopes now
+  gives 0 `added`, 2 `first_observed` and 0 `is_new`. Tests: `tests/test_v3_history.py::FirstObservation`.
+
+**Positive-control correction: 911771098 has 19 news items, not 20.**
+- **Cause.** "Du store verden" (2018) is withheld by the second-person title rule added in `6efd3cd`, and no test
+  pinned the count. In the labelled audits, that clause removed 10 incorrect and 3 correct news items (2 unsure), so it
+  is kept.
+- **Confirmed live** on 2026-11-01: `ff3b515` published 20 and V3 published 19. The only difference is that post.
+- **Now pinned** by `tests/test_v3_regressions.py::NewsClassification::test_911771098_blog_control`.
+
+**Measurement artefacts.** The Phase 4 commit did not include its input lists, replay envelopes and labelled CSVs,
+because `.gitignore` excludes `*.jsonl`, `*.jsonl.gz` and `*.csv`. They are now force-added, as earlier measurement
+directories were.

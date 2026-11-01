@@ -31,8 +31,9 @@ STATUS_TO_AVAILABILITY = {
 _SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 
-# V3 §B8 adds "retracted" (withdrawn by the agent's current rules) and "not_rechecked" (source page not read this run).
-CHANGE_TYPES = {"added", "removed", "changed", "unverified", "unavailable", "retracted", "not_rechecked"}
+# V3 §B8 adds "retracted" (withdrawn by the agent's current rules), "not_rechecked" (source page not read this run) and
+# "first_observed" (the previous run could not read the website, so a site fact now seen is not necessarily new).
+CHANGE_TYPES = {"added", "removed", "changed", "unverified", "unavailable", "retracted", "not_rechecked", "first_observed"}
 
 
 def availability_for(record: dict[str, Any] | None) -> str:

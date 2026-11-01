@@ -363,7 +363,7 @@ const name = (c) => (c.identity && c.identity.legal_name) || "(identity not reso
 const STATUS = {completed: "Research finished", failed: "Research failed"};
 const COMPANY = {complete: "All sources checked", partial: "Some sources failed", not_researched: "Not researched (time limit)", identity_unresolved: "Not found in the register", invalid_input: "Invalid organisation number"};
 const STATE = {available: "Found", not_available: "Checked — none found", ambiguous: "Not attributed (may belong to another company)", not_applicable: "Not attributed to this company", failed: "Could not check (source failed)", blocked: "Could not check (blocked)"};
-const CHANGE = {added: "New since last run", removed: "No longer on the source", changed: "Changed", retracted: "Withdrawn by our checks", not_rechecked: "Not re-checked this run", unverified: "Website no longer confirmed", unavailable: "Source unavailable — last value kept"};
+const CHANGE = {added: "New since last run", removed: "No longer on the source", changed: "Changed", retracted: "Withdrawn by our checks", not_rechecked: "Not re-checked this run", first_observed: "First seen (website not read last time)", unverified: "Website no longer confirmed", unavailable: "Source unavailable — last value kept"};
 const CATEGORY = {official_website: "Website", social_profile: "Social profiles", news_item: "News", job_posting: "Job advertisements", careers_page: "Careers page"};
 const CHIPS = ["#1f5f8b", "#8a3b8f", "#2d7a3e", "#a0522d"];
 const label = (map, v) => map[v] || String(v || "unknown").replace(/_/g, " ");
