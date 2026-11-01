@@ -308,3 +308,32 @@ Tests (`tests/test_v3_viewer.py`), headless Chromium at 1366×820 and 390×844:
   about 20 KB each.
 
 Screenshots: `docs/screenshots/v3-viewer-*.png`.
+
+## Phase 7 — local search application (design §B11–§B12)
+
+New package `src/norway_company_agent/app/` and the command `scripts/serve.py`. It uses only the standard library and
+adds no dependency. Usage is in `docs/search-app.md`.
+
+- **Search.** Searches the dataset (imported envelope files plus companies researched in the app) and the registry,
+  using either the fixed Brreg search endpoint or `--bulk`. Name or organisation number only. URL-like input is
+  refused before anything is fetched.
+- **On-demand research** runs the batch pipeline for one row with a 120 s deadline. Limits: 2 live threads (orphans
+  counted), a queue of 20, de-duplication and cancel. The previous stored run is the baseline, so a re-check reports
+  new and withdrawn items. Outcomes:
+  - completed or partial (failed sources named) is stored;
+  - failed (not in registry / registry unreachable) or cancelled is not stored.
+- **Pages.** Profiles, comparison and What's New are the Phase 6 viewer, served with `app` links: back to search, and
+  captured bytes in the inspector. The viewer gains an `app.open` hook so an app document opens on its view.
+- **Security** (§B12): loopback bind; Host check (421); token, Origin, Sec-Fetch-Site and JSON for POST; 4 KB bodies;
+  rate limits; 10 s socket timeout; 32 concurrent requests; snapshots only for indexed hashes, as a sandboxed text
+  attachment; no tracebacks; no subprocess. Data directories are 0700 and files 0600.
+- **Bug found while testing.** With a 120 s deadline, the batch default `grace_seconds=60` makes the "will it fit"
+  rule degrade every single-company research to official-only. The app passes `grace_seconds=min(15, deadline/4)`.
+  Batch defaults are unchanged.
+
+Tests:
+- `tests/test_v3_app.py`: offline, end to end — search, research completed/partial/failed/cancelled, persistence,
+  read-only imports, snapshots, and a headless flow at 1366×820 and 390×844.
+- `tests/test_v3_app_security.py`: every control in §B12.
+
+Screenshots: `docs/screenshots/app-*.png`.

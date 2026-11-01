@@ -124,6 +124,17 @@ and to company websites; with no network every envelope is still emitted, with s
 
 Increase `--count` and `--expected-count` together for a larger local test. The 100-row smoke test above is practice only; Builderr supplies the companies for every official run.
 
+## Search a company (local app)
+
+```bash
+uv run python scripts/serve.py --data-dir out/app --envelopes out/smoke-envelopes.jsonl --snapshot-dir out/snapshots
+# open http://127.0.0.1:8765/
+```
+
+Search by name or organisation number, open cited profiles, compare 2–4 companies, see what is new, or research a
+company outside your dataset on demand (about a minute, free public sources, LLM off). Loopback only; standard
+library only. See [docs/search-app.md](docs/search-app.md).
+
 ## The improvement loop
 
 1. Treat the organisation number as the anchor.

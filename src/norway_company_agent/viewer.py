@@ -650,6 +650,7 @@ function fromHash() {
 }
 window.addEventListener("hashchange", fromHash);
 render();
+if (!location.hash && DATA.app && /^(org=\d{9}|compare=[\d,]{19,39}|new|trust)$/.test(DATA.app.open || "")) history.replaceState(null, "", "#" + DATA.app.open);  // app documents open on their view
 if (!fromHash() && DATA.companies.length && !narrow()) select(0, true);
 </script>
 </body>
