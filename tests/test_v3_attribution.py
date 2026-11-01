@@ -55,6 +55,11 @@ class HandleRelations(unittest.TestCase):
         ("AS BYGGANALYSE", "linkedin", "https://no.linkedin.com/company/as-bygganalyse", "EXACT"),
         ("AS INSTITUTT FOR PSYKOLOGISK RÅDGIVNING", "facebook", "https://www.facebook.com/Institutt-for-Psykologisk-R%C3%A5dgivning-IPR-279534205481478/", "EXACT_NEUTRAL"),
         ("ASAK AS", "facebook", "https://www.facebook.com/asakmiljostein", "EXTENDS"),
+        # Phase 4 held-out 2: percent-encoded letters and single-letter initials
+        ("GLOMMEN MJØSEN SKOG SA", "youtube", "https://www.youtube.com/@GlommenMj%C3%B8senSkog", "EXACT"),
+        ("GRØNN JOBB AS", "linkedin", "https://no.linkedin.com/company/gr%C3%B8nn-jobb-as", "EXACT"),
+        ("Alf I. Larsen A/S", "instagram", "https://www.instagram.com/alf.i.larsen.as/", "EXACT"),
+        ("Alf I. Larsen A/S", "facebook", "https://www.facebook.com/Alf.I.Larsen.AS", "EXACT"),
     ]
 
     def test_relation_table(self):

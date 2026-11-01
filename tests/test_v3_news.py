@@ -125,6 +125,18 @@ class PublishersAndEvergreen(unittest.TestCase):
         self.assertIn("activity:evergreen_advice_not_news", facts.rejections)
 
 
+class ProjectAndDemoPosts(unittest.TestCase):
+    def test_project_titled_posts_and_same_second_demo_posts_are_not_news(self):
+        posts = [("Prosjekt: Kreativ ungdom i Arendal", "https://fjell-data.no/prosjekt-kreativ/", "Mon, 07 Jul 2025 14:24:33 +0000", ["Blogg"]),
+                 ("Keep in touch with site visitors", "https://fjell-data.no/keep-in-touch/", "Tue, 29 Jun 2021 08:21:48 +0000", ["Blogg"]),
+                 ("Make the most of the season", "https://fjell-data.no/make-the-most/", "Tue, 29 Jun 2021 08:21:48 +0000", ["Blogg"]),
+                 ("Åpen dag på verkstedet", "https://fjell-data.no/apen-dag/", "Fri, 04 Sep 2026 19:54:59 +0000", ["Blogg"])]
+        facts = extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)])
+        self.assertEqual(titles(facts), ["Åpen dag på verkstedet"])
+        self.assertIn("activity:project_title", facts.rejections)
+        self.assertIn("activity:bulk_entry_burst", facts.rejections)
+
+
 class Subject(unittest.TestCase):
     def test_sibling_unit_items_are_not_published_and_own_items_are(self):
         legal = {"name": "BETONMAST OSLO AS", "organisation_number": "996605833",

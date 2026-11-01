@@ -206,3 +206,22 @@ turned fresh60 into a development set, so the rules below were validated on a **
 - **Evergreen advice and marketing** — titles such as "Slik …", "Hvordan …", "Hvor ofte …", "… sjekkliste", "How to
   …" or second-person "du/dere/you" are not news unless they name the company (`evergreen_advice_not_news`).
 - **Press releases** — "Pressemelding: …" titles and `pressemelding-…` slugs count as article evidence.
+
+## Phase 4 — fixes after the second held-out evaluation (validated on development sets only)
+
+The second held-out evaluation (fresh60b, run once with the rules frozen at `6efd3cd`) passed the social gate. It failed
+the news precision gate at 85% and the careers gates; see `docs/v3-accuracy.md`. The causes were three bugs and two
+missing rules. These changes come after that evaluation, so they are checked only on the four development sets and the
+fixtures; no third held-out set was run.
+
+**Bugs fixed:**
+- `fold()` transliterated ø/å/æ before URL-decoding. Percent-encoded handles lost the letter:
+  `@GlommenMj%C3%B8senSkog`, `gr%C3%B8nn-jobb-as`.
+- Single-letter parts of a legal name are kept as an alternative form: "Alf I. Larsen A/S" ↔ `alf.i.larsen.as`.
+- A careers path under `/tjenester/` (a municipality's site map) is not a service page when its own last segment is a
+  careers segment.
+
+**Rules added:**
+- `project_title` — titles starting "Prosjekt:", "Referanse:", "Project:", "Case:".
+- Two or more different posts created in the same second (a theme's demo content) are a bulk entry. Midnight
+  timestamps count as dates, not times.

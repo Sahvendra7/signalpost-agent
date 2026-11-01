@@ -27,6 +27,7 @@ NON_ARTICLE_SEGMENTS = {
 NEWS_SEGMENT = re.compile(r"^(?:nyheter|nyhet|aktuelt|news|blogg|blog|bloggen|artikler|artikkel|article|articles|presse|press|pressemeldinger|"
                           r"pressemelding|press-releases|post|posts|innlegg|magasin|magazine|nyhetsarkiv|aktueltsaker|aktuelle-saker|nyhetssaker|"
                           r"siste-nytt|nytt|newsroom)$")
+PROJECT_TITLE = re.compile(r"^\s*(?:prosjekt|project|referanse|reference|case)\s*[:–—]", re.I)
 PRESS_TITLE = re.compile(r"^\s*(?:pressemelding|press release|pressrelease|nyhet|news|kunngjøring|announcement)\s*[:–—-]", re.I)
 PRESS_SLUG = re.compile(r"^(?:pressemelding|press-release|nyhet|kunngjoring)-")
 DATED_PATH = re.compile(r"/(?:19|20)\d{2}/(?:0?[1-9]|1[0-2])(?:/|$)")
@@ -73,6 +74,8 @@ def classify_item(item: dict[str, Any], page_url: str, *, site_url: str, on_news
         return Decision(False, "listing_not_item", "The item is the website's homepage, not an article.")
     if page_is_listing and _same(url, page_url) and method in ("jsonld_datePublished", "meta_article_published_time"):
         return Decision(False, "listing_not_item", "The date belongs to the news listing page itself, not to an article on it.")
+    if PROJECT_TITLE.match(str(item.get("title") or "")):
+        return Decision(False, "project_title", "The item is titled as a project or reference description, not news.")
     if fold(item.get("title")).strip(" .!") in {fold(title).strip(" .!") for title in DEFAULT_POSTS}:
         return Decision(False, "default_cms_post", "The item is the publishing tool's default sample post.")
     categories = [compact(category) for category in item.get("categories") or [] if compact(category) and compact(category) not in NO_CATEGORY]
@@ -114,6 +117,15 @@ def burst_members(items: list[tuple[str, dict[str, Any]]]) -> set[int]:
     for index, (source, _) in enumerate(items):
         by_source.setdefault(source, []).append(index)
     members: set[int] = set()
+    stamps: dict[tuple[str, str], list[int]] = {}
+    for index, (source, item) in enumerate(items):
+        instant = _instant(item)
+        if instant is not None and (instant.hour, instant.minute, instant.second) != (0, 0, 0):  # midnight = a date, not a time
+            stamps.setdefault((source, str(item.get("date"))), []).append(index)
+    for same_second in stamps.values():
+        distinct = {(str(items[index][1].get("url") or ""), fold(items[index][1].get("title"))) for index in same_second}
+        if len({url for url, _ in distinct}) >= 2 and len({title for _, title in distinct}) >= 2:
+            members.update(same_second)  # different posts created in the same second: imported (e.g. a theme's demo content)
     for indexes in by_source.values():
         timed = sorted((instant, index) for index in indexes if (instant := _instant(items[index][1])) is not None)
         start = 0

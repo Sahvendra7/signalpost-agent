@@ -464,7 +464,10 @@ SERVICE_SEGMENTS = {"for-bedrifter", "bedrift", "bedrifter", "arbeidsgivere", "f
 
 
 def service_page(url: str) -> bool:
-    return any(segment in SERVICE_SEGMENTS for segment in urllib.parse.unquote(urllib.parse.urlsplit(url).path).casefold().split("/"))
+    segments = [segment for segment in urllib.parse.unquote(urllib.parse.urlsplit(url).path).casefold().split("/") if segment]
+    if segments and CAREER_PATH.search("/" + segments[-1]):
+        return False  # /tjenester/om-kommunen/jobb-i-grane-kommune-ledige-stillinger is the careers page itself
+    return any(segment in SERVICE_SEGMENTS for segment in segments)
 
 
 def career_link(url: str, text: str) -> bool:

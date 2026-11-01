@@ -30,8 +30,9 @@ REGIONS = {"nord", "sor", "ost", "vest", "midt", "sorvest", "nordvest", "sorost"
 
 
 def fold(text: Any) -> str:
-    value = str(text or "").translate(str.maketrans({"ø": "o", "Ø": "O", "å": "a", "Å": "A", "æ": "ae", "Æ": "AE"}))
-    return unicodedata.normalize("NFKD", urllib.parse.unquote(value)).encode("ascii", "ignore").decode().casefold()
+    # URL-decode first: "%C3%B8" must become "ø" before ø/å/æ are transliterated (Glommen Mjøsen's @GlommenMj%C3%B8senSkog)
+    value = urllib.parse.unquote(str(text or "")).translate(str.maketrans({"ø": "o", "Ø": "O", "å": "a", "Å": "A", "æ": "ae", "Æ": "AE"}))
+    return unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().casefold()
 
 
 def compact(text: Any) -> str:
@@ -54,6 +55,10 @@ class LegalName:
     def __post_init__(self) -> None:
         self.tokens = _tokens(self.name)
         self.compact = "".join(self.tokens)
+        # "Alf I. Larsen A/S": the single-letter middle initial is part of the written name ("alf.i.larsen.as")
+        letters = [word for word in re.findall(r"[a-z0-9]+", fold(self.name).replace("a/s", " as "))]
+        with_initials = "".join(word for word in letters if word not in LEGAL_FORMS or len(letters) == 1)
+        self.compact_full = with_initials if with_initials != self.compact and len(with_initials) > len(self.compact) else ""
         self.places = {compact(place) for place in (self.municipality, self.post_town) if place}
         self.brands = []
         for k in range(1, len(self.tokens)):
@@ -179,7 +184,8 @@ def handle_relation(legal: LegalName, platform: str, url: str) -> Relation:
         for prefix in PREFIXES:
             if named.startswith(prefix) and named != prefix and not legal.compact.startswith(prefix):
                 named = named[len(prefix):]
-        if not (named.startswith(legal.compact) and not legal.strip_neutral(named[len(legal.compact):])):
+        own = [base for base in (legal.compact, legal.compact_full) if base and named.startswith(base) and not legal.strip_neutral(named[len(base):])]
+        if not own:
             return Relation("OTHER_ENTITY", handle, named)
     prefixes = PREFIXES + ((legal.leading_form,) if legal.leading_form else ())
     candidates = [handle] + [handle[len(prefix):] for prefix in prefixes if handle.startswith(prefix) and len(handle) > len(prefix)]
@@ -195,7 +201,8 @@ _RANK = {"EXACT": 0, "EXACT_NEUTRAL": 1, "BRAND": 2, "OTHER_ENTITY": 3, "EXTENDS
 
 
 def _relation(legal: LegalName, handle: str) -> Relation:
-    for base, exact_kind in [(legal.compact, "EXACT")] + [(brand, "BRAND") for brand in sorted(legal.brands, key=len, reverse=True)]:
+    bases = [(legal.compact, "EXACT")] + ([(legal.compact_full, "EXACT")] if legal.compact_full else [])
+    for base, exact_kind in sorted(bases, key=lambda item: len(item[0]), reverse=True) + [(brand, "BRAND") for brand in sorted(legal.brands, key=len, reverse=True)]:
         if not handle.startswith(base):
             continue
         rest = handle[len(base):]
