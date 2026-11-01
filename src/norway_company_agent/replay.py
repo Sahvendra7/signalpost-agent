@@ -119,4 +119,5 @@ class ReplayFetchers:
 
 
 def load_profiles(path: str | Path) -> list[dict[str, Any]]:
-    return [json.loads(line) for line in Path(path).read_text(encoding="utf-8").splitlines() if line.strip()]
+    # split on "\n" only: str.splitlines() also splits on U+2028 and similar characters inside JSON strings
+    return [json.loads(line) for line in Path(path).read_text(encoding="utf-8").split("\n") if line.strip()]
