@@ -115,6 +115,8 @@ Now its real articles are kept separately, and its portfolio items are rejected.
   - Bergknapp `/prosjekter/` → 0; Bartec group magazine 17 → 0;
   - Betonmast Oslo 10 → 1 (its own tagged item); Beredt listing page removed, 7 articles kept.
 - Controls unchanged: 911771098 (20), Kilis Hockey (10), Birralee (20), Grønsand (15).
+  - **Correction (found in Phase 8):** after `6efd3cd` (the second-person title rule, Phase 4), 911771098 has 19,
+    not 20. See "Phase 8".
 
 ## Phase 3 — job advertisements and careers pages
 
