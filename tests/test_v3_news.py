@@ -174,3 +174,12 @@ class ReaderAddressing(unittest.TestCase):
         for title in ("Du store verden", "Få med deg flere nyhetssaker på Facebook", "Her finner du Barneombudet på Arendalsuka 2026",
                       "Hva gjør du hvis mobil og internett slutter å fungere? Øvelse NØP torsdag 29/11", "Ansatte og deres familier inviteres til sommerfest"):
             self.assertFalse(evergreen_title(title), title)
+
+
+class AdviceAfterTopicPrefix(unittest.TestCase):
+    def test_an_advice_question_after_a_topic_prefix_is_advice_but_news_after_a_colon_is_not(self):
+        from norway_company_agent.attribution.news import evergreen_title
+        self.assertTrue(evergreen_title("Vindusvask for bedrifter: Hvor ofte bør vinduene vaskes?"))
+        self.assertTrue(evergreen_title("Strøm: Hvordan påvirker vinteren prisene?"))
+        self.assertFalse(evergreen_title("Ny avtale: Slik blir samarbeidet med kommunen"))
+        self.assertFalse(evergreen_title("Årsmøte 2026 – hva er nytt?"))

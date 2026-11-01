@@ -145,7 +145,10 @@ def burst_members(items: list[tuple[str, dict[str, Any]]]) -> set[int]:
 
 
 EVERGREEN_TITLE = re.compile(
+    # Remediation R3: an unambiguous advice question also counts after a "Topic:" prefix ("Vindusvask for bedrifter: Hvor
+    # ofte bør vinduene vaskes?"); "Slik" or "Hva er" after a colon is often news ("Ny avtale: Slik blir …").
     r"^(?:slik|hvordan|hvor ofte|hva er|hva du|hva bør|tips|råd|guide|how to|how do|what is|what are|why|types of|understanding|introduction to)\b"
+    r"|[:–—]\s+(?:hvor ofte|hvordan|how to|how do|how often)\b"
     r"|sjekkliste|checklist|komplett guide|complete guide|\bguide\b|\btips\b|dette bør|regler for|key differences|\bvs\.?\b", re.I)
 # Remediation R6: a second-person word marks marketing or advice only in context — the reader's possessions ("din",
 # "ditt", "your"), an offer to the reader ("for deg", "gir deg"), a modal ("du kan", "kan du"), or "slik … dere". A bare
