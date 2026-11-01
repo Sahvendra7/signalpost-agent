@@ -29,6 +29,7 @@ from bs4 import BeautifulSoup
 
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens
+from .attribution.jobs import is_recruiter
 from .site_facts import CAREER_PATH, is_careers_page  # noqa: F401
 from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, in_site_scope, is_shared_site_section, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site, manager_designated
@@ -457,6 +458,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
 
 CAREER_LABEL = re.compile(r"^(?:ledige stillinger|stillinger|karriere|career|careers|jobs|jobb|vacancies|open positions|work with us|join us|"
                           r"jobb(?:e)? (?:hos|i|med|for) [\w .&-]{1,40}|bli med (?:oss|på laget)|ledig stilling)$", re.I)
+OWN_CAREERS = re.compile(r"(?:jobb(?:e)?-(?:hos|i)-|karriere|career|work-(?:with|for)-us|join-us|bli-en-av-oss)")
 SERVICE_SEGMENTS = {"for-bedrifter", "bedrift", "bedrifter", "arbeidsgivere", "for-arbeidsgivere", "arbeidsgiver", "tjenester", "kunder", "for-kunder", "services"}
 
 
@@ -487,7 +489,13 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
     if result.careers_page:
         # V3 §B7: the linked page must itself be a careers page (path or heading), not a service page for employers.
         fetched_page = next((page for page in pages or [] if page.url == result.careers_page and page.kind == "html"), None)
-        if fetched_page is None or not is_careers_page(fetched_page) or service_page(result.careers_page):
+        board = profile is not None and is_recruiter(profile) and not OWN_CAREERS.search(urllib.parse.unquote(urllib.parse.urlsplit(result.careers_page).path).casefold())
+        if board:
+            # A recruiter's vacancies page lists its clients' jobs: it is not a page about working at the recruiter.
+            counts = result.extraction_rejections
+            counts["careers:recruiter_job_board"] = counts.get("careers:recruiter_job_board", 0) + 1
+            result.careers_page, result.careers_checked = None, []
+        elif fetched_page is None or not is_careers_page(fetched_page) or service_page(result.careers_page):
             counts = result.extraction_rejections
             counts["careers:not_a_careers_page"] = counts.get("careers:not_a_careers_page", 0) + 1
             result.careers_page, result.careers_checked = None, [item for item in result.careers_checked if item.get("url") != fetched_page.url] if fetched_page else []

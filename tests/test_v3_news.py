@@ -77,6 +77,15 @@ class ItemGate(unittest.TestCase):
         for code in ("project_category", "default_cms_post", "media_file"):
             self.assertIn(f"activity:{code}", facts.rejections)
 
+    def test_uncategorized_is_not_a_project_category_and_a_reused_post_date_is_rejected(self):
+        # Phase 4 dev audit: "Uncategorized" (the CMS default) lost two correct posts; reused posts kept a 2018 date.
+        posts = [("Tildeling av stipender 2026", "https://fjell-data.no/tildeling-2026/", "Thu, 11 Jun 2026 08:59:14 +0000", ["Uncategorized"]),
+                 ("Utlysing 2026", "https://fjell-data.no/post-2/", "Mon, 09 Jul 2018 17:09:24 +0000", ["Uncategorized"]),
+                 ("17. mai på gården 2018", "https://fjell-data.no/17-mai/", "Thu, 17 May 2018 17:43:05 +0000", ["Uncategorized"])]
+        facts = extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)])
+        self.assertEqual(titles(facts), ["17. mai på gården 2018", "Tildeling av stipender 2026"])
+        self.assertIn("activity:date_contradicts_title", facts.rejections)
+
     def test_service_cards_outside_the_news_section_are_not_news(self):
         cards = "".join(f'<div><h3><a href="/inspirasjon-artikler/{slug}">{title}</a></h3><p>Publisert {date}</p></div>' for slug, title, date in
                         [("ny-visningshytte", "Ny visningshytte på Hellerud", "21.01.2026"), ("hytta-pa-fjellet", "Odd og Kristin leier ut hytta", "29.03.2023")])

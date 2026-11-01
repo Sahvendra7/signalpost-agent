@@ -164,3 +164,16 @@ A recruiter's own vacancies that name it as employer are still published.
 
 **Fixtures.** Best Work `/for-bedrifter/` and Beredt `/arbeidsgivere/unge-i-praksis/` no longer give careers pages.
 The Birralee, Bjelland and Bemex careers pages are kept.
+
+## Phase 4 — fixes from the development-set audit (rules frozen after this entry)
+
+The blind dev audit (midsize40 + smoke100, `docs/v3-accuracy.md`) found three correct news items V3 had lost. It also
+found two errors that neither version caught.
+
+- **"Uncategorized"** and other CMS default categories are no category. They no longer count as project taxonomy,
+  which had wrongly rejected two posts each from JEDM and Bli Optimal.
+- **`date_contradicts_title`.** A post whose title names a year more than one year after its stated date was reused,
+  so the stated date is not its publication date. Example: "Utlysing 2026" dated 2018.
+- **`careers:recruiter_job_board`.** A recruiter's (NACE 78) vacancies page lists its clients' jobs. It is a careers
+  page only when it is explicitly about working at the recruiter (`jobb-hos-…`, `karriere`, `join-us`). The Bemex
+  control expectation in `test_v3_regressions.py` was corrected from "kept" to "held".

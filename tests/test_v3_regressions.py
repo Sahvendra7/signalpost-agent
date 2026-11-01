@@ -131,7 +131,8 @@ class CareersPages(unittest.TestCase):
     def test_controls_keep_their_careers_pages(self):
         self.assertEqual(careers("936269044"), ["https://www.birralee.no/careers"])
         self.assertEqual(careers("984560443"), ["https://www.bjelland-as.no/jobbe-hos-oss/"])
-        self.assertEqual(careers("995726742"), ["https://www.bemex-rekruttering.no/ledige-stillinger"])
+        # Phase 4 dev audit: a recruiter's vacancies page lists its clients' jobs, not working at the recruiter.
+        self.assertEqual(careers("995726742"), [])
 
 
 if __name__ == "__main__":

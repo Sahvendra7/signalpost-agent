@@ -32,8 +32,10 @@ DEFAULT_POSTS = {"hello world", "hello world!", "hei verden", "hei verden!", "sa
                  "hallo verden", "hallo verden!"}
 NEWS_TAXONOMY = {"nyheter", "nyhet", "aktuelt", "news", "blogg", "blog", "presse", "pressemelding", "pressemeldinger"}
 PROJECT_TAXONOMY = {"prosjekt", "prosjekter", "referanse", "referanser", "referanseprosjekter", "portfolio", "naeringsbygg", "boligbygg", "bolig",
-                    "boliger", "offentlig", "offentlige", "rehabilitering", "nybygg", "produkter", "produkt", "tjenester", "hytter", "uncategorized",
-                    "ukategorisert", "industri", "infrastruktur", "anlegg", "kontorbygg", "skolebygg"}
+                    "boliger", "offentlig", "offentlige", "rehabilitering", "nybygg", "produkter", "produkt", "tjenester", "hytter", "industri",
+                    "infrastruktur", "anlegg", "kontorbygg", "skolebygg"}
+NO_CATEGORY = {"uncategorized", "ukategorisert", "ikkekategorisert", "generelt", "general"}  # a CMS default: says nothing
+TITLE_YEAR = re.compile(r"(?<!\d)(19\d{2}|20\d{2})(?!\d)")
 BURST_WINDOW_SECONDS = 15 * 60
 BURST_SIZE = 4
 SAME_DAY_BURST_SIZE = 5
@@ -71,9 +73,13 @@ def classify_item(item: dict[str, Any], page_url: str, *, site_url: str, on_news
         return Decision(False, "listing_not_item", "The date belongs to the news listing page itself, not to an article on it.")
     if fold(item.get("title")).strip(" .!") in {fold(title).strip(" .!") for title in DEFAULT_POSTS}:
         return Decision(False, "default_cms_post", "The item is the publishing tool's default sample post.")
-    categories = [compact(category) for category in item.get("categories") or [] if compact(category)]
+    categories = [compact(category) for category in item.get("categories") or [] if compact(category) and compact(category) not in NO_CATEGORY]
     if categories and all(any(word in category for word in PROJECT_TAXONOMY) for category in categories) and not any(any(word in category for word in NEWS_TAXONOMY) for category in categories):
         return Decision(False, "project_category", "The site files the item only under project or product categories, not news.")
+    published_year = str(item.get("date") or "")[:4]
+    later = [year for year in TITLE_YEAR.findall(str(item.get("title") or "")) if published_year.isdigit() and int(year) > int(published_year) + 1]
+    if later:
+        return Decision(False, "date_contradicts_title", f"The title names {later[0]}, years after the stated date {published_year}; the post was reused, so its date is not its publication date.")
     if outside_listing_section:
         return Decision(False, "outside_news_section", "The news listing links this item to a page outside its own news section (an evergreen page).")
     if has_news_path(url):
