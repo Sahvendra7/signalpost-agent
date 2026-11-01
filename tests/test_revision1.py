@@ -216,9 +216,14 @@ class SocialRules(unittest.TestCase):
         self.assertEqual([item["url"] for item in facts.profiles], ["https://www.instagram.com/fjelldata/"])
 
     def test_jsonld_sameas_of_own_organization_is_accepted(self):
+        # V3 (docs/v3-changelog.md, phase 1): sameAs alone no longer accepts a handle that does not carry the company's
+        # name ("fd-group" for Fjell Data AS: Bergknapp's sameAs listed its sister company Grasrota's profiles). A
+        # sameAs handle that carries the name is still accepted.
         body = '<script type="application/ld+json">{"@type":"Organization","url":"https://fjell-data.no/","sameAs":["https://www.linkedin.com/company/fd-group"]}</script>'
         facts = self.facts(body)
-        self.assertEqual([item["url"] for item in facts.profiles], ["https://www.linkedin.com/company/fd-group"])
+        self.assertEqual(facts.profiles, [])
+        named = '<script type="application/ld+json">{"@type":"Organization","url":"https://fjell-data.no/","sameAs":["https://www.linkedin.com/company/fjell-data-as"]}</script>'
+        self.assertEqual([item["url"] for item in self.facts(named).profiles], ["https://www.linkedin.com/company/fjell-data-as"])
         agency = '<script type="application/ld+json">{"@type":"Organization","url":"https://webbyraa.no/","name":"Webbyrå AS","sameAs":["https://www.linkedin.com/company/webbyraa"]}</script>'
         self.assertEqual(self.facts(agency).profiles, [])
 
@@ -241,8 +246,13 @@ class AuditRegressions(unittest.TestCase):
 
     def test_domain_name_must_begin_or_end_the_handle(self):
         home = page("https://handball.no/", '<html><body><a href="https://www.facebook.com/norgeshandballforbund">f</a><a href="https://www.instagram.com/handballnorge/">i</a></body></html>')
-        # Legal name unrelated to either handle, so only the domain-name rule can apply.
-        self.assertEqual([item["url"] for item in extract_site_facts({"name": "BALLSPORT DRIFT AS"}, [home]).profiles], ["https://www.instagram.com/handballnorge/"])
+        # V3 (docs/v3-changelog.md, phase 1): the domain name alone never attributes a profile. The legal name is
+        # unrelated to both handles, so neither is published (Builderr: a profile must name the exact company; TYIN
+        # ALPINT AS got Tyin Filefjell AS's profiles through this rule). A domain named after the company still
+        # corroborates a handle that starts with that name.
+        self.assertEqual(extract_site_facts({"name": "BALLSPORT DRIFT AS"}, [home]).profiles, [])
+        own = page("https://ballsport.no/", '<html><body><a href="https://www.instagram.com/ballsportnorge/">i</a><a href="https://www.instagram.com/ballsportklubb/">k</a></body></html>')
+        self.assertEqual({item["url"] for item in extract_site_facts({"name": "BALLSPORT DRIFT AS"}, [own]).profiles}, {"https://www.instagram.com/ballsportnorge/", "https://www.instagram.com/ballsportklubb/"})
 
     def test_dated_list_inside_an_article_is_not_a_news_listing(self):
         # 928934977 Altinget: an article listing 30 dated milestones produced one "news item" per milestone.

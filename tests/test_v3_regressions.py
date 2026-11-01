@@ -136,13 +136,10 @@ class CareersPages(unittest.TestCase):
 
 # Phase markers: the defect tests are expected to fail until their phase lands (Phase 0 commits them red).
 PENDING = {
-    SocialAttribution: ["test_tyin_alpint_sister_company_profiles_are_not_published", "test_bergknapp_keeps_its_own_profiles_but_not_grasrota",
-                        "test_bartec_group_profiles_are_not_the_norwegian_subsidiary", "test_biomar_group_channel_held_norway_profiles_kept",
-                        "test_a_handle_spelling_another_legal_name_is_held"],
     NewsClassification: ["test_bulk_imported_project_posts_are_not_news", "test_default_cms_post_is_not_news", "test_contact_page_and_image_file_are_not_news",
                          "test_portfolio_project_and_archive_urls_are_not_news_items", "test_group_magazine_is_not_the_subsidiary_s_news",
                          "test_sister_regional_companies_news_is_not_published", "test_a_news_listing_page_is_not_an_item"],
-    CareersPages: ["test_service_pages_are_not_careers_pages", "test_careers_page_of_a_site_run_by_another_company_is_held"],
+    CareersPages: ["test_service_pages_are_not_careers_pages"],
 }
 for _cls, _names in PENDING.items():
     for _name in _names:

@@ -275,6 +275,7 @@ class SiteResult:
     careers_checked: list[dict[str, Any]] = field(default_factory=list)
     articles_fetched: int = 0
     manager: dict[str, Any] | None = None  # MANAGER_DESIGNATED: the registered forretningsfører operating the site
+    operator: dict[str, Any] | None = None  # V3: who runs the verified site (attribution.operator)
     extraction_rejections: dict[str, int] = field(default_factory=dict)
     rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     requests: int = 0
@@ -434,7 +435,10 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
             if url in news and news_page is None:
                 news_page = CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at)
     captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
-    facts = extract_site_facts(profile, captured, feed_pages)
+    website = (profile.get("evidence") or {}).get("website") or {}
+    context = {"identity_class": result.identity_class,
+               "website_value": (website.get("value") or {}) if result.identity_class == "REGISTRY_LINKED" and website.get("status") == "available" else None}
+    facts = extract_site_facts(profile, captured, feed_pages, **context)
     if not facts.activities and news_page is not None:
         # The news listing states no dates: the dates are on the article pages it links (same verified site).
         # Fetch at most MAX_ARTICLE_FETCHES of them through the same budget, robots and Crawl-delay controls.
@@ -445,7 +449,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
                 result.articles_fetched += 1
         if result.articles_fetched:
             captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
-            facts = extract_site_facts(profile, captured, feed_pages)
+            facts = extract_site_facts(profile, captured, feed_pages, **context)
     apply_site_facts(result, facts, profile, captured + feed_pages)
     result.pages = [_page_record(url, response) for url, response in fetched]
 
@@ -460,6 +464,17 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
     result.careers_checked = facts.careers_checked
     result.extraction_rejections = dict(facts.rejections)
     result.rejected_examples = facts.rejected_examples
+    result.operator = getattr(facts, "operator", None)
+    kind = (result.operator or {}).get("kind")
+    if kind in ("other_entity", "group_or_brand"):
+        # V3 §B5: another company (or a group/brand) runs the site. Its careers page and vacancies are not this
+        # company's; profiles were already decided per handle (attribution.social), news per item (attribution.news).
+        counts = result.extraction_rejections
+        if result.jobs:
+            counts[f"job:site_operated_by_{kind}"] = counts.get(f"job:site_operated_by_{kind}", 0) + len(result.jobs)
+        if result.careers_page:
+            counts[f"careers:site_operated_by_{kind}"] = counts.get(f"careers:site_operated_by_{kind}", 0) + 1
+        result.jobs, result.careers_page = [], None
     if result.identity_class == "MANAGER_DESIGNATED":
         # The site is associated with the entity (its registry record names it), but it belongs to the business
         # manager and serves many entities. The association is the website claim; the manager's own content is not

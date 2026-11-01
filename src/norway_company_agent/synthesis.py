@@ -407,7 +407,12 @@ def company_summary(envelope: dict[str, Any]) -> dict[str, Any]:
     if website:
         via = f" ({website['identity_class']})" if website.get("identity_class") else ""
         operator = website.get("operated_by")
-        if operator:
+        role = website.get("site_role")
+        if role == "operated_by_other_company":
+            out.say("public_footprint", f"Website named in the registry record: {website['value']}. The site states organisation number {(operator or {}).get('organisation_number')}, not this company's, so it is run by another company; its profiles, news and vacancies are attributed to this company only when they name it.", [website])
+        elif role == "group_or_brand_site":
+            out.say("public_footprint", f"Website named in the registry record: {website['value']}. It is a group or brand website shared with other companies; its profiles, news and vacancies are attributed to this company only when they name it.", [website])
+        elif operator:
             out.say("public_footprint", f"Website named in the registry record and operated by the registered business manager {operator['name']} (organisation number {operator['organisation_number']}): {website['value']}.", [website])
         else:
             out.say("public_footprint", f"Verified company website{via}: {website['value']}.", [website])

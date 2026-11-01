@@ -34,6 +34,9 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
+from .attribution.names import LegalName, compact, handle_relation
+from .attribution.operator import SiteOperator, assess_operator
+from .attribution.social import decide_profile
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
 
@@ -227,7 +230,8 @@ def feed_items(xml: bytes) -> list[dict[str, Any]]:
             date, kind, date_text = parse_date(updated.get_text(strip=True)), "updated", updated.get_text(strip=True)
         summary = node.find(["description", "summary"])
         snippet = BeautifulSoup(summary.get_text(" ", strip=True), "lxml").get_text(" ", strip=True)[:240] if summary else None
-        items.append({"title": title.get_text(" ", strip=True)[:200] if title else None, "url": href, "date": date, "date_kind": kind if date else None, "date_text": date_text if date else None, "summary": snippet, "method": "site_feed"})
+        categories = [" ".join(item.get_text(" ", strip=True).split())[:80] for item in node.find_all("category")][:12]
+        items.append({"title": title.get_text(" ", strip=True)[:200] if title else None, "url": href, "date": date, "date_kind": kind if date else None, "date_text": date_text if date else None, "summary": snippet, "method": "site_feed", "categories": categories})
     return items
 
 
@@ -347,7 +351,7 @@ def social_occurrences(page: CapturedPage, page_index: int, site_url: str, legal
             if normalized and normalized["platform"] in SOCIAL_PLATFORMS:
                 out.append({
                     "platform": normalized["platform"], "url": raw.strip(), "canonical_url": normalized["url"], "linked_as": raw.strip(),
-                    "via": "jsonld_sameas", "jsonld_owner": owner, "link_text": "", "in_site_chrome": False,
+                    "via": "jsonld_sameas", "jsonld_owner": owner, "jsonld_name": str(node.get("name") or node.get("legalName") or ""), "link_text": "", "in_site_chrome": False,
                     "page_index": page_index, "order": 10_000, "page": page,
                 })
     return out
@@ -657,6 +661,7 @@ class SiteFacts:
     rejections: dict[str, int] = field(default_factory=dict)
     rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     careers_checked: list[dict[str, Any]] = field(default_factory=list)
+    operator: dict[str, Any] | None = None
 
     def reject(self, kind: str, reason: str, item: dict[str, Any], page: CapturedPage | None) -> None:
         key = f"{kind}:{reason}"
@@ -737,8 +742,21 @@ def validate_job(job: dict[str, Any], page: CapturedPage) -> str | None:
     return None
 
 
-def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds: list[CapturedPage] | None = None) -> SiteFacts:
-    """Facts from pages of a VERIFIED company site. `pages[0]` is the homepage; `profile` carries the legal name."""
+def site_operator(profile: dict[str, Any], pages: list[CapturedPage], feeds: list[CapturedPage] | None = None, *,
+                  website_value: dict[str, Any] | None = None, identity_class: str | None = None) -> SiteOperator:
+    """Who runs the verified site whose homepage is `pages[0]` (attribution.operator), from the captured pages only."""
+    site_url = pages[0].url
+    shared_kind = "platform" if not owns_registered_domain(site_url) else "section" if is_shared_site_section(site_url) else None
+    inside = [page for page in pages if in_site_scope(page.url, site_url) and page.kind == "html"]
+    taxonomy = [category for feed in feeds or [] if in_site_scope(feed.url, site_url) for item in feed_items(feed.raw) for category in item.get("categories") or []]
+    return assess_operator(profile, site_url, page_texts=[(page.url, page.text) for page in inside], homepage_text=pages[0].text,
+                           website_value=website_value, identity_class=identity_class, shared_kind=shared_kind, taxonomy=taxonomy)
+
+
+def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds: list[CapturedPage] | None = None, operator: SiteOperator | None = None, *,
+                       website_value: dict[str, Any] | None = None, identity_class: str | None = None) -> SiteFacts:
+    """Facts from pages of a VERIFIED company site. `pages[0]` is the homepage; `profile` carries the legal name.
+    `operator` (who runs the site, attribution.operator) is computed from the pages when not given."""
     out = SiteFacts()
     if not pages:
         return out
@@ -754,6 +772,12 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         out.reject("page", "outside_verified_site", {"url": page.url}, page)
     pages = [page for page in pages if in_site_scope(page.url, site_url)]
     feeds = [feed for feed in feeds or [] if in_site_scope(feed.url, site_url)]
+    legal = LegalName.from_profile(profile)
+    if operator is None:
+        operator = site_operator(profile, pages, feeds, website_value=website_value, identity_class=identity_class)
+    out.operator = operator.record()
+    site_label = compact((urllib.parse.urlsplit(site_url).hostname or "").casefold().removeprefix("www.").split(".")[0]) if not subdomain_site else ""
+    domain_named = operator.kind == "self" and bool(site_label) and legal.domain_named(site_label)
 
     # Social profiles: one claim per (platform, canonical profile), the plainest link as the value.
     groups: dict[tuple[str, str], list[dict[str, Any]]] = {}
@@ -769,21 +793,22 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         if not (url_in_source(chosen["url"], page.html) or url_in_source(chosen["linked_as"], page.html)):
             out.reject("social", "url_not_in_page", chosen, page)
             continue
-        score, reason = None, "no corroboration"
-        for occurrence in sorted(group, key=lambda item: item["via"] != "jsonld_sameas"):
-            score, reason = social_identity(profile, occurrence, site_domain, shared_site=shared_site)
-            if score is not None:
-                break
+        relation = handle_relation(legal, platform, chosen["canonical_url"])
+        org_sameas = any(item["via"] == "jsonld_sameas" and legal.phrase_in(item.get("jsonld_name")) for item in group)
+        decision, score = decide_profile(relation, operator.kind, domain_named=domain_named, handle_starts_with_domain=bool(site_label) and relation.handle.startswith(site_label),
+                                         org_sameas=org_sameas, operator_basis=operator.basis)
+        reason = decision.basis
         record = {
             "platform": platform, "url": chosen["url"], "canonical_url": canonical, "evidence_span": chosen["linked_as"],
             "link_text": chosen["link_text"], "via": chosen["via"], "found_on": page.url, "content_sha256": page.content_sha256,
             "retrieved_at": page.retrieved_at, "identity_score": score, "identity_reason": reason,
             "via_jsonld_sameas": any(item["via"] == "jsonld_sameas" for item in group), "linked_on_pages": len({item["page"].url for item in group}),
+            "attribution": decision.note(), "handle_relation": relation.kind,
         }
         if score is None:
             record["identity_score"] = 0.3
             out.ambiguous_profiles.append(record)
-            out.reject("social", "handle_not_corroborated", record, page)
+            out.reject("social", decision.code, record, page)
         else:
             accepted.append(record)
     # Cross-links: a site that links several profiles on one platform (club teams, group companies, partners)

@@ -11,6 +11,7 @@ from typing import Any
 
 from .contract import ClaimSet, availability_for
 from .site_facts import in_site_scope
+from .website import _registered_domain
 
 CATEGORIES = ("identity", "description", "filings", "leadership", "locations", "websites", "public_activity", "hiring", "relationships", "registry_activity")
 
@@ -377,7 +378,8 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         claims.add(
             "public_activity", "social_profile", profile["url"], page, f"outbound link on verified site page {profile.get('found_on')}: {profile.get('evidence_span')}",
             confidence=min(confidence, float(profile.get("identity_score") or confidence)), method="verified_site_outbound_link",
-            extra={"platform": profile["platform"], "canonical_url": profile["canonical_url"], "source_page": profile.get("found_on"), "evidence_span": profile.get("evidence_span"), "identity_basis": profile.get("identity_reason")},
+            extra={"platform": profile["platform"], "canonical_url": profile["canonical_url"], "source_page": profile.get("found_on"), "evidence_span": profile.get("evidence_span"), "identity_basis": profile.get("identity_reason"),
+                   **({"attribution": profile["attribution"]} if profile.get("attribution") else {})},
         )
     if not profiles:
         ambiguous = value.get("ambiguous_profiles") or []
@@ -411,7 +413,10 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         method = str(job.get("method") or "jsonld_JobPosting")
         span = f"schema.org JobPosting: {job.get('title')}" if method == "jsonld_JobPosting" else f"position listed on careers page {job.get('page_url')}: {job.get('title')}"
         claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=method, extra={"source_page": job.get("page_url")})
-    if not jobs:
+    operator = value.get("operator") or {}
+    if not jobs and not manager and operator.get("kind") in ("other_entity", "group_or_brand"):
+        claims.absent("hiring", "job_posting", "not_applicable", f"{operator.get('basis')} Vacancies on it are not attributed to this company.")
+    elif not jobs:
         checked = value.get("careers_checked") or []
         reason = f"Verified website checked; careers page {checked[0]['url']}: {checked[0]['reason']}" if checked else "Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
         claims.absent("hiring", "job_posting", "not_available", reason)
@@ -459,6 +464,26 @@ def _llm_claims(claims: ClaimSet, llm: dict[str, Any] | None) -> None:
     claims.claims = [item for item in claims.claims if item["availability"] == "available" or (item["category"], item["field"]) not in filled]
 
 
+def _annotate_site_operator(claims: ClaimSet, record: dict[str, Any] | None) -> None:
+    """V3 §B5: the website claim says who runs the site when it is not the company itself. The registry still links the
+    site to the company (the claim stays); its social profiles, news and vacancies were attributed item by item."""
+    value = (record or {}).get("value") or {}
+    operator = value.get("operator") or {}
+    kind = operator.get("kind")
+    if (record or {}).get("status") != "available" or kind not in ("other_entity", "group_or_brand"):
+        return
+    site_domain = _registered_domain(value.get("site_url"))
+    for claim in claims.claims:
+        if claim.get("field") != "official_website" or claim.get("availability") != "available" or _registered_domain(claim.get("value")) != site_domain:
+            continue
+        if kind == "other_entity":
+            claim["site_role"] = "operated_by_other_company"
+            claim["operated_by"] = {"organisation_number": operator.get("operator_org"), "basis": operator.get("basis")}
+        else:
+            claim["site_role"] = "group_or_brand_site"
+        claim["attribution"] = {"code": operator.get("code"), "basis": operator.get("basis")}
+
+
 def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None = None) -> ClaimSet:
     claims = ClaimSet(snapshot_root=snapshot_root)
     records = profile.get("evidence", {})
@@ -472,6 +497,7 @@ def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None =
     v1_published = website.get("status") == "available" and bool(((website.get("value") or {}).get("identity_assessment") or {}).get("publishable"))
     site_verified = _site_research_claims(claims, records.get("site_research"), v1_site_published=v1_published)
     _website_claims(claims, records.get("website"), view, site_verified=site_verified and not v1_published)
+    _annotate_site_operator(claims, records.get("site_research"))
     if profile.get("llm"):
         _llm_claims(claims, profile["llm"])
     return claims
