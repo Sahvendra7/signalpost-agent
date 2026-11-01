@@ -375,3 +375,23 @@ directories were.
   31; bulk entry burst: 4; page date on non news page: 2)".
 - Counts are candidate entries, not unique articles: the same article seen in a feed and on a page counts twice.
 - Test: `test_v3_regressions.py::NewsClassification::test_withheld_news_is_never_reported_as_none_found`.
+
+**Fix (regression found in validation): outage carry-forward in the default refresh path.**
+- **Symptom.** The second live release refresh on `907f42d` reported 929336038's website, Facebook profile, careers
+  page and description as `removed`. Its robots.txt was unreachable in that run (network, treated as disallow): an
+  outage, not a change.
+- **Cause.** Outage carry-forward (preserved from the refresh fix `8fba893`) works from the previous *profiles*. The
+  V3 default baseline, the run history, supplied only the previous published envelopes, so carry-forward never ran.
+  The app's re-check had the same gap.
+- **Change.**
+  - `history.baseline_runs` returns each company's envelope and its profile from the same history run. The CLI passes
+    those profiles to carry-forward; the diff is still against the published envelope.
+  - The app passes the profile it stores with each researched run. Imported envelopes have no profile, so a re-check
+    of an imported company has no carry-forward. This is documented in `docs/search-app.md`.
+- **Verification.** Rebuilding that refresh from the captured profiles now gives 0 `removed` and 2 `unavailable`
+  (website and site research: source unavailable, last value kept).
+- **Tests.**
+  - `test_v3_history.py::CommandLineHistory::test_an_outage_in_the_next_run_is_carried_forward_not_removed`;
+  - `test_v3_app.py::RecheckOutage`.
+
+  Both fail without the fix, reproducing the live symptom.

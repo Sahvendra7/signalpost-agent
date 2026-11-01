@@ -178,6 +178,39 @@ class CommandLineHistory(unittest.TestCase):
             self.assertEqual(report["manual_audit"]["state"], "not_audited")
             self.assertEqual(len(history.runs(out / "signalpost-history")), 2)
 
+    def test_an_outage_in_the_next_run_is_carried_forward_not_removed(self):
+        """Live release refresh, 929336038: robots.txt unreachable in the second run. Without the history run's profiles
+        the website, profile, careers page and description were reported "removed" — an outage taken for a change."""
+        from norway_company_agent.cli import main
+        from norway_company_agent.evidence import evidence
+        from norway_company_agent.http import ByteFetch
+        fixture = Fixture(KILIS, base=V3)
+        down = {**fixture.injected(),
+                "site_fetcher": lambda url, **kwargs: ByteFetch(url, 0, 0, b"", None, {}, None, "2026-11-01T00:00:00Z", 1, "URLError: network unreachable"),
+                "website_fetcher": lambda url: (evidence("website", "blocked", "registry_linked_company_website", str(url or "https://kilishockey.no/"),
+                                                         note="robots.txt unreachable (5xx/429/network; RFC 9309: assume disallow)"), {"requests": 1, "bytes": 0, "latencies_ms": []})}
+        with tempfile.TemporaryDirectory() as raw:
+            out = Path(raw)
+            (out / "in.jsonl").write_text(json.dumps({"organisation_number": KILIS}) + "\n")
+            for run, injected in (("r1", fixture.injected()), ("r2", down)):
+                argv = ["--organisations", str(out / "in.jsonl"), "--output", str(out / f"{run}.jsonl"), "--profiles-output", str(out / f"{run}-p.jsonl"),
+                        "--report", str(out / f"{run}-report.json"), "--run-id", run, "--no-viewer"]
+                with open(os.devnull, "w") as sink:
+                    stdout, sys.stdout = sys.stdout, sink
+                    try:
+                        main(argv, **injected)
+                    except SystemExit as exit_code:
+                        self.assertEqual(exit_code.code, 0)
+                    finally:
+                        sys.stdout = stdout
+            second = json.loads((out / "r2.jsonl").read_text().splitlines()[0])
+            kinds = {change["change_type"] for change in second["changes"]}
+            self.assertNotIn("removed", kinds, second["changes"])
+            self.assertIn("unavailable", kinds)
+            self.assertEqual(second["refresh"]["baseline"]["kind"], "published_envelope")
+            website = next(claim for claim in second["claims"] if claim["field"] == "official_website")
+            self.assertEqual((website["availability"], website.get("carried_forward")), ("available", True))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -154,6 +154,26 @@ class PartialResearch(unittest.TestCase):
                 h.close()
 
 
+class RecheckOutage(unittest.TestCase):
+    def test_a_source_outage_on_re_check_keeps_the_last_value(self):
+        org = valid_orgs(1, start=935000000)[0]
+        brreg = FakeBrreg({org: entity(org, name="Utfall AS")})
+        with tempfile.TemporaryDirectory() as raw:
+            h = Harness(raw, run_kwargs=injected(brreg))
+            try:
+                h.wait(h.post("/api/research", {"org": org})[1]["id"])
+                brreg.down = {"/roller"}
+                done = h.wait(h.post("/api/research", {"org": org})[1]["id"])
+                self.assertEqual(done["state"], "partial")
+                envelope = h.store.latest(org)
+                kinds = {change["change_type"] for change in envelope["changes"]}
+                self.assertNotIn("removed", kinds, envelope["changes"])
+                self.assertIn("unavailable", kinds)
+                self.assertEqual(envelope["modules"]["roles"]["state"], "carried_forward")
+            finally:
+                h.close()
+
+
 class Persistence(unittest.TestCase):
     def test_researched_profiles_survive_a_restart_and_imports_are_read_only(self):
         with tempfile.TemporaryDirectory() as raw:

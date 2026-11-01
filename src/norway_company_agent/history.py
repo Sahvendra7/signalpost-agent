@@ -109,8 +109,16 @@ def read_envelopes(path: str | Path) -> list[dict[str, Any]]:
 
 def baselines(history_dir: str | Path, organisations: Iterable[str], *, limit: int = DEFAULT_KEEP) -> dict[str, dict[str, Any]]:
     """For each organisation, its envelope in the newest complete run where its research completed."""
+    return baseline_runs(history_dir, organisations, limit=limit)[0]
+
+
+def baseline_runs(history_dir: str | Path, organisations: Iterable[str], *, limit: int = DEFAULT_KEEP) -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+    """(envelopes, profiles): each organisation's envelope in the newest complete run where its research completed, and
+    its profile from that same run. The profile is what outage carry-forward needs: without it, a source that fails in
+    this run would look like a company change."""
     wanted = {str(org) for org in organisations if org}
     found: dict[str, dict[str, Any]] = {}
+    source: dict[str, Path] = {}
     for item in [run for run in runs(history_dir) if run.get("complete")][:limit]:
         missing = wanted - set(found)
         if not missing:
@@ -121,7 +129,18 @@ def baselines(history_dir: str | Path, organisations: Iterable[str], *, limit: i
             org = str(envelope.get("organisation_number") or "")
             if org in missing and (envelope.get("run") or {}).get("terminal_status") == "completed":
                 found[org] = envelope
-    return found
+                source[org] = Path(item["path"])
+    profiles: dict[str, dict[str, Any]] = {}
+    for path in sorted(set(source.values())):
+        try:
+            rows = read_envelopes(path / "profiles.jsonl.gz")
+        except (OSError, ValueError):
+            continue  # an unreadable profile file: no carry-forward for these companies, never a crash
+        for profile in rows:
+            org = str(profile.get("organisation_number") or "")
+            if source.get(org) == path:
+                profiles[org] = profile
+    return found, profiles
 
 
 def latest_by_org(envelopes: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:

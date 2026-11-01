@@ -127,8 +127,10 @@ def main(argv: list[str] | None = None, **injected) -> None:
     if args.previous_envelopes:
         previous_envelopes, baseline_source = history.latest_by_org(history.read_envelopes(args.previous_envelopes)), "previous_envelopes"
     elif history_dir is not None and not previous_profiles:
-        previous_envelopes = history.baselines(history_dir, [row.organisation_number for row in rows if row.organisation_number])
+        previous_envelopes, history_profiles = history.baseline_runs(history_dir, [row.organisation_number for row in rows if row.organisation_number])
         baseline_source = "history" if previous_envelopes else None
+        # The same run's profiles drive outage carry-forward (a failed source keeps its last value, never "removed").
+        previous_profiles = history_profiles or previous_profiles
     envelope_stream = JsonlStream(Path(args.output))
     profile_stream = JsonlStream(Path(args.profiles_output))
     stop_event = threading.Event()

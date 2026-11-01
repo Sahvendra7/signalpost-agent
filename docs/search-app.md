@@ -56,7 +56,10 @@ Optional flags:
 4. **Compare.** Tick 2–4 companies, then *Compare*. On a phone the comparison is one card per field.
 5. **What's new.** Lists items that are new since each company's previous run, and items our checks withdrew.
 
-A re-check compares with the company's latest stored run, so new and withdrawn items show up there.
+A re-check compares with the company's latest stored run, so new and withdrawn items show up there. If a source fails during a re-check of a company researched in the app, its last value is kept and marked as
+retained, never reported as removed. Companies imported with `--envelopes` have no stored profile, so this protection
+does not apply to their first re-check: a failed source can then appear as removed. The re-check's own profile is
+stored, so later re-checks are protected.
 
 ## Where data is kept
 

@@ -79,13 +79,13 @@ class Store:
                     envelope = json.loads((run_dir / "envelope.json").read_text(encoding="utf-8"))
                 except (OSError, ValueError):
                     continue  # an interrupted write leaves no envelope.json: not a run
-                self._index(envelope, "researched")
+                self._index(envelope, "researched", run_dir)
 
-    def _index(self, envelope: dict[str, Any], source: str) -> None:
+    def _index(self, envelope: dict[str, Any], source: str, path: Path | None = None) -> None:
         org = str(envelope.get("organisation_number") or "")
         if not ORG.fullmatch(org):
             return  # an input row that never resolved to a company is not searchable
-        envelope = {**envelope, "_source": source}
+        envelope = {**envelope, "_source": source, "_path": str(path) if path else None}
         with self._lock:
             runs = self._runs.setdefault(org, [])
             runs.append(envelope)
@@ -110,6 +110,16 @@ class Store:
                 if (envelope.get("run") or {}).get("terminal_status") == "completed":
                     return envelope
         return None
+
+    def baseline_profile(self, envelope: dict[str, Any] | None) -> dict[str, Any] | None:
+        """The profile stored with a researched run: outage carry-forward needs it (imported runs have none)."""
+        path = (envelope or {}).get("_path")
+        if not path:
+            return None
+        try:
+            return json.loads((Path(path) / "profile.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return None
 
     def all_latest(self) -> list[dict[str, Any]]:
         with self._lock:
@@ -156,7 +166,7 @@ class Store:
         if profile is not None:
             _write_private(target / "profile.json", json.dumps(profile, ensure_ascii=False, default=str))
         _write_private(target / "envelope.json", json.dumps(envelope, ensure_ascii=False, default=str))  # last: marks the run complete
-        self._index(envelope, "researched")
+        self._index(envelope, "researched", target)
         return target
 
     # ---- captured bytes ------------------------------------------------------------------------------------

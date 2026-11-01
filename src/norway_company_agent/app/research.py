@@ -143,12 +143,14 @@ class ResearchManager:
         run_id = "app-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + job.id[:6]
         job.run_id = run_id
         baseline = self.store.baseline(job.org)
+        baseline_profile = self.store.baseline_profile(baseline)  # a failed source then keeps its value, never "removed"
         # One company: the batch "degrade when it will not fit" rule starts at 2 x grace before the deadline, so the
         # grace window must be well under half the deadline or every on-demand research would skip the website.
         try:
             outcome = self.run([InputRow(0, job.org, job.org)], run_id=run_id, workers=1, deadline_seconds=self.deadline,
                                grace_seconds=min(15.0, self.deadline / 4), stop_event=job.stop_event, progress=job.progress,
-                               previous_envelopes={job.org: baseline} if baseline else None, snapshot_root=self.store.snapshot_root, **self.run_kwargs)
+                               previous_envelopes={job.org: baseline} if baseline else None,
+                               previous_profiles={job.org: baseline_profile} if baseline_profile else None, snapshot_root=self.store.snapshot_root, **self.run_kwargs)
             envelope = outcome["envelopes"][0]
             stop_reason = ((outcome.get("report") or {}).get("deadline") or {}).get("stop_reason")
             if stop_reason in ("interrupted", "deadline"):
