@@ -91,6 +91,11 @@ uv run python scripts/run_competition_batch.py \
   --expected-count 100
 
 # Open out/smoke-envelopes.viewer.html in a browser (written by the same command; no server needed).
+# It has: an evidence inspector on every fact, "What's new", "How reliable is this?", phone-friendly comparison.
+
+# Refresh (V3 default): run the same command again later with a new --run-id and new output paths. The run history
+# kept in out/signalpost-history/ is the baseline, so changes are against what was actually published (new items,
+# removals, and facts the current rules withdraw: "retracted").
 
 # Refresh: re-run later against the previous profiles; material changes appear in each envelope.
 uv run python scripts/run_competition_batch.py \
