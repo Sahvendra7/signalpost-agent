@@ -315,7 +315,7 @@ the arm), not the owner's.
 | Check | Result |
 |---|---|
 | Full suite, working tree | 487 passed, 172 subtests, 0 failed, 0 skipped. At `v3-candidate-1` it was 474. The new tests cover R1, R2, R4, R5, R6 and R3. |
-| Clean room (fresh clone, empty uv cache, `uv sync --locked`) | Sync OK; 3 of 3 suite runs with 487 passed and 172 subtests; documented command exit 0 (`measurements/v3-remediation-2026-11-01/release/` and below) |
+| Clean room (fresh clone at `7b8fc69`, empty uv cache, `uv sync --locked`) | Sync exit 0; 3 of 3 suite runs with 487 passed and 172 subtests; documented command exit 0, validation passed, $0, viewer and history written, 911771098 with 20 news items (`measurements/v3-remediation-2026-11-01/cleanroom/`) |
 | Dependencies | `git diff ff3b515 7b8fc69 -- pyproject.toml uv.lock` is empty. No paid API; LLM not loaded; third-party cost $0 in every run. |
 | Live 100 companies (fixed smoke input, SHA-256 `80eb79e6…`) | 100/100 `completed` in input order; validation passed; 0 contract findings with 3,994 snapshot hashes re-verified; 0 unsupported summary statements; 196 hosts, none a social or other restricted platform; 142.0 s, 762 requests, $0 |
 | Refresh through the run history | 100/100 compared against `published_envelope`. **No removals, additions or retractions.** 2 `unavailable` events: Kongsvinger IL Ishockey's robots.txt was unreachable during the refresh, so its website, description and news were kept as "last value kept". This is the live outage path working. |
