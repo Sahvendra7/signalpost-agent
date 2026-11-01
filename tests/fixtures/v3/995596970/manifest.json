@@ -1,0 +1,163 @@
+{
+ "organisation_number": "995596970",
+ "name": "BERGKNAPP AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.bergknapp.no/",
+  "retrieved_at": "2026-11-01T14:17:09.129180Z",
+  "value": {
+   "requested_url": "https://www.bergknapp.no/",
+   "final_url": "https://www.bergknapp.no/",
+   "registered_domain": "bergknapp.no",
+   "title": "Bergknapp - Sedum og grønne løsninger",
+   "description": "Bergknapp, Grasrota og Nordstein leverer bærekraftige produkter som bidrar til mer grønne, tivelige og varige omgivelser.",
+   "main_text_excerpt": "Søk og siste nyhetssaker:\nGrønne tak og ferdigplen\nI lys av vårt motto \"Ta naturen tilbake\" og vårt fokus på bærekraftige løsninger, tilbyr Bergknapp innovative løsninger som utnytter potensialet i dine omgivelser. I 25 år har vi levert grønne tak, sedumtak, ferdigplen, grønne vegger, og vi er stolte av å være en ledende aktør i bransjen.\nHvem\nBergknapp AS er Norges største leverandør av grønne sedumtak og har siden 2001 også vært en stor produsent av norsk ferdigplen. I 26 år har vi levert bærekraftige løsninger og vært en pålitelig partner for våre kunder. Vi holder til i Sandnes på Jæren, hvor vi siden 2009 har produsert sedummatter, og etter hvert også andre typer vegetasjonsmatter. Vi er svært stolte av våre ca. 50 flotte ansatte som jobber hardt for å produsere, montere og stadig utvikle våre produkter.\nHva\nPrimærproduktet er produksjon av sedummatter og montering av disse på store takflater. En stadig økende andel av takene vi leverer er blågrønne tak, som designes for å fordrøye og håndtere store nedbørsmengder. Takene leveres på tre måter: som store sedummatter, mindre sedumkassetter eller som ferske stiklinger som spres over en spesialjordblanding der man ønsker å etablere sedumbelegg.\nI tillegg til dette tilbyr vi også produksjon av ferdigplen for de som ønsker raskt og enkelt å etablere grønne områder på bakkenivå. Øvrige produkter inkluderer grønne vegger med Butong eller wire, blomstereng (matter eller sås med frø), torvtak, takhager, insekthotell, samt avtaler for vedlikehold.\nHvorfor\nSom en Miljøfyrtårn-sertifisert bedrift tilbyr vi produkter som skaper trivsel, bidrar til biologisk mangfold og kompenserer for tapt natur. Behovet for å komme nærmere naturen og tilbakeføre naturens egne løsninger er stadig økende.\nOvervann har blitt et stort problem i byene på grunn av fortetting og harde flater i kombinasjon med klimaendringer. Blågrønne tak holder tilbake nedbør og minsker dermed belastningen på avløpsnettet. I tillegg fungerer de som grønne landingsplasser og boliger for insekter og andre dyr.",
+   "identity_text_excerpt": "Følg oss: Hovedkontor: Årsvollveien 213, 4312 Sandnes. Trykk her for kart . E-post: post@bergknapp.no . Hovednummer: 51 62 75 48 . Bergknapp tilbyr ferdigplen, sedum, grønne tak, blågrønne tak, sedumtak, blomstereng, og mye mer for et grønnere og mer miljøriktig uterom. Bergknapp produserer produkter og tilbyr tjenester innen grønne løsninger, grønne tak, grønne vegger og kombinasjonstak. Med norsk produksjon av sedum, gjenvinning av jord og kompetanse innen miljøriktige løsninger skal vi bidra til grønnere byer og omgivelser. ▸ Personvernerklæring",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "legalName": "Bergknapp AS",
+     "address": "213 Årsvollveien\nSandnes, Rogaland, 4312\nNorway",
+     "email": "",
+     "telephone": "516 27 548",
+     "sameAs": [
+      "https://www.instagram.com/bergknapp.no/",
+      "https://www.linkedin.com/company/bergknapp-as",
+      "https://www.facebook.com/grasrota.net/",
+      "https://www.instagram.com/grasrota.as/",
+      "https://www.linkedin.com/company/grasrota-as",
+      "https://www.facebook.com/bergknapp.no"
+     ],
+     "@context": "http://schema.org",
+     "@type": "Organization"
+    },
+    {
+     "address": "213 Årsvollveien\nSandnes, Rogaland, 4312\nNorway",
+     "image": "https://static1.squarespace.com/static/5f48c7448ae49b204427c91c/t/65cf643a7399c41e3907f50d/1792660123274/",
+     "name": "Bergknapp AS",
+     "openingHours": ", , , , , , ",
+     "@context": "http://schema.org",
+     "@type": "LocalBusiness"
+    }
+   ],
+   "content_sha256": "5fe2dd7cba69d2b90364b972f8b9cf817f65957074c14cb6c8df2ba1014c38ab",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.bergknapp.no/",
+     "title": "Bergknapp - Sedum og grønne løsninger",
+     "main_text_excerpt": "Søk og siste nyhetssaker:\nGrønne tak og ferdigplen\nI lys av vårt motto \"Ta naturen tilbake\" og vårt fokus på bærekraftige løsninger, tilbyr Bergknapp innovative løsninger som utnytter potensialet i dine omgivelser. I 25 år har vi levert grønne tak, sedumtak, ferdigplen, grønne vegger, og vi er stolte av å være en ledende aktør i bransjen.\nHvem\nBergknapp AS er Norges største leverandør av grønne sedumtak og har siden 2001 også vært en stor produsent av norsk ferdigplen. I 26 år har vi levert bærekraftige løsninger og vært en pålitelig partner for våre kunder. Vi holder til i Sandnes på Jæren, hvor vi siden 2009 har produsert sedummatter, og etter hvert også andre typer vegetasjonsmatter. Vi er svært stolte av våre ca. 50 flotte ansatte som jobber hardt for å produsere, montere og stadig utvikle våre produkter.\nHva\nPrimærproduktet er produksjon av sedummatter og montering av disse på store takflater. En stadig økende andel av takene vi leverer er blågrønne tak, som designes for å fordrøye og håndtere store nedbørsmengder. Takene leveres på tre måter: som store sedummatter, mindre sedumkassetter eller som ferske stiklinger som spres over en spesialjordblanding der man ønsker å etablere sedumbelegg.\nI tillegg til dette tilbyr vi også produksjon av ferdigplen for de som ønsker raskt og enkelt å etablere grønne områder på bakkenivå. Øvrige produkter inkluderer grønne vegger med Butong eller wire, blomstereng (matter eller sås med frø), torvtak, takhager, insekthotell, samt avtaler for vedlikehold.\nHvorfor\nSom en Miljøfyrtårn-sertifisert bedrift tilbyr vi produkter som skaper trivsel, bidrar til biologisk mangfold og kompenserer for tapt natur. Behovet for å komme nærmere naturen og tilbakeføre naturens egne løsninger er stadig økende.\nOvervann har blitt et stort problem i byene på grunn av fortetting og harde flater i kombinasjon med klimaendringer. Blågrønne tak holder tilbake nedbør og minsker dermed belastningen på avløpsnettet. I tillegg fungerer de som grønne landingsplasser og boliger for insekter og andre dyr.",
+     "content_sha256": "5fe2dd7cba69d2b90364b972f8b9cf817f65957074c14cb6c8df2ba1014c38ab"
+    },
+    {
+     "url": "https://www.bergknapp.no/kontakt",
+     "title": "Kontakt — Bergknapp - Sedum og grønne løsninger",
+     "main_text_excerpt": "",
+     "identity_text_excerpt": "Følg oss: Hovedkontor: Årsvollveien 213, 4312 Sandnes. Trykk her for kart . E-post: post@bergknapp.no . Hovednummer: 51 62 75 48 . Bergknapp tilbyr ferdigplen, sedum, grønne tak, blågrønne tak, sedumtak, blomstereng, og mye mer for et grønnere og mer miljøriktig uterom. Bergknapp produserer produkter og tilbyr tjenester innen grønne løsninger, grønne tak, grønne vegger og kombinasjonstak. Med norsk produksjon av sedum, gjenvinning av jord og kompetanse innen miljøriktige løsninger skal vi bidra til grønnere byer og omgivelser. ▸ Personvernerklæring",
+     "content_sha256": "2213a2936185fcaa7cb179709cfffdd874b50a411c1bf9e58acba667d9217244"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bergknapp"
+    ],
+    "matched_tokens": [
+     "bergknapp"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/51930582"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/51930582",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "5fe2dd7cba69d2b90364b972f8b9cf817f65957074c14cb6c8df2ba1014c38ab",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995596970": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "f74ae939260f87dd.json.gz",
+   "content_sha256": "f74ae939260f87dd64f44d31a720c117ae7c0d0de679a675355a9bd8eb89c1b2",
+   "retrieved_at": "2026-11-01T14:17:02.911571Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/995596970": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "0e95230d41b7adf4.json.gz",
+   "content_sha256": "0e95230d41b7adf4a7cb571f65f0dac6f79adfde618a2d2476dffceb017e4d43",
+   "retrieved_at": "2026-11-01T14:17:03.976087Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995596970/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2902a5121af5740c.json.gz",
+   "content_sha256": "2902a5121af5740c13c1a445a6254aff75d3bff00b3e9f519f1e5a8f3c5691e7",
+   "retrieved_at": "2026-11-01T14:17:06.147883Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/995596970": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:04.708109Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=995596970&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "7dd064f7d7e2b6cb.json.gz",
+   "content_sha256": "7dd064f7d7e2b6cb37c82d08c9babf9a750185310b558f8c6bc9a6442487df2c",
+   "retrieved_at": "2026-11-01T14:17:05.436100Z"
+  },
+  "https://www.bergknapp.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "5fe2dd7cba69d2b9.html.gz",
+   "content_sha256": "5fe2dd7cba69d2b90364b972f8b9cf817f65957074c14cb6c8df2ba1014c38ab",
+   "retrieved_at": "2026-11-01T14:17:09.781739Z"
+  },
+  "https://www.bergknapp.no/kontakt": {
+   "kind": "site",
+   "status": 200,
+   "file": "2213a2936185fcaa.html.gz",
+   "content_sha256": "2213a2936185fcaa7cb179709cfffdd874b50a411c1bf9e58acba667d9217244",
+   "retrieved_at": "2026-11-01T14:17:10.318097Z"
+  },
+  "https://www.bergknapp.no/personvern": {
+   "kind": "site",
+   "status": 200,
+   "file": "6a569c936d77de9f.html.gz",
+   "content_sha256": "6a569c936d77de9f69cbb9a5c81a383ed183c7d56f1148589046bd2d30f089b7",
+   "retrieved_at": "2026-11-01T14:17:11.155284Z"
+  }
+ }
+}

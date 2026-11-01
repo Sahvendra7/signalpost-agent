@@ -13,6 +13,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
+from .provenance import code_version, valid_code_version
+
 AVAILABILITY_STATES = ("available", "not_available", "blocked", "not_applicable", "ambiguous", "failed")
 TERMINAL_STATUSES = ("completed", "failed")
 
@@ -146,6 +148,8 @@ def build_envelope(
     operations: dict[str, Any] | None = None,
     extra: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    if "code_version" not in run:
+        run = {**run, "code_version": code_version()}  # V3: which code produced this envelope (provenance.py)
     envelope = {
         "organisation_number": organisation_number,
         "run": run,
@@ -190,6 +194,8 @@ def validate_envelope(envelope: dict[str, Any], *, snapshot_root: Path | None = 
     run = envelope.get("run") or {}
     if run.get("terminal_status") not in TERMINAL_STATUSES:
         finding("non_terminal_status")
+    if "code_version" in run and not valid_code_version(run["code_version"]):
+        finding("invalid_code_version")
     for key in ("claims", "evidence", "changes", "errors"):
         if not isinstance(envelope.get(key), list):
             finding(f"missing_{key}")

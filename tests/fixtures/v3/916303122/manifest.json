@@ -1,0 +1,364 @@
+{
+ "organisation_number": "916303122",
+ "name": "BEREDT AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.beredt.no/",
+  "retrieved_at": "2026-11-01T14:17:19.852261Z",
+  "value": {
+   "requested_url": "https://www.beredt.no/",
+   "final_url": "https://www.beredt.no/",
+   "registered_domain": "beredt.no",
+   "title": "Beredt AS · Arbeidsinkludering i Bergen",
+   "description": "Beredt er spesialister på arbeidsinkludering i Bergen. Vi tilbyr AFT, sykefraværsoppfølging, jobbsmak for ungdom og lederstøtte – og bidrar til at andre lykkes.",
+   "main_text_excerpt": "Trygg | Robust | Nytenkende\nHvem er du?\nFor arbeidsgivere\nJeg representerer en bedrift\nBeredt hjelper deg å finne gode løsninger - og står i det sammen med deg. Vi kan mennesker. Og vi vet at når du tar vare på folk, får du mer igjen som arbeidsgiver.\nFor arbeidstakere\nJeg er arbeidssøker / deltaker\nBeredt hjelper deg å finne retning, bygge erfaring og ta nye steg. Du får støtte, struktur og folk som tror på deg - og slik åpner vi dører sammen som gir muligheter.\nSpesialister på arbeidsinkludering\nVi tror på folk – og vi vet at alle har noe å bidra med. Hos oss står mennesket først. Vi åpner dører og samarbeider med et stort nettverk av arbeidsgivere som ønsker å bidra til et mer inkluderende arbeidsliv.\nSiden 1969 har vi hjulpet tusenvis tilbake i arbeid eller utdanning. Når du satser på folk bygger du gode og trygge arbeidsmiljø.\nI Beredt har vi lang erfaring med å koble folk og arbeidsplasser på en måte som gir mening – for begge parter. Vi samarbeider med arbeidsgivere som vet at mangfold og mestring ikke bare er verdier på papiret, men viktige drivere for utvikling og vekst.\nMange bedrifter har allerede erfart hva det gir tilbake. Vil du bli en av dem?\nBli bedre kjent med oss💛\n\"Det viktigste vi har i Beredt, det er menneskene som skal hjelpe andre mennesker\"\nRune Soltvedt, Daglig leder",
+   "identity_text_excerpt": "Kantinedrift Benytter dere våre kantiner i deres lokaler? Her finner dere informasjon om retter og menyer, samt åpningstider og kontaktinformasjon. Velg din kantine Beredt Nordåsdalen 44 5235 Rådal, Norge Org.nr: 916303122 Åpningstider Man - Fre: 08:00 til 15:00 Åpne Google Maps Ta kontakt Telefon: +47 55 36 26 00 ordre@beredt.no © 2026 Beredt Personvern Velg tema: System Light Dark © Utvikler: Absoluttweb AS",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/BeredtAS"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/beredtinkludering"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/beredt"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@id": "https://www.beredt.no/#organization",
+     "@type": [
+      "Organization",
+      "LocalBusiness"
+     ],
+     "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NO",
+      "addressLocality": "Rådal",
+      "addressRegion": "Vestland",
+      "postalCode": "5235",
+      "streetAddress": "Nordåsdalen 44"
+     },
+     "areaServed": {
+      "@type": "City",
+      "name": "Bergen"
+     },
+     "contactPoint": {
+      "@type": "ContactPoint",
+      "availableLanguage": "Norwegian",
+      "contactType": "customer service",
+      "telephone": "+4755362600"
+     },
+     "description": "Beredt er spesialister på arbeidsinkludering i Bergen. Vi tilbyr tett oppfølging og veiledning for arbeidsgivere og arbeidssøkere. Beredt er heleid av Vestland Fylkeskommune og er en del av NHO Arbeid og Inkludering.",
+     "email": "ordre@beredt.no",
+     "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 60.3059367,
+      "longitude": 5.3261463
+     },
+     "hasMap": "https://www.google.com/maps/place/Nord%C3%A5sdalen+44,+5235+Bergen/@60.3059393,5.3235714,17z/data=!3m1!4b1!4m6!3m5!1s0x463cf97389c6f699:0xdb49e731ba5ecf3!8m2!3d60.3059367!4d5.3261463!16s%2Fg%2F11kpvbf9sd?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+     "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "itemListElement": [
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Ekspertbistand er målrettet støtte når en arbeidssituasjon har blitt krevende over tid, og tidligere tiltak ikke har gitt ønsket effekt. \nVi kommer inn som en uavhengig tredjepart - for å hjelpe å finne et felles ståsted videre.",
+         "name": "Ekspertbistand",
+         "url": "https://www.beredt.no/arbeidsgivere/ekspertbistand/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Jobbsmak for ungdom i Bergen: Beredt gir unge praksis med tett oppfølging, mestring og en trygg vei mot skole, arbeid eller videre utdanning.",
+         "name": "Jobbsmak for ungdom – med trygghet og tett oppfølging",
+         "url": "https://www.beredt.no/arbeidsgivere/unge-i-praksis/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Lederstøtte fra Beredt i Bergen: individuell veiledning når du står i krevende personal- og arbeidssituasjoner. Vi hjelper deg å stå stødigere i lederrollen.",
+         "name": "Lederstøtte",
+         "url": "https://www.beredt.no/arbeidsgivere/lederst%C3%B8tte/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Arbeidsinkludering i Bergen: Beredt hjelper bedrifter med inkluderende arbeidsmiljø, tilrettelegging og varige inkluderingsløp for flere i arbeidslivet.",
+         "name": "Arbeidsinkludering og mangfold",
+         "url": "https://www.beredt.no/arbeidsgivere/arbeidsinkludering/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Rekruttering i Bergen: Beredt hjelper deg å finne riktige folk, uten at ansettelsen tar unødig tid. Vi kjenner arbeidssøkere og inkluderende ansettelser.",
+         "name": "Rekruttering",
+         "url": "https://www.beredt.no/arbeidsgivere/rekruttering/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Sykefraværsoppfølging i Bergen: Beredt hjelper arbeidsgivere med forebygging, tidlig dialog og oppfølging når fravær blir krevende for drift og arbeidsmiljø.",
+         "name": "Sykefravær - forebygging og oppfølging",
+         "url": "https://www.beredt.no/arbeidsgivere/sykefravaersoppfoelging/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Sterke team gir mer enn trivsel - de får ting til å skje. Vi hjelper dere å bygge lag som fungerer i hverdagen.",
+         "name": "Styrk laget med våre teambuilding aktiviteter",
+         "url": "https://www.beredt.no/arbeidsgivere/teambuilding/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "AFT i Bergen: Beredt tilbyr arbeidsforberedende trening og tett oppfølging for deg som trenger en trygg vei tilbake til arbeid eller utdanning.",
+         "name": "For arbeidssøker og deltakere",
+         "url": "https://www.beredt.no/arbeidstakere/"
+        }
+       },
+       {
+        "@type": "Offer",
+        "itemOffered": {
+         "@type": "Service",
+         "description": "Informasjon og menyer for eksisterende kantinekunder.",
+         "name": "Kantinedrift",
+         "url": "https://www.beredt.no/kantinedrift/"
+        }
+       }
+      ],
+      "name": "Tjenester fra Beredt"
+     },
+     "image": "https://res.cloudinary.com/absoluttweb/image/upload/c_fill,w_1200,h_630,f_auto,q_auto/beredt/Beredt2025.IngerPaulsenFotografi25_h9mtfg.jpg",
+     "knowsAbout": "Arbeid og inkludering",
+     "legalName": "Beredt AS",
+     "logo": "https://res.cloudinary.com/absoluttweb/image/upload/c_fill,w_512,h_512,f_auto,q_auto/beredt/Beredt2025.IngerPaulsenFotografi25_h9mtfg.jpg",
+     "name": "Beredt",
+     "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "closes": "15:00",
+      "dayOfWeek": [
+       "Monday",
+       "Tuesday",
+       "Wednesday",
+       "Thursday",
+       "Friday"
+      ],
+      "opens": "08:00"
+     },
+     "sameAs": [
+      "https://www.facebook.com/BeredtAS",
+      "https://www.instagram.com/beredtinkludering/",
+      "https://www.linkedin.com/company/beredt/"
+     ],
+     "telephone": "+4755362600",
+     "url": "https://www.beredt.no",
+     "vatID": "NO916303122"
+    }
+   ],
+   "content_sha256": "9f41a00c02fa92881aea6bc27ed1242c8ae2cb94e9935a0ae82a9a13d740e23b",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.beredt.no/",
+     "title": "Beredt AS · Arbeidsinkludering i Bergen",
+     "main_text_excerpt": "Trygg | Robust | Nytenkende\nHvem er du?\nFor arbeidsgivere\nJeg representerer en bedrift\nBeredt hjelper deg å finne gode løsninger - og står i det sammen med deg. Vi kan mennesker. Og vi vet at når du tar vare på folk, får du mer igjen som arbeidsgiver.\nFor arbeidstakere\nJeg er arbeidssøker / deltaker\nBeredt hjelper deg å finne retning, bygge erfaring og ta nye steg. Du får støtte, struktur og folk som tror på deg - og slik åpner vi dører sammen som gir muligheter.\nSpesialister på arbeidsinkludering\nVi tror på folk – og vi vet at alle har noe å bidra med. Hos oss står mennesket først. Vi åpner dører og samarbeider med et stort nettverk av arbeidsgivere som ønsker å bidra til et mer inkluderende arbeidsliv.\nSiden 1969 har vi hjulpet tusenvis tilbake i arbeid eller utdanning. Når du satser på folk bygger du gode og trygge arbeidsmiljø.\nI Beredt har vi lang erfaring med å koble folk og arbeidsplasser på en måte som gir mening – for begge parter. Vi samarbeider med arbeidsgivere som vet at mangfold og mestring ikke bare er verdier på papiret, men viktige drivere for utvikling og vekst.\nMange bedrifter har allerede erfart hva det gir tilbake. Vil du bli en av dem?\nBli bedre kjent med oss💛\n\"Det viktigste vi har i Beredt, det er menneskene som skal hjelpe andre mennesker\"\nRune Soltvedt, Daglig leder",
+     "content_sha256": "9f41a00c02fa92881aea6bc27ed1242c8ae2cb94e9935a0ae82a9a13d740e23b"
+    },
+    {
+     "url": "https://www.beredt.no/om-oss/",
+     "title": "Om Beredt · Beredt AS",
+     "main_text_excerpt": "Hva skiller Beredt AS og Beredt Inkludering AS?\nEtt Beredt – to selskaper, samme mål. Beredt har jobbet for et mer inkluderende arbeidsliv siden 1969. I dag består vi av Beredt AS og Beredt Inkludering AS – to selskaper med ulike roller, men med samme visjon: å gjøre inkludering mulig. For flere. Og for godt. Beredt AS leverer oppdrag fra NAV og hjelper mennesker tilbake til jobb eller utdanning gjennom tiltaket Arbeidsforberedende trening (AFT). Beredt Inkludering AS hjelper bedrifter med sykefraværsoppfølging, kulturbygging, rekruttering, mangfold og inkludering – og driver prosjektet «Hopp i det» for ungdom som har falt utenfor skole og arbeid. Sammen utgjør vi ett Beredt som bygger robuste mennesker, robuste bedrifter og et sterkere samfunn - heleid av Vestland Fylkeskommune.",
+     "identity_text_excerpt": "Kantinedrift Benytter dere våre kantiner i deres lokaler? Her finner dere informasjon om retter og menyer, samt åpningstider og kontaktinformasjon. Velg din kantine Beredt Nordåsdalen 44 5235 Rådal, Norge Org.nr: 916303122 Åpningstider Man - Fre: 08:00 til 15:00 Åpne Google Maps Ta kontakt Telefon: +47 55 36 26 00 ordre@beredt.no © 2026 Beredt Personvern Velg tema: System Light Dark © Utvikler: Absoluttweb AS",
+     "content_sha256": "5dffe7cccddc61c607e1dce230ddd8700e9dcd70342d38c57fe0532c8c8fab07"
+    },
+    {
+     "url": "https://www.beredt.no/om-oss/automester/",
+     "title": "Beredt Automester · Beredt AS",
+     "main_text_excerpt": "Beredt Automester - din partner for trygg og effektiv bilservice.\nHos Automester Bergen kombinerer vi moderne teknologi med høy fagkompetanse for å gi din bil den beste behandlingen.\nVårt dedikerte team sørger for kvalitet, sikkerhet og personlig service - uansett bilmerke eller behov. Vi holder til i Storetveitvegen 50.\nVerkstedtjenester\nVi tilbyr et komplett utvalg av tjenester for alle typer kjøretøy:\n- Regelmessig service og vedlikehold\n- Omfattende reparasjoner\n- EU-kontroll for sikkerhet og lovpålagt godkjenning\n- Vi reparerer de fleste bilmerker\n- Bærekraftige løsninger - vi er sertifisert i ISO 9001 og ISO 14001\nVåre verkstedtjenester\nVi tilbyr et bredt spekter av verkstedtjenester for alle typer kjøretøy\nService og vedlikehold\nVi sørger for at bilen din alltid er i topp stand.\n- Oljeskift og filterbytte\n- Bremsekontroll og -service\n- Service på klimaanlegg\n- Generelt vedlikehold av bilen\n- EU-kontroll for sikkerhet og godkjenning\nReparasjoner\nVi har kompetansen og utstyret som trengs for å utføre alle typer reparasjoner. Din bil er i trygge hender.\n- Motor og girkasse\n- Understell og hjuloppheng\n- Eksosanlegg\n- Elektriske systemer\n- Karosseri og lakkering\nDekkservice\nRiktige dekk gir bedre kjøreegenskaper, lavere drivstofforbruk og økt sikkerhet.\n- Dekkskift\n- Reparasjon av punkteringer\n- Balansering\n- Salg av nye dekk og felger\nDiagnose\nVi har det nyeste innen diagnoseverktøy:\n- Feilsøking\n- Elektronisk diagnose\n- Motorstyring\n- Sensorer og følere\n- Computertesting",
+     "identity_text_excerpt": "Kantinedrift Benytter dere våre kantiner i deres lokaler? Her finner dere informasjon om retter og menyer, samt åpningstider og kontaktinformasjon. Velg din kantine Beredt Nordåsdalen 44 5235 Rådal, Norge Org.nr: 916303122 Åpningstider Man - Fre: 08:00 til 15:00 Åpne Google Maps Ta kontakt Telefon: +47 55 36 26 00 ordre@beredt.no © 2026 Beredt Personvern Velg tema: System Light Dark © Utvikler: Absoluttweb AS",
+     "content_sha256": "e933147537bed9a63f3177772355916f843dd78de74eb9fd18d2bee90b5dc5c3"
+    },
+    {
+     "url": "https://www.beredt.no/om-oss/baerekraft/",
+     "title": "Bærekraft og samfunnsansvar · Beredt AS",
+     "main_text_excerpt": "Vi har valgt oss ut 5 bærekraftsmål vi jobber etter.\nVår kjernevirksomhet handler om å hjelpe mennesker tilbake i jobb og skape inkluderende arbeidsplasser. God helse, utdanning og anstendig arbeid legger grunnlaget for å delta i arbeidslivet. Gjennom vårt arbeid bidrar vi til flere av delmålene i FNs bærekraftsmål - med særlig fokus på helse, utdanning, arbeid og inkludering.\nHos oss handler bærekraft om å tenke helhetlig - både på mennesker, miljø og hvordan vi driver virksomheten vår.\nVi legger vekt på å utnytte ressursene best mulig, enten det er råvarer, kompetanse eller samarbeid.\nGjennom smarte løsninger og bevisste valg i alle ledd reduserer vi unødvendig svinn, optimaliserer innkjøp og sørger for at ressursene får nytt liv. Sammen med Wastech sørger vi for at matavfall blir håndtert og omgjort til nye ressurser, og i samarbeid med Nordlo tar vi ansvar for forsvarlig håndtering og gjenvinning av e-avfall. Slik holder vi både matsvinn og elektronisk avfall på et minimum.\nVi arbeider kontinuerlig med gode rutiner og strategiske partnerskap som gjør oss mer robuste og gir oss mulighet til å levere varige resultater - både for våre kunder, samarbeidspartnere og samfunnet rundt oss.\nFor oss er bærekraft mer enn miljø. Det er også mennesker. Vårt arbeid bidrar til inkludering, utvikling og langsiktige løsninger. Slik bygger vi Fremtidens Inkluderingsbedrift.",
+     "identity_text_excerpt": "Kantinedrift Benytter dere våre kantiner i deres lokaler? Her finner dere informasjon om retter og menyer, samt åpningstider og kontaktinformasjon. Velg din kantine Beredt Nordåsdalen 44 5235 Rådal, Norge Org.nr: 916303122 Åpningstider Man - Fre: 08:00 til 15:00 Åpne Google Maps Ta kontakt Telefon: +47 55 36 26 00 ordre@beredt.no © 2026 Beredt Personvern Velg tema: System Light Dark © Utvikler: Absoluttweb AS",
+     "content_sha256": "769425f96e9d15410ec936d52d911b2abfa6bf35e109fd2db5c9ab023d241467"
+    },
+    {
+     "url": "https://www.beredt.no/om-oss/beredt-inkludering/",
+     "title": "Beredt Inkludering AS · Beredt AS",
+     "main_text_excerpt": "Hos Beredt Inkludering AS hjelper vi ledere og virksomheter med å bygge trygge, robuste og inkluderende arbeidsmiljø.\nVi hjelper deg å skape en arbeidsplass som fungerer - for alle.\nDagens arbeidsliv kan by på utfordringer som høyt sykefravær, stressede lederteam, generasjonsforskjeller og medarbeidere som faller utenfor. Dette stjeler energi og hindrer trivsel og utvikling.\nDerfor ble Beredt Inkludering AS etablert. Med over 50 års erfaring fra Beredt AS, og tett arbeid med mennesker i sårbare situasjoner, har vi opparbeidet unik kompetanse. Nå tilbyr vi konkrete tjenester som gir målbare resultater - for både ansatte og virksomheten.\nVil du styrke arbeidsmiljøet og redusere sykefraværet?\nTa kontakt - vi er her.",
+     "identity_text_excerpt": "Kantinedrift Benytter dere våre kantiner i deres lokaler? Her finner dere informasjon om retter og menyer, samt åpningstider og kontaktinformasjon. Velg din kantine Beredt Nordåsdalen 44 5235 Rådal, Norge Org.nr: 916303122 Åpningstider Man - Fre: 08:00 til 15:00 Åpne Google Maps Ta kontakt Telefon: +47 55 36 26 00 ordre@beredt.no © 2026 Beredt Personvern Velg tema: System Light Dark © Utvikler: Absoluttweb AS",
+     "content_sha256": "1447c41ea41aa4372689570521c3809ef6cf147a20a82aff618dfd6235c6a106"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "beredt"
+    ],
+    "matched_tokens": [
+     "beredt"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/BeredtAS"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/beredtinkludering"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/beredt"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/BeredtAS",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "beredt"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/beredtinkludering",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "beredt"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/beredt",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "beredt"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "9f41a00c02fa92881aea6bc27ed1242c8ae2cb94e9935a0ae82a9a13d740e23b",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/916303122": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "c950ad52eaa0e463.json.gz",
+   "content_sha256": "c950ad52eaa0e463467de9520c9284a1615c28316837b9d966a00cdea2ba1d98",
+   "retrieved_at": "2026-11-01T14:17:09.487657Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/916303122": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "390a0e44ef9d8912.json.gz",
+   "content_sha256": "390a0e44ef9d89124d2365f7d04c5d967d139e95cdc8c6eda67c045e1dad5d20",
+   "retrieved_at": "2026-11-01T14:17:10.173620Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/916303122/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "3db07af25db4ea20.json.gz",
+   "content_sha256": "3db07af25db4ea200308ca690d323e96d07b0a93556d4aea289afcb16c012dd5",
+   "retrieved_at": "2026-11-01T14:17:12.237713Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/916303122": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:10.862683Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=916303122&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "8a5a6a2b7a23aec0.json.gz",
+   "content_sha256": "8a5a6a2b7a23aec0b0b64728a2f350f2a7677f455ed88de9e6d3e12bb8079a91",
+   "retrieved_at": "2026-11-01T14:17:11.545245Z"
+  },
+  "https://www.beredt.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9f41a00c02fa9288.html.gz",
+   "content_sha256": "9f41a00c02fa92881aea6bc27ed1242c8ae2cb94e9935a0ae82a9a13d740e23b",
+   "retrieved_at": "2026-11-01T14:17:20.808328Z"
+  },
+  "https://www.beredt.no/kontakt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "3716dac693441790.html.gz",
+   "content_sha256": "3716dac693441790914b6aaa6853c170bf1187334e33fcec51106df9b8fed7ba",
+   "retrieved_at": "2026-11-01T14:17:21.673012Z"
+  },
+  "https://www.beredt.no/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "5dffe7cccddc61c6.html.gz",
+   "content_sha256": "5dffe7cccddc61c607e1dce230ddd8700e9dcd70342d38c57fe0532c8c8fab07",
+   "retrieved_at": "2026-11-01T14:17:22.070329Z"
+  },
+  "https://www.beredt.no/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "d291582aab4441d2.html.gz",
+   "content_sha256": "d291582aab4441d29c8f083f04ac780578f8f0f78b0d7c46d7246470f2b621ca",
+   "retrieved_at": "2026-11-01T14:17:22.647625Z"
+  },
+  "https://www.beredt.no/arbeidsgivere/unge-i-praksis/": {
+   "kind": "site",
+   "status": 200,
+   "file": "25ab738024f52d1c.html.gz",
+   "content_sha256": "25ab738024f52d1c5b6a70a43db37384a72683596a4088c22e2efef02b0ad3a3",
+   "retrieved_at": "2026-11-01T14:17:23.479825Z"
+  }
+ }
+}

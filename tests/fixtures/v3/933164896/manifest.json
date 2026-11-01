@@ -1,0 +1,161 @@
+{
+ "organisation_number": "933164896",
+ "name": "BEST WORK BERGEN AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://bestwork.no/",
+  "retrieved_at": "2026-11-01T14:17:58.964371Z",
+  "value": {
+   "requested_url": "https://www.bestwork.no/",
+   "final_url": "https://bestwork.no/",
+   "registered_domain": "bestwork.no",
+   "title": "Forside - Best Work",
+   "description": "Vi leverer kvalifisert arbeidskraft innen bygg, anlegg og industri. Rett person til rett tid med bransjeerfaring og tett oppfølging.",
+   "main_text_excerpt": "Bemanningsselskap som leverer fleksibel innleie og treffsikker rekruttering\nBest Work leverer kvalifisert arbeidskraft innen bygg, anlegg og industri. Vi kombinerer bransjeerfaring, raske prosesser og tett oppfølging for å sikre at du får riktig person, til riktig tid.\nInnleie gjør det mulig å skalere opp og ned uten risiko. Best Work er arbeidsgiver for den innleide medarbeideren, slik at du slipper administrasjon og HR‑oppgaver. Vi håndterer hele ansettelsesforholdet.\nBest Work kan tilby spennende oppgaver og muligheter hos noen av de mest attraktive oppdragsgiverne i bransjen. Hos Best Work får du ryddige arbeidsforhold, dyktige kollegaer i administrasjonen som følger deg opp og sosiale arrangement.\nBest Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr\nBest Work kan tilby spennende oppgaver og muligheter hos noen av de mest attraktive oppdragsgiverne i bransjen. Hos Best Work får du ryddige arbeidsforhold, dyktige kollegaer i administrasjonen som følger deg opp og sosiale arrangement.",
+   "identity_text_excerpt": "Trenger du bemanning nå? Vi leverer kvalifiserte medarbeidere raskt og effektivt. Kontakt oss For ansatte Logg inn (Trondheim) Logg inn (Bergen) For jobbsøkere Ledige stillinger Registrer CV Jobbmuligheter Hurtiglenker Tjenester Bransjer For bedrifter Om Best Work Åpenhetsloven for Best Work Kontakt oss post@bestwork.no 404 04 810 En del av Best Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr @ 2026 Best Work AS For ansatte Logg inn (Trondheim) Logg inn (Bergen) For jobbsøkere Ledige stillinger Registrer CV Jobbmuligheter Hurtiglenker Tjenester Bransjer For bedrifter Om Best Work Åpenhetsloven for Best Work Kontakt oss post@bestwork.no 404 04 810 En del av Best Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr @ 2026 Best Work AS",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://bestwork.no/#organization",
+     "name": "Best Work",
+     "url": "https://bestwork.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "nb-NO",
+      "@id": "https://bestwork.no/#/schema/logo/image/",
+      "url": "https://bestwork.no/wp-content/uploads/2026/03/Logobw.svg",
+      "contentUrl": "https://bestwork.no/wp-content/uploads/2026/03/Logobw.svg",
+      "width": 128,
+      "height": 46,
+      "caption": "Best Work"
+     },
+     "image": {
+      "@id": "https://bestwork.no/#/schema/logo/image/"
+     }
+    }
+   ],
+   "content_sha256": "1d95de1ade9b003f1e9aa80b99740bd48ff66bc2eeff5f70a4bcebb364f44e72",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://bestwork.no/",
+     "title": "Forside - Best Work",
+     "main_text_excerpt": "Bemanningsselskap som leverer fleksibel innleie og treffsikker rekruttering\nBest Work leverer kvalifisert arbeidskraft innen bygg, anlegg og industri. Vi kombinerer bransjeerfaring, raske prosesser og tett oppfølging for å sikre at du får riktig person, til riktig tid.\nInnleie gjør det mulig å skalere opp og ned uten risiko. Best Work er arbeidsgiver for den innleide medarbeideren, slik at du slipper administrasjon og HR‑oppgaver. Vi håndterer hele ansettelsesforholdet.\nBest Work kan tilby spennende oppgaver og muligheter hos noen av de mest attraktive oppdragsgiverne i bransjen. Hos Best Work får du ryddige arbeidsforhold, dyktige kollegaer i administrasjonen som følger deg opp og sosiale arrangement.\nBest Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr\nBest Work kan tilby spennende oppgaver og muligheter hos noen av de mest attraktive oppdragsgiverne i bransjen. Hos Best Work får du ryddige arbeidsforhold, dyktige kollegaer i administrasjonen som følger deg opp og sosiale arrangement.",
+     "content_sha256": "1d95de1ade9b003f1e9aa80b99740bd48ff66bc2eeff5f70a4bcebb364f44e72"
+    },
+    {
+     "url": "https://bestwork.no/for-bedrifter/",
+     "title": "For bedrifter - Best Work",
+     "main_text_excerpt": "Vi har et bredt nettverk og gode rekrutteringskilder som sikrer oss tilgang til kvalifiserte kandidater klare for både kortere oppdrag, sesongtopper og lengre vikariater.\nTreffsikker bemanning og rekruttering\nVi kvalitetsikrer alle kandidater gjennom intervjuer, referanser og kompetansevurdering.\nBransjespesialist innen operasjonelle fag\nVårt fokus er å levere dyktige medarbeidere til fagområder der presisjon, tempo og kvalitet er viktig. Våre HR konsulenter har lang og relevant erfaring fra å skape de beste løsningene for deg som kunde.\nTrygghet i hele prosessen\nVi tar arbeidsgiveransvaret og all oppfølging som kreves som arbeidsgiver, dere som kunde får en enkel og forutsigbar løsning.",
+     "identity_text_excerpt": "Trenger du bemanning nå? Vi leverer kvalifiserte medarbeidere raskt og effektivt. Kontakt oss For ansatte Logg inn (Trondheim) Logg inn (Bergen) For jobbsøkere Ledige stillinger Registrer CV Jobbmuligheter Hurtiglenker Tjenester Bransjer For bedrifter Om Best Work Åpenhetsloven for Best Work Kontakt oss post@bestwork.no 404 04 810 En del av Best Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr @ 2026 Best Work AS For ansatte Logg inn (Trondheim) Logg inn (Bergen) For jobbsøkere Ledige stillinger Registrer CV Jobbmuligheter Hurtiglenker Tjenester Bransjer For bedrifter Om Best Work Åpenhetsloven for Best Work Kontakt oss post@bestwork.no 404 04 810 En del av Best Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr @ 2026 Best Work AS",
+     "content_sha256": "6514d7f0099deb523306c850669eddede37303aca2559cbb6b99103187165948"
+    },
+    {
+     "url": "https://bestwork.no/om-best-work/",
+     "title": "Om Best Work - Best Work",
+     "main_text_excerpt": "Best Work arbeider for å tilby din virksomhet de beste løsningene for ekstra HR ressurser. Vi vet at det er krevende å få på plass behovet for ekstra bemanning i en hektisk hverdag. Enten det er for en kortere periode for å dekke sykefravær ol., eller en permanent rekruttering til en fast stilling\nVåre administrative ansatte har god erfaring og kompetanse på å rekruttere medarbeidere ulike fagområder. Vi er opptatt av å gi dere som kunde, kandidat eller ansatt, den beste kvalitet og oppfølging.\nVi er medlem i NHO Service og handel og revidert arbeidsgiver, våre prosesser er kvalitetssikret og laget slik at dere som kunde skal få kvalitetssikret personell rask og effektiv på plass når dere trenger det, og som ansatt god informasjon og oppfølging om de oppdrag dere takker ja til.\nLEK står for\nVi verdsetter læring og utvikling, og legger til rette for at ansatte får best mulig opplæring og utvikling\nVi er lidenskapelig opptatt av å levere best mulige tjenester gjennom å bry oss om våre ansatte og vårt arbeidsmiljø.\nVi handler i samsvar med det som er etiske og moralsk korrekt gjennom å være ærlig, rettferdig og opprettholde den beste integritet.\nKokstadvegen 46, 5217 Kokstad\nKongens Gate 9, 7013 Trondheim",
+     "identity_text_excerpt": "Trenger du bemanning nå? Vi leverer kvalifiserte medarbeidere raskt og effektivt. Kontakt oss For ansatte Logg inn (Trondheim) Logg inn (Bergen) For jobbsøkere Ledige stillinger Registrer CV Jobbmuligheter Hurtiglenker Tjenester Bransjer For bedrifter Om Best Work Åpenhetsloven for Best Work Kontakt oss post@bestwork.no 404 04 810 En del av Best Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr @ 2026 Best Work AS For ansatte Logg inn (Trondheim) Logg inn (Bergen) For jobbsøkere Ledige stillinger Registrer CV Jobbmuligheter Hurtiglenker Tjenester Bransjer For bedrifter Om Best Work Åpenhetsloven for Best Work Kontakt oss post@bestwork.no 404 04 810 En del av Best Work er en del av Best Group, et konsern med flere datterselskap innen bemanningsløsninger, rekruttering, arbeidsklær & verneutstyr @ 2026 Best Work AS",
+     "content_sha256": "3ac022db06e39f25e51d264a178d085b7c1e8a21ef77a98517b70e667a25b4ee"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "best",
+     "work",
+     "bergen"
+    ],
+    "matched_tokens": [
+     "bergen",
+     "best",
+     "work"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "1d95de1ade9b003f1e9aa80b99740bd48ff66bc2eeff5f70a4bcebb364f44e72",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/933164896": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "9101406017a0a724.json.gz",
+   "content_sha256": "9101406017a0a724a682d3ac58f74d814c178bf2c77d515205614bb82c21db36",
+   "retrieved_at": "2026-11-01T14:17:43.704704Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/933164896": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "42c6cdc28ed4296c.json.gz",
+   "content_sha256": "42c6cdc28ed4296c6cd64221083844d8c94a3e819fc27b63adbe7a8d472cafbf",
+   "retrieved_at": "2026-11-01T14:17:44.383584Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/933164896/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "d59913f90c0cf6e2.json.gz",
+   "content_sha256": "d59913f90c0cf6e23e51c5235e32c32dfd5e0f5b9a7e27233848d4613d28aea2",
+   "retrieved_at": "2026-11-01T14:17:46.632858Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/933164896": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:45.258143Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=933164896&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "d0447da1ea9a738d.json.gz",
+   "content_sha256": "d0447da1ea9a738da1a42ce2446ebe6a7a409013e5dd62c1c2ee2f300df45533",
+   "retrieved_at": "2026-11-01T14:17:45.941945Z"
+  },
+  "https://bestwork.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "920016cb739934b2.html.gz",
+   "content_sha256": "920016cb739934b273e6d83253470034cf1ad09c354f85cf5dfd367793f310fc",
+   "retrieved_at": "2026-11-01T14:18:01.891075Z"
+  },
+  "https://bestwork.no/for-bedrifter/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9ece84d592b84fa5.html.gz",
+   "content_sha256": "9ece84d592b84fa526b3c92c014f5e770013aadce1d94105607188b595cec9c2",
+   "retrieved_at": "2026-11-01T14:18:03.720612Z"
+  },
+  "https://bestwork.no/om-best-work/": {
+   "kind": "site",
+   "status": 200,
+   "file": "471d64fde81d9346.html.gz",
+   "content_sha256": "471d64fde81d93461659b104b1dde2929b1e789ea837268a790c4ce0063c83ac",
+   "retrieved_at": "2026-11-01T14:18:05.795379Z"
+  },
+  "https://bestwork.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "cf15bee15f777395.xml.gz",
+   "content_sha256": "cf15bee15f777395717e4f873830296695b27619386ccb2a9e322e58a758a84d",
+   "retrieved_at": "2026-11-01T14:18:06.766684Z"
+  }
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "organisation_number": "919378875",
+ "name": "GRØNSAND GJESTEGÅRD AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.gronsand.no/",
+  "retrieved_at": "2026-11-01T14:23:24.986000Z",
+  "value": {
+   "requested_url": "https://www.gronsand.no/",
+   "final_url": "https://www.gronsand.no/",
+   "registered_domain": "gronsand.no",
+   "title": "Bryllup, konferanse, lokaler | Asker | Grønsand Gjestegård",
+   "description": "Grønsand Gjestegård har konferanse-, bryllups - og selskapslokaler i nydelige omgivelser og et rikt aktivitstilbud i Asker, med utsikt mot Drøbaksundet.",
+   "main_text_excerpt": "OM OSS\nGrønsand Gjestegård ligger idyllisk plassert, åpent, privat og luftig på Storsand - med utsikt mot Drøbak, Oscarsborg og Oslofjorden. Her leier vi ut lokaler til møter, konferanser, eventer, selskaper, feiringer, konserter og andre tilstelninger. Vi hjelper til med organiseringen og sørger for at alt går som det skal under gjennomføringen.\nGjestegården har nok de største lokalene, både inne og ute, i Asker syd, og i tillegg får du rusikk og ekte gårdsidyll. Rundt Gjestegården finnes en fredet salamanderdam, flotte store plener, en unik grillplass laget for helgrilling, omkranset av enorme eiketrær, en høykavlitets tennisbane, en 6-hulls discgolfbane og meget gode parkeringmuligheter.\nVi elsker å ha arrangementer ute i hagen, men også oppe i skogen på den gamle seteren, «Bjørnåsen». Her finnes en stor gapahuk hvor ca 50 personer kan kose seg rundt bålet. På veien opp til seteren, i vannkanten på Hestehagedammen, har vi en vedfyrt badstue der vi arrangerer private badstueopplevelser ute i naturen.\nGrønsand er et historisk og unik sted der du får lokalene til ditt arrangement samt lidenskapen og hjelpen du trenger fra vertskapet. Vi har lang erfaring fra reiselivs- og eventbransjen, samt som arrangør av kurs/konferanse. Her er vi fleksible og gjør det vi kan for å tilpasse oss dine behov.\nVelkommen til oss!\nMøterom\nFlere rom som egner seg til møter, kurs og konferanser i forskjellige størrelser\nGratis Wifi\nDet er god dekning på nettverket vårt, og også mulig å øke kapasiteten ved spesielle behov.\nHage\nNydelig hage med flotte gamle trær, en høykvalitets tennisbane og en 6 hulls DiscGolfbane\nVertskap\nFridtjof bor på gården og er vertskap for arrangementene og annet som skjer på Gjestegården\nFestsal\nEn helt unik Festsal med plass til opp mot 500 personer, inkl lydanlegg, projektor og lerret\nMat\nVi har fokus på kortreist mat med gode smaker - og vi har et stort og variert utvalg",
+   "identity_text_excerpt": "Kontakt Grønsandveien 9, 3475 Sætre Asker kommune i Viken, Norge post@gronsand.no Tel: 90 70 74 28 Send Supert! Melding mottatt. © 2018 Grønsand Gjestegård AS",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@context": "https://schema.org/",
+     "@type": "LocalBusiness",
+     "name": "Grønsand Gjestegård ",
+     "url": "https://www.gronsand.no",
+     "image": "https://static.wixstatic.com/media/89a6dd_f53ebd68ccb94edfb03575f5c3be725c~mv2.jpg",
+     "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NO",
+      "addressLocality": "Sætre",
+      "addressRegion": "Buskerud",
+      "postalCode": "3475",
+      "streetAddress": "9 Grønsandveien"
+     },
+     "telephone": "+4790707428"
+    }
+   ],
+   "content_sha256": "ce74be043f9bfce014c8e51d348de814bb70e7225d7adfe24418a583c807e184",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.gronsand.no/",
+     "title": "Bryllup, konferanse, lokaler | Asker | Grønsand Gjestegård",
+     "main_text_excerpt": "OM OSS\nGrønsand Gjestegård ligger idyllisk plassert, åpent, privat og luftig på Storsand - med utsikt mot Drøbak, Oscarsborg og Oslofjorden. Her leier vi ut lokaler til møter, konferanser, eventer, selskaper, feiringer, konserter og andre tilstelninger. Vi hjelper til med organiseringen og sørger for at alt går som det skal under gjennomføringen.\nGjestegården har nok de største lokalene, både inne og ute, i Asker syd, og i tillegg får du rusikk og ekte gårdsidyll. Rundt Gjestegården finnes en fredet salamanderdam, flotte store plener, en unik grillplass laget for helgrilling, omkranset av enorme eiketrær, en høykavlitets tennisbane, en 6-hulls discgolfbane og meget gode parkeringmuligheter.\nVi elsker å ha arrangementer ute i hagen, men også oppe i skogen på den gamle seteren, «Bjørnåsen». Her finnes en stor gapahuk hvor ca 50 personer kan kose seg rundt bålet. På veien opp til seteren, i vannkanten på Hestehagedammen, har vi en vedfyrt badstue der vi arrangerer private badstueopplevelser ute i naturen.\nGrønsand er et historisk og unik sted der du får lokalene til ditt arrangement samt lidenskapen og hjelpen du trenger fra vertskapet. Vi har lang erfaring fra reiselivs- og eventbransjen, samt som arrangør av kurs/konferanse. Her er vi fleksible og gjør det vi kan for å tilpasse oss dine behov.\nVelkommen til oss!\nMøterom\nFlere rom som egner seg til møter, kurs og konferanser i forskjellige størrelser\nGratis Wifi\nDet er god dekning på nettverket vårt, og også mulig å øke kapasiteten ved spesielle behov.\nHage\nNydelig hage med flotte gamle trær, en høykvalitets tennisbane og en 6 hulls DiscGolfbane\nVertskap\nFridtjof bor på gården og er vertskap for arrangementene og annet som skjer på Gjestegården\nFestsal\nEn helt unik Festsal med plass til opp mot 500 personer, inkl lydanlegg, projektor og lerret\nMat\nVi har fokus på kortreist mat med gode smaker - og vi har et stort og variert utvalg",
+     "content_sha256": "ce74be043f9bfce014c8e51d348de814bb70e7225d7adfe24418a583c807e184"
+    },
+    {
+     "url": "https://www.gronsand.no/team-3",
+     "title": "Våre kjerneverdier | gronsand",
+     "main_text_excerpt": "Våre kjerneverdier\nVelkommen til vårt sted – en plass for ekte møter og skaperglede!\nVi ser oss selv som varme beskyttere og omsorgspersoner for dette hellige stedet, hvor drømmer og skaperglede får lov til å blomstre. Det er vårt felles ansvar og vår stolthet å sørge for at hver samling bygger på en solid, respektfull grunnmur — en plass der ekte tilknytning, selvuttrykk og trygghet råder. Vi legger vår omtanke og vårt ansvar i å skape en atmosfære hvor alt er i balanse, hvor alt er på plass, og hvor det er lett for dere å fokusere på det viktigste: å være dere selv, å skape magi.\nVi sørger for ro og orden, at dere har alt dere trenger innen rekkevidde, og at alt er gjort klart og harmonisk — både før, under og etter arrangementet. Vår oppgave er å beskytte og ivareta dette stedet, slik at dere kan slappe av, føle dere trygge og la kreativiteten blomstre uten bekymringer.",
+     "identity_text_excerpt": "Kontakt Grønsandveien 9, 3475 Sætre Asker kommune i Viken, Norge post@gronsand.no Tel: 90 70 74 28 Send Supert! Melding mottatt. © 2018 Grønsand Gjestegård AS",
+     "content_sha256": "c3b9d905a6b648a3d505948136f1d352a8270467200c82f999cb9d16cb7cb3d8"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "gronsand",
+     "gjestegard"
+    ],
+    "matched_tokens": [
+     "gjestegard",
+     "gronsand"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/gronsand"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/gronsandgjestagard"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/gronsand",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "gronsand"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/gronsandgjestagard",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "gronsand"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "ce74be043f9bfce014c8e51d348de814bb70e7225d7adfe24418a583c807e184",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/919378875": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "270cad77265b8c8b.json.gz",
+   "content_sha256": "270cad77265b8c8b9e65806aa6656f41f9b8bb85e461cb52b65c119bce37516d",
+   "retrieved_at": "2026-11-01T14:23:20.673949Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/919378875": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "8981d1b651344983.json.gz",
+   "content_sha256": "8981d1b651344983a992bc2d16a00d923e64883b1887a71aea9339d8e2336438",
+   "retrieved_at": "2026-11-01T14:23:21.410394Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/919378875/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b4e4b68a2827d8dc.json.gz",
+   "content_sha256": "b4e4b68a2827d8dc1a2a978b725547352e51ff2e76d8afc50dbfd21fd937889c",
+   "retrieved_at": "2026-11-01T14:23:23.693811Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/919378875": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:23:22.173102Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=919378875&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2146ef729e507040.json.gz",
+   "content_sha256": "2146ef729e50704061bf22d8cd081ac2c1959eed373619cfec471e2eaffd9d19",
+   "retrieved_at": "2026-11-01T14:23:22.929950Z"
+  },
+  "https://www.gronsand.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ce74be043f9bfce0.html.gz",
+   "content_sha256": "ce74be043f9bfce014c8e51d348de814bb70e7225d7adfe24418a583c807e184",
+   "retrieved_at": "2026-11-01T14:23:25.579088Z"
+  },
+  "https://www.gronsand.no/blog-feed.xml": {
+   "kind": "feed",
+   "status": 200,
+   "file": "456738efa9f91535.xml.gz",
+   "content_sha256": "456738efa9f915358457ac0b2e00f599029b96e93bac882ae2d829482f70103b",
+   "retrieved_at": "2026-11-01T14:23:26.339924Z"
+  }
+ }
+}

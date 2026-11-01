@@ -1,0 +1,206 @@
+{
+ "organisation_number": "984560443",
+ "name": "BJELLAND AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.bjelland-as.no/",
+  "retrieved_at": "2026-11-01T14:17:43.337221Z",
+  "value": {
+   "requested_url": "https://www.bjelland-as.no/",
+   "final_url": "https://www.bjelland-as.no/",
+   "registered_domain": "bjelland-as.no",
+   "title": "Tjenester - Bjelland AS",
+   "description": "",
+   "main_text_excerpt": "Din lokale entreprenør\nAll vår erfaring er din trygghet og din garanti.",
+   "identity_text_excerpt": "© Kopirett - Bjelland AS | Org.nr.: 984 560 443 | Personvernerklæring | Nettstedet er utviklet av CoreTrek AS",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Bjelland-As-359873177420058"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "3cedb0ab16cb0bc6972030ee90d74b2e4d0192b40ba940996daab84d71ba19ff",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://www.bjelland-as.no/",
+     "title": "Tjenester - Bjelland AS",
+     "main_text_excerpt": "Din lokale entreprenør\nAll vår erfaring er din trygghet og din garanti.",
+     "content_sha256": "3cedb0ab16cb0bc6972030ee90d74b2e4d0192b40ba940996daab84d71ba19ff"
+    },
+    {
+     "url": "https://www.bjelland-as.no/om-oss/",
+     "title": "Om oss - Bjelland AS",
+     "main_text_excerpt": "Bjelland viser VEG.\nDet representerer Bjelland sine verdier! Det er det som skal videreføre og utvikle bedriften og kulturen.\nVerdiskapning.\nVære en trygg arbeidsplass og skape nye arbeidsplasser.\nBidra til et hjem med mat og drikke på bordet, gaver til bursdag og jul, idrett og hobby.\nVi skal utvikle folk. Fra lærling til fagmann, fagmann til leder.\nLevere prosjekter sammen med våre byggherrer som skaper nye arbeidsplasser, barnehage og skoleplass, trygg vei til og ifra jobb og fritid, vann, avløp og annen infrastruktur.\nEierskap og engasjement.\nAlle våre arbeidere skal vise dette i hverdagen. Levere på arbeid, mestre arbeidsoppgaver, være en god kollega, finne de beste løsninger med byggherrene og samarbeidspartnere.\nSammen skal vi Skape en god dag!\nGjennomføringskraft.\nVi tar på oss krevende oppgaver med høy kompleksitet og tøff fremdrift.\nI Bjelland skal vi ha en yes man mentalitet. Vi fikser det. Eller som Nike ville sagt: Just do it.\nVi tar utfordringene og leverer. Vi har gjort det før og vil skal fortsette å gjøre det igjen og igjen.\n– Joakim Hetland, daglig leder.",
+     "identity_text_excerpt": "© Kopirett - Bjelland AS | Org.nr.: 984 560 443 | Personvernerklæring | Nettstedet er utviklet av CoreTrek AS",
+     "content_sha256": "c6e85bae73c828bbfb34cc3132dff91d1f8798475cad9cface4f92f823134904"
+    },
+    {
+     "url": "https://www.bjelland-as.no/kontakt/kontaktpersoner/",
+     "title": "Kontaktpersoner - Bjelland AS",
+     "main_text_excerpt": "Ole Bjelland\nGrunder/eier\nKjøp salg av maskiner og biler\nole@bjelland-as.no\n992 80 600",
+     "identity_text_excerpt": "© Kopirett - Bjelland AS | Org.nr.: 984 560 443 | Personvernerklæring | Nettstedet er utviklet av CoreTrek AS",
+     "content_sha256": "9adc6026891d078771eaa22a3bce96b2816336ba09f52ec43c0a149f1862439f"
+    },
+    {
+     "url": "https://www.bjelland-as.no/kontakt/",
+     "title": "Kontakt oss - Bjelland AS",
+     "main_text_excerpt": "ADRESSE\nBedriftsvegen 2, 4353 Klepp Stasjon\nTELEFON\n51 78 54 00",
+     "identity_text_excerpt": "© Kopirett - Bjelland AS | Org.nr.: 984 560 443 | Personvernerklæring | Nettstedet er utviklet av CoreTrek AS",
+     "content_sha256": "98026460787d2b21b2cb15a6e1a1976bbab2593a45bec9fb58659cd45078d5a9"
+    },
+    {
+     "url": "https://www.bjelland-as.no/nyheter/",
+     "title": "Nyheter - Bjelland AS",
+     "main_text_excerpt": "https://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.png00Linda Leahttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.pngLinda Lea2024-02-15 14:06:492024-07-29 12:36:19Få med deg flere nyhetssaker på Facebook\nhttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.png00Linda Leahttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.pngLinda Lea2023-08-01 10:29:002023-08-01 10:29:00Regionens første fagprøve på EL-maskin\nhttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.png00Linda Leahttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.pngLinda Lea2023-04-18 13:38:212023-04-18 13:38:21«Ein veg blir til» – Riksveg 9 mellom Besteland og Helle\nMads Salte gjennomførte prøven i vei og anleggsfaget på prosjekt: Nye SUS K7804, adkomstvei til det nye sykehuset.\nDette er den første av 9 fagprøver vi skal igjennom denne våren. Lærlinger i maskinførerfaget, anleggsgartnerfaget, anleggsmaskinførerfaget og fjell og bergverk skal også i ilden. Vi gleder oss!\nEn smilende Mads Salte, fornøyd med fullført fagprøve. Vi er stolte over å ha deg med på laget!\nhttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.png00Linda Leahttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.pngLinda Lea2023-03-16 07:16:092023-03-16 07:16:09Vårens første fagprøve er fullført og vi har fått ny fagarbeider i vei og anleggsfaget!\nhttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.png00Linda Leahttps://www.bjelland-as.no/wp-content/uploads/2023/05/LOGO-Bjelland-uten-bakgrunn-PNGmindre-1030x341.pngLinda Lea2023-01-09 08:52:122023-01-09 08:52:12Vår første yrkessjåfør lærling på veien!\nBREEAM Infrastruktur sertifisering\nBREEAM Infrastruktur sertifisering\nFå med deg flere nyhetssaker på Facebook\nNyheter og oppdateringer blir lagt ut på vår Facebook side!\nBjelland på Facebook\nVi søker flere dyktige kollegaer\nLedige stillinger\nAnleggsbransjens rekrutteringsdager på Laland\nDCIM100MEDIADJI_0648.JPG\nRegionens første fagprøve på EL-maskin\n«Ein veg blir til» – Riksveg 9 mellom Besteland og Helle\nVårens første fagprøve er fullført og vi har fått ny fagarbeider i vei og anleggsfaget!\nMads Salte gjennomførte prøven i vei og anleggsfaget på prosjekt: Nye SUS K7804, adkomstvei til det nye sykehuset.\nDette er den første av 9 fagprøver vi skal igjennom denne våren. Lærlinger i maskinførerfaget, anleggsgartnerfaget, anleggsmaskinførerfaget og fjell og bergverk skal også i ilden. Vi gleder oss!\nEn smilende Mads Salte, fornøyd med fullført fagprøve. Vi er stolte over å ha deg med på laget!\nEnvironmental product declaration\nVi har stadig fokus på miljø!\nLes mer\nVår første yrkessjåfør lærling på veien!\nYrkessjåfør lærling Cecilie på vei ut døren og klar for første dag på veien.\nDette synes vi er stor stas og ønsker deg lykke til!\nVi søker maskinfører",
+     "identity_text_excerpt": "© Kopirett - Bjelland AS | Org.nr.: 984 560 443 | Personvernerklæring | Nettstedet er utviklet av CoreTrek AS",
+     "content_sha256": "427c31de44496ef28bf2b58aabb008abb2debb7d25133c2fd6b318b394666575"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bjelland"
+    ],
+    "matched_tokens": [
+     "bjelland"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Bjelland-As-359873177420058"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/17936709"
+    },
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/hellamaskin"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Bjelland-As-359873177420058",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bjelland"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/17936709",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/hellamaskin",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "3cedb0ab16cb0bc6972030ee90d74b2e4d0192b40ba940996daab84d71ba19ff",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/984560443": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "31ddfa2b0b39213d.json.gz",
+   "content_sha256": "31ddfa2b0b39213ddba63582f9da8039c1e3d40c676b75ea38e6d8f3c3e5cbdd",
+   "retrieved_at": "2026-11-01T14:17:31.241507Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/984560443": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "57b1a0956408380c.json.gz",
+   "content_sha256": "57b1a0956408380c6e66f8ecff269ff360a2780efdd8c05b1c7dcbb52913c1be",
+   "retrieved_at": "2026-11-01T14:17:31.971784Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/984560443/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1fc254bc20fbe122.json.gz",
+   "content_sha256": "1fc254bc20fbe122f8112244df1e03c4a180b4a60408bc5e326f912cf49eafcd",
+   "retrieved_at": "2026-11-01T14:17:34.149634Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/984560443": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:32.727808Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=984560443&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "edc53f528abfd57e.json.gz",
+   "content_sha256": "edc53f528abfd57e96a7de521629da8199254e4cd33c84f8a63d68439fba888c",
+   "retrieved_at": "2026-11-01T14:17:33.443089Z"
+  },
+  "https://www.bjelland-as.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "3cedb0ab16cb0bc6.html.gz",
+   "content_sha256": "3cedb0ab16cb0bc6972030ee90d74b2e4d0192b40ba940996daab84d71ba19ff",
+   "retrieved_at": "2026-11-01T14:17:44.906800Z"
+  },
+  "https://www.bjelland-as.no/index.php/kontakt/kontaktpersoner/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9adc6026891d0787.html.gz",
+   "content_sha256": "9adc6026891d078771eaa22a3bce96b2816336ba09f52ec43c0a149f1862439f",
+   "retrieved_at": "2026-11-01T14:17:46.669603Z"
+  },
+  "https://www.bjelland-as.no/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "c6e85bae73c828bb.html.gz",
+   "content_sha256": "c6e85bae73c828bbfb34cc3132dff91d1f8798475cad9cface4f92f823134904",
+   "retrieved_at": "2026-11-01T14:17:47.459968Z"
+  },
+  "https://www.bjelland-as.no/nyheter/": {
+   "kind": "site",
+   "status": 200,
+   "file": "427c31de44496ef2.html.gz",
+   "content_sha256": "427c31de44496ef28bf2b58aabb008abb2debb7d25133c2fd6b318b394666575",
+   "retrieved_at": "2026-11-01T14:17:52.173768Z"
+  },
+  "https://www.bjelland-as.no/jobbe-hos-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "4620f309fbad3fe0.html.gz",
+   "content_sha256": "4620f309fbad3fe036e868dbbf1fc33855042235b611c477004bd072d16f492d",
+   "retrieved_at": "2026-11-01T14:17:52.893299Z"
+  }
+ }
+}

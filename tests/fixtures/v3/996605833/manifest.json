@@ -1,0 +1,185 @@
+{
+ "organisation_number": "996605833",
+ "name": "BETONMAST OSLO AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.betonmast.no/",
+  "retrieved_at": "2026-11-01T14:18:03.059392Z",
+  "value": {
+   "requested_url": "https://www.betonmast.no/",
+   "final_url": "https://www.betonmast.no/",
+   "registered_domain": "betonmast.no",
+   "title": "En av Norges største byggentreprenører | Betonmast",
+   "description": "Betonmast er en erfaren byggentreprenør som reiser viktige bygg og møteplasser i lokalsamfunn i Norge og Sverige. Finn ut mer om oss her.",
+   "main_text_excerpt": "Sterkt konsern. Lokalt fokus.\nVi har et ansvar for å bidra til utviklingen av bærekraftige samfunn.\n                    Bli bedre kjent med oss",
+   "identity_text_excerpt": "Hva vi gjør Prosjekter Karriere Nyheter Betonposten Årsrapport Ledelsen Personvern/Cookies Betonmast AS Standardveien 1, 0581 Oslo Postboks 9416 Grønland, 0135 Oslo E-post: kontakt@betonmast.no Tlf: +47 22 17 54 80",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://www.betonmast.no/#organization",
+     "name": "Betonmast",
+     "url": "https://www.betonmast.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "nb-NO",
+      "@id": "https://www.betonmast.no/#/schema/logo/image/",
+      "url": "https://www.betonmast.no/wp-content/uploads/2022/12/logo-betonmast-sort-gul.svg",
+      "contentUrl": "https://www.betonmast.no/wp-content/uploads/2022/12/logo-betonmast-sort-gul.svg",
+      "caption": "Betonmast"
+     },
+     "image": {
+      "@id": "https://www.betonmast.no/#/schema/logo/image/"
+     }
+    }
+   ],
+   "content_sha256": "10e5f47ff6da2c38777eab28de184d36be6b7fa7a4dd7b4d4e5f81b672895807",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.betonmast.no/",
+     "title": "En av Norges største byggentreprenører | Betonmast",
+     "main_text_excerpt": "Sterkt konsern. Lokalt fokus.\nVi har et ansvar for å bidra til utviklingen av bærekraftige samfunn.\n                    Bli bedre kjent med oss",
+     "content_sha256": "10e5f47ff6da2c38777eab28de184d36be6b7fa7a4dd7b4d4e5f81b672895807"
+    },
+    {
+     "url": "https://www.betonmast.no/om-oss/ledelsen/",
+     "title": "Ledelsen | Betonmast",
+     "main_text_excerpt": "Konsernsjef\nCFO\nKonserndirektør\nKonserndirektør",
+     "identity_text_excerpt": "Hva vi gjør Prosjekter Karriere Nyheter Betonposten Årsrapport Ledelsen Personvern/Cookies Betonmast AS Standardveien 1, 0581 Oslo Postboks 9416 Grønland, 0135 Oslo E-post: kontakt@betonmast.no Tlf: +47 22 17 54 80",
+     "content_sha256": "c9783d197c68dffc529917e0092bcd5aac56abbb90fd2c118e7264ad114e14cd"
+    },
+    {
+     "url": "https://www.betonmast.no/kontakt-oss/",
+     "title": "Kontakt oss | Betonmast",
+     "main_text_excerpt": "Kontaktinformasjon hovedkontor:\nStandardveien 1, 0581 Oslo\nPostboks 9416 Grønland, 0135 Oslo\nTlf.: +47 22 17 54 80\nE-post: kontakt@betonmast.no",
+     "identity_text_excerpt": "Hva vi gjør Prosjekter Karriere Nyheter Betonposten Årsrapport Ledelsen Personvern/Cookies Betonmast AS Standardveien 1, 0581 Oslo Postboks 9416 Grønland, 0135 Oslo E-post: kontakt@betonmast.no Tlf: +47 22 17 54 80",
+     "content_sha256": "eebbafe5c942cfa7949abba4e9b1b5ab3164acb6dc48434682979e266b47290b"
+    },
+    {
+     "url": "https://www.betonmast.no/kontakt-oss/",
+     "title": "Kontakt oss | Betonmast",
+     "main_text_excerpt": "Kontaktinformasjon hovedkontor:\nStandardveien 1, 0581 Oslo\nPostboks 9416 Grønland, 0135 Oslo\nTlf.: +47 22 17 54 80\nE-post: kontakt@betonmast.no",
+     "identity_text_excerpt": "Hva vi gjør Prosjekter Karriere Nyheter Betonposten Årsrapport Ledelsen Personvern/Cookies Betonmast AS Standardveien 1, 0581 Oslo Postboks 9416 Grønland, 0135 Oslo E-post: kontakt@betonmast.no Tlf: +47 22 17 54 80",
+     "content_sha256": "68d7a4e3804690202b738ebd0df0d038ffc066e6376bff8fea8cf4e37f41b66f"
+    },
+    {
+     "url": "https://www.betonmast.no/nyheter/",
+     "title": "Nyheter - Betonmast",
+     "main_text_excerpt": "Rikke Thorkildsen dokumenterer fremdriften på et boligprosjekt til over 560 millioner kroner. Deltidsjobben i Betonmast kombinerer hun med to utdanninger og fotballsatsing i Strømsgodset.\nBetonmast Buskerud-Vestfold tester en menneskelignende robot på boligprosjektet Slippen i Drammen. Roboten er den første av sitt slag i norsk byggebransje og skal først og fremst brukes til å følge fremdriften på byggeplassen.\nBetonmast Trøndelag har signert kontrakt med Orkangerveien AS, eid av Thon Gruppen og Coop NordVest, om oppføring av et nytt handelsbygg på Laksøra i Orkanger. Kontrakten er en totalentreprise med en kontraktsum på om lag 46 millioner kroner ekskl. mva.\nBetonmast Asker og Bærum har signert en tilleggsavtale om oppføring av en ny fotballhall for Lier IL. Avtalen har en verdi på rundt 50 millioner kroner, ekskl. mva.\nBetonmast Oslo har inngått samspillsavtale med Oslotech for rehabiliteringen av Bygg E i Forskningsparken.\nBetonmast Røsand har inngått kontrakt med Nardo Bil Eiendom Kr.sund AS om bygging av ny bilbutikk og karosseriverksted i Kristiansund.\nFem år etter at Betonmast Eiendom inngikk avtale om utviklingen av et nytt sentrum i Nittedal, har prosjektet fått navn. Mo Bruk skal bli et nytt nabolag med boliger, næring og møteplasser – med utgangspunkt i historien rundt Mo gård.\nDer det tidligere var parkering, strekker parken seg nå helt frem til det nye kontorbygget på Værste i Fredrikstad. Betonmast Østfold har overlevert VT3 til Værste AS, med flere løsninger som bidrar til å redusere klima- og miljøbelastningen.",
+     "identity_text_excerpt": "Stikkord: biolog , miljøstrategi , natur , naturmangfold , økologi Stikkord: Bolig , Folksom , Næring , rehabilitering , Tønsberg Hva vi gjør Prosjekter Karriere Nyheter Betonposten Årsrapport Ledelsen Personvern/Cookies Betonmast AS Standardveien 1, 0581 Oslo Postboks 9416 Grønland, 0135 Oslo E-post: kontakt@betonmast.no Tlf: +47 22 17 54 80",
+     "content_sha256": "5cab9e235565de56b7bd447b7db2c3d19b9c51c41f90b9006dc1e28f95463a83"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "betonmast",
+     "oslo"
+    ],
+    "matched_tokens": [
+     "betonmast",
+     "oslo"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "10e5f47ff6da2c38777eab28de184d36be6b7fa7a4dd7b4d4e5f81b672895807",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/996605833": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "bcfc97165de74c3c.json.gz",
+   "content_sha256": "bcfc97165de74c3c1b573c1e184071a2e5acf1d77efdd00cdffa352180f4d065",
+   "retrieved_at": "2026-11-01T14:17:48.477422Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/996605833": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "097344e7e76f0eb6.json.gz",
+   "content_sha256": "097344e7e76f0eb6e691888b78350f344e517d643112f67d317ec9772ab09cc0",
+   "retrieved_at": "2026-11-01T14:17:49.189356Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/996605833/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6cbc4de08622f19e.json.gz",
+   "content_sha256": "6cbc4de08622f19e44a7ec1ed1005754cb4019f444351524c0d160d44073b935",
+   "retrieved_at": "2026-11-01T14:17:51.723144Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/996605833": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "55866617e8146f42.json.gz",
+   "content_sha256": "55866617e8146f42318005be8e327ccaa5fdccba473fec659abc8bebb66d3512",
+   "retrieved_at": "2026-11-01T14:17:50.294266Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=996605833&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "dbcc1d5369306c20.json.gz",
+   "content_sha256": "dbcc1d5369306c20a28401bc51f7fd4e9d3148fd7f28b3f0f0219577fca6cf79",
+   "retrieved_at": "2026-11-01T14:17:51.047406Z"
+  },
+  "https://www.betonmast.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "eb8f68487ebc23dd.html.gz",
+   "content_sha256": "eb8f68487ebc23dda4f42119f40ee4f9c1c46361bab871474b6b293fec1f5f75",
+   "retrieved_at": "2026-11-01T14:17:34.616963Z"
+  },
+  "https://www.betonmast.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "60f9185d54cf954a.html.gz",
+   "content_sha256": "60f9185d54cf954addf5be9005174886d03e493406ddb85956bbefa7d63edf71",
+   "retrieved_at": "2026-11-01T14:17:35.724979Z"
+  },
+  "https://www.betonmast.no/kontakt-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "3987a8238bd6744b.html.gz",
+   "content_sha256": "3987a8238bd6744bbdb1213cf33679b095c1f759dd0d99b5b1fc9ff1999271b0",
+   "retrieved_at": "2026-11-01T14:17:37.630441Z"
+  },
+  "https://www.betonmast.no/nyheter/": {
+   "kind": "site",
+   "status": 200,
+   "file": "865847204c6e65e6.html.gz",
+   "content_sha256": "865847204c6e65e618dbef1a83569aae704c56958a305b43b92cad8cbfb238a6",
+   "retrieved_at": "2026-11-01T14:18:05.215634Z"
+  },
+  "https://www.betonmast.no/karriere/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9f4924bd74121072.html.gz",
+   "content_sha256": "9f4924bd74121072130fc96f25da3a368b8538b3f353feb6bea70a3326822bf0",
+   "retrieved_at": "2026-11-01T14:18:06.201358Z"
+  },
+  "https://www.betonmast.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "a46cf46d7c289240.xml.gz",
+   "content_sha256": "a46cf46d7c2892405f7c37c74c21416c04ebc53f926195d79e219e5af528bbf1",
+   "retrieved_at": "2026-11-01T14:18:04.121244Z"
+  }
+ }
+}

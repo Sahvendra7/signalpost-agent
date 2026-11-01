@@ -1,0 +1,301 @@
+{
+ "organisation_number": "980932834",
+ "name": "BARTEC AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://bartec.com/",
+  "retrieved_at": "2026-11-01T14:18:27.315431Z",
+  "value": {
+   "requested_url": "https://www.bartec-technor.no/",
+   "final_url": "https://bartec.com/",
+   "registered_domain": "bartec.com",
+   "title": "Home - Bartec",
+   "description": "",
+   "main_text_excerpt": "Explosion Protection Since 1975\nSafety beyond protection\nBARTEC is your global partner and a leading expert offering explosion protection, resilience, efficiency and prosperity to hazardous areas.\nOur mission is protecting people, the environment, and assets under our strong purpose: ‘’To protect what is most important.’’\nBARTEC specializes in cutting-edge, globally certified products, offering one of the most extensive portfolios in the industry. We provide reliable standalone solutions, a worldwide service and sales network, tailored innovations, and large-scale customized solutions across many industries we focus on:\nOil and gas\nChemical\nPharmaceutical\nEnergy\nManufacturing and Logistics\nHydrogen\nFood and Beverages\nBARTEC Academy\nAt BARTEC Academy, we offer world-class education tailored to\nengineers, operators, inspectors, and decision-makers in hazardous\nindustries.\nDiscover more about unique explosion-protection trainings that provide answers to the most important questions. You can choose between basic and advanced options, but also between physical and online seminars for gaining practical knowledge.",
+   "identity_text_excerpt": "Industries Company Products Solutions Careers Service and Support Contact Back to top Social Media Imprint Privacy Policy Terms Cookie settings 沪ICP备17049304号 © 2026 BARTEC Top Holding GmbH",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bartecgroup1975"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bartec.one"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bartec-company-1975"
+    },
+    {
+     "platform": "tiktok",
+     "url": "https://tiktok.com/@bartec.one"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@BARTECglobal"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://bartec.com/#organization",
+     "name": "Bartec",
+     "url": "https://bartec.com",
+     "logo": {
+      "@type": "ImageObject",
+      "@id": "https://bartec.com/#logo",
+      "url": "https://bartec.com/wp-content/uploads/2025/12/bartec_logo_white.svg-fill.svg",
+      "contentUrl": "https://bartec.com/wp-content/uploads/2025/12/bartec_logo_white.svg-fill.svg",
+      "caption": "Bartec",
+      "inLanguage": "en-US"
+     },
+     "foundingDate": "1975",
+     "legalName": "Safety Global Lux S.a.r.l. (Bartec)"
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "Organization",
+     "@id": "https://bartec.com/#organization",
+     "name": "BARTEC",
+     "url": "https://bartec.com/",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Max-Eyth-Straße 16",
+      "postalCode": "97980",
+      "addressLocality": "Bad Mergentheim",
+      "addressCountry": "DE"
+     },
+     "contactPoint": [
+      {
+       "@type": "ContactPoint",
+       "contactType": "general inquiries",
+       "url": "https://bartec.com/general-contact/EN",
+       "inLanguage": "en"
+      },
+      {
+       "@type": "ContactPoint",
+       "contactType": "general inquiries",
+       "url": "https://bartec.com/de/kontakt/DE",
+       "inLanguage": "de"
+      }
+     ]
+    }
+   ],
+   "content_sha256": "665b28fde9772a3337a96ac7945752bc156d0275d42c86b29d6b8412a6046922",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://bartec.com/",
+     "title": "Home - Bartec",
+     "main_text_excerpt": "Explosion Protection Since 1975\nSafety beyond protection\nBARTEC is your global partner and a leading expert offering explosion protection, resilience, efficiency and prosperity to hazardous areas.\nOur mission is protecting people, the environment, and assets under our strong purpose: ‘’To protect what is most important.’’\nBARTEC specializes in cutting-edge, globally certified products, offering one of the most extensive portfolios in the industry. We provide reliable standalone solutions, a worldwide service and sales network, tailored innovations, and large-scale customized solutions across many industries we focus on:\nOil and gas\nChemical\nPharmaceutical\nEnergy\nManufacturing and Logistics\nHydrogen\nFood and Beverages\nBARTEC Academy\nAt BARTEC Academy, we offer world-class education tailored to\nengineers, operators, inspectors, and decision-makers in hazardous\nindustries.\nDiscover more about unique explosion-protection trainings that provide answers to the most important questions. You can choose between basic and advanced options, but also between physical and online seminars for gaining practical knowledge.",
+     "content_sha256": "665b28fde9772a3337a96ac7945752bc156d0275d42c86b29d6b8412a6046922"
+    },
+    {
+     "url": "https://bartec.com/company/about-bartec/",
+     "title": "About BARTEC - Bartec",
+     "main_text_excerpt": "Welcome to the BARTEC Group\nSafety beyond protection\nBARTEC is your global partner and a leading expert in explosion protection and safety technology in hazardous areas. Our explosion protection products and solutions protect people, the environment, and assets – every single day, providing safety beyond protection.\nOil and gas\nChemical\nPharmaceutical\nEnergy\nManufacturing and Logistics\nHydrogen\nFood and Beverages\nBARTEC key advantages\nWhat began in 1975 with the invention of a small explosion-proof switch for gasoline pumps has evolved over the past five decades into a success story that sets global standards. BARTEC’s story is based on 50 years of the utmost reliability and experience in explosion protection.\nToday, the digital transformation has reached the Ex zone, and we are once again creating more possibilities for our customers. We do this without compromising on safety. BARTEC focuses on innovative, globally certified products; we deliver one of the broadest product portfolios on the market; we ensure proven standalone solutions, a global service and sales network, customized developments, and large-scale customized solutions.\nBARTEC is your global partner for hazardous areas\nBARTEC is a specialist in explosion protection and safety technology that sets global standards - always committed to the BARTEC purpose: Protecting what is most important.\nWe provide our solutions and products globally, and we are present in all global regions: CENE, SEMEIA, SNAM and APAC.\nBARTEC currently has more than 1000 employees globally, with 11 production sites and more than 50 subsidiaries across the world.\nOur BARTEC production sites are in: Bad Mergentheim (Headquarter), Gotteszell, Reinbek (Germany); Cheshire (United Kingdom); Milano, Moraro (Italy); Sandnes (Norway); Zagorje ob Savi (Slovenia); Al Khobar (Saudi Arabia); Pinghu (China) and Chicago (USA).\nOur business units\nIn tune with the requirements of our customers\nWe seek to support our customers: from problem to solution. This requires a deep understanding of the industries and the specific requirements of explosion protection, which is why BARTEC focuses its experience and expertise in four business units. This functional structuring permits proven precision solutions, as well as customized solutions for special requirements.\nOur comprehensive product range extends from complex measurement and analysis technology through innovative heating technology solutions to explosion-protected components and systems for automation, control, and regulation, as well as communication.\nIn addition, our development teams have decades of experience in finding the right solution to each and every technical challenge.\nElectrical safety systems & Enterprise Mobility (ESS)\nThe ESS business unit delivers integrated electrical safety, connectivity, and enterprise mobility solutions for hazardous areas worldwide\nAs a trusted partner, we support customers with a broad range of standardized products and engineered solutions for critical electrical infrastructure, including Distribution Panels, Uninterruptible Power Supply (UPS) systems, Low Voltage (LV) assemblies and Ring Main Units (RMUs), alongside explosion-protected equipment, industrial communication technologies, IIoT capabilities and intrinsically safe mobile computing devices.\nBy combining expertise in power distribution, hazardous area protection, and digital connectivity, we help customers ensure safe, reliable, and efficient operations. Our solutions support the control, monitoring and distribution of power, enable seamless communication across industrial environments and provide field personnel with secure access to critical information and applications.\nWe work with many of the world’s leading end users, EPCs, and OEMs, supporting complex and safety-critical projects across industries such as Oil & Gas, Energy, Pharma, Chemicals and Logistics. Backed by decades of engineering expertise, global service capabilities, and full compliance with international safety standards, we deliver value throughout the entire project lifecycle—from design and implementation to long-term operation and support.\nElectric heating technology (EHT)\nOur heat-tracing solutions keep pipes frost-free, support production processes, and help to warm up critical materials.\nElectric heat tracing is the most efficient type of heating: the energy can be transported anywhere with almost no loss. If maintenance work becomes necessary, all areas are easily accessible and the heating system can be serviced effortlessly after switching it off. Electric heat tracers are easy to design and simple to install.\nProcess analyzer technology (PAT)\nOur division provides customized engineering solutions with a full suite of physical property analyzers, accessories, and analyzer shelters.\nWe work closely with our customers to create innovative, efficient solutions that set new standards in analyzer technology. We tailor each system to meet the specific process needs o",
+     "identity_text_excerpt": "Industries Company Products Solutions Careers Service and Support Contact Back to top Social Media Imprint Privacy Policy Terms Cookie settings 沪ICP备17049304号 © 2026 BARTEC Top Holding GmbH",
+     "content_sha256": "7737f84e0dcab6150a1032172e5ff913b42182d0d865a9c1e528ee7e5c249bde"
+    },
+    {
+     "url": "https://bartec.com/general-contact/",
+     "title": "General Contact - Bartec",
+     "main_text_excerpt": "Do you need more information?\nEnter your contact details in this form and we will get back to you.\nNeed Support?\nFind your local BARTEC contact person.",
+     "identity_text_excerpt": "Industries Company Products Solutions Careers Service and Support Contact Back to top Social Media Imprint Privacy Policy Terms Cookie settings 沪ICP备17049304号 © 2026 BARTEC Top Holding GmbH",
+     "content_sha256": "4a5dbdd3ddf397bd2c42adf8788c190d324c281fd86ea4fce600eccde1deae7f"
+    },
+    {
+     "url": "https://bartec.com/general-contact/",
+     "title": "General Contact - Bartec",
+     "main_text_excerpt": "Do you need more information?\nEnter your contact details in this form and we will get back to you.\nNeed Support?\nFind your local BARTEC contact person.",
+     "identity_text_excerpt": "Industries Company Products Solutions Careers Service and Support Contact Back to top Social Media Imprint Privacy Policy Terms Cookie settings 沪ICP备17049304号 © 2026 BARTEC Top Holding GmbH",
+     "content_sha256": "4a5dbdd3ddf397bd2c42adf8788c190d324c281fd86ea4fce600eccde1deae7f"
+    },
+    {
+     "url": "https://bartec.com/company/quality-management/",
+     "title": "Quality Management - Bartec",
+     "main_text_excerpt": "Quality and Safety are Our Business\nQuality management at BARTEC\nBARTEC‘s operational processes are aligned with its corporate aims: achieving the highest levels of quality and reliability, ensuring comprehensive occupational safety, and taking into account environmental and health protection goals.\nIn addition to systematic quality management, BARTEC also pursues consistent occupational safety, health, energy, and environmental protection management for processes and services. This integrated management system is a natural part of all our business activities.\nNot only the ideas and activities of a select few are important. Instead, all BARTEC employees are called upon to actively contribute to BARTEC‘s continuous improvement.\nThe integrated management handbook produced for this purpose describes all organizational procedures and responsibilities. It also includes references to the appropriate internal guidelines for all quality-relevant, environmentally relevant, and safety-relevant activities and processes.\nThrough the quality, safety, and environmental management systems described in this handbook, BARTEC’s leadership ensures an appropriate and consistently high level of quality, safety, and environmental protection for our products, processes, systems, and services.\nAll BARTEC practices, products, and solutions comply with key national and international standards and guidelines.\nMax-Eyth-Str. 16\n97980 Bad Mergentheim\nMax-Eyth-Str. 16\n97980 Bad Mergentheim\nLindenthaler Hauptstr. 145\n04158 Leipzig\nSchulstr. 30\n94239 Gotteszell\nBorsigstr. 10\n21465 Reinbek\nVestre Svanholmen 24\n4313 Stavanger\nNorway\nTennvägen 1\n371 50 Karlskrona\nSweden\nCesta 9. avgusta 59\n1410 Zagorje ob Savi\nSlovenia\nvia Carducci, 16\n34070 Moraro (GO)\nItaly\nvia Mario Pagano, 3\n20090 Trezzano sul Naviglio\nItaly\n4724 South Christiana\nChicago IL 60632\nUSA\nJafza 19 Building Office No. 1506 & 1507\nP.O. Box 17830\nJebel Ali Free Zone\nDubai\nUnited Arab Emirates\nBuilding N°3501\nHussain Bin Ali Street\nQatif Industrial Area\n3685 AL KHOBAR\nSaudi Arabia\nC56/45, 1st Floor, Priska Tower\nSector 62\nNoida, Uttar Pradesh 201309\nIndia\n63 Hillview Avenue\n#07-18 to #07-/23 Lam Soon Industrial Building\nSingapore 669569\nSingapore\nNew Building 7\nNo 188 Xinjung Ring Rd.\nCaohejing Pujiang Hi-tech park\nMinhang District, Shanghai\nChina\n#4 plant no. 1555 Xingping Fourth Road\n314299 Jiaxing Zhejiang\nChina",
+     "identity_text_excerpt": "Industries Company Products Solutions Careers Service and Support Contact Back to top Social Media Imprint Privacy Policy Terms Cookie settings 沪ICP备17049304号 © 2026 BARTEC Top Holding GmbH",
+     "content_sha256": "ae8cd6eaf62a0e5380f40d5cff09e843a36c43b51e400ba5911af0742a6a1edb"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bartec"
+    ],
+    "matched_tokens": [
+     "bartec"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bartecgroup1975"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bartec.one"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bartec-company-1975"
+    },
+    {
+     "platform": "tiktok",
+     "url": "https://tiktok.com/@bartec.one"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@BARTECglobal"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bartecgroup1975",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bartec"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bartec.one",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bartec"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bartec-company-1975",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bartec"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "tiktok",
+     "url": "https://tiktok.com/@bartec.one",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bartec"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@BARTECglobal",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bartec"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "665b28fde9772a3337a96ac7945752bc156d0275d42c86b29d6b8412a6046922",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/980932834": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "043193f9b38c7488.json.gz",
+   "content_sha256": "043193f9b38c74889fd889c2e7f6b93500c46f3aa7b88cbd3de69d8f0e45cc2e",
+   "retrieved_at": "2026-11-01T14:18:11.194078Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/980932834": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "c023ac4595171fbe.json.gz",
+   "content_sha256": "c023ac4595171fbe25aff6621606dc47b304f0ea05e86a099e53606a5c8d97f6",
+   "retrieved_at": "2026-11-01T14:18:11.935242Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/980932834/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "bde7380929b0354a.json.gz",
+   "content_sha256": "bde7380929b0354a4a814de15c7b6b975328ef4450ec36e2e9e60a453b491663",
+   "retrieved_at": "2026-11-01T14:18:14.104056Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/980932834": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:18:12.648504Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=980932834&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "ea87cbc09fba8ee5.json.gz",
+   "content_sha256": "ea87cbc09fba8ee541f8db2b92428f8a127b007856f8faac840e8eaaa2d948dc",
+   "retrieved_at": "2026-11-01T14:18:13.390147Z"
+  },
+  "https://bartec.com/": {
+   "kind": "site",
+   "status": 200,
+   "file": "665b28fde9772a33.html.gz",
+   "content_sha256": "665b28fde9772a3337a96ac7945752bc156d0275d42c86b29d6b8412a6046922",
+   "retrieved_at": "2026-11-01T14:18:29.006867Z"
+  },
+  "https://bartec.com/company/about-bartec/": {
+   "kind": "site",
+   "status": 200,
+   "file": "7737f84e0dcab615.html.gz",
+   "content_sha256": "7737f84e0dcab6150a1032172e5ff913b42182d0d865a9c1e528ee7e5c249bde",
+   "retrieved_at": "2026-11-01T14:18:30.065237Z"
+  },
+  "https://bartec.com/general-contact/": {
+   "kind": "site",
+   "status": 200,
+   "file": "4a5dbdd3ddf397bd.html.gz",
+   "content_sha256": "4a5dbdd3ddf397bd2c42adf8788c190d324c281fd86ea4fce600eccde1deae7f",
+   "retrieved_at": "2026-11-01T14:18:31.220791Z"
+  },
+  "https://bartec.com/company/magazine/": {
+   "kind": "site",
+   "status": 200,
+   "file": "74e68cbcb135e257.html.gz",
+   "content_sha256": "74e68cbcb135e257a1b0ce86e279ae8d18e99a5bdf2453f13e2cf9e36e961d64",
+   "retrieved_at": "2026-11-01T14:18:33.052460Z"
+  },
+  "https://bartec.com/careers/": {
+   "kind": "site",
+   "status": 200,
+   "file": "cbb61945107b619d.html.gz",
+   "content_sha256": "cbb61945107b619ddbc165107a76152b3f8d9fa286ffb03d8b11d30678fea2bb",
+   "retrieved_at": "2026-11-01T14:18:33.951659Z"
+  }
+ }
+}

@@ -1,0 +1,202 @@
+{
+ "organisation_number": "936269044",
+ "name": "BIRRALEE INTERNATIONAL SCHOOL TRONDHEIM AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.birralee.no/",
+  "retrieved_at": "2026-11-01T14:18:19.035793Z",
+  "value": {
+   "requested_url": "https://www.birralee.no/",
+   "final_url": "https://www.birralee.no/",
+   "registered_domain": "birralee.no",
+   "title": "International | Birralee International School Trondheim | Norway",
+   "description": "International School Trondheim. Birralee International School Trondheim provides an English-speaking education for children aged 3-16 living in Trondheim.",
+   "main_text_excerpt": "Welcome to Birralee!\nBirralee International School Trondheim provides an English-speaking education for children aged 3-16 living in Trondheim, central Norway.\nThe Australian founder gave the school the name ‘Birralee’ meaning a ‘safe place for children’ – we provide a stimulating and secure learning environment in which we value each child as an individual.\nBeyond the academic challenge, students who join the school will find a friendly and welcoming school environment, allowing them to thrive and succeed.\n300 students, 50 nationalities, 50 staff,\nOne Community.\nMrs Elin J. Hitchman\nPrincipal, Birralee International School Trondheim\nCambridge International School\nWe offer an English medium curriculum which is motivating and challenging. Being approved by the Education Directorate in Norway, as well as having international recognition, our curriculum offers students the opportunity to experience an international education in a local context.\nA Cambridge Education prepares students for life, helping them develop an informed curiosity and a lasting passion for learning.\nCambridge students develop the skills they need to achieve at school, university and work.It is taken in over 140 countries and in more than 4500 schools around the world.\nCome and discover Birralee\nChoosing a school is about finding a place where your child can belong, grow and enjoy learning.\nWe welcome families from Norway and around the world. Arrange a visit to meet us, see our learning environment and talk about what matters to your family. If you are currently abroad, we can arrange a digital meeting.\nWe admit children from both Norway and abroad. The school is open to all children who fulfil the criteria to be enrolled in Norwegian Public schools.\nThanks to state support, we are able to offer reduced school fees to our parents. The monthly fees for 2026 are set to 3.280 - 3.733 NOK. Approximately 300 EURO per month.\nWe encourage parents to get in touch with us as soon as you know that you might be moving to Trondheim.\nWe are happy to organise a tour for you and your child of the school. For families who are still abroad, we can organise a digital meeting to answer any questions you may have.\nContact us\nTo request more information or to schedule a visit:\nPlease contact the School Office\nFor all inquiries, please call our School Office between 8.30 - 15:30:\n+47 73 87 02 60\nBispegata 9c\n7012 Trondheim\nNorway",
+   "identity_text_excerpt": "Birralee International School Bispegate 9c 7012 Trondheim ​ Learning Kindergarten IPC (Year 1 - Year 5) IMYC (Year 6 - Year 8 ) IGCSE (Year 9 - Year 10) Thriving After School Programme After School Clubs School Environment §12 Safeguarding Our Community News Calendar Parents Board School Health Service Policies Careers Getting here Join Us! Application Form School Fees FAQ Bus Card Application GDPR - Data Protection Everyone Included Everyone challenged Everyone successful",
+   "social_links": [
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/birralee_internationalschool"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "3aefef38918e82f69ac499ccf257b46d5731decb2d344a1c22f2f4437f4edf05",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.birralee.no/",
+     "title": "International | Birralee International School Trondheim | Norway",
+     "main_text_excerpt": "Welcome to Birralee!\nBirralee International School Trondheim provides an English-speaking education for children aged 3-16 living in Trondheim, central Norway.\nThe Australian founder gave the school the name ‘Birralee’ meaning a ‘safe place for children’ – we provide a stimulating and secure learning environment in which we value each child as an individual.\nBeyond the academic challenge, students who join the school will find a friendly and welcoming school environment, allowing them to thrive and succeed.\n300 students, 50 nationalities, 50 staff,\nOne Community.\nMrs Elin J. Hitchman\nPrincipal, Birralee International School Trondheim\nCambridge International School\nWe offer an English medium curriculum which is motivating and challenging. Being approved by the Education Directorate in Norway, as well as having international recognition, our curriculum offers students the opportunity to experience an international education in a local context.\nA Cambridge Education prepares students for life, helping them develop an informed curiosity and a lasting passion for learning.\nCambridge students develop the skills they need to achieve at school, university and work.It is taken in over 140 countries and in more than 4500 schools around the world.\nCome and discover Birralee\nChoosing a school is about finding a place where your child can belong, grow and enjoy learning.\nWe welcome families from Norway and around the world. Arrange a visit to meet us, see our learning environment and talk about what matters to your family. If you are currently abroad, we can arrange a digital meeting.\nWe admit children from both Norway and abroad. The school is open to all children who fulfil the criteria to be enrolled in Norwegian Public schools.\nThanks to state support, we are able to offer reduced school fees to our parents. The monthly fees for 2026 are set to 3.280 - 3.733 NOK. Approximately 300 EURO per month.\nWe encourage parents to get in touch with us as soon as you know that you might be moving to Trondheim.\nWe are happy to organise a tour for you and your child of the school. For families who are still abroad, we can organise a digital meeting to answer any questions you may have.\nContact us\nTo request more information or to schedule a visit:\nPlease contact the School Office\nFor all inquiries, please call our School Office between 8.30 - 15:30:\n+47 73 87 02 60\nBispegata 9c\n7012 Trondheim\nNorway",
+     "content_sha256": "3aefef38918e82f69ac499ccf257b46d5731decb2d344a1c22f2f4437f4edf05"
+    },
+    {
+     "url": "https://www.birralee.no/contact",
+     "title": "Getting here | Birralee International School Trondheim | Norway",
+     "main_text_excerpt": "Centrally Located\nBirralee is located in the heart of Trondheim, close to the medieval Nidaros Cathedral, NTNU and St Olav's hospital.\nWe take full advantage of all the opportunities Trondheim has to offer: museums, libraries, nearby parks, recreation areas, running tracks, climbing walls and swimming pools. In addition to this, the great Norwegian outdoors is only a ten minute bus ride away from school.\nGetting here\nMany of our students use public transportation to get to school. It is common in Norway for students as young as Year 1 or 2 to take the bus by themselves, depending on their level of maturity.\nDuring the summer months many of our older students cycle to school, taking advantage of all the new cycling lanes recently constructed by the City of Trondheim.\nSchool Transportation\nAccording to Norwegian Law (Act of Private Schools § 7-3), students in Year 2 (2.trinn) and up (barne-og ungdomsskole) are entitled to free transportation to and from school if they live more than 4 km away from school. For children in Year 1 (1. trinn) the required distance is 2 km. If you live outside of Trondheim Kommue different rules apply. Please contact our office for further clarification.\nParents can apply for other means of transportation if they are of the opinion that this student bus card is not sufficient in their situation. This request in the form of a letter can be sent to the school. We will then forward it to Sør Trøndelag Fylkeskommune who will make the decision.\nParents can also apply for free transportation if they are of the opinion that the road to school is too dangerous or difficult for their child to walk. This request in the form of a letter can be sent to the school. We will then forward it to Trondheim Kommune who will decide if the circumstances justify free transportation for the student. Please note that this request is only granted by Trondheim Kommune in very special cases as the roads around Birralee are considered safe and manageable by Trondheim Kommune.\nContact Us\nTo request more information or to schedule a visit:\nPlease contact the School Office\nFor all inquiries, please call our School Office between 8.30 - 15:30:\n+47 73 87 02 60",
+     "identity_text_excerpt": "Birralee International School Bispegate 9c 7012 Trondheim ​ Learning Kindergarten IPC (Year 1 - Year 5) IMYC (Year 6 - Year 8 ) IGCSE (Year 9 - Year 10) Thriving After School Programme After School Clubs School Environment §12 Safeguarding Our Community News Calendar Parents Board School Health Service Policies Careers Getting here Join Us! Application Form School Fees FAQ Bus Card Application GDPR - Data Protection Everyone Included Everyone challenged Everyone successful",
+     "content_sha256": "cf4554c60f45e57776d04d853ed0f619ba8ad19263a209ab45793479d61cc38a"
+    }
+   ],
+   "crawl_errors": [
+    {
+     "url": "https://www.birralee.no/news",
+     "error": "unsupported or oversized page"
+    }
+   ],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "birralee",
+     "international",
+     "school",
+     "trondheim"
+    ],
+    "matched_tokens": [
+     "birralee",
+     "international",
+     "school",
+     "trondheim"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Birralee"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/birralee_internationalschool"
+    },
+    {
+     "platform": "x",
+     "url": "https://x.com/Birralee1973"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Birralee",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "birralee"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/birralee_internationalschool",
+     "identity_score": 0.9,
+     "publishable": true,
+     "matched_tokens": [
+      "birralee",
+      "international",
+      "school"
+     ],
+     "reason": "most legal-name tokens appear in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "x",
+     "url": "https://x.com/Birralee1973",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "birralee"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "3aefef38918e82f69ac499ccf257b46d5731decb2d344a1c22f2f4437f4edf05",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/936269044": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "61439418baa6cc35.json.gz",
+   "content_sha256": "61439418baa6cc35f09a0356dd1ecd2ead66533bddb92e4f7c82b1a35b3c1258",
+   "retrieved_at": "2026-11-01T14:18:12.622410Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/936269044": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2ba008b412630e0c.json.gz",
+   "content_sha256": "2ba008b412630e0cf95d54e23c22ff2400bfbb33df7d7903dc4af1d5958aa8ef",
+   "retrieved_at": "2026-11-01T14:18:13.339046Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/936269044/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "9a6992750611564b.json.gz",
+   "content_sha256": "9a6992750611564b534566a23253ddad5965c778b62eed06725f79e591d25acf",
+   "retrieved_at": "2026-11-01T14:18:15.491972Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/936269044": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:18:14.056842Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=936269044&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "9a67a3de3663791a.json.gz",
+   "content_sha256": "9a67a3de3663791a738ca84b1a1fb530eb526d45cca243d674fc0e1254845364",
+   "retrieved_at": "2026-11-01T14:18:14.779379Z"
+  },
+  "https://www.birralee.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "3aefef38918e82f6.html.gz",
+   "content_sha256": "3aefef38918e82f69ac499ccf257b46d5731decb2d344a1c22f2f4437f4edf05",
+   "retrieved_at": "2026-11-01T14:18:19.686574Z"
+  },
+  "https://www.birralee.no/contact": {
+   "kind": "site",
+   "status": 200,
+   "file": "cf4554c60f45e577.html.gz",
+   "content_sha256": "cf4554c60f45e57776d04d853ed0f619ba8ad19263a209ab45793479d61cc38a",
+   "retrieved_at": "2026-11-01T14:18:20.078221Z"
+  },
+  "https://www.birralee.no/news": {
+   "kind": "site",
+   "status": 200,
+   "file": "e92cddc68372ad61.html.gz",
+   "content_sha256": "e92cddc68372ad61ec461ce32a3d51f29135b92992a90f11b6fa3cc851fee89e",
+   "retrieved_at": "2026-11-01T14:18:20.837529Z"
+  },
+  "https://www.birralee.no/careers": {
+   "kind": "site",
+   "status": 200,
+   "file": "d81dbabf358017dc.html.gz",
+   "content_sha256": "d81dbabf358017dc2324c7ac64ba900d73e7937ead062cdb0afe3af7217a9cfb",
+   "retrieved_at": "2026-11-01T14:18:21.140664Z"
+  },
+  "https://www.birralee.no/blog-feed.xml": {
+   "kind": "feed",
+   "status": 200,
+   "file": "78d89559583e9fa2.xml.gz",
+   "content_sha256": "78d89559583e9fa2795af3d943e3059aeb84ef7b0f6db534f1f63841f3c3be5f",
+   "retrieved_at": "2026-11-01T14:18:20.568690Z"
+  }
+ }
+}

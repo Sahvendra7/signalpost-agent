@@ -24,6 +24,7 @@ from .inputs import InputRow, mod11_valid, read_input_rows  # noqa: F401  (re-ex
 from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .privacy import redacting_fetcher
+from .provenance import code_version
 from .refresh import carry_forward, claim_changes
 from .status import company_status, identity_block
 from .synthesis import company_summary
@@ -601,6 +602,7 @@ def batch_report(
     count = len(envelopes) or 1
     return {
         "run_id": run_id,
+        "code_version": code_version(),
         "started_at": started_at,
         "completed_at": utc_now(),
         "runtime_ms": runtime_ms,

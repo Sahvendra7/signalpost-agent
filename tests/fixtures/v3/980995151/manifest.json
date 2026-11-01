@@ -1,0 +1,182 @@
+{
+ "organisation_number": "980995151",
+ "name": "BDT VIKEN AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://bdtviken.no/",
+  "retrieved_at": "2026-11-01T14:17:33.609861Z",
+  "value": {
+   "requested_url": "https://www.bdtviken.no/",
+   "final_url": "https://bdtviken.no/",
+   "registered_domain": "bdtviken.no",
+   "title": "Hjem - BDT Viken | Regnskap | Revisjon | Rådgivning",
+   "description": "",
+   "main_text_excerpt": "",
+   "identity_text_excerpt": "© Copyright - BDT Viken | Regnskap | Revisjon | Rådgivning - Enfold Theme by Kriesi Facebook LinkedIn",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bdtviken"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bdt-viken-revisjon-as"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "c44603136040a2c708f3ac8b20098b3d494045c0511b1896d8aa45ccc349dfb8",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://bdtviken.no/",
+     "title": "Hjem - BDT Viken | Regnskap | Revisjon | Rådgivning",
+     "main_text_excerpt": "",
+     "content_sha256": "c44603136040a2c708f3ac8b20098b3d494045c0511b1896d8aa45ccc349dfb8"
+    },
+    {
+     "url": "https://bdtviken.no/kontakt-oss/",
+     "title": "Kontakt oss - BDT Viken | Regnskap | Revisjon | Rådgivning",
+     "main_text_excerpt": "Administrasjon\nVestre Braarudgate 2, 3181 Horten\nTlf Regnskap: 33 02 06 20\nregnskap@bdtviken.no\nTlf Revisjon: 33 02 06 00\nrevisjon@bdtviken.no",
+     "identity_text_excerpt": "© Copyright - BDT Viken | Regnskap | Revisjon | Rådgivning - Enfold Theme by Kriesi Facebook LinkedIn",
+     "content_sha256": "d506b5668e975ad60cae3c18185a131dbc22d0e48862a839dde4853551d60006"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bdt",
+     "viken"
+    ],
+    "matched_tokens": [
+     "bdt",
+     "viken"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bdtviken"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bdt-viken-revisjon-as"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bdtviken",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bdt",
+      "viken"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bdt-viken-revisjon-as",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bdt",
+      "viken"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "c44603136040a2c708f3ac8b20098b3d494045c0511b1896d8aa45ccc349dfb8",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/980995151": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6abae5be099674a9.json.gz",
+   "content_sha256": "6abae5be099674a91964f3f90062fa89b96bb06f3ef721a945dcfe17c07301b7",
+   "retrieved_at": "2026-11-01T14:17:26.179541Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/980995151": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b14bd4b1d62c1a31.json.gz",
+   "content_sha256": "b14bd4b1d62c1a31fa357fd3de8e067422bf68c453a59a3d93151254e0a02116",
+   "retrieved_at": "2026-11-01T14:17:26.913626Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/980995151/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "dd96b71b00a5d6b4.json.gz",
+   "content_sha256": "dd96b71b00a5d6b4ef337ace6af35530f2e3656584afebe10866d6f9252552ae",
+   "retrieved_at": "2026-11-01T14:17:29.041311Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/980995151": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:27.651075Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=980995151&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "ce69f35cc407ab77.json.gz",
+   "content_sha256": "ce69f35cc407ab77d8d30513848de2655c4c24d1ae77d6a51ff30dab321adffd",
+   "retrieved_at": "2026-11-01T14:17:28.369923Z"
+  },
+  "https://bdtviken.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "c44603136040a2c7.html.gz",
+   "content_sha256": "c44603136040a2c708f3ac8b20098b3d494045c0511b1896d8aa45ccc349dfb8",
+   "retrieved_at": "2026-11-01T14:17:34.855225Z"
+  },
+  "https://bdtviken.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "d506b5668e975ad6.html.gz",
+   "content_sha256": "d506b5668e975ad60cae3c18185a131dbc22d0e48862a839dde4853551d60006",
+   "retrieved_at": "2026-11-01T14:17:35.620056Z"
+  },
+  "https://bdtviken.no/personvernerklaering/": {
+   "kind": "site",
+   "status": 200,
+   "file": "6fba15bb17ed7500.html.gz",
+   "content_sha256": "6fba15bb17ed7500a744c355e507b844e507396710a9800161a5c5ca7a2283b6",
+   "retrieved_at": "2026-11-01T14:17:39.246816Z"
+  },
+  "https://bdtviken.no/jobb-hos-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "14b19485e210caa9.html.gz",
+   "content_sha256": "14b19485e210caa9f7149b2934eeef647b704b963a0fedafdda40bc9fa51f830",
+   "retrieved_at": "2026-11-01T14:17:41.818584Z"
+  },
+  "https://bdtviken.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "bf8ab1a39c28684d.xml.gz",
+   "content_sha256": "bf8ab1a39c28684d41d2f0061c70c1a5c552d0dfd29b3e0a73ad3a3a255699d7",
+   "retrieved_at": "2026-11-01T14:17:41.258095Z"
+  }
+ }
+}

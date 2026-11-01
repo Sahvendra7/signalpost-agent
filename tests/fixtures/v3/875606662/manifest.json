@@ -1,0 +1,200 @@
+{
+ "organisation_number": "875606662",
+ "name": "KONGSVINGER IL ISHOCKEY",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://kilishockey.no/",
+  "retrieved_at": "2026-11-01T14:22:41.649907Z",
+  "value": {
+   "requested_url": "https://www.kilishockey.no/",
+   "final_url": "https://kilishockey.no/",
+   "registered_domain": "kilishockey.no",
+   "title": "Kilishockey",
+   "description": "Velkommen til KIL Ishockey! Følg med på kamper, nyheter og aktiviteter – og bli en del av vårt inkluderende hockeymiljø for hele familien.",
+   "main_text_excerpt": "Skip to content",
+   "identity_text_excerpt": "Kongsvinger IL Ishockey post@kilishockey.no © Kopibeskyttelse Kilishockey. Nettside laget av Guru Utvikling . Personvernerklæring. Facebook Kongsvinger IL Ishockey post@kilishockey.no © Kopibeskyttelse Kilishockey. Nettside laget av Guru Utvikling . Personvernerklæring. Facebook",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://kilishockey.no/#organization",
+     "name": "Kilishockey",
+     "url": "https://kilishockey.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "nb-NO",
+      "@id": "https://kilishockey.no/#/schema/logo/image/",
+      "url": "https://kilishockey.no/wp-content/uploads/2021/01/Logo_for_Kongsvinger_Idrettslag.png",
+      "contentUrl": "https://kilishockey.no/wp-content/uploads/2021/01/Logo_for_Kongsvinger_Idrettslag.png",
+      "width": 1200,
+      "height": 1180,
+      "caption": "Kilishockey"
+     },
+     "image": {
+      "@id": "https://kilishockey.no/#/schema/logo/image/"
+     }
+    }
+   ],
+   "content_sha256": "8c3aca296e687ce87774a6637dca88985d8339a2c5c4b8c138fcf9e323de7629",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://kilishockey.no/",
+     "title": "Kilishockey",
+     "main_text_excerpt": "Skip to content",
+     "content_sha256": "8c3aca296e687ce87774a6637dca88985d8339a2c5c4b8c138fcf9e323de7629"
+    },
+    {
+     "url": "https://kilishockey.no/kontakt-oss/",
+     "title": "Kontakt oss - Kilishockey",
+     "main_text_excerpt": "Skip to content",
+     "identity_text_excerpt": "Kongsvinger IL Ishockey post@kilishockey.no © Kopibeskyttelse Kilishockey. Nettside laget av Guru Utvikling . Personvernerklæring. Facebook Kongsvinger IL Ishockey post@kilishockey.no © Kopibeskyttelse Kilishockey. Nettside laget av Guru Utvikling . Personvernerklæring. Facebook",
+     "content_sha256": "21d1d2703c904f10fdaa66045d98983025350bd980430ad78346f9ca25f53402"
+    },
+    {
+     "url": "https://kilishockey.no/nyheter/",
+     "title": "Nyheter - Kilishockey",
+     "main_text_excerpt": "Onsdag kveld samlet Kongsvingers Golfklubb sine samarbeidspartnere til hockeykveld med pizza og oppsummering av årets golf-sesong på Liermoen. Daglig leder Daniel Larsson gikk gjennom året\nNummer 18 i våre hjerter, men nummer 8 for hele hockeyNorge. Det var med stor sorg vi mottok budskapet om Eirik Skadsdammens bortgang i går,\nDu kan ikke spille hockey alene🏒 På isen må du stole på at lagkameraten gjør jobben sin, at noen dekker ryggen din, at noen spiller\nLørdag 19/9 inviterer vi til en skikkelig hockeydag i Kongshallen. Først skal en av klubbens egne hedres når Kim Andre «Kimma» Fremming får sin testimonial-kamp.\n🎉 Endelig – sesongkortene for 2026/2027 er her! 🎉 Kongsvinger IL Ishockey er klare for en ny, heftig sesong, og vi vil ha DEG med på laget! 🔥\nKlubben inviterer til stor markering og pressekonferanse i Kongshallen ! Når A-laget åpner sesongen med sin første hjemmekamp i Kongshallen, vil det ikke bare\nJag har tackat ja till rollen som assisterande tränare eftersom jag tycker klubben är inne på en väldigt spännande resa. Det finns en tydlig satsning\nPRESSEMELDING!Kongsvinger IL Ishockey etablerer sportslig utvalg Kongsvinger IL Ishockey tar et viktig steg i videreutviklingen av klubbens sportslige satsing ved å etablere et eget sportslig\nSesongavslutning 2025/2026 Kjære alle rødhvite Kongsvinger IL Ishockey venner Når vi nå setter punktum for sesongen 2025/2026, gjør vi det med stolthet over det som\n-Jeg er stolt over å kunne få muligheten av klubben til å fortsette som hovedtrener! Klubben utvikles, lagene utvikles og i samme slengen får jeg",
+     "identity_text_excerpt": "Kongsvinger IL Ishockey post@kilishockey.no © Kopibeskyttelse Kilishockey. Nettside laget av Guru Utvikling . Personvernerklæring. Facebook Kongsvinger IL Ishockey post@kilishockey.no © Kopibeskyttelse Kilishockey. Nettside laget av Guru Utvikling . Personvernerklæring. Facebook",
+     "content_sha256": "bbddcc1b30872254935ec0e2003a4dd1fbe54758f2183e5d5b08f60cf703840a"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "kongsvinger",
+     "il",
+     "ishockey"
+    ],
+    "matched_tokens": [
+     "il",
+     "ishockey",
+     "kongsvinger"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/KILtoppfotball"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/kiltoppfotball"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/KILtoppfotball",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "il"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/kiltoppfotball",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "il"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "8c3aca296e687ce87774a6637dca88985d8339a2c5c4b8c138fcf9e323de7629",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/875606662": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "610d66d0104bc863.json.gz",
+   "content_sha256": "610d66d0104bc8637194a835cf4c0793d446822cb6caf4f0271f1c203f28e185",
+   "retrieved_at": "2026-11-01T14:22:29.158163Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/875606662": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:22:29.825129Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/875606662/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2989681216b490b3.json.gz",
+   "content_sha256": "2989681216b490b369e8ce69d751ecf7768af29f902cf8e87178358ed869ab8a",
+   "retrieved_at": "2026-11-01T14:22:31.885230Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/875606662": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:22:30.511349Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=875606662&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "73b7da976cf0e9ed.json.gz",
+   "content_sha256": "73b7da976cf0e9ed30812b5906cb3016f54523bb5b21b37a34579d081daa3284",
+   "retrieved_at": "2026-11-01T14:22:31.212737Z"
+  },
+  "https://kilishockey.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "8c3aca296e687ce8.html.gz",
+   "content_sha256": "8c3aca296e687ce87774a6637dca88985d8339a2c5c4b8c138fcf9e323de7629",
+   "retrieved_at": "2026-11-01T14:22:43.671969Z"
+  },
+  "https://kilishockey.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "21d1d2703c904f10.html.gz",
+   "content_sha256": "21d1d2703c904f10fdaa66045d98983025350bd980430ad78346f9ca25f53402",
+   "retrieved_at": "2026-11-01T14:22:44.714640Z"
+  },
+  "https://kilishockey.no/personvernerklaering/": {
+   "kind": "site",
+   "status": 200,
+   "file": "c1d06c245640727f.html.gz",
+   "content_sha256": "c1d06c245640727f7f51087027790e45eeb0e639a48a30c696446511a9365105",
+   "retrieved_at": "2026-11-01T14:22:45.699312Z"
+  },
+  "https://kilishockey.no/nyheter/": {
+   "kind": "site",
+   "status": 200,
+   "file": "bbddcc1b30872254.html.gz",
+   "content_sha256": "bbddcc1b30872254935ec0e2003a4dd1fbe54758f2183e5d5b08f60cf703840a",
+   "retrieved_at": "2026-11-01T14:22:47.756996Z"
+  },
+  "https://kilishockey.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "00f37e68a1758d87.xml.gz",
+   "content_sha256": "00f37e68a1758d87a156adc83c6589eadaeac8a7dbbfbdb4076277350e7e8646",
+   "retrieved_at": "2026-11-01T14:22:46.730193Z"
+  }
+ }
+}

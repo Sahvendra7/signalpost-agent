@@ -1,0 +1,199 @@
+{
+ "organisation_number": "975387011",
+ "name": "STIFTELSEN CRUX",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://stiftelsencrux.no/",
+  "retrieved_at": "2026-11-01T14:23:09.819984Z",
+  "value": {
+   "requested_url": "https://www.stiftelsencrux.no/",
+   "final_url": "https://stiftelsencrux.no/",
+   "registered_domain": "stiftelsencrux.no",
+   "title": "CRUX - Crux",
+   "description": "CRUX er en landsomfattende, diakonal og ideell stiftelse som tilbyr tjenester innen helse- og sosialfeltet i Norge. CRUX støtter mennesker i sårbare livssituasjoner gjennom behandling, omsorg og oppfølging, arbeid og fellesskap. CRUX arbeider med barn, unge, voksne og familier i utfordrende livssituasjoner. Les om våre tjenester og hvordan vi skaper nye muligheter.",
+   "main_text_excerpt": "",
+   "identity_text_excerpt": "Tjenesteområder Barnevern Rusbehandling Psykisk helsevern Ettervern Utviklingshemmede Om oss Kontakt oss Om CRUX Ideell virksomhet Jobb i CRUX Nyhetsbrev fra CRUX Åpenhetsloven Send tilbakemelding Bli støttespiller! Bli fosterhjem Bli frivillig Bedriftssamarbeid Kjøp våre produkter Gi en gave Stiftelsen CRUX Org.nr 975387011 Konto: 3000.22.95284 Akersgata 16, 0158 Oslo • Tlf. 23 32 75 50 hovedkontoret@stiftelsencrux.no CRUX stiftelsen Rostad Org.nr 876771802 Rostadvegen 300, 7670 Inderøy • Tlf. 74 12 48 80 kontor.rostad@stiftelsencrux.no Personvern Webdesign og webutvikling: 99x",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/stiftelsencrux"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/stiftelsen-crux-hovedkontor"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "baee29baf186daacc03dae0e5b2139fadc5768b6c65fb7cdbccff956568a7d26",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://stiftelsencrux.no/",
+     "title": "CRUX - Crux",
+     "main_text_excerpt": "",
+     "content_sha256": "baee29baf186daacc03dae0e5b2139fadc5768b6c65fb7cdbccff956568a7d26"
+    },
+    {
+     "url": "https://stiftelsencrux.no/vare-virksomheter/bergflott-behandlingssenter/om-oss",
+     "title": "Om oss - CRUX",
+     "main_text_excerpt": "Behandlingsfilosofi\nVåre grunnverdier er: Helhjertet og raus, dristig og solid. Disse verdiene skal gjenspeile seg i vårt møte med pasienter og pårørende, samarbeidspartnere og i vårt miljø. Pasientene våre har stor innflytelse på behandlingen. Dette innebærer at vi møter pasienter og pårørende med:\n•\tHåp og tro på at endring er mulig\n•\tRespekt, toleranse og realistisk forventning\n•\tTid og tålmodighet\nMålgruppen\nCRUX Bergfløtt behandlingssenter (CBBS) er et behandlingstilbud for mennesker med psykiske lidelser, hvor psykose er en del av sykdomsbildet. \nGjennom en oppdragsavtale med Helse Sør-Øst RHF er CRUX en del av det samlede tilbudet innen spesialisthelsetjenester for psykisk helsevern i regionen.\nVåre tilbud\nVi har en døgnenhet med 15 plasser for unge voksne, og en poliklinikk hvor aldersspennet er fra 18-70 år. Behandling gis primært på frivillig grunnlag, men virksomheten er også godkjent for behandling under tvungent psykisk helsevern.\nMange av pasientene har behov for langvarige og sammensatte tjenester. Dette dekkes gjennom fleksible og varierte tiltak under oppholdet eller i den polikliniske behandlingen. Det er tett samarbeid mellom døgnenheten og poliklinikken samt med andre deler av helsetjenestene i regionen.\nMålsetting\nVi har fokus på høy faglig kompetanse, brukermedvirkning, utstrakt samarbeid med øvrig hjelpeapparat, tid, tålmodighet og realistisk forventning. Det er vår målsetting at pasienten og familien skal oppleve bedring og økt mestring. Det kan legge et grunnlag for positiv endring av livssituasjonen.\nBehandlingen skal bidra til mindre plager og bedre mestring av symptomene. Det skal øke forståelse og kunnskap om seg selv og lidelsen, for å bidra til bedre evne og større mulighet til å mestre eget liv. Familien blir styrket i å være en ressurs for pasienten i bedringsprosessen. \nMålsettingen for behandlingen er individuell. Vi legger vekt på å gi pasienten avgjørende innflytelse på egen behandling.\nKompetanse\nPå CRUX Bergfløtt behandlingssenter har vi høyt kvalifisert helsepersonell med lang erfaring. Vi har psykiatere, psykolog og psykologspesialister, høyskoleutdannede med og uten videreutdanning samt hjelpepleiere med videreutdanning i psykisk helse. Dessuten har vi bl.a. idretts- og musikkpedagog samt kunst- og uttrykksterapeut. Dette sikrer høy kvalitet og variasjon i de ulike behandlings- og aktivitetstilbudene. \nSammen med blant andre kokk, vaktmester og merkantilt personell, legger helsepersonalet til rette for gode rammer for behandlingen.\nVårt slagord er: Det finnes alltid muligheter\nDet betyr at vi ønsker å møte mennesker med respekt, kompetanse, dristighet og vilje til å tenke nytt og annerledes. Det er håp uansett utgangspunkt! Vårt slagord og kjerneverdier er utviklet og innarbeidet i et felleskap i stiftelsen CRUX.\nVi sikter mot:\n•\tÅ gi pasienten avgjørende innflytelse i egen behandlingsprosess, ut fra sine forutsetninger\n•\tÅ fokusere på pasientens ressurser\n•\tEt nært samarbeid med pasient, familie og øvrig hjelpeapparat\n•\tIndividuelt tilrettelagt og kunnskapsbasert behandling\n•\tAktiv kunnskapssøking og formidling\n•\tRaushet, nysgjerrighet og åpenhet for andre meninger samt nytenkning\n•\tÅ bidra til mindre stigmatisering av psykisk lidelse\nTeoretisk forankring\nMålsettingen til CRUX Bergfløtt behandlingssenter, er å gi et helhetlig behandlingstilbud med et langsiktig og kontinuerlig perspektiv som er tilpasset den enkelte pasient.\nDen psykodynamiske referanseramme, er grunnleggende i forståelsen av pasientens individuelle bakgrunn, livssituasjon og relasjoner.\nStress-sårbarhetsmodellen og forskning knyttet til «expressed emotions», gir et godt utgangspunkt for å forstå sammenheng mellom livshendelser, medfødt sårbarhet og utviklingen av psykose/schizofreni.\nDet eksistensielle perspektiv, innebærer at åndelige og eksistensielle spørsmål er sentrale i møte med pasienten.\nBrukermedvirkning\nVi legger stor vekt på å legge til rette for pasientens medvirkning i planlegging og behandling. For å sikre at pasientens stemme blir hørt, har vi forslagskasse og systematiske pasienttilfredshets-målinger. Vi vektlegger pasientdeltakelse i endringsprosesser.\nSitater fra noen av våre pasienter:\nGutt 22: «Jeg syns det er bra å være på CRUX Bergfløtt. Det er bra og trivelig. Jeg får den hjelpen jeg trenger der!»\nJente 19: «Jeg opplever å bli møtt med god forståelse og god tid. God tid er viktig for at jeg skal kunne bli bedre. Jeg blir møtt som den jeg er!»\nStiftelsen CRUX\nVi er en del av stiftelsen CRUX som er en ideell, diakonal og landsomfattende stiftelse. Vi verdsetter mangfold, og har ingen begrensning når det gjelder trossamfunn. Alle virksomhetene i CRUX arbeider aktivt for å ha høy faglig kvalitet og en tydelig verdiprofil.",
+     "identity_text_excerpt": "Oppdatert 25.08.2026 14:10:25 Tjenesteområder Barnevern Rusbehandling Psykisk helsevern Ettervern Utviklingshemmede Om oss Kontakt oss Om CRUX Ideell virksomhet Jobb i CRUX Nyhetsbrev fra CRUX Åpenhetsloven Send tilbakemelding Bli støttespiller! Bli fosterhjem Bli frivillig Bedriftssamarbeid Kjøp våre produkter Gi en gave Stiftelsen CRUX Org.nr 975387011 Konto: 3000.22.95284 Akersgata 16, 0158 Oslo • Tlf. 23 32 75 50 hovedkontoret@stiftelsencrux.no CRUX stiftelsen Rostad Org.nr 876771802 Rostadvegen 300, 7670 Inderøy • Tlf. 74 12 48 80 kontor.rostad@stiftelsencrux.no Personvern Webdesign og webutvikling: 99x",
+     "content_sha256": "759a89c3e943ca27441c4264330270c87d71d9c932aa1e30ad5a42bd314876d8"
+    },
+    {
+     "url": "https://stiftelsencrux.no/vare-virksomheter/crux-oppfolgingssenter/om-oss",
+     "title": "Om oss - CRUX",
+     "main_text_excerpt": "Åpningstid\nMandag, onsdag, fredag \nkl. 10.00-14.00\nTirsdag og torsdag\nArbeidstrening, utadrettet virksomhet, møter og individuell oppfølging\nAktiviteter på kveldstid",
+     "identity_text_excerpt": "Oppdatert 05.05.2026 16:21:38 Tjenesteområder Barnevern Rusbehandling Psykisk helsevern Ettervern Utviklingshemmede Om oss Kontakt oss Om CRUX Ideell virksomhet Jobb i CRUX Nyhetsbrev fra CRUX Åpenhetsloven Send tilbakemelding Bli støttespiller! Bli fosterhjem Bli frivillig Bedriftssamarbeid Kjøp våre produkter Gi en gave Stiftelsen CRUX Org.nr 975387011 Konto: 3000.22.95284 Akersgata 16, 0158 Oslo • Tlf. 23 32 75 50 hovedkontoret@stiftelsencrux.no CRUX stiftelsen Rostad Org.nr 876771802 Rostadvegen 300, 7670 Inderøy • Tlf. 74 12 48 80 kontor.rostad@stiftelsencrux.no Personvern Webdesign og webutvikling: 99x",
+     "content_sha256": "9e415895a7bd1a8e3d1629bff516fe66f56b34862ca5d06f55f01ea633792488"
+    },
+    {
+     "url": "https://stiftelsencrux.no/vare-virksomheter/hamartiltakene/om-oss",
+     "title": "Om oss - CRUX",
+     "main_text_excerpt": "CRUX Barm oppfølgingssenter \nVi tilbyr oppfølging etter soning, etter institusjonsbehandling, samt hjelp til de som ønsker å bryte med sitt rusmisbruk. Vi jobber langsiktig med deltakerens livssituasjon som bolig, helse, arbeid/utdannelse og nettverk. \nCRUX Arbeideren\nLavterskel tilbud til mennesker i aktiv rus i Hamar og Stange kommune. Vi tilbyr et godt sted å være, varme måltider, helsetilbud og hjelp til å komme i kontakt med ulike hjelpeinstanser.\nCRUX Sykkelverksted\nCRUX Sykkelverksted tilbyr enkel service og reparasjoner av sykler til en rimelig pris. Vi holder til i BUA Hamar sine lokaler. \nMatutdeling\nVi deler ut gratis mat til brukere av CRUX Arbeideren og deltakere ved CRUX Barm oppfølgingssenter.  \nBUA Hamar\nBUA Hamar driftes av CRUX, og her kan du låne sports- og fritidsutstyr til sommer- og vinterbruk helt gratis. BUA er for alle, og vi fokuserer på å hjelpe og finne utstyr som passer for deg. \nKompetanse\nVåre ansatte og frivillige medarbeidere har god og ulik kompetanse. Vi er opptatt av tverrfaglighet og erfaringskompetanse. Både ansatte og våre frivillige deltar på samlinger, veiledning og fagdager.\nBrukermedvirkning\nCRUX Hamartiltakene har utarbeidet egen serviceerklæring, planer for arbeid med brukermedvirkning og samtykkeerklæringer. Vi arbeider med brukermedvirkning på flere nivåer.\nOrganisering\nVirksomhetsleder rapporterer til direktør ved hovedkontoret i stiftelsen CRUX i Oslo. Det ledes av generalsekretær, og har et bredt spekter av oppgaver, med et særlig ansvar for å sette ut i livet stiftelsesstyrets vedtak.",
+     "identity_text_excerpt": "Oppdatert 04.05.2026 10:41:02 Tjenesteområder Barnevern Rusbehandling Psykisk helsevern Ettervern Utviklingshemmede Om oss Kontakt oss Om CRUX Ideell virksomhet Jobb i CRUX Nyhetsbrev fra CRUX Åpenhetsloven Send tilbakemelding Bli støttespiller! Bli fosterhjem Bli frivillig Bedriftssamarbeid Kjøp våre produkter Gi en gave Stiftelsen CRUX Org.nr 975387011 Konto: 3000.22.95284 Akersgata 16, 0158 Oslo • Tlf. 23 32 75 50 hovedkontoret@stiftelsencrux.no CRUX stiftelsen Rostad Org.nr 876771802 Rostadvegen 300, 7670 Inderøy • Tlf. 74 12 48 80 kontor.rostad@stiftelsencrux.no Personvern Webdesign og webutvikling: 99x",
+     "content_sha256": "dac014b52fe5f4d5dd873e37cc1709bf1dbb264de482866ddff11adcb10484ca"
+    },
+    {
+     "url": "https://stiftelsencrux.no/vare-virksomheter/huset-oppfolgingssenter/om-oss",
+     "title": "Om oss - CRUX",
+     "main_text_excerpt": "CRUX Huset oppfølgingssenter (2001) er et rusfritt tilbud som gir individuell oppfølging, sosialt fellesskap, naturopplevelser og skapende aktiviteter. Vi ønsker å være med å bidra til økt livskvalitet og legge til rette for mestringserfaringer. \n \n“Det finnes alltid muligheter” \nVårt slagord er: «Det finnes alltid muligheter». Det forplikter oss til å ikke gi opp, men å finne nye veier og gå veien sammen med dem som ønsker det, også over tid. I CRUX ønsker vi å stå opp for mennesker i sårbare og utfordrende livssituasjoner, slik at de kan oppleve trygghet og nå sine mål. Vi ser ikke etter raske løsninger, men samarbeider med den enkelte for å styrke de i det lange løp, velvitende at endring tar tid.  \n \nOrdet ‘crux’ er latin og betyr det vanskeligste punktet. Vi møter mennesker som er på det vanskeligste punktet i livet. Med vårt slag ord som drivkraft: \"Det finnes alltid muligheter\", ønsker vi å være til stede for personer som trenger et fellesskap for å ruste seg til å leve et godt liv for seg selv og i samfunnet.  \n \nNoen deltakere trenger hjelp med å rydde i en kaotisk økonomi, andre trenger et sosialt rusfritt nettverk og en vanlig jobb. Mange trenger oppfølging på alle områder for å nå målet om et godt liv, og her bruker CRUX oppfølgingssentre vår deltakerorienterte metode: «Arbeidshjulet» for å sikre en systematisk og helhetlig tilnærming. \n \nVi driver ut fra et tydelig verdigrunnlag, kunnskapsbasert praksis og med arbeidsformer preget av kvalitet, læring og brukermedvirkning. Vi ser vår virksomhet som en del av en tjenestekjede. Vi driver ikke med behandling, men legger stor vekt på samarbeid med offentlige og private og frivillige aktører.  \n \nMålgruppe \nCRUX Huset oppfølgingssenter er for deg over 18 år som ønsker livsglede og fellesskap. Noen av våre deltakere har erfaring av at rus har overtatt store deler av livet. Noen kan fortelle om at angst og depresjoner har satt dem ut av spill. Andre forteller om sorg, tap og vanskelige minner. \n \nMålsetting \nVi ønsker å være et oppfølgingstilbud til mennesker som ønsker et liv uten rusavhengighet og soning, eller som av ulike grunner ikke mestrer det ordinære arbeidslivet. Vårt fokus er å styrke de gode valgene, og at deltakerne skal få på plass viktige ting i livet som: helse, egnet bolig, økonomi, skole og utdanning, arbeid, fritidsinteresser med et særlig fokus på nettverk. Alle deltakere inngår en kontrakt med CRUX Huset, og får opplæring og veiledning.\n \nBrukermedvirkning \nPå CRUX Huset virker det vanlige sammen med det faglige. Ansatte, frivillige og deltakere samarbeider om det meste. Det jobbes sammen om planer, sosialt liv og aktiviteter. \n \nAnsatte og frivillige \nVåre ansatte er godt kvalifiserte innen helse- og sosialfag, kultur, natur og teologi, i tillegg til årelang erfaring fra rusarbeidet. Noen av våre ansatte har selv erfaring fra å være deltaker. Vi har mange dyktige, engasjerte frivillige medarbeidere som bidrar på de ulike tilbudene og i fellesskapet. De bidrar også inn med masse livserfaring og faglig kompetanse, og gjør en viktig jobb. Ønsker du å vite mer om å være frivillig ved CRUX Huset oppfølgingssenter? \nOrganisering\nVirksomhetsleder rapporterer til direktør ved hovedkontoret i stiftelsen CRUX i Oslo. Det ledes av generalsekretær, og har et bredt spekter av oppgaver, med et særlig ansvar for å sette ut i livet stiftelsesstyrets vedtak.\nBeliggenhet \nVi holder til i hyggelige lokaler i Grønnegata 12 i Tromsø sentrum. På CRUX Huset er det stuer, kjøkken, stille rom, møterom og samtalerom.",
+     "identity_text_excerpt": "Oppdatert 05.05.2026 16:24:45 Tjenesteområder Barnevern Rusbehandling Psykisk helsevern Ettervern Utviklingshemmede Om oss Kontakt oss Om CRUX Ideell virksomhet Jobb i CRUX Nyhetsbrev fra CRUX Åpenhetsloven Send tilbakemelding Bli støttespiller! Bli fosterhjem Bli frivillig Bedriftssamarbeid Kjøp våre produkter Gi en gave Stiftelsen CRUX Org.nr 975387011 Konto: 3000.22.95284 Akersgata 16, 0158 Oslo • Tlf. 23 32 75 50 hovedkontoret@stiftelsencrux.no CRUX stiftelsen Rostad Org.nr 876771802 Rostadvegen 300, 7670 Inderøy • Tlf. 74 12 48 80 kontor.rostad@stiftelsencrux.no Personvern Webdesign og webutvikling: 99x",
+     "content_sha256": "3a7d92202e99694e8ada7476de5c2afc596b1bedede74f732350afe967f22e3f"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "crux"
+    ],
+    "matched_tokens": [
+     "crux"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/stiftelsencrux"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/stiftelsen-crux-hovedkontor"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/stiftelsencrux",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "crux"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/stiftelsen-crux-hovedkontor",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "crux"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "baee29baf186daacc03dae0e5b2139fadc5768b6c65fb7cdbccff956568a7d26",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/975387011": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6c018665a5ab6b28.json.gz",
+   "content_sha256": "6c018665a5ab6b288ac9084fe319745df5dddcca2d31a0b33abd5b5d4ba4f768",
+   "retrieved_at": "2026-11-01T14:22:50.225840Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/975387011": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6832b5426e702c4f.json.gz",
+   "content_sha256": "6832b5426e702c4fac271702f31603717a4b9a260252a73b4c38dbea218fa252",
+   "retrieved_at": "2026-11-01T14:22:50.934808Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/975387011/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "4575583c54c22e31.json.gz",
+   "content_sha256": "4575583c54c22e31cb86e6b3a0c06ca9c7ede7b0a8c2852b5b3c0a71b2fbc7a7",
+   "retrieved_at": "2026-11-01T14:22:53.356204Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/975387011": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:22:51.645200Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=975387011&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "af4d175bb6434d9e.json.gz",
+   "content_sha256": "af4d175bb6434d9e4f640ff50bb1f1c3c9d4242e8ab25e3a8e433891e3401c4a",
+   "retrieved_at": "2026-11-01T14:22:52.627773Z"
+  },
+  "https://stiftelsencrux.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "0c0aa141b1e1ea99.html.gz",
+   "content_sha256": "0c0aa141b1e1ea9944a5615490bf9b98d4cf758d268bea83d37ed6e88e1d71b5",
+   "retrieved_at": "2026-11-01T14:23:12.700927Z"
+  },
+  "https://stiftelsencrux.no/om-crux/presserom/lokale-pressekontakter": {
+   "kind": "site",
+   "status": 200,
+   "file": "3ae37be8852d4f42.html.gz",
+   "content_sha256": "3ae37be8852d4f424d08ca56b354f0cdff615ce6ec72479e1b6e36377b1a0ea7",
+   "retrieved_at": "2026-11-01T14:23:14.823416Z"
+  },
+  "https://stiftelsencrux.no/om-crux/aktueltsaker/onsker-a-komme-i-kontakt-med-dem-som-isolerer-seg": {
+   "kind": "site",
+   "status": 200,
+   "file": "c8e149b2fbf006df.html.gz",
+   "content_sha256": "c8e149b2fbf006df092bbaeca36d89c35f99672bf426801e872218f62e548c95",
+   "retrieved_at": "2026-11-01T14:23:16.699528Z"
+  },
+  "https://stiftelsencrux.no/om-crux/presserom": {
+   "kind": "site",
+   "status": 200,
+   "file": "f54dc774a7e27a5c.html.gz",
+   "content_sha256": "f54dc774a7e27a5cec0ba8532572f0f71dee61bfb90adcd8d7824391e21a3282",
+   "retrieved_at": "2026-11-01T14:23:18.712134Z"
+  },
+  "https://stiftelsencrux.no/jobb-i-crux": {
+   "kind": "site",
+   "status": 200,
+   "file": "0ce6b76003c20663.html.gz",
+   "content_sha256": "0ce6b76003c206630080ef5691182f8d4ac7ca316fc8e421b499c00cd3515cb1",
+   "retrieved_at": "2026-11-01T14:23:20.744504Z"
+  }
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "organisation_number": "983181732",
+ "name": "TYIN ALPINT AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.tyinfilefjell.no/",
+  "retrieved_at": "2026-11-01T09:08:23.257704Z",
+  "value": {
+   "requested_url": "https://www.tyinfilefjell.no/",
+   "final_url": "https://www.tyinfilefjell.no/",
+   "registered_domain": "tyinfilefjell.no",
+   "title": "Tyin Filefjell – Helårsdestinasjon i Valdres | Overnatting, turer & aktiviteter - Tyin Filefjell",
+   "description": "Opplev Tyin Filefjell i Valdres, ved porten til Jotunheimen. Nyt fjellturer, alpint, langrenn og gode vinteropplevelser. Book overnatting på Filefjellstuene.",
+   "main_text_excerpt": "Hvilket fjelleventyr ønsker du deg?\nHøsten byr fortsatt på fine fjellturer, frisk luft og gode opplevelser ute. Samtidig gleder vi oss til vinteren, med snø under skiene, flotte dager i bakken og alt det fine fjellet har å by på når landskapet kles i hvitt.\n- \n                            \n                                Ferdig pakkaGjør høst-, og vinteroppholdet enkelt med et av våre pakketilbud.\n- \n                            \n                                Hyttedrømmen starter herTomter i naturskjønt terreng, med enkel tilgang til varierte fjellopplevelser hele året\n- \n                            \n                                For viljesterke siden 1820Før tunneler, bruer og motorveier var det bare én rute mellom øst og vest: over fjellet.\nVåre høst- og vinterpakker\nOpplevelser i høst og tidlig vinter\nFjellet har mye å by på, også mellom sesongene. Nyt fine fjellturer, frisk luft og rolige dager ute mens vi venter på snøen. Og når vinteren kommer, venter nye opplevelser på Tyin Filefjell.",
+   "identity_text_excerpt": "Kan vi få by på et nyhetsbrev? Registrer Ved å melde deg på godkjenner du at vi kan sende deg aktuelle tilbud og nyheter fra Tyin-Filefjell. Du kan når som helst melde deg av igjen. Spisesteder Filefjellstuene Tyinkrysset Fjellstue Opplevelser Alle aktiviteter Langrenn Badstue Kongevegen Om Tyin Om Tyin Filefjell Åpningstider Kontakt oss Ledige stillinger Personvern Endre samtykke Salgsbetingelser",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "00d39c1d9810388ce9af893bbbab9a522c3bb4ead18d9305971b44b7131e21d1",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.tyinfilefjell.no/",
+     "title": "Tyin Filefjell – Helårsdestinasjon i Valdres | Overnatting, turer & aktiviteter - Tyin Filefjell",
+     "main_text_excerpt": "Hvilket fjelleventyr ønsker du deg?\nHøsten byr fortsatt på fine fjellturer, frisk luft og gode opplevelser ute. Samtidig gleder vi oss til vinteren, med snø under skiene, flotte dager i bakken og alt det fine fjellet har å by på når landskapet kles i hvitt.\n- \n                            \n                                Ferdig pakkaGjør høst-, og vinteroppholdet enkelt med et av våre pakketilbud.\n- \n                            \n                                Hyttedrømmen starter herTomter i naturskjønt terreng, med enkel tilgang til varierte fjellopplevelser hele året\n- \n                            \n                                For viljesterke siden 1820Før tunneler, bruer og motorveier var det bare én rute mellom øst og vest: over fjellet.\nVåre høst- og vinterpakker\nOpplevelser i høst og tidlig vinter\nFjellet har mye å by på, også mellom sesongene. Nyt fine fjellturer, frisk luft og rolige dager ute mens vi venter på snøen. Og når vinteren kommer, venter nye opplevelser på Tyin Filefjell.",
+     "content_sha256": "00d39c1d9810388ce9af893bbbab9a522c3bb4ead18d9305971b44b7131e21d1"
+    },
+    {
+     "url": "https://www.tyinfilefjell.no/informasjon/kontakt-oss/",
+     "title": "Kontakt Tyin Filefjell – Booking, skisenter og administrasjon - Tyin Filefjell",
+     "main_text_excerpt": "Våre steder\nFilefjellstuene – hotell og servering\nGrøvstølvegen 43, 2985 Tyinkrysset\nTyin Filefjell Skisenter og Skikaféen\nBørrenøsvegen 21, 2985 Tyinkrysset\nReint Bord – varmestue og afterski ved Tørisheisen\nTørisvegen 30, 2985 Tyinkrysset\nSelskapsinformasjon\nTyin Filefjell AS – org.nr. 930 182 451\nFilefjellstuene AS – org.nr. 930 182 478\nTyin Filefjell er en del av Fredensborg Fritid.",
+     "identity_text_excerpt": "Kan vi få by på et nyhetsbrev? Registrer Ved å melde deg på godkjenner du at vi kan sende deg aktuelle tilbud og nyheter fra Tyin-Filefjell. Du kan når som helst melde deg av igjen. Spisesteder Filefjellstuene Tyinkrysset Fjellstue Opplevelser Alle aktiviteter Langrenn Badstue Kongevegen Om Tyin Om Tyin Filefjell Åpningstider Kontakt oss Ledige stillinger Personvern Endre samtykke Salgsbetingelser",
+     "content_sha256": "b24ecf9bf7da50a81ea42dbac9320e159c82f4519d55af5fbb47e4a0369f90c3"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "tyin",
+     "alpint"
+    ],
+    "matched_tokens": [
+     "alpint",
+     "tyin"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/tyinfilefjell"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/tyinfilefjell"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/tyin-filefjell-as"
+    },
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/filefjellstuene.no"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/filefjellstuene"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/tyinfilefjell",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "tyin"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/tyinfilefjell",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "tyin"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/tyin-filefjell-as",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "tyin"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/filefjellstuene.no",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/filefjellstuene",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "00d39c1d9810388ce9af893bbbab9a522c3bb4ead18d9305971b44b7131e21d1",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/983181732": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "dbef53f0f26a4754.json.gz",
+   "content_sha256": "dbef53f0f26a4754a9d0534c6e3a674440ff2bc0cfb02804d71b8279668da904",
+   "retrieved_at": "2026-11-01T09:08:18.297468Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/983181732": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "d6c9a7eb9c28c8cc.json.gz",
+   "content_sha256": "d6c9a7eb9c28c8cc1cea3b7b77bf458a3a9482bd7b52d00fa292d1708268b83f",
+   "retrieved_at": "2026-11-01T09:08:18.986150Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/983181732/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b4af2a3899a77c2a.json.gz",
+   "content_sha256": "b4af2a3899a77c2aa6b9502411f66b30edb13b54248b0bf645ad7f398367e856",
+   "retrieved_at": "2026-11-01T09:08:21.069676Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/983181732": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T09:08:19.683615Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=983181732&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1a661145214dde3f.json.gz",
+   "content_sha256": "1a661145214dde3fadecf201d10862823eba9e4aeb1ee9169a909d1bdeba04fd",
+   "retrieved_at": "2026-11-01T09:08:20.380181Z"
+  },
+  "https://www.tyinfilefjell.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "00d39c1d9810388c.html.gz",
+   "content_sha256": "00d39c1d9810388ce9af893bbbab9a522c3bb4ead18d9305971b44b7131e21d1",
+   "retrieved_at": "2026-11-01T09:08:24.407705Z"
+  },
+  "https://www.tyinfilefjell.no/informasjon/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "b24ecf9bf7da50a8.html.gz",
+   "content_sha256": "b24ecf9bf7da50a81ea42dbac9320e159c82f4519d55af5fbb47e4a0369f90c3",
+   "retrieved_at": "2026-11-01T09:08:25.005090Z"
+  },
+  "https://www.tyinfilefjell.no/informasjon/personvern/": {
+   "kind": "site",
+   "status": 200,
+   "file": "7829b92c9e16a068.html.gz",
+   "content_sha256": "7829b92c9e16a068332ec0ce9f2363e7e7528b81b3dab4740846d8e7d4c3a331",
+   "retrieved_at": "2026-11-01T09:08:25.575616Z"
+  },
+  "https://www.tyinfilefjell.no/informasjon/ledige-stillinger/": {
+   "kind": "site",
+   "status": 200,
+   "file": "fbfafd1ebf88712e.html.gz",
+   "content_sha256": "fbfafd1ebf88712e03377a8d03dd7bf4b10ab35bf41f932175a44f77365cbe73",
+   "retrieved_at": "2026-11-01T09:08:25.859656Z"
+  }
+ }
+}

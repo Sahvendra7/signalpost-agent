@@ -1,0 +1,182 @@
+{
+ "organisation_number": "995159406",
+ "name": "BK BYGG AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://bkbygg.no/",
+  "retrieved_at": "2026-11-01T14:17:17.962253Z",
+  "value": {
+   "requested_url": "https://www.bkbygg.no/",
+   "final_url": "https://bkbygg.no/",
+   "registered_domain": "bkbygg.no",
+   "title": "BK Bygg AS – Solid håndverk fra start til slutt",
+   "description": "",
+   "main_text_excerpt": "Vi kombinerer tradisjonelt håndverk med moderne prosjektstyring for å sikre et perfekt resultat.\nBK Bygg AS ble etablert i 2004, og vi har hatt en sunn og god vekst siden den gang med positive resultater. Vi satser tungt på fremtiden, og har derfor alltid flere dyktige og motiverte lærlinger med oss på laget.\nEnten prosjektet er lite eller stort, legger vi vår stolthet i å levere skikkelig håndverk som varer. Vi kjenner bransjen, vi har rutinen, og vi vet hva som kreves for å sikre et trygt og vellykket byggeprosjekt.\nOver to tiår med erfaring i byggebransjen.\nDyktige tømrere i felt og administrativt ansatte på kontoret.\nVåre tilbudsbefaringer er alltid uforpliktende. Ta kontakt med oss om dine prosjekter.",
+   "identity_text_excerpt": "Snarveier Hjem Om oss Kontakt oss Våre Tjenester Næring Tak og fasade Sikt Bolig Kontakt Oss Plattformvegen 2, 4056 Tananger +47 459 51 555 post@bkbygg.no Mandag - Fredag 08:00 - 16:00 © 2026 BK Bygg AS. Registrert i Foretaksregisteret (Org. nr: 995 159 406). Alle rettigheter reservert. Personvernerklæring Levert av , Designet og utviklet av Snarveier Hjem Om oss Kontakt oss Våre Tjenester Næring Tak og fasade Sikt Bolig Kontakt Oss Plattformvegen 2, 4056 Tananger +47 459 51 555 post@bkbygg.no Mandag - Fredag 08:00 - 16:00 © 2026 BK Bygg AS. Registrert i Foretaksregisteret (Org. nr: 995 159 406). Alle rettigheter reservert. Personvernerklæring Levert av , Designet og utviklet av",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bkbygg"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bk_bygg"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "b9f359d8f36602f24658e457022c5f4818875527ff4b74ec98162020c52cafd0",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://bkbygg.no/",
+     "title": "BK Bygg AS – Solid håndverk fra start til slutt",
+     "main_text_excerpt": "Vi kombinerer tradisjonelt håndverk med moderne prosjektstyring for å sikre et perfekt resultat.\nBK Bygg AS ble etablert i 2004, og vi har hatt en sunn og god vekst siden den gang med positive resultater. Vi satser tungt på fremtiden, og har derfor alltid flere dyktige og motiverte lærlinger med oss på laget.\nEnten prosjektet er lite eller stort, legger vi vår stolthet i å levere skikkelig håndverk som varer. Vi kjenner bransjen, vi har rutinen, og vi vet hva som kreves for å sikre et trygt og vellykket byggeprosjekt.\nOver to tiår med erfaring i byggebransjen.\nDyktige tømrere i felt og administrativt ansatte på kontoret.\nVåre tilbudsbefaringer er alltid uforpliktende. Ta kontakt med oss om dine prosjekter.",
+     "content_sha256": "b9f359d8f36602f24658e457022c5f4818875527ff4b74ec98162020c52cafd0"
+    },
+    {
+     "url": "https://bkbygg.no/om-oss/",
+     "title": "Om oss – BK Bygg AS",
+     "main_text_excerpt": "Etablert\nAnsatte\nProsjekter fullført\nBK Bygg AS ble startet i 2004 og har hatt en sunn og god vekst siden den gang med positive resultater. Vi er i dag 40-50 stk. fordelt på tømrere og oss på kontoret. Vi satser på fremtiden for å ha flere flinke lærlinger med oss.\nVi har lang og bred erfaring innen styring av andre faggrupper og kan påta oss hele ditt boligprosjekt. Vi har brukt lang tid på å finne frem til gode og kvalitetsbevisste samarbeidspartnere som ivaretar våre kunder slik vi ønsker.\nPå den måten får vi et prosjekt sammen der alle involverte vil gjøre sitt ytterste for at prosjektet skal være så vellykket som mulig for alle. Dette vil også vise igjen på kvaliteten på arbeidet.\nSom et lokalt forankret byggefirma er det viktig for oss i BK Bygg å gi noe tilbake til samfunnet vi bygger og lever i. Vi tror på verdien av et sterkt og aktivt lokalmiljø, og vet at idretten spiller en nøkkelrolle for å skape samhold, glede og gode oppvekstvilkår for barn og unge i regionen vår.\nGjennom vårt samfunnsengasjement har vi valgt å rette fokus mot den lokale bredde- og toppidretten. Vi er en stolt støttespiller og sponsor for Havørn Fotball og ishockeyklubben Siddis Fighters Hockeylag.\nVed å støtte disse to fantastiske klubbene økonomisk, ønsker vi å bidra til ekte idrettsglede, mestringsfølelse og en trygg arena der lokale talenter kan utfolde seg både på og utenfor banen.",
+     "identity_text_excerpt": "Snarveier Hjem Om oss Kontakt oss Våre Tjenester Næring Tak og fasade Sikt Bolig Kontakt Oss Plattformvegen 2, 4056 Tananger +47 459 51 555 post@bkbygg.no Mandag - Fredag 08:00 - 16:00 © 2026 BK Bygg AS. Registrert i Foretaksregisteret (Org. nr: 995 159 406). Alle rettigheter reservert. Personvernerklæring Levert av , Designet og utviklet av Snarveier Hjem Om oss Kontakt oss Våre Tjenester Næring Tak og fasade Sikt Bolig Kontakt Oss Plattformvegen 2, 4056 Tananger +47 459 51 555 post@bkbygg.no Mandag - Fredag 08:00 - 16:00 © 2026 BK Bygg AS. Registrert i Foretaksregisteret (Org. nr: 995 159 406). Alle rettigheter reservert. Personvernerklæring Levert av , Designet og utviklet av",
+     "content_sha256": "314003888cbb545429a9ab5e690041568ea11ee8213295c075278836f00fd46e"
+    },
+    {
+     "url": "https://bkbygg.no/kontakt/",
+     "title": "Kontakt – BK Bygg AS",
+     "main_text_excerpt": "BK Bygg AS ble startet i 2004 og har hatt en sunn og god vekst siden den gang med positive resultater. Vi er i dag 40-50 stk. fordelt på tømrere og oss på kontoret. Vi satser på fremtiden for å ha flere flinke lærlinger med oss.\nVåre tilbudsbefaringer er alltid gratis og uforpliktende. Vi håper du kontakter oss med dine store og små prosjekter!",
+     "identity_text_excerpt": "Snarveier Hjem Om oss Kontakt oss Våre Tjenester Næring Tak og fasade Sikt Bolig Kontakt Oss Plattformvegen 2, 4056 Tananger +47 459 51 555 post@bkbygg.no Mandag - Fredag 08:00 - 16:00 © 2026 BK Bygg AS. Registrert i Foretaksregisteret (Org. nr: 995 159 406). Alle rettigheter reservert. Personvernerklæring Levert av , Designet og utviklet av Snarveier Hjem Om oss Kontakt oss Våre Tjenester Næring Tak og fasade Sikt Bolig Kontakt Oss Plattformvegen 2, 4056 Tananger +47 459 51 555 post@bkbygg.no Mandag - Fredag 08:00 - 16:00 © 2026 BK Bygg AS. Registrert i Foretaksregisteret (Org. nr: 995 159 406). Alle rettigheter reservert. Personvernerklæring Levert av , Designet og utviklet av",
+     "content_sha256": "34cba28954b5a7f704f535ee2b720c0a1e98cd993dc8bcaea4c5213a9ed0cfd9"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bk",
+     "bygg"
+    ],
+    "matched_tokens": [
+     "bk",
+     "bygg"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bkbygg"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bk_bygg"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bkbygg",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bk",
+      "bygg"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bk_bygg",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bk",
+      "bygg"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "b9f359d8f36602f24658e457022c5f4818875527ff4b74ec98162020c52cafd0",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995159406": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "3e5c8dc75cb518d2.json.gz",
+   "content_sha256": "3e5c8dc75cb518d25f98f25ce0ec6e3bdebac4cc032d1bbd7ac07788fbecb943",
+   "retrieved_at": "2026-11-01T14:17:02.819822Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/995159406": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6b489b2e5d16c0f7.json.gz",
+   "content_sha256": "6b489b2e5d16c0f7e8f138cfb43cb6f72158e0a385a9e33e21e0c48e397ea156",
+   "retrieved_at": "2026-11-01T14:17:03.690182Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995159406/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "8e6c22f8a108efc5.json.gz",
+   "content_sha256": "8e6c22f8a108efc5ffe536db818899067611405fdfd30ce80a881d45072405a3",
+   "retrieved_at": "2026-11-01T14:17:05.852233Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/995159406": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "97b4b9347b714893.json.gz",
+   "content_sha256": "97b4b9347b714893a2c8b62e20ddde396a8d9d8ac1ed3a56d99b2b8981e84a9d",
+   "retrieved_at": "2026-11-01T14:17:04.405776Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=995159406&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "817a75ab4e0b0b2d.json.gz",
+   "content_sha256": "817a75ab4e0b0b2db9163ded55bb2e059457bc0d4143f6dd153dbc0b0b29eb99",
+   "retrieved_at": "2026-11-01T14:17:05.134592Z"
+  },
+  "https://bkbygg.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "b9f359d8f36602f2.html.gz",
+   "content_sha256": "b9f359d8f36602f24658e457022c5f4818875527ff4b74ec98162020c52cafd0",
+   "retrieved_at": "2026-11-01T14:17:19.413415Z"
+  },
+  "https://bkbygg.no/om-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "314003888cbb5454.html.gz",
+   "content_sha256": "314003888cbb545429a9ab5e690041568ea11ee8213295c075278836f00fd46e",
+   "retrieved_at": "2026-11-01T14:17:20.824705Z"
+  },
+  "https://bkbygg.no/kontakt": {
+   "kind": "site",
+   "status": 200,
+   "file": "34cba28954b5a7f7.html.gz",
+   "content_sha256": "34cba28954b5a7f704f535ee2b720c0a1e98cd993dc8bcaea4c5213a9ed0cfd9",
+   "retrieved_at": "2026-11-01T14:17:22.277626Z"
+  },
+  "https://bkbygg.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "f0052fd7e37779dd.xml.gz",
+   "content_sha256": "f0052fd7e37779ddc815a62521b905ec04d9fe1c6f2b9ba7e1252569e4c186bc",
+   "retrieved_at": "2026-11-01T14:17:23.091201Z"
+  }
+ }
+}

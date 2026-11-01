@@ -1,0 +1,212 @@
+{
+ "organisation_number": "995726742",
+ "name": "BEMEX REKRUTTERING AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.bemex-rekruttering.no/",
+  "retrieved_at": "2026-11-01T14:17:10.361217Z",
+  "value": {
+   "requested_url": "https://www.bemex-rekruttering.no/",
+   "final_url": "https://www.bemex-rekruttering.no/",
+   "registered_domain": "bemex-rekruttering.no",
+   "title": "BEMEX Rekruttering | Rekruttering | Nesttunvegen 103, Nesttun, Norway",
+   "description": "Velkommen til Bemex Rekruttering - din partner for å finne den rette personen for din bedrift. Med over 31 års erfaring og ekspertise tilbyr vi skreddersydde løsninger innen rekruttering og utleie av arbeidskraft. Utforsk våre tjenester og ta det første steget mot å styrke din organisasjon i dag.",
+   "main_text_excerpt": "Velkommen til Bemex Rekruttering\nVi bemanner Bergen\nMed lang og allsidig erfaring samlet erfaring og ekspertise har Bemex rekruttert og leid ut arbeidskraft til ulike bransjer. Vi finner den rette personen for deg og din bedrift.\nREKRUTTERING\nBemex Rekruttering har sertifiserte rekrutteringsrådgivere som tilbyr tjenester innen rekruttering og utvelgelse av ledere, spesialister og medarbeidere til faste stillinger.\nVåre prosesser inneholder både annonserte søk og aktive markedssøk for å kunne levere et best mulig kandidatgrunnlag. Vi kvalitetssikrer våre kandidater gjennom velprøvd metodikk, bl.a ved strukturerte intervjuer og grundig referansesjekk.\nVed behov benyttes yrkesrelaterte personlighet- og evnetester. Før, under og etter prosessforløpet sørger vi for god oppfølgning og veiledning av kandidat og oppdragsgiver. Bemex Rekruttering benytter testverktøy fra OPQ32 og AON Adept-15.\nUTLEIE\nVi tilfører våre kunder kapasitet og kompetanse når de har behov for det, og sørger for at arbeidet blir utført med høy kvalitet og til riktig tid. Rett person på rett plass er viktig for alle parter.\nÅ ta vare på sine medarbeidere er å ta vare på en viktig ressurs. Vi ser mangfoldet i menneske og tar medarbeiderne våre på alvor. Alle våre medarbeidere går igjennom et personlige intervju og vi gjennomfører grundig referansesjekk.\nUtelukkende positivt. Bemex Rekruttering er proaktiv, løsningsorientert og en god sparringpartner.\nSamarbeidet har vært enkelt og tidsbesparende og de har alltid vært rask med å finne gode kandidater.\nMagne Strømme\nService Manager\nBertel O. Steen\nPower Solutions\nBemex Rekruttering er hyggelig og imøtekommende og leverer gode kandidater.\nPernille Storla\nRecruitment Supervisor\nKCA DEUTAG\nDrilling Norge AS",
+   "identity_text_excerpt": "post@bemex-rekruttering.no Tlf: (0047) – 55124811 Nesttunveien 103,5221 Nesttun Om oss Min side Tjenester Ledige stillinger For medarbeidere Referanser Kontakt Drift & vedlikehold fra Moment Marketing © 2026 bemex Personvern Generelle vilkår",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bemexrekruttering"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bemex-rekruttering-as"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@context": "https://schema.org/",
+     "@type": "LocalBusiness",
+     "name": "Bemex rekruttering ",
+     "url": "https://www.bemex-rekruttering.no",
+     "image": "https://static.wixstatic.com/media/eeca38_d64399f4d1b04b96acd8ef632cb56117~mv2.png",
+     "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NO",
+      "addressLocality": "Fana",
+      "addressRegion": "12",
+      "postalCode": "5221",
+      "streetAddress": "103 Nesttunvegen"
+     },
+     "telephone": "(0047) – 55124811"
+    }
+   ],
+   "content_sha256": "69ae976160bcc756201b3a5eb49446bd8558ce0183dcae4e42ff5e9332d74e4b",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.bemex-rekruttering.no/",
+     "title": "BEMEX Rekruttering | Rekruttering | Nesttunvegen 103, Nesttun, Norway",
+     "main_text_excerpt": "Velkommen til Bemex Rekruttering\nVi bemanner Bergen\nMed lang og allsidig erfaring samlet erfaring og ekspertise har Bemex rekruttert og leid ut arbeidskraft til ulike bransjer. Vi finner den rette personen for deg og din bedrift.\nREKRUTTERING\nBemex Rekruttering har sertifiserte rekrutteringsrådgivere som tilbyr tjenester innen rekruttering og utvelgelse av ledere, spesialister og medarbeidere til faste stillinger.\nVåre prosesser inneholder både annonserte søk og aktive markedssøk for å kunne levere et best mulig kandidatgrunnlag. Vi kvalitetssikrer våre kandidater gjennom velprøvd metodikk, bl.a ved strukturerte intervjuer og grundig referansesjekk.\nVed behov benyttes yrkesrelaterte personlighet- og evnetester. Før, under og etter prosessforløpet sørger vi for god oppfølgning og veiledning av kandidat og oppdragsgiver. Bemex Rekruttering benytter testverktøy fra OPQ32 og AON Adept-15.\nUTLEIE\nVi tilfører våre kunder kapasitet og kompetanse når de har behov for det, og sørger for at arbeidet blir utført med høy kvalitet og til riktig tid. Rett person på rett plass er viktig for alle parter.\nÅ ta vare på sine medarbeidere er å ta vare på en viktig ressurs. Vi ser mangfoldet i menneske og tar medarbeiderne våre på alvor. Alle våre medarbeidere går igjennom et personlige intervju og vi gjennomfører grundig referansesjekk.\nUtelukkende positivt. Bemex Rekruttering er proaktiv, løsningsorientert og en god sparringpartner.\nSamarbeidet har vært enkelt og tidsbesparende og de har alltid vært rask med å finne gode kandidater.\nMagne Strømme\nService Manager\nBertel O. Steen\nPower Solutions\nBemex Rekruttering er hyggelig og imøtekommende og leverer gode kandidater.\nPernille Storla\nRecruitment Supervisor\nKCA DEUTAG\nDrilling Norge AS",
+     "content_sha256": "69ae976160bcc756201b3a5eb49446bd8558ce0183dcae4e42ff5e9332d74e4b"
+    },
+    {
+     "url": "https://www.bemex-rekruttering.no/om-oss",
+     "title": "Om oss | Bemex",
+     "main_text_excerpt": "Velkommen til oss\nVår målsetting er å tilby fleksible og effektive rekruttering- og bemanningsløsninger. Med lang og allsidig erfaring fra bransjen har vi verdifull kunnskap om markedet og våre kunder, og vet hvor viktig gode relasjoner er.\nBemex Rekruttering AS leverer fleksible og effektive løsninger innen rekruttering og bemanning. Med solid bransjeerfaring og god markedskunnskap vet vi hva som skal til for å finne riktig person til riktig rolle. Vi har et sterkt nettverk og lokal tilstedeværelse på Vestlandet og i Bergen, kombinert med leveranser over hele Norge. Kvalitet, relasjoner og presisjon står sentralt i alt vi gjør. Enten behovet er midlertidig bemanning eller en fast ansettelse, bistår vi med hele eller deler av prosessen på tvers av bransjer og nivåer. Siden mars 2026 er Bemex Rekruttering en del av Calviks.\nVi er en profesjonell samarbeidspartner som er opptatt av å levere kvalitet, og med\nlang erfaring fra bransjen, vet vi hva som skal til for å finne rett person på rett plass.\nVi gjennomfører hele eller deler av rekrutteringsprosessen på alle nivåer og alle fagområder.\nOm du trenger midlertidig bemanning eller en ny medarbeider i en permanent stilling kan vi hjelpe deg.\nUTLEIE\nUTLEIE AV TOPP ARBEIDSKRAFT\n-Midlertidig behov når virksomheten har tariffavtale og avtale med tillitsvalgte.\n-Permisjon- og sykdomsfravær\n-Ferieavvikling\n-I påvente av en ansettelse i en pågående prosess\n-Spesialistkompetanse – konsulent, helse, landbruk og events.",
+     "identity_text_excerpt": "post@bemex-rekruttering.no Tlf: (0047) – 55124811 Nesttunveien 103,5221 Nesttun Om oss Min side Tjenester Ledige stillinger For medarbeidere Referanser Kontakt Drift & vedlikehold fra Moment Marketing © 2026 bemex Personvern Generelle vilkår",
+     "content_sha256": "7ca5bfa18e98982049eeff3f3d270b26b9ad59bc31c2c793ba405d8231673993"
+    },
+    {
+     "url": "https://www.bemex-rekruttering.no/kontakt",
+     "title": "Kontakt | Bemex",
+     "main_text_excerpt": "Alexander Havnnes Røed\nDaglig leder\nTlf: (+47) 908 23 538\nalexander@bemex-rekruttering.no\nSvenn Frydenberg\nSalgsleder\nTlf: (+47) 980 36 646\nsvenn@bemex-rekruttering.no\nVibeke Kaland Lien\nSenior Rådgiver\nTlf: (+47) 484 05 511\nvibeke@bemex-rekruttering.no",
+     "identity_text_excerpt": "post@bemex-rekruttering.no Tlf: (0047) – 55124811 Nesttunveien 103,5221 Nesttun Om oss Min side Tjenester Ledige stillinger For medarbeidere Referanser Kontakt Drift & vedlikehold fra Moment Marketing © 2026 bemex Personvern Generelle vilkår",
+     "content_sha256": "302756f52b6da8ae329fd56a87b20ccf9c79830d4aaa8d0e30361c2797a341fd"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bemex",
+     "rekruttering"
+    ],
+    "matched_tokens": [
+     "bemex",
+     "rekruttering"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bemexrekruttering"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bergenbemanning"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bemex-rekruttering-as"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bemexrekruttering",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bemex",
+      "rekruttering"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bergenbemanning",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bemex-rekruttering-as",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bemex",
+      "rekruttering"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "69ae976160bcc756201b3a5eb49446bd8558ce0183dcae4e42ff5e9332d74e4b",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995726742": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "cfb4fbe78cdfb7a4.json.gz",
+   "content_sha256": "cfb4fbe78cdfb7a4165d795c919099e37c90a0de529bb67d8339b36ee9364bd4",
+   "retrieved_at": "2026-11-01T14:17:02.920210Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/995726742": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "f9353a70e9223de6.json.gz",
+   "content_sha256": "f9353a70e9223de6c0ef3894c8bd2e2e531dd01c37239b2175dc80888b5d937a",
+   "retrieved_at": "2026-11-01T14:17:03.974429Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995726742/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "9a03bf3abcd86f44.json.gz",
+   "content_sha256": "9a03bf3abcd86f446acae642083dc50e983ef0c38db85bf517f716cd3eb859c8",
+   "retrieved_at": "2026-11-01T14:17:06.105497Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/995726742": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:04.681868Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=995726742&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "a701b6dadf24746b.json.gz",
+   "content_sha256": "a701b6dadf24746ba78c4d079624f1afb39d653f2c501f014e66564c8516b76a",
+   "retrieved_at": "2026-11-01T14:17:05.396298Z"
+  },
+  "https://www.bemex-rekruttering.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "69ae976160bcc756.html.gz",
+   "content_sha256": "69ae976160bcc756201b3a5eb49446bd8558ce0183dcae4e42ff5e9332d74e4b",
+   "retrieved_at": "2026-11-01T14:17:11.068858Z"
+  },
+  "https://www.bemex-rekruttering.no/om-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "7ca5bfa18e989820.html.gz",
+   "content_sha256": "7ca5bfa18e98982049eeff3f3d270b26b9ad59bc31c2c793ba405d8231673993",
+   "retrieved_at": "2026-11-01T14:17:11.421973Z"
+  },
+  "https://www.bemex-rekruttering.no/kontakt": {
+   "kind": "site",
+   "status": 200,
+   "file": "302756f52b6da8ae.html.gz",
+   "content_sha256": "302756f52b6da8ae329fd56a87b20ccf9c79830d4aaa8d0e30361c2797a341fd",
+   "retrieved_at": "2026-11-01T14:17:11.777852Z"
+  },
+  "https://www.bemex-rekruttering.no/ledige-stillinger": {
+   "kind": "site",
+   "status": 200,
+   "file": "b9fdfe1348fb30c0.html.gz",
+   "content_sha256": "b9fdfe1348fb30c0d5eae72870a559445c47dc2cb464807d01d75b2bc0eafe40",
+   "retrieved_at": "2026-11-01T14:17:12.251369Z"
+  }
+ }
+}

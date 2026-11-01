@@ -1,0 +1,258 @@
+{
+ "organisation_number": "937843860",
+ "name": "BIOMAR A.S.",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.biomar.com/no-no",
+  "retrieved_at": "2026-11-01T14:17:37.373824Z",
+  "value": {
+   "requested_url": "https://www.biomar.com/no/biomar-norge/",
+   "final_url": "https://www.biomar.com/no-no",
+   "registered_domain": "biomar.com",
+   "title": "BioMar | Powered by Partnership. Driven by Innovation.",
+   "description": "BioMar er en ledende leverandør av bærekraftig høyytelsesfôr til havbruksnæringen.",
+   "main_text_excerpt": "Powered by Partnership. Driven by Innovation.\nBioMar er en av verdens største produsenter av fiskefôr. Med 16 fôrfabrikker i Norge, Chile, Danmark, Skottland, Spania, Frankrike, Hellas, Tyrkia, Kina, Costa Rica, Equador, Vietnam og Australia, leverer vi på verdensbasis fôr til over 45 forskjellige fiske- og rekearter i mer enn 90 land.\nPowered by Partnership.\nDriven by Innovation.\n   \n            Vi er den første globale leverandøren av fiskefôr som forpliktet seg til ambisiøse mål for klimagassutslipp, med 1,5°C-målet som middel. For å oppnå denne reduksjonen har BioMar utviklet en langsiktig hovedplan med fokus på drift og bredere partnerskap med leverandører i hele verdikjeden, noe som vil skape innovative løsninger og gjøre bærekraft økonomisk lønnsomt.\nMed et sterkt fokus på innovasjon, forskning og bærekraft, utvikler vi fôr som støtter fiskehelse, optimal vekst og god ressursutnyttelse. Våre produkter bygger på biologisk innsikt, bærekraftig råvarebruk og vitenskapelig dokumentert effekt – tilpasset både kundens behov og naturens premisser.\n- \n            \n- \n            \n  - Fôr\n Les merBioMar har lansert BioRetain, et nytt formuleringskonsept som bygger på mer enn to tiår med forskning og utvikling. Det nye formuleringskonseptet er…\n- \n            \n-",
+   "identity_text_excerpt": "Kontakt BioMar Norge Bolstadsvei 24 8430 Myre Norge +47 76 11 92 00 info@biomar.no Kundeservice Ordretelefon: +47 76 11 92 30 bestilling@biomar.no Medisinfôr: +47 48 01 33 90 Relevante lenker Media og Samfunnsansvar Åpenhetsloven Nabohenvendelse fabrikk Myre Nabohenvendelse fabrikk Karmøy Personvern Whistleblower-system Globale retningslinjer Informasjonskapsler",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/BiomarNorge"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/biomarnorge"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/biomar-norge"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@BioMarGroup"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "af48cc9e21ae5b1940a9122a54e53244533e2d9c69691e4ae3b9c50d78129a39",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.biomar.com/no-no",
+     "title": "BioMar | Powered by Partnership. Driven by Innovation.",
+     "main_text_excerpt": "Powered by Partnership. Driven by Innovation.\nBioMar er en av verdens største produsenter av fiskefôr. Med 16 fôrfabrikker i Norge, Chile, Danmark, Skottland, Spania, Frankrike, Hellas, Tyrkia, Kina, Costa Rica, Equador, Vietnam og Australia, leverer vi på verdensbasis fôr til over 45 forskjellige fiske- og rekearter i mer enn 90 land.\nPowered by Partnership.\nDriven by Innovation.\n   \n            Vi er den første globale leverandøren av fiskefôr som forpliktet seg til ambisiøse mål for klimagassutslipp, med 1,5°C-målet som middel. For å oppnå denne reduksjonen har BioMar utviklet en langsiktig hovedplan med fokus på drift og bredere partnerskap med leverandører i hele verdikjeden, noe som vil skape innovative løsninger og gjøre bærekraft økonomisk lønnsomt.\nMed et sterkt fokus på innovasjon, forskning og bærekraft, utvikler vi fôr som støtter fiskehelse, optimal vekst og god ressursutnyttelse. Våre produkter bygger på biologisk innsikt, bærekraftig råvarebruk og vitenskapelig dokumentert effekt – tilpasset både kundens behov og naturens premisser.\n- \n            \n- \n            \n  - Fôr\n Les merBioMar har lansert BioRetain, et nytt formuleringskonsept som bygger på mer enn to tiår med forskning og utvikling. Det nye formuleringskonseptet er…\n- \n            \n-",
+     "content_sha256": "af48cc9e21ae5b1940a9122a54e53244533e2d9c69691e4ae3b9c50d78129a39"
+    },
+    {
+     "url": "https://www.biomar.com/no-no/om-oss",
+     "title": "Om oss | BioMar",
+     "main_text_excerpt": "Om oss\nBioMar er en av verdens største produsenter av fiskefôr.\nVi bidrar gjennom utvikling, produksjon og distribusjon av høy-ytelses fiskefôr, for å kunne sikre et sunt og næringsrikt kosthold til fisken, produsert med lavest mulig fotavtrykk.\nVi er innovatører engasjert i en effektiv og bærekraftig global akvakulturnæring\nSamarbeid\nVi ser styrken i gjensidige partnerskap, og vi søker aktivt samarbeid på tvers av alle ledd i verdikjeden av bransjen.\nBærekraft\nVi påtar oss et samfunnsansvar for å utvikle havbruksnæringen og streber etter å redusere eget fotavtrykk.\nInnovasjon\nGjennom strategiske samarbeid fungerer vi som en katalysator for positiv utvikling. Vi legger til rette for gjensidig kunnskapsdeling – internt og eksternt – for å sikre bærekraftige løsninger og innovasjon.\nYtelse\nVi sørger for at våre kunder alltid har tilgang til nyeste kompetansen innen fôr og råvarer, og de mest effektive fôringsmetoder innen ansvarlig produksjon.\nDe viktigste artene vi fôrer\nMed 16 fôrfabrikker i Norge, Chile, Danmark, Skottland, Spania, Frankrike, Hellas, Tyrkia, Kina, Costa Rica, Equador, Vietnam og Australia, leverer vi på verdensbasis fôr til over 45 forskjellige fiske- og rekearter i mer enn 90 land.",
+     "identity_text_excerpt": "Kontakt BioMar Norge Bolstadsvei 24 8430 Myre Norge +47 76 11 92 00 info@biomar.no Kundeservice Ordretelefon: +47 76 11 92 30 bestilling@biomar.no Medisinfôr: +47 48 01 33 90 Relevante lenker Media og Samfunnsansvar Åpenhetsloven Nabohenvendelse fabrikk Myre Nabohenvendelse fabrikk Karmøy Personvern Whistleblower-system Globale retningslinjer Informasjonskapsler",
+     "content_sha256": "b97e90e31b50d04a9e770415c6be3e86643627f51e75783258686b2771555db5"
+    },
+    {
+     "url": "https://www.biomar.com/no-no/om-oss/historien",
+     "title": "Historien | BioMar",
+     "main_text_excerpt": "Historien\nGrunnlagt i 1962 av danske ørretoppdrettere, var vi blant de første i Europa som begynte produksjon av pelletert tørrfôr.\nBegynnelsen\nI 1962 grunnla en gruppe danske ørretoppdrettere Dansk Ørredfoder A/S med en visjon om å revolusjonere ernæring innen akvakultur. Selskapet ble en av de første i Europa til å produsere pelletert tørrfôr, en banebrytende innovasjon som satte nye standarder for næringen og la grunnlaget for flere tiår med vekst og lederskap.\nTørrfôrrevolusjonen\nPå 1970-tallet viste den danske oppdrettsnæringen økende interesse for bruk av tørrfôr. Sammenlignet med det vanlig brukte våtfôret var denne nye fôrtypen mindre forurensende, mer effektiv og langt enklere å håndtere. Selskapet leverte hovedsakelig til lokale oppdrettere og begynte snart å motta bestillinger fra nabolandene, noe som etablerte virksomheten som en regional markedsleder.\nInnovasjon med ekstrudert fôr\nBioMar var en pioner innen introduksjonen av ekstrudert fiskefôr, noe som bidro til en betydelig reduksjon i akvakulturens påvirkning på det lokale vannmiljøet. Dette teknologiske gjennombruddet styrket selskapets posisjon som en ledende aktør innen innovative fôrløsninger.\nFokus på bærekraft\nTidlig på 1990-tallet, under navnet BioMar, ble bærekraft løftet frem som et sentralt mål i utviklingen av fiskefôr. Målet var å redusere akvakulturens miljøpåvirkning, både på kort og lang sikt. Samtidig vokste selskapet i Europa gjennom oppkjøp i Frankrike og Norge, og ved etablering av nye produksjonsanlegg i Skottland og Norge.\nGlobal ekspansjon\nMed inngangen til det nye årtusenet tok BioMar sine første steg mot ekspansjon utenfor Europa gjennom oppkjøpet av 50 prosent av to fiskefôrfabrikker i Chile. Samtidig fortsatte selskapet sin europeiske vekst med etableringen av et produksjonsanlegg i Hellas og oppkjøpet av Provimi Aqua, som inkluderte fabrikker i Chile, Spania og Danmark. I samme periode ble BioMar en del av det danske industrikonsernet Schouw & Co.\nStrategiske partnerskap\nInternasjonaliseringen fortsatte med etableringen av joint ventures i Costa Rica, i Kina i samarbeid med Tongwei, og i Tyrkia sammen med Sagun. BioMar kjøpte også Alimentsa, en produsent av rekefôr i Ecuador, og oppnådde samtidig fullt eierskap til det chilenske joint venture-selskapet. I tillegg ble det etablert en global enhet for hatcheryfôr i Frankrike, noe som ytterligere styrket selskapets internasjonale tilstedeværelse.\nNeste generasjon\nI begynnelsen av tiåret etablerte BioMar produksjonsanlegg i Tasmania i Australia og åpnet en ny fabrikk i Kina. Samtidig ble det etablert et joint venture i Vietnam i samarbeid med VietUc, og selskapet kjøpte AQ1 Systems, som er spesialisert innen teknologi for rekefôring. Senere sikret BioMar fullt eierskap til det eksisterende anlegget gjennom joint venture-samarbeidet i Costa Rica.",
+     "identity_text_excerpt": "60+ år med innovasjon Å forme fremtidens bærekraftige akvakultur gjennom vitenskap og samarbeid Kontakt BioMar Norge Bolstadsvei 24 8430 Myre Norge +47 76 11 92 00 info@biomar.no Kundeservice Ordretelefon: +47 76 11 92 30 bestilling@biomar.no Medisinfôr: +47 48 01 33 90 Relevante lenker Media og Samfunnsansvar Åpenhetsloven Nabohenvendelse fabrikk Myre Nabohenvendelse fabrikk Karmøy Personvern Whistleblower-system Globale retningslinjer Informasjonskapsler",
+     "content_sha256": "aeb72a75ebac216685c651f99a29a41426dfbb05bc09ec2a8157a815c439f9b7"
+    },
+    {
+     "url": "https://www.biomar.com/no-no/om-oss/historien/biomar-norge",
+     "title": "BioMar Norge",
+     "main_text_excerpt": "BioMar Norge\nBioMar er en av verdens største produsenter av fiskefôr. BioMar Norge har i dag rundt 300 ansatte fordelt på fabrikker på Myre og Karmøy, kontorer i Trondheim og et forskningssenter i Sandnessjøen. Vi utvikler, produserer og distribuerer fiskefôr til norsk havbruksnæring, og har bygget opp et av Norges største forskningsmiljø på atlantisk laks.\nI 1988 solgte ØLF sin aksjepost til Dyno Industrier, og Norsk Hydro ble gradvis majoritetseier gjennom sitt eierskap i Dyno Industrier og Korn- og Foderstof Kompagniet (KFK). I 1994 ble BioMar samlet til et konsern, da Norsk Hydro slo sammen sine fôrrelaterte selskaper – Dansk Ørredfoder, Aqualim og BioMar – og valgte å videreføre det norske firmanavnet BioMar.\nI 1996 ble BioMars fabrikk på Karmøy etablert, og har siden spilt en nøkkelrolle i selskapets utvikling. Fabrikken har gjennom årene vært anerkjent som en av verdens største fiskefôrfabrikker, og i 2017 ble den rangert som den største i verden målt i timekapasitet.\nEtter flere år med eierskap og utvikling, solgte Norsk Hydro sine aksjer i BioMar til det danske investeringsselskapet Schouw & Co. i 2006. Dette markerer overgangen til dagens eierskap, hvor BioMar inngår i Schouw & Co.-konsernet.\nGjennom historien har BioMar Norge markert seg med en rekke banebrytende milepæler som har formet norsk fôrindustri. Allerede i 1987 lanserte vi markedets mest fettkonsentrerte fôr med god dokumentert effekt, og tok i bruk ekstruderingsteknologi som revolusjonerte fôrproduksjon. I 1995 ble vi den første fôrprodusenten i Norge med ISO-9001-sertifisering. Siden har vi gjennomført store investeringer både på Myre og Karmøy, og kontinuerlig utviklet vår produksjonskapasitet og teknologi.\nBioMar Norge står i dag for nær en fjerdedel av all fiskefôrproduksjon i Norge, med et årlig volum på rundt 500.000 tonn. Gjennom et omfattende distribusjonsnettverk og en spesialdesignet fôrflåte – bestående av seks fartøy – leverer vi fôr til oppdrettere langs hele norskekysten. Hvert år produserer vi fôr som bidrar til nær én milliard sunne fiskemåltider i året – et viktig bidrag til å mette en stadig voksende befolkning med bærekraftig sjømat.\nEtableringsfasen\n1980-tallet var etableringsfasen for BioMar Norge. Selskapet ble stiftet i 1986, og fabrikken på Myre ble bygget som den første laksefôrfabrikken i Nord-Norge. De første årene var preget av oppstart, rask kundevekst, nye distribusjonsavtaler og gradvis økende produksjon. Mot slutten av tiåret kom viktige investeringer i produksjonslinjer og teknologi, samtidig som BioMar oppnådde sitt første positive resultat.\nProfesjonalisering\n1990-tallet var en periode med vekst, strukturering og profesjonalisering. BioMar styrket sin markedsposisjon, lanserte nye produkter og etablerte kontorer og markedstilstedeværelse flere steder i landet, blant annet i Trondheim. Selskapet ble samlet i et større konsern, og fabrikken på Karmøy ble åpnet i 1996. Tiåret var også preget av kvalitetssertifisering, teknologiske oppgraderinger og sterk vekst — men også store utfordringer, særlig den alvorlige brannen på Myre i 1998.\nModernisering\n2000-tallet handlet om gjenoppbygging, modernisering og sterk kommersiell utvikling. Fabrikken på Myre kom raskt tilbake i drift etter brannen, og BioMar økte både volum, kapasitet og markedsandel betydelig gjennom tiåret. Nye konsepter, digitale verktøy og produktlanseringer styrket konkurransekraften, samtidig som selskapet fikk nye eiere og økt internasjonal samordning. Ved utgangen av tiåret hadde BioMar passert 300.000 tonn i årlig salg og befestet sin posisjon som en ledende aktør i markedet.\nBærekraft og innovasjon\n2010-tallet var preget av store investeringer, bærekraftssatsing og videre industriell vekst. BioMar bygget ut kapasiteten betydelig på både Myre og Karmøy, tok i bruk ny logistikkteknologi som gassdrevet lasteskip, og styrket satsingen på spesialfôr, bærekraft og innovative råvarer. Selskapet publiserte sine første bærekraftsrapporter og fikk høy anerkjennelse for transparens og bærekraftig fôrproduksjon. Samtidig var tiåret preget av svingninger i markedet, sterk konkurranse og endringer i ledelsen.\nVekst og bærekraft i en ny tid\n2020-tallet viser et BioMar som kombinerer høy produksjon med tydelig klima- og bærekraftsprofil. Til tross for pandemi, prispress og endrede markedsvilkår har selskapet oppnådd salgs- og omsetningsrekorder, investert i utslippskutt, elektrifisering og nye råvarer, og styrket sin posisjon innen bærekraftig havbruk. Partnerskap, oppkjøp og nye produktløsninger har preget perioden, sammen med viktige milepæler som ASC Feed Standard-sertifisering, nytt administrasjonsbygg på Myre og overtakelsen av LetSea. I 2026 markerer BioMar Norge sitt 40-årsjubileum.",
+     "identity_text_excerpt": "Kontakt BioMar Norge Bolstadsvei 24 8430 Myre Norge +47 76 11 92 00 info@biomar.no Kundeservice Ordretelefon: +47 76 11 92 30 bestilling@biomar.no Medisinfôr: +47 48 01 33 90 Relevante lenker Media og Samfunnsansvar Åpenhetsloven Nabohenvendelse fabrikk Myre Nabohenvendelse fabrikk Karmøy Personvern Whistleblower-system Globale retningslinjer Informasjonskapsler",
+     "content_sha256": "402084fd1ba13794d30c7e526f9579f639a3626ffdcc67b71517407afc68db7d"
+    },
+    {
+     "url": "https://www.biomar.com/no-no/om-oss/karriere",
+     "title": "Karriere | BioMar",
+     "main_text_excerpt": "Karriere\nVil du bli med på laget? I BioMar er våre ansatte vår største og viktigste ressurs. Å jobbe hos en av verdens største produsenter av bærekraftig fôr, gir spennende og unike karriere – og utviklingsmuligheter. Som vår kollega vil du bli en del av et inkluderende og engasjert arbeidsmiljø der trivsel, samarbeid og faglig utvikling står i sentrum.\nMøt våre kollegaer\nVil du bli bedre kjent med våre engasjerte kollegaer i de ulike avdelingene i BioMar? Nederst på denne siden kan du møte menneskene bak arbeidet vårt. Ta en titt, bli inspirert, og få et innblikk i hverdagen til våre dyktige kollegaer!\nVåre prinsipper og samfunnsansvar\nVi bryr oss - for menneskene som jobber hos oss, for verdikjeden vi er en del av, og for samfunnet rundt oss. BioMars prinsipper setter retningen for hvordan vi jobber med menneskerettigheter, helse og sikkerhet, bærekraft og etisk forretningsdrift.\nFinn ut mer om BioMar\n- \n            \n- \n            \n- \n            \n- \n            \n  - Våre ansatte\n Les merFra luft til hav For Iven Annie Wenberg, 28 år fra Myre, føltes det som å komme hjem da hun startet som HR-konsulent i BioMar i mai 2025. Selskapet…",
+     "identity_text_excerpt": "Kontakt BioMar Norge Bolstadsvei 24 8430 Myre Norge +47 76 11 92 00 info@biomar.no Kundeservice Ordretelefon: +47 76 11 92 30 bestilling@biomar.no Medisinfôr: +47 48 01 33 90 Relevante lenker Media og Samfunnsansvar Åpenhetsloven Nabohenvendelse fabrikk Myre Nabohenvendelse fabrikk Karmøy Personvern Whistleblower-system Globale retningslinjer Informasjonskapsler",
+     "content_sha256": "7365f8b9c85bd958fd13ae5774c223207dfd6e02bfc50ce890328efaa7337d4e"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "biomar"
+    ],
+    "matched_tokens": [
+     "biomar"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/BiomarNorge"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/biomarnorge"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/biomar-norge"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@BioMarGroup"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/BiomarNorge",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "biomar"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/biomarnorge",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "biomar"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/biomar-norge",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "biomar"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@BioMarGroup",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "biomar"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "af48cc9e21ae5b1940a9122a54e53244533e2d9c69691e4ae3b9c50d78129a39",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/937843860": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "608e7f0c4200e60b.json.gz",
+   "content_sha256": "608e7f0c4200e60be7f13ec8f1219797a3724b599adfe3cb18f177fc5437823a",
+   "retrieved_at": "2026-11-01T14:17:29.040929Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/937843860": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "ac3ed2acdfae7b2a.json.gz",
+   "content_sha256": "ac3ed2acdfae7b2abc0eb125bbd7e4e93e97b97fea2628d9057aa0d2a64550c9",
+   "retrieved_at": "2026-11-01T14:17:29.731037Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/937843860/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "c84f3231ed36def3.json.gz",
+   "content_sha256": "c84f3231ed36def38e76828410e4ba692e73c32f7ad529165c0ed541ef124a52",
+   "retrieved_at": "2026-11-01T14:17:31.799228Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/937843860": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:17:30.403723Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=937843860&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "c789059050eccf55.json.gz",
+   "content_sha256": "c789059050eccf55b133c884eb1706ee1666cf95cdbc90f498d9bc1bd192e01c",
+   "retrieved_at": "2026-11-01T14:17:31.100217Z"
+  },
+  "https://www.biomar.com/no-no": {
+   "kind": "site",
+   "status": 200,
+   "file": "8c073bb9e8a70169.html.gz",
+   "content_sha256": "8c073bb9e8a701694c79d973df858f3192e417cf3697c6d94919176b58ded958",
+   "retrieved_at": "2026-11-01T14:17:38.095398Z"
+  },
+  "https://www.biomar.com/no-no/om-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "bb162dfbe726f130.html.gz",
+   "content_sha256": "bb162dfbe726f1308363015a050eca90df94da0a244487686c0a452de6917be4",
+   "retrieved_at": "2026-11-01T14:17:38.795904Z"
+  },
+  "https://www.biomar.com/no-no/om-oss/vaare-prinsipper": {
+   "kind": "site",
+   "status": 200,
+   "file": "1c55f5dcf915bff3.html.gz",
+   "content_sha256": "1c55f5dcf915bff3df4726103511c65e5313e101b015d95c197f7dbbfb342958",
+   "retrieved_at": "2026-11-01T14:17:39.185329Z"
+  },
+  "https://www.biomar.com/no-no/innsikt/nyheter": {
+   "kind": "site",
+   "status": 200,
+   "file": "950e7ca34f04fc5e.html.gz",
+   "content_sha256": "950e7ca34f04fc5edf7029f7e0be0e66fb79c1dec4a9a4dd43c6df6cd4f7eb7e",
+   "retrieved_at": "2026-11-01T14:17:40.424262Z"
+  },
+  "https://www.biomar.com/no-no/om-oss/karriere": {
+   "kind": "site",
+   "status": 200,
+   "file": "15c345e57a1a927e.html.gz",
+   "content_sha256": "15c345e57a1a927ea3638114c90a0b29042f9dc8346f952234efd46368121d36",
+   "retrieved_at": "2026-11-01T14:17:40.784035Z"
+  },
+  "https://www.biomar.com/no-no/innsikt/nyheter/tredobling-av-omega-3-i-for-gir-det-maalbar-effekt": {
+   "kind": "site",
+   "status": 200,
+   "file": "def069d02fcf10be.html.gz",
+   "content_sha256": "def069d02fcf10bee81b83b123ed55eb7b4c4a0f8d94c043c69fb320285c93c0",
+   "retrieved_at": "2026-11-01T14:17:43.532584Z"
+  },
+  "https://www.biomar.com/no-no/innsikt/nyheter/biomar-introduserer-bioretain-et-nytt-kapittel-innen-forformulering": {
+   "kind": "site",
+   "status": 200,
+   "file": "64e7f03e12530730.html.gz",
+   "content_sha256": "64e7f03e1253073017c6f9f17c4df4ffd37de22f10bc9e1f07ca11cb4e9c4f6a",
+   "retrieved_at": "2026-11-01T14:17:43.904756Z"
+  },
+  "https://www.biomar.com/no-no/innsikt/nyheter/hvilken-forstrategi-trenger-din-fisk-i-vinter": {
+   "kind": "site",
+   "status": 200,
+   "file": "e4ae4a1e605637fd.html.gz",
+   "content_sha256": "e4ae4a1e605637fd9d2bbef61d1ff420ed205b2a6196fbe5f304c37672ba9c6f",
+   "retrieved_at": "2026-11-01T14:17:44.384353Z"
+  }
+ }
+}

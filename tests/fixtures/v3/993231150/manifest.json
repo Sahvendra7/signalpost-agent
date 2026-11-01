@@ -1,0 +1,234 @@
+{
+ "organisation_number": "993231150",
+ "name": "BERGEN RØRTEKNIKK AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://bergen-rorteknikk.no/",
+  "retrieved_at": "2026-11-01T14:18:29.660396Z",
+  "value": {
+   "requested_url": "https://www.bergen-rorteknikk.no/",
+   "final_url": "https://bergen-rorteknikk.no/",
+   "registered_domain": "bergen-rorteknikk.no",
+   "title": "Bergen Rørteknikk - En av regionens ledende rørentreprenører",
+   "description": "Bergen Rørteknikk - Vi utfører alle fagdisipliner og bistår med moderne løsninger innen : Energi, Varme og kjøling, Sanitær, VA og Havbruk.",
+   "main_text_excerpt": "Bergen Rørteknikk er en av regionens ledende rørentreprenører. Lang erfaring og bred kompetanse gjør oss til en foretrukket samarbeidspartner i både små og store VVS-prosjekter. \nVi satser offensivt og har de siste årene investert tungt i egne fasiliteter, folk og utstyr. Vi er derfor stolte over å si at vi i dag er en av regionens mest komplette rørtekniske totalentreprenører. Vi utfører alle fagdisipliner og bistår våre kunder med moderne løsninger innen fagområdene Energi, Varme og kjøling, Sanitær, VA og Havbruk. \nFor å ytterligere styrke laget, er vi alltid på jakt etter nye medarbeidere. \nVil du bli en del av regionens fremste rørtekniske fagmiljø?",
+   "identity_text_excerpt": "Kontakt oss Bergen Rørteknikk AS Leirvikflaten 23 5179 GODVIK E-post: post@bergen-rorteknikk.no Tlf: 55 70 64 60 Facebook-f Instagram © All Rights Reserved.",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Bergenrorteknikk"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bergenrorteknikkas"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://bergen-rorteknikk.no/#organization",
+     "name": "Bergen Rørteknikk",
+     "url": "https://bergen-rorteknikk.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "nb-NO",
+      "@id": "https://bergen-rorteknikk.no/#/schema/logo/image/",
+      "url": "https://bergen-rorteknikk.no/wp-content/uploads/2022/05/bergen-rorteknikk-logo-hvit.png",
+      "contentUrl": "https://bergen-rorteknikk.no/wp-content/uploads/2022/05/bergen-rorteknikk-logo-hvit.png",
+      "width": 2099,
+      "height": 300,
+      "caption": "Bergen Rørteknikk"
+     },
+     "image": {
+      "@id": "https://bergen-rorteknikk.no/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/Bergenrorteknikk/",
+      "https://www.instagram.com/bergenrorteknikkas/"
+     ]
+    }
+   ],
+   "content_sha256": "52de303c3ed52d748489e5a53dc85304fbb317f7239586bf56ada0850a5187b1",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://bergen-rorteknikk.no/",
+     "title": "Bergen Rørteknikk - En av regionens ledende rørentreprenører",
+     "main_text_excerpt": "Bergen Rørteknikk er en av regionens ledende rørentreprenører. Lang erfaring og bred kompetanse gjør oss til en foretrukket samarbeidspartner i både små og store VVS-prosjekter. \nVi satser offensivt og har de siste årene investert tungt i egne fasiliteter, folk og utstyr. Vi er derfor stolte over å si at vi i dag er en av regionens mest komplette rørtekniske totalentreprenører. Vi utfører alle fagdisipliner og bistår våre kunder med moderne løsninger innen fagområdene Energi, Varme og kjøling, Sanitær, VA og Havbruk. \nFor å ytterligere styrke laget, er vi alltid på jakt etter nye medarbeidere. \nVil du bli en del av regionens fremste rørtekniske fagmiljø?",
+     "content_sha256": "52de303c3ed52d748489e5a53dc85304fbb317f7239586bf56ada0850a5187b1"
+    },
+    {
+     "url": "https://bergen-rorteknikk.no/om-oss/",
+     "title": "Om oss - Bergen Rørteknikk",
+     "main_text_excerpt": "Bergen Rørteknikk er en av regionens ledende rørentreprenører. Vi er innovasjonsvennlige og kjennetegnes av svært høy gjennomføringsevne, hvor ingen utfordring er for liten eller stor. Vi ble etablert i 2004 og har siden det vokst utelukkende organisk. Det som begynte som et lite rørleggerfirma er i dag en av regionens ledende rørtekniske totalentreprenører.",
+     "identity_text_excerpt": "Kontakt oss Bergen Rørteknikk AS Leirvikflaten 23 5179 GODVIK E-post: post@bergen-rorteknikk.no Tlf: 55 70 64 60 Facebook-f Instagram © All Rights Reserved.",
+     "content_sha256": "39811a833badcaa62c812f833cd0a4f8d1f80ac3879d40aa856264932256123e"
+    },
+    {
+     "url": "https://bergen-rorteknikk.no/om-oss/",
+     "title": "Om oss - Bergen Rørteknikk",
+     "main_text_excerpt": "Bergen Rørteknikk er en av regionens ledende rørentreprenører. Vi er innovasjonsvennlige og kjennetegnes av svært høy gjennomføringsevne, hvor ingen utfordring er for liten eller stor. Vi ble etablert i 2004 og har siden det vokst utelukkende organisk. Det som begynte som et lite rørleggerfirma er i dag en av regionens ledende rørtekniske totalentreprenører.",
+     "identity_text_excerpt": "Kontakt oss Bergen Rørteknikk AS Leirvikflaten 23 5179 GODVIK E-post: post@bergen-rorteknikk.no Tlf: 55 70 64 60 Facebook-f Instagram © All Rights Reserved.",
+     "content_sha256": "90c5ac8d2464e91e62a709323a68b718864cfeb8947bf40162c95e4cdbd5b7e2"
+    },
+    {
+     "url": "https://bergen-rorteknikk.no/kontakt-oss/",
+     "title": "Kontakt oss - Bergen Rørteknikk",
+     "main_text_excerpt": "Skip to content",
+     "identity_text_excerpt": "Kontakt oss Bergen Rørteknikk AS Leirvikflaten 23 5179 GODVIK E-post: post@bergen-rorteknikk.no Tlf: 55 70 64 60 Facebook-f Instagram © All Rights Reserved.",
+     "content_sha256": "722b6f523794fb2241c7cbe8840a1671099b0a5749975d5909582388173e1292"
+    },
+    {
+     "url": "https://bergen-rorteknikk.no/kontakt-oss/",
+     "title": "Kontakt oss - Bergen Rørteknikk",
+     "main_text_excerpt": "Skip to content",
+     "identity_text_excerpt": "Kontakt oss Bergen Rørteknikk AS Leirvikflaten 23 5179 GODVIK E-post: post@bergen-rorteknikk.no Tlf: 55 70 64 60 Facebook-f Instagram © All Rights Reserved.",
+     "content_sha256": "64d929fa0733a4627495f6fdb648929902b7f9b0fcda7214ef2daaea267671d7"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "bergen",
+     "rorteknikk"
+    ],
+    "matched_tokens": [
+     "bergen",
+     "rorteknikk"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Bergenrorteknikk"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bergenrorteknikkas"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Bergenrorteknikk",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bergen",
+      "rorteknikk"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bergenrorteknikkas",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "bergen",
+      "rorteknikk"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "52de303c3ed52d748489e5a53dc85304fbb317f7239586bf56ada0850a5187b1",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/993231150": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "47703ae9d3438b0f.json.gz",
+   "content_sha256": "47703ae9d3438b0f6ec2ac3fc927a32f44439a382ca7fc1c3e4d1d93b7c30af5",
+   "retrieved_at": "2026-11-01T14:17:59.990081Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/993231150": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "daa184d402f8c91d.json.gz",
+   "content_sha256": "daa184d402f8c91dba2de07ad8fd3821ddc2801d3aa9616b8ad2fbf4d191c42a",
+   "retrieved_at": "2026-11-01T14:18:00.652213Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/993231150/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "738bac4c67898e70.json.gz",
+   "content_sha256": "738bac4c67898e70eeeab080d22c107be143e3b0b083e5139c79ddf6d063f605",
+   "retrieved_at": "2026-11-01T14:18:02.684253Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/993231150": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:18:01.332729Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=993231150&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1684afdf06345ee7.json.gz",
+   "content_sha256": "1684afdf06345ee7451d22df66cda4f31afe2af4d55dd1700f9b8f8a32f81fe0",
+   "retrieved_at": "2026-11-01T14:18:02.010838Z"
+  },
+  "https://bergen-rorteknikk.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "1bf9b32fe7e302a5.html.gz",
+   "content_sha256": "1bf9b32fe7e302a5a0654493f6ae5666e7ea59fdd5bacdf14789e9741095a492",
+   "retrieved_at": "2026-11-01T14:18:32.240716Z"
+  },
+  "https://bergen-rorteknikk.no/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "c1b6f1b5b8a8d624.html.gz",
+   "content_sha256": "c1b6f1b5b8a8d62469f93594f778ca133dd5fcbcdf9091070d108f4eaf867154",
+   "retrieved_at": "2026-11-01T14:18:34.377118Z"
+  },
+  "https://bergen-rorteknikk.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a278ef7dd64241fa.html.gz",
+   "content_sha256": "a278ef7dd64241fa5295e835a2c7abd8d5e509f927a2f1d5b23b8c768fc84986",
+   "retrieved_at": "2026-11-01T14:18:38.253452Z"
+  },
+  "https://bergen-rorteknikk.no/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "3ed5f38a89b5d5e4.html.gz",
+   "content_sha256": "3ed5f38a89b5d5e47ccf955cef59089beb944ee100ea69c8f507d9f661477464",
+   "retrieved_at": "2026-11-01T14:18:41.413358Z"
+  },
+  "https://bergen-rorteknikk.no/karriere/": {
+   "kind": "site",
+   "status": 200,
+   "file": "5fe683d18eee4229.html.gz",
+   "content_sha256": "5fe683d18eee422948e66608c969d5464a0bdb16fbdd9834c81c148135bf85d5",
+   "retrieved_at": "2026-11-01T14:18:43.200096Z"
+  },
+  "https://bergen-rorteknikk.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "0577415b045268f0.xml.gz",
+   "content_sha256": "0577415b045268f0d7d2e40b8aa09c7a56d28ba2e9e61884c89335ad51a8f44e",
+   "retrieved_at": "2026-11-01T14:18:39.246725Z"
+  }
+ }
+}
