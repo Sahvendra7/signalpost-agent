@@ -155,7 +155,7 @@ def project(envelope: dict[str, Any]) -> dict[str, Any]:
         "sections": [[section.get("title"), [[item.get("text"), refs(item.get("evidence_ids")), 1 if item.get("carried_forward") else 0] for item in section.get("statements") or []]] for section in summary.get("sections") or []],
         "claims": [[
             claim.get("category"), claim.get("field"), claim.get("availability"), _value_text(claim.get("value")), refs(claim.get("evidence_ids")),
-            _period(claim), 1 if claim.get("carried_forward") else 0, claim.get("reason") or "",
+            _period(claim), 1 if claim.get("carried_forward") else 0, claim.get("reason") or "", _claim_notes(claim),
         ] for claim in envelope.get("claims") or []],
         "changes": [{key: (_value_text(value) if key in {"old_value", "new_value"} else value) for key, value in item.items() if key not in {"previous_evidence", "evidence"}} | {"source_at": (item.get("evidence") or {}).get("retrieved_at"), "previous_at": (item.get("previous_evidence") or {}).get("retrieved_at")} for item in envelope.get("changes") or []],
         "errors": envelope.get("errors") or [],
@@ -166,9 +166,46 @@ def project(envelope: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def render_viewer(envelopes: list[dict[str, Any]], report: dict[str, Any] | None = None, *, title: str = "Signalpost results") -> str:
+def _claim_notes(claim: dict[str, Any]) -> dict[str, Any] | int:
+    """V3: why a fact is attributed, when it was first seen, and whether it is new; 0 when there is nothing to say."""
+    def mapping(key: str) -> dict[str, Any]:  # e.g. financial claims carry "currency": "NOK", a string
+        value = claim.get(key)
+        return value if isinstance(value, dict) else {}
+
+    notes: dict[str, Any] = {}
+    basis = mapping("attribution").get("basis") or claim.get("identity_basis")
+    if basis:
+        notes["basis"] = str(basis)[:300]
+    if mapping("currency").get("basis"):
+        notes["currency"] = str(mapping("currency")["basis"])[:200]
+    for key in ("first_seen_at", "site_role"):
+        if isinstance(claim.get(key), str) and claim[key]:
+            notes[key] = claim[key]
+    if claim.get("is_new"):
+        notes["new"] = 1
+    if mapping("operated_by").get("organisation_number"):
+        notes["operated_by"] = mapping("operated_by")["organisation_number"]
+    return notes or 0
+
+
+TRUST = {  # how each category is checked: shown in the viewer's trust panel (V3 §B10)
+    "official_website": "Taken from the company's own registry record, or found by name and confirmed by its organisation number or registered address on the site.",
+    "social_profile": "Linked from the verified website, and the profile name is the company's legal name (or its own website's name on a site no other company runs). Profiles of a parent, group, sister company or platform are not attributed.",
+    "news_item": "A dated article on the verified website (news section, dated address, its own post feed or article markup) that is about this company. Product, service, project and contact pages, listings, imported or demo posts, advice content and other companies' news are left out.",
+    "job_posting": "A single advertisement naming this company as employer (or listed on its own careers page), with an open deadline or posted within 45 days. Expired, undated, third-party and general recruitment pages are left out.",
+    "careers_page": "A page of the verified website about working at the company (careers path or heading); service pages and recruiters' client job boards are left out.",
+}
+
+
+def render_viewer(envelopes: list[dict[str, Any]], report: dict[str, Any] | None = None, *, title: str = "Signalpost results", app: dict[str, str] | None = None) -> str:
+    audit = (report or {}).get("manual_audit") or {"state": "not_audited"}
+    code = (report or {}).get("code_version") or {}
     data = {
         "title": title,
+        "app": app or None,
+        "trust": {"how": TRUST, "audit": audit, "checks": ((report or {}).get("checks") or {}).get("withheld") or {}},
+        "code": {"commit": (code.get("git_commit") or "")[:12], "source": (code.get("source_sha256") or "")[:12]} if code else None,
+        "baseline": ((report or {}).get("baseline") or {}).get("source"),
         "run": {key: (report or {}).get(key) for key in ("run_id", "started_at", "input_rows", "runtime_ms") if (report or {}).get(key) is not None},
         "compare_rows": [label for _, label in COMPARE_ROWS],
         "companies": [project(envelope) for envelope in envelopes],
@@ -238,12 +275,23 @@ section h4{margin:10px 0 4px;font-size:13px;color:var(--muted)}
 .wrap{overflow-x:auto;max-width:100%}
 table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;vertical-align:top;padding:5px 6px;border-bottom:1px solid var(--line);overflow-wrap:anywhere;word-break:normal}
 th{color:var(--muted);font-weight:500;font-size:12px}
-td small{display:block;color:var(--muted);font-size:11px}
+td small,.cell small{display:block;color:var(--muted);font-size:11px}
 table.cmp th[scope=row]{position:sticky;left:0;background:var(--panel);min-width:120px}table.cmp td{min-width:150px}
 .overview{padding:8px 10px;border-radius:6px;background:var(--chip)}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
 .back{display:none}
 .kv{display:grid;grid-template-columns:max-content 1fr;gap:2px 12px}.kv dt{color:var(--muted)}.kv dd{margin:0;overflow-wrap:anywhere}
+header .actions{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+dialog{max-width:min(680px,94vw);width:100%;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);padding:0}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.dhead{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.dbody{padding:10px 14px;overflow-wrap:anywhere}.dbody .kv{gap:6px 12px}
+.badge.new{color:var(--accent);border:1px solid var(--accent)}
+.cards{display:flex;flex-direction:column;gap:10px}.card{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--panel)}
+.card h4{margin:0 0 4px;font-size:13px;color:var(--muted)}.cell{display:grid;grid-template-columns:28px minmax(0,1fr);gap:6px;padding:5px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.chip{display:inline-block;width:22px;height:22px;border-radius:11px;color:#fff;font-size:11px;text-align:center;line-height:22px;font-weight:600}
+.tray{position:sticky;top:0;z-index:2;background:var(--bg);padding:6px 0;display:flex;gap:6px;flex-wrap:wrap}
+.linkbtn{all:unset;cursor:pointer;color:var(--accent);text-decoration:underline;font-size:12px;white-space:nowrap}.linkbtn:focus-visible{outline:2px solid var(--accent)}
 @media (max-width:760px){
  main{grid-template-columns:minmax(0,1fr);height:auto}
  #side{border-right:0}#list{overflow:visible}
@@ -256,7 +304,8 @@ table.cmp th[scope=row]{position:sticky;left:0;background:var(--panel);min-width
 </head>
 <body>
 <a class="skip" href="#detail">Skip to company details</a>
-<header><h1 id="title"></h1><span class="meta" id="runmeta"></span></header>
+<header><h1 id="title"></h1><span class="meta" id="runmeta"></span><nav class="actions" aria-label="Views"><a id="searchlink" class="btn" hidden>← Search</a><button id="newbtn" class="btn" type="button">What's new</button><button id="trustbtn" class="btn" type="button">How reliable is this?</button></nav></header>
+<dialog id="inspect" aria-labelledby="inspect-title"><div class="dhead"><strong id="inspect-title">Where this fact comes from</strong><button class="btn" id="inspect-close" type="button">Close</button></div><div class="dbody" id="inspect-body"></div></dialog>
 <main>
 <div id="side">
  <div id="controls" role="search">
@@ -264,9 +313,9 @@ table.cmp th[scope=row]{position:sticky;left:0;background:var(--panel);min-width
   <input id="q" type="search" placeholder="Search name or organisation number" aria-label="Search">
   <div class="row">
    <label class="sr" for="fstatus">Status filter</label>
-   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="complete">Complete</option><option value="partial">Partial</option><option value="not_researched">Not researched (deadline)</option><option value="identity_unresolved">Identity unresolved</option><option value="invalid_input">Invalid input</option><option value="failed">Run failed</option></select>
+   <select id="fstatus" aria-label="Status filter"><option value="">All statuses</option><option value="complete">All sources checked</option><option value="partial">Some sources failed</option><option value="not_researched">Not researched (time limit)</option><option value="identity_unresolved">Not found in the register</option><option value="invalid_input">Invalid organisation number</option><option value="failed">Research failed</option></select>
    <label class="sr" for="fflag">Flag filter</label>
-   <select id="fflag" aria-label="Flag filter"><option value="">All companies</option><option value="website">Verified website</option><option value="footprint">Profiles or dated activity</option><option value="changes">With changes</option><option value="failures">Source failures</option><option value="errors">With errors</option><option value="sparse">Registry only (sparse)</option><option value="carried">Values retained (outage)</option></select>
+   <select id="fflag" aria-label="Flag filter"><option value="">All companies</option><option value="website">Verified website</option><option value="footprint">Profiles or dated activity</option><option value="changes">With changes</option><option value="new">With new items</option><option value="failures">Source failures</option><option value="errors">With errors</option><option value="sparse">Registry only (sparse)</option><option value="carried">Values retained (outage)</option></select>
   </div>
   <div class="row">
    <label class="sr" for="sort">Sort</label>
@@ -286,7 +335,7 @@ const DATA = JSON.parse(document.getElementById("data").textContent);
 for (const c of DATA.companies) {  // re-hydrate the compact projection (see viewer.project)
   c.evidence = c.ev.map(([s, span]) => ({url: c.src[s][0], class: c.src[s][1], at: c.src[s][2], sha: c.src[s][3], span}));
   c.sections = c.sections.map(([title, statements]) => ({title, statements: statements.map(([text, ev, carried]) => ({text, ev, carried: !!carried}))}));
-  c.claims = c.claims.map(([cat, field, state, value, ev, period, carried, reason]) => ({cat, field, state, value, ev, period, carried: !!carried, reason}));
+  c.claims = c.claims.map(([cat, field, state, value, ev, period, carried, reason, notes]) => ({cat, field, state, value, ev, period, carried: !!carried, reason, notes: notes || {}}));
   c.modules = Object.fromEntries(Object.entries(c.modules).map(([k, [state, note]]) => [k, {state, note}]));
   c.areas = Object.fromEntries(c.areas.map((a) => [a, true]));
   c.revenue = c.cmp[7][1] >= 0 ? Number(c.cmp[7][0].replace(/[^0-9.-]/g, "")) : -Infinity;  // compare row 7: most recent revenue
@@ -311,14 +360,24 @@ const safeUrl = (u) => typeof u === "string" && /^https?:\/\//i.test(u) ? u : nu
 const host = (u) => { try { return new URL(u).hostname; } catch (e) { return u || "?"; } };
 const day = (t) => t ? String(t).slice(0, 10) : "date unknown";
 const name = (c) => (c.identity && c.identity.legal_name) || "(identity not resolved)";
-const statusBadge = (c) => el("span", {class: "badge " + (c.status === "completed" ? "ok" : "bad")}, c.status || "unknown");
-const companyBadge = (c) => c.company_status ? el("span", {class: "badge " + (c.company_status === "complete" ? "ok" : c.company_status === "partial" ? "warn" : "bad")}, c.company_status.replace(/_/g, " ")) : null;
+const STATUS = {completed: "Research finished", failed: "Research failed"};
+const COMPANY = {complete: "All sources checked", partial: "Some sources failed", not_researched: "Not researched (time limit)", identity_unresolved: "Not found in the register", invalid_input: "Invalid organisation number"};
+const STATE = {available: "Found", not_available: "Checked — none found", ambiguous: "Not attributed (may belong to another company)", not_applicable: "Not attributed to this company", failed: "Could not check (source failed)", blocked: "Could not check (blocked)"};
+const CHANGE = {added: "New since last run", removed: "No longer on the source", changed: "Changed", retracted: "Withdrawn by our checks", not_rechecked: "Not re-checked this run", unverified: "Website no longer confirmed", unavailable: "Source unavailable — last value kept"};
+const CATEGORY = {official_website: "Website", social_profile: "Social profiles", news_item: "News", job_posting: "Job advertisements", careers_page: "Careers page"};
+const CHIPS = ["#1f5f8b", "#8a3b8f", "#2d7a3e", "#a0522d"];
+const label = (map, v) => map[v] || String(v || "unknown").replace(/_/g, " ");
+const statusBadge = (c) => el("span", {class: "badge " + (c.status === "completed" ? "ok" : "bad")}, label(STATUS, c.status));
+const companyBadge = (c) => c.company_status ? el("span", {class: "badge " + (c.company_status === "complete" ? "ok" : c.company_status === "partial" ? "warn" : "bad")}, label(COMPANY, c.company_status)) : null;
 const setHash = (hash) => { try { history.replaceState(null, "", hash); } catch (e) { /* file:// may refuse; navigation still works */ } };
 const narrow = () => window.matchMedia("(max-width: 760px)").matches;
 const failedSources = (c) => Object.entries(c.modules).filter(([, v]) => v.state === "failed" || v.state === "blocked").map(([k]) => k);
 
 $("title").textContent = DATA.title;
-$("runmeta").textContent = [DATA.run.run_id && ("run " + DATA.run.run_id), DATA.run.started_at && ("started " + DATA.run.started_at), DATA.companies.length + " rows", "offline view: every fact links to its source and retrieval date"].filter(Boolean).join(" · ");
+$("runmeta").textContent = [DATA.run.run_id && ("run " + DATA.run.run_id), DATA.run.started_at && ("started " + day(DATA.run.started_at)), DATA.companies.length + " companies",
+  DATA.code && (DATA.code.commit ? "code " + DATA.code.commit : "source " + DATA.code.source), (() => { const n = DATA.companies.filter((c) => c.refresh && c.refresh.compared).length; return n ? n + " compared with their previous run" : "no previous run"; })(),
+  "every fact links to its source and retrieval date"].filter(Boolean).join(" · ");
+if (DATA.app && DATA.app.search) { $("searchlink").href = DATA.app.search; $("searchlink").hidden = false; }
 
 const flags = {
   errors: (c) => c.errors.length > 0,
@@ -328,6 +387,7 @@ const flags = {
   failures: (c) => failedSources(c).length > 0,
   sparse: (c) => !!c.sparse,
   carried: (c) => c.claims.some((x) => x.carried),
+  new: (c) => c.claims.some((x) => x.notes.new) || c.changes.some((x) => x.change_type === "retracted"),
 };
 let selected = null, shownOrder = [];
 const compare = [];
@@ -396,6 +456,35 @@ function statement(c, s) {
   }
   return box;
 }
+function inspect(c, x) {
+  const body = $("inspect-body"); body.replaceChildren();
+  const rows = [["Fact", x.field.replace(/_/g, " ")], ["Value", x.value || "—"], ["State", label(STATE, x.state)]];
+  if (x.period) rows.push(["Period", x.period]);
+  if (x.notes.basis) rows.push(["How it relates to this company", x.notes.basis]);
+  if (x.notes.currency) rows.push(["Why it is current", x.notes.currency]);
+  if (x.notes.site_role) rows.push(["Website role", x.notes.site_role.replace(/_/g, " ") + (x.notes.operated_by ? " (organisation number " + x.notes.operated_by + ")" : "")]);
+  if (x.notes.first_seen_at) rows.push(["First seen", day(x.notes.first_seen_at) + (x.notes.new ? " — new since the previous run" : "")]);
+  if (x.carried) rows.push(["Note", "Retained from an earlier run: the source failed in this run."]);
+  if (x.reason) rows.push(["Reason", x.reason]);
+  body.append(el("dl", {class: "kv"}, rows.map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)])));
+  for (const id of x.ev) {
+    const ev = c.evidence[id]; if (!ev) continue;
+    const url = safeUrl(ev.url);
+    const snap = DATA.app && DATA.app.snapshots && /^[0-9a-f]{64}$/.test(ev.sha || "") ? DATA.app.snapshots + ev.sha : null;
+    body.append(el("section", {}, el("h4", {}, "Source"), el("dl", {class: "kv"},
+      el("dt", {}, "Address"), el("dd", {}, url ? el("a", {href: url, target: "_blank", rel: "noopener noreferrer"}, ev.url) : (ev.url || "?")),
+      el("dt", {}, "Source type"), el("dd", {}, (ev.class || "").replace(/_/g, " ")),
+      el("dt", {}, "Retrieved"), el("dd", {}, ev.at || "unknown"),
+      el("dt", {}, "Content hash"), el("dd", {}, el("code", {}, ev.sha || "—")),
+      el("dt", {}, "Quoted span"), el("dd", {}, ev.span || "—"),
+      snap ? [el("dt", {}, "Captured copy"), el("dd", {}, el("a", {href: snap, rel: "noopener noreferrer"}, "Download the exact bytes we read (text)"))] : null)));
+  }
+  if (!x.ev.length) body.append(el("p", {class: "sub"}, "No source: this is a statement about what is not known."));
+  const dialog = $("inspect");
+  if (typeof dialog.showModal === "function") dialog.showModal(); else dialog.setAttribute("open", "");
+}
+$("inspect-close").addEventListener("click", () => { const d = $("inspect"); if (d.close) d.close(); else d.removeAttribute("open"); });
+let showAllNews = false;
 function table(headers, rows, cls) {
   return el("div", {class: "wrap"}, el("table", {class: cls || null}, el("thead", {}, el("tr", {}, headers.map((h) => el("th", {scope: "col"}, h)))), el("tbody", {}, rows.map((r) => el("tr", {}, r.map((v, i) => el("td", {"data-label": headers[i]}, v)))))));
 }
@@ -429,16 +518,30 @@ function select(index, fromHash) {
     c.status_reasons.length ? el("div", {class: "sub"}, "Status reasons: " + c.status_reasons.join("; ")) : null));
   const facts = c.claims.filter((x) => x.state === "available");
   const grouped = GROUPS.map(([title, cats]) => [title, facts.filter((x) => cats.includes(x.cat))]).filter(([, items]) => items.length);
-  d.append(el("section", {}, el("h3", {}, "Facts (" + facts.length + ") — FACT → SOURCE → DATE"), grouped.map(([title, items]) => [el("h4", {}, title + " (" + items.length + ")"),
-    table(["Field", "Value", "Period", "Source", "Retrieved"], items.map((x) => {
-      const ev = c.evidence[x.ev[0]] || {}; const url = safeUrl(ev.url);
-      return [x.field.replace(/_/g, " ") + (x.carried ? " (retained)" : ""), x.value, x.period, url ? el("a", {href: url, target: "_blank", rel: "noopener noreferrer", title: url}, host(url) + " · " + (ev.class || "source").replace(/_/g, " ")) : (ev.class || ""), day(ev.at)];
-    }), "facts")])));
+  d.append(el("section", {}, el("h3", {}, "Facts (" + facts.length + ") — FACT → SOURCE → DATE"), el("p", {class: "sub"}, "Press Inspect on any fact to see exactly where it came from and why it is attributed to this company."),
+    grouped.map(([title, items]) => {
+      const news = items.filter((x) => x.field === "news_item").sort((a, b) => String(b.value).localeCompare(String(a.value)));
+      const shown = showAllNews || news.length <= 10 ? items : items.filter((x) => x.field !== "news_item").concat(news.slice(0, 10));
+      const more = shown.length < items.length ? el("button", {class: "btn", type: "button"}, "Show all " + news.length + " news items") : null;
+      if (more) more.addEventListener("click", () => { showAllNews = true; select(index, true); });
+      return [el("h4", {}, title + " (" + items.length + ")"),
+        table(["Field", "Value", "Period", "Source", "Retrieved", ""], shown.map((x) => {
+          const ev = c.evidence[x.ev[0]] || {}; const url = safeUrl(ev.url);
+          const btn = el("button", {class: "linkbtn", type: "button", "aria-label": "Inspect " + x.field.replace(/_/g, " ")}, "Inspect");
+          btn.addEventListener("click", () => inspect(c, x));
+          return [el("span", {}, x.field.replace(/_/g, " ") + (x.carried ? " (retained)" : ""), x.notes.new ? el("span", {class: "badge new"}, "new") : null), x.value, x.period,
+            url ? el("a", {href: url, target: "_blank", rel: "noopener noreferrer", title: url}, host(url) + " · " + (ev.class || "source").replace(/_/g, " ")) : (ev.class || ""), day(ev.at), btn];
+        }), "facts"), more];
+    })));
   const unknown = c.claims.filter((x) => x.state !== "available");
-  if (unknown.length) d.append(el("section", {}, el("h3", {}, "Unknowns (" + unknown.length + ")"), table(["Category", "Field", "State", "Reason"], unknown.map((x) => [x.cat, x.field.replace(/_/g, " "), x.state.replace(/_/g, " "), x.reason || ""]), "facts")));
-  d.append(el("section", {}, el("h3", {}, "Changes since previous run"), c.refresh && c.refresh.compared ? (c.changes.length ? table(["Type", "Field / module", "Old", "New", "Period", "Dates"], c.changes.map((x) => [x.change_type, x.field || x.module, x.old_value || (x.fields_retained ? "retained: " + x.fields_retained.join(", ") : ""), x.new_value || "", x.period ? x.period.from + "–" + x.period.to : "", [x.previous_at && ("was " + day(x.previous_at)), x.source_at && ("now " + day(x.source_at)), x.last_verified_at && ("last verified " + day(x.last_verified_at))].filter(Boolean).join(" · ")]), "facts") : el("div", {}, "No changes.")) : el("div", {}, (c.refresh && c.refresh.reason) || "Not compared.")));
+  const held = unknown.filter((x) => x.state === "ambiguous" || x.state === "not_applicable");
+  const rest = unknown.filter((x) => !held.includes(x));
+  if (held.length) d.append(el("section", {}, el("h3", {}, "Seen but not attributed to this company (" + held.length + ")"), el("p", {class: "sub"}, "Found on the website but held back, for example because it belongs to a parent, sister or group company, or the website is run by another company. Not counted as facts."),
+    table(["Field", "State", "Why"], held.map((x) => [x.field.replace(/_/g, " "), label(STATE, x.state), x.reason || ""]), "facts")));
+  if (rest.length) d.append(el("section", {}, el("h3", {}, "Not known (" + rest.length + ")"), el("p", {class: "sub"}, "Unknown means unknown — never zero."), table(["Category", "Field", "State", "Reason"], rest.map((x) => [x.cat.replace(/_/g, " "), x.field.replace(/_/g, " "), label(STATE, x.state), x.reason || ""]), "facts")));
+  d.append(el("section", {}, el("h3", {}, "Changes since previous run"), c.refresh && c.refresh.compared ? (c.changes.length ? table(["What happened", "Field / source", "Before", "Now", "Why", "Dates"], c.changes.map((x) => [label(CHANGE, x.change_type), (x.field || x.module || "").replace(/_/g, " "), x.old_value || (x.fields_retained ? "retained: " + x.fields_retained.join(", ") : ""), x.new_value || "", x.basis || (x.period ? x.period.from + "–" + x.period.to : ""), [x.previous_at && ("was " + day(x.previous_at)), x.source_at && ("now " + day(x.source_at)), x.last_verified_at && ("last verified " + day(x.last_verified_at))].filter(Boolean).join(" · ")]), "facts") : el("div", {}, "No changes.")) : el("div", {}, (c.refresh && c.refresh.reason) || "Not compared: no previous run.")));
   if (c.errors.length) d.append(el("section", {}, el("h3", {}, "Errors (" + c.errors.length + ")"), table(["Code", "Stage", "Message"], c.errors.map((x) => [x.code, x.stage || "", x.message || ""]), "facts")));
-  d.append(el("section", {}, el("h3", {}, "Sources consulted"), table(["Module", "State", "Note"], Object.entries(c.modules).map(([k, v]) => [k, el("span", {class: "badge " + (v.state === "failed" || v.state === "blocked" ? "bad" : "ok")}, v.state || ""), v.note || ""]), "facts")));
+  d.append(el("section", {}, el("h3", {}, "Sources consulted"), table(["Source", "State", "Note"], Object.entries(c.modules).map(([k, v]) => [k.replace(/_/g, " "), el("span", {class: "badge " + (v.state === "failed" || v.state === "blocked" ? "bad" : "ok")}, label(STATE, v.state) || ""), v.note || ""]), "facts")));
   document.body.classList.add("showing");
   if (!fromHash && c.org) setHash("#org=" + c.org);
   d.scrollTop = 0;
@@ -464,20 +567,81 @@ function showCompare(fromHash) {
     open.addEventListener("click", () => select(compare[n]));
     return el("th", {scope: "col"}, open, el("small", {}, String(c.org || "")));
   }));
-  const body = DATA.compare_rows.map((label, r) => el("tr", {}, el("th", {scope: "row"}, label), cols.map((c) => { const [text, ev] = c.cmp[r]; return el("td", {}, text, ev >= 0 ? sourceLink(c, ev) : null); })));
-  d.append(el("section", {}, el("div", {class: "wrap"}, el("table", {class: "cmp"}, el("thead", {}, head), el("tbody", {}, body)))));
+  if (narrow()) {  // phones: one card per field, one row per company, no sideways scrolling
+    d.append(el("div", {class: "tray", "aria-label": "Companies compared"}, cols.map((c, n) => el("span", {class: "sub"}, el("span", {class: "chip", style: "background:" + CHIPS[n]}, String(n + 1)), name(c)))));
+    d.append(el("div", {class: "cards"}, DATA.compare_rows.map((rowLabel, r) => el("div", {class: "card"}, el("h4", {}, rowLabel),
+      cols.map((c, n) => { const [text, ev] = c.cmp[r]; return el("div", {class: "cell"}, el("span", {class: "chip", style: "background:" + CHIPS[n], "aria-label": name(c)}, String(n + 1)), el("div", {}, text, ev >= 0 ? sourceLink(c, ev) : null)); })))));
+  } else {
+    const body = DATA.compare_rows.map((rowLabel, r) => el("tr", {}, el("th", {scope: "row"}, rowLabel), cols.map((c) => { const [text, ev] = c.cmp[r]; return el("td", {}, text, ev >= 0 ? sourceLink(c, ev) : null); })));
+    d.append(el("section", {}, el("div", {class: "wrap"}, el("table", {class: "cmp"}, el("thead", {}, head), el("tbody", {}, body)))));
+  }
   document.body.classList.add("showing");
   const orgs = cols.map((c) => c.org).filter(Boolean);
   if (!fromHash) setHash("#compare=" + orgs.join(","));
   d.scrollTop = 0;
   render();
 }
+function viewShell(title) {
+  selected = null;
+  const d = $("detail"); d.replaceChildren();
+  const back = el("button", {id: "back", class: "btn back", type: "button"}, "← Companies");
+  back.addEventListener("click", () => { document.body.classList.remove("showing"); setHash(location.pathname + location.search); });
+  d.append(el("div", {class: "nav"}, back), el("h2", {id: "company-name"}, title));
+  document.body.classList.add("showing");
+  return d;
+}
+function companyLink(index) {
+  const b = el("button", {class: "linkbtn", type: "button"}, name(DATA.companies[index]));
+  b.addEventListener("click", () => select(index));
+  return b;
+}
+function showWhatsNew(fromHash) {
+  const d = viewShell("What's new since the previous run");
+  const compared = DATA.companies.filter((c) => c.refresh && c.refresh.compared).length;
+  if (!compared) { d.append(el("p", {class: "empty"}, "No previous run to compare with — everything here is a first observation. Run the same companies again later to see what is new.")); if (!fromHash) setHash("#new"); render(); return; }
+  const filter = el("select", {"aria-label": "Category"}, el("option", {value: ""}, "All categories"), Object.entries(CATEGORY).map(([k, v]) => el("option", {value: k}, v)));
+  const out = el("div", {});
+  const draw = () => {
+    const rows = [];
+    DATA.companies.forEach((c, index) => {
+      for (const x of c.claims) if (x.notes.new && (!filter.value || filter.value === x.field)) rows.push([companyLink(index), label(CATEGORY, x.field), el("span", {class: "badge new"}, "new"), x.value]);
+      for (const x of c.changes) if (["retracted", "removed", "changed", "added"].includes(x.change_type) && (!filter.value || filter.value === x.field) && !(x.change_type === "added" && c.claims.some((y) => y.notes.new && y.field === x.field)))
+        rows.push([companyLink(index), label(CATEGORY, x.field), label(CHANGE, x.change_type), [x.old_value || x.new_value || "", x.basis ? el("small", {}, x.basis) : null]]);
+    });
+    out.replaceChildren(rows.length ? table(["Company", "Category", "What happened", "Details"], rows, "facts") : el("p", {class: "empty"}, "Nothing new in this category."));
+  };
+  filter.addEventListener("input", draw);
+  d.append(el("p", {class: "sub"}, compared + " of " + DATA.companies.length + " companies were compared with their previous run. New social profiles, news and job advertisements, and facts our checks withdrew."), filter, out);
+  draw();
+  if (!fromHash) setHash("#new");
+  render();
+}
+function showTrust(fromHash) {
+  const d = viewShell("How reliable is this?");
+  const audit = DATA.trust.audit || {state: "not_audited"};
+  const arm = audit.arms ? (audit.arms.v3 || audit.arms[Object.keys(audit.arms).slice(-1)[0]]) : null;
+  d.append(el("p", {class: "sub"}, "Each category is checked by fixed rules. A manual audit, when supplied, shows how often published items were correct in a labelled sample — a local measurement, not an official score."));
+  for (const [cat, how] of Object.entries(DATA.trust.how)) {
+    const row = arm && arm[cat];
+    const measured = row && row.precision !== null && row.precision !== undefined ? (Math.round(row.precision * 1000) / 10) + "% correct (" + row.correct + " of " + (row.correct + row.incorrect) + "; 95% interval " + Math.round(row.ci95[0] * 100) + "–" + Math.round(row.ci95[1] * 100) + "%)" : "Not audited";
+    d.append(el("section", {}, el("h3", {}, label(CATEGORY, cat)), el("p", {}, how), el("div", {class: "sub"}, "Manual audit: " + measured)));
+  }
+  if (audit.state === "audited") d.append(el("p", {class: "sub"}, "Audit labelled by " + (audit.labeller || "?") + " (" + String(audit.labeller_kind || "").replace(/_/g, " ") + "); " + (audit.note || "")));
+  const checks = Object.entries(DATA.trust.checks || {});
+  if (checks.length) d.append(el("section", {}, el("h3", {}, "Held back by our checks in this run"), el("p", {class: "sub"}, "Automatic checks, not an accuracy measurement."), table(["Reason", "Items"], checks.sort((a, b) => b[1] - a[1]).slice(0, 25).map(([k, v]) => [k.replace(/[:_]/g, " "), String(v)]), "facts")));
+  if (!fromHash) setHash("#trust");
+  render();
+}
+$("newbtn").addEventListener("click", () => showWhatsNew());
+$("trustbtn").addEventListener("click", () => showTrust());
 $("cmpbtn").addEventListener("click", () => showCompare());
 for (const id of ["q", "fstatus", "fflag", "sort"]) $(id).addEventListener("input", render);
 const byOrg = new Map(DATA.companies.map((c, i) => [String(c.org), i]));
 function fromHash() {
   const hash = decodeURIComponent(location.hash.slice(1));
   if (hash.startsWith("org=") && byOrg.has(hash.slice(4))) { select(byOrg.get(hash.slice(4)), true); return true; }
+  if (hash === "new") { showWhatsNew(true); return true; }
+  if (hash === "trust") { showTrust(true); return true; }
   if (hash.startsWith("compare=")) {
     compare.splice(0, compare.length, ...hash.slice(8).split(",").filter((o) => byOrg.has(o)).map((o) => byOrg.get(o)).slice(0, MAX_COMPARE));
     if (compare.length >= 2) { showCompare(true); return true; }

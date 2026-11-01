@@ -265,3 +265,46 @@ nothing is called new.
 - `checks` — candidates withheld by rule, by reason; labelled as automatic checks, not accuracy;
 - `manual_audit` — from `--audit-results`, otherwise `not_audited`;
 - `history`.
+
+## Phase 6 — viewer v2 (design §B10)
+
+The viewer stays one self-contained HTML file: no network, CSP `default-src 'none'`, text inserted with
+`textContent` only.
+
+- **Evidence inspector.** Every fact has an *Inspect* button. It opens a dialog showing:
+  - the value and state;
+  - how the fact relates to the company (attribution basis) and why it is current (job deadline basis);
+  - the website's role (for example "operated by other company", with that company's organisation number);
+  - first seen, and whether it is new;
+  - for each source: address, source type, retrieval time, content hash and quoted span.
+
+  In app mode (Phase 7) it also links the captured bytes.
+- **What's new.** The `#new` view lists, per company, the facts new since the baseline and the facts our checks
+  withdrew, removed or changed, with the rule's basis. Without a baseline it says so and calls nothing new. A new filter,
+  "With new items", is added to the company list.
+- **How reliable is this?** The `#trust` view explains how each category is checked. It shows the manual-audit
+  precision only when `--audit-results` was supplied, labelled as a local measurement. Otherwise it says
+  "Not audited". It also lists items held back by automatic checks, labelled as checks, not accuracy.
+- **Held-back items** have their own section, "Seen but not attributed to this company", separate from "Not known".
+  Neither counts as a fact.
+- **News** shows the newest 10 per company, with "Show all".
+- **Plain labels.** States, changes and categories have plain-language labels; for example `retracted` shows as
+  "Withdrawn by our checks".
+- **Phone comparison.** Below 760 px the comparison is one card per field, with a numbered chip per company, instead of
+  a sideways-scrolling table. The existing headless test was updated to read the cards on mobile. The desktop table is
+  unchanged.
+- **Header** says how many companies were compared with their previous run.
+- **Fix.** `_claim_notes` reads `currency`, `attribution` and `operated_by` only when they are objects. Financial claims
+  carry `currency: "NOK"`.
+
+Tests (`tests/test_v3_viewer.py`), headless Chromium at 1366×820 and 390×844:
+- inspector content and closing;
+- What's New rows (new and withdrawn);
+- trust panel ("Not audited");
+- comparison of 2 and 4 companies;
+- no horizontal page scroll, no page errors, no request leaving the page;
+- no `innerHTML`, `outerHTML`, `insertAdjacentHTML`, `document.write`, `eval` or `new Function` in the page;
+- size budget: the template is under 80 KB and the average is under 60 KB per company. The 16 fixture companies measure
+  about 20 KB each.
+
+Screenshots: `docs/screenshots/v3-viewer-*.png`.

@@ -390,10 +390,18 @@ const { chromium } = require(process.env.PWPATH);
     await page.check("#list li >> nth=0 >> input[type=checkbox]");
     await page.check("#list li >> nth=2 >> input[type=checkbox]");
     await page.click("#cmpbtn");
-    await page.waitForSelector("table.cmp");
-    const header = await page.$$eval("table.cmp thead th", (nodes) => nodes.map((n) => n.textContent));
-    const rows = await page.$$eval("table.cmp tbody tr", (nodes) => nodes.map((n) => n.textContent));
-    const links = await page.$$eval("table.cmp td a", (nodes) => nodes.map((n) => n.getAttribute("href")));
+    let header, rows, links;
+    if (label === "mobile") {  // V3: phones get one card per field instead of a sideways-scrolling table
+      await page.waitForSelector("div.cards");
+      header = ["Field", ...await page.$$eval(".tray > span", (nodes) => nodes.map((n) => n.lastChild.textContent))];
+      rows = await page.$$eval("div.cards .card", (nodes) => nodes.map((n) => n.querySelector("h4").textContent + [...n.querySelectorAll(".cell")].map((c) => c.lastChild.textContent).join("")));
+      links = await page.$$eval("div.cards a", (nodes) => nodes.map((n) => n.getAttribute("href")));
+    } else {
+      await page.waitForSelector("table.cmp");
+      header = await page.$$eval("table.cmp thead th", (nodes) => nodes.map((n) => n.textContent));
+      rows = await page.$$eval("table.cmp tbody tr", (nodes) => nodes.map((n) => n.textContent));
+      links = await page.$$eval("table.cmp td a", (nodes) => nodes.map((n) => n.getAttribute("href")));
+    }
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
     const hash = await page.evaluate(() => location.hash);
     if (label === "mobile") await page.click("#back");
