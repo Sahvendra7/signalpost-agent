@@ -1,0 +1,175 @@
+{
+ "labeller": "Claude (assistant)",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 142,
+ "units_without_verdict": 44,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 39,
+    "correct": 37,
+    "incorrect": 1,
+    "unsure": 1,
+    "precision": 0.9737,
+    "ci95": [
+     0.8651,
+     0.9953
+    ]
+   },
+   "news_item": {
+    "published_labelled": 96,
+    "correct": 71,
+    "incorrect": 18,
+    "unsure": 7,
+    "precision": 0.7978,
+    "ci95": [
+     0.7028,
+     0.8681
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 2,
+    "correct": 0,
+    "incorrect": 2,
+    "unsure": 0,
+    "precision": 0.0,
+    "ci95": [
+     0.0,
+     0.6576
+    ]
+   },
+   "careers_page": {
+    "published_labelled": 5,
+    "correct": 4,
+    "incorrect": 1,
+    "unsure": 0,
+    "precision": 0.8,
+    "ci95": [
+     0.3755,
+     0.9638
+    ]
+   }
+  },
+  "fix": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 31,
+    "correct": 31,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.8897,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 74,
+    "correct": 66,
+    "incorrect": 2,
+    "unsure": 6,
+    "precision": 0.9706,
+    "ci95": [
+     0.899,
+     0.9919
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 4,
+    "correct": 4,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.5101,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 37,
+   "retained": 31,
+   "retention": 0.8378,
+   "lost_correct": [
+    "916824289|social_profile|facebook.com/brtorkildsenorgelbyggeri",
+    "916824289|social_profile|instagram.com/br.torkildsenorgelbyggeri",
+    "984525354|social_profile|facebook.com/parorende",
+    "979628315|social_profile|instagram.com/sunnekommuner",
+    "979628315|social_profile|linkedin.com/company/sunne-kommuner---whos-norske-nettverk",
+    "979628315|social_profile|facebook.com/sunnekommuner"
+   ],
+   "gained_correct": [],
+   "errors_removed": 1,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 71,
+   "retained": 66,
+   "retention": 0.9296,
+   "lost_correct": [
+    "996902161|news_item|sabi.no/sabi-sushi-akra-har-apnet|2025-11-07",
+    "996902161|news_item|sabi.no/ny-sabi-sushi-i-sandvika|2025-11-07",
+    "996902161|news_item|sabi.no/sabi-sushi-apnet-i-tromso|2025-11-07",
+    "996902161|news_item|sabi.no/sabi-sushi-pa-holtet-har-apnet|2025-11-07",
+    "996902161|news_item|sabi.no/mot-aries-og-anuphong|2025-11-07"
+   ],
+   "gained_correct": [],
+   "errors_removed": 16,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 2,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 4,
+   "retained": 4,
+   "retention": 1.0,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 1,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

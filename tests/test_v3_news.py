@@ -183,3 +183,20 @@ class AdviceAfterTopicPrefix(unittest.TestCase):
         self.assertTrue(evergreen_title("Strøm: Hvordan påvirker vinteren prisene?"))
         self.assertFalse(evergreen_title("Ny avtale: Slik blir samarbeidet med kommunen"))
         self.assertFalse(evergreen_title("Årsmøte 2026 – hva er nytt?"))
+
+
+class FeedSections(unittest.TestCase):
+    """Remediation R3 (diagnostic set): a feed that carries every page type."""
+
+    def test_feed_items_in_other_sections_are_not_news_when_the_site_has_a_news_section(self):
+        from norway_company_agent.attribution.news import feed_item_outside_news_section
+        for url in ("https://www.fremsam.no/kunnskap-og-forskning/folkehelserapporten", "https://www.parorendesenteret.no/min-historie/vilde",
+                    "https://www.komogdans.no/vestland/floienrock/"):
+            self.assertTrue(feed_item_outside_news_section(url, 3), url)
+        for url in ("https://www.fremsam.no/nyheter/fremsam-deltok", "https://sabi.no/ny-sabi-sushi-i-sandvika/", "https://example.no/2024/05/sak/"):
+            self.assertFalse(feed_item_outside_news_section(url, 3), url)
+        self.assertFalse(feed_item_outside_news_section("https://www.fremsam.no/kunnskap-og-forskning/x", 1), "no news section: no rule")
+
+    def test_scandinavian_default_posts(self):
+        from norway_company_agent.attribution.news import DEFAULT_POSTS
+        self.assertTrue({"hej verden!", "hej världen!", "hei verden!"} <= DEFAULT_POSTS)

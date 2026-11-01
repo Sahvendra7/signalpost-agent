@@ -32,7 +32,7 @@ PRESS_TITLE = re.compile(r"^\s*(?:pressemelding|press release|pressrelease|nyhet
 PRESS_SLUG = re.compile(r"^(?:pressemelding|press-release|nyhet|kunngjoring)-")
 DATED_PATH = re.compile(r"/(?:19|20)\d{2}/(?:0?[1-9]|1[0-2])(?:/|$)")
 DEFAULT_POSTS = {"hello world", "hello world!", "hei verden", "hei verden!", "sample page", "eksempelside", "uncategorized", "testinnlegg", "test post",
-                 "hallo verden", "hallo verden!"}
+                 "hallo verden", "hallo verden!", "hej verden", "hej verden!", "hej världen", "hej världen!"}  # + Danish/Swedish (remediation R3)
 NEWS_TAXONOMY = {"nyheter", "nyhet", "aktuelt", "news", "blogg", "blog", "presse", "pressemelding", "pressemeldinger"}
 PROJECT_TAXONOMY = {"prosjekt", "prosjekter", "referanse", "referanser", "referanseprosjekter", "portfolio", "naeringsbygg", "boligbygg", "bolig",
                     "boliger", "offentlig", "offentlige", "rehabilitering", "nybygg", "produkter", "produkt", "tjenester", "hytter", "industri",
@@ -161,6 +161,18 @@ READER_ADDRESS = re.compile(
     r"|\b(?:kan|kunne|må|bør|skal|vil|can|could|should)\s+(?:du|dere|you)\b"
     r"|\bslik\b.*\b(?:du|dere)\b|\byou'(?:ll|re|ve)\b", re.I)
 PUBLISHER_NACE = ("58.1", "60.", "63.91", "63.12")
+
+
+def feed_item_outside_news_section(url: str, news_section_items: int) -> bool:
+    """Remediation R3: a site's RSS feed often carries every page type. When the site has its own news section (at least
+    two items under /nyheter/, /aktuelt/, /blogg/ …), a feed item that sits two or more levels deep in another section
+    (/kunnskap-og-forskning/…, /tips-og-rad/…, /min-historie/…, /vestland/<event>/) is not news. Root-level posts
+    (/slug/) and dated addresses are left alone."""
+    if news_section_items < 2:
+        return False
+    path = urllib.parse.unquote(urllib.parse.urlsplit(url).path).casefold()
+    segments = [segment for segment in path.split("/") if segment]
+    return len(segments) >= 2 and not NEWS_SEGMENT.match(segments[0]) and not DATED_PATH.search(path)
 
 
 def evergreen_title(title: str) -> bool:

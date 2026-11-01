@@ -161,3 +161,12 @@ class SocialDecisions(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+
+class SlugifiedLegalForm(unittest.TestCase):
+    def test_a_slugified_a_s_is_a_legal_form(self):
+        from norway_company_agent.attribution.names import LegalName, handle_relation
+        legal = LegalName("BOARD COMPANY NORGE AS")
+        self.assertEqual(handle_relation(legal, "linkedin", "https://www.linkedin.com/company/board-assure-a-s/").kind, "OTHER_ENTITY")
+        self.assertEqual(handle_relation(LegalName("BOARD ASSURE AS"), "linkedin", "https://www.linkedin.com/company/board-assure-a-s/").kind, "EXACT")

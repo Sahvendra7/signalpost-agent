@@ -36,7 +36,7 @@ from bs4 import BeautifulSoup
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
 from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relation, named_entities
 from .attribution.jobs import decide_job, is_recruiter
-from .attribution.news import burst_members, classify_item, evergreen_title, has_news_path, is_publisher, subject_of
+from .attribution.news import NEWS_SEGMENT, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, subject_of
 from .attribution.operator import SiteOperator, assess_operator, sibling_names
 from .attribution.social import decide_profile
 from .identity import _tokens, assess_social_identity
@@ -1006,6 +1006,10 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     # V3 §B6: each candidate is classified on its own (the container is not proof) and attributed to a subject.
     bursts = burst_members([(page.url, item) for item, page in candidates])
     outside_section = _outside_listing_section(candidates)
+    # Remediation R3: how many distinct candidates the site keeps in its own news section (/nyheter/…, /aktuelt/…).
+    news_section_items = len({str(item.get("url") or "") for item, page in candidates if item.get("url")
+                              and in_site_scope(str(item["url"]), site_url)
+                              and NEWS_SEGMENT.match(([segment for segment in urllib.parse.unquote(urllib.parse.urlsplit(str(item["url"])).path).casefold().split("/") if segment] or [""])[0])})
     typed: dict[str, bool] = {}
     by_url = {page.url: page for page in pages}
     news_pages = {page.url for page in pages if page.kind == "html" and (is_news_page(page.url) or has_news_path(page.url))}
@@ -1026,6 +1030,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                                      page_is_listing=page.url in news_pages and not is_article_path(page.url), article_typed=typed.get(page.url, False),
                                      from_main_feed=page.kind == "feed" and _main_feed(page.url), outside_listing_section=index in outside_section)
             reason = None if decision.accepted else decision.code
+        if not reason and page.kind == "feed" and not section and feed_item_outside_news_section(item_url, news_section_items):
+            reason = "feed_item_outside_news_section"
         if not reason and index in bursts:
             reason = "bulk_entry_burst"
         if not reason and operator.kind != "manager":

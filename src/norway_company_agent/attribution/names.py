@@ -182,6 +182,8 @@ def handle_of(platform: str, url: str) -> tuple[str, list[str]]:
     else:
         raw = segments[0] if segments else ""
     folded = fold(raw)
+    # Remediation R3: "board-assure-a-s", "firma.a.s": a slugified "A/S" or "A.S." is the legal form "as".
+    folded = re.sub(r"(?<![a-z0-9])a[-._]s(?![a-z0-9])", "as", folded)
     words = [word for word in re.split(r"[^a-z0-9]+", folded) if word]
     if len(words) > 2:
         words = [word for word in words if word not in ("og", "and")]  # "hansen-og-sonn-as": connectors are not in legal tokens
