@@ -146,14 +146,24 @@ def burst_members(items: list[tuple[str, dict[str, Any]]]) -> set[int]:
 
 EVERGREEN_TITLE = re.compile(
     r"^(?:slik|hvordan|hvor ofte|hva er|hva du|hva bør|tips|råd|guide|how to|how do|what is|what are|why|types of|understanding|introduction to)\b"
-    r"|sjekkliste|checklist|komplett guide|complete guide|\bguide\b|\btips\b|dette bør|regler for|key differences|\bvs\.?\b"
-    r"|\b(?:du|deg|din|ditt|dine|dere|deres|you|your)\b", re.I)
+    r"|sjekkliste|checklist|komplett guide|complete guide|\bguide\b|\btips\b|dette bør|regler for|key differences|\bvs\.?\b", re.I)
+# Remediation R6: a second-person word marks marketing or advice only in context — the reader's possessions ("din",
+# "ditt", "your"), an offer to the reader ("for deg", "gir deg"), a modal ("du kan", "kan du"), or "slik … dere". A bare
+# pronoun is often news ("Her finner du Barneombudet på Arendalsuka", "Få med deg …") or an interjection ("Du store
+# verden"). "deres" is left out: it is also "their".
+READER_ADDRESS = re.compile(
+    r"\b(?:din|ditt|dine|your|yours)\b"
+    r"|\b(?:for|til|gir|gi|tilbyr|hjelper|hjelpe|lar)\s+(?:deg|dere|you)\b"
+    r"|\b(?:du|dere|you)\s+(?:kan|kunne|må|bør|skal|vil|får|trenger|can|could|should|need|will)\b"
+    r"|\b(?:kan|kunne|må|bør|skal|vil|can|could|should)\s+(?:du|dere|you)\b"
+    r"|\bslik\b.*\b(?:du|dere)\b|\byou'(?:ll|re|ve)\b", re.I)
 PUBLISHER_NACE = ("58.1", "60.", "63.91", "63.12")
 
 
 def evergreen_title(title: str) -> bool:
     """Advice, how-to and second-person marketing titles: content a company publishes, not news about it."""
-    return bool(EVERGREEN_TITLE.search(" ".join(str(title or "").split())))
+    text = " ".join(str(title or "").split())
+    return bool(EVERGREEN_TITLE.search(text) or READER_ADDRESS.search(text))
 
 
 def is_publisher(profile: dict[str, Any]) -> bool:

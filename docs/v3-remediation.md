@@ -112,3 +112,39 @@ cannot be measured on fresh60b** (0 published), and none of the figures below ar
 evaluation sample (R3/R7).
 
 **Tests:** `test_v3_jobs.py::CareersPathSegments` (topic pages rejected; real careers paths kept).
+
+## R6 — 911771098 "Du store verden" and the reader-addressing rule
+
+**Exact effect of the blanket rule.** "Any second-person word in a title" was added in `6efd3cd`. Recounted on titles
+only (the earlier count matched against the whole unit value, including the URL), across all labelled news units, it
+removed:
+
+| Label | Count |
+|---|---|
+| incorrect | 10 (dev 1, fresh60 7, fresh60b 2) |
+| correct | 3 (Bjelland "Få med deg …", Barneombudet "Her finner du …", Grenland Brann "Hva gjør du hvis … Øvelse NØP …") |
+| unsure | 1 |
+
+It also removed "Du store verden" (911771098), which is not in a labelled set.
+
+**Context-aware rule** (`attribution/news.READER_ADDRESS`). A second-person word marks marketing or advice only in
+these constructions:
+- **possessive:** `din`, `ditt`, `dine`, `your`;
+- **offer to the reader:** `for`, `til`, `gir`, `gi`, `tilbyr`, `hjelper`, `lar` + `deg`/`dere`/`you`;
+- **modal:** `du kan`, `kan du`, `dere må`, `you can`, and similar;
+- **`slik … du/dere`.**
+
+A bare pronoun, an idiom or an interjection is not enough. `deres` is excluded, because it also means "their".
+
+**Result:**
+- All 10 labelled errors stay excluded; this is tested title by title.
+- Replayed on the four sets, the change **adds** only Bjelland "Få med deg flere nyhetssaker på Facebook" (correct,
+  midsize40) and Grenland Brann's exercise notice (correct, fresh60b), and **removes nothing**.
+- 911771098 publishes all 20 posts again, as at `ff3b515`.
+
+**Independence caveat.** The ten errors include the two from fresh60b, because the owner asked that the new rule not
+re-admit them. fresh60b news is therefore not independent for this rule; see the new evaluation sample.
+
+**Tests:**
+- `test_v3_news.py::ReaderAddressing` — the ten stay out; bare pronouns and interjections stay in;
+- `test_v3_regressions.py::NewsClassification::test_911771098_blog_control` — now 20, including "Du store verden".

@@ -154,3 +154,23 @@ class Subject(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReaderAddressing(unittest.TestCase):
+    """Remediation R6: the ten labelled marketing/advice titles stay excluded; bare pronouns and interjections do not."""
+
+    def test_the_ten_labelled_errors_stay_excluded(self):
+        from norway_company_agent.attribution.news import evergreen_title
+        for title in ("Extending Your Android Enterprise Mobility Strategy into Zone 2/22",
+                      "Høst- og vinterrenhold for bedrifter: Slik holder dere inngang og gulv rene",
+                      "Barnehagerenhold: Slik lager dere en praktisk renholdsplan", "Vi er din gode rådgiver og sparringspartner!",
+                      "Dalgona kaffe: Enkel iskaffe du kan lage hjemme", "To netter på Stalheim - hva kan du finne på?", "Vi kan ta lønna for deg!",
+                      "Vi renser ditt nærmiljø!", "FasterFix gir deg opptil 75% tidsbesparelse på byggeplass!",
+                      "Nyhet! GX Mate GX Mate gir deg friheten til å merke hvor du vil på en trygg og sikker måte."):
+            self.assertTrue(evergreen_title(title), title)
+
+    def test_bare_pronouns_and_interjections_are_not_advice(self):
+        from norway_company_agent.attribution.news import evergreen_title
+        for title in ("Du store verden", "Få med deg flere nyhetssaker på Facebook", "Her finner du Barneombudet på Arendalsuka 2026",
+                      "Hva gjør du hvis mobil og internett slutter å fungere? Øvelse NØP torsdag 29/11", "Ansatte og deres familier inviteres til sommerfest"):
+            self.assertFalse(evergreen_title(title), title)

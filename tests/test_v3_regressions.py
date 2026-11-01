@@ -140,14 +140,13 @@ class NewsClassification(unittest.TestCase):
         self.assertIn("item not about entity on group or brand site: 31", reason)
 
     def test_911771098_blog_control(self):
-        """The WordPress case (C300 fixture, captured 2026-10-17): 20 posts at ff3b515. One, "Du store verden", is withheld
-        by the second-person title rule added in 6efd3cd (a known, logged false negative: in the labelled audits that
-        clause removed 10 incorrect news items and 3 correct ones). Any further loss fails here."""
+        """The WordPress case (C300 fixture, captured 2026-10-17): all 20 posts, as at ff3b515. "Du store verden" was lost
+        to the blanket second-person title rule (6efd3cd) and is kept by the context-aware rule (remediation R6)."""
         from helpers.c12_replay import C300_FIXTURES
         envelope = run_batch([InputRow(0, "911771098", "911771098")], run_id="v3-regression", **Fixture("911771098", base=C300_FIXTURES).injected())["envelopes"][0]
         titles = [claim["value"].get("title") for claim in envelope["claims"] if claim["field"] == "news_item" and claim["availability"] == "available"]
-        self.assertEqual(len(titles), 19)
-        self.assertNotIn("Du store verden", titles)
+        self.assertEqual(len(titles), 20)
+        self.assertIn("Du store verden", titles)
 
 
 class CareersPages(unittest.TestCase):
