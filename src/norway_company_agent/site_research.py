@@ -29,6 +29,7 @@ from bs4 import BeautifulSoup
 
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens
+from .site_facts import CAREER_PATH, is_careers_page  # noqa: F401
 from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, in_site_scope, is_shared_site_section, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site, manager_designated
 from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
@@ -406,7 +407,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
         label = (urllib.parse.urlsplit(url).path + " " + anchor.get_text(" ", strip=True)).casefold()
         if any(hint in label for hint in NEWS_HINTS):
             news.append(url)
-        elif any(hint in label for hint in CAREER_HINTS):
+        elif career_link(url, anchor.get_text(" ", strip=True)):
             careers.append(url)
     if not feeds and not news and not careers:
         state, sitemap = session.get(urllib.parse.urljoin(home_url, "/sitemap.xml"), budget, accept="application/xml,text/xml")
@@ -418,7 +419,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
                     continue
                 if any(hint in path for hint in NEWS_HINTS) and path.count("/") <= 2:
                     news.append(url)
-                elif any(hint in path for hint in CAREER_HINTS):
+                elif career_link(url, ""):
                     careers.append(url)
     result.careers_page = careers[0] if careers else None
     fetched: list[tuple[str, ByteFetch]] = list(pages)
@@ -454,6 +455,24 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
     result.pages = [_page_record(url, response) for url, response in fetched]
 
 
+CAREER_LABEL = re.compile(r"^(?:ledige stillinger|stillinger|karriere|career|careers|jobs|jobb|vacancies|open positions|work with us|join us|"
+                          r"jobb(?:e)? (?:hos|i|med|for) [\w .&-]{1,40}|bli med (?:oss|på laget)|ledig stilling)$", re.I)
+SERVICE_SEGMENTS = {"for-bedrifter", "bedrift", "bedrifter", "arbeidsgivere", "for-arbeidsgivere", "arbeidsgiver", "tjenester", "kunder", "for-kunder", "services"}
+
+
+def service_page(url: str) -> bool:
+    return any(segment in SERVICE_SEGMENTS for segment in urllib.parse.unquote(urllib.parse.urlsplit(url).path).casefold().split("/"))
+
+
+def career_link(url: str, text: str) -> bool:
+    """A link to the careers page: a careers path segment, or a link labelled as one ("Ledige stillinger", "Jobb hos
+    oss"). A service page for employers or customers is not one, whatever its label."""
+    if service_page(url):
+        return False
+    path = urllib.parse.unquote(urllib.parse.urlsplit(url).path).casefold()
+    return bool(CAREER_PATH.search(path)) or bool(CAREER_LABEL.match(" ".join(text.split())))
+
+
 def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | None = None, pages: list[CapturedPage] | None = None) -> None:
     """Store the validated first-party facts on the site result (the profile record claims are built from)."""
     relationship = f"{result.identity_class} website -> officially linked profile"
@@ -465,6 +484,13 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
     result.extraction_rejections = dict(facts.rejections)
     result.rejected_examples = facts.rejected_examples
     result.operator = getattr(facts, "operator", None)
+    if result.careers_page:
+        # V3 §B7: the linked page must itself be a careers page (path or heading), not a service page for employers.
+        fetched_page = next((page for page in pages or [] if page.url == result.careers_page and page.kind == "html"), None)
+        if fetched_page is None or not is_careers_page(fetched_page) or service_page(result.careers_page):
+            counts = result.extraction_rejections
+            counts["careers:not_a_careers_page"] = counts.get("careers:not_a_careers_page", 0) + 1
+            result.careers_page, result.careers_checked = None, [item for item in result.careers_checked if item.get("url") != fetched_page.url] if fetched_page else []
     kind = (result.operator or {}).get("kind")
     if kind in ("other_entity", "group_or_brand"):
         # V3 §B5: another company (or a group/brand) runs the site. Its careers page and vacancies are not this

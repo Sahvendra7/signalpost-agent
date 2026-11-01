@@ -46,7 +46,11 @@ HOME = f"""<html><head><title>Fjordtest</title><link rel="alternate" type="appli
 <a href="https://www.linkedin.com/company/fjordtest-programvare">LinkedIn</a><a href="https://www.facebook.com/sharer.php?u=x">Del</a>
 <a href="/karriere/">Karriere</a><a href="/kontakt/">Kontakt</a><footer>Fjordtest Programvare AS · Org.nr {ORG[:3]} {ORG[3:6]} {ORG[6:]}</footer></body></html>""".encode()
 FEED = b"<rss><channel><item><title>Ny avdeling</title><link>https://fjordtest.no/ny</link><pubDate>Tue, 01 Sep 2026 10:00:00 +0200</pubDate></item></channel></rss>"
-CAREERS = b'<html><script type="application/ld+json">{"@type":"JobPosting","title":"Utvikler","datePosted":"2026-09-20","validThrough":"2026-10-31"}</script></html>'
+# V3 (docs/v3-changelog.md, phase 3): an advertisement is published only while it is open, so the fixture's dates are
+# relative to the day the test runs (it was a fixed 2026-10-31 deadline, which expired).
+_TODAY = __import__("datetime").date.today()
+CAREERS = ('<html><script type="application/ld+json">{"@type":"JobPosting","title":"Utvikler","datePosted":"%s","validThrough":"%s"}</script></html>'
+           % (_TODAY - __import__("datetime").timedelta(days=10), _TODAY + __import__("datetime").timedelta(days=30))).encode()
 FAN = b"<html><head><title>Fjordtest Programvare AS Fansite</title></head><body>Storgata 1, 0155 Oslo</body></html>"
 
 

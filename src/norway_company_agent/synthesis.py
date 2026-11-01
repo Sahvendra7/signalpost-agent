@@ -181,6 +181,8 @@ def _job(value: dict[str, Any]) -> str:
     details = [f"posted {value['date_posted']}" if value.get("date_posted") else "posting date not stated"]
     if value.get("application_deadline"):
         details.append(f"application deadline {value['application_deadline']}")
+    elif value.get("valid_through"):
+        details.append(f"open until {str(value['valid_through'])[:10]}")
     if value.get("location"):
         details.append(str(value["location"]))
     return f"{value.get('title')} ({', '.join(details)})"
@@ -425,7 +427,7 @@ def company_summary(envelope: dict[str, Any]) -> dict[str, Any]:
         out.say("public_footprint", f"Profiles linked from the verified website: {linked}.", profiles)
     careers = one("careers_page")
     if careers:
-        out.say("public_footprint", f"Careers page: {careers['value']}.", [careers])
+        out.say("public_footprint", f"Careers page (a recruitment page, not a job advertisement): {careers['value']}.", [careers])
     activity = sorted((by_field.get("news_item") or []) + (by_field.get("site_activity") or []), key=lambda claim: (str(claim["value"].get("publication_date") or ""), str(claim["value"].get("url") or "")), reverse=True)
     if activity:
         newest = activity[0]["value"]

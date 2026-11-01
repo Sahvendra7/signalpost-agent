@@ -442,8 +442,8 @@ class JobRules(unittest.TestCase):
     def test_one_job_page_is_one_posting(self):
         html = """<html><body><main><h1>Ledige stillinger</h1>
         <div><a href="/ledige-stillinger/driftstekniker/"><h3>Driftstekniker</h3></a><a href="/ledige-stillinger/driftstekniker/">Driftstekniker</a><p>Fast stilling</p></div>
-        <script type="application/ld+json">{"@type":"JobPosting","title":"Driftstekniker","datePosted":"2026-09-20","url":"https://fjell-data.no/ledige-stillinger/driftstekniker/"}</script>
-        </main></body></html>"""
+        <script type="application/ld+json">{"@type":"JobPosting","title":"Driftstekniker","datePosted":"%s","url":"https://fjell-data.no/ledige-stillinger/driftstekniker/"}</script>
+        </main></body></html>""" % (__import__("datetime").date.today() - __import__("datetime").timedelta(days=10))  # V3: posted 10 days before the run
         facts = extract_site_facts({"name": "Fjell Data AS"}, [page("https://fjell-data.no/", "<html><body>Fjell Data</body></html>"), page(self.CAREERS, html)])
         self.assertEqual([(job["title"], job["url"]) for job in facts.jobs], [("Driftstekniker", "https://fjell-data.no/ledige-stillinger/driftstekniker/")])
 

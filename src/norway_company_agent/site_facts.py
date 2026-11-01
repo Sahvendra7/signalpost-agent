@@ -35,11 +35,18 @@ from bs4 import BeautifulSoup
 
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
 from .attribution.names import LegalName, compact, handle_relation
+from .attribution.jobs import decide_job, is_recruiter
 from .attribution.news import burst_members, classify_item, has_news_path, subject_of
 from .attribution.operator import SiteOperator, assess_operator, sibling_names
 from .attribution.social import decide_profile
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
+
+try:
+    from zoneinfo import ZoneInfo
+    _OSLO: Any = ZoneInfo("Europe/Oslo")
+except Exception:  # no tz database: UTC is the documented fallback for the job run date
+    _OSLO = timezone.utc
 
 SOCIAL_PLATFORMS = ("facebook", "instagram", "linkedin", "youtube")
 ARTICLE_TYPES = {"Article", "NewsArticle", "BlogPosting", "Report", "PressRelease"}
@@ -216,6 +223,29 @@ def parse_date(value: Any) -> str | None:
     return parsed.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def parse_deadline(value: Any) -> str | None:
+    """A closing date (schema.org validThrough, an application deadline): like `parse_date`, but a future date is the
+    normal case and is kept (up to 18 months ahead). `parse_date` rejects future dates, which used to drop the
+    validThrough of every current advertisement while keeping expired ones (V3 §B7)."""
+    text = str(value or "").strip()
+    if not text:
+        return None
+    try:
+        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        try:
+            parsed = parsedate_to_datetime(text)
+        except (TypeError, ValueError, IndexError):
+            return None
+    if parsed is None:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    if parsed.year < 1995 or parsed > datetime.now(timezone.utc) + timedelta(days=550):
+        return None
+    return text[:10] if re.fullmatch(r"\d{4}-\d{2}-\d{2}", text) else parsed.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def feed_items(xml: bytes) -> list[dict[str, Any]]:
     soup = BeautifulSoup(xml, "xml")
     items = []
@@ -329,8 +359,12 @@ def job_postings(html: str, base_url: str) -> list[dict[str, Any]]:
         title = str(node.get("title") or "").strip()
         if not title:
             continue
-        valid = parse_date(node.get("validThrough"))
-        jobs.append({"title": title[:200], "date_posted": parse_date(node.get("datePosted")), "valid_through": valid, "url": node.get("url") if isinstance(node.get("url"), str) else base_url, "method": "jsonld_JobPosting"})
+        valid = parse_deadline(node.get("validThrough"))
+        hiring = node.get("hiringOrganization")
+        hiring_name = hiring.get("name") if isinstance(hiring, dict) else hiring if isinstance(hiring, str) else None
+        job = {"title": title[:200], "date_posted": parse_date(node.get("datePosted")), "valid_through": valid, "url": node.get("url") if isinstance(node.get("url"), str) else base_url,
+               "method": "jsonld_JobPosting", "hiring_organization": str(hiring_name).strip()[:120] if hiring_name else None}
+        jobs.append({key: value for key, value in job.items() if value is not None})
     return jobs
 
 
@@ -666,11 +700,25 @@ def job_listings(page: CapturedPage) -> tuple[list[dict[str, Any]], str | None]:
         deadline, deadline_text = _labelled_date(segments, ("søknadsfrist", "frist", "deadline", "apply by"), allow_future=True)
         posted, posted_text = _labelled_date(segments, ("publisert", "published", "posted", "lagt ut"))
         job = {"title": title, "url": target, "date_posted": posted, "date_posted_text": posted_text, "application_deadline": deadline,
-               "application_deadline_text": deadline_text, "location": _location(segments), "method": "careers_page_listing"}
+               "application_deadline_text": deadline_text, "location": _location(segments), "method": "careers_page_listing", "employer_label": _employer(segments)}
         jobs.append({key: value for key, value in job.items() if value is not None})
         if len(jobs) >= MAX_JOBS_PER_PAGE:
             break
     return jobs, None if jobs else "careers page lists no linked position"
+
+
+EMPLOYER_LABEL = re.compile(r"^(?:arbeidsgiver|employer|bedrift|firma|selskap|company)\s*:?\s*(.*)$", re.I)
+
+
+def _employer(segments: list[str]) -> str | None:
+    """The employer a job card names ("Arbeidsgiver: X"), if any."""
+    for index, segment in enumerate(segments):
+        match = EMPLOYER_LABEL.match(segment)
+        if match:
+            value = _clean(match.group(1).strip(" :-") or (segments[index + 1] if index + 1 < len(segments) else ""))
+            if 2 <= len(value) <= 120 and not date_matches(value):
+                return value
+    return None
 
 
 def _job_card(anchor: Any, target: str, candidates: list[tuple[Any, str, bool]]) -> Any:
@@ -813,7 +861,7 @@ def _outside_listing_section(candidates: list[tuple[dict[str, Any], CapturedPage
 
 
 def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds: list[CapturedPage] | None = None, operator: SiteOperator | None = None, *,
-                       website_value: dict[str, Any] | None = None, identity_class: str | None = None) -> SiteFacts:
+                       website_value: dict[str, Any] | None = None, identity_class: str | None = None, now: datetime | None = None) -> SiteFacts:
     """Facts from pages of a VERIFIED company site. `pages[0]` is the homepage; `profile` carries the legal name.
     `operator` (who runs the site, attribution.operator) is computed from the pages when not given."""
     out = SiteFacts()
@@ -967,8 +1015,11 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         kept[key] = {**{name: value for name, value in item.items() if name != "summary"}, "summary": summary, **_provenance(page)}
     out.activities = list(kept.values())
 
-    # Jobs: schema.org JobPosting anywhere, listed positions on careers pages.
+    # Jobs: schema.org JobPosting anywhere, listed positions on careers pages; each must be a single, current
+    # advertisement by this employer (V3 §B7, attribution.jobs).
     seen_jobs: set[tuple[str, str]] = set()
+    recruiter = is_recruiter(profile)
+    run_date = (now or datetime.now(timezone.utc)).astimezone(_OSLO).date()
     for page in pages:
         if page.kind != "html":
             continue
@@ -979,9 +1030,15 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             found.extend((job, page) for job in listed)
         for job, source in found:
             reason = validate_job(job, source)
+            decision = None
+            if not reason:
+                decision = decide_job(job, legal=legal, operator_kind=operator.kind, recruiter=recruiter, run_date=run_date,
+                                      on_news_page=is_news_page(source.url) or ARCHIVE_PATH.search(urllib.parse.urlsplit(source.url).path.casefold()) is not None)
+                reason = None if decision.accepted else decision.code
             if reason:
                 out.reject("job", reason, job, source)
                 continue
+            job = {**job, "currency": {"state": decision.code, "basis": decision.basis}}
             key = (fold(job["title"]), str(job.get("url") or source.url))
             if key in seen_jobs:
                 continue

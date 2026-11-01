@@ -115,3 +115,52 @@ Now its real articles are kept separately, and its portfolio items are rejected.
   - Bergknapp `/prosjekter/` → 0; Bartec group magazine 17 → 0;
   - Betonmast Oslo 10 → 1 (its own tagged item); Beredt listing page removed, 7 articles kept.
 - Controls unchanged: 911771098 (20), Kilis Hockey (10), Birralee (20), Grønsand (15).
+
+## Phase 3 — job advertisements and careers pages
+
+New module `attribution/jobs.py`.
+
+**Dates.**
+- `parse_deadline` keeps future closing dates (up to 18 months ahead). `validThrough` previously went through
+  `parse_date`, which rejects future dates. That dropped the validThrough of every current advertisement and kept the
+  expired ones, which were then published.
+- `parse_date` itself is unchanged.
+
+**Currency** — only `open` and `recently_posted` are published:
+
+| State | Meaning |
+|---|---|
+| `open` | a stated deadline or `validThrough` on or after the run date (Europe/Oslo) |
+| `recently_posted` | no closing date stated, posted at most 45 days before the run. The basis says exactly that; the advertisement is never called "current" |
+| `expired` | deadline passed, or posted more than 45 days ago with no closing date |
+| `currency_unknown` | no date at all; unknown stays unknown |
+
+**Employer.** The employer named in the advertisement (`hiringOrganization`, or an "Arbeidsgiver:"/"Employer:" label)
+must be the company; another name gives `other_employer`. With no employer named:
+- a self-run site, not a recruiter → the company is presumed, with that basis stated;
+- a recruiter or staffing company (NACE 78.1–78.3) → `employer_unstated_on_job_board`;
+- a shared or group site → held.
+
+A recruiter's own vacancies that name it as employer are still published.
+
+**Single advertisement.**
+- A JSON-LD JobPosting in a news or archive page → `job_on_news_page`.
+- Open applications, talent banks, "Registrer CV" and bare "Sommerjobb"/"Lærling" titles → `generic_recruitment`.
+
+**Careers page.**
+- The link must be a careers path segment or a careers label ("Ledige stillinger", "Jobb hos oss"). The bare substring
+  `jobb` no longer qualifies.
+- The fetched page must itself pass `is_careers_page`.
+- Service pages for employers or customers (`/for-bedrifter/`, `/arbeidsgivere/`, `/tjenester/`) are never careers
+  pages.
+- The summary now says "Careers page (a recruitment page, not a job advertisement)".
+
+**Claims.** Job claims carry `currency: {state, basis}`, `attribution`, and `hiring_organization` when it is stated.
+
+**Tests updated** (dates made relative to the run day, so they cannot expire):
+- `test_site_research.py` `CAREERS`: the fixture deadline 2026-10-31 had passed.
+- `test_revision1.py::JobRules::test_one_job_page_is_one_posting`: posted 2026-09-20, which crosses the 45-day
+  window on 2026-11-05.
+
+**Fixtures.** Best Work `/for-bedrifter/` and Beredt `/arbeidsgivere/unge-i-praksis/` no longer give careers pages.
+The Birralee, Bjelland and Bemex careers pages are kept.

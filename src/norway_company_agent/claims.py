@@ -409,10 +409,14 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     jobs = [job for job in value.get("jobs") or [] if on_site(job.get("page_url"))]
     for job in jobs:
         page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"), carried)
-        body = {key: job.get(key) for key in ("title", "url", "date_posted", "valid_through", "application_deadline", "location")}
+        body = {key: job.get(key) for key in ("title", "url", "date_posted", "valid_through", "application_deadline", "location", "hiring_organization")}
         method = str(job.get("method") or "jsonld_JobPosting")
         span = f"schema.org JobPosting: {job.get('title')}" if method == "jsonld_JobPosting" else f"position listed on careers page {job.get('page_url')}: {job.get('title')}"
-        claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=method, extra={"source_page": job.get("page_url")})
+        extra = {"source_page": job.get("page_url")}
+        if job.get("currency"):
+            extra["currency"] = job["currency"]  # V3 §B7: why the advertisement is open or recently posted
+            extra["attribution"] = {"code": job["currency"].get("state"), "basis": job["currency"].get("basis")}
+        claims.add("hiring", "job_posting", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=method, extra=extra)
     operator = value.get("operator") or {}
     if not jobs and not manager and operator.get("kind") in ("other_entity", "group_or_brand"):
         claims.absent("hiring", "job_posting", "not_applicable", f"{operator.get('basis')} Vacancies on it are not attributed to this company.")

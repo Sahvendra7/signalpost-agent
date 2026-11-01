@@ -134,15 +134,5 @@ class CareersPages(unittest.TestCase):
         self.assertEqual(careers("995726742"), ["https://www.bemex-rekruttering.no/ledige-stillinger"])
 
 
-# Phase markers: the defect tests are expected to fail until their phase lands (Phase 0 commits them red).
-PENDING = {
-    CareersPages: ["test_service_pages_are_not_careers_pages"],
-}
-for _cls, _names in PENDING.items():
-    for _name in _names:
-        setattr(_cls, _name, unittest.expectedFailure(getattr(_cls, _name)))
-del _cls, _names, _name
-
-
 if __name__ == "__main__":
     unittest.main()
