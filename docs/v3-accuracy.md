@@ -100,6 +100,12 @@ Pooled over smoke100, midsize40, fresh60 and fresh60b; 564 labelled units:
 These numbers are measured on sets the rules were (partly) tuned on. **They are not a held-out result.** The
 held-out result for the final rules is row 3, measured on the earlier freeze.
 
+### 5. Final code (`dc96260`)
+
+Replaying all four sets through `dc96260` publishes exactly the units measured in row 4: smoke100 + midsize40 109/109,
+fresh60 104/104 and fresh60b 137/137, excluding websites. So rows 3 and 4 describe the release code. The later commits
+changed only refresh labels, absence wording, history carry-forward, the viewer and the app, not what is published.
+
 ### Remaining known errors (V3, all sets)
 
 - **Social:**

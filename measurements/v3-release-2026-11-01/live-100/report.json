@@ -1,0 +1,202 @@
+{
+  "run_id": "v3-live-100",
+  "code_version": {
+    "source_sha256": "733ea2216899d575e4077ad3e3eaca95a74696ac653bcc9bacc44ef6a3146b22",
+    "package_version": "0.3.0",
+    "git_commit": "dc96260d76aa089bc07e41382763832cb17d5ad5",
+    "git_dirty": false
+  },
+  "started_at": "2026-11-01T16:24:14.495675Z",
+  "completed_at": "2026-11-01T16:26:31.812354Z",
+  "runtime_ms": 137312,
+  "input_rows": 100,
+  "emitted_envelopes": 100,
+  "unique_companies_researched": 100,
+  "terminal_status_counts": {
+    "completed": 100
+  },
+  "modules": [
+    "registry",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website",
+    "site_research"
+  ],
+  "registry": {
+    "bulk": null,
+    "snapshot_status": "absent",
+    "fallback": "live_registry"
+  },
+  "category_coverage": {
+    "description": {
+      "available": 100
+    },
+    "filings": {
+      "available": 100
+    },
+    "hiring": {
+      "not_available": 100
+    },
+    "identity": {
+      "available": 100
+    },
+    "leadership": {
+      "available": 100
+    },
+    "locations": {
+      "available": 100
+    },
+    "public_activity": {
+      "not_available": 89,
+      "available": 11
+    },
+    "registry_activity": {
+      "available": 100
+    },
+    "relationships": {
+      "not_available": 97,
+      "available": 3
+    },
+    "websites": {
+      "not_available": 77,
+      "available": 23
+    }
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "public_activity": 0.11,
+    "registry_activity": 1.0,
+    "relationships": 0.03,
+    "websites": 0.23
+  },
+  "area_coverage": {
+    "filings": 100,
+    "leadership": 100,
+    "locations": 100,
+    "websites": 14,
+    "public_footprint": 11,
+    "hiring": 0
+  },
+  "companies_all_five_areas": 11,
+  "module_states": {
+    "financials": {
+      "complete": 99,
+      "not_found": 1
+    },
+    "group": {
+      "not_found": 97,
+      "complete": 3
+    },
+    "locations": {
+      "complete": 100
+    },
+    "registry": {
+      "not_found": 100
+    },
+    "registry_live": {
+      "complete": 100
+    },
+    "roles": {
+      "complete": 100
+    },
+    "site_research": {
+      "not_found": 86,
+      "complete": 14
+    },
+    "website": {
+      "not_found": 83,
+      "complete": 14,
+      "blocked_robots": 1,
+      "blocked_policy": 2
+    }
+  },
+  "error_codes": {},
+  "claims": {
+    "available_total": 3998,
+    "available_per_company_mean": 39.98,
+    "evidence_total": 3998,
+    "changes_total": 0
+  },
+  "operations": {
+    "requests": 762,
+    "bytes": 17852215,
+    "request_latency": {
+      "n": 546,
+      "p50_ms": 715.0,
+      "p95_ms": 1031.0,
+      "max_ms": 4273
+    },
+    "company_runtime": {
+      "n": 100,
+      "p50_ms": 4026.0,
+      "p95_ms": 29804.0,
+      "max_ms": 45062
+    },
+    "third_party_cost_usd": 0,
+    "llm_calls": 0
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "one_envelope_per_input_row": true,
+      "envelopes_follow_input_order": true,
+      "all_terminal": true,
+      "all_envelopes_valid": true,
+      "expected_count_matches_input": true
+    },
+    "findings": {}
+  },
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "resumed_profiles": 0,
+  "baseline": {
+    "source": null,
+    "companies_with_baseline": 0
+  },
+  "new_items": {
+    "social_profile": 0,
+    "news_item": 0,
+    "job_posting": 0,
+    "retracted": 0
+  },
+  "checks": {
+    "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+    "withheld": {
+      "activity:date_contradicts_title": 2,
+      "activity:no_article_evidence": 2,
+      "social:handle_unrelated": 3
+    }
+  },
+  "manual_audit": {
+    "state": "not_audited",
+    "note": "no manual audit supplied (scripts/audit_kit.py score; --audit-results)"
+  },
+  "history": {
+    "written": true,
+    "dir": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release4/out/smoke/signalpost-history",
+    "run_path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release4/out/smoke/signalpost-history/v3-live-100",
+    "complete": true,
+    "pruned": 0
+  },
+  "viewer": {
+    "written": true,
+    "path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release4/out/smoke/live-100.envelopes.viewer.html",
+    "bytes": 1401812,
+    "companies": 100,
+    "self_contained": true
+  }
+}

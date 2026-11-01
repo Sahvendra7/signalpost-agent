@@ -1,5 +1,24 @@
 # Final submission manifest
 
+## V3 candidate (not submitted, not scored)
+
+| | |
+|---|---|
+| Repository | https://github.com/Sahvendra7/signalpost-agent |
+| Branch | `claude/awesome-sagan-m2lppu`, branched from the previously submitted `ff3b515` (not `main`; `main` is the older `5575d0c`, so name the commit). |
+| **Release candidate commit** | The head of `claude/awesome-sagan-m2lppu` that adds this section (documentation and measurements only). Its full SHA is stated in the release report; a commit cannot contain its own SHA. |
+| **Code under test** | **`dc96260d76aa089bc07e41382763832cb17d5ad5`**. `git diff dc96260 <candidate> -- src tests scripts pyproject.toml uv.lock` is empty. |
+| Install | `uv sync --locked` (dependencies identical to `ff3b515`: `git diff ff3b515 dc96260 -- pyproject.toml uv.lock` is empty) |
+| Run (documented command, unchanged) | `uv run python scripts/run_competition_batch.py --organisations <BATCH.jsonl> --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --snapshot-dir out/snapshots --run-id <RUN_ID>` |
+| Tests on `dc96260` | 474 passed and 172 subtests in each run: 1 run in the working tree, plus 3 of 3 in the clean room. Earlier code (`730ccfe`) passed 5 of 5 runs of 468. |
+| Clean room on `dc96260` | Fresh clone, empty uv cache, `uv sync --locked` OK; documented command exit 0, with the viewer and history written (`measurements/v3-release-2026-11-01/cleanroom/`) |
+| 100-company check on `dc96260` | 100/100 `completed` in input order; 0 contract findings (3,994 hashes re-verified); 0 unsupported summary statements; no platform host contacted; $0. Refresh through the run history: **0 change events**, baseline `published_envelope` for 100/100. `measurements/v3-release-2026-11-01/` |
+| Reproductions (live, `dc96260`) | 911771098, Tyin Alpint, Bergknapp, Bartec, BK Bygg — see `docs/v3-release-report.md` §9 |
+| Accuracy | `docs/v3-accuracy.md`. Local measurements labelled `assistant_blind`, not Builderr scores. The second held-out news gate failed (85.0% against 90%). Replaying all four measured sets through `dc96260` publishes exactly the measured units. |
+| Default external cost / APIs | $0. Only the public Brønnøysund registry APIs and the companies' own websites. |
+| LLM / Brave / NAV | Off (not imported) / not used / not used |
+
+
 ## Current release candidate: C300 + refresh fix + race fix (not submitted)
 
 | | |
