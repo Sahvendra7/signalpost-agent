@@ -1,0 +1,191 @@
+{
+ "labeller": "Claude (assistant), blind to arm",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 195,
+ "units_without_verdict": 47,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 57,
+    "correct": 53,
+    "incorrect": 4,
+    "unsure": 0,
+    "precision": 0.9298,
+    "ci95": [
+     0.833,
+     0.9724
+    ]
+   },
+   "news_item": {
+    "published_labelled": 117,
+    "correct": 20,
+    "incorrect": 82,
+    "unsure": 15,
+    "precision": 0.1961,
+    "ci95": [
+     0.1307,
+     0.2835
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 1,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 1,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 18,
+    "correct": 8,
+    "incorrect": 8,
+    "unsure": 2,
+    "precision": 0.5,
+    "ci95": [
+     0.28,
+     0.72
+    ]
+   }
+  },
+  "v3": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 38,
+    "correct": 35,
+    "incorrect": 3,
+    "unsure": 0,
+    "precision": 0.9211,
+    "ci95": [
+     0.792,
+     0.9728
+    ]
+   },
+   "news_item": {
+    "published_labelled": 93,
+    "correct": 16,
+    "incorrect": 65,
+    "unsure": 12,
+    "precision": 0.1975,
+    "ci95": [
+     0.1254,
+     0.297
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 7,
+    "correct": 6,
+    "incorrect": 0,
+    "unsure": 1,
+    "precision": 1.0,
+    "ci95": [
+     0.6097,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 53,
+   "retained": 33,
+   "retention": 0.6226,
+   "lost_correct": [
+    "928664406|social_profile|facebook.com/ashamatec",
+    "916069812|social_profile|instagram.com/sogn.avis",
+    "912227111|social_profile|facebook.com/avisenhadeland",
+    "940922410|social_profile|linkedin.com/company/as-bygganalyse",
+    "911629283|social_profile|facebook.com/asfinanciering",
+    "940433649|social_profile|facebook.com/institutt-for-psykologisk-r%c3%a5dgivning-ipr-279534205481478",
+    "984438524|social_profile|facebook.com/kelloxnorge",
+    "942177127|social_profile|instagram.com/tarastromso",
+    "910386441|social_profile|facebook.com/asjaco",
+    "956623103|social_profile|linkedin.com/company/as-solregn",
+    "942177127|social_profile|facebook.com/tarastromso",
+    "911629283|social_profile|instagram.com/asfinanciering",
+    "915402534|social_profile|instagram.com/ringblad",
+    "912227111|social_profile|instagram.com/avisenhadeland",
+    "915402534|social_profile|facebook.com/ringblad",
+    "984438524|social_profile|facebook.com/kelloxmarine",
+    "916830890|social_profile|facebook.com/astorpabilruter",
+    "926008420|social_profile|facebook.com/assanering.no",
+    "924590300|social_profile|facebook.com/asnorsand",
+    "984438524|social_profile|facebook.com/kelloxmc"
+   ],
+   "gained_correct": [
+    "953325284|social_profile|facebook.com/safaofnorway",
+    "953325284|social_profile|instagram.com/safaofnorway"
+   ],
+   "errors_removed": 1,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 20,
+   "retained": 16,
+   "retention": 0.8,
+   "lost_correct": [
+    "811167452|news_item|dns.no/pressemelding-omfattende-rehabilitering-gir-okt-finansieringsbehov-for-dns|2026-10-27",
+    "916178832|news_item|stalheimhotel.no/aktuelt/stalheimskleivaopp|2023-04-17",
+    "916178832|news_item|stalheimhotel.no/aktuelt/tamina-pa-norgestur|2022-06-19",
+    "916178832|news_item|stalheimhotel.no/aktuelt|2021-08-02"
+   ],
+   "gained_correct": [],
+   "errors_removed": 17,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 8,
+   "retained": 6,
+   "retention": 0.75,
+   "lost_correct": [
+    "911629283|careers_page|financiering.no/om-oss/ledige-stillinger",
+    "916178832|careers_page|stalheimhotel.no/jobb-paa-stalheim-1"
+   ],
+   "gained_correct": [],
+   "errors_removed": 8,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

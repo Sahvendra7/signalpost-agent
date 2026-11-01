@@ -1,0 +1,175 @@
+{
+ "labeller": "Claude (assistant), blind to arm",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 180,
+ "units_without_verdict": 40,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 69,
+    "correct": 57,
+    "incorrect": 11,
+    "unsure": 1,
+    "precision": 0.8382,
+    "ci95": [
+     0.7331,
+     0.9072
+    ]
+   },
+   "news_item": {
+    "published_labelled": 91,
+    "correct": 52,
+    "incorrect": 19,
+    "unsure": 20,
+    "precision": 0.7324,
+    "ci95": [
+     0.6195,
+     0.8215
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 1,
+    "correct": 0,
+    "incorrect": 1,
+    "unsure": 0,
+    "precision": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "careers_page": {
+    "published_labelled": 19,
+    "correct": 10,
+    "incorrect": 5,
+    "unsure": 4,
+    "precision": 0.6667,
+    "ci95": [
+     0.4171,
+     0.8482
+    ]
+   }
+  },
+  "v3": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 50,
+    "correct": 50,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.9287,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 78,
+    "correct": 51,
+    "incorrect": 9,
+    "unsure": 18,
+    "precision": 0.85,
+    "ci95": [
+     0.7389,
+     0.919
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 12,
+    "correct": 8,
+    "incorrect": 1,
+    "unsure": 3,
+    "precision": 0.8889,
+    "ci95": [
+     0.565,
+     0.9801
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 57,
+   "retained": 50,
+   "retention": 0.8772,
+   "lost_correct": [
+    "946295566|social_profile|instagram.com/alf.i.larsen.as",
+    "946295566|social_profile|linkedin.com/company/alf-i-larsen-as",
+    "946295566|social_profile|facebook.com/alf.i.larsen.as",
+    "988983659|social_profile|youtube.com/@glommenmj%c3%b8senskog",
+    "995215160|social_profile|linkedin.com/company/gr%c3%b8nn-jobb-as",
+    "937596847|social_profile|instagram.com/graftonrecruitmentnorge",
+    "937596847|social_profile|facebook.com/graftonrecruitmentnorge"
+   ],
+   "gained_correct": [],
+   "errors_removed": 11,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 52,
+   "retained": 51,
+   "retention": 0.9808,
+   "lost_correct": [
+    "925739251|news_item|gbr.no/https-www-porsgrunn-kommune-no-aktuelt-bli-med-naar-norge-oever-porsgrunn|2026-10-28"
+   ],
+   "gained_correct": [],
+   "errors_removed": 10,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 1,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 10,
+   "retained": 8,
+   "retention": 0.8,
+   "lost_correct": [
+    "968429655|careers_page|gmv.as/karriere",
+    "940643112|careers_page|grane.kommune.no/tjenester/om-kommunen/jobb-i-grane-kommune-ledige-stillinger"
+   ],
+   "gained_correct": [],
+   "errors_removed": 4,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

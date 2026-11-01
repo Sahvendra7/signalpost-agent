@@ -1,0 +1,168 @@
+{
+ "labeller": "Claude (assistant), blind to arm",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 196,
+ "units_without_verdict": 47,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 57,
+    "correct": 51,
+    "incorrect": 4,
+    "unsure": 2,
+    "precision": 0.9273,
+    "ci95": [
+     0.8274,
+     0.9714
+    ]
+   },
+   "news_item": {
+    "published_labelled": 117,
+    "correct": 20,
+    "incorrect": 82,
+    "unsure": 15,
+    "precision": 0.1961,
+    "ci95": [
+     0.1307,
+     0.2835
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 1,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 1,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 18,
+    "correct": 8,
+    "incorrect": 8,
+    "unsure": 2,
+    "precision": 0.5,
+    "ci95": [
+     0.28,
+     0.72
+    ]
+   }
+  },
+  "v3": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 53,
+    "correct": 50,
+    "incorrect": 3,
+    "unsure": 0,
+    "precision": 0.9434,
+    "ci95": [
+     0.8463,
+     0.9806
+    ]
+   },
+   "news_item": {
+    "published_labelled": 42,
+    "correct": 20,
+    "incorrect": 7,
+    "unsure": 15,
+    "precision": 0.7407,
+    "ci95": [
+     0.5532,
+     0.8683
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 9,
+    "correct": 8,
+    "incorrect": 0,
+    "unsure": 1,
+    "precision": 1.0,
+    "ci95": [
+     0.6756,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 51,
+   "retained": 47,
+   "retention": 0.9216,
+   "lost_correct": [
+    "912227111|social_profile|facebook.com/avisenhadeland",
+    "912227111|social_profile|instagram.com/avisenhadeland",
+    "984438524|social_profile|facebook.com/kelloxmarine",
+    "984438524|social_profile|facebook.com/kelloxmc"
+   ],
+   "gained_correct": [
+    "953325284|social_profile|facebook.com/safaofnorway",
+    "953325284|social_profile|instagram.com/safaofnorway",
+    "916069812|social_profile|facebook.com/pages/sogn-avis/198224024849"
+   ],
+   "errors_removed": 1,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 20,
+   "retained": 20,
+   "retention": 1.0,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 75,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 8,
+   "retained": 8,
+   "retention": 1.0,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 8,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

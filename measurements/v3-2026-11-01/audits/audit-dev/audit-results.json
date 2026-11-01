@@ -1,0 +1,174 @@
+{
+ "labeller": "Claude (assistant), blind to arm",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 188,
+ "units_without_verdict": 29,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 43,
+    "correct": 34,
+    "incorrect": 8,
+    "unsure": 1,
+    "precision": 0.8095,
+    "ci95": [
+     0.667,
+     0.9002
+    ]
+   },
+   "news_item": {
+    "published_labelled": 124,
+    "correct": 57,
+    "incorrect": 62,
+    "unsure": 5,
+    "precision": 0.479,
+    "ci95": [
+     0.3913,
+     0.568
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 11,
+    "correct": 6,
+    "incorrect": 3,
+    "unsure": 2,
+    "precision": 0.6667,
+    "ci95": [
+     0.3542,
+     0.8794
+    ]
+   }
+  },
+  "v3": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 34,
+    "correct": 34,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.8985,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 69,
+    "correct": 64,
+    "incorrect": 0,
+    "unsure": 5,
+    "precision": 1.0,
+    "ci95": [
+     0.9434,
+     1.0
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 7,
+    "correct": 6,
+    "incorrect": 1,
+    "unsure": 0,
+    "precision": 0.8571,
+    "ci95": [
+     0.4869,
+     0.9743
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 34,
+   "retained": 34,
+   "retention": 1.0,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 8,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 57,
+   "retained": 54,
+   "retention": 0.9474,
+   "lost_correct": [
+    "920186114|news_item|jedevold-moller.no/post-3|2018-03-25",
+    "927818094|news_item|blioptimal.no/index.php/2017/02/14/klinikk-askim-og-bli-optimal|2017-02-14",
+    "920186114|news_item|jedevold-moller.no/tildeling-av-stipender-2026|2026-06-11"
+   ],
+   "gained_correct": [
+    "984560443|news_item|bjelland-as.no/varens-forste-fagprove-er-fullfort-og-vi-har-fatt-ny-fagarbeider-i-vei-og-anleggsfaget|2023-03-16",
+    "984560443|news_item|bjelland-as.no/environmental-product-declaration|2023-02-22",
+    "984560443|news_item|bjelland-as.no/vi-soker-maskinforer|2022-12-23",
+    "984560443|news_item|bjelland-as.no/regionens-forste-fagprove-pa-el-maskin|2023-08-01",
+    "984560443|news_item|bjelland-as.no/ein-veg-blir-til-riksveg-9-mellom-besteland-og-helle|2023-04-18",
+    "984560443|news_item|bjelland-as.no/breeam-infrastruktur-sertifisering|2025-10-29",
+    "984560443|news_item|bjelland-as.no/anleggsbransjens-rekrutteringsdager-pa-laland|2023-10-13",
+    "984560443|news_item|bjelland-as.no/fa-med-deg-flere-nyhetssaker-pa-facebook|2024-02-15",
+    "984560443|news_item|bjelland-as.no/vi-soker-flere-dyktige-kollegaer|2024-02-14",
+    "984560443|news_item|bjelland-as.no/var-forste-yrkessjafor-laerling-pa-veien|2023-01-09"
+   ],
+   "errors_removed": 62,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 6,
+   "retained": 6,
+   "retention": 1.0,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 2,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

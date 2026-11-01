@@ -1,0 +1,188 @@
+{
+ "labeller": "Claude (assistant), blind to arm",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 564,
+ "units_without_verdict": 116,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 169,
+    "correct": 142,
+    "incorrect": 23,
+    "unsure": 4,
+    "precision": 0.8606,
+    "ci95": [
+     0.7995,
+     0.9053
+    ]
+   },
+   "news_item": {
+    "published_labelled": 332,
+    "correct": 129,
+    "incorrect": 163,
+    "unsure": 40,
+    "precision": 0.4418,
+    "ci95": [
+     0.3859,
+     0.4991
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 2,
+    "correct": 0,
+    "incorrect": 1,
+    "unsure": 1,
+    "precision": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "careers_page": {
+    "published_labelled": 48,
+    "correct": 24,
+    "incorrect": 16,
+    "unsure": 8,
+    "precision": 0.6,
+    "ci95": [
+     0.446,
+     0.7365
+    ]
+   }
+  },
+  "v3": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 142,
+    "correct": 139,
+    "incorrect": 3,
+    "unsure": 0,
+    "precision": 0.9789,
+    "ci95": [
+     0.9397,
+     0.9928
+    ]
+   },
+   "news_item": {
+    "published_labelled": 180,
+    "correct": 136,
+    "incorrect": 7,
+    "unsure": 37,
+    "precision": 0.951,
+    "ci95": [
+     0.9024,
+     0.9761
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 28,
+    "correct": 23,
+    "incorrect": 1,
+    "unsure": 4,
+    "precision": 0.9583,
+    "ci95": [
+     0.7976,
+     0.9926
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 142,
+   "retained": 136,
+   "retention": 0.9577,
+   "lost_correct": [
+    "912227111|social_profile|facebook.com/avisenhadeland",
+    "912227111|social_profile|instagram.com/avisenhadeland",
+    "984438524|social_profile|facebook.com/kelloxmarine",
+    "984438524|social_profile|facebook.com/kelloxmc",
+    "937596847|social_profile|instagram.com/graftonrecruitmentnorge",
+    "937596847|social_profile|facebook.com/graftonrecruitmentnorge"
+   ],
+   "gained_correct": [
+    "953325284|social_profile|facebook.com/safaofnorway",
+    "953325284|social_profile|instagram.com/safaofnorway",
+    "916069812|social_profile|facebook.com/pages/sogn-avis/198224024849"
+   ],
+   "errors_removed": 20,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 129,
+   "retained": 127,
+   "retention": 0.9845,
+   "lost_correct": [
+    "916303122|news_item|beredt.no/aktuelt/n%c3%a5r-inkludering-gir-verdi-erfaringer-fra-fiskeridirektoratet|2025-05-30",
+    "925739251|news_item|gbr.no/https-www-porsgrunn-kommune-no-aktuelt-bli-med-naar-norge-oever-porsgrunn|2026-10-28"
+   ],
+   "gained_correct": [
+    "984560443|news_item|bjelland-as.no/varens-forste-fagprove-er-fullfort-og-vi-har-fatt-ny-fagarbeider-i-vei-og-anleggsfaget|2023-03-16",
+    "984560443|news_item|bjelland-as.no/environmental-product-declaration|2023-02-22",
+    "984560443|news_item|bjelland-as.no/vi-soker-maskinforer|2022-12-23",
+    "984560443|news_item|bjelland-as.no/regionens-forste-fagprove-pa-el-maskin|2023-08-01",
+    "984560443|news_item|bjelland-as.no/ein-veg-blir-til-riksveg-9-mellom-besteland-og-helle|2023-04-18",
+    "984560443|news_item|bjelland-as.no/breeam-infrastruktur-sertifisering|2025-10-29",
+    "984560443|news_item|bjelland-as.no/anleggsbransjens-rekrutteringsdager-pa-laland|2023-10-13",
+    "984560443|news_item|bjelland-as.no/vi-soker-flere-dyktige-kollegaer|2024-02-14",
+    "984560443|news_item|bjelland-as.no/var-forste-yrkessjafor-laerling-pa-veien|2023-01-09"
+   ],
+   "errors_removed": 156,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 1,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 24,
+   "retained": 23,
+   "retention": 0.9583,
+   "lost_correct": [
+    "968429655|careers_page|gmv.as/karriere"
+   ],
+   "gained_correct": [],
+   "errors_removed": 15,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}
