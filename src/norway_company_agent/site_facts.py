@@ -35,7 +35,8 @@ from bs4 import BeautifulSoup
 
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
 from .attribution.names import LegalName, compact, handle_relation
-from .attribution.operator import SiteOperator, assess_operator
+from .attribution.news import burst_members, classify_item, has_news_path, subject_of
+from .attribution.operator import SiteOperator, assess_operator, sibling_names
 from .attribution.social import decide_profile
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
@@ -271,15 +272,51 @@ def html_items(html: str, base_url: str) -> list[dict[str, Any]]:
     if meta and parse_date(meta.get("content")):
         items.append({"title": soup.title.get_text(" ", strip=True)[:200] if soup.title else None, "url": base_url, "date": parse_date(meta.get("content")), "date_kind": "published", "date_text": str(meta.get("content")), "summary": None, "method": "meta_article_published_time"})
     for article in soup.select("article")[:30]:
-        node = article.select_one("time[datetime]")
+        node, kind = _publication_time(article)
         date = parse_date(node.get("datetime")) if node else None
         if not date:
             continue
-        own = [urllib.parse.urljoin(base_url, anchor["href"]) for anchor in article.select("a[href]")]
-        own = [url for url in own if url.startswith(("http://", "https://")) and _registered_domain(url) == own_domain]
         heading = article.select_one("h1, h2, h3, h4")
-        items.append({"title": heading.get_text(" ", strip=True)[:200] if heading else None, "url": own[0] if own else base_url, "date": date, "date_kind": "published", "date_text": str(node.get("datetime")), "summary": None, "method": "article_time_datetime"})
+        items.append({"title": heading.get_text(" ", strip=True)[:200] if heading else None, "url": _article_link(article, heading, base_url, own_domain), "date": date, "date_kind": kind, "date_text": str(node.get("datetime")), "summary": None, "method": "article_time_datetime"})
     return items
+
+
+def _time_marked(node: Any, words: tuple[str, ...]) -> bool:
+    classes = " ".join(node.get("class") or []).casefold()
+    return any(word in classes for word in words) or str(node.get("itemprop") or "").casefold() in {f"date{word}" for word in words}
+
+
+def _publication_time(article: Any) -> tuple[Any, str]:
+    """The <time> that dates an article (V3 §B6): one marked published wins; else the first not marked updated/modified.
+    A lone time marked "updated" (the hAtom convention many themes use for the post date) is kept only as a date the
+    page states, never as a publication date; several conflicting updated-only times give no date."""
+    times = article.select("time[datetime]")
+    published = [node for node in times if _time_marked(node, ("published",)) or node.has_attr("pubdate")]
+    if published:
+        return published[0], "published"
+    plain = [node for node in times if not _time_marked(node, ("updated", "modified"))]
+    if plain:
+        return plain[0], "published"
+    if times and len({node.get("datetime") for node in times}) == 1:
+        return times[0], "stated_on_page"
+    return None, ""
+
+
+def _article_link(article: Any, heading: Any, base_url: str, own_domain: str | None) -> str:
+    """The article's own link: the heading's link, else the first internal link that is not an archive, author, media
+    or share link; the page itself when there is none."""
+    anchors = ([heading.find("a", href=True) or heading.find_parent("a", href=True)] if heading is not None else []) + article.select("a[href]")
+    for anchor in anchors:
+        if anchor is None:
+            continue
+        url = urllib.parse.urljoin(base_url, str(anchor.get("href") or "").strip()).split("#")[0]
+        if not url.startswith(("http://", "https://")) or _registered_domain(url) != own_domain:
+            continue
+        path = urllib.parse.urlsplit(url).path.casefold()
+        if _not_an_item_link(url) or path.endswith((".jpg", ".jpeg", ".png", ".gif", ".webp", ".pdf")) or "share" in path:
+            continue
+        return url
+    return base_url
 
 
 def job_postings(html: str, base_url: str) -> list[dict[str, Any]]:
@@ -753,6 +790,28 @@ def site_operator(profile: dict[str, Any], pages: list[CapturedPage], feeds: lis
                            website_value=website_value, identity_class=identity_class, shared_kind=shared_kind, taxonomy=taxonomy)
 
 
+def _main_feed(url: str) -> bool:
+    """A feed the homepage declares that is the site's post feed, not a comments, product or taxonomy feed."""
+    path = urllib.parse.urlsplit(url).path.casefold() + "?" + urllib.parse.urlsplit(url).query.casefold()
+    return not any(word in path for word in ("comment", "kommentar", "product", "produkt", "/category/", "/tag/", "/kategori/", "post_type="))
+
+
+def _outside_listing_section(candidates: list[tuple[dict[str, Any], CapturedPage]]) -> set[int]:
+    """Indexes of listing cards that link outside the listing's own section while most cards on that listing stay
+    inside it (an inspiration listing mixing articles with evergreen service pages: /nokkelferdig-hytte, /modulhytter)."""
+    by_page: dict[str, list[int]] = {}
+    for index, (item, page) in enumerate(candidates):
+        if page.kind == "html" and item.get("method") in ("listing_visible_date", "article_time_datetime") and is_news_page(page.url) and not is_article_path(page.url):
+            by_page.setdefault(page.url, []).append(index)
+    outside: set[int] = set()
+    for page_url, indexes in by_page.items():
+        prefix = urllib.parse.urlsplit(page_url).path.rstrip("/") + "/"
+        inside = [index for index in indexes if urllib.parse.urlsplit(str(candidates[index][0].get("url") or "")).path.startswith(prefix)]
+        if len(inside) >= 2 and len(inside) * 2 >= len(indexes):
+            outside.update(index for index in indexes if index not in inside and not has_news_path(str(candidates[index][0].get("url") or "")))
+    return outside
+
+
 def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds: list[CapturedPage] | None = None, operator: SiteOperator | None = None, *,
                        website_value: dict[str, Any] | None = None, identity_class: str | None = None) -> SiteFacts:
     """Facts from pages of a VERIFIED company site. `pages[0]` is the homepage; `profile` carries the legal name.
@@ -854,13 +913,39 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     kept: dict[tuple[str, str], dict[str, Any]] = {}
     kept_urls: set[str] = set()
     section = urllib.parse.urlsplit(site_url).path.rstrip("/") + "/" if section_site else None
-    for item, page in sorted(candidates, key=lambda pair: priority.get(pair[0].get("method"), 9)):
+    # V3 §B6: each candidate is classified on its own (the container is not proof) and attributed to a subject.
+    bursts = burst_members([(page.url, item) for item, page in candidates])
+    outside_section = _outside_listing_section(candidates)
+    typed: dict[str, bool] = {}
+    by_url = {page.url: page for page in pages}
+    news_pages = {page.url for page in pages if page.kind == "html" and (is_news_page(page.url) or has_news_path(page.url))}
+    order = sorted(range(len(candidates)), key=lambda index: priority.get(candidates[index][0].get("method"), 9))
+    for index in order:
+        item, page = candidates[index]
         reason = validate_activity(item, page)
         if not reason and section and not (urllib.parse.urlsplit(str(item.get("url") or page.url)).path.rstrip("/") + "/").startswith(section):
             reason = "outside_site_section"  # the verified site is a section of a shared domain: the owner's news is not its news
         item_url = str(item.get("url") or page.url)
         if not reason and subdomain_site and _registered_domain(item_url) == site_domain and not in_site_scope(item_url, site_url):
             reason = "outside_verified_site"  # a tenant site's link to the platform's or a sibling tenant's article
+        if not reason:
+            if page.kind == "html" and page.url not in typed:
+                typed[page.url] = any(_types(node) & ARTICLE_TYPES for node in _jsonld_nodes(page.soup()))
+            decision = classify_item(item, page.url, site_url=site_url, on_news_page=page.url in news_pages,
+                                     page_is_listing=page.url in news_pages and not is_article_path(page.url), article_typed=typed.get(page.url, False),
+                                     from_main_feed=page.kind == "feed" and _main_feed(page.url), outside_listing_section=index in outside_section)
+            reason = None if decision.accepted else decision.code
+        if not reason and index in bursts:
+            reason = "bulk_entry_burst"
+        if not reason and operator.kind != "manager":
+            subject, basis = subject_of(item, legal, names_entity=lambda: item_names_entity(profile, {**item, "page_url": page.url}, by_url),
+                                        siblings=lambda categories: sibling_names(legal, categories))
+            if subject == "SIBLING":
+                reason = "sibling_entity_item"
+            elif subject != "THIS" and operator.kind in ("other_entity", "group_or_brand"):
+                reason = f"item_not_about_entity_on_{operator.kind}_site"
+            elif subject == "THIS":
+                item = {**item, "subject_basis": basis}
         if reason:
             out.reject("activity", reason, item, page)
             continue

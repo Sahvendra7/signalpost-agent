@@ -63,3 +63,55 @@ New package `src/norway_company_agent/attribution/`:
 - BioMar: `@BioMarGroup` held; Norway profiles kept.
 - BDT Viken: `bdt-viken-revisjon-as` held.
 - Controls unchanged: Grønsand, Birralee, Beredt, Crux, Bjelland, Bergen Rørteknikk, BK Bygg, Bemex.
+
+## Phase 2 — news classification, publication dates, subject
+
+New module `attribution/news.py`. Every dated candidate is classified on its own. A feed, a news listing or an
+`<article>` wrapper no longer proves that an item is news.
+
+**Rejections, in order:**
+
+| Code | Rejects |
+|---|---|
+| `media_file` | images and documents |
+| `non_article_path` | product, service, project, portfolio, cabin, booking, contact, about, privacy, archive and author pages (e.g. `/prosjekter/`, `/portfolio-item/`, `/category/`) |
+| `listing_not_item` | the homepage, or a listing page's own page-level date (e.g. "Siste nytt · Beredt AS") |
+| `default_cms_post` | "Hello world!" and similar default posts |
+| `project_category` | feed items filed only under project or building-type categories |
+| `outside_news_section` | a news listing's card linking to an evergreen page outside the section, when most of its cards stay inside it |
+| `bulk_entry_burst` | four or more posts from one source within 15 minutes, or five on one day when only dates are known. BK Bygg posted 10 reference projects in 3 minutes |
+
+**Positive article evidence is now required.** An item needs at least one of:
+- a news or dated URL;
+- a post in the site's own main feed (plain WordPress slugs stay valid);
+- a dated card on the site's news page;
+- JSON-LD article markup on its own page. `og:type` does not count: Stiftelsen Crux marks every page, contact pages
+  included, as an article.
+
+**Publication time.** In an `<article>`, a `<time>` marked published wins; otherwise the first time not marked
+updated or modified is used. A lone hAtom `class="updated"` time with one date is kept only as `date_kind:
+stated_on_page`, never as a publication date. Conflicting updated-only times give no date. Feed `<updated>` stays
+rejected (unchanged).
+
+**Item URL.** An `<article>` card's URL is its heading link or its first internal link that is not an archive, author,
+media or share link. Bjelland's cards previously all pointed at `/category/aktuelt/` and were de-duplicated into one.
+Now its real articles are kept separately, and its portfolio items are rejected.
+
+**Subject:**
+- `sibling_entity_item` — never published. The site's own categories tag another unit of the group (Betonmast's feed
+  tags each post with the regional company it concerns).
+- Sites run by another company or by a group/brand publish only items that name this company: its organisation
+  number, its full legal name, or a category equal to its name. The code is `item_not_about_entity_on_<kind>_site`.
+- Business-manager sites keep the Revision 1 rule.
+
+**Tests:**
+- `test_revision1.py::NewsRules::test_homepage_page_level_dates_dropped_but_homepage_article_cards_kept` still passes
+  unchanged. A dated `<article>` card on the homepage without its own link stays a news item (`homepage_article_card`).
+- Fixtures now passing:
+  - BK Bygg 10 → 0; Bergen Rørteknikk 10 → 0;
+  - "Hello world!" on BDT Viken and Best Work → 0;
+  - Crux contact page and `.jpg` → 0, its real article kept;
+  - Bjelland 3 portfolio items rejected, real articles 6 → 11;
+  - Bergknapp `/prosjekter/` → 0; Bartec group magazine 17 → 0;
+  - Betonmast Oslo 10 → 1 (its own tagged item); Beredt listing page removed, 7 articles kept.
+- Controls unchanged: 911771098 (20), Kilis Hockey (10), Birralee (20), Grønsand (15).

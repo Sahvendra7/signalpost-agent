@@ -136,9 +136,6 @@ class CareersPages(unittest.TestCase):
 
 # Phase markers: the defect tests are expected to fail until their phase lands (Phase 0 commits them red).
 PENDING = {
-    NewsClassification: ["test_bulk_imported_project_posts_are_not_news", "test_default_cms_post_is_not_news", "test_contact_page_and_image_file_are_not_news",
-                         "test_portfolio_project_and_archive_urls_are_not_news_items", "test_group_magazine_is_not_the_subsidiary_s_news",
-                         "test_sister_regional_companies_news_is_not_published", "test_a_news_listing_page_is_not_an_item"],
     CareersPages: ["test_service_pages_are_not_careers_pages"],
 }
 for _cls, _names in PENDING.items():
