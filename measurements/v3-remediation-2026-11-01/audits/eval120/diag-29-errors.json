@@ -1,0 +1,1178 @@
+[
+ {
+  "uid": "848720712|news_item|sobbl.no/blog/2022/11/09/melde-skade|2022-11-09",
+  "org": "848720712",
+  "company": "SARPSBORG OG OMEGNS BOLIGBYGGELAG",
+  "url": "https://www.sobbl.no/blog/2022/11/09/melde-skade/",
+  "title": "Melde skade?",
+  "date": "2022-11-09T09:46:14Z",
+  "date_text": "Wed, 09 Nov 2022 09:46:14 +0000",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.sobbl.no/feed/",
+  "summary": "SOBBL Melde skade? Hvis boligselskapet ditt har forsikringsavtale med Gjensidige, skal du bruke dette skademeldingsskjemaet for å melde skaden. The post Melde skade? appeared first on SOBBL",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.sobbl.no/feed/",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Melde skade? https://www.sobbl.no/blog/2022/11/09/melde-skade/ https://www.sobbl.no/blog/2022/11/09/melde-skade/#respond karine Wed, 09 Nov 2022 09:46:14 +0000 Uncategorized https://sobbl.no/?p=3359 SOBBL Melde skade? Hvis boligselskapet ditt har forsikringsavtale med Gjensidige, skal du bruke dette skademeldingsskjemaet for å melde skaden. The post Melde skade? appeared first on SOBBL SOBBL Melde skade? Gå til skademeldingsskjema . The post Melde skade? appeared first on SOBBL https://www.sobbl.no/blog/2022/11/09/melde-skade/feed/ 0",
+  "label": "incorrect",
+  "label_note": "service information",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://www.sobbl.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "848720712|news_item|sobbl.no/blog/nyheter/minside|2026-08-18",
+  "org": "848720712",
+  "company": "SARPSBORG OG OMEGNS BOLIGBYGGELAG",
+  "url": "https://www.sobbl.no/blog/nyheter/minside/",
+  "title": "Bli Medlem | SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+  "date": "2026-08-18T10:53:25Z",
+  "date_text": "2026-08-18T12:53:25+02:00",
+  "date_kind": "published",
+  "method": "jsonld_datePublished",
+  "source_page": "https://www.sobbl.no/blog/nyheter/minside/",
+  "summary": "Nå lønner det seg å bli medlem! Vi spanderer årets kontingent, og det koster kun kr 300,- å bli medlem. Gjelder frem til 31.12.26",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.sobbl.no/blog/nyheter/minside/",
+   "meta_article_published_time",
+   {
+    "on_news_page": true,
+    "page_is_listing": false,
+    "article_typed": true,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "THIS",
+   "legal name SARPSBORG OG OMEGNS BOLIGBYGGELAG in the item's title"
+  ],
+  "body": "PAGE: Bli Medlem | SOBBL | Sarpsborg Og Omegns Boligbyggelag Skip to content Styreportal Min side Bli medlem Min side Styreportal Bli medlem Nå lønner det seg å bli medlem! Vi spanderer årets kontingent, og det koster kun kr 300,- å bli medlem. Gjelder frem til 31.12.26 Bli medlem her . ← Previous Nyhet Snarveier Boligprosjekter Forkjøpsrett Min side Bli medlem Skademelding Medlemsfordeler Styreportalen SOBBL Sarpsborg og Omegns Boligbyggelag forvalter i dag ca. 230 boligselskap med ca. 6000 boliger og har ca. 17.000 medlemmer. Kontakt oss Åpningstider: Mandag - fredag 09:00 - 15:00 I perioden 15.05 - 15.09: 09:00-14:30 Besøksadresse: St. Mariegt. 112 Postboks 335, 1702 Sarpsborg Tlf: 69 13 10 00 E-post: sobbl@sobbl.no Org.nr: 848 720 712 Copyright © [year] [sitename] [personvern] [mintmedia] Scroll to Top",
+  "label": "incorrect",
+  "label_note": "membership page, no date",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://www.sobbl.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "911711664|news_item|huspro.no/post/fra-oven-holaker|2022-08-10",
+  "org": "911711664",
+  "company": "BYGGMESTER FRANK AASHEIM AS",
+  "url": "https://www.huspro.no/post/fra-oven-holaker",
+  "title": "Fra oven, Holaker",
+  "date": "2022-08-10T14:04:01Z",
+  "date_text": "Wed, 10 Aug 2022 14:04:01 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.huspro.no/blog-feed.xml",
+  "summary": "Vi ferdigstiller for øyeblikket Holaker hus B.  Holaker befinner seg sentralt i Maura i Nannestad kommune, omringet av landlig idyll og...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.huspro.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Fra oven, Holaker Vi ferdigstiller for øyeblikket Holaker hus B. Holaker befinner seg sentralt i Maura i Nannestad kommune, omringet av landlig idyll og... https://www.huspro.no/post/fra-oven-holaker 62f3808bd3ab9771f02cd61b Wed, 10 Aug 2022 14:04:01 GMT thomas4415",
+  "label": "incorrect",
+  "label_note": "property page",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "911711664|news_item|huspro.no/post/holaker-maura-flott-eneboligtomt|2022-09-21",
+  "org": "911711664",
+  "company": "BYGGMESTER FRANK AASHEIM AS",
+  "url": "https://www.huspro.no/post/holaker-maura-flott-eneboligtomt",
+  "title": "Holaker, Maura - flott eneboligtomt",
+  "date": "2022-09-21T09:17:27Z",
+  "date_text": "Wed, 21 Sep 2022 09:17:27 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.huspro.no/blog-feed.xml",
+  "summary": "Tomten er innenfor reguleringsplanen \"Detaljregulering for B13 Holaker\" og er på delfelt BKS3. Tomten er på 657 kvm og kan utnyttes...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.huspro.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Holaker, Maura - flott eneboligtomt Tomten er innenfor reguleringsplanen \"Detaljregulering for B13 Holaker\" og er på delfelt BKS3. Tomten er på 657 kvm og kan utnyttes... https://www.huspro.no/post/holaker-maura-flott-eneboligtomt 632ad6480a0ddfef99afefb8 Tomter Wed, 21 Sep 2022 09:17:27 GMT thomas4415",
+  "label": "incorrect",
+  "label_note": "property for sale",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "911711664|news_item|huspro.no/post/hurdal-brustadsletta|2022-07-16",
+  "org": "911711664",
+  "company": "BYGGMESTER FRANK AASHEIM AS",
+  "url": "https://www.huspro.no/post/hurdal-brustadsletta",
+  "title": "Hurdal, Brustadsletta",
+  "date": "2022-07-16T11:46:01Z",
+  "date_text": "Sat, 16 Jul 2022 11:46:01 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.huspro.no/blog-feed.xml",
+  "summary": "Enebolig i kjede og rekkehus kommer for salg, meld din interesse i dag!  Hurdal Boligutvikling AS skal ha et samarbeid mellom oss i...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.huspro.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Hurdal, Brustadsletta Enebolig i kjede og rekkehus kommer for salg, meld din interesse i dag! Hurdal Boligutvikling AS skal ha et samarbeid mellom oss i... https://www.huspro.no/post/hurdal-brustadsletta 62cbe30f982291c42bd29b7d Sat, 16 Jul 2022 11:46:01 GMT thomas4415",
+  "label": "incorrect",
+  "label_note": "property page",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "911711664|news_item|huspro.no/post/hurdal-nytt-prosjekt|2022-06-24",
+  "org": "911711664",
+  "company": "BYGGMESTER FRANK AASHEIM AS",
+  "url": "https://www.huspro.no/post/hurdal-nytt-prosjekt",
+  "title": "Hurdal - Nytt prosjekt",
+  "date": "2022-06-24T17:01:00Z",
+  "date_text": "Fri, 24 Jun 2022 17:01:00 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.huspro.no/blog-feed.xml",
+  "summary": "Vi er stolte over å kunne dele at et nytt prosjekt er i anmarsj sammen med Seierhus og Leif Magne Seierstad i Hurdal! Prosjektet får...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.huspro.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Hurdal - Nytt prosjekt Vi er stolte over å kunne dele at et nytt prosjekt er i anmarsj sammen med Seierhus og Leif Magne Seierstad i Hurdal! Prosjektet får... https://www.huspro.no/post/hurdal-nytt-prosjekt 62b56a7e3e51b3c52f47ef13 Fri, 24 Jun 2022 17:01:00 GMT thomas4415",
+  "label": "incorrect",
+  "label_note": "project page",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "911711664|news_item|huspro.no/post/storsl%c3%a5tt-villa|2022-08-09",
+  "org": "911711664",
+  "company": "BYGGMESTER FRANK AASHEIM AS",
+  "url": "https://www.huspro.no/post/storsl%C3%A5tt-villa",
+  "title": "Storslått Villa!",
+  "date": "2022-08-09T07:29:02Z",
+  "date_text": "Tue, 09 Aug 2022 07:29:02 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.huspro.no/blog-feed.xml",
+  "summary": "I serien vår Æra er det flere fantastiske hustyper som du kan velge i. Her ligger alt til rette for et herskaplig hjem med mye plass. Vi...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.huspro.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Storslått Villa! I serien vår Æra er det flere fantastiske hustyper som du kan velge i. Her ligger alt til rette for et herskaplig hjem med mye plass. Vi... https://www.huspro.no/post/storsl%C3%A5tt-villa 62f1f9b76ec7367aa00555fa Boliger Inspirasjon Tue, 09 Aug 2022 07:29:02 GMT thomas4415",
+  "label": "incorrect",
+  "label_note": "property marketing",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "911711664|news_item|huspro.no/post/til-salgs-enebolig-med-fokus-p%c3%a5-b%c3%a6rekraft-og-milj%c3%b8-sentralt-i-maura|2023-04-19",
+  "org": "911711664",
+  "company": "BYGGMESTER FRANK AASHEIM AS",
+  "url": "https://www.huspro.no/post/til-salgs-enebolig-med-fokus-p%C3%A5-b%C3%A6rekraft-og-milj%C3%B8-sentralt-i-maura",
+  "title": "Enebolig med fokus på bærekraft og miljø sentralt i Maura",
+  "date": "2023-04-19T14:19:02Z",
+  "date_text": "Wed, 19 Apr 2023 14:19:02 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.huspro.no/blog-feed.xml",
+  "summary": "En av de viktigste aspektene ved et bærekraftig boligdesign, er materialbruk. Bærekraftige materialer er de som er høstet på en måte som...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.huspro.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Enebolig med fokus på bærekraft og miljø sentralt i Maura En av de viktigste aspektene ved et bærekraftig boligdesign, er materialbruk. Bærekraftige materialer er de som er høstet på en måte som... https://www.huspro.no/post/til-salgs-enebolig-med-fokus-p%C3%A5-b%C3%A6rekraft-og-milj%C3%B8-sentralt-i-maura 643fe2ba60de57372c8e62de Wed, 19 Apr 2023 14:19:02 GMT thomas4415",
+  "label": "incorrect",
+  "label_note": "house for sale",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "921774087|news_item|opts.no/post/bekymrer-du-deg-mer-n%c3%a5-enn-f%c3%b8r-du-ble-gravid|2026-08-17",
+  "org": "921774087",
+  "company": "OSLO PT STUDIO AS",
+  "url": "https://www.opts.no/post/bekymrer-du-deg-mer-n%C3%A5-enn-f%C3%B8r-du-ble-gravid",
+  "title": "Bekymrer du deg mer nå enn før du ble gravid?",
+  "date": "2026-08-17T12:13:00Z",
+  "date_text": "Mon, 17 Aug 2026 12:13:00 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.opts.no/blog-feed.xml",
+  "summary": "Hjernen vår liker å ha kontroll. Så hva skjer når hormoner herjer med kropp og hode? Både hodet og kropp reagerer annerledes på ting. Alt fra smakssanser og tårer som triller oftere, til at du beveger deg og sover på en annen måte. Du vet i",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.opts.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Bekymrer du deg mer nå enn før du ble gravid? Hjernen vår liker å ha kontroll. Så hva skjer når hormoner herjer med kropp og hode? Både hodet og kropp reagerer annerledes på ting. Alt fra smakssanser og tårer som triller oftere, til at du beveger deg og sover på en annen måte. Du vet ikke hvordan morgendagen blir, når fødselen skal starte, hvor mye vil kroppen din endre seg, har den lille i magen det bra? https://www.opts.no/post/bekymrer-du-deg-mer-n%C3%A5-enn-f%C3%B8r-du-ble-gravid 6a82f7f00184b89c47fdc837 trening under og etter graviditet Mon, 17 Aug 2026 12:13:00 GMT Kristel Brumoen",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "921774087|news_item|opts.no/post/hvorfor-matjournal-kan-v%c3%a6re-det-viktigste-verkt%c3%b8yet-du-ikke-bruker|2026-04-23",
+  "org": "921774087",
+  "company": "OSLO PT STUDIO AS",
+  "url": "https://www.opts.no/post/hvorfor-matjournal-kan-v%C3%A6re-det-viktigste-verkt%C3%B8yet-du-ikke-bruker",
+  "title": "Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker",
+  "date": "2026-04-23T18:57:17Z",
+  "date_text": "Thu, 23 Apr 2026 18:57:17 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.opts.no/blog-feed.xml",
+  "summary": "Har du lurt på hvor mange ganger i uken du bør trene styrke for å oppnå dine mål? Om du ønsker å bli sterkere eler stramme opp kroppen?",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.opts.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker Har du lurt på hvor mange ganger i uken du bør trene styrke for å oppnå dine mål? Om du ønsker å bli sterkere eler stramme opp kroppen? https://www.opts.no/post/hvorfor-matjournal-kan-v%C3%A6re-det-viktigste-verkt%C3%B8yet-du-ikke-bruker 69ea66baa4befc7c9f3a1e22 Livsstilsendring Thu, 23 Apr 2026 18:57:17 GMT Kristel Brumoen",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "921774087|news_item|opts.no/post/markl%c3%b8ft-den-ultimative-%c3%b8velsen-for-styrke-og-funksjonalitet|2024-04-07",
+  "org": "921774087",
+  "company": "OSLO PT STUDIO AS",
+  "url": "https://www.opts.no/post/markl%C3%B8ft-den-ultimative-%C3%B8velsen-for-styrke-og-funksjonalitet",
+  "title": "Markløft: Den ultimative øvelsen for styrke og funksjonalitet",
+  "date": "2024-04-07T22:00:00Z",
+  "date_text": "Sun, 07 Apr 2024 22:00:00 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.opts.no/blog-feed.xml",
+  "summary": "Markløft er en av de mest effektive og funksjonelle øvelsene du kan gjøre for å bygge styrke og funksjonalitet i hele kroppen. Enten du...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.opts.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Markløft: Den ultimative øvelsen for styrke og funksjonalitet Markløft er en av de mest effektive og funksjonelle øvelsene du kan gjøre for å bygge styrke og funksjonalitet i hele kroppen. Enten du... https://www.opts.no/post/markl%C3%B8ft-den-ultimative-%C3%B8velsen-for-styrke-og-funksjonalitet 661c0c8470092c0bf1cb24f6 Styrketrening Sun, 07 Apr 2024 22:00:00 GMT Kristel Brumoen",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "921774087|news_item|opts.no/post/oslo-pt-studio-et-perfekt-sted-for-%c3%a5-trene-med-en-pt|2022-09-13",
+  "org": "921774087",
+  "company": "OSLO PT STUDIO AS",
+  "url": "https://www.opts.no/post/oslo-pt-studio-et-perfekt-sted-for-%C3%A5-trene-med-en-pt",
+  "title": "Oslo PT studio – et perfekt sted for å trene med en PT",
+  "date": "2022-09-13T11:44:52Z",
+  "date_text": "Tue, 13 Sep 2022 11:44:52 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.opts.no/blog-feed.xml",
+  "summary": "PTmatch har samarbeidet med Oslo PT Studio for å sikre at folk som har behov for den kompetansen Oslo PT Studio besitter, kommer i...",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.opts.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Oslo PT studio – et perfekt sted for å trene med en PT PTmatch har samarbeidet med Oslo PT Studio for å sikre at folk som har behov for den kompetansen Oslo PT Studio besitter, kommer i... https://www.opts.no/post/oslo-pt-studio-et-perfekt-sted-for-%C3%A5-trene-med-en-pt 63206cf742c577fd20c224fe Tue, 13 Sep 2022 11:44:52 GMT David - PTmatch",
+  "label": "incorrect",
+  "label_note": "marketing",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "921774087|news_item|opts.no/post/treningsdagbok-er-forskjellen-p%c3%a5-%c3%a5-trene-og-faktisk-f%c3%a5-resultater|2026-04-24",
+  "org": "921774087",
+  "company": "OSLO PT STUDIO AS",
+  "url": "https://www.opts.no/post/treningsdagbok-er-forskjellen-p%C3%A5-%C3%A5-trene-og-faktisk-f%C3%A5-resultater",
+  "title": "Treningsdagbok er forskjellen på å trene og faktisk få resultater",
+  "date": "2026-04-24T12:22:53Z",
+  "date_text": "Fri, 24 Apr 2026 12:22:53 GMT",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.opts.no/blog-feed.xml",
+  "summary": "Du kan trene hardt og ofte. Men uten en plan og oversikt kan du fortsatt stå helt stille.\n\nDet er her treningsdagbok kommer inn. Du tror du husker mer enn du gjør.\n\n“Jeg tok litt tyngre vekter sist gang”. “Jeg tror jeg gjorde flere repetisj",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.opts.no/blog-feed.xml",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Treningsdagbok er forskjellen på å trene og faktisk få resultater Du kan trene hardt og ofte. Men uten en plan og oversikt kan du fortsatt stå helt stille. Det er her treningsdagbok kommer inn. Du tror du husker mer enn du gjør. “Jeg tok litt tyngre vekter sist gang”. “Jeg tror jeg gjorde flere repetisjoner”. Problemet? “Husker” er ikke en strategi. https://www.opts.no/post/treningsdagbok-er-forskjellen-p%C3%A5-%C3%A5-trene-og-faktisk-f%C3%A5-resultater 69eb4d7db17cf497ceb65b49 Fri, 24 Apr 2026 12:22:53 GMT Kristel Brumoen",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "924782544|news_item|takstmannen.no/aktuelt/avhendingsloven-tryggere-bolighandel|2021-02-15",
+  "org": "924782544",
+  "company": "FROSTERØD TAKST AS",
+  "url": "https://www.takstmannen.no/aktuelt/avhendingsloven-tryggere-bolighandel",
+  "title": "Avhendingsloven - tryggere bolighandel",
+  "date": "2021-02-15T15:46:25Z",
+  "date_text": "2021-02-15T16:46:25+01:00",
+  "date_kind": "published",
+  "method": "article_time_datetime",
+  "source_page": "https://www.takstmannen.no/aktuelt",
+  "summary": null,
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.takstmannen.no/aktuelt",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "general law article",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://www.takstmannen.no/kontakt"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "927176963|news_item|dayofweek.com/en/blog/delivery-first-development-agentic-era|2026-02-24",
+  "org": "927176963",
+  "company": "DAY OF WEEK AS",
+  "url": "https://dayofweek.com/en/blog/delivery-first-development-agentic-era",
+  "title": "Order Software Like Takeaway: Delivery-First Development for the Agentic Era",
+  "date": "2026-02-24",
+  "date_text": "2026-02-24",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://dayofweek.com/en",
+  "summary": "Working software is the only measure of progress. In the agentic era, the question isn’t what framework to use — it’s what outcome to ship.",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://dayofweek.com/en",
+   "listing_visible_date",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "thought-leadership blog",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "927176963|news_item|dayofweek.com/en/blog/the-new-ai-days|2026-02-11",
+  "org": "927176963",
+  "company": "DAY OF WEEK AS",
+  "url": "https://dayofweek.com/en/blog/the-new-ai-days",
+  "title": "The new AI days: delivering more in a week than most ship in a month",
+  "date": "2026-02-11",
+  "date_text": "2026-02-11",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://dayofweek.com/en",
+  "summary": "AI is not a trend — it is a new operating system for work. Those who adopt it now are creating a lead that will be difficult to catch.",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://dayofweek.com/en",
+   "listing_visible_date",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "thought-leadership blog",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "974683296|news_item|ffor.no/akvakurs2021-2|2026-03-03",
+  "org": "974683296",
+  "company": "FISKERIFAGLIG OPPLÆRINGSKONTOR FOR ROGALAND OG SKAGERAKKYSTEN SA",
+  "url": "https://ffor.no/akvakurs2021-2/",
+  "title": "Akvakurs 2026",
+  "date": "2026-03-03T10:00:20Z",
+  "date_text": "Tue, 03 Mar 2026 10:00:20 +0000",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://ffor.no/feed/",
+  "summary": "Akvakurset er startet opp igjen, nå med digitale samlinger.",
+  "classify": [
+   "article_on_news_listing",
+   "The item is listed with its date on the website's news page.",
+   "https://ffor.no/aktuelt/",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Akvakurs 2026 https://ffor.no/akvakurs2021-2/ WPffor Tue, 03 Mar 2026 10:00:20 +0000 Akvakultur Uncategorised https://ffor.no/?p=2449 Akvakurset er startet opp igjen, nå med digitale samlinger. Akvakurs Høsten 2026 starter vi opp med nytt eksamenskurs. Ta kontakt med Karina Eike for påmelding. karina@ffor.no Kategorier Akvakultur Behandling Matros Uncategorised Nyeste poster Akvakurs 2026 Reklamefilm Mekanisk behandling Hederspris Ut på tur Mye brukte tags kveite Settefisk Søk i bloggen Søk etter:",
+  "label": "incorrect",
+  "label_note": "course offer page",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "974683296|news_item|ffor.no/mekanisk-behandling|2018-03-20",
+  "org": "974683296",
+  "company": "FISKERIFAGLIG OPPLÆRINGSKONTOR FOR ROGALAND OG SKAGERAKKYSTEN SA",
+  "url": "https://ffor.no/mekanisk-behandling/",
+  "title": "Mekanisk behandling",
+  "date": "2018-03-20T12:53:42Z",
+  "date_text": "Tue, 20 Mar 2018 12:53:42 +0000",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://ffor.no/feed/",
+  "summary": "Torsdag 8 mars hadde vi en ny samling for deltakerne på akvakulturkurset. Tema for dagen var lover og regler samt lus.\nVi startet dagen med besøk av Liv Marit Årseth, samfunnskontakt i Grieg Seafood. Hun tok for seg aktuelle lover og forskr",
+  "classify": [
+   "article_on_news_listing",
+   "The item is listed with its date on the website's news page.",
+   "https://ffor.no/aktuelt/",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Akvakurs 2026 https://ffor.no/akvakurs2021-2/ WPffor Tue, 03 Mar 2026 10:00:20 +0000 Akvakultur Uncategorised https://ffor.no/?p=2449 Akvakurset er startet opp igjen, nå med digitale samlinger. Akvakurs Høsten 2026 starter vi opp med nytt eksamenskurs. Ta kontakt med Karina Eike for påmelding. karina@ffor.no Kategorier Akvakultur Behandling Matros Uncategorised Nyeste poster Akvakurs 2026 Reklamefilm Mekanisk behandling Hederspris Ut på tur Mye brukte tags kveite Settefisk Søk i bloggen Søk etter:",
+  "label": "incorrect",
+  "label_note": "topic/course page",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "974683296|news_item|ffor.no/velkommen|2017-08-30",
+  "org": "974683296",
+  "company": "FISKERIFAGLIG OPPLÆRINGSKONTOR FOR ROGALAND OG SKAGERAKKYSTEN SA",
+  "url": "https://ffor.no/velkommen/",
+  "title": "Velkommen",
+  "date": "2017-08-30T13:14:05Z",
+  "date_text": "Wed, 30 Aug 2017 13:14:05 +0000",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://ffor.no/feed/",
+  "summary": "Vi er oppe og går med ny nettside!",
+  "classify": [
+   "article_main_feed",
+   "The item is a post in the website's own main feed.",
+   "https://ffor.no/feed/",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Velkommen https://ffor.no/velkommen/ WPffor Wed, 30 Aug 2017 13:14:05 +0000 Uncategorised http://dev.ffor.no/?p=477 Vi er oppe og går med ny nettside! Velkommen! Da er vi oppe og går med ny nettside. Nytt oppsett på siden gir oss mulighet til å bruke denne kjekke bloggfunksjonen. Her håper jeg å få hjelp av lærlingene våre til å dele litt fra deres arbeidsdag med dere. På bilde ser dere et lite kar med lakserogn som er iferd med å klekkes. Dere kan se at det allerede er noen små nyklekkede lakseyngel som ligger mellom rogna. De svarte prikkene er øynene. De kan vi også se gjennom egget før de klekkes. Kategorier Akvakultur Behandling Matros Uncategorised Nyeste poster Akvakurs 2026 Reklamefilm Mekanisk behandling Hederspris Ut på tur Mye brukte tags kveite Settefisk Søk i bloggen Søk etter:",
+  "label": "incorrect",
+  "label_note": "welcome post",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "985095779|news_item|ns.no/blog|2026-03-25",
+  "org": "985095779",
+  "company": "NORDIC SOLUTIONS AS",
+  "url": "https://www.ns.no/blog",
+  "title": "11 Windows 11 tips - Jobb mer effektivt",
+  "date": "2026-03-25",
+  "date_text": "25. mars 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://www.ns.no/blog",
+  "summary": null,
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.ns.no/blog",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "THIS",
+   "legal name NORDIC SOLUTIONS AS in the item's article page"
+  ],
+  "body": "PAGE: Blogg – Nordic Solutions AS Hjem Produkter & Tjenester Om oss Kontakt oss Hjem Produkter & Tjenester Om oss Gratis Gjennomgang Nyheter & Tips Nyheter & Tips 16. apr. 2026 Mobilitet Cybersikkerhet Mobilsikkerhet for bedrifter – 8 tiltak 16. apr. 2026 Mobilitet Cybersikkerhet Mobilsikkerhet for bedrifter – 8 tiltak 25. mars 2026 Windows, tips 11 Windows 11 tips - Jobb mer effektivt 25. mars 2026 Windows, tips 11 Windows 11 tips - Jobb mer effektivt 14. apr. 2026 Phisihing, Cybersikkerhet Phishing og sosial manipulasjon – slik beskytter dere virksomheten 14. apr. 2026 Phisihing, Cybersikkerhet Phishing og sosial manipulasjon – slik beskytter dere virksomheten Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R",
+  "label": "incorrect",
+  "label_note": "tips",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "985095779|news_item|ns.no/blog|2026-04-14",
+  "org": "985095779",
+  "company": "NORDIC SOLUTIONS AS",
+  "url": "https://www.ns.no/blog",
+  "title": "Phishing og sosial manipulasjon – slik beskytter dere virksomheten",
+  "date": "2026-04-14",
+  "date_text": "14. apr. 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://www.ns.no/blog",
+  "summary": null,
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.ns.no/blog",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "THIS",
+   "legal name NORDIC SOLUTIONS AS in the item's article page"
+  ],
+  "body": "PAGE: Blogg – Nordic Solutions AS Hjem Produkter & Tjenester Om oss Kontakt oss Hjem Produkter & Tjenester Om oss Gratis Gjennomgang Nyheter & Tips Nyheter & Tips 16. apr. 2026 Mobilitet Cybersikkerhet Mobilsikkerhet for bedrifter – 8 tiltak 16. apr. 2026 Mobilitet Cybersikkerhet Mobilsikkerhet for bedrifter – 8 tiltak 25. mars 2026 Windows, tips 11 Windows 11 tips - Jobb mer effektivt 25. mars 2026 Windows, tips 11 Windows 11 tips - Jobb mer effektivt 14. apr. 2026 Phisihing, Cybersikkerhet Phishing og sosial manipulasjon – slik beskytter dere virksomheten 14. apr. 2026 Phisihing, Cybersikkerhet Phishing og sosial manipulasjon – slik beskytter dere virksomheten Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "985095779|news_item|ns.no/blog|2026-04-16",
+  "org": "985095779",
+  "company": "NORDIC SOLUTIONS AS",
+  "url": "https://www.ns.no/blog",
+  "title": "Mobilsikkerhet for bedrifter – 8 tiltak",
+  "date": "2026-04-16",
+  "date_text": "16. apr. 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://www.ns.no/blog",
+  "summary": null,
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.ns.no/blog",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "THIS",
+   "legal name NORDIC SOLUTIONS AS in the item's article page"
+  ],
+  "body": "PAGE: Blogg – Nordic Solutions AS Hjem Produkter & Tjenester Om oss Kontakt oss Hjem Produkter & Tjenester Om oss Gratis Gjennomgang Nyheter & Tips Nyheter & Tips 16. apr. 2026 Mobilitet Cybersikkerhet Mobilsikkerhet for bedrifter – 8 tiltak 16. apr. 2026 Mobilitet Cybersikkerhet Mobilsikkerhet for bedrifter – 8 tiltak 25. mars 2026 Windows, tips 11 Windows 11 tips - Jobb mer effektivt 25. mars 2026 Windows, tips 11 Windows 11 tips - Jobb mer effektivt 14. apr. 2026 Phisihing, Cybersikkerhet Phishing og sosial manipulasjon – slik beskytter dere virksomheten 14. apr. 2026 Phisihing, Cybersikkerhet Phishing og sosial manipulasjon – slik beskytter dere virksomheten Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "990892687|news_item|bodoenergi.no/aktuelt/bodo-bunkermuseum-bodo-energi-gaven|2026-08-31",
+  "org": "990892687",
+  "company": "BE KRAFTSALG AS",
+  "url": "https://bodoenergi.no/aktuelt/bodo-bunkermuseum-bodo-energi-gaven",
+  "title": "Bodø Bunkermuseum får Bodø Energi-gaven",
+  "date": "2026-08-31",
+  "date_text": "31. august 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://bodoenergi.no/aktuelt",
+  "summary": "Historien som tas vare på i Bodøs største betongbunker vekker interesse langt utenfor byens grenser. Bare i juli og august har Bodø Bunkermuseum hatt besøkende fra 15 ulike nasjoner. Nå får den frivillige foreningen Bodø Energi-gaven på",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://bodoenergi.no/aktuelt",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "group (Bodø Energi) sponsorship news",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://bodoenergi.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "990892687|news_item|bodoenergi.no/aktuelt/bodo-energi-lopet-under-marcialonga-bodo-6-km-med-ekte-lokal-energi|2026-05-18",
+  "org": "990892687",
+  "company": "BE KRAFTSALG AS",
+  "url": "https://bodoenergi.no/aktuelt/bodo-energi-lopet-under-marcialonga-bodo-6-km-med-ekte-lokal-energi",
+  "title": "Bodø Energi-løpet under Marcialonga Bodø – 6 km med ekte lokal energi!",
+  "date": "2026-05-18",
+  "date_text": "18. mai 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://bodoenergi.no/aktuelt",
+  "summary": "Vi i Bodø Energi er stolte samarbeidspartnere for Marcialonga Bodø og i år har vi fått vårt helt eget skiløp: Bodø Energi-løpet på 6 km.",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://bodoenergi.no/aktuelt",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "group (Bodø Energi) sponsorship news",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://bodoenergi.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "990892687|news_item|bodoenergi.no/aktuelt/sladaened-mottok-bodo-energi-gaven|2026-05-18",
+  "org": "990892687",
+  "company": "BE KRAFTSALG AS",
+  "url": "https://bodoenergi.no/aktuelt/sladaened-mottok-bodo-energi-gaven",
+  "title": "Musikk, mestring og store drømmer – SlåDæNed fikk Bodø Energi Gaven",
+  "date": "2026-05-18",
+  "date_text": "18. mai 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://bodoenergi.no/aktuelt",
+  "summary": "På Kaktus Tverlandet er det noe helt spesielt som skjer. Vi følger lyden av musikk gjennom gangene, og blir vi møtt av store smil og en smittende god stemning.",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://bodoenergi.no/aktuelt",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "group (Bodø Energi) sponsorship news",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://bodoenergi.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "990892687|news_item|bodoenergi.no/aktuelt/stafett-for-livet-pa-fauske-mottok-bodo-energi-gaven|2026-10-12",
+  "org": "990892687",
+  "company": "BE KRAFTSALG AS",
+  "url": "https://bodoenergi.no/aktuelt/stafett-for-livet-pa-fauske-mottok-bodo-energi-gaven",
+  "title": "Stafett for livet på Fauske mottok Bodø Energi-gaven",
+  "date": "2026-10-12",
+  "date_text": "12. oktober 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://bodoenergi.no/aktuelt",
+  "summary": "Med et stort hjerte for kreftsaken og utallige dugnadstimer har ildsjeler på Fauske samlet lokalsamfunnet til Kreftforeningens Stafett for livet. Nå har arrangementet mottatt Bodø Energi-gaven, som bidrar til å støtte det viktige arbeidet",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://bodoenergi.no/aktuelt",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "group (Bodø Energi) sponsorship news",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://bodoenergi.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "990892687|news_item|bodoenergi.no/aktuelt/vil-skape-et-enda-sterkere-fellesskap-pa-kjerringoy|2026-06-18",
+  "org": "990892687",
+  "company": "BE KRAFTSALG AS",
+  "url": "https://bodoenergi.no/aktuelt/vil-skape-et-enda-sterkere-fellesskap-pa-kjerringoy",
+  "title": "Vil skape et enda sterkere fellesskap på Kjerringøy",
+  "date": "2026-06-18",
+  "date_text": "18. juni 2026",
+  "date_kind": "stated_on_page",
+  "method": "listing_visible_date",
+  "source_page": "https://bodoenergi.no/aktuelt",
+  "summary": "På Kjerringøy spirer nye idéer for et enda mer levende lokalsamfunn. Med støtte fra Bodø Energi Gaven ønsker Kjerringøy Frivilligsentral å skape flere aktiviteter og møteplasser for mennesker i alle aldre.",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://bodoenergi.no/aktuelt",
+   "listing_visible_date",
+   {
+    "on_news_page": true,
+    "page_is_listing": true,
+    "article_typed": false,
+    "from_main_feed": false
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "",
+  "label": "incorrect",
+  "label_note": "group (Bodø Energi) community news",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://bodoenergi.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "998263743|news_item|sjokoladesmaking.no/nyheter/ikke-tygg-sjokoladen|2022-10-28",
+  "org": "998263743",
+  "company": "CONNOISSEUR AS",
+  "url": "https://www.sjokoladesmaking.no/nyheter/ikke-tygg-sjokoladen/",
+  "title": "Ikke tygg sjokoladen",
+  "date": "2022-10-28T17:00:00Z",
+  "date_text": "Fri, 28 Oct 2022 17:00:00 +0000",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.sjokoladesmaking.no/feed/",
+  "summary": "KK skrev at de fleste av oss spiser sjokolade feil, og Svein-Magnus Sørensen forklarte hvorfor: smaken oppleves bedre når du tar en passe bit og lar den smelte i munnen, fordi du da aktiverer flere smaksløker. The post Ikke tygg sjokoladen ",
+  "classify": [
+   "article_news_path",
+   "The item's address is in the website's news section or is dated.",
+   "https://www.sjokoladesmaking.no/feed/",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "UNSTATED",
+   "the item does not name the company; it is on the company's own website"
+  ],
+  "body": "Ikke tygg sjokoladen https://www.sjokoladesmaking.no/nyheter/ikke-tygg-sjokoladen/ Svein-Magnus Fri, 28 Oct 2022 17:00:00 +0000 Presseomtale Oppbevaring Smaking https://www.sjokoladesmaking.no/?p=6325 KK skrev at de fleste av oss spiser sjokolade feil, og Svein-Magnus Sørensen forklarte hvorfor: smaken oppleves bedre når du tar en passe bit og lar den smelte i munnen, fordi du da aktiverer flere smaksløker. The post Ikke tygg sjokoladen appeared first on Sjokoladesmaking.no . KK skrev at de fleste av oss spiser sjokolade feil, og Svein-Magnus Sørensen forklarte hvorfor: smaken oppleves bedre når du tar en passe bit og lar den smelte i munnen, fordi du da aktiverer flere smaksløker. Han anbefalte formiddagen som et godt tidspunkt for smaking, oppbevaring tørt og stabilt under 17 til 18 grader, og servering ved romtemperatur. Manglende «snap» når du brekker sjokoladen er ofte et tegn på dårlig temperering. «Smaken av sjokolade oppleves som bedre dersom du bare tar en passe bit», sa han til KK. Kilde: Marie Kvitrud, «Du har sannsynligvis spist sjokolade feil hele livet» ( arkivert kopi ), KK, 28. oktober 2022. The post Ikke tygg sjokoladen appeared first on Sjokoladesmaking.no .",
+  "label": "incorrect",
+  "label_note": "advice",
+  "operator": {
+   "kind": "self",
+   "code": "own_org_number_on_site",
+   "basis": "The company's own organisation number is stated on the website.",
+   "signals": [
+    {
+     "signal": "own_org_number_stated",
+     "page_url": "https://www.sjokoladesmaking.no/"
+    }
+   ],
+   "operator_org": null
+  }
+ },
+ {
+  "uid": "998355389|news_item|kystsnekkern.no/ferdige-fasader-i-oyriket|2025-07-25",
+  "org": "998355389",
+  "company": "KYSTSNEKKER'N AS",
+  "url": "https://www.kystsnekkern.no/ferdige-fasader-i-oyriket/",
+  "title": "Ferdige fasader i øyriket",
+  "date": "2025-07-25T18:44:32Z",
+  "date_text": "Fri, 25 Jul 2025 18:44:32 +0000",
+  "date_kind": "published",
+  "method": "site_feed",
+  "source_page": "https://www.kystsnekkern.no/feed/",
+  "summary": "Vinduer og dør levert av Kystsnekker’n as The post Ferdige fasader i øyriket appeared first on .",
+  "classify": [
+   "article_main_feed",
+   "The item is a post in the website's own main feed.",
+   "https://www.kystsnekkern.no/feed/",
+   "site_feed",
+   {
+    "on_news_page": false,
+    "page_is_listing": false,
+    "article_typed": false,
+    "from_main_feed": true
+   }
+  ],
+  "subject": [
+   "THIS",
+   "legal name KYSTSNEKKER'N AS in the item's summary"
+  ],
+  "body": "Ferdige fasader i øyriket https://www.kystsnekkern.no/ferdige-fasader-i-oyriket/ Oy Vind Fri, 25 Jul 2025 18:44:32 +0000 Uncategorized https://www.kystsnekkern.no/?p=271 Vinduer og dør levert av Kystsnekker’n as The post Ferdige fasader i øyriket appeared first on . Vinduer og dør levert av Kystsnekker’n as The post Ferdige fasader i øyriket appeared first on .",
+  "label": "incorrect",
+  "label_note": "project page",
+  "operator": {
+   "kind": "self",
+   "code": "no_contrary_signal",
+   "basis": "No signal that another company runs the website.",
+   "signals": [],
+   "operator_org": null
+  }
+ }
+]
