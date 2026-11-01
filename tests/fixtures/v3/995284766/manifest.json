@@ -1,0 +1,203 @@
+{
+ "organisation_number": "995284766",
+ "name": "ASHTEAD TECHNOLOGY AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.ashtead-technology.com/lifting-pulling-and-deployment/",
+  "retrieved_at": "2026-11-01T14:19:13.042666Z",
+  "value": {
+   "requested_url": "https://www.ace-winches.no/",
+   "final_url": "https://www.ashtead-technology.com/lifting-pulling-and-deployment/",
+   "registered_domain": "ashtead-technology.com",
+   "title": "ACE lifting, pulling and deploying - Ashtead Technology",
+   "description": "- Ashtead Technology",
+   "main_text_excerpt": "ACE lifting, pulling and deploying\nWe are global leaders in the hire of lifting, pulling and deploying solutions\nFrom concept design to full project delivery we offer bespoke and tailor-made equipment packages across the energy and civils sector, supporting a wide range of applications including; shore pulls, topside and jacket installation, pipe pulls, subsea tiebacks, riser installations and cable lay.\nOur extensive rental fleet, unrivalled technical expertise and vast project track record allows us to work collaboratively with our customers to deliver innovative and reliable designs for the most complex of projects.\nExplore what we do\nRental equipment\nWe offer an extensive range of back deck equipment for lifting, pulling and deployment applications, to support our customers’ global operations worldwide\nEstablished in 1992, ACE Winches has a proven track record in\nsupporting the installation, inspection, maintenance and repair,\nand decommissioning of offshore energy infrastructure.\nAcquired by Ashtead Technology in December 2023, ACE Winches\ncomplements and bolsters its mechanical solutions division.\nCase studies\nShowcasing the depth and breadth of our capability and expertise in the mechanical solutions field.",
+   "identity_text_excerpt": "",
+   "social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/ashtead-technology"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "name": "Ashtead Technology",
+     "logo": {
+      "@type": "ImageObject",
+      "@id": "https://www.ashtead-technology.com/wp-content/uploads/2021/06/AT-Logo-edited-1.jpg",
+      "url": "https://www.ashtead-technology.com/wp-content/uploads/2021/06/AT-Logo-edited-1.jpg",
+      "width": 2000,
+      "height": 1252
+     }
+    },
+    {
+     "@context": "http://schema.org",
+     "@type": "Organization",
+     "name": "Ashtead Technology",
+     "url": "https://www.ashtead-technology.com"
+    },
+    {
+     "@context": "https://schema.org",
+     "@type": "LocalBusiness",
+     "name": "Ashtead Technology",
+     "image": "https://www.ashtead-technology.com/wp-content/themes/chop-child/images/logo.svg",
+     "@id": "https://www.ashtead-technology.com",
+     "url": "https://www.ashtead-technology.com",
+     "telephone": "01224 771888",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ashtead House",
+      "addressLocality": "Westhill",
+      "postalCode": "AB32 6FG",
+      "addressCountry": "GB"
+     }
+    }
+   ],
+   "content_sha256": "65647a0ddd3eacf75d41d5e3358f2d204b54587037e2a57c886a057db52a1bfb",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.ashtead-technology.com/lifting-pulling-and-deployment/",
+     "title": "ACE lifting, pulling and deploying - Ashtead Technology",
+     "main_text_excerpt": "ACE lifting, pulling and deploying\nWe are global leaders in the hire of lifting, pulling and deploying solutions\nFrom concept design to full project delivery we offer bespoke and tailor-made equipment packages across the energy and civils sector, supporting a wide range of applications including; shore pulls, topside and jacket installation, pipe pulls, subsea tiebacks, riser installations and cable lay.\nOur extensive rental fleet, unrivalled technical expertise and vast project track record allows us to work collaboratively with our customers to deliver innovative and reliable designs for the most complex of projects.\nExplore what we do\nRental equipment\nWe offer an extensive range of back deck equipment for lifting, pulling and deployment applications, to support our customers’ global operations worldwide\nEstablished in 1992, ACE Winches has a proven track record in\nsupporting the installation, inspection, maintenance and repair,\nand decommissioning of offshore energy infrastructure.\nAcquired by Ashtead Technology in December 2023, ACE Winches\ncomplements and bolsters its mechanical solutions division.\nCase studies\nShowcasing the depth and breadth of our capability and expertise in the mechanical solutions field.",
+     "content_sha256": "65647a0ddd3eacf75d41d5e3358f2d204b54587037e2a57c886a057db52a1bfb"
+    },
+    {
+     "url": "https://www.ashtead-technology.com/contact-us/",
+     "title": "Contact us - Ashtead Technology",
+     "main_text_excerpt": "Contact\nAshtead Technology operates in more than 80 countries. Our global reach means we are where our customers need us. Whether you need to discuss the right products for your subsea operations, you need technical support or the scope of your project has changed, our experts will be available to give you the right advice. How can we help you today?\nContact details\nSelect an office for full contact details, directions and information.\nMedia Enquiries\nAlison Hazell\nDGA Group\nAshtead Technology Ltd is registered in Scotland\nRegistration No. 13424040\nRegistered address: c/o AMBA Company Secretarial Services Ltd, 4th Floor, One Kingdom Street, Paddington Central, London, England, W2 6BD\nVAT No. 927273313",
+     "identity_text_excerpt": "",
+     "content_sha256": "a23be19b4bfdbcadb626a07e10d309b727ec5181551d24f907e3a2db47d74960"
+    },
+    {
+     "url": "https://www.ashtead-technology.com/contact-us/",
+     "title": "Contact us - Ashtead Technology",
+     "main_text_excerpt": "Contact\nAshtead Technology operates in more than 80 countries. Our global reach means we are where our customers need us. Whether you need to discuss the right products for your subsea operations, you need technical support or the scope of your project has changed, our experts will be available to give you the right advice. How can we help you today?\nContact details\nSelect an office for full contact details, directions and information.\nMedia Enquiries\nAlison Hazell\nDGA Group\nAshtead Technology Ltd is registered in Scotland\nRegistration No. 13424040\nRegistered address: c/o AMBA Company Secretarial Services Ltd, 4th Floor, One Kingdom Street, Paddington Central, London, England, W2 6BD\nVAT No. 927273313",
+     "identity_text_excerpt": "",
+     "content_sha256": "a23be19b4bfdbcadb626a07e10d309b727ec5181551d24f907e3a2db47d74960"
+    },
+    {
+     "url": "https://www.ashtead-technology.com/who-we-are/leadership-team/",
+     "title": "Leadership team - Ashtead Technology",
+     "main_text_excerpt": "Leadership team\nThe Ashtead Technology leadership team drive the overall strategy and ensure that our commitment to excellent service never waivers. Our leadership team have a wide range of experience and expertise.\nMeet the team\nOur leadership team is well placed to drive our global expansion with extensive experience in their respective fields. The leadership team drives the overall strategy that defines our commitment to innovation in subsea technology.",
+     "identity_text_excerpt": "",
+     "content_sha256": "2dd0eae264d0ab759e0d07d47877162b321959b2d25dcea7c57c593f7f71460e"
+    },
+    {
+     "url": "https://www.ashtead-technology.com/careers/our-people/",
+     "title": "Our People | Careers & Culture at Ashtead Technology",
+     "main_text_excerpt": "Meet our people\nWe are proud of our diverse team, spanning across the globe and covering a broad range of disciplines and expertise.\nExciting opportunities\nAshtead Technology is a welcoming and inclusive place. We believe in fairness and like to be honest, transparent and authentic in everything we do.\nWorking at Ashtead Technology is not just a job. It’s an exciting career.\nVacancies\nView our latest vacancies across the business and be part of our success story.",
+     "identity_text_excerpt": "",
+     "content_sha256": "e526d2199caffa267460b23ceb745145978434eb56e7e79d1c9376ec8d623d79"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "ashtead",
+     "technology"
+    ],
+    "matched_tokens": [
+     "ashtead",
+     "technology"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/ashtead-technology"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/ashtead-technology",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "ashtead",
+      "technology"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "65647a0ddd3eacf75d41d5e3358f2d204b54587037e2a57c886a057db52a1bfb",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995284766": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "0a42f647094bb50d.json.gz",
+   "content_sha256": "0a42f647094bb50d9151f1d3846549079f20ef3089b3ef7fd240fb76433482d1",
+   "retrieved_at": "2026-11-01T14:18:58.986834Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/995284766": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "97f6ab49bf7b7ecd.json.gz",
+   "content_sha256": "97f6ab49bf7b7ecd75e5edfc9c1ee03c9f99300f926a60a73bc98b1e8e67eef7",
+   "retrieved_at": "2026-11-01T14:18:59.691966Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/995284766/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "319a80e1605a966d.json.gz",
+   "content_sha256": "319a80e1605a966dd0100719f1525b9436fa8ee5edd2077641c832ffa9ee4c38",
+   "retrieved_at": "2026-11-01T14:19:01.827975Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/995284766": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T14:19:00.399102Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=995284766&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "e30049b8aa8d454e.json.gz",
+   "content_sha256": "e30049b8aa8d454eeacf3ce116d7d00b6c387895baf59f7532b7b1845335fe4b",
+   "retrieved_at": "2026-11-01T14:19:01.116733Z"
+  },
+  "https://www.ashtead-technology.com/lifting-pulling-and-deployment/": {
+   "kind": "site",
+   "status": 200,
+   "file": "65647a0ddd3eacf7.html.gz",
+   "content_sha256": "65647a0ddd3eacf75d41d5e3358f2d204b54587037e2a57c886a057db52a1bfb",
+   "retrieved_at": "2026-11-01T14:19:14.769162Z"
+  },
+  "https://www.ashtead-technology.com/contact-us": {
+   "kind": "site",
+   "status": 200,
+   "file": "a23be19b4bfdbcad.html.gz",
+   "content_sha256": "a23be19b4bfdbcadb626a07e10d309b727ec5181551d24f907e3a2db47d74960",
+   "retrieved_at": "2026-11-01T14:19:16.660245Z"
+  },
+  "https://www.ashtead-technology.com/contact-us/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a23be19b4bfdbcad.html.gz",
+   "content_sha256": "a23be19b4bfdbcadb626a07e10d309b727ec5181551d24f907e3a2db47d74960",
+   "retrieved_at": "2026-11-01T14:19:17.509120Z"
+  }
+ }
+}

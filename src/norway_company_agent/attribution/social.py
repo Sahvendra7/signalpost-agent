@@ -14,13 +14,27 @@ STRICT_KINDS = {"group_or_brand", "section", "platform"}
 HOLD_KINDS = {"manager", "other_entity"}
 
 
+SHARED_SAME_NAME_KINDS = {"group_or_brand", "section"}
+
+
 def decide_profile(relation: Relation, operator_kind: str, *, domain_named: bool, handle_starts_with_domain: bool, org_sameas: bool,
-                   operator_basis: str = "", handle_is_domain: bool = False) -> tuple[Decision, float | None]:
+                   operator_basis: str = "", handle_is_domain: bool = False, names_site_entity: str | None = None,
+                   bare_exact_on_same_name_domain: bool = False) -> tuple[Decision, float | None]:
     """(decision, score). `domain_named`: the verified site's domain label is the legal name or a brand of it (and the
-    site is self-operated); `org_sameas`: the profile is in sameAs of an Organization node that names this company."""
+    site is self-operated); `org_sameas`: the profile is in sameAs of an Organization node that names this company.
+    `names_site_entity`: another company the site itself names with a legal form whose name the handle spells exactly.
+    `bare_exact_on_same_name_domain`: the handle is the legal name with no legal-form or Norway marker, and the site's
+    domain is named like the company (a larger organisation of the same name runs it)."""
     kind = relation.kind
     if operator_kind in HOLD_KINDS:
         return Decision(False, f"site_operated_by_{operator_kind}", operator_basis or "The website is run by another company; its profiles are not this company's."), None
+    if names_site_entity and kind in ("BRAND", "EXTENDS"):
+        return Decision(False, "handle_names_other_company_on_site",
+                        f"The handle spells the name of another company that the website itself names ({names_site_entity}); it is that company's profile."), None
+    if kind == "EXACT" and operator_kind in SHARED_SAME_NAME_KINDS and bare_exact_on_same_name_domain:
+        return Decision(False, f"group_name_handle_on_{operator_kind}_site",
+                        "The website belongs to a larger organisation with the same name, and the handle has no Norwegian or legal-form marker: "
+                        "it is that organisation's profile, not necessarily this company's."), None
     if kind == "EXACT":
         return Decision(True, "handle_exact", "The profile handle is the company's legal name."), SCORES[kind]
     if kind == "EXACT_NEUTRAL":

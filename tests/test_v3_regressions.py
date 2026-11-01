@@ -72,10 +72,25 @@ class SocialAttribution(unittest.TestCase):
     def test_a_handle_spelling_another_legal_name_is_held(self):
         self.assertEqual(profiles("980995151"), {"http://www.facebook.com/bdtviken"})
 
+    def test_asak_does_not_take_the_profiles_of_asak_miljostein(self):
+        """ASAK AS (961592097) and ASAK MILJØSTEIN AS (980281310) share asak.no; the site names "Asak Miljøstein AS"."""
+        self.assertEqual(profiles("961592097"), set())
+        held = [claim for claim in replay("961592097")["claims"] if claim["field"] == "social_profile"]
+        self.assertEqual([claim["availability"] for claim in held], ["ambiguous"])
+        self.assertEqual(profiles("980281310"), {"https://www.facebook.com/asakmiljostein", "https://www.instagram.com/asak_miljostein/"},
+                         "the profiles stay attributed to the company they name")
+
+    def test_ashtead_norwegian_as_does_not_take_the_global_linkedin(self):
+        """ASHTEAD TECHNOLOGY AS (995284766): the registry website is a page of the global group's ashtead-technology.com."""
+        self.assertEqual(profiles("995284766"), set())
+
     def test_controls_keep_their_profiles(self):
         self.assertEqual(profiles("919378875"), {"http://www.facebook.com/gronsand", "https://instagram.com/gronsandgjestagard"})
         self.assertEqual(profiles("936269044"), {"https://www.facebook.com/Birralee/", "https://www.instagram.com/birralee_internationalschool/"})
-        self.assertEqual(profiles("916303122"), {"https://www.facebook.com/BeredtAS", "https://www.instagram.com/beredtinkludering/", "https://www.linkedin.com/company/beredt/"})
+        # Remediation pass: @beredtinkludering is BEREDT INKLUDERING AS (934470222), a separate registered company that
+        # beredt.no itself names ("Beredt AS og Beredt Inkludering AS – to selskaper"). It was labelled "own sub-brand" in
+        # the dev audit; that label was wrong and is corrected in measurements/v3-remediation-2026-11-01/.
+        self.assertEqual(profiles("916303122"), {"https://www.facebook.com/BeredtAS", "https://www.linkedin.com/company/beredt/"})
         self.assertEqual(len(profiles("975387011")), 2)
         self.assertEqual(profiles("984560443"), {"https://www.facebook.com/Bjelland-As-359873177420058/"})
         self.assertEqual(len(profiles("993231150")), 2)

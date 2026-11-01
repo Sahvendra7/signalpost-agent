@@ -1,0 +1,237 @@
+{
+ "organisation_number": "961592097",
+ "name": "ASAK AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.asak.no/",
+  "retrieved_at": "2026-11-01T14:19:31.836612Z",
+  "value": {
+   "requested_url": "https://www.asak.no/",
+   "final_url": "https://www.asak.no/",
+   "registered_domain": "asak.no",
+   "title": "Asak Miljøstein | Asak",
+   "description": "Asak Miljøstein AS representerer norsk industrihistorie fra 1916. Motiverte medarbeidere med høy kompetanse, samt landsdekkende produksjon, sikrer våre kunder kvalitet og trygghet.",
+   "main_text_excerpt": "Arbeidsbeskrivelser og vedlikehold\nHer finner du en oversikt over arbeidsbeskrivelser, råd og tips for vedlikehold, våre instruksjonsvideoer, i tillegg til guider på mønster til heller og belegningsstein.\nAsak + Koi utvider fargekolleksjonen\nDen dype, stevrede brunfargen blir den femte nyansen i fargekolleksjonen utviklet for nordiske uterom. Samtidig kommer en ny designmanual som gjør det enklere å arbeide med farge, format og leggemønster.\nProduserer fremtiden av fortiden\nAsak tar et nytt steg mot mer bærekraftige uterom. Nå produseres alle våre heller med resirkulerte masser som standard.\nMiljø og leveranse\nAsak Miljøstein vektlegger grønne verdier og har lagt en langsiktig strategi, der fokus ligger på utvikling av varige løsninger og produkter – i tillegg til at vi leverer kortreiste produkter.",
+   "identity_text_excerpt": "Bytt til proffkunde Finn forhandler Asak Online Personvern Om Asak Kundeservice: 64 00 60 60 Man - Fre: kl. 08 - 15:30 E-post: asak@asak.no Distriktskontorer",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/asakmiljostein"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/asak_miljostein"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://asak.no#organization",
+     "name": "Asak Miljøstein",
+     "url": "https://asak.no",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://asakno.blob.core.windows.net/media-production/original_images/e87ebffe2ffeeae5e8b8dbb70dbd76e8a72ea86d-4000x2006.avif"
+     },
+     "telephone": "64006060",
+     "email": "asak@asak.no",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hvamstubben 17",
+      "postalCode": "2013",
+      "addressLocality": "Skjetten",
+      "addressCountry": "Norway"
+     },
+     "sameAs": [
+      "https://www.facebook.com/asakmiljostein",
+      "https://www.instagram.com/asak_miljostein/"
+     ]
+    }
+   ],
+   "content_sha256": "e7d66fc40fda95a779d5e39e29e89a6132a7f4066a503946db69ff91e8759f48",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.asak.no/",
+     "title": "Asak Miljøstein | Asak",
+     "main_text_excerpt": "Arbeidsbeskrivelser og vedlikehold\nHer finner du en oversikt over arbeidsbeskrivelser, råd og tips for vedlikehold, våre instruksjonsvideoer, i tillegg til guider på mønster til heller og belegningsstein.\nAsak + Koi utvider fargekolleksjonen\nDen dype, stevrede brunfargen blir den femte nyansen i fargekolleksjonen utviklet for nordiske uterom. Samtidig kommer en ny designmanual som gjør det enklere å arbeide med farge, format og leggemønster.\nProduserer fremtiden av fortiden\nAsak tar et nytt steg mot mer bærekraftige uterom. Nå produseres alle våre heller med resirkulerte masser som standard.\nMiljø og leveranse\nAsak Miljøstein vektlegger grønne verdier og har lagt en langsiktig strategi, der fokus ligger på utvikling av varige løsninger og produkter – i tillegg til at vi leverer kortreiste produkter.",
+     "content_sha256": "e7d66fc40fda95a779d5e39e29e89a6132a7f4066a503946db69ff91e8759f48"
+    },
+    {
+     "url": "https://www.asak.no/om-asak/om-oss/",
+     "title": "Om Asak Miljøstein – Norsk kvalitet og bærekraft | Asak",
+     "main_text_excerpt": "Vår historie\nAsak Miljøstein AS representerer norsk industrihistorie fra 1916, og er i dag markedsledende leverandør av utemiljøprodukter i betong til det offentlig og private uterom. Med produksjon i Bodø, Stjørdal, Kristiansand, Hønefoss og Fetsund sikrer vi kortreiste leveranser til små og store uteromsprosjekter i hele landet.\nAsak Miljøstein ønsker å skape uterom hvor folk trives, både privat og i det offentlige uterom - Administrerende direktør, Hanne Sønsteby.\nAsak Miljøstein er en moderne bedrift som samarbeider med Snøhetta, Koi Fargestudio, SINTEF, NTNU og andre faginstanser for å kunne tilby innovative konsepter som løser dagens og fremtidig miljøutfordringer. Produktene produseres på våre fem ISO14001 sertifiserte fabrikker, som alle har en unik nærhet til markedet.\nNoen sentrale årstall\n1914 - Vår historie går tilbake til 1914 og Kristiansand Cementstøberi i sør, hvor vi for første gang startet opp med produksjon av takstein, blokker og betongrør.\n1916 - På Fetsund startet Asak i 1916 med sandforretning, som senere gikk over til betongprodukter og er i dag eneste norske produsent av to-sjikts heller.\n1919 til 1946 - I Stjørdal startet Vikaune Fabrikker opp med byggmestervirksomhet og saftpresseri i 1919. Siden har de vært innom tønneproduksjon og kisteproduksjon parallelt med takstein og annen betongproduksjon fra 1946.\n2006- I 2006 kom fabrikk nr. 5 på plass i Hønefoss, for å styrke vår leveringsdyktighet og videre utvikling. Produksjonen ved fabrikken i Sandnes ble imidlertid lagt ned i 2011.\nAsak i dag\nDagens Asak Miljøstein spenner over et vidt spekter av belegningsstein, heller, kantstein, murer og tilbehør i form av utebelysning, overflatedrenering, settesand, fugesand og annet tilbehør for en totalløsning av ditt uterom.\nAsak Miljøstein selges gjennom forhandlere og utførende over hele landet og er Norges ledende leverandør av utemiljøprodukter i betong - en seriøs og troverdig aktør med kvalitet i alle ledd.",
+     "identity_text_excerpt": "Bytt til proffkunde Finn forhandler Asak Online Personvern Om Asak Kundeservice: 64 00 60 60 Man - Fre: kl. 08 - 15:30 E-post: asak@asak.no Distriktskontorer",
+     "content_sha256": "9cd323c6622d1f953fc41905ecd50fbf668680bc965bbbfbb14b59bb6234d891"
+    },
+    {
+     "url": "https://www.asak.no/om-asak/kontakt-oss/",
+     "title": "Kontakt Asak Miljøstein | Kundeservice & salg | Asak",
+     "main_text_excerpt": "Kundeservice\n+47 64 00 60 60\nasak@asak.no\nÅpningstider\nMandag - Fredag\n08:00-15:30\nBesøksadresse\nHvamstubben 17\n2013 skjetten\nOrdre / Lager\nNord\n+47 75 50 04 03\ne-post: nord@asak.no\nÅpningstider\nMandag - Fredag 07:30-15:30\nPostadresse\nAsak Nord AS\nLangstranda 4, 8003 Bodø\nMidt\n+47 74 80 42 10\ne-post: midt@asak.no\nÅpningstider\nMandag - Fredag 07:00-15:30\nPostadresse\nVikaune Fabrikker AS\nIndustriveien 3, 7500 Stjørdal\nSør\n+47 38 00 37 80\ne-post: ordrekc@asak.no\nÅpningstider\nMandag - Fredag 07:00-15:30\nPostadresse\nAsak AS avd Kristiansand\nSmåslettene 87, 4658 Tveit\nØst\n+47 63 88 90 15\ne-post: ordre@asak.no\nÅpningstider\nMandag - Fredag 07:00-16:00\nPostadresse\nAsak AS, Gamle Rovenvei 290, 1900 Fetsund\nAsak AS, Follummoveien 30, 3516 Hønefoss\nSalgsteam\nMikael Lund\nSalgssjef\ne-post: mikael.lund@asak.no\n+47 478 60 006\nFrank Moan\nDistriktsansvarlig Nordland, Troms og Finnmark\ne-post: frank.moan@asak.no\n+47 991 05 818\nOla Raaum\nDistriktsansvarlig Trøndelag og Møre og Romsdal\ne-post: ola.raaum@asak.no\n+47 971 49 490\nHåkon Dversnes\nDistriktsansvarlig for Agder, Rogaland og Vestland\ne-post: hakon.dversnes@asak.no\n+47 902 02 680\nØrjan Reinsnes\nDistriktsansvarlig for Akershus Sør, Buskerud, Vestfold og Telemark\ne-post: orjan.reinsnes@asak.no\n+47 468 59 538\nHalvor Lund\nDistriktsansvarlig for Akershus Nord og Innlandet\ne-post: halvor.lund@asak.no\n+47 416 62 944\nAdministrasjon\nAnette Sæther\nAdministrasjonsleder\ne-post: anette.sather@asak.no\nStine Gundersen\nSalgs- og markedskoordinator\ne-post: stine.gundersen@asak.no\nHeida Ofeigsdottir\nMarkedskoordinator\ne-post: heida.ofeigsdottir@asak.no\nEllen Schumann\nMarkeds- og prosjektansvarlig\ntlf: 958 16 196\ne-post: ellen.schumann@asak.no\nHanne Sønsteby\nAdm.direktør\ne-post: hanne.sonsteby@asak.no",
+     "identity_text_excerpt": "Bytt til proffkunde Finn forhandler Asak Online Personvern Om Asak Kundeservice: 64 00 60 60 Man - Fre: kl. 08 - 15:30 E-post: asak@asak.no Distriktskontorer",
+     "content_sha256": "e37fd3f6d7e35d1ac97ae7c6b4fc6c10865acb1db4b96b8e59946f404de875a6"
+    },
+    {
+     "url": "https://www.asak.no/om-asak/aktuelt/",
+     "title": "Aktuelt | Asak Miljøstein – Nyheter og oppdateringer | Asak",
+     "main_text_excerpt": "Asak + Koi utvider fargekolleksjonen med Brent Terrakotta\nDen dype, stevrede brunfargen blir den femte nyansen i fargekolleksjonen utviklet for nordiske uterom. Samtidig kommer en ny designmanual som gjør det enklere å arbeide med farge, format og leggemønster.\nBelegningsstein i parkeringskjeller\nI mange moderne boligprosjekter velger utbyggere å gå bort fra tradisjonelle tette dekker som asfalt eller betong i parkeringskjellere. Et økende antall velger i stedet belegningsstein som er spesialtilpasset parkeringsområder.\nFremtiden av fortiden\nAsak tar et nytt steg mot mer bærekraftige uterom. Nå produseres alle våre heller med resirkulerte masser som standard. I nåværende produksjon benyttes masser fra Bergensbanen, der materialer med lang historie får nytt liv i moderne betongprodukter.\nFeirer norsk produksjon sammen med Made in-bedrifter\nFra 29. april til 22. juni samles et utvalg norske merkevarer på Aker Brygge for å vise fram produkter utviklet, designet og produsert i Norge. Asak Miljøstein er stolt av å delta sammen med Omgi, Made in Norway og flere andre virksomheter under Made in Norway-konseptet – en plattform for å løfte fram verdien av lokal produksjon, fagkunnskap og kortreiste materialer.\nFLYT begeistrer i inn- og utland\nAsak FLYT har fått internasjonal anerkjennelse med flere priser, inkludert Fast Company’s Innovation by Design. Et innovativt steg mot bærekraftig overvannshåndtering.\nFarger til uterommet med Koi Fargestudio\nUtforsk de nye, naturinspirerte fargene fra Koi Fargestudio – perfekte for å skape varige og estetiske uterom som passer både ny og gammel byggestil.\nForslag estetisk veileder Filipstad - Oslo\nEn ny visjon for Filipstad: Se hvordan en estetisk veileder kan transformere det siste stykket av Fjordbyen med bærekraftige og vakre løsninger.",
+     "identity_text_excerpt": "Bytt til proffkunde Finn forhandler Asak Online Personvern Om Asak Kundeservice: 64 00 60 60 Man - Fre: kl. 08 - 15:30 E-post: asak@asak.no Distriktskontorer",
+     "content_sha256": "613a68eb819c93777c9ea9af5ae682c1d9b3981e5c34a859c00191c81905b9cd"
+    },
+    {
+     "url": "https://www.asak.no/om-asak/aktuelt/asak-koi-brent-terrakotta/",
+     "title": "Brent Terrakotta – ny farge i Asak + Koi-kolleksjonen | Asak | Asak",
+     "main_text_excerpt": "Asak Miljøstein og Koi Colour & Design Studio lanserer Brent Terrakotta – en mørk, jordlig nyanse med forsiktig rødlig undertone. Fargen kompletterer de eksisterende fargene Rød Terrakotta, Blek Terrakotta, Sand og Trøffel, og gir paletten mer dybde, kontrast og spenn.\nMed Asak + Koi har ambisjonen hele tiden vært å utfordre den tradisjonelle grå materialpaletten i norske uterom. Farge skal ikke bare pynte – den skal brukes som et integrert arkitektonisk virkemiddel.\nUtviklet for nordisk lys og landskap\nKolleksjonen er utviklet med utgangspunkt i skandinavisk lys, landskap, arkitektur og materialbruk. Den skal gli inn i norske omgivelser gjennom årstidene, fungere mot både ny og eldre bebyggelse, og tåle å ses i både sterkt sollys og overskyet vær.\nBrent Terrakotta har en mørk, sofistikert karakter. Den er laget for å stå alene, men får fram andre kvaliteter når den settes sammen med de lysere og varmere fargene i systemet. Resultatet er nye muligheter for dybde, tonale overganger og bevisst bruk av kontrast.\n– Vi ønsket å tilføre paletten en mørk farge som kunne skape større dybde og spenn, men som samtidig skulle ha en tydelig forbindelse til de eksisterende nyansene. Brent Terrakotta er en kompleks, men enkel brunfarge som endrer karakter med lyset og omgivelsene rundt den. Den kan oppleves på én måte alene, men får frem helt andre kvaliteter når den settes sammen med de lysere og varmere fargene i kolleksjonen\nFarge som funksjon – ikke bare estetikk\nFarge i uterommet handler om mer enn uttrykk. Brukt bevisst kan den bidra til orientering, lesbarhet og universell utforming.\nDerfor er Asak + Koi-kolleksjonen bygget som et fargesystem. Nyansene skal både kunne danne helhetlige materialpaletter og gi tilstrekkelig kontrast der funksjonen krever det. Luminanskontrast og LRV-verdier (Light Reflectance Value) inngår som verktøy, slik at estetikk og funksjon kan ses i sammenheng allerede i prosjekteringen.\nNy designmanual og flere kombinasjonsmuligheter\nSammen med den nye fargen lanseres en oppdatert designmanual. Den viser hvordan farger, formater og leggemønstre kan kombineres – fra rolige, ensfargede flater til mer sammensatte mønstre med tydelig retning og rytme.\nDet gir landskapsarkitekter, anleggsgartnere og privatpersoner et mer presist verktøy for å skape uterom som både er vakre, varige og lesbare.\nNorske produkter, norske farger\nFargene i Asak + Koi-kolleksjonen er tilgjengelige på utvalgte belegningsstein og heller fra Asak – produsert i Norge, av norske råvarer, for norske forhold. Produktene er utviklet for lang levetid, lite vedlikehold og uterom der folk skal trives over tid.\nVil du se hvordan Brent Terrakotta fungerer sammen med de øvrige nyansene, eller trenger du råd til et konkret prosjekt? Ta gjerne kontakt med oss.",
+     "identity_text_excerpt": "Bytt til proffkunde Finn forhandler Asak Online Personvern Om Asak Kundeservice: 64 00 60 60 Man - Fre: kl. 08 - 15:30 E-post: asak@asak.no Distriktskontorer",
+     "content_sha256": "1780cb3923b1e1aeaaaacd2fa3534d0a5fc5ff8e8d6c35387fd4bebfc20eb41f"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "asak"
+    ],
+    "matched_tokens": [
+     "asak"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/asakmiljostein"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/asak_miljostein"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/asakmiljostein",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "asak"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/asak_miljostein",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "asak"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "e7d66fc40fda95a779d5e39e29e89a6132a7f4066a503946db69ff91e8759f48",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/961592097": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "eeb62e84ced191b9.json.gz",
+   "content_sha256": "eeb62e84ced191b92cc13b5f2cdc7e511c0ad120b5a9dd65e4484d99c4025279",
+   "retrieved_at": "2026-11-01T14:19:20.170929Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/961592097": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "dd237f3ae917583f.json.gz",
+   "content_sha256": "dd237f3ae917583f7e742441274c0df9de94867f1949ec549103149cd6b60081",
+   "retrieved_at": "2026-11-01T14:19:20.884356Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/961592097/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "ffab9422b9d676e2.json.gz",
+   "content_sha256": "ffab9422b9d676e2ef2689ceb7cc4bbbc37a43a28c09ea976f4dcf52020f0a37",
+   "retrieved_at": "2026-11-01T14:19:23.300009Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/961592097": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "d1aa90a2c641a3dd.json.gz",
+   "content_sha256": "d1aa90a2c641a3dd4c316facd73619c86f054621273dd8fc2c4a8cc154270ce1",
+   "retrieved_at": "2026-11-01T14:19:21.606723Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=961592097&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "316fc1949b8d549e.json.gz",
+   "content_sha256": "316fc1949b8d549e08788e42f87efcf00c8100fbe2eeeaa1a9636ee7add30597",
+   "retrieved_at": "2026-11-01T14:19:22.319979Z"
+  },
+  "https://www.asak.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "e7d66fc40fda95a7.html.gz",
+   "content_sha256": "e7d66fc40fda95a779d5e39e29e89a6132a7f4066a503946db69ff91e8759f48",
+   "retrieved_at": "2026-11-01T14:19:33.392839Z"
+  },
+  "https://www.asak.no/om-asak/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9cd323c6622d1f95.html.gz",
+   "content_sha256": "9cd323c6622d1f953fc41905ecd50fbf668680bc965bbbfbb14b59bb6234d891",
+   "retrieved_at": "2026-11-01T14:19:34.183794Z"
+  },
+  "https://www.asak.no/personvern": {
+   "kind": "site",
+   "status": 200,
+   "file": "0dd6e49f014446d3.html.gz",
+   "content_sha256": "0dd6e49f014446d35887cf66a8d60d1a20f4696f50f8e8f0d8b021f8bfe5a880",
+   "retrieved_at": "2026-11-01T14:19:34.823658Z"
+  },
+  "https://www.asak.no/om-asak/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "613a68eb819c9377.html.gz",
+   "content_sha256": "613a68eb819c93777c9ea9af5ae682c1d9b3981e5c34a859c00191c81905b9cd",
+   "retrieved_at": "2026-11-01T14:19:35.921237Z"
+  },
+  "https://www.asak.no/om-asak/aktuelt/asak-koi-brent-terrakotta/": {
+   "kind": "site",
+   "status": 200,
+   "file": "1780cb3923b1e1ae.html.gz",
+   "content_sha256": "1780cb3923b1e1aeaaaacd2fa3534d0a5fc5ff8e8d6c35387fd4bebfc20eb41f",
+   "retrieved_at": "2026-11-01T14:19:38.358374Z"
+  },
+  "https://www.asak.no/om-asak/aktuelt/hagemessen-2026/": {
+   "kind": "site",
+   "status": 200,
+   "file": "f09d79ee1586346b.html.gz",
+   "content_sha256": "f09d79ee1586346b5a506462fe6fb3f09226cfe564a0ab0d40f0a3bf8b6349c7",
+   "retrieved_at": "2026-11-01T14:19:39.226626Z"
+  },
+  "https://www.asak.no/om-asak/aktuelt/belegningsstein-i-parkeringskjeller/": {
+   "kind": "site",
+   "status": 200,
+   "file": "5047755516e10933.html.gz",
+   "content_sha256": "5047755516e10933a31fd9c82359676608ab231da13395f46c6af058739015fa",
+   "retrieved_at": "2026-11-01T14:19:40.200002Z"
+  }
+ }
+}

@@ -34,7 +34,7 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
-from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relation
+from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relation, named_entities
 from .attribution.jobs import decide_job, is_recruiter
 from .attribution.news import burst_members, classify_item, evergreen_title, has_news_path, is_publisher, subject_of
 from .attribution.operator import SiteOperator, assess_operator, sibling_names
@@ -155,6 +155,24 @@ def is_shared_site_section(url: str) -> bool:
 
 def _host(url: str) -> str:
     return (urllib.parse.urlsplit(url).hostname or "").casefold().rstrip(".").removeprefix("www.")
+
+
+def _registered_domain_label(site_url: str) -> str:
+    """"ashtead-technology" for https://www.ashtead-technology.com/x: the registered domain without its suffix."""
+    return str(_registered_domain(site_url) or "").split(".")[0]
+
+
+def _display_entity(compacted: str, pages: list[CapturedPage]) -> str:
+    """The site's own spelling of a company name found by `named_entities` (for the reason text)."""
+    for page in pages:
+        if page.kind != "html":
+            continue
+        for match in re.finditer(r"((?:[A-ZÆØÅ][\wÆØÅæøå&'.\-]*\s+){1,5})(AS|ASA|A/S|SA|AB|ApS|Ltd|Limited|GmbH)(?![\wæøå])", page.text):
+            words = match.group(1).split()
+            for start in range(len(words)):
+                if compact(" ".join(words[start:])) == compacted:
+                    return " ".join(words[start:]) + " " + match.group(2)
+    return compacted
 
 
 def owns_registered_domain(site_url: str) -> bool:
@@ -899,6 +917,15 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         for occurrence in social_occurrences(page, index, site_url, legal_core):
             groups.setdefault((occurrence["platform"], _profile_key(occurrence)), []).append(occurrence)
     accepted: list[dict[str, Any]] = []
+    # V3 remediation: company names the site itself writes with a legal form, and whether the (registered) domain is
+    # named like the company even when a larger organisation runs it.
+    site_entities: dict[str, str] = {}
+    for page in pages:
+        if page.kind == "html":
+            for name in named_entities(page.text):
+                site_entities.setdefault(name, name)
+    root_label = compact(_registered_domain_label(site_url))
+    same_name_domain = bool(root_label) and (root_label == legal.compact or root_label == legal.compact_full)
     for (platform, canonical), group in sorted(groups.items()):
         chosen = _representative(group)
         page = chosen["page"]
@@ -909,8 +936,11 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         org_sameas = any(item["via"] == "jsonld_sameas" and legal.phrase_in(item.get("jsonld_name")) for item in group)
         bare = relation.handle
         handle_is_domain = len(site_label) >= 4 and bare.startswith(site_label) and not legal.strip_neutral(bare[len(site_label):]) and site_label not in GENERIC_BRANDS
+        other_named = bare if bare in site_entities and bare not in (legal.compact, legal.compact_full) else None
         decision, score = decide_profile(relation, operator.kind, domain_named=domain_named, handle_starts_with_domain=bool(site_label) and relation.handle.startswith(site_label),
-                                         org_sameas=org_sameas, operator_basis=operator.basis, handle_is_domain=handle_is_domain)
+                                         org_sameas=org_sameas, operator_basis=operator.basis, handle_is_domain=handle_is_domain,
+                                         names_site_entity=_display_entity(other_named, pages) if other_named else None,
+                                         bare_exact_on_same_name_domain=same_name_domain and bare in (legal.compact, legal.compact_full))
         reason = decision.basis
         record = {
             "platform": platform, "url": chosen["url"], "canonical_url": canonical, "evidence_span": chosen["linked_as"],

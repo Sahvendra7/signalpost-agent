@@ -29,7 +29,8 @@ def main() -> None:
         base, args = Path(args[1]), args[2:]
     profiles_path, snapshot_dir, *orgs = args
     snapshots = Path(snapshot_dir)
-    profiles = {json.loads(line)["organisation_number"]: json.loads(line) for line in Path(profiles_path).read_text(encoding="utf-8").splitlines()}
+    # split on "\n" only: splitlines() also splits on U+2028/U+2029, which occur inside JSON strings
+    profiles = {json.loads(line)["organisation_number"]: json.loads(line) for line in Path(profiles_path).read_text(encoding="utf-8").split("\n") if line.strip()}
     for org in orgs:
         profile = profiles[org]
         target = base / org

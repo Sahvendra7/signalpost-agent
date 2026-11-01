@@ -134,6 +134,23 @@ class Relation:
     rest: str = ""
 
 
+_ENTITY_NAME = re.compile(r"((?:[A-ZÆØÅ][\wÆØÅæøå&'.\-]*\s+){1,5})(AS|ASA|A/S|SA|AB|ApS|Ltd|Limited|GmbH)(?![\wæøå])")
+
+
+def named_entities(text: str) -> set[str]:
+    """Company names a page itself writes with a legal form ("Asak Miljøstein AS"), compacted without the form. Every
+    trailing word sequence is kept ("Om Asak Miljøstein AS" -> "asakmiljostein", "omasakmiljostein") so a leading menu
+    or sentence word does not hide the name."""
+    out: set[str] = set()
+    for match in _ENTITY_NAME.finditer(text or ""):
+        words = match.group(1).split()
+        for start in range(len(words)):
+            name = compact(" ".join(words[start:]))
+            if len(name) >= 4:
+                out.add(name)
+    return out
+
+
 def handle_of(platform: str, url: str) -> tuple[str, list[str]]:
     """(compact handle, separator-split words) from a profile URL."""
     path = urllib.parse.urlsplit(url).path
