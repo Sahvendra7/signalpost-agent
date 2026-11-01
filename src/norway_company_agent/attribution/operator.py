@@ -93,6 +93,37 @@ def sibling_names(legal: LegalName, labels: list[str]) -> set[str]:
     return siblings
 
 
+def registry_group_names(profile: dict[str, Any]) -> list[tuple[str, str]]:
+    """(organisation number, name) of every other company in the registry group structure (parent, top parent, sisters)."""
+    org = re.sub(r"\D", "", str(profile.get("organisation_number") or ""))
+    record = (profile.get("evidence") or {}).get("group") or {}
+    value = record.get("value") if record.get("status") == "available" else None
+    found: dict[str, str] = {}
+
+    def walk(node: Any) -> None:
+        if isinstance(node, dict):
+            for number_key, name_key in (("organisasjonsnummer", "navn"), ("parentOrganisasjonsnummer", "parentNavn")):
+                number, name = str(node.get(number_key) or ""), str(node.get(name_key) or "")
+                if number and name and number != org:
+                    found.setdefault(number, name)
+            for child in node.get("children") or []:
+                walk(child)
+    walk(value)
+    return sorted(found.items())
+
+
+def registry_group_company_named_by(label: str, profile: dict[str, Any], legal: LegalName) -> tuple[str, str] | None:
+    """The other group company the domain label is named after, if the label is not named after this company."""
+    label = compact(label)
+    if len(label) < 3 or legal.domain_named(label) or label in (legal.compact, legal.compact_full):
+        return None
+    for number, name in registry_group_names(profile):
+        other = LegalName(name)
+        if other.compact and (label == other.compact or label == other.compact_full or other.domain_named(label) and not legal.domain_related(label)):
+            return number, name
+    return None
+
+
 def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[tuple[str, str]], homepage_text: str = "",
                     website_value: dict[str, Any] | None = None, identity_class: str | None = None, shared_kind: str | None = None,
                     taxonomy: list[str] | None = None, legal: LegalName | None = None) -> SiteOperator:
@@ -117,6 +148,16 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
             others.extend((number, span, url) for number, span in stated)
     if shared_kind == "section":
         return SiteOperator("section", "section_of_shared_domain", "The website is a section of a larger organisation's domain.", tuple(signals))
+    related = registry_group_company_named_by(_label(site_url), profile, legal)
+    if related:
+        # V3.1: the domain carries the name of another company in the registry group (BE KRAFTSALG AS's site
+        # bodoenergi.no states its own org. number but trades as "Bodø Energi", the name of its parent BODØ ENERGI AS).
+        # The site is still this company's website, but stories and profiles under the shared name may be either
+        # company's: only items naming this company are attributed to it.
+        return SiteOperator("group_or_brand", "site_named_after_registry_group_company",
+                            f"The website's name is that of {related[1]} ({related[0]}), another company in this company's registry group; "
+                            "stories and profiles under that name may be either company's, so only items naming this company are attributed to it.",
+                            tuple(signals[:1]) + ({"signal": "site_named_after_registry_group_company", "organisation_number": related[0], "name": related[1]},))
     if own_stated:
         return SiteOperator("self", "own_org_number_on_site", "The company's own organisation number is stated on the website.", tuple(signals[:1]))
     if others:

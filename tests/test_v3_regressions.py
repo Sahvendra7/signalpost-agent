@@ -129,10 +129,21 @@ class NewsClassification(unittest.TestCase):
         self.assertNotIn("Siste nytt · Beredt AS", news_titles("916303122"))
 
     def test_controls_keep_their_news(self):
+        """V3.1 counts. Every published item must now be anchored to the company by its own words (it names the company,
+        speaks in its voice or states a company development; docs/v31-news-analysis.md §6). Items whose captured text
+        does neither are withheld as not_anchored_to_the_company, and these controls lose exactly those:
+        Birralee 20 -> 18 ("From Seeds to Science…", "Stage, Story and Study…": class reports that never name the school
+        or say "we"), Grønsand 15 -> 14 ("Julaften alene sammen": a two-sentence teaser), Beredt 6 -> 5 ("Når kan
+        Ekspertbistand være aktuelt?": an explainer of a public scheme). Kilis keeps all 10 plain-slug WordPress posts."""
         self.assertEqual(len(news_urls("875606662")), 10, "Kilis Hockey plain-slug WordPress posts")
-        self.assertEqual(len(news_urls("936269044")), 20, "Birralee posts")
-        self.assertEqual(len(news_urls("919378875")), 15, "Grønsand posts")
-        self.assertGreaterEqual(len(news_urls("916303122")), 6, "Beredt's own articles")
+        self.assertEqual(len(news_urls("936269044")), 18, "Birralee posts")
+        self.assertEqual(len(news_urls("919378875")), 14, "Grønsand posts")
+        self.assertEqual(len(news_urls("916303122")), 5, "Beredt's own articles")
+        self.assertIn("“Hopp i det” - gir ungdom en ny sjanse.", news_titles("916303122"), "names the company in the genitive (Beredts)")
+        self.assertIn("Verdensdagen for psykisk helse", news_titles("875606662"), "addresses the reader but reports the club's own event (inviterer vi)")
+        for org in ("875606662", "936269044", "919378875", "916303122"):
+            for claim in available(org, "news_item"):
+                self.assertTrue((claim.get("attribution") or {}).get("basis"), f"{org}: every published item states why it qualifies")
 
     def test_withheld_news_is_never_reported_as_none_found(self):
         reason = next(claim["reason"] for claim in replay("980932834")["claims"] if claim["field"] == "news_item")
@@ -140,13 +151,89 @@ class NewsClassification(unittest.TestCase):
         self.assertIn("item not about entity on group or brand site: 31", reason)
 
     def test_911771098_blog_control(self):
-        """The WordPress case (C300 fixture, captured 2026-10-17): all 20 posts, as at ff3b515. "Du store verden" was lost
-        to the blanket second-person title rule (6efd3cd) and is kept by the context-aware rule (remediation R6)."""
+        """The WordPress case (C300 fixture, captured 2026-10-17): 20 posts at ff3b515. "Du store verden" was lost to the
+        blanket second-person title rule (6efd3cd), kept by the context-aware rule (remediation R6), and under V3.1 is kept
+        because its own text reports a development in the author's voice ("…oversettes…"). V3.1 withholds the four
+        homepage cards whose captured text is only a book title and an excerpt ("Navnebringeren", "Operasjon Radius",
+        "Operasjon Mumie", "Skisser og ferdige sider til «Operasjon Plastpose»"): nothing in it says they are the
+        company's news, so they are withheld rather than guessed."""
         from helpers.c12_replay import C300_FIXTURES
         envelope = run_batch([InputRow(0, "911771098", "911771098")], run_id="v3-regression", **Fixture("911771098", base=C300_FIXTURES).injected())["envelopes"][0]
         titles = [claim["value"].get("title") for claim in envelope["claims"] if claim["field"] == "news_item" and claim["availability"] == "available"]
-        self.assertEqual(len(titles), 20)
+        self.assertEqual(len(titles), 16)
         self.assertIn("Du store verden", titles)
+        du = next(claim for claim in envelope["claims"] if claim["field"] == "news_item" and (claim.get("value") or {}).get("title") == "Du store verden")
+        self.assertEqual(du["attribution"]["code"], "development")
+        for title in ("Navnebringeren", "Operasjon Radius", "Operasjon Mumie"):
+            self.assertNotIn(title, titles)
+
+
+class V31NewsContent(unittest.TestCase):
+    """V3.1: the eval120 independent news errors (docs/v31-news-analysis.md §1), replayed from the bytes captured by
+    the baseline ff3b515 on 2026-11-01. Each was published by V3 candidate 2; each is now withheld by what its own
+    text says, or by whose site it is on."""
+
+    def withheld(self, org: str) -> str:
+        return next(claim.get("reason") or "" for claim in replay(org)["claims"] if claim["field"] == "news_item" and claim["availability"] != "available") \
+            if not available(org, "news_item") else ""
+
+    def test_property_and_plot_listings_are_not_news(self):
+        """911711664 Huspro: blog posts presenting plots and houses for sale (category A1)."""
+        titles = news_titles("911711664")
+        for title in ("Fra oven, Holaker", "Holaker, Maura - flott eneboligtomt", "Hurdal, Brustadsletta", "Storslått Villa!",
+                      "Enebolig med fokus på bærekraft og miljø sentralt i Maura"):
+            self.assertNotIn(title, titles)
+        self.assertEqual(news_titles("998355389"), [], "998355389 Kystsnekker'n: a completed job shown as a reference")
+        self.assertIn("content listing", self.withheld("998355389"))
+
+    def test_reader_advice_and_listicles_are_not_news(self):
+        """921774087 Oslo PT (opts), 985095779 Nordic Solutions, 924782544 Takstmannen, 998263743 Sjokoladesmaking (A2, D)."""
+        titles = news_titles("921774087")
+        for title in ("Bekymrer du deg mer nå enn før du ble gravid?", "Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker",
+                      "Markløft: Den ultimative øvelsen for styrke og funksjonalitet", "Treningsdagbok er forskjellen på å trene og faktisk få resultater"):
+            self.assertNotIn(title, titles)
+        self.assertEqual(news_titles("985095779"), [])
+        self.assertIn("content advice: 3", self.withheld("985095779"))
+        self.assertNotIn("Avhendingsloven - tryggere bolighandel", news_titles("924782544"))
+        self.assertNotIn("Ikke tygg sjokoladen", news_titles("998263743"))
+        self.assertIn("Vi legger ned nettbutikken", news_titles("998263743"), "the company's own announcement stays")
+
+    def test_service_pages_in_a_blog_are_not_news(self):
+        """848720712 SOBBL: "Melde skade?" and "Bli Medlem" are standing service pages (A4)."""
+        self.assertEqual(news_titles("848720712"), [])
+        self.assertIn("content service", self.withheld("848720712"))
+
+    def test_promotional_posts_that_never_anchor_to_the_company_are_withheld(self):
+        """927176963 Day of Week: thought-leadership posts that neither name the company nor speak in its voice (A3)."""
+        self.assertEqual(news_titles("927176963"), [])
+        self.assertIn("not anchored to the company", self.withheld("927176963"))
+
+    def test_cms_course_page_in_the_feed_is_not_news(self):
+        """974683296 FFOR: "Akvakurs 2026" is a course booking page carried by the feed (C)."""
+        self.assertNotIn("Akvakurs 2026", news_titles("974683296"))
+
+    def test_job_advertisement_in_the_feed_is_careers_content(self):
+        """996902161 Sabi Sushi (diag80): a job ad in the WordPress feed is not news; the restaurant openings stay."""
+        titles = news_titles("996902161")
+        self.assertNotIn("Restaurantsjef | Sabi Sushi Bodø", titles)
+        self.assertIn("Sabi Sushi åpner på Kokstad i 2026", titles)
+
+    def test_site_named_after_the_registry_parent(self):
+        """990892687 BE KRAFTSALG AS: bodoenergi.no states BE Kraftsalg's own org. number but carries the name of its
+        registry parent BODØ ENERGI AS (890892612). Stories and profiles under "Bodø Energi" may be either company's:
+        none names BE Kraftsalg, so none is attributed (5 news errors and 3 social errors in eval120, category B)."""
+        self.assertEqual(news_titles("990892687"), [])
+        self.assertIn("item not about entity on group or brand site", self.withheld("990892687"))
+        self.assertEqual(profiles("990892687"), set())
+        self.assertEqual([claim["value"] for claim in available("990892687", "official_website")], ["https://bodoenergi.no/"],
+                         "the website itself is still the company's")
+
+    def test_every_published_item_says_why_it_qualifies(self):
+        for org in ("911711664", "921774087", "974683296", "996902161", "998263743"):
+            for claim in available(org, "news_item"):
+                attribution = claim.get("attribution") or {}
+                self.assertIn(attribution.get("code"), ("development", "company_named", "company_voice"), (org, claim["value"]))
+                self.assertTrue(attribution.get("basis") and attribution.get("source_tier"), (org, claim["value"]))
 
 
 class CareersPages(unittest.TestCase):

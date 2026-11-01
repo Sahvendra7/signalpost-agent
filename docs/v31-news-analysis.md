@@ -1,6 +1,7 @@
 # V3.1 — news false-positive analysis (eval120, frozen `7b8fc69`)
 
-**Diagnosis only; no code was changed for this document.** Every news item that V3 candidate 2 (`7b8fc69`) published
+**§1–§5 are diagnosis only; no code was changed for them** (commit 44c5f59). §6–§8 were added afterwards and
+describe the comparison of approaches and the chosen design. Every news item that V3 candidate 2 (`7b8fc69`) published
 on the independent `eval120` sample and that was labelled incorrect (29 items) was re-run through an instrumented
 replay of the captured bytes, using `measurements/v3-remediation-2026-11-01/audits/eval120/diag-29-errors.json`. For
 each item the replay records:
@@ -34,7 +35,7 @@ The "8 group errors" figure counts these 5 news items together with the **3 soci
 | A2 | Reader advice, guide or tips | 8 | As A1. The advice rules look only at titles. Most of these titles carry no advice marker ("Markløft: Den ultimative øvelsen …", "Treningsdagbok er forskjellen …"). The body is plainly second-person advice. |
 | A3 | Promotional or thought-leadership post | 3 | As A1. Blog listing cards (`/en/blog/…`) with a visible date. |
 | A4 | Service or membership page via the blog | 2 | A WordPress blog post ("Melde skade?") and a page with JSON-LD `datePublished` under `/blog/nyheter/`. |
-| B | Parent/group story on the parent's website | 5 | The registry website of BE KRAFTSALG AS is `bodoenergi.no`. V3's operator assessment returns `self`, because nothing on the site names another organisation number and the domain is not obviously foreign. The registry's group structure (`konsernstruktur`, already fetched) shows BE KRAFTSALG AS as a 100% subsidiary of **BODØ ENERGI AS (890892612)**, the organisation the domain is named after. |
+| B | Group-brand story on a site named after the registry parent | 5 | The registry website of BE KRAFTSALG AS is `bodoenergi.no`. V3's operator assessment returns `self`, because the site states BE Kraftsalg's own organisation number. The registry's group structure (`konsernstruktur`, already fetched) shows BE KRAFTSALG AS as a 100% subsidiary of **BODØ ENERGI AS (890892612)**, the organisation the domain is named after. *Corrected in §6.1:* the site is BE Kraftsalg's own (footer: "© 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687"), trading under the parent's brand, so a story under the "Bodø Energi" name may be either company's. |
 | C | Non-article CMS page in the feed | 3 | A WordPress site uses posts as pages: a course offer ("Akvakurs 2026"), a topic page ("Mekanisk behandling") and a "new website" welcome post. They arrive through the feed or the news listing. |
 | D | General topic article in a news section | 1 | `/aktuelt/` listing (Frosterød Takst: "Avhendingsloven – tryggere bolighandel", a law explainer). |
 
@@ -108,8 +109,9 @@ The V3.1 rule must therefore be content-based. No URL or company exception is us
 | `linkedin.com/company/bodo-energi` | `handle_is_own_domain_name` | Same. |
 
 All three errors come from the same defect as category B. When a subsidiary's registry website is named after its
-registry parent, V3 treats the site as self-operated. **This is general:** every subsidiary whose registry website
-field points at the parent's site is affected. It is not specific to this company.
+registry parent, V3 treats every name on the site as the subsidiary's. **This is general:** every subsidiary whose
+registry website carries a registry group company's name is affected. It is not specific to this company.
+(*Corrected in §6.1:* the website is the subsidiary's own, not the parent's; the profiles carry the shared brand.)
 
 ## 5. Implications for the design
 

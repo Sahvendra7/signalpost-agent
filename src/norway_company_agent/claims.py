@@ -401,6 +401,8 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         extra = {"event_date": item.get("date"), "source_page": item.get("page_url")}
         if item.get("subject_basis"):
             extra["subject_basis"] = item["subject_basis"]
+        if item.get("news_basis"):
+            extra["attribution"] = item["news_basis"]  # V3.1: why this item qualifies as the company's news
         claims.add("public_activity", "news_item", {key: val for key, val in body.items() if val is not None}, page, span, confidence=confidence, method=str(item.get("method")), extra=extra)
     if not activities and manager:
         claims.absent("public_activity", "news_item", "not_applicable", held.format("news items") + f" unless an item names it ({held_news} dated item(s) on the site, none naming it)")

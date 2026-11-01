@@ -36,7 +36,7 @@ from bs4 import BeautifulSoup
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
 from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relation, named_entities
 from .attribution.jobs import decide_job, is_recruiter
-from .attribution.news import NEWS_SEGMENT, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, subject_of
+from .attribution.news import NEWS_SEGMENT, assess_content, company_names, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, news_policy_decision, source_tier, subject_of
 from .attribution.operator import SiteOperator, assess_operator, sibling_names
 from .attribution.social import decide_profile
 from .identity import _tokens, assess_social_identity
@@ -159,6 +159,9 @@ def is_shared_site_section(url: str) -> bool:
 
 def _host(url: str) -> str:
     return (urllib.parse.urlsplit(url).hostname or "").casefold().rstrip(".").removeprefix("www.")
+
+
+NEWS_POLICY = "anchored"  # attribution.news.POLICIES; the alternatives are kept only to reproduce the V3.1 comparison
 
 
 def _registered_domain_label(site_url: str) -> str:
@@ -284,7 +287,10 @@ def feed_items(xml: bytes) -> list[dict[str, Any]]:
         summary = node.find(["description", "summary"])
         snippet = BeautifulSoup(summary.get_text(" ", strip=True), "lxml").get_text(" ", strip=True)[:240] if summary else None
         categories = [" ".join(item.get_text(" ", strip=True).split())[:80] for item in node.find_all("category")][:12]
-        items.append({"title": title.get_text(" ", strip=True)[:200] if title else None, "url": href, "date": date, "date_kind": kind if date else None, "date_text": date_text if date else None, "summary": snippet, "method": "site_feed", "categories": categories})
+        # V3.1: the entry's full text (content:encoded / content, else the description) is read for classification only
+        content = node.find(["encoded", "content"]) or summary
+        body = " ".join(BeautifulSoup(content.get_text(" ", strip=True), "lxml").get_text(" ", strip=True).split())[:4000] if content else None
+        items.append({"title": title.get_text(" ", strip=True)[:200] if title else None, "url": href, "date": date, "date_kind": kind if date else None, "date_text": date_text if date else None, "summary": snippet, "method": "site_feed", "categories": categories, "body": body})
     return items
 
 
@@ -329,7 +335,8 @@ def html_items(html: str, base_url: str) -> list[dict[str, Any]]:
         if not date:
             continue
         heading = article.select_one("h1, h2, h3, h4")
-        items.append({"title": heading.get_text(" ", strip=True)[:200] if heading else None, "url": _article_link(article, heading, base_url, own_domain), "date": date, "date_kind": kind, "date_text": str(node.get("datetime")), "summary": None, "method": "article_time_datetime"})
+        card = " ".join(article.get_text(" ", strip=True).split())[:4000]  # V3.1: the card's own text, for classification only
+        items.append({"title": heading.get_text(" ", strip=True)[:200] if heading else None, "url": _article_link(article, heading, base_url, own_domain), "date": date, "date_kind": kind, "date_text": str(node.get("datetime")), "summary": None, "method": "article_time_datetime", "body": card})
     return items
 
 
@@ -1006,6 +1013,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     # V3 §B6: each candidate is classified on its own (the container is not proof) and attributed to a subject.
     bursts = burst_members([(page.url, item) for item, page in candidates])
     outside_section = _outside_listing_section(candidates)
+    # V3.1: the names an item on this site may use for the company (content anchoring; attribution.news.company_names)
+    anchor_names = company_names(legal, site_label if domain_named else "")
     # Remediation R3: how many distinct candidates the site keeps in its own news section (/nyheter/…, /aktuelt/…).
     news_section_items = len({str(item.get("url") or "") for item, page in candidates if item.get("url")
                               and in_site_scope(str(item["url"]), site_url)
@@ -1047,6 +1056,19 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                 reason = "evergreen_advice_not_news"
             elif subject == "THIS":
                 item = {**item, "subject_basis": basis}
+            if not reason:
+                # V3.1 (docs/v31-news-analysis.md): where an item appears is never enough; what it says must qualify.
+                own_page = by_url.get(item_url) if item_url != page.url else (page if page.kind == "html" and is_article_path(page.url) else None)
+                body = " ".join(filter(None, [item.get("body") or item.get("summary"), own_page.text[:4000] if own_page is not None and own_page.kind == "html" else None]))
+                tier = source_tier(item_url, page.url if page.kind == "html" else "", page.url if page.kind == "feed" else "")
+                content = assess_content(item.get("title") or "", body, names_company=subject == "THIS", names=anchor_names)
+                withheld = news_policy_decision(NEWS_POLICY, tier=tier, content=content, names_company=subject == "THIS")
+                if withheld is not None:
+                    reason = withheld.code
+                else:
+                    item = {**item, "news_basis": {"code": content.kind if content.kind != "insufficient" else "current_rules",
+                                                   "basis": content.basis,
+                                                   "source_tier": tier, **({"evidence": content.evidence} if content.evidence else {})}}
         if reason:
             out.reject("activity", reason, item, page)
             continue
@@ -1065,7 +1087,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         summary = item.get("summary")
         if summary and not page.contains(summary) and not content_words(summary) <= set(words(page.text)):
             summary = None
-        kept[key] = {**{name: value for name, value in item.items() if name != "summary"}, "summary": summary, **_provenance(page)}
+        kept[key] = {**{name: value for name, value in item.items() if name not in ("summary", "body")}, "summary": summary, **_provenance(page)}
     out.activities = list(kept.values())
 
     # Jobs: schema.org JobPosting anywhere, listed positions on careers pages; each must be a single, current

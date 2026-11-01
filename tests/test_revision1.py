@@ -343,7 +343,7 @@ class FinalAuditRegressions(unittest.TestCase):
         # 930870781 Læringsverkstedet Tveit: verified site /barnehage/tveit; the chain's blog post is not its news.
         section = page("https://laringsverkstedet.no/barnehage/tveit", """<html><body><main>
             <div><a href="https://laringsverkstedet.no/blogg/juridisk-og-baerekraft"><h3>Juridisk og bærekraft</h3></a><span>19. mars 2024</span></div>
-            <div><a href="https://laringsverkstedet.no/barnehage/tveit/nyheter/sommerfest"><h3>Sommerfest på Tveit</h3></a><span>12. juni 2026</span></div>
+            <div><a href="https://laringsverkstedet.no/barnehage/tveit/nyheter/sommerfest"><h3>Sommerfest på Tveit</h3></a><span>12. juni 2026</span><p>Vi inviterer alle familier til sommerfest.</p></div>
             </main></body></html>""")
         facts = extract_site_facts({"name": "LÆRINGSVERKSTEDET TVEIT BARNEHAGE AS"}, [section])
         self.assertEqual([item["title"] for item in facts.activities], ["Sommerfest på Tveit"])

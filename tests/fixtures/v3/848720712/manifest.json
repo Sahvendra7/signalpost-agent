@@ -1,0 +1,189 @@
+{
+ "organisation_number": "848720712",
+ "name": "SARPSBORG OG OMEGNS BOLIGBYGGELAG",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.sobbl.no/",
+  "retrieved_at": "2026-11-01T20:14:27.556509Z",
+  "value": {
+   "requested_url": "https://www.sobbl.no/",
+   "final_url": "https://www.sobbl.no/",
+   "registered_domain": "sobbl.no",
+   "title": "Hjem | SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+   "description": "SOBBL er et samvirkeforetak som har til hovedformål å skaffe boliger til andelseierne gjennom borettslag eller på annen måte og å forvalte boliger for andelseierne.",
+   "main_text_excerpt": "Nytt hjem?\nBli medlem og bruk forkjøpsretten din for å skaffe deg ny bolig.\nAktuelt\nHold deg oppdatert på siste nytt!\nForkjøpsrett\nDen viktigste fordelen du har som medlem. Som medlem, og med best ansiennitet, trenger du ikke være med på en budrunde.\nMedlemsfordeler\nEt medlemskap i SOBBL er mer enn muligheten til å benytte forkjøpsrett! Alle medlemmer i SOBBL får en rekke medlemsfordeler, se hvilke her.",
+   "identity_text_excerpt": "Snarveier Boligprosjekter Forkjøpsrett Min side Bli medlem Skademelding Medlemsfordeler Styreportalen SOBBL Sarpsborg og Omegns Boligbyggelag forvalter i dag ca. 230 boligselskap med ca. 6000 boliger og har ca. 17.000 medlemmer. Kontakt oss Åpningstider: Mandag - fredag 09:00 - 15:00 I perioden 15.05 - 15.09: 09:00-14:30 Besøksadresse: St. Mariegt. 112 Postboks 335, 1702 Sarpsborg Tlf: 69 13 10 00 E-post: sobbl@sobbl.no Org.nr: 848 720 712 Copyright © [year] [sitename] [personvern] [mintmedia]",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://www.sobbl.no/#organization",
+     "name": "Sarpsborg og Omegns boligbyggelag",
+     "url": "https://www.sobbl.no",
+     "email": "sobbl@sobbl.no",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "St. Marie Gate 112",
+      "addressRegion": "SARPSBORG",
+      "postalCode": "1725"
+     },
+     "logo": {
+      "@type": "ImageObject",
+      "@id": "https://www.sobbl.no/#logo",
+      "url": "https://www.sobbl.no/wp-content/uploads/2020/07/SOBBL_ny_tekst.png",
+      "contentUrl": "https://www.sobbl.no/wp-content/uploads/2020/07/SOBBL_ny_tekst.png",
+      "caption": "Sarpsborg og Omegns boligbyggelag",
+      "inLanguage": "en-US",
+      "width": "500",
+      "height": "297"
+     },
+     "contactPoint": [
+      {
+       "@type": "ContactPoint",
+       "telephone": "69 13 10 00",
+       "contactType": "customer support"
+      }
+     ],
+     "location": {
+      "@id": "https://www.sobbl.no/#place"
+     }
+    }
+   ],
+   "content_sha256": "d6cbfc1c22b718fef97a658d251ccb4deca8b6b7ce0b70b088ea590cb1d0d636",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.sobbl.no/",
+     "title": "Hjem | SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+     "main_text_excerpt": "Nytt hjem?\nBli medlem og bruk forkjøpsretten din for å skaffe deg ny bolig.\nAktuelt\nHold deg oppdatert på siste nytt!\nForkjøpsrett\nDen viktigste fordelen du har som medlem. Som medlem, og med best ansiennitet, trenger du ikke være med på en budrunde.\nMedlemsfordeler\nEt medlemskap i SOBBL er mer enn muligheten til å benytte forkjøpsrett! Alle medlemmer i SOBBL får en rekke medlemsfordeler, se hvilke her.",
+     "content_sha256": "d6cbfc1c22b718fef97a658d251ccb4deca8b6b7ce0b70b088ea590cb1d0d636"
+    },
+    {
+     "url": "https://www.sobbl.no/kontakt-sobbl/",
+     "title": "Kontakt SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+     "main_text_excerpt": "Kontakt SOBBL\nFor henvendelser vedr. medlemskap, må medlemsnr. eller fødselsdato oppgis i meldingen.\nSOBBL\nÅpningstider \nMandag – fredag 09:00 – 15:00\nI perioden 15.05 – 15.09: 09:00-14:30\nBesøksadresse: \nSt. Marie Gate 112\n1725 SARPSBORG\nPostadresse: \nPostboks 335\n1702 SARPSBORG\nTelefon: 69 13 10 00\nE-post: sobbl@sobbl.no",
+     "identity_text_excerpt": "Snarveier Boligprosjekter Forkjøpsrett Min side Bli medlem Skademelding Medlemsfordeler Styreportalen SOBBL Sarpsborg og Omegns Boligbyggelag forvalter i dag ca. 230 boligselskap med ca. 6000 boliger og har ca. 17.000 medlemmer. Kontakt oss Åpningstider: Mandag - fredag 09:00 - 15:00 I perioden 15.05 - 15.09: 09:00-14:30 Besøksadresse: St. Mariegt. 112 Postboks 335, 1702 Sarpsborg Tlf: 69 13 10 00 E-post: sobbl@sobbl.no Org.nr: 848 720 712 Copyright © [year] [sitename] [personvern] [mintmedia]",
+     "content_sha256": "2083f0198c79b7d26c13c304ebfeb78e7552e2ace9d2bd466472a15a8f589992"
+    },
+    {
+     "url": "https://www.sobbl.no/blog/nyheter/beredskap/",
+     "title": "Beredskap I Borettslag Og Sameier | SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+     "main_text_excerpt": "Hva kan du som boligeier gjøre alene og hva kan boligselskapet gjøre for å sikre bedre beredskap? Og ikke minst, har de begge noen forpliktelser i denne sammenheng? Fellesskapet av beboere i boligselskapet vil kunne ha stor nytte av et samarbeid. Man vil kunne oppnå bedre og mer hensiktsmessig beredskap i felleskap enn hva den enkelte boligeier kan klare alene. Her får du et innblikk i styrets og boligeiers rettslige forpliktelser, og tips til hvordan styret kan starte opp arbeidet.\nAv: Line C. B. Bjerkek 11. november 2024\nDirektoratets anbefalinger\nMyndighetene anbefaler at man skal være forberedt på å klare seg i en uke ved en krise. Dette innebærer at man har tilstrekkelig mat og drikke, at man har mulighet for å klare seg uten strøm, at man har tilstrekkelig med medisiner og andre nødvendighetsartikler osv.\nUtfordringene for deg som bor i leilighet\nDet er mindre lagringsplass i leiligheter enn i en enebolig. De fleste har imidlertid en eller flere boder, og noe mulighet til å lagre noe mat og drikke. 20 liter vann pr person kan imidlertid ta ganske mye plass for en familie som bor i en liten leilighet. Mange boliger har heller ikke noen alternativ oppvarmingskilde, som peis eller vedovn, i tilfelle strømmen skulle bli borte over lengre tid i vinterhalvåret. Dette kan man bøte på ved å vurdere å installere et ildsted, men også ved å kjøpe gassfyrte ovner. Dette leder imidlertid til spørsmål knyttet til brannsikkerhet ved montering av ildsted og regler for oppbevaring av gass.\nMuligheten til å lagre\nDu kan bruke fellesarealer og arealer du har eksklusiv bruksrett til, som leiligheten eller boden din, til det som er vanlig bruk for denne typen arealer. Dette følger både av borettslagsloven og eierseksjonsloven. Du kan derfor benytte boden eller boligen din til lagring av en del av din beredskap, men det er flere ting du må huske på.\nDu må bruke boden eller boligen på en måte som ikke er til unødvendig skade eller ulempe for dine naboer. Dersom din vannbeholder lekker vann fra loftsboden og ned i leiligheten under, vil du kunne bli ansvarlig for tapet naboen lider gjennom de vannskader som oppstår. Lagring av større mengder mat i en bod, kan tiltrekke seg skadedyr dersom det ikke er lagret på riktig måte. Du kan heller ikke lagre større mengder gass i boden. Gass skal lagres stående, på et stabilt underlag, og det skal være god avstand til antennelseskilder. Gass skal ikke lagres i kjelleren, siden propan er tyngre enn luft. Dette vil kunne utsette dine naboer for en unødvendig risiko. Å lagre gass i en rotete kjellerbod vil derfor være forbudt og i strid med reglene, og et mislighold av dine plikter som eier av bolig i borettslag eller sameier.\nSom boligeier må du heller ikke bruke fellesarealene slik at det er til skade eller ulempe for dine naboer. Mange tror for eks. at man kan sette en bokhylle eller seng, som ikke får plass i egen bod, i fellesarealene. Mange tror også at man kan etablere en form for garderobe på gangen utenfor leiligheten, ofte på grunn av lite plass i egen entre. Dette er imidlertid ikke tillatt, og kan stenge for rømningsveier, samt utgjøre fare dersom disse gjenstander antennes og avgir giftig røyk i det som ellers skal være en trygg rømningsvei. Styret kan imidlertid sette av arealer i fellesarealene til felles lagring av større gjenstander dersom man har mulighet til dette. Dette kan være praktisk for møbler eller vinteropplag av sykler.\nEr man forpliktet til å etablere felles løsninger i borettslag og sameier?\nDet foreligger ikke noen offentligrettslig forpliktelse for styret til å sikre den enkelte boligeiers beredskap. Man vil imidlertid kunne ha stor nytte av et samarbeid, og man vil kunne oppnå en bedre beredskap i fellesskap enn det den enkelte beboer kan alene. Styret må selvfølgelig vurdere dette opp mot andre forpliktelser og annen bruk av fellesarealene, men det er sannsynlig at beboerne vil oppfatte dette som et positivt tiltak.\nHva kan styret gjøre?\nUnder finner du noen tips til ting styret kan iverksette eller som du kan foreslå for styret.\n- Ledig arealer i kjelleren kan benyttes til et felles vannlagringsanlegg. Det kan være felles for alle, eller for grupper av beboere, avhengig av hva som er hensiktsmessig i det enkelte boligselskap.\n- Styret kan gi informasjon om regler for lagring i boder og egen bolig, slik at sikkerheten ivaretas. Dette vil være lurt å gjøre i husordensreglene, for eks. å gi informasjon om lagring av gass og mat i kjellerbod. Selv om dette er regler som gjelder gjennom alminnelig lovgivning allerede, er det ikke sikkert at alle beboere kjenner til dette i like stor grad. Det kan være en billig forsikring mot skader å gi god informasjon.\n- Ha gode og lettfattelige vedtekter og husordensregler lett tilgjengelig for beboerne. Dette kan gjøres ved oppslag i oppgangen eller ved at de gjøres enkelt tilgjengelig på boligselskapets nettsider eller andre digitale plattformer. Disse dokumentene er viktige for å gi beboerne lett tilgang på kunnskap om ",
+     "identity_text_excerpt": "Snarveier Boligprosjekter Forkjøpsrett Min side Bli medlem Skademelding Medlemsfordeler Styreportalen SOBBL Sarpsborg og Omegns Boligbyggelag forvalter i dag ca. 230 boligselskap med ca. 6000 boliger og har ca. 17.000 medlemmer. Kontakt oss Åpningstider: Mandag - fredag 09:00 - 15:00 I perioden 15.05 - 15.09: 09:00-14:30 Besøksadresse: St. Mariegt. 112 Postboks 335, 1702 Sarpsborg Tlf: 69 13 10 00 E-post: sobbl@sobbl.no Org.nr: 848 720 712 Copyright © [year] [sitename] [personvern] [mintmedia]",
+     "content_sha256": "da314e70a3724fee8bd600bf1200b3a23d1a0ebd143b1444f1748dcc6d2a1689"
+    },
+    {
+     "url": "https://www.sobbl.no/blog/nyheter/minside/",
+     "title": "Bli Medlem | SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+     "main_text_excerpt": "",
+     "identity_text_excerpt": "Snarveier Boligprosjekter Forkjøpsrett Min side Bli medlem Skademelding Medlemsfordeler Styreportalen SOBBL Sarpsborg og Omegns Boligbyggelag forvalter i dag ca. 230 boligselskap med ca. 6000 boliger og har ca. 17.000 medlemmer. Kontakt oss Åpningstider: Mandag - fredag 09:00 - 15:00 I perioden 15.05 - 15.09: 09:00-14:30 Besøksadresse: St. Mariegt. 112 Postboks 335, 1702 Sarpsborg Tlf: 69 13 10 00 E-post: sobbl@sobbl.no Org.nr: 848 720 712 Copyright © [year] [sitename] [personvern] [mintmedia]",
+     "content_sha256": "9a1223c0ea7bdfaf776ddfa991e1378ffdbbf86babeb473190329005c7b95522"
+    },
+    {
+     "url": "https://www.sobbl.no/blog/nyheter/ny-medlemsfordel-hurtigruta-carglass/",
+     "title": "Medlemsfordel: Polar Kraft | SOBBL | Sarpsborg Og Omegns Boligbyggelag",
+     "main_text_excerpt": "For våre medlemmer er det viktig å ha en trygg og stabil strømleverandør. Medlemsfordelen fra Polar Kraft er en veldig god avtale for deg som er medlem i SOBBL.\nHer er noen av dine medlemsfordeler:\n✅ Du får 2% medlemsbonus på ditt strømforbruk etter strømstøtte er trukket fra\n✅ Polar Kraft-appen gir deg full kontroll\n✅ Prisutviklingen kan du følge i Polar Kraft-appen og på Min side\n✅ Avtalen gjelder kun privatkunder og forutsetter godkjent kredittvurdering\n✅ Fastbeløp for privatpersoner: 39 kr/mnd i Sør Norge\nLes mer her",
+     "identity_text_excerpt": "Snarveier Boligprosjekter Forkjøpsrett Min side Bli medlem Skademelding Medlemsfordeler Styreportalen SOBBL Sarpsborg og Omegns Boligbyggelag forvalter i dag ca. 230 boligselskap med ca. 6000 boliger og har ca. 17.000 medlemmer. Kontakt oss Åpningstider: Mandag - fredag 09:00 - 15:00 I perioden 15.05 - 15.09: 09:00-14:30 Besøksadresse: St. Mariegt. 112 Postboks 335, 1702 Sarpsborg Tlf: 69 13 10 00 E-post: sobbl@sobbl.no Org.nr: 848 720 712 Copyright © [year] [sitename] [personvern] [mintmedia]",
+     "content_sha256": "1b11a30d896d839af73db4bd1dc2fd80132163f9eca7fe517b81dab15d143fa6"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "sarpsborg",
+     "omegns",
+     "boligbyggelag"
+    ],
+    "matched_tokens": [
+     "boligbyggelag",
+     "omegns",
+     "sarpsborg"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "d6cbfc1c22b718fef97a658d251ccb4deca8b6b7ce0b70b088ea590cb1d0d636",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/848720712": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "69454f90138e1bc0.json.gz",
+   "content_sha256": "69454f90138e1bc088150412a7ad40cfe26877cb9b1abda6fb54358255af665c",
+   "retrieved_at": "2026-11-01T20:14:14.744923Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/848720712": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2c30c1c7363f2b31.json.gz",
+   "content_sha256": "2c30c1c7363f2b315a88a299c3af19d6996d9e283911e5e95fae17982aaf5b17",
+   "retrieved_at": "2026-11-01T20:14:15.453284Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/848720712/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "30553615d593025e.json.gz",
+   "content_sha256": "30553615d593025e5e4e5be3b69db614f79765e1dc05b2c003a42bb098154a90",
+   "retrieved_at": "2026-11-01T20:14:17.600407Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/848720712": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:14:16.170271Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=848720712&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "a3b8d504c04e6a59.json.gz",
+   "content_sha256": "a3b8d504c04e6a59b65f77c0186d31e6d891139028df577155cd9d8c0d70dc50",
+   "retrieved_at": "2026-11-01T20:14:16.881499Z"
+  },
+  "https://www.sobbl.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "d6cbfc1c22b718fe.html.gz",
+   "content_sha256": "d6cbfc1c22b718fef97a658d251ccb4deca8b6b7ce0b70b088ea590cb1d0d636",
+   "retrieved_at": "2026-11-01T20:14:29.022625Z"
+  },
+  "https://www.sobbl.no/kontakt-sobbl/": {
+   "kind": "site",
+   "status": 200,
+   "file": "2083f0198c79b7d2.html.gz",
+   "content_sha256": "2083f0198c79b7d26c13c304ebfeb78e7552e2ace9d2bd466472a15a8f589992",
+   "retrieved_at": "2026-11-01T20:14:30.216729Z"
+  },
+  "https://www.sobbl.no/blog/nyheter/minside/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9a1223c0ea7bdfaf.html.gz",
+   "content_sha256": "9a1223c0ea7bdfaf776ddfa991e1378ffdbbf86babeb473190329005c7b95522",
+   "retrieved_at": "2026-11-01T20:14:32.367724Z"
+  },
+  "https://www.sobbl.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "bc4fd44651cece24.xml.gz",
+   "content_sha256": "bc4fd44651cece2498d042c370f97817b7dc148f30823feafb6c6d1267d6400e",
+   "retrieved_at": "2026-11-01T20:14:31.572047Z"
+  }
+ }
+}

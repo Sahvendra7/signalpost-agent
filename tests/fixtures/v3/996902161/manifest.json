@@ -1,0 +1,164 @@
+{
+ "organisation_number": "996902161",
+ "name": "SABI AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://sabi.no/",
+  "retrieved_at": "2026-11-01T20:10:45.986817Z",
+  "value": {
+   "requested_url": "https://www.sabi.no/",
+   "final_url": "https://sabi.no/",
+   "registered_domain": "sabi.no",
+   "title": "Sabi Sushi — Høykvalitets Sushi | Bestill sushi her",
+   "description": "Sabi Sushi – autentisk og fersk sushi laget av råvarer av høy kvalitet. Finn din nærmeste restaurant, bestill takeaway eller catering i Norge.",
+   "main_text_excerpt": "Sunn, ærlig og ekte\nSabi Sushi kurs\n Lær å lage ekte sushi\nLaget med respekt for tradisjonene. Perfekt til selskaper, møter og festlige anledninger.\n- Lær fundamentene\n- Perfekt for nybegynnere\n- Hos oss, eller hos deg\nSabi Omakase\nSabi Omakase i Stavanger var den første sushi-restauranten til å få Michelin-status i Norge. Vår Omakase restaurant i Oslo har for tredje året på rad fått en Michelin stjerne. Beskrivelsen for én Michelin-stjerne er «Eksepsjonelt bra restaurant i sin kategori».",
+   "identity_text_excerpt": "SABI Restauranter Bli franchisetaker Jobb hos Sabi Sushi Kurs Kontakt oss Firmaavtale NYTTIG Logg inn Samarbeidspartnere Salgsbetingelser Personvernerklæring Levert av Mediehuset Bergen",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://sabi.no/#organization",
+     "name": "Sabi Sushi",
+     "url": "https://sabi.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-US",
+      "@id": "https://sabi.no/#/schema/logo/image/",
+      "url": "https://sabi.no/wp-content/uploads/2026/06/sabi_fav.png",
+      "contentUrl": "https://sabi.no/wp-content/uploads/2026/06/sabi_fav.png",
+      "width": 512,
+      "height": 512,
+      "caption": "Sabi Sushi"
+     },
+     "image": {
+      "@id": "https://sabi.no/#/schema/logo/image/"
+     }
+    }
+   ],
+   "content_sha256": "ba3286c8aaef6f178bb00018bfeba2901fec79cd0874ff5bce01c9725af591ec",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://sabi.no/",
+     "title": "Sabi Sushi — Høykvalitets Sushi | Bestill sushi her",
+     "main_text_excerpt": "Sunn, ærlig og ekte\nSabi Sushi kurs\n Lær å lage ekte sushi\nLaget med respekt for tradisjonene. Perfekt til selskaper, møter og festlige anledninger.\n- Lær fundamentene\n- Perfekt for nybegynnere\n- Hos oss, eller hos deg\nSabi Omakase\nSabi Omakase i Stavanger var den første sushi-restauranten til å få Michelin-status i Norge. Vår Omakase restaurant i Oslo har for tredje året på rad fått en Michelin stjerne. Beskrivelsen for én Michelin-stjerne er «Eksepsjonelt bra restaurant i sin kategori».",
+     "content_sha256": "ba3286c8aaef6f178bb00018bfeba2901fec79cd0874ff5bce01c9725af591ec"
+    },
+    {
+     "url": "https://sabi.no/om-oss/",
+     "title": "Om oss — Sabi Sushi",
+     "main_text_excerpt": "Dette er\n Sabi Sushi\n2011\nAlt startet med én liten takeaway i Stavanger, og én kokk som trodde på noe enkelt: gode råvarer, høyt håndverk, ingenting overflødig. Roger Joya sto alene med ansvaret for konseptet i starten — og la grunnmuren for alt Sabi Sushi skulle bli.\n2011\nBare et halvt år senere åpnet Sabi Sushi et mye større sted på Forus. Her sto Sergio Capile på kjøkkenet som sjefskokk. I dag er han konseptansvarlig for hele kjeden — og en av dem som har lært opp flere generasjoner sushikokker etter seg.\n2015\nSabi Sushi tok steget til Haugesund — den første etableringen utenfor Rogaland. Samme år oppsto tanken: hvor langt kan vi egentlig ta denne filosofien? Svaret ble Sabi Omakase i Pedersgata, samme idé løftet til en helt ny opplevelse.\n2016\nI samarbeid med Jonathan Romano og en etablert restaurantgruppe tok Sabi Sushi steget til Oslo. Her fikk Omakase-konseptet også fotfeste, med kokken Alex Cabiao i spissen — og snart sto begge Omakase-restaurantene med hver sin Michelin-stjerne.\n2017\nVladimir Pak, som startet karrieren sin på Forus sammen med Sergio, reiste til Tokyo og vant World Sushi Cup. Sabi Sushi henter årlig sushimestere fra Japan for å trene opp egne kokker — og Vladimirs seier ble den store bekreftelsen på at satsingen faktisk bar frukter, helt til verdenstoppen.\n2020-2022\nSabi Sushi fortsatte reisen nordover og vestover, og ble for alvor en restaurantkjede for hele Norge — med nye kolleger og nye avdelinger i både Trøndelag og Bergen.\n2025\nAiris Zapasnikas, sjefskokk på Sabi Omakase Oslo, hentet hjem VM-tittelen nummer to for Sabi Sushi. Samme år åpnet vi både i Tromsø og i Kristiansand — fra det nordligste til det sørligste stedet i vår historie, på under to måneder.\n2026 og videre\nVeksten fortsetter, og flere nye restauranter er på vei. Fra én liten takeaway i Pedersgata til over 40 restauranter og to verdensmestre — filosofien Roger startet med i 2011, den følger oss fortsatt.\nLokasjoner i Norge\nMichelin-belønnet\n Omakase-restauranter\nOver 400 ansatte med lidenskap\n for faget",
+     "identity_text_excerpt": "SABI Restauranter Bli franchisetaker Jobb hos Sabi Sushi Kurs Kontakt oss Firmaavtale NYTTIG Logg inn Samarbeidspartnere Salgsbetingelser Personvernerklæring Levert av Mediehuset Bergen",
+     "content_sha256": "9eb3de5469ea4f13181ec8bf7e7911b63e83c6457f5281d77eb4b48b149f6ea1"
+    },
+    {
+     "url": "https://sabi.no/kontakt-oss/",
+     "title": "Kontakt oss — Sabi Sushi",
+     "main_text_excerpt": "",
+     "identity_text_excerpt": "SABI Restauranter Bli franchisetaker Jobb hos Sabi Sushi Kurs Kontakt oss Firmaavtale NYTTIG Logg inn Samarbeidspartnere Salgsbetingelser Personvernerklæring Levert av Mediehuset Bergen",
+     "content_sha256": "ac2a4cffa2d433c8e26dc9f00caaba5b3f4671d724d90c1b0455459773c19c90"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "sabi"
+    ],
+    "matched_tokens": [
+     "sabi"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "ba3286c8aaef6f178bb00018bfeba2901fec79cd0874ff5bce01c9725af591ec",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/996902161": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "7747c4a0862a0224.json.gz",
+   "content_sha256": "7747c4a0862a022476751b90db445b1dfaddb98ec3230765c76c3d153077e74e",
+   "retrieved_at": "2026-11-01T20:10:31.687808Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/996902161": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "8c85282a611f204c.json.gz",
+   "content_sha256": "8c85282a611f204c569b6cf172bd5d2909b3589b405a98ebc2c7de4836d74f8f",
+   "retrieved_at": "2026-11-01T20:10:32.403828Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/996902161/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "4821af31f9d505bd.json.gz",
+   "content_sha256": "4821af31f9d505bd36f795747d0c85d44f8a7fa977d5a40b0cc04d4077ea23aa",
+   "retrieved_at": "2026-11-01T20:10:34.587227Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/996902161": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:10:33.153003Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=996902161&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6998f3f3bbd89d26.json.gz",
+   "content_sha256": "6998f3f3bbd89d26b8acacb447b17a809d7b4c92c7ddf7f30b592d03bbca5f1e",
+   "retrieved_at": "2026-11-01T20:10:33.873172Z"
+  },
+  "https://sabi.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ba3286c8aaef6f17.html.gz",
+   "content_sha256": "ba3286c8aaef6f178bb00018bfeba2901fec79cd0874ff5bce01c9725af591ec",
+   "retrieved_at": "2026-11-01T20:10:47.724806Z"
+  },
+  "https://sabi.no/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9eb3de5469ea4f13.html.gz",
+   "content_sha256": "9eb3de5469ea4f13181ec8bf7e7911b63e83c6457f5281d77eb4b48b149f6ea1",
+   "retrieved_at": "2026-11-01T20:10:48.963666Z"
+  },
+  "https://sabi.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ac2a4cffa2d433c8.html.gz",
+   "content_sha256": "ac2a4cffa2d433c8e26dc9f00caaba5b3f4671d724d90c1b0455459773c19c90",
+   "retrieved_at": "2026-11-01T20:10:50.147883Z"
+  },
+  "https://sabi.no/jobb-hos-sabi/": {
+   "kind": "site",
+   "status": 200,
+   "file": "c318781066f660ce.html.gz",
+   "content_sha256": "c318781066f660ce56ad301d414acbb7969e5aed79eaee7e227929f777cd7035",
+   "retrieved_at": "2026-11-01T20:10:52.622739Z"
+  },
+  "https://sabi.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "d71cc179c2f49664.xml.gz",
+   "content_sha256": "d71cc179c2f49664fce734cde978d2bc251219239526c69bbbd705c663bf4606",
+   "retrieved_at": "2026-11-01T20:10:51.542739Z"
+  }
+ }
+}

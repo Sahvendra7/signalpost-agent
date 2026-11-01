@@ -1,0 +1,109 @@
+{
+ "organisation_number": "998355389",
+ "name": "KYSTSNEKKER'N AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.kystsnekkern.no/",
+  "retrieved_at": "2026-11-01T20:12:49.749988Z",
+  "value": {
+   "requested_url": "https://www.kystsnekkern.no/",
+   "final_url": "https://www.kystsnekkern.no/",
+   "registered_domain": "kystsnekkern.no",
+   "title": "Forside - Kystsnekker'n as - vi kan tradisjonelle vinduer og dører",
+   "description": "Med bred bakgrunn innen restaurering av eldre nordlandshus samt et profft snekkerverksted på Vega er vi rustet for å hjelpe deg på vei med ditt prosjekt",
+   "main_text_excerpt": "Hvor skal man vende seg når man skal fikse hus på “gammelmåten”?\nDet er mange hensyn å ta hvis man skal restaurere et gammelt hus tilbake til fordums prakt samtidig som man skal prøve å bevare byggets karakter og gjøre det beboelig etter dagens standard og krav.\nDet krever erfaring og kunnskap fra noen som har jobbet med dette over lengre tid. Kystsnekker’n as har denne kompetansen og erfaringen.\nMed bred bakgrunn innen restaurering av eldre nordlandshus samt et profft snekkerverksted på Vega er vi rustet for å hjelpe deg på vei med ditt prosjekt.",
+   "identity_text_excerpt": "Copyright © 2026 Kystsnekker'n as. Skjåvikveien 44, 8986 VEGA. Telefon 4124 8257",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "fb069a9caa2a71d06e5fe9d9190b6678b4721bbef910588ba46b2a83a831068c",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.kystsnekkern.no/",
+     "title": "Forside - Kystsnekker'n as - vi kan tradisjonelle vinduer og dører",
+     "main_text_excerpt": "Hvor skal man vende seg når man skal fikse hus på “gammelmåten”?\nDet er mange hensyn å ta hvis man skal restaurere et gammelt hus tilbake til fordums prakt samtidig som man skal prøve å bevare byggets karakter og gjøre det beboelig etter dagens standard og krav.\nDet krever erfaring og kunnskap fra noen som har jobbet med dette over lengre tid. Kystsnekker’n as har denne kompetansen og erfaringen.\nMed bred bakgrunn innen restaurering av eldre nordlandshus samt et profft snekkerverksted på Vega er vi rustet for å hjelpe deg på vei med ditt prosjekt.",
+     "content_sha256": "fb069a9caa2a71d06e5fe9d9190b6678b4721bbef910588ba46b2a83a831068c"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "kystsnekker"
+    ],
+    "matched_tokens": [
+     "kystsnekker"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "fb069a9caa2a71d06e5fe9d9190b6678b4721bbef910588ba46b2a83a831068c",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/998355389": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "4a3ade993bef5557.json.gz",
+   "content_sha256": "4a3ade993bef55578714854d8b8a0ecba423ef3780f26c42a9a8d959e6f3e13b",
+   "retrieved_at": "2026-11-01T20:12:41.906566Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/998355389": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "5aa23dd19f3c6c17.json.gz",
+   "content_sha256": "5aa23dd19f3c6c175b53507e002d0bf9c759b124a53fbc4a08c791c0cc2b77a1",
+   "retrieved_at": "2026-11-01T20:12:42.626336Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/998355389/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "47974aa2704f6ec7.json.gz",
+   "content_sha256": "47974aa2704f6ec791a710494c5f6edac276f074ca82291dd0fb08651169f6e7",
+   "retrieved_at": "2026-11-01T20:12:44.983126Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/998355389": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:12:43.351608Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=998355389&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "bad6d29ab18c2a78.json.gz",
+   "content_sha256": "bad6d29ab18c2a7815adc252e2cec282ed5de59da0adc2af0db80821168b00e1",
+   "retrieved_at": "2026-11-01T20:12:44.094699Z"
+  },
+  "https://www.kystsnekkern.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "fb069a9caa2a71d0.html.gz",
+   "content_sha256": "fb069a9caa2a71d06e5fe9d9190b6678b4721bbef910588ba46b2a83a831068c",
+   "retrieved_at": "2026-11-01T20:12:51.405070Z"
+  },
+  "https://www.kystsnekkern.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "0b08a4a454572af7.xml.gz",
+   "content_sha256": "0b08a4a454572af71473a554ae21df019704a105e64770389568ef8cef041ee4",
+   "retrieved_at": "2026-11-01T20:12:52.676660Z"
+  }
+ }
+}

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import re
 import urllib.parse
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Callable
 
@@ -202,3 +203,186 @@ def subject_of(item: dict[str, Any], legal: LegalName, *, names_entity: Callable
     if sibling:
         return "SIBLING", f"tagged as another unit of the group ({', '.join(sorted(sibling))})"
     return "UNSTATED", "the item does not name the company; it is on the company's own website"
+
+
+# ---------- V3.1: source tier, content assessment and the news policy (docs/v31-news-analysis.md) ----------
+
+# A dedicated newsroom or press section. Blogs, magazines, inspiration and tips sections are not newsrooms.
+NEWSROOM_SEGMENT = re.compile(r"^(?:nyheter|nyhet|aktuelt|news|presse|press|pressemeldinger|pressemelding|press-releases?|newsroom|"
+                              r"nyhetsarkiv|siste-nytt|aktuelle-saker|aktueltsaker|nyhetssaker|nytt|media|mediesenter)$")
+BLOG_SEGMENT = re.compile(r"^(?:blogg?|bloggen|blogginnlegg|posts?|innlegg|artikler|artikkel|articles?|magasin|magazine|inspirasjon|"
+                          r"tips|fagstoff|fagartikler|kunnskap|guide|guider|tema)$")
+
+# Evidence that an item reports a development of the company: an event in the company's life.
+DEVELOPMENT = re.compile(
+    r"\b(?:åpner|åpnet|åpning(?:en)?|nyåpn\w*|lanserer|lansert|lansering(?:en)?|ansetter|ansatt|ansettelse|nyansatt\w*|"
+    r"ny(?:e|tt)? (?:daglig leder|leder|sjef|medarbeider\w*|kollega\w*|ansatte?|lærling\w*|partner|eier\w*|styreleder|avdeling|butikk|kontor\w*|lokaler|avtale|kontrakt|bygg|anlegg|lager|verksted|produkt\w*|tjeneste\w*|leveranse\w*|prosjekt|samarbeid)|"
+    r"leveranse\w*|har startet|startet opp|er i gang|kommer i gang|arrangerer|arrangerte|arrangert|inviterer|"
+    r"tiltrer|begynner hos oss|velkommen til (?:oss|teamet|laget)|ønsker \w+(?: \w+)? velkommen|"
+    r"signer(?:er|t|te)|inngå(?:r|tt|tte)|kontrakt(?:en)?|rammeavtale\w*|avtale med|samarbeidsavtale\w*|samarbeid(?:et)? med|"
+    r"kjøper|kjøpt|kjøpte|oppkjøp\w*|overtar|overtatt|fusjoner(?:er|t|te)|fusjonen|fusjon med|slår seg sammen|"
+    r"vinner|vant|vinn(?:ere|eren)|tildelt|tildeles|mottok|mottar|kåret|nominert|finalist|pris(?:en)? for|"
+    r"sertifisert|sertifisering(?:en)?|godkjent som|jubileum|jubilerer|feirer|\d+[- ]års?(?:jubileum|dag)|"
+    r"flytter|flyttet|nye lokaler|utvider|utvidet|utvidelse(?:n)?|etablerer|etablert|starter opp|oppstart(?:en)?|"
+    r"ferdigstilt|overlevert|overlevering(?:en)?|byggestart|spadetak|innviet|innvielse|"
+    r"rekord\w*|omsetning(?:en)?|årsresultat\w*|resultat(?:et)? for|kvartalsrapport\w*|rapport: q\d|investerer|investering(?:en)?|"
+    r"oversettes|oversatt til|solgt til \d+|utgitt|utgir|gir ut|ny bok|nytt album|premiere|"
+    r"sponsoravtale\w*|hovedsponsor|pressemelding|kunngjør|"
+    r"opens?|opened|launch(?:es|ed)?|acquir(?:es|ed)|acquisition|merger|appoint(?:s|ed)|hires?|hired|joins|award(?:ed|s)?|wins?|won|"
+    r"certified|partnership|partners with|signs?|signed|contract|expands?|expansion|milestone|anniversary|annual results|quarterly)\b", re.I)
+# A listing of a property, plot or product for sale, or a completed job shown as a reference.
+LISTING = re.compile(r"\b(?:til salgs|for salg|kommer for salg|meld (?:din )?interesse|prisantydning|visning|tomten?|tomter|eneboligtomt|"
+                     r"kvm|m²|boligareal|soverom|hustype\w*|byggeklar|selveier\w*|leveres med|levert av \w+|ferdigstiller)\b", re.I)
+# A standing service, membership, booking or course offer rather than an article.
+SERVICE = re.compile(r"\b(?:bli medlem|meld(?:e)? skade|skademeldingsskjema|skademelding|ta kontakt (?:med \w+(?: \w+)? )?for påmelding|"
+                     r"påmelding(?:sskjema)?|bestill (?:time|her|nå)|book (?:time|her|nå)|kontakt oss for (?:tilbud|pris)|pris(?:er)? fra kr)\b", re.I)
+# A job advertisement: careers content, reported under job_posting / careers_page, never as news.
+RECRUITMENT = re.compile(r"\b(?:send (?:inn )?(?:din |en )?søknad|søknad (?:og|med) cv|cv og søknad|søknadsfrist(?:en)?|søk (?:på )?stillingen|"
+                         r"ledige? stillinge?r?|vi søker (?:etter )?(?:en|ei|et|nye?|deg|flere)\b|stillingsannonse|tiltredelse etter avtale|"
+                         r"apply now|application deadline|send (?:us )?your (?:cv|application)|we are hiring|we're hiring)", re.I)
+LISTICLE_TITLE = re.compile(r"\b\d+\s+(?:tips|tiltak|råd|steg|måter|grunner|feil|ting|triks|ways|steps|tricks|reasons|mistakes|things)\b", re.I)
+SECOND_PERSON = re.compile(r"\b(?:du|deg|din|dine|ditt|dere|you|your|yours)\b", re.I)
+# The company speaking: "vi/vår" — and "jeg/min" on the many one-person companies' own sites (an author's or a craftsman's).
+COMPANY_VOICE = re.compile(r"\b(?:vi|oss|vår|vårt|våre|we|our|us|jeg|meg|min|mitt|mine|my)\b", re.I)
+
+
+def source_tier(url: str, page_url: str = "", feed_url: str = "") -> str:
+    """newsroom | blog | post. `newsroom`: the item (or the listing it came from) is in a dedicated news or press section.
+    `blog`: a blog, magazine, tips or knowledge section, or a blog feed. `post`: anything else (a root-level CMS post, a
+    homepage card)."""
+    item_segments = segments(url)
+    page_segments = segments(page_url) if page_url and not _same(page_url, url) else []
+    if any(BLOG_SEGMENT.match(segment) for segment in item_segments + page_segments) or "blog" in feed_url.casefold():
+        return "blog"
+    if any(NEWSROOM_SEGMENT.match(segment) for segment in item_segments + page_segments):
+        return "newsroom"
+    return "post"
+
+
+@dataclass(frozen=True)
+class ContentAssessment:
+    kind: str  # development | company_named | company_voice | advice | listing | service | recruitment | insufficient
+    basis: str
+    evidence: str = ""
+
+
+def _quote(match: re.Match[str] | None, text: str) -> str:
+    if not match:
+        return ""
+    start, end = max(0, match.start() - 40), min(len(text), match.end() + 40)
+    return " ".join(text[start:end].split())
+
+
+def company_names(legal: LegalName, site_label: str = "") -> list[str]:
+    """Folded name forms that, written in an item on the company's own self-operated site, refer to the company: the
+    legal name without its legal form, its leading brand words (at least 4 letters, not generic) and the site's own
+    domain name when that is named after the company."""
+    from .names import COUNTIES, DISTINGUISHING, GENERIC_BRANDS, LEGAL_FORMS, NEUTRAL, REGIONS
+    words = [word for word in re.findall(r"[a-z0-9]+", fold(legal.name).replace("a/s", " as ")) if word not in LEGAL_FORMS]
+    vague = GENERIC_BRANDS | COUNTIES | REGIONS | DISTINGUISHING | NEUTRAL | legal.places
+    names = {" ".join(words)} if words else set()
+    for k in range(1, len(words)):
+        brand = " ".join(words[:k])
+        if len(brand.replace(" ", "")) >= 4 and brand.replace(" ", "") not in vague:
+            names.add(brand)
+    if site_label and len(site_label) >= 4 and site_label not in vague:
+        names.add(site_label)
+    return sorted(name for name in names if name)
+
+
+def mentions_company(text: str, names: list[str]) -> str | None:
+    """The first company name written in the text as whole words; a one-word name (a domain label such as "vikenpark")
+    also matches when written as two or three consecutive words ("Viken Park")."""
+    # Norwegian genitive adds -s without an apostrophe ("Beredts samarbeid"): read it as the name word
+    name_words = {word for name in names for word in name.split()}
+    words = [word[:-1] if len(word) > 4 and word.endswith("s") and word[:-1] in name_words else word for word in re.findall(r"[a-z0-9]+", fold(text))]
+    folded = " " + " ".join(words) + " "
+    joined = {"".join(words[i:i + n]) for n in (2, 3) for i in range(len(words) - n + 1)}
+    for name in names:
+        if f" {name} " in folded or (" " not in name and name in joined):
+            return name
+    return None
+
+
+def voiced_development(text: str) -> re.Match[str] | None:
+    """A development stated in the company's own voice: the event word within three words of "vi/we/jeg" ("Sammen med
+    Bilia inviterer vi til dobbelkamp", "we have signed"). Reader-addressing text that also reports what the company
+    itself does is a notice of that event, not advice."""
+    for match in DEVELOPMENT.finditer(text):
+        before = text[:match.start()].split()[-3:]
+        after = text[match.end():].split()[:3]
+        if any(re.fullmatch(r"[\W]*(?:vi|we|jeg)[\W]*", word, re.I) for word in before + after):
+            return match
+    return None
+
+
+def assess_content(title: str, body: str, *, names_company: bool, names: list[str] | None = None) -> ContentAssessment:
+    """What the item's own words say (title plus the body text captured with it: feed body, card text, description or
+    the article page). Development evidence must be an event in the company's life, stated in its voice or naming it."""
+    title = " ".join(str(title or "").split())
+    body = " ".join(str(body or "").split())
+    if title and len(title) >= 6:
+        body = body.replace(title, " ")  # cards and feeds repeat the title ("… Leave a comment on <title>"): count it once
+    text = f"{title}. {body}" if body.strip() else title
+    mentioned = mentions_company(text, names or [])
+    names_company = names_company or bool(mentioned)
+    words = max(1, len(text.split()))
+    second = len(SECOND_PERSON.findall(text))
+    voice = len(COMPANY_VOICE.findall(text))
+    development = DEVELOPMENT.search(text)
+    listing = LISTING.search(text)
+    service = SERVICE.search(text)
+    title_development = DEVELOPMENT.search(title)
+    recruitment = RECRUITMENT.search(text)
+    if recruitment and not title_development:
+        return ContentAssessment("recruitment", "a job advertisement (careers content, not news)", _quote(recruitment, text))
+    if listing and not title_development:
+        return ContentAssessment("listing", "a property, plot, product or completed job is presented for sale or as a reference", _quote(listing, text))
+    if service and not development:
+        return ContentAssessment("service", "a standing service, membership, booking or course offer, not an article", _quote(service, text))
+    advice_title = evergreen_title(title) or bool(LISTICLE_TITLE.search(title))
+    advice_body = second >= 3 and second / words >= 0.025 and second > voice
+    voiced = voiced_development(text)
+    development = voiced or development
+    if (advice_title or advice_body) and not ((title_development or voiced) and not advice_title):
+        reason = "the title is advice or a guide" if advice_title else f"the text addresses the reader ({second} second-person words in {words})"
+        return ContentAssessment("advice", reason, _quote(SECOND_PERSON.search(text), text) if not advice_title else title)
+    if development and (names_company or voice or title_development):
+        who = "naming the company" if names_company else "in the company's voice" if voice else "in its title"
+        return ContentAssessment("development", f"reports a company development ({development.group(0).lower()}) {who}", _quote(development, text))
+    if names_company:
+        return ContentAssessment("company_named", f"names the company{f' ({mentioned})' if mentioned else ''} and is neither advice, a listing nor a service page")
+    if voice:
+        return ContentAssessment("company_voice", "written in the company's own voice (we/our) and is neither advice, a listing nor a service page",
+                                 _quote(COMPANY_VOICE.search(text), text))
+    return ContentAssessment("insufficient", "neither names the company, speaks in its voice nor states a company development")
+
+
+# Policies compared in docs/v31-news-analysis.md §6; "anchored" is the one used (site_facts.NEWS_POLICY).
+POLICIES = ("current", "newsroom", "newsroom_item", "newsroom_item_content", "newsroom_item_content_entity", "layered", "anchored", "hybrid")
+
+
+def news_policy_decision(policy: str, *, tier: str, content: ContentAssessment, names_company: bool) -> Decision | None:
+    """None = publish under this policy; a Decision = withhold, with the reason. Applied after the V3 item gate, the
+    entity rules and the subject rules, which every policy keeps."""
+    negative = content.kind in ("advice", "listing", "service", "recruitment")
+    if policy == "current":
+        return None
+    if policy.startswith("newsroom") and tier != "newsroom":
+        return Decision(False, "not_in_a_newsroom_section", "Only items in a dedicated news or press section are considered.")
+    if policy in ("newsroom_item", "newsroom_item_content", "newsroom_item_content_entity", "layered", "anchored", "hybrid") and negative:
+        return Decision(False, f"content_{content.kind}", f"Withheld: {content.basis}.")
+    if policy in ("newsroom_item_content", "newsroom_item_content_entity") and content.kind != "development":
+        return Decision(False, "no_company_development", "Withheld: no stated company development in the title or the captured text.")
+    if policy == "newsroom_item_content_entity" and not names_company:
+        return Decision(False, "company_not_named", "Withheld: the item does not name the company.")
+    if policy == "hybrid" and content.kind == "insufficient" and tier != "newsroom":
+        return Decision(False, "not_anchored_to_the_company", "Withheld: outside a news section, the item neither names the company, speaks in its voice nor states a company development.")
+    if policy == "anchored" and content.kind == "insufficient":
+        return Decision(False, "not_anchored_to_the_company", "Withheld: the item neither names the company, speaks in its voice nor states a company development.")
+    if policy == "layered" and content.kind != "development":
+        # A newsroom item that names the company and is neither advice, a listing nor a service page is the company's
+        # own announcement even without an event word; everywhere else a stated development is required.
+        if not (tier == "newsroom" and names_company):
+            return Decision(False, "no_company_development", "Withheld: no stated company development in the title or the captured text.")
+    return None

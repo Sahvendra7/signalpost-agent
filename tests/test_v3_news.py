@@ -19,13 +19,18 @@ def page(url: str, html: str, kind: str = "html") -> CapturedPage:
     return CapturedPage(url, raw, hashlib.sha256(raw).hexdigest(), "2026-11-01T08:00:00Z", kind=kind)
 
 
-def feed(items: list[tuple[str, str, str, list[str]]]) -> CapturedPage:
-    body = "".join(f"<item><title>{title}</title><link>{link}</link><pubDate>{date}</pubDate>{''.join(f'<category>{c}</category>' for c in cats)}</item>"
-                   for title, link, date, cats in items)
+def feed(items: list[tuple]) -> CapturedPage:
+    """(title, link, pubDate, categories[, description]). V3.1: an entry is published only when its own words anchor it
+    to the company, so item-gate tests give their entries a description in the company's voice; without one they test
+    the content rule instead."""
+    body = "".join(f"<item><title>{title}</title><link>{link}</link><pubDate>{date}</pubDate>{''.join(f'<category>{c}</category>' for c in cats)}"
+                   f"{f'<description>{rest[0]}</description>' if rest else ''}</item>"
+                   for title, link, date, cats, *rest in items)
     return page(SITE + "feed/", f"<?xml version='1.0'?><rss><channel>{body}</channel></rss>", kind="feed")
 
 
 HOME = page(SITE, "<html><body>Fjell Data AS</body></html>")
+VOICE = "Her er siste nytt fra oss."  # a feed description in the company's own voice (see feed())
 
 
 def titles(facts) -> list[str]:
@@ -54,7 +59,7 @@ class TimeSelection(unittest.TestCase):
 
 class ItemGate(unittest.TestCase):
     def test_plain_slug_posts_in_the_main_feed_are_kept(self):
-        posts = [(f"Kampreferat runde {n} mot Storhamar", f"https://fjell-data.no/kampreferat-{n}/", f"Mon, 0{n} Sep 2026 12:00:00 +0000", ["Nyheter"]) for n in range(1, 4)]
+        posts = [(f"Kampreferat runde {n} mot Storhamar", f"https://fjell-data.no/kampreferat-{n}/", f"Mon, 0{n} Sep 2026 12:00:00 +0000", ["Nyheter"], VOICE) for n in range(1, 4)]
         self.assertEqual(len(extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)]).activities), 3)
 
     def test_a_bulk_entry_burst_is_not_news(self):
@@ -64,7 +69,7 @@ class ItemGate(unittest.TestCase):
         self.assertTrue(any(key.startswith("activity:") for key in facts.rejections))
 
     def test_three_posts_in_one_hour_are_not_a_burst(self):
-        posts = [(f"Kampreferat runde {n} mot Storhamar", f"https://fjell-data.no/kampreferat-{n}/", f"Mon, 07 Sep 2026 12:{n}0:00 +0000", ["Nyheter"]) for n in range(3)]
+        posts = [(f"Kampreferat runde {n} mot Storhamar", f"https://fjell-data.no/kampreferat-{n}/", f"Mon, 07 Sep 2026 12:{n}0:00 +0000", ["Nyheter"], VOICE) for n in range(3)]
         self.assertEqual(len(extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)]).activities), 3)
 
     def test_project_categories_media_files_and_default_posts(self):
@@ -79,9 +84,9 @@ class ItemGate(unittest.TestCase):
 
     def test_uncategorized_is_not_a_project_category_and_a_reused_post_date_is_rejected(self):
         # Phase 4 dev audit: "Uncategorized" (the CMS default) lost two correct posts; reused posts kept a 2018 date.
-        posts = [("Tildeling av stipender 2026", "https://fjell-data.no/tildeling-2026/", "Thu, 11 Jun 2026 08:59:14 +0000", ["Uncategorized"]),
-                 ("Utlysing 2026", "https://fjell-data.no/post-2/", "Mon, 09 Jul 2018 17:09:24 +0000", ["Uncategorized"]),
-                 ("17. mai på gården 2018", "https://fjell-data.no/17-mai/", "Thu, 17 May 2018 17:43:05 +0000", ["Uncategorized"])]
+        posts = [("Tildeling av stipender 2026", "https://fjell-data.no/tildeling-2026/", "Thu, 11 Jun 2026 08:59:14 +0000", ["Uncategorized"], VOICE),
+                 ("Utlysing 2026", "https://fjell-data.no/post-2/", "Mon, 09 Jul 2018 17:09:24 +0000", ["Uncategorized"], VOICE),
+                 ("17. mai på gården 2018", "https://fjell-data.no/17-mai/", "Thu, 17 May 2018 17:43:05 +0000", ["Uncategorized"], VOICE)]
         facts = extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)])
         self.assertEqual(titles(facts), ["17. mai på gården 2018", "Tildeling av stipender 2026"])
         self.assertIn("activity:date_contradicts_title", facts.rejections)
@@ -130,7 +135,7 @@ class ProjectAndDemoPosts(unittest.TestCase):
         posts = [("Prosjekt: Kreativ ungdom i Arendal", "https://fjell-data.no/prosjekt-kreativ/", "Mon, 07 Jul 2025 14:24:33 +0000", ["Blogg"]),
                  ("Keep in touch with site visitors", "https://fjell-data.no/keep-in-touch/", "Tue, 29 Jun 2021 08:21:48 +0000", ["Blogg"]),
                  ("Make the most of the season", "https://fjell-data.no/make-the-most/", "Tue, 29 Jun 2021 08:21:48 +0000", ["Blogg"]),
-                 ("Åpen dag på verkstedet", "https://fjell-data.no/apen-dag/", "Fri, 04 Sep 2026 19:54:59 +0000", ["Blogg"])]
+                 ("Åpen dag på verkstedet", "https://fjell-data.no/apen-dag/", "Fri, 04 Sep 2026 19:54:59 +0000", ["Blogg"], VOICE)]
         facts = extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)])
         self.assertEqual(titles(facts), ["Åpen dag på verkstedet"])
         self.assertIn("activity:project_title", facts.rejections)

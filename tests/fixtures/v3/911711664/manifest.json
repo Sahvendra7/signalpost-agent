@@ -1,0 +1,201 @@
+{
+ "organisation_number": "911711664",
+ "name": "BYGGMESTER FRANK AASHEIM AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.huspro.no/",
+  "retrieved_at": "2026-11-01T20:13:48.394372Z",
+  "value": {
+   "requested_url": "https://www.huspro.no/",
+   "final_url": "https://www.huspro.no/",
+   "registered_domain": "huspro.no",
+   "title": "Byggmester Frank Aasheim AS",
+   "description": "Byggmester Frank Aasheim as er en totalentreprenør innen småhusbransjen med sentral godkjenning innenfor flere av fagområdene, PRO og UTF. På vår hjemmeside vil du finne informasjon om byggmesterfrankaasheim og Skalahus.",
+   "main_text_excerpt": "top of page\nbottom of page",
+   "identity_text_excerpt": "Byggmester Frank Aasheim as Mauravegen 4, 2030 Nannestad © 2021 Byggmester Frank Aasheim AS. Alle rettigheter reservert. Webdesign SC Reklame",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/byggmesterfrankaasheim"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/byggmesterfrankaasheim"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@context": "https://schema.org/",
+     "@type": "LocalBusiness",
+     "name": "Byggmesterfrankaasheim/Skalahus",
+     "url": "https://www.huspro.no",
+     "image": "https://static.wixstatic.com/media/c549f4_bed8c998b42e4361ac22e02d3ab23099~mv2.png",
+     "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NO",
+      "addressLocality": "Maura",
+      "postalCode": "2032",
+      "streetAddress": "4 Mauravegen"
+     }
+    }
+   ],
+   "content_sha256": "30e724404d46d3f6f71c477e3c87b9b5ec626414ac172c742b0d6199cd443269",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://www.huspro.no/",
+     "title": "Byggmester Frank Aasheim AS",
+     "main_text_excerpt": "top of page\nbottom of page",
+     "content_sha256": "30e724404d46d3f6f71c477e3c87b9b5ec626414ac172c742b0d6199cd443269"
+    },
+    {
+     "url": "https://www.huspro.no/about-1",
+     "title": "Om Oss | Byggmesterfrankaasheim",
+     "main_text_excerpt": "Om oss\nByggmester Frank Aasheim as er en totalentreprenør innen småhusbransjen med sentral godkjenning innenfor flere av fagområdene, PRO og UTF.\nVi kan levere alle tjenester fra byggesøknad med tilhørende ansvarsretter frem til nøkkelferdig bolig/prosjekt. Vi er forhandler av BoligPartner som leverer alt fra eneboliger til flermannsboliger samt lavblokker i tre.\n \nVi utfører også tilbygg, rehabilitering, bad/våtrom i tillegg til nybygg. Vi er en godt etablert Byggmesterbedrift med mesterbrev siden 1993 og sentral godkjenning innen flere fagområdet blant annet innen arkitektur, ansvarlig søker, ansvarlig prosjekterende og ansvarlig utførende.  Vi har også godkjenning innen uavhengig kontroll av lufttetthet og våtrom. Daglig leder Frank Aasheim er også utdannet NTF takstmann siden 1996.\n \nVi har pr. i dag 10 ansatte norske tømrere med bred erfaring innen byggfaget samt to læringer som ønsker å utdanne seg inne tømrerfaget. I uteteamet har vi også en driftsmedarbeider som koordinerer leveranser, materialflyt osv. Våre to byggeledere har samlet over 40 års erfaring med rehabilitering, tilbygg og nybygg.\nVårt firma er forhandler av Skalahus på Øvre og Nedre Romerike. Vi bygger 30 - 50 boenhet pr. år i tillegg til oppdrag innen rehabilitering og tilbygg.\n \nVår administrasjon består av daglig leder, kontorleder, salgssjef, salgkonsulert og 2 stk. byggeledere. Alle med lang og bred erfaring innen bransjen og står klare til å hjelpe deg videre med dine drømmer om et nytt hus, leilighet, garasje eller tilbygg.\nVi har etablert et svært godt og nært samarbeid med solide lokale håndverksbedrifter innen elektro, rørlegger, graving, mur- og flis osv\n. Flere av våre samarbeidspartnere har vi samarbeidet med i flere tiår som da medfører at det er innarbeidet gode rutiner og fremdrift i prosjekter.\n \nTrenger du bistand og hjelp til å tegne ditt drømmehjem eller tilbygg så står våre eksterne samarbeidspartnere innenfor arkitektur klare til å hjelpe deg.\nVårt firma har lang erfaring som totalentreprenør i både store og mindre prosjekter. Vi bygger på tillit, erfaring og stolt håndverksmessig utførelse.\nVi har mange gode referanser som kan oppgis på forespørsel.",
+     "identity_text_excerpt": "Byggmester Frank Aasheim as Mauravegen 4, 2030 Nannestad © 2021 Byggmester Frank Aasheim AS. Alle rettigheter reservert. Webdesign SC Reklame",
+     "content_sha256": "a6147eaddd4d8e63eb3ff689adb79a611fbae9c26860a501d713c57e1755913b"
+    },
+    {
+     "url": "https://www.huspro.no/kontakt-oss",
+     "title": "Kontakt oss | Byggmester Frank Aasheim AS",
+     "main_text_excerpt": "Fyll ut skjema eller ring oss i dag for en hyggelig boligprat.\n \nLa oss prate om ditt neste prosjekt\nSvein Olafsen\nHMS-koordinator\nTlf. 930 19 084\nsvein@huspro.no\nMarkus Borge\nTømrer\nTorbjørn Gabler\nTømrer\nVidar Aas\nProsjektleder\nTlf. 909 73 686\nvidar@huspro.no\nRoger Bidtnes-Olsen\nServiceansvarlig / Tømrer\n \nKrzysztof Ruski\nTømrer\nAleksandra Fraczyk\nTømrer lærling\nJoachim Skjølås\nTømrer/BAS\n \nJørgen Nordhagen\nTømrer/BAS\nHans Petter Olstad\nTømrer\nHelge Løvaas\nDriftsmedarbeider\n \nOla Bjerke\nTømrer\nRune Johansen\nFlislegger\nSimen J. Bråthen\nTømrer lærling",
+     "identity_text_excerpt": "Byggmester Frank Aasheim as Mauravegen 4, 2030 Nannestad © 2021 Byggmester Frank Aasheim AS. Alle rettigheter reservert. Webdesign SC Reklame",
+     "content_sha256": "d096e294a0bf4db41f1633adc42e906e08154754540c832b0cd75ae8c5d1086b"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "byggmester",
+     "frank",
+     "aasheim"
+    ],
+    "matched_tokens": [
+     "aasheim",
+     "byggmester",
+     "frank"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/byggmesterfrankaasheim"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/byggmesterfrankaasheim"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/byggmesterfrankaasheim",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "byggmester",
+      "frank",
+      "aasheim"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/byggmesterfrankaasheim",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "byggmester",
+      "frank",
+      "aasheim"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "30e724404d46d3f6f71c477e3c87b9b5ec626414ac172c742b0d6199cd443269",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/911711664": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "8e0e9b62f982f80c.json.gz",
+   "content_sha256": "8e0e9b62f982f80cfcc3a0df16ed7199c247f10377ff1dbfd00815f2ce2de188",
+   "retrieved_at": "2026-11-01T20:13:42.465078Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/911711664": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "a5fedc28ccf39f64.json.gz",
+   "content_sha256": "a5fedc28ccf39f646d8f2303ba49e7b2937d432df535ef174d8201fdff464076",
+   "retrieved_at": "2026-11-01T20:13:43.187163Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/911711664/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "f868023935f32960.json.gz",
+   "content_sha256": "f868023935f329608700badb0679518cb10791147798ac0ceab12aeab8fb68d2",
+   "retrieved_at": "2026-11-01T20:13:45.451248Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/911711664": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:13:43.984607Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=911711664&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "805cd067cfcbf607.json.gz",
+   "content_sha256": "805cd067cfcbf60780f332cf0a096f87a164ac7770862f41628c99eac1f1c1f0",
+   "retrieved_at": "2026-11-01T20:13:44.734721Z"
+  },
+  "https://www.huspro.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "30e724404d46d3f6.html.gz",
+   "content_sha256": "30e724404d46d3f6f71c477e3c87b9b5ec626414ac172c742b0d6199cd443269",
+   "retrieved_at": "2026-11-01T20:13:49.040728Z"
+  },
+  "https://www.huspro.no/about-1": {
+   "kind": "site",
+   "status": 200,
+   "file": "a6147eaddd4d8e63.html.gz",
+   "content_sha256": "a6147eaddd4d8e63eb3ff689adb79a611fbae9c26860a501d713c57e1755913b",
+   "retrieved_at": "2026-11-01T20:13:49.570561Z"
+  },
+  "https://www.huspro.no/kontakt-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "d096e294a0bf4db4.html.gz",
+   "content_sha256": "d096e294a0bf4db41f1633adc42e906e08154754540c832b0cd75ae8c5d1086b",
+   "retrieved_at": "2026-11-01T20:13:49.754592Z"
+  },
+  "https://www.huspro.no/blog-feed.xml": {
+   "kind": "feed",
+   "status": 200,
+   "file": "e5d05cea1671f7dc.xml.gz",
+   "content_sha256": "e5d05cea1671f7dc518ffd4d4ffdf1f2714a2400237bee9cf4583424f19c1356",
+   "retrieved_at": "2026-11-01T20:13:50.370485Z"
+  }
+ }
+}

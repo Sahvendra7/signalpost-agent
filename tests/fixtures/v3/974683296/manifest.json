@@ -1,0 +1,159 @@
+{
+ "organisation_number": "974683296",
+ "name": "FISKERIFAGLIG OPPLÆRINGSKONTOR FOR ROGALAND OG SKAGERAKKYSTEN SA",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://ffor.no/",
+  "retrieved_at": "2026-11-01T20:11:24.775097Z",
+  "value": {
+   "requested_url": "https://www.ffor.no/",
+   "final_url": "https://ffor.no/",
+   "registered_domain": "ffor.no",
+   "title": "FFOR|FISKERIFAGLIG OPPLÆRINGSKONTOR FOR ROGALAND OG SKAGERAKKYSTEN SA",
+   "description": "",
+   "main_text_excerpt": "",
+   "identity_text_excerpt": "Design og utvikling Opal digital",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "2d2abc1765c2c360a1a17f5ffdae698a95161179b2abcbe3ead8fb62054a5746",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://ffor.no/",
+     "title": "FFOR|FISKERIFAGLIG OPPLÆRINGSKONTOR FOR ROGALAND OG SKAGERAKKYSTEN SA",
+     "main_text_excerpt": "",
+     "content_sha256": "2d2abc1765c2c360a1a17f5ffdae698a95161179b2abcbe3ead8fb62054a5746"
+    },
+    {
+     "url": "https://ffor.no/om-oss/",
+     "title": "Om oss|FFOR",
+     "main_text_excerpt": "Om oss\nFiskerifaglig Opplæringskontor for Rogaland og Skagerakkysten SA\nFFOR er et privat foretak som representerer bedrifter knyttet til fiskeri- og havbruksnæringen.\nSelskapets formål er:\n- Drive fagopplæring i fiskerirelaterte fag i samsvar med lov om fagopplæring.\n- Tett samarbeid med bedrifter i næringen\n- Samarbeid med skoler og yrkesopplæringsnemnder\n- Være en støttespiller for lærlingen\n- Kvalitetssikre oppfølging av lærlinger\n- Kompetanseheving i næringen\n- Kvalitetssikre lærebedrifter og faglige ledere\n- Bidra til gode fagarbeidere for fremtiden\n- Øke rekruttering av ungdom til fiskeri- og havbruksnæringen.\nGjennom deltakelse på utdanningsmesser og skolebesøk er FFOR i samarbeid med bedriftene og skoler med på å synliggjøre næringen. FFOR er bindeleddet mellom lærebedrift, lærling og fagopplæringen på fylket. I læretiden har opplæringskontoret ansvaret for å ivareta lærlingens rettigheter og plikter gjennom tett oppfølgning og besøk på læreplassen. FFOR er godkjent for 7 fag og har for tiden 105 lærlinger, hovedsakelig innen akvakultur, fiske/fangst, matros og skipsmotormekanikerfaget.",
+     "identity_text_excerpt": "Design og utvikling Opal digital",
+     "content_sha256": "b2c678f7c1bc2f030dc2da1a677deddeb2a4028f015fa148aefb12adb73c1bff"
+    },
+    {
+     "url": "https://ffor.no/kontakt-oss/",
+     "title": "Kontakt oss|FFOR",
+     "main_text_excerpt": "Kontakt oss\nFiskerifaglig Opplæringskontor for Rogaland og Skagerak-kysten SA\nAdresse:\nRyfylke Næringshage\nNedre Hauskjeneset 3\n4160 FINNØY\nFFOR\nHer holder vi til.",
+     "identity_text_excerpt": "Design og utvikling Opal digital",
+     "content_sha256": "27c012a3381f295297288974b2fac43d9fd172a58fb0a158fe446efeeeca16b5"
+    },
+    {
+     "url": "https://ffor.no/aktuelt/",
+     "title": "Aktuelt|FFOR",
+     "main_text_excerpt": "Akvakurset er startet opp igjen, nå med digitale samlinger.\nNy reklamefilm Vi har fått laget ny reklamefilm! Tusen takk til Fabel Media for flott arbeid 🙂\nTorsdag 8 mars hadde vi en ny samling for deltakerne på akvakulturkurset. Tema for dagen var lover og regler samt lus.\nVi startet dagen med besøk av Liv Marit Årseth, samfunnskontakt i Grieg Seafood. Hun tok for seg aktuelle lover og forskrifter som en bør kjenne til og som påvirker arbeidet på oppdrettsanlegg.\nTerje Vier får yrkesopplæringsnemnda i Rogalands hederspris for 2017. Han får prisen for sin sjeldne evne til å få fram det beste i lærlingene, både på det faglige og menneskelige plan.\nOpplæringskontoret arrangerer teorikurs i akvakultur for voksne som ønsker å ta fagbrev. Deltakerne samles til kursdager med ulike tema. Kurset avsluttes med en nasjonal teorieksamen i juni 2018. Enkelte kursdager er vi på bedriftsbesøk. Første tur gikk til Marine Harvest sitt settefisk anlegg på Vågafossen og Sterling White Halibut avdeling Imsland og Helland\nVi er oppe og går med ny nettside!",
+     "identity_text_excerpt": "Design og utvikling Opal digital",
+     "content_sha256": "a1f20604f1a11c7bfc13dfa4ca431725d15336645c856cb91e6658d6c35044d1"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "fiskerifaglig",
+     "opplaeringskontor",
+     "for",
+     "rogaland",
+     "skagerakkysten"
+    ],
+    "matched_tokens": [
+     "fiskerifaglig",
+     "for",
+     "opplaeringskontor",
+     "rogaland",
+     "skagerakkysten"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "2d2abc1765c2c360a1a17f5ffdae698a95161179b2abcbe3ead8fb62054a5746",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/974683296": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "058930a3154a2140.json.gz",
+   "content_sha256": "058930a3154a214081cdb5577d167de2377fac7f7ac3fdfc19612d343db949a9",
+   "retrieved_at": "2026-11-01T20:11:10.881710Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/974683296": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "23842cb98317a53d.json.gz",
+   "content_sha256": "23842cb98317a53d915b13c76a2fbc54368d2ff0856a59e329fa88149ba6cd78",
+   "retrieved_at": "2026-11-01T20:11:11.603715Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/974683296/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "804bfc4fd20d4fd2.json.gz",
+   "content_sha256": "804bfc4fd20d4fd2917dd64919bc08542651f240bd34be69b0a89277581af958",
+   "retrieved_at": "2026-11-01T20:11:13.751264Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/974683296": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:11:12.322064Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=974683296&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b9ea6d66688c4527.json.gz",
+   "content_sha256": "b9ea6d66688c4527a2a9f2aba1d1c6c227a72eb89d84c8b91dfd9c2a74b18c49",
+   "retrieved_at": "2026-11-01T20:11:13.047442Z"
+  },
+  "https://ffor.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "2d2abc1765c2c360.html.gz",
+   "content_sha256": "2d2abc1765c2c360a1a17f5ffdae698a95161179b2abcbe3ead8fb62054a5746",
+   "retrieved_at": "2026-11-01T20:11:26.585498Z"
+  },
+  "https://ffor.no/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "b2c678f7c1bc2f03.html.gz",
+   "content_sha256": "b2c678f7c1bc2f030dc2da1a677deddeb2a4028f015fa148aefb12adb73c1bff",
+   "retrieved_at": "2026-11-01T20:11:27.772019Z"
+  },
+  "https://ffor.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "27c012a3381f2952.html.gz",
+   "content_sha256": "27c012a3381f295297288974b2fac43d9fd172a58fb0a158fe446efeeeca16b5",
+   "retrieved_at": "2026-11-01T20:11:28.858938Z"
+  },
+  "https://ffor.no/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a1f20604f1a11c7b.html.gz",
+   "content_sha256": "a1f20604f1a11c7bfc13dfa4ca431725d15336645c856cb91e6658d6c35044d1",
+   "retrieved_at": "2026-11-01T20:11:31.371025Z"
+  },
+  "https://ffor.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "00c0db574e9fc704.xml.gz",
+   "content_sha256": "00c0db574e9fc7049fc791adf0a4aeab5bd57da44ef81c1494d81cda20d90acd",
+   "retrieved_at": "2026-11-01T20:11:30.197981Z"
+  }
+ }
+}

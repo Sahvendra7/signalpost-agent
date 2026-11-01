@@ -1,0 +1,139 @@
+{
+ "organisation_number": "985095779",
+ "name": "NORDIC SOLUTIONS AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.ns.no/",
+  "retrieved_at": "2026-11-01T20:11:27.174541Z",
+  "value": {
+   "requested_url": "https://www.ns.no/",
+   "final_url": "https://www.ns.no/",
+   "registered_domain": "ns.no",
+   "title": "Nordic Solutions AS – IT-partner i Øygarden og Bergen",
+   "description": "Lokal IT-partner for bedrifter i Øygarden og Bergensregionen. Vi leverer Microsoft 365, cybersikkerhet og driftet IT – uten unødvendig kompleksitet.",
+   "main_text_excerpt": "Vi er skal være mer enn en IT leverandør, vi skal være en partner som hjelper dere å navigere en verden som stadig endring. God teknologi innføres ikke, den tas i bruk. Det skjer først når løsningene er riktige for både virksomheten og de som skal bruke verktøyet.\nVi holder systemene deres i gang døgnet rundt og løser utfordringer før det blir et problem\nBred teknologikompetanse\nDeres slipper å forholde dere til forskjellige leverandører når dere trenger noe\nKontinuerlige forbedringer\nVi deler kunnskap, tar i mot tilbakemeldinger og på den måten gjør vi hverandre bedre\nKunden i fokus\nTeknologi alene løser ikke alt, god dialog og forståelse for virksomheten er grunnmuren i et godt samarbeid\nProaktiv IT betyr økt stabilitet, og fornøyde brukere\nVi er skal være mer enn en IT leverandør, vi skal være en partner som hjelper dere å navigere en verden som stadig endring. God teknologi innføres ikke, den tas i bruk. Det skjer først når løsningene er riktige for både virksomheten og de som skal bruke verktøyet.\nIT-interesse er ikke en fordel Det er en nødvendighet\nAvtal en gjennomgang av hva vi kan gjøre for dere.\nHistorikk.\nGjennom å være #hel ved har vi bygget varige relasjoner\n0 år\n0 år\nHistorikk.\nGjennom å være #hel ved har vi bygget varige relasjoner\n0 år\n0 år\nHistorikk.\nGjennom å være #hel ved har vi bygget varige relasjoner\n0 år\n0 år\nKunde retensjon\nNår IT bare fungerer, er det ingen grunn til å bytte leverandør\n0%\n0%\nKunde retensjon\nNår IT bare fungerer, er det ingen grunn til å bytte leverandør\n0%\n0%\nKunde retensjon\nNår IT bare fungerer, er det ingen grunn til å bytte leverandør\n0%\n0%\nFun fact.\nUnike nasjoner genererte varslinger i vårt 24/7 SIEM-system i 2025.\n0\n0\nFun fact.\nUnike nasjoner genererte varslinger i vårt 24/7 SIEM-system i 2025.\n0\n0\nFun fact.\nUnike nasjoner genererte varslinger i vårt 24/7 SIEM-system i 2025.\n0\n0\nVi er her for å svare på alt dere måtte lure på\nInnsikt fra vår spennende bransje\nFAQ\nHvorfor skal vi velge Nordic Solutions ?\nVed å velge oss får dere ikke bare kyndig IT-bistand, dere får mennesker som kjenner virksomheten og behovene deres. Vi følger med, holder systemene i orden og stiller opp når noe skjer, slik at dere kan bruke tiden på det dere er gode på.\nHar dere systemer for effektiv onboarding og offboarding?\nJa, vi bruker et supportsystem med innebygd arbeidsflyt for dette, slik at de rette personene alltid er involvert og informert, og ingenting faller mellom to stoler.\nTilbyr dere datamaskiner og utstyr også ?\nJa, det er en naturlig del av det vi tilbyr. Vi hjelper med å anskaffe, konfigurere og levere det utstyret dere trenger, enten det er bærbare, stasjonære eller periferiutstyr. Alt settes opp klart til bruk, så nye brukere kan komme i gang uten å måtte vente på IT.\nHvorfor oppgir dere ikke kunder og referanser?\nVi gir gjerne referanser direkte til deg, men ikke på nett. Som IT-leverandør med tilgang til kundenes systemer ønsker vi ikke å gjøre det enkelt for uvedkommende å kartlegge hvem vi jobber med. Ondsinnede aktører kan bruke slik informasjon til å angripe kunder gjennom leverandøren deres, noe som i sikkerhetsbransjen kalles et supply chain-angrep. Å holde kundelisten vår unna offentligheten er derfor et bevisst valg, og en del av hvordan vi beskytter kundene våre.\nKan vi snakke med en av deres referanser?\nJa, det lar seg ordne. Ta kontakt med oss, så kobler vi deg med en aktuell kunde som kan dele sine erfaringer med å ha Nordic Solutions som IT-partner.",
+   "identity_text_excerpt": "Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "ecdb81a59aa4bbb85b104ed345c8c5eb44f9f3d928118dd32b1161239a857079",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.ns.no/",
+     "title": "Nordic Solutions AS – IT-partner i Øygarden og Bergen",
+     "main_text_excerpt": "Vi er skal være mer enn en IT leverandør, vi skal være en partner som hjelper dere å navigere en verden som stadig endring. God teknologi innføres ikke, den tas i bruk. Det skjer først når løsningene er riktige for både virksomheten og de som skal bruke verktøyet.\nVi holder systemene deres i gang døgnet rundt og løser utfordringer før det blir et problem\nBred teknologikompetanse\nDeres slipper å forholde dere til forskjellige leverandører når dere trenger noe\nKontinuerlige forbedringer\nVi deler kunnskap, tar i mot tilbakemeldinger og på den måten gjør vi hverandre bedre\nKunden i fokus\nTeknologi alene løser ikke alt, god dialog og forståelse for virksomheten er grunnmuren i et godt samarbeid\nProaktiv IT betyr økt stabilitet, og fornøyde brukere\nVi er skal være mer enn en IT leverandør, vi skal være en partner som hjelper dere å navigere en verden som stadig endring. God teknologi innføres ikke, den tas i bruk. Det skjer først når løsningene er riktige for både virksomheten og de som skal bruke verktøyet.\nIT-interesse er ikke en fordel Det er en nødvendighet\nAvtal en gjennomgang av hva vi kan gjøre for dere.\nHistorikk.\nGjennom å være #hel ved har vi bygget varige relasjoner\n0 år\n0 år\nHistorikk.\nGjennom å være #hel ved har vi bygget varige relasjoner\n0 år\n0 år\nHistorikk.\nGjennom å være #hel ved har vi bygget varige relasjoner\n0 år\n0 år\nKunde retensjon\nNår IT bare fungerer, er det ingen grunn til å bytte leverandør\n0%\n0%\nKunde retensjon\nNår IT bare fungerer, er det ingen grunn til å bytte leverandør\n0%\n0%\nKunde retensjon\nNår IT bare fungerer, er det ingen grunn til å bytte leverandør\n0%\n0%\nFun fact.\nUnike nasjoner genererte varslinger i vårt 24/7 SIEM-system i 2025.\n0\n0\nFun fact.\nUnike nasjoner genererte varslinger i vårt 24/7 SIEM-system i 2025.\n0\n0\nFun fact.\nUnike nasjoner genererte varslinger i vårt 24/7 SIEM-system i 2025.\n0\n0\nVi er her for å svare på alt dere måtte lure på\nInnsikt fra vår spennende bransje\nFAQ\nHvorfor skal vi velge Nordic Solutions ?\nVed å velge oss får dere ikke bare kyndig IT-bistand, dere får mennesker som kjenner virksomheten og behovene deres. Vi følger med, holder systemene i orden og stiller opp når noe skjer, slik at dere kan bruke tiden på det dere er gode på.\nHar dere systemer for effektiv onboarding og offboarding?\nJa, vi bruker et supportsystem med innebygd arbeidsflyt for dette, slik at de rette personene alltid er involvert og informert, og ingenting faller mellom to stoler.\nTilbyr dere datamaskiner og utstyr også ?\nJa, det er en naturlig del av det vi tilbyr. Vi hjelper med å anskaffe, konfigurere og levere det utstyret dere trenger, enten det er bærbare, stasjonære eller periferiutstyr. Alt settes opp klart til bruk, så nye brukere kan komme i gang uten å måtte vente på IT.\nHvorfor oppgir dere ikke kunder og referanser?\nVi gir gjerne referanser direkte til deg, men ikke på nett. Som IT-leverandør med tilgang til kundenes systemer ønsker vi ikke å gjøre det enkelt for uvedkommende å kartlegge hvem vi jobber med. Ondsinnede aktører kan bruke slik informasjon til å angripe kunder gjennom leverandøren deres, noe som i sikkerhetsbransjen kalles et supply chain-angrep. Å holde kundelisten vår unna offentligheten er derfor et bevisst valg, og en del av hvordan vi beskytter kundene våre.\nKan vi snakke med en av deres referanser?\nJa, det lar seg ordne. Ta kontakt med oss, så kobler vi deg med en aktuell kunde som kan dele sine erfaringer med å ha Nordic Solutions som IT-partner.",
+     "content_sha256": "ecdb81a59aa4bbb85b104ed345c8c5eb44f9f3d928118dd32b1161239a857079"
+    },
+    {
+     "url": "https://www.ns.no/om-oss",
+     "title": "Om oss – Nordic Solutions AS",
+     "main_text_excerpt": "Om oss\nLokalt forankret, faglig sterk\nNordic Solutions er et norsk IT selskap med base på Ågotnes i Øygarden kommune. Vi betjener kunder der og i Bergen. Vi leverer IT tjenester til lokalt næringsliv og har gjort det i 25 år. Det er ikke tilfeldig at mange av kundene våre har vært med oss lenge. Vi tror det skyldes at vi er ærlige om hva som fungerer og hva som ikke gjør det, og at vi tenker langsiktig fremfor å selge løsninger virksomheten ikke er tjent med.\nHva vi faktisk kan\nVi jobber daglig med Microsoft 365, Azure, IT sikkerhet, nettverk og infrastruktur. Det er ikke tjenester vi tilbyr i teorien, det er det vi gjør i praksis for kundene våre hver dag. Vi følger med på hva som beveger seg bransjen og sørger for at kundene våre får tilgang til løsninger som faktisk er relevante for dem, ikke det som er enklest å selge.\nSikkerhetslandskapet har endret seg dramatisk de siste årene og vi har fulgt med. Vi hjelper virksomheter med alt fra grunnleggende IT drift til avansert endepunktssikkerhet, backup, skymigrasjon og regulatorisk etterlevelse.\nHvordan vi jobber\nVi er direkte i kommunikasjonen og foretrekker å si fra tidlig dersom noe ikke er som det burde være. Vi tror at ærlighet er grunnlaget for gode samarbeidsrelasjoner, og at den beste måten å beholde kunder på er å levere det man lover. Vi tilpasser oss kundenes behov. Noen ønsker å overlate all IT drift til oss. Andre har intern kompetanse og trenger en partner som fyller hull og bidrar der det trengs. Begge deler fungerer for oss.\nFordi dere trenger gode IT-tjenester",
+     "identity_text_excerpt": "Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R",
+     "content_sha256": "fd8dfba74ddd617d8071b0c6ba84b9e67abd71ed8830aa8ae02dd5d80c365abd"
+    },
+    {
+     "url": "https://www.ns.no/kontakt-oss",
+     "title": "Kontakt oss – Nordic Solutions AS",
+     "main_text_excerpt": "Jeg aksepterer brukervilkårene og personvernerklæringen",
+     "identity_text_excerpt": "Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R Produkter & tjenester IT-Drift & Sky Cybersikkerhet Moderne Arbeidsplasser AI & Automasjon Annet Brukervikår Personvern Kontakt post@ns.no 56 33 61 71 Om oss Kontakt oss Blog ©2026 Nordic Solutions AS R",
+     "content_sha256": "5663c3747c86747f70651b3b952a2551d7176798c759add6a6c6e7051d602226"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "nordic",
+     "solutions"
+    ],
+    "matched_tokens": [
+     "nordic",
+     "solutions"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "ecdb81a59aa4bbb85b104ed345c8c5eb44f9f3d928118dd32b1161239a857079",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/985095779": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "63c3aebbd5162566.json.gz",
+   "content_sha256": "63c3aebbd51625661cac62655167aa96780753e7abb1aa26ce98b1524c84d57c",
+   "retrieved_at": "2026-11-01T20:11:20.511110Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/985095779": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2c511d8165eea189.json.gz",
+   "content_sha256": "2c511d8165eea189c4b3b6873c5fe39220284595edde6b645784b518c2f79aad",
+   "retrieved_at": "2026-11-01T20:11:21.241688Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/985095779/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "dbaad073956b2d95.json.gz",
+   "content_sha256": "dbaad073956b2d95136a00578af790e7a40b18ec577d3ad1b7330d1929366ba9",
+   "retrieved_at": "2026-11-01T20:11:23.771075Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/985095779": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:11:21.954736Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=985095779&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1d363fe9d51b0c98.json.gz",
+   "content_sha256": "1d363fe9d51b0c9880492fe2af8f1b01ce903e4f7dfdfc824b709c8f4a4c3088",
+   "retrieved_at": "2026-11-01T20:11:22.670889Z"
+  },
+  "https://www.ns.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ecdb81a59aa4bbb8.html.gz",
+   "content_sha256": "ecdb81a59aa4bbb85b104ed345c8c5eb44f9f3d928118dd32b1161239a857079",
+   "retrieved_at": "2026-11-01T20:11:27.757010Z"
+  },
+  "https://www.ns.no/kontakt-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "5663c3747c86747f.html.gz",
+   "content_sha256": "5663c3747c86747f70651b3b952a2551d7176798c759add6a6c6e7051d602226",
+   "retrieved_at": "2026-11-01T20:11:28.496761Z"
+  },
+  "https://www.ns.no/privacy/brukervikår": {
+   "kind": "site",
+   "status": 200,
+   "file": "6951b35eadfd5f26.html.gz",
+   "content_sha256": "6951b35eadfd5f26230a034d910c61f27905db224740316fb0a322cf66e5adc6",
+   "retrieved_at": "2026-11-01T20:11:28.783704Z"
+  },
+  "https://www.ns.no/blog": {
+   "kind": "site",
+   "status": 200,
+   "file": "3776f45edef2de98.html.gz",
+   "content_sha256": "3776f45edef2de988531d69530488d90906a13f758c9c5afa6bbe1f02dc3cfb1",
+   "retrieved_at": "2026-11-01T20:11:29.184680Z"
+  }
+ }
+}

@@ -1,0 +1,231 @@
+{
+ "organisation_number": "927176963",
+ "name": "DAY OF WEEK AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://dayofweek.com/en",
+  "retrieved_at": "2026-11-01T20:14:44.976839Z",
+  "value": {
+   "requested_url": "https://dayofweek.com/",
+   "final_url": "https://dayofweek.com/en",
+   "registered_domain": "dayofweek.com",
+   "title": "Day of Week — Taste of life",
+   "description": "Day of Week builds intelligence infrastructure for local food systems, helping hotels, restaurants, chefs and farmers create, sell and scale local food experiences.",
+   "main_text_excerpt": "Better outcomes for every link in the local food chain\nDay of Week connect market insight, brand, local supply, food concepts, menues and customer engagement into one AI-powered system that delivers measurable results.\nFrom market insight and strategy to sales\nTurn global demand into local value.\nConnects real market insight with local food, seasons and specialist knowledge, helping you identify who to attract, when to attract them, and what experiences actually drive demand beyond peak season.\nMenues with real stories\nStronger guest attraction, differentation and year-round relevance.\nFood concepts and menus are powered by real-time data, nutrition and tracking turning food into stories guests understand, value and return for.\nPredictable local supply\nLess risk. Better margins.\nClosed-loop operations connect local farmers capacity with real kitchen demand reducing guesswork, securing availability and making local sourcing reliable at scale.\nExplore how we partner with you to design, build and scale unique food experiences.\nDesigner for hospitality | Creator for farmers",
+   "identity_text_excerpt": "Community Join the Foodtures community Foodtures is our community of F&B-management, chefs, farmers and foodies. We share food experiences, stories and opportunities to pilot new experiences together! Join Foodtures Newsletter sign-ups deliver platform news, community stories, and early access invitations. Our story Who we are Join us Follow Blog Contact Connect Privacy Terms © 2026 Day of Week AS. All rights reserved.",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/dayofweek2021"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/dayof.week"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/day-of-week"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@context": "https://schema.org",
+     "@type": "Organization",
+     "name": "Day of Week",
+     "url": "https://dayofweek.com",
+     "description": "Day of Week builds AI-native products that fuse farm, supplier and market data into real-time, actionable decisions for farmers, producers, and hospitality businesses.",
+     "email": "hello@dayofweek.com",
+     "sameAs": []
+    }
+   ],
+   "content_sha256": "6b041ff7a0267a98b7e6c4d95f0d42d01df9539da9c32e71ccee88ee60765235",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://dayofweek.com/en",
+     "title": "Day of Week — Taste of life",
+     "main_text_excerpt": "Better outcomes for every link in the local food chain\nDay of Week connect market insight, brand, local supply, food concepts, menues and customer engagement into one AI-powered system that delivers measurable results.\nFrom market insight and strategy to sales\nTurn global demand into local value.\nConnects real market insight with local food, seasons and specialist knowledge, helping you identify who to attract, when to attract them, and what experiences actually drive demand beyond peak season.\nMenues with real stories\nStronger guest attraction, differentation and year-round relevance.\nFood concepts and menus are powered by real-time data, nutrition and tracking turning food into stories guests understand, value and return for.\nPredictable local supply\nLess risk. Better margins.\nClosed-loop operations connect local farmers capacity with real kitchen demand reducing guesswork, securing availability and making local sourcing reliable at scale.\nExplore how we partner with you to design, build and scale unique food experiences.\nDesigner for hospitality | Creator for farmers",
+     "content_sha256": "6b041ff7a0267a98b7e6c4d95f0d42d01df9539da9c32e71ccee88ee60765235"
+    },
+    {
+     "url": "https://dayofweek.com/en/about/join-us",
+     "title": "Join Us | Day of Week",
+     "main_text_excerpt": "We are growing our team and are always looking for passionate people who want to make local food systems smarter and more sustainable. Reach out if you want to be part of the journey.",
+     "identity_text_excerpt": "Community Join the Foodtures community Foodtures is our community of F&B-management, chefs, farmers and foodies. We share food experiences, stories and opportunities to pilot new experiences together! Join Foodtures Newsletter sign-ups deliver platform news, community stories, and early access invitations. Our story Who we are Join us Follow Blog Contact Connect Privacy Terms © 2026 Day of Week AS. All rights reserved.",
+     "content_sha256": "d681029c63c5347e4d3d7b6ca6d071e76e0d016b1d9c824a2a99aa9e92f3886e"
+    },
+    {
+     "url": "https://dayofweek.com/en/about/who-we-are",
+     "title": "Who We Are | Day of Week",
+     "main_text_excerpt": "Established in 2021\nThe Day of Week origin\nIn 2021, we travelled farm to farm across Norway to understand the real challenges facing local farmers and professional kitchens. What we discovered was not a lack of quality, but a lack of connection, structure and scalable systems. Day of Week was founded to bridge that gap, and transform food into local food experiences.\nOur Mission & Vision\nOur mission is to accelerate and scale local food systems through continuous innovation — for farmers, hospitality and the world’s food-curious.\nOur vision is to make local food the engine of the global food economy.\nWe believe that when local food becomes structured, measurable and connected through technology, it moves from being a passion to becoming power — driving sustainable growth, stronger producers and next-generation food experiences across markets.\nEngage in the vision →",
+     "identity_text_excerpt": "Community Join the Foodtures community Foodtures is our community of F&B-management, chefs, farmers and foodies. We share food experiences, stories and opportunities to pilot new experiences together! Join Foodtures Newsletter sign-ups deliver platform news, community stories, and early access invitations. Our story Who we are Join us Follow Blog Contact Connect Privacy Terms © 2026 Day of Week AS. All rights reserved.",
+     "content_sha256": "fa101bb6c0adaaf25c2662cc7205ccc0fd8bb24475bc616b50e741214226b674"
+    },
+    {
+     "url": "https://dayofweek.com/en/contact",
+     "title": "Contact | Day of Week",
+     "main_text_excerpt": "Community\nJoin the Foodtures community\nFoodtures is our community of F&B-management, chefs, farmers and foodies. We share food experiences, stories and opportunities to pilot new experiences together!\nNewsletter sign-ups deliver platform news, community stories, and early access invitations.",
+     "identity_text_excerpt": "Community Join the Foodtures community Foodtures is our community of F&B-management, chefs, farmers and foodies. We share food experiences, stories and opportunities to pilot new experiences together! Join Foodtures Newsletter sign-ups deliver platform news, community stories, and early access invitations. Our story Who we are Join us Follow Blog Contact Connect Privacy Terms © 2026 Day of Week AS. All rights reserved.",
+     "content_sha256": "9c6bfcc9e4daae62cf6ea36e3937c0e50b922232fec006673a8fd84cf2f958dc"
+    },
+    {
+     "url": "https://dayofweek.com/en/news",
+     "title": "News | Day of Week",
+     "main_text_excerpt": "From grain field to guest experience: NRK highlights Day of Week's work on short local value chains\nNRK follows the grain from Øvre Åbål Gård in Birkenes to the kitchen at Under. The story shows the potential in collaboration between producers, chefs, tourism and market — and the need for better systems around and between them.\nRead the story →\nNews\nMore stories\nRogaland: Norway's emerging innovation hub for food and technology\nFrom fertile farmland and coastal food traditions to world-class innovation environments, Rogaland is where food culture and technology meet to shape the future of food systems.\nScaling Authenticity: Why We Built Day of Week to Transform the Global Food System\nØystein Løken, Co-Founder & CSO, on why Day of Week was built to harness technology for systemic change. Scaling local, high-quality food globally.\nLocal Food. Global Engine.\nWe believe local food is one of the most underutilized economic forces in the world. Here is how Day of Week is building the operating system for local food systems.\nCAIO Portrait: Øyvind Brekkhus Sandåker on building AI for food systems\nMeet our Chief AI Officer — the architect behind Day of Week's AI strategy and the systems that power everything from ChefAI profiles to platform intelligence.\nFrom grain and stone milling to baking, insight and well-being\nWhat happens when grain is treated not just as a raw material, but as flavour, culture and long-term value? Together with Øvre Åbål Gård, local bakers and a stone mill on the farm, we explored how grain can shape food experiences across different needs, from professional bakers performance, to consumers looking for well-being, quality and taste. Connecting insight with market execution.\nNorway as Female Tech Founder Frontrunner: Siv Kristiansen\nDay of Week is selected for the first 2026 cohort of a national growth program supported by Innovation Norway, representing 15 Norwegian tech companies with female founders.\nNORCE Research: building location-aware AI for local food systems\nTogether with NORCE we proved that a location-based AI model can suggest practical, season-aware menus matched to local producer supply, a milestone toward unlocking local sourcing.",
+     "identity_text_excerpt": "Community Join the Foodtures community Foodtures is our community of F&B-management, chefs, farmers and foodies. We share food experiences, stories and opportunities to pilot new experiences together! Join Foodtures Newsletter sign-ups deliver platform news, community stories, and early access invitations. Our story Who we are Join us Follow Blog Contact Connect Privacy Terms © 2026 Day of Week AS. All rights reserved.",
+     "content_sha256": "eec5e79309a1588b742171af3836cce0b06dd06c7692861f7d2d92297648c2e8"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "day",
+     "of",
+     "week"
+    ],
+    "matched_tokens": [
+     "day",
+     "of",
+     "week"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/dayofweek2021"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/dayof.week"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/day-of-week"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/dayofweek2021",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "day",
+      "of",
+      "week"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/dayof.week",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "day",
+      "of",
+      "week"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/day-of-week",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "day",
+      "of",
+      "week"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "6b041ff7a0267a98b7e6c4d95f0d42d01df9539da9c32e71ccee88ee60765235",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/927176963": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2acb01d53dbde40c.json.gz",
+   "content_sha256": "2acb01d53dbde40c6994e39cff992e2395c2a5e73bdbb82712ad4f8f3a9a05b7",
+   "retrieved_at": "2026-11-01T20:14:34.264848Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/927176963": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "af71c14ad35d7c8d.json.gz",
+   "content_sha256": "af71c14ad35d7c8d6744c9fdd3403dc5c1cb2d76bbbe84a0384f034a11af6bba",
+   "retrieved_at": "2026-11-01T20:14:34.961944Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/927176963/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "5824c0a107256d56.json.gz",
+   "content_sha256": "5824c0a107256d56f9e29ea3b11a70d3672c11d41200203fd8462260015ad958",
+   "retrieved_at": "2026-11-01T20:14:37.060344Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/927176963": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T20:14:35.650613Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=927176963&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "7ff18156461758b0.json.gz",
+   "content_sha256": "7ff18156461758b0f2d17b6f90d08abee94aa3ee86c18d46d33c7466ddfcee36",
+   "retrieved_at": "2026-11-01T20:14:36.364783Z"
+  },
+  "https://dayofweek.com/en": {
+   "kind": "site",
+   "status": 200,
+   "file": "6b041ff7a0267a98.html.gz",
+   "content_sha256": "6b041ff7a0267a98b7e6c4d95f0d42d01df9539da9c32e71ccee88ee60765235",
+   "retrieved_at": "2026-11-01T20:14:45.492064Z"
+  },
+  "https://dayofweek.com/en/about/who-we-are": {
+   "kind": "site",
+   "status": 200,
+   "file": "fa101bb6c0adaaf2.html.gz",
+   "content_sha256": "fa101bb6c0adaaf25c2662cc7205ccc0fd8bb24475bc616b50e741214226b674",
+   "retrieved_at": "2026-11-01T20:14:45.741546Z"
+  },
+  "https://dayofweek.com/en/contact": {
+   "kind": "site",
+   "status": 200,
+   "file": "9c6bfcc9e4daae62.html.gz",
+   "content_sha256": "9c6bfcc9e4daae62cf6ea36e3937c0e50b922232fec006673a8fd84cf2f958dc",
+   "retrieved_at": "2026-11-01T20:14:45.929348Z"
+  },
+  "https://dayofweek.com/en/news": {
+   "kind": "site",
+   "status": 200,
+   "file": "eec5e79309a1588b.html.gz",
+   "content_sha256": "eec5e79309a1588b742171af3836cce0b06dd06c7692861f7d2d92297648c2e8",
+   "retrieved_at": "2026-11-01T20:14:46.279132Z"
+  }
+ }
+}
