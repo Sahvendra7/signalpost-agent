@@ -1,0 +1,359 @@
+{
+ "smoke": {
+  "live-100": {
+   "commit": "7b8fc69d10aed1a3677b2646bd44c49db7ae78d8",
+   "dirty_files": 0,
+   "started": "2026-11-01T20:36:37Z",
+   "envelopes": 100,
+   "input_rows": 100,
+   "terminal_status": {
+    "completed": 100
+   },
+   "input_order_preserved": true,
+   "validation_passed": true,
+   "contract_findings_with_snapshot_hash_check": {},
+   "evidence_entries_hash_checked": 3994,
+   "code_version_in_every_envelope": true,
+   "unsupported_summary_statements": 0,
+   "runtime_s": 142.0,
+   "requests": 762,
+   "third_party_cost_usd": 0,
+   "llm_in_report": false,
+   "hosts_contacted": 196,
+   "restricted_platform_hosts": [],
+   "viewer_written": true,
+   "viewer_bytes": 1401811,
+   "history": {
+    "written": true,
+    "dir": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release5/out/smoke/signalpost-history",
+    "run_path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release5/out/smoke/signalpost-history/v3-live-100",
+    "complete": true,
+    "pruned": 0
+   },
+   "baseline": {
+    "source": null,
+    "companies_with_baseline": 0
+   },
+   "baseline_kinds": {
+    "null": 100
+   },
+   "change_events": {},
+   "new_items": {
+    "social_profile": 0,
+    "news_item": 0,
+    "job_posting": 0,
+    "retracted": 0
+   },
+   "checks_withheld_total": 7,
+   "published_site_facts": {
+    "social_profile": 12,
+    "careers_page": 4,
+    "official_website": 14,
+    "news_item": 30
+   }
+  },
+  "live-100-refresh": {
+   "commit": "7b8fc69d10aed1a3677b2646bd44c49db7ae78d8",
+   "dirty_files": 0,
+   "started": "2026-11-01T20:39:01Z",
+   "envelopes": 100,
+   "input_rows": 100,
+   "terminal_status": {
+    "completed": 100
+   },
+   "input_order_preserved": true,
+   "validation_passed": true,
+   "contract_findings_with_snapshot_hash_check": {},
+   "evidence_entries_hash_checked": 3994,
+   "code_version_in_every_envelope": true,
+   "unsupported_summary_statements": 0,
+   "runtime_s": 137.9,
+   "requests": 756,
+   "third_party_cost_usd": 0,
+   "llm_in_report": false,
+   "hosts_contacted": 198,
+   "restricted_platform_hosts": [],
+   "viewer_written": true,
+   "viewer_bytes": 1446966,
+   "history": {
+    "written": true,
+    "dir": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release5/out/smoke/signalpost-history",
+    "run_path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release5/out/smoke/signalpost-history/v3-live-100-refresh",
+    "complete": true,
+    "pruned": 0
+   },
+   "baseline": {
+    "source": "history",
+    "companies_with_baseline": 100
+   },
+   "baseline_kinds": {
+    "published_envelope": 100
+   },
+   "change_events": {
+    "unavailable": 2
+   },
+   "new_items": {
+    "social_profile": 0,
+    "news_item": 0,
+    "job_posting": 0,
+    "retracted": 0
+   },
+   "checks_withheld_total": 7,
+   "published_site_facts": {
+    "social_profile": 12,
+    "careers_page": 4,
+    "official_website": 14,
+    "news_item": 30
+   }
+  }
+ },
+ "repro5": {
+  "commit": "7b8fc69d10aed1a3677b2646bd44c49db7ae78d8",
+  "dirty_files": 0,
+  "started": "2026-11-01T20:41:21Z",
+  "envelopes": 5,
+  "input_rows": 5,
+  "terminal_status": {
+   "completed": 5
+  },
+  "input_order_preserved": true,
+  "validation_passed": true,
+  "contract_findings_with_snapshot_hash_check": {},
+  "evidence_entries_hash_checked": 254,
+  "code_version_in_every_envelope": true,
+  "unsupported_summary_statements": 0,
+  "runtime_s": 30.6,
+  "requests": 85,
+  "third_party_cost_usd": 0,
+  "llm_in_report": false,
+  "hosts_contacted": 9,
+  "restricted_platform_hosts": [],
+  "viewer_written": true,
+  "viewer_bytes": 121891,
+  "history": {
+   "written": true,
+   "dir": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release5/out/repro/signalpost-history",
+   "run_path": "/tmp/claude-0/-home-user-signalpost-agent/3e43140a-eb25-5545-aa91-a0fabc1c685e/scratchpad/release5/out/repro/signalpost-history/v3-repro5",
+   "complete": true,
+   "pruned": 0
+  },
+  "baseline": {
+   "source": null,
+   "companies_with_baseline": 0
+  },
+  "baseline_kinds": {
+   "null": 5
+  },
+  "change_events": {},
+  "new_items": {
+   "social_profile": 0,
+   "news_item": 0,
+   "job_posting": 0,
+   "retracted": 0
+  },
+  "checks_withheld_total": 94,
+  "published_site_facts": {
+   "news_item": 20,
+   "official_website": 5,
+   "social_profile": 5
+  }
+ },
+ "repro5_companies": {
+  "911771098": {
+   "name": "HANS JØRGEN SANDNES AS",
+   "official_website": {
+    "published": [
+     "https://hjsandnes.wordpress.com/"
+    ],
+    "published_count": 1,
+    "not_published": []
+   },
+   "social_profile": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "ambiguous: 5 profile link(s) on the verified site not corroborated as this company's own"
+    ]
+   },
+   "news_item": {
+    "published": [
+     "Følg med videre på sandnes-media.no",
+     "Krypto – Ned i dypet",
+     "Navnebringeren",
+     "Operasjon Radius",
+     "Du store verden",
+     "Inbetween",
+     "Detektivbyrå nr. 2 som brettspill",
+     "God tegnefilmjul!",
+     "Operasjon Mumie",
+     "Original «Brave Little Tailor» av Bill Tytla",
+     "Den helt sanne historien om hvordan DET ALLER BESTE ble til",
+     "Når bøkene lever sitt eget liv."
+    ],
+    "published_count": 20,
+    "not_published": []
+   },
+   "job_posting": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
+    ]
+   },
+   "careers_page": {
+    "published": [],
+    "published_count": 0,
+    "not_published": []
+   }
+  },
+  "983181732": {
+   "name": "TYIN ALPINT AS",
+   "official_website": {
+    "published": [
+     "https://www.tyinfilefjell.no/"
+    ],
+    "published_count": 1,
+    "not_published": []
+   },
+   "social_profile": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "ambiguous: 6 profile link(s) on the verified site not corroborated as this company's own"
+    ]
+   },
+   "news_item": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no news or activity item with a date stated on the page found"
+    ]
+   },
+   "job_posting": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_applicable: The website states organisation number 930182451, not this company's (983181732); it is run by another company. Vacancies on it are not attr"
+    ]
+   },
+   "careers_page": {
+    "published": [],
+    "published_count": 0,
+    "not_published": []
+   },
+   "site_role": "operated_by_other_company"
+  },
+  "995596970": {
+   "name": "BERGKNAPP AS",
+   "official_website": {
+    "published": [
+     "https://www.bergknapp.no/"
+    ],
+    "published_count": 1,
+    "not_published": []
+   },
+   "social_profile": {
+    "published": [
+     "https://www.facebook.com/bergknapp.no",
+     "https://www.instagram.com/bergknapp.no/",
+     "https://www.linkedin.com/company/bergknapp-as"
+    ],
+    "published_count": 3,
+    "not_published": []
+   },
+   "news_item": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no dated article qualified as news about this company. 1 dated candidate entry was withheld (non article path: 1)"
+    ]
+   },
+   "job_posting": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
+    ]
+   },
+   "careers_page": {
+    "published": [],
+    "published_count": 0,
+    "not_published": []
+   }
+  },
+  "980932834": {
+   "name": "BARTEC AS",
+   "official_website": {
+    "published": [
+     "https://bartec.com/"
+    ],
+    "published_count": 1,
+    "not_published": []
+   },
+   "social_profile": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "ambiguous: 4 profile link(s) on the verified site not corroborated as this company's own"
+    ]
+   },
+   "news_item": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no dated article qualified as news about this company. 53 dated candidate entries were withheld (item not about en"
+    ]
+   },
+   "job_posting": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_applicable: The website belongs to a group or brand that this company is part of; only items naming this company are attributed to it. Vacancies on it a"
+    ]
+   },
+   "careers_page": {
+    "published": [],
+    "published_count": 0,
+    "not_published": []
+   },
+   "site_role": "group_or_brand_site"
+  },
+  "995159406": {
+   "name": "BK BYGG AS",
+   "official_website": {
+    "published": [
+     "https://bkbygg.no/"
+    ],
+    "published_count": 1,
+    "not_published": []
+   },
+   "social_profile": {
+    "published": [
+     "https://www.facebook.com/bkbygg",
+     "https://www.instagram.com/bk_bygg/"
+    ],
+    "published_count": 2,
+    "not_published": []
+   },
+   "news_item": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no dated article qualified as news about this company. 10 dated candidate entries were withheld (bulk entry burst:"
+    ]
+   },
+   "job_posting": {
+    "published": [],
+    "published_count": 0,
+    "not_published": [
+     "not_available: Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
+    ]
+   },
+   "careers_page": {
+    "published": [],
+    "published_count": 0,
+    "not_published": []
+   }
+  }
+ }
+}

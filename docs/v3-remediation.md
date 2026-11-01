@@ -309,3 +309,46 @@ the arm), not the owner's.
 | Careers page | V3 remediation 7b8fc69 | 9 | 0 | 3 | 100.0% (70.1–100.0) | 9/10 = 90.0% (59.6–98.2) | 5 / 0 |
 | Job ads | baseline ff3b515 | 0 | 1 | 0 | 0.0% (0.0–79.3) |  |  |
 | Job ads | V3 remediation 7b8fc69 | 0 | 0 | 0 | — | — (no correct baseline unit) | 1 / 0 |
+
+## R7 — validation of the remediation code (`7b8fc69`)
+
+| Check | Result |
+|---|---|
+| Full suite, working tree | 487 passed, 172 subtests, 0 failed, 0 skipped. At `v3-candidate-1` it was 474. The new tests cover R1, R2, R4, R5, R6 and R3. |
+| Clean room (fresh clone, empty uv cache, `uv sync --locked`) | Sync OK; 3 of 3 suite runs with 487 passed and 172 subtests; documented command exit 0 (`measurements/v3-remediation-2026-11-01/release/` and below) |
+| Dependencies | `git diff ff3b515 7b8fc69 -- pyproject.toml uv.lock` is empty. No paid API; LLM not loaded; third-party cost $0 in every run. |
+| Live 100 companies (fixed smoke input, SHA-256 `80eb79e6…`) | 100/100 `completed` in input order; validation passed; 0 contract findings with 3,994 snapshot hashes re-verified; 0 unsupported summary statements; 196 hosts, none a social or other restricted platform; 142.0 s, 762 requests, $0 |
+| Refresh through the run history | 100/100 compared against `published_envelope`. **No removals, additions or retractions.** 2 `unavailable` events: Kongsvinger IL Ishockey's robots.txt was unreachable during the refresh, so its website, description and news were kept as "last value kept". This is the live outage path working. |
+| Reproductions, live | 911771098: LinkedIn not published, **20** news items. Tyin Alpint: 0 profiles; site run by another company. Bergknapp: its own 3 profiles. Bartec: group site, 0 profiles. BK Bygg: 0 news, its own 2 profiles. |
+| Positive controls (fixtures) | All kept: Kilis 10, Birralee 20, Grønsand 15 plus 2 profiles, Beredt ≥ 6 news, Bergknapp 3, BioMar `biomarnorge`, Birralee and Bjelland careers pages, ASAK MILJØSTEIN's own profiles, 911771098 20 posts. One control changed with evidence: Beredt's `@beredtinkludering`, see R1/R2. |
+
+## Remaining known errors and open decisions
+
+**Known errors (V3 candidate 2):**
+1. **News on content-marketing blogs** (independent, 20 of 29 news errors). Advice, property or project listings and
+   thought-leadership posts under `/post/` or `/blog/` are published as news. This needs article-text classification,
+   which the deterministic rules do not do.
+2. **A subsidiary whose website is its parent's** (BE KRAFTSALG AS on `bodoenergi.no`): 5 news and 3 social errors in
+   the independent sample. The group relationship is visible only in the registry (parent organisation), which V3 does
+   not use for operator assessment.
+3. **The reader-addressing rule (R6)** re-admitted 2 advice posts on the independent sample and gained no correct unit
+   there.
+4. **Single cases:**
+   - a job-advertisement page published as news (Sabi);
+   - a 2011 welcome text (Kellners);
+   - an accountant's regulation posts (Solregn);
+   - Stalheim's tour package;
+   - Hamatec's 2015 price notice dated 2016;
+   - Realbygg's project name on its press listing.
+5. **Earlier known errors:** Green Mountain UK and global group news on the Norwegian AS's site, and GMC group news
+   shared by sister companies. Both were labelled unsure.
+6. **Careers recall.** A careers page is published only if it was read in the run (GMV `/karriere` and Webstep
+   `/bli-en-av-oss` were not), so independent retention is 4/6.
+7. **Job advertisements:** too rare to measure; no decidable published ad in any remediation sample.
+
+**Decisions for the owner:**
+- Whether to submit with news precision this far below target on independent data, or restrict news publication, for
+  example to `/nyheter/`, `/aktuelt/` and press sections, or to items whose text names the company. Either option
+  needs its own new held-out evaluation.
+- Whether to keep R6. It helps on development data and hurts on independent data; the counts are small either way.
+- Whether to re-label (`scripts/audit_kit.py`, `--labeller-kind owner`). All labels are the assistant's (blind).

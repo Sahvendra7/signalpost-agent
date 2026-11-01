@@ -1,0 +1,17 @@
+url	data.brreg.no
+connect	127.0.0.1
+dns	127.0.0.1
+dns	www.bartec-technor.no
+dns	www.bergknapp.no
+url	www.bergknapp.no
+dns	hjsandnes.wordpress.com
+url	www.bartec-technor.no
+url	hjsandnes.wordpress.com
+dns	www.bkbygg.no
+dns	www.tyinfilefjell.no
+url	www.tyinfilefjell.no
+url	www.bkbygg.no
+dns	bartec.com
+url	bartec.com
+dns	bkbygg.no
+url	bkbygg.no

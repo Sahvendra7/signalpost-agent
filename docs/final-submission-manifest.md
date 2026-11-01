@@ -1,6 +1,18 @@
 # Final submission manifest
 
-## V3 candidate (not submitted, not scored)
+## V3 candidate 2 — after the pre-release remediation pass (not submitted, not scored)
+
+| | |
+|---|---|
+| Branch | `claude/awesome-sagan-m2lppu` (local; not pushed) |
+| **Code under test** | **`7b8fc69d10aed1a3677b2646bd44c49db7ae78d8`**. Later commits change only documentation and measurements; `git diff 7b8fc69 <candidate> -- src tests scripts pyproject.toml uv.lock` is empty. |
+| Previous candidate | `v3-candidate-1` (local tag on `4549f3a`; code `dc96260`), kept unchanged and reproducible |
+| What changed | `docs/v3-remediation.md`: ASAK and Ashtead, careers paths, imported-envelope outages, the reader-addressing rule, feed sections, default posts, slugified A/S |
+| Tests | 487 passed and 172 subtests, in the working tree and in 3 of 3 clean-room runs |
+| Live check | 100/100 `completed`; 0 contract findings; refresh with no removals, additions or retractions, and 2 correct "last value kept" outage events |
+| **Independent accuracy** (new random sample eval120, scored once, `assistant_blind`) | Social 93.0% (CI 81.4–97.6). **News 25.6% (CI 14.6–41.1): the 90% target is NOT met.** Careers page 4/4 (CI 51–100: too few to establish the target). Job ads: none decidable. |
+
+## V3 candidate 1 (superseded by candidate 2; not submitted)
 
 | | |
 |---|---|
