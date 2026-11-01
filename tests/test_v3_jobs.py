@@ -116,3 +116,18 @@ class Extraction(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CareersPathSegments(unittest.TestCase):
+    """Remediation R4: generic job words only open a path segment; unambiguous careers words may close one."""
+
+    def test_topic_pages_about_work_are_not_careers_pages(self):
+        from norway_company_agent.site_facts import CAREER_PATH
+        for path in ("/for-barn-og-unge/dine-rettigheter/penger-og-jobb", "/skole-og-jobb", "/sommerjobb", "/tema/arbeid-og-jobb/"):
+            self.assertIsNone(CAREER_PATH.search(path), path)
+
+    def test_careers_paths_still_match(self):
+        from norway_company_agent.site_facts import CAREER_PATH
+        for path in ("/jobb-hos-oss/", "/om-oss/karriere", "/tjenester/om-kommunen/jobb-i-grane-kommune-ledige-stillinger", "/ledige-stillinger",
+                     "/company/careers", "/jobbe-hos-oss/", "/stillinger/", "/electro/jobbe-i-granitor-electro", "/om-oss-karriere", "/utlyste-stillinger", "/ledige-jobber"):
+            self.assertIsNotNone(CAREER_PATH.search(path), path)

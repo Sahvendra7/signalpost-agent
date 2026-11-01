@@ -57,7 +57,11 @@ MAX_JOBS_PER_PAGE = 50
 NEWS_WORDS = ("nyheter", "nyhet", "aktuelt", "news", "blogg", "blog", "artikler", "artikkel", "article", "articles", "presse", "press",
               "pressemeldinger", "pressemelding", "post", "posts", "innlegg", "magasin", "nyhetsarkiv")
 NEWS_PATH = re.compile(r"(?:^|[/_-])(?:" + "|".join(NEWS_WORDS) + r")(?:$|[/_.-])")
-CAREER_PATH = re.compile(r"(?:^|/)(?:[\w-]*-)?(?:ledige-stillinger|stillinger|stilling|karriere|career|careers|jobs|jobb|jobbe|vacancies|vacancy|open-positions|rekruttering|join-us|work-with-us)(?:$|[/_.-])")
+# Remediation R4: unambiguous careers words may close a longer segment ("jobb-i-grane-kommune-ledige-stillinger",
+# "om-oss-karriere"); generic job words only open one ("jobb-hos-oss", "stillinger"). "penger-og-jobb" (a topic page
+# about money and work) or "skole-og-jobb" is not a careers page.
+CAREER_PATH = re.compile(r"(?:^|/)(?:(?:[\w-]*-)?(?:ledige-stillinger|utlyste-stillinger|ledige-jobber|ledig-stilling|karriere|career|careers|vacancies|open-positions|join-us|work-with-us)"
+                         r"|(?:stillinger|stilling|jobs|jobb|jobbe|vacancy|rekruttering))(?:$|[/_.-])")
 CAREER_HEADINGS = ("ledige stillinger", "stillinger", "karriere", "careers", "career", "jobs", "vacancies", "jobb hos", "jobbe hos", "open positions")
 STRONG_JOB_PATH = re.compile(r"(?:^|[/_-])(?:stilling|stillinger|stillingsannonse|jobs?|vacanc(?:y|ies)|positions?|utlysning)(?:[/_-][^/]{3,})")
 ATS_DOMAINS = {

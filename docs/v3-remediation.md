@@ -69,3 +69,46 @@ profile:
   the same published facts.
 
 A guard test checks that a source that does answer still reports real removals.
+
+## R4 — careers (held-out fresh60b, exact counts)
+
+These are careers *pages*. A careers page is a company's page about working there; a **job advertisement** is a single
+vacancy. Job advertisements are a separate category: on fresh60b the baseline published 1 (incorrect: an
+applicant-tracking system's list of all adverts, `candidate.webcruiter.com`), and V3 published 0. So **job-ad precision
+cannot be measured on fresh60b** (0 published), and none of the figures below are job-ad accuracy.
+
+**Careers pages, V3 at the freeze (`6efd3cd`), evaluated once.** 12 published: 8 correct, 1 incorrect, 3 unsure.
+
+| Unit | Label |
+|---|---|
+| Granitor Electro `/jobbe-i-granitor-electro`, Grenland Brann og Redning `/jobb-hos-oss/`, Grong Sparebank `/Jobb-hos-oss`, Alf I. Larsen `/ledige-stillinger`, Bauta Regnskap `/jobbe-hos-oss/`, Green Mountain `/about-us/careers/`, Granavolden `/om-oss/jobbe-hos-oss/`, Basis.no `/company/careers` | correct (8) |
+| **Barneombudet `/for-barn-og-unge/dine-rettigheter/penger-og-jobb`** | **incorrect**: a children's-rights page about money and work |
+| GMC Yard, GMC Power & Automation (`gmc.no/om-oss/karriere`, shared by group companies); Gratangen kommune `/jobbe-og-bo` ("work and live") | unsure (3) |
+
+- **Precision:** 8 / 9 decided = 88.9%, Wilson 95% CI 56.5–98.0%.
+- **Retention** (recall proxy): 8 of the baseline's 10 correct pages = 80.0%.
+  - Grane kommune was lost by a bug fixed in `b5199fe`: a municipal `/tjenester/` path was taken as a service page.
+  - GMV `/karriere` was lost because V3 requires the careers page to have been read, and it was not.
+    - In replay, the baseline capture never fetched it: the old code published the link unread.
+    - In a live check on 2026-11-01, the page was also not read in the run (10 requests; no recorded error).
+    - V3 keeps the rule "never call an unread page a careers page", so this is a recall loss, not a precision error.
+
+**Weakness behind the one error.** `CAREER_PATH` accepted any dash-prefixed path segment ending in a generic job word
+(`(?:[\w-]*-)?jobb`), so "penger-og-jobb" ("money and work") matched.
+
+**Change.**
+- Generic job words (`jobb`, `jobbe`, `jobs`, `stilling(er)`, `rekruttering`, `vacancy`) count only at the **start** of
+  a segment.
+- Unambiguous careers phrases may close a longer segment: `ledige-stillinger`, `utlyste-stillinger`, `ledige-jobber`,
+  `ledig-stilling`, `karriere`, `career(s)`, `vacancies`, `open-positions`, `join-us`, `work-with-us`.
+
+**Effect, replayed on all four sets:**
+- fresh60b: Barneombudet's page is no longer published.
+- smoke100, midsize40, fresh60: no change.
+  - `utlyste-stillinger` was briefly lost on fresh60 (dev) until the phrase list included it.
+
+**Independence caveat.** This change was motivated by analysing a held-out error, so fresh60b careers figures after it
+(9 / 9 decided at the current code) are **not** independent evidence. The independent careers figure is the new
+evaluation sample (R3/R7).
+
+**Tests:** `test_v3_jobs.py::CareersPathSegments` (topic pages rejected; real careers paths kept).
