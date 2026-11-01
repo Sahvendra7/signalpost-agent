@@ -366,3 +366,12 @@ Screenshots: `docs/screenshots/app-*.png`.
 **Measurement artefacts.** The Phase 4 commit did not include its input lists, replay envelopes and labelled CSVs,
 because `.gitignore` excludes `*.jsonl`, `*.jsonl.gz` and `*.csv`. They are now force-added, as earlier measurement
 directories were.
+
+**Fix: never "none found" when news candidates were found and withheld.**
+- The reproduction run showed Bartec's news reason as "no news or activity item with a date stated on the page found".
+  In fact, the agent found 37 dated entries on the group site and withheld them.
+- When dated candidates were withheld, the `not_available` reason now says so and gives the top three rule codes with
+  their counts. For example: "… 37 dated candidate entries were withheld (item not about entity on group or brand site:
+  31; bulk entry burst: 4; page date on non news page: 2)".
+- Counts are candidate entries, not unique articles: the same article seen in a feed and on a page counts twice.
+- Test: `test_v3_regressions.py::NewsClassification::test_withheld_news_is_never_reported_as_none_found`.

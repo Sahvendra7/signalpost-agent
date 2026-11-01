@@ -119,6 +119,11 @@ class NewsClassification(unittest.TestCase):
         self.assertEqual(len(news_urls("919378875")), 15, "Grønsand posts")
         self.assertGreaterEqual(len(news_urls("916303122")), 6, "Beredt's own articles")
 
+    def test_withheld_news_is_never_reported_as_none_found(self):
+        reason = next(claim["reason"] for claim in replay("980932834")["claims"] if claim["field"] == "news_item")
+        self.assertIn("dated candidate entries were withheld", reason)
+        self.assertIn("item not about entity on group or brand site: 31", reason)
+
     def test_911771098_blog_control(self):
         """The WordPress case (C300 fixture, captured 2026-10-17): 20 posts at ff3b515. One, "Du store verden", is withheld
         by the second-person title rule added in 6efd3cd (a known, logged false negative: in the labelled audits that

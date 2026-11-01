@@ -405,7 +405,15 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
     if not activities and manager:
         claims.absent("public_activity", "news_item", "not_applicable", held.format("news items") + f" unless an item names it ({held_news} dated item(s) on the site, none naming it)")
     elif not activities:
-        claims.absent("public_activity", "news_item", "not_available", "Verified website checked; no news or activity item with a date stated on the page found")
+        withheld = {key.split(":", 1)[1]: count for key, count in (value.get("extraction_rejections") or {}).items() if key.startswith("activity:") and count}
+        if withheld:  # V3: say that dated entries were found and withheld, and why; never "none found" when some were
+            total = sum(withheld.values())
+            top = "; ".join(f"{code.replace('_', ' ')}: {count}" for code, count in sorted(withheld.items(), key=lambda item: (-item[1], item[0]))[:3])
+            claims.absent("public_activity", "news_item", "not_available",
+                          f"Verified website checked; no dated article qualified as news about this company. {total} dated candidate "
+                          f"{'entry was' if total == 1 else 'entries were'} withheld ({top})")
+        else:
+            claims.absent("public_activity", "news_item", "not_available", "Verified website checked; no news or activity item with a date stated on the page found")
     jobs = [job for job in value.get("jobs") or [] if on_site(job.get("page_url"))]
     for job in jobs:
         page = _page_record(job.get("page_url"), job.get("content_sha256"), job.get("retrieved_at"), carried)
