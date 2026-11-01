@@ -747,10 +747,15 @@ class SiteFacts:
     rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     careers_checked: list[dict[str, Any]] = field(default_factory=list)
     operator: dict[str, Any] | None = None
+    rejected_keys: list[dict[str, Any]] = field(default_factory=list)
 
     def reject(self, kind: str, reason: str, item: dict[str, Any], page: CapturedPage | None) -> None:
         key = f"{kind}:{reason}"
         self.rejections[key] = self.rejections.get(key, 0) + 1
+        if kind in ("social", "activity", "job") and len(self.rejected_keys) < 2000:
+            from .refresh import site_key  # the candidate's identity, so a later refresh can tell "withdrawn" from "gone"
+            self.rejected_keys.append({"family": kind, "code": reason, "key": site_key(kind, item.get("url") if kind == "social" else item,
+                                       canonical_url=item.get("canonical_url"), page_url=page.url if page else None)})
         if len(self.rejected_examples) < 20:
             shown = {name: value for name, value in item.items() if name in ("title", "url", "date", "date_text", "platform")}
             self.rejected_examples.append({"kind": kind, "reason": reason, "source_url": page.url if page else None, **shown})

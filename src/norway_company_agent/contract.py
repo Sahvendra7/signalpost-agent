@@ -31,6 +31,10 @@ STATUS_TO_AVAILABILITY = {
 _SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 
+# V3 §B8 adds "retracted" (withdrawn by the agent's current rules) and "not_rechecked" (source page not read this run).
+CHANGE_TYPES = {"added", "removed", "changed", "unverified", "unavailable", "retracted", "not_rechecked"}
+
+
 def availability_for(record: dict[str, Any] | None) -> str:
     return STATUS_TO_AVAILABILITY.get(str((record or {}).get("status")), "failed")
 
@@ -196,6 +200,9 @@ def validate_envelope(envelope: dict[str, Any], *, snapshot_root: Path | None = 
         finding("non_terminal_status")
     if "code_version" in run and not valid_code_version(run["code_version"]):
         finding("invalid_code_version")
+    for change in envelope.get("changes") or [] if isinstance(envelope.get("changes"), list) else []:
+        if isinstance(change, dict) and "change_type" in change and change["change_type"] not in CHANGE_TYPES:
+            finding("invalid_change_type")
     for key in ("claims", "evidence", "changes", "errors"):
         if not isinstance(envelope.get(key), list):
             finding(f"missing_{key}")

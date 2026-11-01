@@ -12,6 +12,7 @@ import threading
 from pathlib import Path
 
 from .batch import profile_complete_for_modules
+from . import history
 from .pipeline import DEFAULT_MODULES, read_input_rows, run_batch
 from .streaming import JsonlStream, read_jsonl_tolerant
 from .viewer import write_viewer
@@ -48,6 +49,39 @@ def read_profiles(path: str | None) -> dict[str, dict]:
     return {row["organisation_number"]: row for row in rows if row.get("organisation_number")}
 
 
+def _new_items(envelopes: list[dict]) -> dict:
+    """Facts first seen in this run, per family, for companies that had a baseline (V3 §B8)."""
+    counts = {"social_profile": 0, "news_item": 0, "job_posting": 0, "retracted": 0}
+    for envelope in envelopes:
+        for claim in envelope.get("claims") or []:
+            if claim.get("is_new") and claim.get("field") in counts:
+                counts[claim["field"]] += 1
+        counts["retracted"] += sum(1 for change in envelope.get("changes") or [] if change.get("change_type") == "retracted")
+    return counts
+
+
+def _checks(profiles: list[dict]) -> dict:
+    """Automatic gate decisions by code across the run. Not an accuracy measurement."""
+    totals: dict[str, int] = {}
+    for profile in profiles:
+        value = ((profile.get("evidence") or {}).get("site_research") or {}).get("value") or {}
+        for key, count in (value.get("extraction_rejections") or {}).items():
+            totals[key] = totals.get(key, 0) + int(count)
+    return {"note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement", "withheld": dict(sorted(totals.items()))}
+
+
+def _manual_audit(path: str | None) -> dict:
+    if not path:
+        return {"state": "not_audited", "note": "no manual audit supplied (scripts/audit_kit.py score; --audit-results)"}
+    try:
+        data = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return {"state": "unreadable", "note": f"{type(exc).__name__}: {str(exc)[:120]}"}
+    return {"state": "audited", "labeller": data.get("labeller"), "labeller_kind": data.get("labeller_kind"), "units_labelled": data.get("units_labelled"),
+            "arms": data.get("arms"), "retention": data.get("retention"), "note": data.get("note") or "Local engineering measurement; not an official Builderr score.",
+            "source": str(path)}
+
+
 def main(argv: list[str] | None = None, **injected) -> None:
     """The evaluator command. `injected` (fetcher, site_fetcher, website_fetcher, resolver) is for offline tests only."""
     parser = argparse.ArgumentParser(description="Evaluator-owned Signalpost batch contract")
@@ -69,6 +103,11 @@ def main(argv: list[str] | None = None, **injected) -> None:
                         help="No new company starts inside the last N seconds (default: $SIGNALPOST_GRACE_SECONDS or 60)")
     parser.add_argument("--viewer-output", help="Self-contained offline HTML viewer of the results (default: next to --output, <output name>.viewer.html)")
     parser.add_argument("--no-viewer", action="store_true", help="Do not write the HTML viewer")
+    parser.add_argument("--previous-envelopes", help="Envelopes JSONL of an earlier run: changes are reported against what it published (retractions included)")
+    parser.add_argument("--history-dir", help="Run history directory (default: <output dir>/signalpost-history); the newest complete run is the baseline when no previous run is given")
+    parser.add_argument("--no-history", action="store_true", help="Neither keep this run in the history nor use the history as a baseline")
+    parser.add_argument("--history-keep", type=int, default=10, help="Runs kept in the history (the newest two complete runs are always kept)")
+    parser.add_argument("--audit-results", help="audit-results.json from scripts/audit_kit.py score: shown in the report and the viewer as the manual audit")
     args = parser.parse_args(argv)
 
     modules = [item.strip() for item in args.modules.split(",") if item.strip()]
@@ -83,6 +122,13 @@ def main(argv: list[str] | None = None, **injected) -> None:
     # terminal, so an interrupted run keeps every completed company. At the end both files are rewritten
     # atomically in input order.
     previous_profiles = read_profiles(args.previous_profiles)  # before the streams truncate any file
+    history_dir = None if args.no_history else Path(args.history_dir) if args.history_dir else Path(args.output).resolve().parent / "signalpost-history"
+    previous_envelopes, baseline_source = {}, None
+    if args.previous_envelopes:
+        previous_envelopes, baseline_source = history.latest_by_org(history.read_envelopes(args.previous_envelopes)), "previous_envelopes"
+    elif history_dir is not None and not previous_profiles:
+        previous_envelopes = history.baselines(history_dir, [row.organisation_number for row in rows if row.organisation_number])
+        baseline_source = "history" if previous_envelopes else None
     envelope_stream = JsonlStream(Path(args.output))
     profile_stream = JsonlStream(Path(args.profiles_output))
     stop_event = threading.Event()
@@ -114,6 +160,7 @@ def main(argv: list[str] | None = None, **injected) -> None:
         grace_seconds=args.grace_seconds,
         on_result=on_result,
         stop_event=stop_event,
+        previous_envelopes=previous_envelopes or None,
         **injected,
     )
     envelope_stream.close()
@@ -122,12 +169,28 @@ def main(argv: list[str] | None = None, **injected) -> None:
     write_jsonl(Path(args.output), result["envelopes"])
     report = result["report"]
     report["resumed_profiles"] = len(reuse)
+    report["baseline"] = {"source": baseline_source or ("previous_profiles" if previous_profiles else None),
+                          "companies_with_baseline": sum(1 for item in result["envelopes"] if (item.get("refresh") or {}).get("compared"))}
+    report["new_items"] = _new_items(result["envelopes"])
+    report["checks"] = _checks(result["profiles"])
+    report["manual_audit"] = _manual_audit(args.audit_results)
+    report["history"] = {"written": False, "dir": str(history_dir) if history_dir else None, "reason": "disabled (--no-history)" if history_dir is None else "not yet written"}
     # The viewer is part of every documented run (a reviewer opens it from the run's own output directory), but it
     # never fails a completed run: the envelopes, profiles and report are durable before it is rendered, and the
     # report is rewritten with its outcome afterwards.
     viewer_path = None if args.no_viewer else Path(args.viewer_output) if args.viewer_output else Path(args.output).with_suffix(".viewer.html")
     report["viewer"] = {"written": False, "path": str(viewer_path) if viewer_path else None, "reason": "disabled (--no-viewer)" if viewer_path is None else "not yet written"}
     write_report(Path(args.report), report)
+    if history_dir is not None:
+        # After envelopes, profiles and report are durable; never fails the run.
+        try:
+            path = history.write_run(history_dir, args.run_id, result["envelopes"], result["profiles"], report)
+            pruned = history.prune(history_dir, args.history_keep)
+            report["history"] = {"written": True, "dir": str(history_dir), "run_path": str(path), "complete": history.run_is_complete(report, result["envelopes"]), "pruned": len(pruned)}
+        except Exception as exc:
+            report["history"]["reason"] = f"{type(exc).__name__}: {str(exc)[:200]}"
+            print(f"history not written: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
+        write_report(Path(args.report), report)
     if viewer_path is not None:
         try:
             write_viewer(viewer_path, result["envelopes"], report)

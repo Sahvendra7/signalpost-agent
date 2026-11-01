@@ -279,6 +279,8 @@ class SiteResult:
     articles_fetched: int = 0
     manager: dict[str, Any] | None = None  # MANAGER_DESIGNATED: the registered forretningsfører operating the site
     operator: dict[str, Any] | None = None  # V3: who runs the verified site (attribution.operator)
+    rejected_keys: list[dict[str, Any]] = field(default_factory=list)  # V3 §B8: candidates a rule rejected (for retractions)
+    feeds_read: list[list[Any]] = field(default_factory=list)  # [url, sha256, retrieved_at] of every feed read
     extraction_rejections: dict[str, int] = field(default_factory=dict)
     rejected_examples: list[dict[str, Any]] = field(default_factory=list)
     requests: int = 0
@@ -430,6 +432,7 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
         state, response = session.get(url, budget, accept="application/rss+xml,application/atom+xml,application/xml,text/xml")
         if state == "ok":
             feed_pages.append(CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at, kind="feed"))
+            result.feeds_read.append([url, response.content_sha256, response.retrieved_at])
     news_page: CapturedPage | None = None
     for url in list(dict.fromkeys(news))[:1] + list(dict.fromkeys(careers))[:1]:
         state, response = session.get(url, budget)
@@ -490,6 +493,11 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
     result.extraction_rejections = dict(facts.rejections)
     result.rejected_examples = facts.rejected_examples
     result.operator = getattr(facts, "operator", None)
+    result.rejected_keys = list(getattr(facts, "rejected_keys", []) or [])
+
+    def held(family: str, key_value: Any, code: str, **extra: Any) -> None:
+        from .refresh import site_key
+        result.rejected_keys.append({"family": family, "code": code, "key": site_key(family, key_value, **extra)})
     if result.careers_page:
         # V3 §B7: the linked page must itself be a careers page (path or heading), not a service page for employers.
         fetched_page = next((page for page in pages or [] if page.url == result.careers_page and page.kind == "html"), None)
@@ -498,10 +506,12 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
             # A recruiter's vacancies page lists its clients' jobs: it is not a page about working at the recruiter.
             counts = result.extraction_rejections
             counts["careers:recruiter_job_board"] = counts.get("careers:recruiter_job_board", 0) + 1
+            held("careers", result.careers_page, "recruiter_job_board")
             result.careers_page, result.careers_checked = None, []
         elif fetched_page is None or not is_careers_page(fetched_page) or service_page(result.careers_page):
             counts = result.extraction_rejections
             counts["careers:not_a_careers_page"] = counts.get("careers:not_a_careers_page", 0) + 1
+            held("careers", result.careers_page, "not_a_careers_page")
             result.careers_page, result.careers_checked = None, [item for item in result.careers_checked if item.get("url") != fetched_page.url] if fetched_page else []
     kind = (result.operator or {}).get("kind")
     if kind in ("other_entity", "group_or_brand"):
@@ -510,8 +520,11 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
         counts = result.extraction_rejections
         if result.jobs:
             counts[f"job:site_operated_by_{kind}"] = counts.get(f"job:site_operated_by_{kind}", 0) + len(result.jobs)
+        for job in result.jobs:
+            held("job", job, f"site_operated_by_{kind}", page_url=job.get("page_url"))
         if result.careers_page:
             counts[f"careers:site_operated_by_{kind}"] = counts.get(f"careers:site_operated_by_{kind}", 0) + 1
+            held("careers", result.careers_page, f"site_operated_by_{kind}")
         result.jobs, result.careers_page = [], None
     if result.identity_class == "MANAGER_DESIGNATED":
         # The site is associated with the entity (its registry record names it), but it belongs to the business

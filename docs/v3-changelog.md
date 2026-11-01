@@ -225,3 +225,43 @@ fixtures; no third held-out set was run.
 - `project_title` — titles starting "Prosjekt:", "Referanse:", "Project:", "Case:".
 - Two or more different posts created in the same second (a theme's demo content) are a bulk entry. Midnight
   timestamps count as dates, not times.
+
+## Phase 5 — evidence history, published-envelope changes, retractions, first-seen
+
+**Run history** (`history.py`).
+- The documented command keeps every run in `<output dir>/signalpost-history/<run_id>/`: envelopes, profiles, report
+  and manifest.
+  - Each run is written to a temporary directory, with the manifest last, then renamed into place.
+  - A run that stopped early (deadline or interrupt) is kept but marked `complete: false`, and is never used as a
+    baseline.
+  - Pruning keeps the newest 10 runs (`--history-keep`) and always the newest two complete runs. It only deletes
+    directories carrying the history marker.
+- `--no-history` disables it. The history is written after the envelopes, profiles and report are durable, and never
+  fails a run.
+
+**Baseline** — what the changes are compared with:
+1. `--previous-envelopes` (what was published);
+2. otherwise, when no `--previous-profiles` is given, the newest complete history run in which that company's research
+   completed;
+3. otherwise `--previous-profiles`, with its existing behaviour. Its facts are re-derived with the current rules; that
+   is stated in `refresh.baseline.note`.
+
+Outage carry-forward still comes from the previous profiles (the refresh fix is unchanged).
+
+**Change types** (additive; the contract validates the allowed set):
+- `retracted` — the previous run published the fact, this run still found it, and a rule now withholds it. The event
+  carries the rule code, a plain basis and both code versions. It is never described as "previously verified".
+- `not_rechecked` — the page the fact came from was not read in this run (informational).
+- `removed` — now strictly "the page was read again and the item is gone".
+- `added`, `changed`, `unverified` and `unavailable` are unchanged.
+
+**First seen.** Social profiles, news items and job postings carry `first_seen_at` / `first_seen_run_id`, carried over
+from the baseline. `is_new: true` appears only when a baseline existed and the fact was not in it; with no baseline,
+nothing is called new.
+
+**Report.** New blocks:
+- `baseline` — its source, and how many companies had one;
+- `new_items` — per family, plus retractions;
+- `checks` — candidates withheld by rule, by reason; labelled as automatic checks, not accuracy;
+- `manual_audit` — from `--audit-results`, otherwise `not_audited`;
+- `history`.

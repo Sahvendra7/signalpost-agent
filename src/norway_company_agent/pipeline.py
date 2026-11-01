@@ -25,7 +25,7 @@ from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .privacy import redacting_fetcher
 from .provenance import code_version
-from .refresh import carry_forward, claim_changes
+from .refresh import carry_forward, claim_changes, refine_removals, stamp_first_seen
 from .status import company_status, identity_block
 from .synthesis import company_summary
 from .site_research import SiteSession, research_company_site
@@ -291,6 +291,8 @@ def run_batch(
     grace_seconds: float = 60.0,
     on_result: Callable[[list[dict[str, Any]], dict[str, Any] | None], None] | None = None,
     stop_event: threading.Event | None = None,
+    previous_envelopes: dict[str, dict[str, Any]] | None = None,
+    progress: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Research every row and return one terminal envelope per row, in input order.
 
@@ -318,7 +320,7 @@ def run_batch(
     results: dict[str, dict[str, Any]] = {}
     started = time.monotonic()
     hard_deadline = started + deadline_seconds if deadline_seconds else None
-    progress: dict[str, dict[str, Any]] = {}
+    progress = {} if progress is None else progress  # V3: callers (the local app) may watch research progress
     runtimes: list[float] = []
     state = {"degraded": 0, "not_started": 0, "salvaged": 0, "stop_reason": None}
     lock = threading.Lock()
@@ -390,7 +392,8 @@ def run_batch(
     def emit(org: str | None, result: dict[str, Any] | None, targets: list[InputRow]) -> None:
         if not targets:
             return
-        batch = [_envelope_for_row(row, result, run_id=run_id, modules=modules, previous_profiles=previous_profiles, snapshot_root=snapshot_root) for row in targets]
+        batch = [_envelope_for_row(row, result, run_id=run_id, modules=modules, previous_profiles=previous_profiles, snapshot_root=snapshot_root,
+                                   previous_envelopes=previous_envelopes) for row in targets]
         for row, envelope in zip(targets, batch):
             envelopes_by_position[row.position] = envelope
         if on_result is not None:
@@ -485,6 +488,7 @@ def _research_envelope(
     modules: list[str],
     previous_profiles: dict[str, dict[str, Any]] | None,
     snapshot_root: Path | None,
+    previous_envelopes: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     now = utc_now()
     errors = list(row.errors)
@@ -512,17 +516,45 @@ def _research_envelope(
         claim_set = ClaimSet(snapshot_root=snapshot_root)
         errors.append({"code": "extraction_exception", "stage": "claims", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
     changes: list[dict[str, Any]] = []
-    refresh_block: dict[str, Any] = {"compared": False, "reason": "no previous profile supplied for this company"}
-    if previous is not None:
+    refresh_block: dict[str, Any] = {"compared": False, "reason": "no previous run supplied for this company"}
+    baseline_envelope = (previous_envelopes or {}).get(row.organisation_number or "")
+    baseline_claims: list[dict[str, Any]] | None = None
+    if baseline_envelope is not None:
+        # V3 §B8: compare with what was actually published in the previous run (the historical record), so a fact the
+        # current rules withdraw shows up as a retraction instead of disappearing silently.
         try:
-            previous_claims = claims_from_profile(previous, snapshot_root=snapshot_root)
-            changes, refresh_block = claim_changes(previous_claims.claims, previous_claims.evidence, claim_set.claims, claim_set.evidence,
+            baseline_claims = list(baseline_envelope.get("claims") or [])
+            changes, refresh_block = claim_changes(baseline_claims, list(baseline_envelope.get("evidence") or []), claim_set.claims, claim_set.evidence,
                                                    carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=profile["evidence"])
+            base_run = baseline_envelope.get("run") or {}
+            refine_removals(changes, refresh_block, baseline_claims, profile["evidence"].get("site_research"),
+                            baseline_code=base_run.get("code_version"), current_code=code_version())
+            refresh_block["baseline"] = {"kind": "published_envelope", "run_id": base_run.get("run_id"), "started_at": base_run.get("started_at"),
+                                         "code_version": base_run.get("code_version")}
             for module in refresh_outcome["carried"]:
                 attempt = profile["evidence"][module].get("current_attempt") or {}
                 errors.append({"code": "source_unavailable_value_retained", "stage": module, "message": f"{module} failed in this run ({attempt.get('status')}: {attempt.get('note')}); last supported value retained"})
         except Exception as exc:
             errors.append({"code": "refresh_diff_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
+    elif previous is not None:
+        try:
+            previous_claims = claims_from_profile(previous, snapshot_root=snapshot_root)
+            baseline_claims = previous_claims.claims
+            changes, refresh_block = claim_changes(previous_claims.claims, previous_claims.evidence, claim_set.claims, claim_set.evidence,
+                                                   carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=profile["evidence"])
+            refine_removals(changes, refresh_block, previous_claims.claims, profile["evidence"].get("site_research"), current_code=code_version())
+            refresh_block["baseline"] = {"kind": "previous_profile", "note": "previous facts re-derived from the previous profile with the current rules; "
+                                         "withdrawn facts are visible only when the previous published envelopes are supplied"}
+            for module in refresh_outcome["carried"]:
+                attempt = profile["evidence"][module].get("current_attempt") or {}
+                errors.append({"code": "source_unavailable_value_retained", "stage": module, "message": f"{module} failed in this run ({attempt.get('status')}: {attempt.get('note')}); last supported value retained"})
+        except Exception as exc:
+            errors.append({"code": "refresh_diff_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
+    started = result["started_at"]
+    new_counts = stamp_first_seen(claim_set.claims, baseline_claims, run_id=run_id, started_at=started,
+                                  baseline_run=(baseline_envelope or {}).get("run") if baseline_envelope is not None else {"run_id": None, "started_at": None})
+    if baseline_claims is not None:
+        refresh_block["new_items"] = new_counts
     anchored = identity_anchored(profile)
     if not anchored:
         errors.append({"code": "identity_unresolved", "stage": "identity", "message": "Neither the bulk snapshot nor the live registry returned this organisation number"})

@@ -273,3 +273,108 @@ def claim_changes(
         })
     summary = {"compared": True, "counts": counts, "carried_forward_modules": sorted(carried), "unverified_modules": sorted(unverified)}
     return events, summary
+
+
+# ---------- V3 §B8: published-envelope changes, retractions and first-seen ----------
+
+SITE_FAMILIES = {"social_profile": "social", "news_item": "activity", "job_posting": "job", "careers_page": "careers"}
+FIRST_SEEN_FIELDS = ("social_profile", "news_item", "job_posting")
+
+
+def _fold(text: Any) -> str:
+    import unicodedata
+    folded = unicodedata.normalize("NFKD", str(text or "")).encode("ascii", "ignore").decode().casefold()
+    return " ".join(folded.split())
+
+
+def _url(value: Any) -> str:
+    return str(value or "").split("#")[0].rstrip("/")
+
+
+def site_key(family: str, value: Any, *, canonical_url: str | None = None, page_url: str | None = None) -> str:
+    """One identity for a site candidate, the same whether it was published, held or rejected (so a later run can tell a
+    withdrawn claim from one whose source no longer shows it)."""
+    if family == "social":
+        if not canonical_url:
+            from .website import normalize_social_url
+            normalized = normalize_social_url(str(value or ""))
+            canonical_url = normalized["url"] if normalized else str(value or "")
+        return _url(canonical_url).casefold()
+    if family == "careers":
+        return _url(value).casefold()
+    item = value if isinstance(value, dict) else {}
+    if family == "activity":
+        url = _url(item.get("url") or page_url)
+        date = str(item.get("date") or item.get("publication_date") or "")[:10]
+        return f"{url}|{date}" if url else f"{date}|{_fold(item.get('title'))}"
+    return f"{_fold(item.get('title'))}|{_url(item.get('url') or page_url)}"
+
+
+def refine_removals(events: list[dict[str, Any]], summary: dict[str, Any], baseline_claims: list[dict[str, Any]], site_record: dict[str, Any] | None,
+                    *, baseline_code: Any = None, current_code: Any = None) -> None:
+    """Split "removed" site facts into what really happened (in place):
+      retracted      this run still extracted the same candidate and a rule rejected it: withdrawn by the agent
+      not_rechecked  this run did not read the page the claim came from: nothing is known about it now
+      removed        the page was read again and the item is no longer on it
+    Source outages are handled before this (carried forward, `unavailable`) and never reach here."""
+    if (site_record or {}).get("status") != "available":
+        return
+    value = (site_record or {}).get("value") or {}
+    rejected = {(item.get("family"), item.get("key")): item.get("code") for item in value.get("rejected_keys") or []}
+    read = {_url(page.get("url")).casefold() for page in value.get("pages") or []}
+    read |= {_url(entry[0]).casefold() for entry in value.get("feeds_read") or [] if entry}
+    by_key = {_claim_key(claim): claim for claim in baseline_claims if claim.get("availability") == "available"}
+    counts = summary.setdefault("counts", {})
+    for event in events:
+        family = SITE_FAMILIES.get(str(event.get("field")))
+        if event.get("change_type") != "removed" or family is None:
+            continue
+        old = by_key.get(_claim_key({"category": event.get("category"), "field": event.get("field"), "value": event.get("old_value"),
+                                     **({"canonical_url": _canonical_social(event)} if family == "social" else {})})) or {}
+        key = site_key(family, event.get("old_value"), canonical_url=old.get("canonical_url"), page_url=old.get("source_page"))
+        code = rejected.get((family, key))
+        source = _url(old.get("source_page") or (event.get("previous_evidence") or {}).get("source_url")).casefold()
+        if code:
+            event["change_type"] = "retracted"
+            event["rule"] = code
+            event["basis"] = (f"Previously published by this agent; withdrawn because the current rules do not attribute it to this company ({code}). "
+                              "The source still shows it.")
+            event["previous_code_version"] = baseline_code
+            event["code_version"] = current_code
+            counts["removed"] = counts.get("removed", 0) - 1
+            counts["retracted"] = counts.get("retracted", 0) + 1
+        elif source and source not in read:
+            event["change_type"] = "not_rechecked"
+            event["materiality"] = "informational"
+            event["basis"] = "The page this fact came from was not read in this run; it is neither confirmed nor withdrawn."
+            counts["removed"] = counts.get("removed", 0) - 1
+            counts["not_rechecked"] = counts.get("not_rechecked", 0) + 1
+
+
+def _canonical_social(event: dict[str, Any]) -> str | None:
+    from .website import normalize_social_url
+    normalized = normalize_social_url(str(event.get("old_value") or ""))
+    return normalized["url"] if normalized else None
+
+
+def stamp_first_seen(claims: list[dict[str, Any]], baseline_claims: list[dict[str, Any]] | None, *, run_id: str, started_at: str,
+                     baseline_run: dict[str, Any] | None) -> dict[str, int]:
+    """first_seen_at / first_seen_run_id on social profiles, news items and job postings. `is_new` only when a baseline
+    exists for this company and the fact was not in it; without a baseline a fact is a first observation, never "new"."""
+    previous = {_claim_key(claim): claim for claim in baseline_claims or [] if claim.get("availability") == "available"}
+    new_counts = {field: 0 for field in FIRST_SEEN_FIELDS}
+    for claim in claims:
+        if claim.get("field") not in FIRST_SEEN_FIELDS or claim.get("availability") != "available":
+            continue
+        before = previous.get(_claim_key(claim))
+        if before is not None:
+            seen_at = before.get("first_seen_at") or (baseline_run or {}).get("started_at")
+            seen_run = before.get("first_seen_run_id") or (baseline_run or {}).get("run_id")
+            if seen_at:  # unknown stays unset: a baseline re-derived from a profile has no run date
+                claim["first_seen_at"], claim["first_seen_run_id"] = seen_at, seen_run
+        else:
+            claim["first_seen_at"], claim["first_seen_run_id"] = started_at, run_id
+            if baseline_claims is not None:
+                claim["is_new"] = True
+                new_counts[claim["field"]] += 1
+    return new_counts
