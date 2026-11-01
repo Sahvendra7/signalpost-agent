@@ -1,0 +1,224 @@
+{
+ "labeller": "Claude (assistant)",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 172,
+ "units_without_verdict": 61,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 57,
+    "correct": 46,
+    "incorrect": 8,
+    "unsure": 3,
+    "precision": 0.8519,
+    "ci95": [
+     0.734,
+     0.923
+    ]
+   },
+   "news_item": {
+    "published_labelled": 104,
+    "correct": 13,
+    "incorrect": 76,
+    "unsure": 15,
+    "precision": 0.1461,
+    "ci95": [
+     0.0874,
+     0.234
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 1,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 1,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 10,
+    "correct": 6,
+    "incorrect": 3,
+    "unsure": 1,
+    "precision": 0.6667,
+    "ci95": [
+     0.3542,
+     0.8794
+    ]
+   }
+  },
+  "c1": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 45,
+    "correct": 40,
+    "incorrect": 3,
+    "unsure": 2,
+    "precision": 0.9302,
+    "ci95": [
+     0.8139,
+     0.976
+    ]
+   },
+   "news_item": {
+    "published_labelled": 52,
+    "correct": 10,
+    "incorrect": 27,
+    "unsure": 15,
+    "precision": 0.2703,
+    "ci95": [
+     0.154,
+     0.4298
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 4,
+    "correct": 4,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.5101,
+     1.0
+    ]
+   }
+  },
+  "frz": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 45,
+    "correct": 40,
+    "incorrect": 3,
+    "unsure": 2,
+    "precision": 0.9302,
+    "ci95": [
+     0.8139,
+     0.976
+    ]
+   },
+   "news_item": {
+    "published_labelled": 54,
+    "correct": 10,
+    "incorrect": 29,
+    "unsure": 15,
+    "precision": 0.2564,
+    "ci95": [
+     0.1457,
+     0.4108
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 4,
+    "correct": 4,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.5101,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 46,
+   "retained": 40,
+   "retention": 0.8696,
+   "lost_correct": [
+    "814217272|social_profile|instagram.com/kameo.norge",
+    "924782544|social_profile|facebook.com/takstmannfrosterod",
+    "814217272|social_profile|facebook.com/kameonorge",
+    "814217272|social_profile|linkedin.com/company/kameo-norge",
+    "929920538|social_profile|facebook.com/people/trysilfjell-apartment-hotel/100057591063038",
+    "929920538|social_profile|instagram.com/trysilfjell_apartment"
+   ],
+   "gained_correct": [],
+   "errors_removed": 5,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 13,
+   "retained": 10,
+   "retention": 0.7692,
+   "lost_correct": [
+    "925237663|news_item|blog.bildoktoren.no/tag/ledig-stilling|2022-01-13",
+    "925237663|news_item|blog.bildoktoren.no/tag/bilverksted|2022-03-31",
+    "814217272|news_item|kameo.no/laer-mer/artikler/rapport-q2-og-h1-2026|2026-08-19"
+   ],
+   "gained_correct": [],
+   "errors_removed": 49,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 6,
+   "retained": 4,
+   "retention": 0.6667,
+   "lost_correct": [
+    "941612474|careers_page|webstep.no/bli-en-av-oss",
+    "814217272|careers_page|kameo.no/jobb-hos-oss"
+   ],
+   "gained_correct": [],
+   "errors_removed": 3,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

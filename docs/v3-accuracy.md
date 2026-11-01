@@ -132,3 +132,22 @@ run.
 Published job advertisements are rare in every set: the baseline published one in 300 companies, and it was wrong. So
 job precision cannot be measured meaningfully from these samples. Job behaviour is pinned by synthetic tests instead
 (`tests/test_v3_jobs.py`): expired, current, other employer, recruiter, news archive and undated.
+
+## Pre-release remediation pass (2026-11-01) — new independent evaluation
+
+The full method and tables are in `docs/v3-remediation.md` (R3 §2–§4), and the artefacts in
+`measurements/v3-remediation-2026-11-01/`. Rules were frozen at `7b8fc69` before the new evaluation sample was opened.
+
+| Set (role) | Social precision | News precision | Careers-page precision |
+|---|---|---|---|
+| **eval120 (independent, scored once)** | 93.0% (40/43; CI 81.4–97.6) | **25.6% (10/39; CI 14.6–41.1)** | 100% (4/4; CI 51.0–100) |
+| diag80 (diagnostic, tuned on) | 100% (31/31) | 97.1% (66/68) | 100% (4/4) |
+| smoke100 + midsize40 + fresh60 (development, tuned on) | 100% (83/83) | 93.5% (86/92) | 100% (14/14) |
+| fresh60b (consumed held-out; not independent for the remediation changes) | 100% (55/55) | 100% (52/52) | 100% (9/9) |
+
+- **The 90% news target has not passed on independent data.** The independent news result is 25.6%.
+- **Careers.** The 90% careers target cannot be established: the independent sample has only 4 decided careers pages,
+  so the interval is 51–100%.
+- **Job advertisements.** No sample in this pass had a decidable published job ad, so job-ad accuracy is not
+  measured.
+- **Social** independent precision is 93.0% (CI 81.4–97.6%), with retention 87.0%.

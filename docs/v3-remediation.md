@@ -148,3 +148,164 @@ re-admit them. fresh60b news is therefore not independent for this rule; see the
 **Tests:**
 - `test_v3_news.py::ReaderAddressing` — the ten stay out; bare pronouns and interjections stay in;
 - `test_v3_regressions.py::NewsClassification::test_911771098_blog_control` — now 20, including "Du store verden".
+
+## R3 — news: held-out analysis, diagnostic set, independent evaluation
+
+### 1. The consumed held-out set (fresh60b): individual false positives, analysed and not tuned on
+
+At the freeze it was scored on (`6efd3cd`), V3 published 78 news units on fresh60b: 51 correct, 9 incorrect and 18
+unsure, so precision was 51 / 60 = 85.0%.
+
+| Errors | Weakness | Status |
+|---|---|---|
+| 7 | Beatus Cras "Prosjekt: …" project descriptions published as posts | Fixed earlier by the project-title rule (`b5199fe`, after that evaluation); not independent |
+| 2 | Grafton: WordPress theme demo posts, all created in the same second | Fixed earlier by the same-second rule (`b5199fe`); not independent |
+
+The 18 unsure units point to two open weaknesses:
+- **group news on a shared group site** — GMC companies sharing `gmc.no`; Green Mountain's UK and global units;
+- **public-body advice, campaigns and features** — the fire service's safety advice, product features.
+
+No rule was fitted to fresh60b in this pass. The only remediation changes that touch fresh60b units are R4
+(Barneombudet) and R6 (the two reader-addressing titles), and both are flagged as not independent.
+
+### 2. Diagnostic set (diag80) and the frozen rules
+
+**Sample.** 80 companies were drawn at random (seed 20261111) from the public company universe: a registered website,
+not bankrupt or being wound up, and never used in any earlier set or fixture. They were captured live through
+`ff3b515` on 2026-11-01. `measurements/v3-remediation-2026-11-01/inputs/` holds the inputs and their SHA-256 sums.
+
+**Labelling.** Blind census of both arms, labelled `assistant_blind`.
+
+**Errors V3 still made before the fixes** (13 news, 1 social):
+
+| Errors | Weakness | Fix |
+|---|---|---|
+| 10 | The site's RSS feed carries every page type, not only its news section: `/kunnskap-og-forskning/`, `/de-gode-eksemplene/`, `/tips-og-rad/`, `/min-historie/`, and regional event-offer pages. | `feed_item_outside_news_section`: when the site has a news section (two or more items under `/nyheter/`, `/aktuelt/`, `/blogg/` …), a feed item two or more levels deep in another section is not news. Root-level posts and dated addresses are not affected. |
+| 1 | The Danish/Swedish default post "Hej verden!". | Added to the default-post list. |
+| 1 (social) | `linkedin.com/company/board-assure-a-s` was taken for BOARD COMPANY NORGE AS. A slugified "A/S" (`a-s`) was not recognised as a legal form. | `handle_of` normalises `a-s`, `a.s` and `a_s` to `as`, so the handle names another company (`OTHER_ENTITY`). |
+| 1 | Job advertisement page published as news (Sabi "Restaurantsjef"). | Not fixed: a single case. |
+| 1 | Static welcome text from 2011 (Kellners). | Not fixed: a single case. |
+
+A development-set error was fixed the same way: an advice question after a topic prefix ("Vindusvask for bedrifter:
+Hvor ofte bør …"). See the `95904f0` commit.
+
+**Effect, replayed on all sets.** On diag80 the fixes removed 12 errors (11 news, 1 social). smoke100, midsize40,
+fresh60 and fresh60b are unchanged.
+
+**Frozen at `7b8fc69`** before the evaluation sample was opened.
+
+### 3. Independent evaluation (eval120), scored once
+
+**Sample.** 120 more companies, drawn the same way (seed 20261112) and disjoint from diag80 and every earlier set. They
+were captured with diag80, not opened until the freeze, then replayed through `ff3b515`, `dc96260` and `7b8fc69`. All
+units from the three arms were pooled, labelled blind and scored once.
+
+**Result: the 90% news target is not met.**
+
+| Arm | News precision | 95% CI |
+|---|---|---|
+| `7b8fc69` (frozen remediation) | **25.6%** (10 / 39) | 14.6–41.1% |
+| `dc96260` (earlier candidate) | 27.0% (10 / 37) | 15.4–43.0% |
+| `ff3b515` (baseline) | 14.6% (13 / 89) | 8.7–23.4% |
+
+V3 still removes 47 of the baseline's errors and introduces none. The precision gap is the companies whose whole blog
+is marketing.
+
+**Weaknesses the independent errors show** (29 incorrect at `7b8fc69`; analysed, not tuned on):
+
+1. **Content-marketing blogs (20 errors, 7 sites).** On these sites every "post" is advice, a property or project
+   listing, or thought leadership:
+
+   | Site | Errors |
+   |---|---|
+   | huspro.no (Byggmester Frank Aasheim): property and project posts | 6 |
+   | opts.no (Oslo PT Studio): training advice | 5 |
+   | ns.no (Nordic Solutions): IT tips | 3 |
+   | ffor.no: course, topic and welcome pages | 3 |
+   | dayofweek.com: thought leadership | 2 |
+   | sobbl.no: service pages | 2 |
+
+   V3 treats a `/post/` or `/blog/` address as article evidence, and its advice detection works on titles alone.
+   Without reading the article text, a company's own marketing posts cannot be told apart from news about it. **This is
+   the main structural limit of the deterministic news classifier.** The independent results show that precision
+   depends on the site mix: about 85–97% on the earlier sets, 25.6% here.
+2. **A subsidiary whose website is its parent's (5 news and 3 social errors).** BE KRAFTSALG AS has `bodoenergi.no` as
+   its verified website, and the group's sponsorship stories and profiles are published for it. Domain and name do
+   not reveal the group relationship here (`BE` stands for Bodø Energi), so the operator assessment returns `self`.
+3. **The context-aware reader-addressing rule (R6) re-admitted 2 advice posts** ("Bekymrer du deg mer nå enn før du
+   ble gravid?", "Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker") and gained no correct unit here.
+   On the development data it gained 3 correct units and "Du store verden". The independent evidence does not support
+   the narrower rule. It is kept as evaluated, because reverting it now would be tuning on eval120. This is listed as a
+   decision for the owner.
+
+### 4. Measurements
+
+Precision excludes units labelled unsure. The CI is a Wilson 95% interval. True recall cannot be measured, because no
+ground truth of all profiles, articles or jobs exists, so **retention** — correct baseline units that V3 still
+publishes — is reported as the recall proxy, with its own Wilson interval. All labels are `assistant_blind` (blind to
+the arm), not the owner's.
+
+**eval120 — INDEPENDENT (frozen 7b8fc69, scored once)**
+
+| Category | Arm | Correct | Incorrect | Unsure | Precision (95% CI) | Retention = recall proxy (95% CI) | Errors removed / introduced |
+|---|---|---|---|---|---|---|---|
+| Social | baseline ff3b515 | 46 | 8 | 3 | 85.2% (73.4–92.3) |  |  |
+| Social | V3 remediation 7b8fc69 | 40 | 3 | 2 | 93.0% (81.4–97.6) | 40/46 = 87.0% (74.3–93.9) | 5 / 0 |
+| News | baseline ff3b515 | 13 | 76 | 15 | 14.6% (8.7–23.4) |  |  |
+| News | V3 remediation 7b8fc69 | 10 | 29 | 15 | 25.6% (14.6–41.1) | 10/13 = 76.9% (49.7–91.8) | 47 / 0 |
+| Careers page | baseline ff3b515 | 6 | 3 | 1 | 66.7% (35.4–87.9) |  |  |
+| Careers page | V3 remediation 7b8fc69 | 4 | 0 | 0 | 100.0% (51.0–100.0) | 4/6 = 66.7% (30.0–90.3) | 3 / 0 |
+| Job ads | baseline ff3b515 | 0 | 0 | 1 | — |  |  |
+| Job ads | V3 remediation 7b8fc69 | 0 | 0 | 0 | — | — (no correct baseline unit) | 0 / 0 |
+
+**eval120 — independent, earlier candidate dc96260**
+
+| Category | Arm | Correct | Incorrect | Unsure | Precision (95% CI) | Retention = recall proxy (95% CI) | Errors removed / introduced |
+|---|---|---|---|---|---|---|---|
+| Social | baseline ff3b515 | 46 | 8 | 3 | 85.2% (73.4–92.3) |  |  |
+| Social | V3 dc96260 | 40 | 3 | 2 | 93.0% (81.4–97.6) | 40/46 = 87.0% (74.3–93.9) | 5 / 0 |
+| News | baseline ff3b515 | 13 | 76 | 15 | 14.6% (8.7–23.4) |  |  |
+| News | V3 dc96260 | 10 | 27 | 15 | 27.0% (15.4–43.0) | 10/13 = 76.9% (49.7–91.8) | 49 / 0 |
+| Careers page | baseline ff3b515 | 6 | 3 | 1 | 66.7% (35.4–87.9) |  |  |
+| Careers page | V3 dc96260 | 4 | 0 | 0 | 100.0% (51.0–100.0) | 4/6 = 66.7% (30.0–90.3) | 3 / 0 |
+| Job ads | baseline ff3b515 | 0 | 0 | 1 | — |  |  |
+| Job ads | V3 dc96260 | 0 | 0 | 0 | — | — (no correct baseline unit) | 0 / 0 |
+
+**diag80 — diagnostic (tuned on)**
+
+| Category | Arm | Correct | Incorrect | Unsure | Precision (95% CI) | Retention = recall proxy (95% CI) | Errors removed / introduced |
+|---|---|---|---|---|---|---|---|
+| Social | baseline ff3b515 | 37 | 1 | 1 | 97.4% (86.5–99.5) |  |  |
+| Social | V3 remediation 7b8fc69 | 31 | 0 | 0 | 100.0% (89.0–100.0) | 31/37 = 83.8% (68.9–92.3) | 1 / 0 |
+| News | baseline ff3b515 | 71 | 18 | 7 | 79.8% (70.3–86.8) |  |  |
+| News | V3 remediation 7b8fc69 | 66 | 2 | 6 | 97.1% (89.9–99.2) | 66/71 = 93.0% (84.6–97.0) | 16 / 0 |
+| Careers page | baseline ff3b515 | 4 | 1 | 0 | 80.0% (37.5–96.4) |  |  |
+| Careers page | V3 remediation 7b8fc69 | 4 | 0 | 0 | 100.0% (51.0–100.0) | 4/4 = 100.0% (51.0–100.0) | 1 / 0 |
+| Job ads | baseline ff3b515 | 0 | 2 | 0 | 0.0% (0.0–65.8) |  |  |
+| Job ads | V3 remediation 7b8fc69 | 0 | 0 | 0 | — | — (no correct baseline unit) | 2 / 0 |
+
+**smoke100+midsize40+fresh60 — development (tuned on)**
+
+| Category | Arm | Correct | Incorrect | Unsure | Precision (95% CI) | Retention = recall proxy (95% CI) | Errors removed / introduced |
+|---|---|---|---|---|---|---|---|
+| Social | baseline ff3b515 | 84 | 13 | 3 | 86.6% (78.4–92.0) |  |  |
+| Social | V3 remediation 7b8fc69 | 83 | 0 | 0 | 100.0% (95.6–100.0) | 80/84 = 95.2% (88.4–98.1) | 13 / 0 |
+| News | baseline ff3b515 | 77 | 144 | 20 | 34.8% (28.9–41.3) |  |  |
+| News | V3 remediation 7b8fc69 | 86 | 6 | 19 | 93.5% (86.5–97.0) | 76/77 = 98.7% (93.0–99.8) | 138 / 0 |
+| Careers page | baseline ff3b515 | 14 | 11 | 4 | 56.0% (37.1–73.3) |  |  |
+| Careers page | V3 remediation 7b8fc69 | 14 | 0 | 1 | 100.0% (78.5–100.0) | 14/14 = 100.0% (78.5–100.0) | 11 / 0 |
+| Job ads | baseline ff3b515 | 0 | 0 | 1 | — |  |  |
+| Job ads | V3 remediation 7b8fc69 | 0 | 0 | 0 | — | — (no correct baseline unit) | 0 / 0 |
+
+**fresh60b — consumed held-out (non-independent for the remediation changes)**
+
+| Category | Arm | Correct | Incorrect | Unsure | Precision (95% CI) | Retention = recall proxy (95% CI) | Errors removed / introduced |
+|---|---|---|---|---|---|---|---|
+| Social | baseline ff3b515 | 57 | 11 | 1 | 83.8% (73.3–90.7) |  |  |
+| Social | V3 remediation 7b8fc69 | 55 | 0 | 0 | 100.0% (93.5–100.0) | 55/57 = 96.5% (88.1–99.0) | 11 / 0 |
+| News | baseline ff3b515 | 52 | 19 | 20 | 73.2% (62.0–82.2) |  |  |
+| News | V3 remediation 7b8fc69 | 52 | 0 | 18 | 100.0% (93.1–100.0) | 52/52 = 100.0% (93.1–100.0) | 19 / 0 |
+| Careers page | baseline ff3b515 | 10 | 5 | 4 | 66.7% (41.7–84.8) |  |  |
+| Careers page | V3 remediation 7b8fc69 | 9 | 0 | 3 | 100.0% (70.1–100.0) | 9/10 = 90.0% (59.6–98.2) | 5 / 0 |
+| Job ads | baseline ff3b515 | 0 | 1 | 0 | 0.0% (0.0–79.3) |  |  |
+| Job ads | V3 remediation 7b8fc69 | 0 | 0 | 0 | — | — (no correct baseline unit) | 1 / 0 |

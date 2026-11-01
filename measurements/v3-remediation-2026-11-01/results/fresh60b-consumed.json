@@ -1,0 +1,167 @@
+{
+ "labeller": "Claude (assistant)",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 180,
+ "units_without_verdict": 40,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 69,
+    "correct": 57,
+    "incorrect": 11,
+    "unsure": 1,
+    "precision": 0.8382,
+    "ci95": [
+     0.7331,
+     0.9072
+    ]
+   },
+   "news_item": {
+    "published_labelled": 91,
+    "correct": 52,
+    "incorrect": 19,
+    "unsure": 20,
+    "precision": 0.7324,
+    "ci95": [
+     0.6195,
+     0.8215
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 1,
+    "correct": 0,
+    "incorrect": 1,
+    "unsure": 0,
+    "precision": 0.0,
+    "ci95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "careers_page": {
+    "published_labelled": 19,
+    "correct": 10,
+    "incorrect": 5,
+    "unsure": 4,
+    "precision": 0.6667,
+    "ci95": [
+     0.4171,
+     0.8482
+    ]
+   }
+  },
+  "frz": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 55,
+    "correct": 55,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.9347,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 70,
+    "correct": 52,
+    "incorrect": 0,
+    "unsure": 18,
+    "precision": 1.0,
+    "ci95": [
+     0.9312,
+     1.0
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 12,
+    "correct": 9,
+    "incorrect": 0,
+    "unsure": 3,
+    "precision": 1.0,
+    "ci95": [
+     0.7009,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 57,
+   "retained": 55,
+   "retention": 0.9649,
+   "lost_correct": [
+    "937596847|social_profile|instagram.com/graftonrecruitmentnorge",
+    "937596847|social_profile|facebook.com/graftonrecruitmentnorge"
+   ],
+   "gained_correct": [],
+   "errors_removed": 11,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 52,
+   "retained": 52,
+   "retention": 1.0,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 19,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 1,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 10,
+   "retained": 9,
+   "retention": 0.9,
+   "lost_correct": [
+    "968429655|careers_page|gmv.as/karriere"
+   ],
+   "gained_correct": [],
+   "errors_removed": 5,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}
