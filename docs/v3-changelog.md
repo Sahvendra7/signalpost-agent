@@ -177,3 +177,32 @@ found two errors that neither version caught.
 - **`careers:recruiter_job_board`.** A recruiter's (NACE 78) vacancies page lists its clients' jobs. It is a careers
   page only when it is explicitly about working at the recruiter (`jobb-hos-…`, `karriere`, `join-us`). The Bemex
   control expectation in `test_v3_regressions.py` was corrected from "kept" to "held".
+
+## Phase 4 — fixes from the first held-out evaluation
+
+The first held-out evaluation (fresh60, run once with the rules frozen at `ca34ef5`) failed the gates. Social retention
+was 62%, and news precision was 20% in **both** arms; the results are in `docs/v3-accuracy.md`. Investigating it
+turned fresh60 into a development set, so the rules below were validated on a **new** held-out set (fresh60b).
+
+**Social and operator rules:**
+- Legal names that start with a legal form ("AS JACO", "AS SOLREGN") match handles that keep it (`asjaco`,
+  `as-solregn`).
+- An acronym of the name is a neutral suffix (`…-IPR`).
+- A handle that **is the name of the company's own website** (`ringblad` on ringblad.no) is accepted on a self-run
+  site that no other company runs (`handle_is_own_domain_name`). The domain still never attributes a profile on a site
+  run by another company or by a group or brand. TYIN ALPINT stays fixed: its site states another company's number.
+- The cross-link rule counts exact handles with a neutral suffix as exact.
+- `NO` is read as an organisation number only in the VAT form (`NO 123 456 789 MVA`). A page listing three or more
+  companies, or a dealers, partners or members page, is a directory, not an imprint. AS FINANCIERING's dealer list had
+  made it `other_entity`.
+- A redirect makes a site a group site only when a `.no` domain redirects to an international domain
+  (bartec-technor.no → bartec.com). A rename to another Norwegian domain does not (stalheim.com → stalheimhotel.no,
+  hadeland.net → hadeland.no).
+
+**News rules:**
+- **Publishers** — newspapers, magazines and other publishers, broadcasters and news agencies (NACE 58.1, 60, 63.91,
+  63.12). Their journalism is their product, not news about the company. Only items naming the company are published
+  (`publisher_content_not_about_company`). Their job classifieds are not careers pages.
+- **Evergreen advice and marketing** — titles such as "Slik …", "Hvordan …", "Hvor ofte …", "… sjekkliste", "How to
+  …" or second-person "du/dere/you" are not news unless they name the company (`evergreen_advice_not_news`).
+- **Press releases** — "Pressemelding: …" titles and `pressemelding-…` slugs count as article evidence.

@@ -62,6 +62,9 @@ class LegalName:
                 self.brands.append(brand)
         self.qualifiers = [token for token in self.tokens[1:] if token in self.places or token in COUNTIES or token in REGIONS]
         self.initials = "".join(token[0] for token in self.tokens) if len(self.tokens) >= 2 else ""
+        first = fold(self.name).split()[:1]
+        # "AS JACO", "AS SOLREGN": a leading legal form is part of how the company writes its name ("asjaco", "as-solregn")
+        self.leading_form = first[0] if first and first[0] in LEGAL_FORMS else ""
 
     @classmethod
     def from_profile(cls, profile: dict[str, Any]) -> LegalName:
@@ -82,11 +85,14 @@ class LegalName:
         return bool(self.tokens) and bool(self.phrase_re.search(fold(text)))
 
     def strip_neutral(self, rest: str) -> str:
-        """Remove leading neutral affixes, legal forms, the company's own places and short digit runs from `rest`."""
+        """Remove leading neutral affixes, legal forms, the company's own places, short digit runs and an acronym of
+        the name ("-ipr" for INSTITUTT FOR PSYKOLOGISK RÅDGIVNING) from `rest`."""
         words = sorted(NEUTRAL | LEGAL_FORMS | self.places, key=len, reverse=True)
         changed = True
         while rest and changed:
             changed = False
+            if 2 <= len(rest) <= 5 and self.initials and _subsequence(rest, self.initials):
+                return ""
             digits = re.match(r"\d{1,4}", rest)
             if digits:
                 rest, changed = rest[digits.end():], True
@@ -109,6 +115,11 @@ class LegalName:
         """The domain label shares at least one distinctive legal-name token (weaker than `domain_named`)."""
         label = compact(label)
         return any(len(token) >= 4 and token not in GENERIC_BRANDS and token in label for token in self.tokens) or self.domain_named(label)
+
+
+def _subsequence(short: str, long: str) -> bool:
+    letters = iter(long)
+    return all(letter in letters for letter in short)
 
 
 @dataclass(frozen=True)
@@ -163,12 +174,15 @@ def handle_relation(legal: LegalName, platform: str, url: str) -> Relation:
     # be this company's (optionally with neutral affixes); any other name is another registered or registrable entity.
     if len(words) >= 2 and words[-1] in LEGAL_FORMS:
         named = "".join(word for word in words[:-1] if word not in ("og", "and"))
+        if legal.leading_form and words[0] == legal.leading_form and len(words) >= 3:
+            named = "".join(word for word in words[1:-1] if word not in ("og", "and"))
         for prefix in PREFIXES:
             if named.startswith(prefix) and named != prefix and not legal.compact.startswith(prefix):
                 named = named[len(prefix):]
         if not (named.startswith(legal.compact) and not legal.strip_neutral(named[len(legal.compact):])):
             return Relation("OTHER_ENTITY", handle, named)
-    candidates = [handle] + [handle[len(prefix):] for prefix in PREFIXES if handle.startswith(prefix) and len(handle) > len(prefix)]
+    prefixes = PREFIXES + ((legal.leading_form,) if legal.leading_form else ())
+    candidates = [handle] + [handle[len(prefix):] for prefix in prefixes if handle.startswith(prefix) and len(handle) > len(prefix)]
     best: Relation | None = None
     for candidate in candidates:
         relation = _relation(legal, candidate)

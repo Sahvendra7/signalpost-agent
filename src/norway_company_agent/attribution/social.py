@@ -15,7 +15,7 @@ HOLD_KINDS = {"manager", "other_entity"}
 
 
 def decide_profile(relation: Relation, operator_kind: str, *, domain_named: bool, handle_starts_with_domain: bool, org_sameas: bool,
-                   operator_basis: str = "") -> tuple[Decision, float | None]:
+                   operator_basis: str = "", handle_is_domain: bool = False) -> tuple[Decision, float | None]:
     """(decision, score). `domain_named`: the verified site's domain label is the legal name or a brand of it (and the
     site is self-operated); `org_sameas`: the profile is in sameAs of an Organization node that names this company."""
     kind = relation.kind
@@ -25,6 +25,10 @@ def decide_profile(relation: Relation, operator_kind: str, *, domain_named: bool
         return Decision(True, "handle_exact", "The profile handle is the company's legal name."), SCORES[kind]
     if kind == "EXACT_NEUTRAL":
         return Decision(True, "handle_exact_neutral", f"The profile handle is the company's legal name with a neutral addition ({relation.rest})."), SCORES[kind]
+    if handle_is_domain and operator_kind == "self" and kind != "OTHER_ENTITY":
+        # The profile carries the name of the company's own registry-linked website ("ringblad" on ringblad.no), and
+        # nothing on the site says another company runs it: the profile links back to the company's website by name.
+        return Decision(True, "handle_is_own_domain_name", "The profile handle is the name of the company's own website, which no other company runs."), 0.9
     if kind == "OTHER_ENTITY":
         return Decision(False, "handle_names_other_entity", f"The profile handle names another entity (\"{relation.rest}\"), such as a group, parent or sister company."), None
     if kind == "UNRELATED":

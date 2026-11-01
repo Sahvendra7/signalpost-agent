@@ -49,6 +49,12 @@ class HandleRelations(unittest.TestCase):
         ("EKSEMPEL AS", "youtube", "https://www.youtube.com/channel/UC7s9csuogbbixk5asknijyg", "UNRELATED"),
         ("BETONMAST OSLO AS", "facebook", "https://www.facebook.com/betonmast", "BRAND"),
         ("BETONMAST OSLO AS", "linkedin", "https://www.linkedin.com/company/betonmast-oslo-as", "EXACT"),
+        # Phase 4 held-out audit: names that start with "AS", and acronym suffixes
+        ("AS JACO", "facebook", "http://facebook.com/asjaco", "EXACT"),
+        ("AS SOLREGN", "linkedin", "https://www.linkedin.com/company/as-solregn/", "EXACT"),
+        ("AS BYGGANALYSE", "linkedin", "https://no.linkedin.com/company/as-bygganalyse", "EXACT"),
+        ("AS INSTITUTT FOR PSYKOLOGISK RÅDGIVNING", "facebook", "https://www.facebook.com/Institutt-for-Psykologisk-R%C3%A5dgivning-IPR-279534205481478/", "EXACT_NEUTRAL"),
+        ("ASAK AS", "facebook", "https://www.facebook.com/asakmiljostein", "EXTENDS"),
     ]
 
     def test_relation_table(self):
@@ -93,6 +99,26 @@ class SiteOperatorTests(unittest.TestCase):
         self.assertEqual(sibling_names(legal, ["Betonmast Oslo", "Betonmast Trøndelag", "Betonmast Buskerud-Vestfold", "Boligbygg"]), {"betonmasttrondelag", "betonmastbuskerudvestfold"})
         self.assertEqual(sibling_names(LegalName("SPIREN DESIGN AS"), ["Spiren Nyheter", "Spiren Prosjekter"]), set(), "only BRAND + place names have siblings")
 
+    def test_dealer_lists_and_vat_lookalikes_are_not_imprints(self):
+        self.assertEqual(stated_org_numbers("Forhandler: NO AS 918512616 Agder Bil"), [], "'NO' counts only in the VAT form NO 123 456 789 MVA")
+        self.assertEqual([n for n, _ in stated_org_numbers("Faktura: NO 930 182 451 MVA")], ["930182451"])
+        profile = {"organisation_number": "911629283", "name": "AS FINANCIERING"}
+        listing = "Org.nr. 918 512 616 · Org.nr. 917 692 491 · Org.nr. 921 221 568"
+        op = assess_operator(profile, "https://www.financiering.no/", page_texts=[("https://www.financiering.no/kontakt-oss/forhandlere/", listing)])
+        self.assertEqual(op.kind, "self", "a list of three or more companies is a directory, not who runs the site")
+
+    def test_a_rename_to_another_norwegian_domain_is_not_a_group_site(self):
+        profile = {"organisation_number": "911111111", "name": "AS STALHEIM HOTEL"}
+        op = assess_operator(profile, "https://www.stalheimhotel.no/", page_texts=[("https://www.stalheimhotel.no/", "Stalheim Hotel")],
+                             website_value={"requested_url": "https://www.stalheim.com/", "final_url": "https://www.stalheimhotel.no/"})
+        self.assertEqual(op.kind, "self")
+
+    def test_a_new_top_level_domain_is_not_another_company(self):
+        profile = {"organisation_number": "912227111", "name": "AS HADELAND"}
+        op = assess_operator(profile, "https://www.hadeland.no/", page_texts=[("https://www.hadeland.no/", "Avisen Hadeland")],
+                             website_value={"requested_url": "https://www.hadeland.net/", "final_url": "https://www.hadeland.no/"})
+        self.assertEqual(op.kind, "self")
+
     def test_plain_company_site_is_self(self):
         profile = {"organisation_number": "875606662", "name": "KONGSVINGER IL ISHOCKEY"}
         op = assess_operator(profile, "https://kilishockey.no/", page_texts=[("https://kilishockey.no/", "Velkommen til KIL Hockey")])
@@ -109,6 +135,12 @@ class SocialDecisions(unittest.TestCase):
         platform = "linkedin" if "linkedin" in url else "facebook"
         defaults = {"domain_named": False, "handle_starts_with_domain": False, "org_sameas": False}
         return decide_profile(handle_relation(legal, platform, url), operator, **{**defaults, **flags})[0]
+
+    def test_handle_equal_to_the_own_domain_name_on_a_self_run_site(self):
+        relation = handle_relation(LegalName("AS RINGERIKES BLAD"), "facebook", "https://www.facebook.com/ringblad")
+        self.assertTrue(decide_profile(relation, "self", domain_named=False, handle_starts_with_domain=True, org_sameas=False, handle_is_domain=True)[0].accepted)
+        self.assertFalse(decide_profile(relation, "other_entity", domain_named=False, handle_starts_with_domain=True, org_sameas=False, handle_is_domain=True)[0].accepted)
+        self.assertFalse(decide_profile(relation, "group_or_brand", domain_named=False, handle_starts_with_domain=True, org_sameas=False, handle_is_domain=True)[0].accepted)
 
     def test_decision_table(self):
         self.assertTrue(self.decide("BERGKNAPP AS", "https://linkedin.com/company/bergknapp-as", "group_or_brand").accepted)

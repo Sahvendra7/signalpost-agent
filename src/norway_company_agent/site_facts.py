@@ -34,9 +34,9 @@ from typing import Any
 from bs4 import BeautifulSoup
 
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
-from .attribution.names import LegalName, compact, handle_relation
+from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relation
 from .attribution.jobs import decide_job, is_recruiter
-from .attribution.news import burst_members, classify_item, has_news_path, subject_of
+from .attribution.news import burst_members, classify_item, evergreen_title, has_news_path, is_publisher, subject_of
 from .attribution.operator import SiteOperator, assess_operator, sibling_names
 from .attribution.social import decide_profile
 from .identity import _tokens, assess_social_identity
@@ -902,8 +902,10 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             continue
         relation = handle_relation(legal, platform, chosen["canonical_url"])
         org_sameas = any(item["via"] == "jsonld_sameas" and legal.phrase_in(item.get("jsonld_name")) for item in group)
+        bare = relation.handle
+        handle_is_domain = len(site_label) >= 4 and bare.startswith(site_label) and not legal.strip_neutral(bare[len(site_label):]) and site_label not in GENERIC_BRANDS
         decision, score = decide_profile(relation, operator.kind, domain_named=domain_named, handle_starts_with_domain=bool(site_label) and relation.handle.startswith(site_label),
-                                         org_sameas=org_sameas, operator_basis=operator.basis)
+                                         org_sameas=org_sameas, operator_basis=operator.basis, handle_is_domain=handle_is_domain)
         reason = decision.basis
         record = {
             "platform": platform, "url": chosen["url"], "canonical_url": canonical, "evidence_span": chosen["linked_as"],
@@ -925,7 +927,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     for platform in SOCIAL_PLATFORMS:
         same = [item for item in accepted if item["platform"] == platform]
         if len(same) > 2:
-            exact = [item for item in same if _handle(item) in labels]
+            exact = [item for item in same if _handle(item) in labels or item.get("handle_relation") in ("EXACT", "EXACT_NEUTRAL")
+                     or (item.get("attribution") or {}).get("code") == "handle_is_own_domain_name"]
             for item in same:
                 if (item not in exact if exact else float(item["identity_score"]) < 0.98) and not item["via_jsonld_sameas"]:
                     accepted.remove(item)
@@ -968,6 +971,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     by_url = {page.url: page for page in pages}
     news_pages = {page.url for page in pages if page.kind == "html" and (is_news_page(page.url) or has_news_path(page.url))}
     order = sorted(range(len(candidates)), key=lambda index: priority.get(candidates[index][0].get("method"), 9))
+    publisher = is_publisher(profile)
     for index in order:
         item, page = candidates[index]
         reason = validate_activity(item, page)
@@ -992,6 +996,10 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                 reason = "sibling_entity_item"
             elif subject != "THIS" and operator.kind in ("other_entity", "group_or_brand"):
                 reason = f"item_not_about_entity_on_{operator.kind}_site"
+            elif subject != "THIS" and publisher:
+                reason = "publisher_content_not_about_company"  # a newspaper's articles are its product, not news about it
+            elif subject != "THIS" and evergreen_title(item.get("title")):
+                reason = "evergreen_advice_not_news"
             elif subject == "THIS":
                 item = {**item, "subject_basis": basis}
         if reason:

@@ -21,7 +21,10 @@ from typing import Any
 from ..inputs import mod11_valid
 from .names import COUNTIES, REGIONS, LegalName, compact, fold
 
-IMPRINT_CUE = re.compile(r"(?:org(?:anisasjons)?\.?\s*-?\s*(?:nr|nummer|no)\b\.?|organisasjonsnummer|foretaksregisteret|selskapsinformasjon|(?-i:\bNO\b))\s*[:.]?\s*", re.I)
+IMPRINT_CUE = re.compile(r"(?:org(?:anisasjons)?\.?\s*-?\s*(?:nr|nummer|no)\b\.?|organisasjonsnummer|foretaksregisteret|selskapsinformasjon)\s*[:.]?\s*", re.I)
+VAT_NUMBER = re.compile(r"(?<![A-Za-z])NO\s?(\d{3})[\s.]?(\d{3})[\s.]?(\d{3})\s?MVA")
+DIRECTORY_SEGMENTS = {"forhandlere", "forhandler", "partnere", "partner", "partners", "medlemmer", "members", "kunder", "referanser", "leverandorer",
+                      "dealers", "resellers", "butikker", "avdelinger", "kontorer"}
 NINE_DIGITS = re.compile(r"(?<!\d)(\d{3})[\s. ]?(\d{3})[\s. ]?(\d{3})(?!\d)")
 
 
@@ -40,6 +43,10 @@ class SiteOperator:
 def stated_org_numbers(text: str) -> list[tuple[str, str]]:
     """(organisation number, span) for valid numbers written right after an imprint cue ("org.nr. 930 182 451")."""
     found: list[tuple[str, str]] = []
+    for match in VAT_NUMBER.finditer(text):
+        number = "".join(match.groups())
+        if mod11_valid(number) and number not in {item[0] for item in found}:
+            found.append((number, " ".join(match.group(0).split())))
     for cue in IMPRINT_CUE.finditer(text):
         window = text[cue.end():cue.end() + 40]
         match = NINE_DIGITS.search(window)
@@ -104,9 +111,10 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
         if org and org in _digits(text):
             own_stated = True
             signals.append({"signal": "own_org_number_stated", "page_url": url})
-        for number, span in stated_org_numbers(text):
-            if number != org:
-                others.append((number, span, url))
+        stated = [(number, span) for number, span in stated_org_numbers(text) if number != org]
+        directory = len({number for number, _ in stated}) >= 3 or any(segment in DIRECTORY_SEGMENTS for segment in urllib.parse.urlsplit(url).path.casefold().split("/"))
+        if not directory:  # a list of dealers, partners or members names other companies, not who runs the site
+            others.extend((number, span, url) for number, span in stated)
     if shared_kind == "section":
         return SiteOperator("section", "section_of_shared_domain", "The website is a section of a larger organisation's domain.", tuple(signals))
     if own_stated:
@@ -119,7 +127,10 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
     group: list[dict[str, Any]] = []
     value = website_value or {}
     requested, final = str(value.get("requested_url") or ""), str(value.get("final_url") or "")
-    if requested and final and _registered(requested) and _registered(final) and _registered(requested) != _registered(final) and _registered(final) == _registered(site_url):
+    if requested and final and _registered(requested) and _registered(final) and _registered(final) == _registered(site_url) \
+            and str(_registered(requested)).endswith(".no") and not str(_registered(final)).endswith(".no"):
+        # the company's Norwegian domain now redirects to an international domain (bartec-technor.no -> bartec.com): the
+        # group's site. A move to another .no domain (stalheim.com -> stalheimhotel.no, hadeland.net -> hadeland.no) is not.
         group.append({"signal": "registry_website_redirects_to_other_domain", "detail": f"{requested} -> {final}"})
     all_text = " ".join(text for _, text in page_texts)
     phrase_present = legal.phrase_in(all_text)

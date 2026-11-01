@@ -422,7 +422,8 @@ def _site_research_claims(claims: ClaimSet, record: dict[str, Any] | None, *, v1
         claims.absent("hiring", "job_posting", "not_applicable", f"{operator.get('basis')} Vacancies on it are not attributed to this company.")
     elif not jobs:
         checked = value.get("careers_checked") or []
-        reason = f"Verified website checked; careers page {checked[0]['url']}: {checked[0]['reason']}" if checked else "Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
+        why = (checked[0].get("reason") or "positions are listed, but none is a dated, current advertisement naming this company as employer") if checked else ""
+        reason = f"Verified website checked; careers page {checked[0]['url']}: {why}" if checked else "Verified website checked; no job posting found (no schema.org JobPosting, no careers page listing positions)"
         claims.absent("hiring", "job_posting", "not_available", reason)
     return True
 

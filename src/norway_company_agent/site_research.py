@@ -30,6 +30,7 @@ from bs4 import BeautifulSoup
 from .http import ByteFetch, fetch_bytes
 from .identity import _tokens
 from .attribution.jobs import is_recruiter
+from .attribution.news import is_publisher
 from .site_facts import CAREER_PATH, is_careers_page  # noqa: F401
 from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, in_site_scope, is_shared_site_section, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site, manager_designated
@@ -489,7 +490,7 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
     if result.careers_page:
         # V3 §B7: the linked page must itself be a careers page (path or heading), not a service page for employers.
         fetched_page = next((page for page in pages or [] if page.url == result.careers_page and page.kind == "html"), None)
-        board = profile is not None and is_recruiter(profile) and not OWN_CAREERS.search(urllib.parse.unquote(urllib.parse.urlsplit(result.careers_page).path).casefold())
+        board = profile is not None and (is_recruiter(profile) or is_publisher(profile)) and not OWN_CAREERS.search(urllib.parse.unquote(urllib.parse.urlsplit(result.careers_page).path).casefold())
         if board:
             # A recruiter's vacancies page lists its clients' jobs: it is not a page about working at the recruiter.
             counts = result.extraction_rejections

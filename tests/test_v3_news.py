@@ -104,6 +104,27 @@ class ItemGate(unittest.TestCase):
         self.assertEqual(titles(extract_site_facts({"name": "Fjell Data AS"}, [home])), ["Revejakta har startet"])
 
 
+class PublishersAndEvergreen(unittest.TestCase):
+    def test_a_newspaper_s_journalism_is_not_news_about_the_newspaper(self):
+        paper = {"name": "AS GRIMSTAD ADRESSETIDENDE", "organisation_number": "912345679",
+                 "evidence": {"registry_live": {"value": {"industry": {"kode": "58.130"}}}}}
+        home = page("https://www.gat.no/", "<html><body>Grimstad Adressetidende</body></html>")
+        posts = [("Vraker nytt E18-forslag", "https://www.gat.no/nyheter/n/1/e18", "Wed, 28 Oct 2026 07:59:40 +0000", []),
+                 ("Grimstad Adressetidende får ny redaktør", "https://www.gat.no/nyheter/n/2/redaktor", "Tue, 20 Oct 2026 07:00:00 +0000", [])]
+        feed_page = CapturedPage("https://www.gat.no/rss", feed(posts).raw, "x", "2026-11-01T08:00:00Z", kind="feed")
+        facts = extract_site_facts(paper, [home], [feed_page])
+        self.assertEqual(titles(facts), [], "neither names the legal entity (AS GRIMSTAD ADRESSETIDENDE) itself")
+        self.assertIn("activity:publisher_content_not_about_company", facts.rejections)
+
+    def test_evergreen_advice_is_not_news_unless_it_names_the_company(self):
+        posts = [("Hvor ofte bør et kontor rengjøres?", "https://fjell-data.no/blogg/kontor", "Wed, 16 Sep 2026 10:00:00 +0000", ["Blogg"]),
+                 ("Slik lager dere en praktisk renholdsplan", "https://fjell-data.no/blogg/plan", "Mon, 19 Oct 2026 10:00:00 +0000", ["Blogg"]),
+                 ("Vi har fått ny lønnsspesialist", "https://fjell-data.no/blogg/ny", "Thu, 19 Jun 2025 11:38:48 +0000", ["Blogg"])]
+        facts = extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)])
+        self.assertEqual(titles(facts), ["Vi har fått ny lønnsspesialist"])
+        self.assertIn("activity:evergreen_advice_not_news", facts.rejections)
+
+
 class Subject(unittest.TestCase):
     def test_sibling_unit_items_are_not_published_and_own_items_are(self):
         legal = {"name": "BETONMAST OSLO AS", "organisation_number": "996605833",

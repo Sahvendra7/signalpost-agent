@@ -27,6 +27,8 @@ NON_ARTICLE_SEGMENTS = {
 NEWS_SEGMENT = re.compile(r"^(?:nyheter|nyhet|aktuelt|news|blogg|blog|bloggen|artikler|artikkel|article|articles|presse|press|pressemeldinger|"
                           r"pressemelding|press-releases|post|posts|innlegg|magasin|magazine|nyhetsarkiv|aktueltsaker|aktuelle-saker|nyhetssaker|"
                           r"siste-nytt|nytt|newsroom)$")
+PRESS_TITLE = re.compile(r"^\s*(?:pressemelding|press release|pressrelease|nyhet|news|kunngjøring|announcement)\s*[:–—-]", re.I)
+PRESS_SLUG = re.compile(r"^(?:pressemelding|press-release|nyhet|kunngjoring)-")
 DATED_PATH = re.compile(r"/(?:19|20)\d{2}/(?:0?[1-9]|1[0-2])(?:/|$)")
 DEFAULT_POSTS = {"hello world", "hello world!", "hei verden", "hei verden!", "sample page", "eksempelside", "uncategorized", "testinnlegg", "test post",
                  "hallo verden", "hallo verden!"}
@@ -84,6 +86,8 @@ def classify_item(item: dict[str, Any], page_url: str, *, site_url: str, on_news
         return Decision(False, "outside_news_section", "The news listing links this item to a page outside its own news section (an evergreen page).")
     if has_news_path(url):
         return Decision(True, "article_news_path", "The item's address is in the website's news section or is dated.")
+    if PRESS_TITLE.match(str(item.get("title") or "")) or any(PRESS_SLUG.match(segment) for segment in path_segments):
+        return Decision(True, "article_press_release", "The item is a press release or announcement by its title or address.")
     if method == "site_feed" and from_main_feed:
         return Decision(True, "article_main_feed", "The item is a post in the website's own main feed.")
     if on_news_page and method in ("listing_visible_date", "article_time_datetime") and not _same(url, page_url):
@@ -126,6 +130,25 @@ def burst_members(items: list[tuple[str, dict[str, Any]]]) -> set[int]:
             if len(same_day) >= SAME_DAY_BURST_SIZE:
                 members.update(same_day)
     return members
+
+
+EVERGREEN_TITLE = re.compile(
+    r"^(?:slik|hvordan|hvor ofte|hva er|hva du|hva bør|tips|råd|guide|how to|how do|what is|what are|why|types of|understanding|introduction to)\b"
+    r"|sjekkliste|checklist|komplett guide|complete guide|\bguide\b|\btips\b|dette bør|regler for|key differences|\bvs\.?\b"
+    r"|\b(?:du|deg|din|ditt|dine|dere|deres|you|your)\b", re.I)
+PUBLISHER_NACE = ("58.1", "60.", "63.91", "63.12")
+
+
+def evergreen_title(title: str) -> bool:
+    """Advice, how-to and second-person marketing titles: content a company publishes, not news about it."""
+    return bool(EVERGREEN_TITLE.search(" ".join(str(title or "").split())))
+
+
+def is_publisher(profile: dict[str, Any]) -> bool:
+    """Newspaper, magazine and other publishers, broadcasters and news agencies (NACE 58.1, 60, 63.91, 63.12): the
+    articles on their sites are their product, not news about the company."""
+    live = ((profile.get("evidence") or {}).get("registry_live") or {}).get("value") or {}
+    return str((live.get("industry") or {}).get("kode") or "").startswith(PUBLISHER_NACE)
 
 
 def subject_of(item: dict[str, Any], legal: LegalName, *, names_entity: Callable[[], str | None], siblings: Callable[[list[str]], set[str]]) -> tuple[str, str]:
