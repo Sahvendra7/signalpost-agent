@@ -374,6 +374,50 @@ def site_was_read(module_state: Any = None, record: dict[str, Any] | None = None
     return module_state == "complete"
 
 
+def carry_forward_from_envelope(baseline: dict[str, Any], current_records: dict[str, Any], claims: list[dict[str, Any]],
+                                evidence: dict[str, dict[str, Any]], already_carried: list[str]) -> dict[str, dict[str, Any]]:
+    """Outage carry-forward when the baseline is a published envelope with no profile (an imported envelope, or
+    --previous-envelopes alone). For each source that failed in this run but completed in the baseline, the baseline's
+    available claims from that source are kept (with their evidence entries), marked `carried_forward`, and this run's
+    non-available claims for the same fields are dropped. Mutates `claims` and `evidence`; returns
+    {module: record for the "unavailable" event} for the modules carried. A missing number stays missing: only values
+    the baseline published are kept."""
+    base_states = {module: (state or {}).get("state") for module, state in (baseline.get("modules") or {}).items()}
+    base_evidence = {item.get("id"): item for item in baseline.get("evidence") or []}
+    carried: dict[str, dict[str, Any]] = {}
+    for module in CARRY_MODULES:
+        if module in already_carried:
+            continue
+        record = current_records.get(module)
+        status = (record or {}).get("status")
+        outage = record is None or status in OUTAGE_STATUSES
+        if module == "site_research" and status == "not_found" and "website" in carried:
+            outage = True  # the registry-website gate could not re-check the site: an outage, not a change
+        if not outage or base_states.get(module) != "complete":
+            continue
+        kept = [claim for claim in baseline.get("claims") or [] if claim.get("availability") == "available" and _module_of(claim, base_evidence) == module]
+        if not kept:
+            continue
+        fields = {(claim.get("category"), claim.get("field")) for claim in kept}
+        claims[:] = [claim for claim in claims if claim.get("availability") == "available" or (claim.get("category"), claim.get("field")) not in fields]
+        present = {_claim_key(claim) for claim in claims if claim.get("availability") == "available"}
+        last = None
+        for claim in kept:
+            if _claim_key(claim) in present:
+                continue
+            ids = [eid for eid in claim.get("evidence_ids") or [] if eid in base_evidence]
+            for eid in ids:
+                evidence.setdefault(eid, base_evidence[eid])
+            retrieved = (base_evidence.get(ids[0]) or {}).get("retrieved_at") if ids else None
+            last = max(filter(None, [last, retrieved]), default=None)
+            claims.append({**{key: value for key, value in claim.items() if key not in ("is_new",)}, "evidence_ids": ids, "carried_forward": True,
+                           "last_verified_at": claim.get("last_verified_at") or retrieved})
+        carried[module] = {"retrieved_at": last, "current_attempt": {"status": status or "not_fetched", "note": (record or {}).get("note"),
+                                                                     "retrieved_at": (record or {}).get("retrieved_at")},
+                           "carried_from": "published_envelope"}
+    return carried
+
+
 def _canonical_social(event: dict[str, Any]) -> str | None:
     from .website import normalize_social_url
     normalized = normalize_social_url(str(event.get("old_value") or ""))

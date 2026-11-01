@@ -174,6 +174,43 @@ class RecheckOutage(unittest.TestCase):
                 h.close()
 
 
+class ImportedRecheckOutage(unittest.TestCase):
+    def test_first_re_check_of_an_imported_company_during_an_outage_reports_no_removal(self):
+        """Remediation R5: an imported envelope has no stored profile; its first re-check must still carry the last
+        published values through a source outage (website and site research down) instead of reporting removals."""
+        from norway_company_agent.evidence import evidence
+        from norway_company_agent.http import ByteFetch
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            envelopes, _ = imported_batch(root)
+            fixture = Fixture(KILIS, base=V3)
+            down = {**fixture.injected(),
+                    "site_fetcher": lambda url, **kwargs: ByteFetch(url, 0, 0, b"", None, {}, None, "2026-11-01T00:00:00Z", 1, "URLError: network unreachable"),
+                    "website_fetcher": lambda url: (evidence("website", "blocked", "registry_linked_company_website", str(url or "https://kilishockey.no/"),
+                                                             note="robots.txt unreachable (5xx/429/network; RFC 9309: assume disallow)"), {"requests": 1, "bytes": 0, "latencies_ms": []})}
+            h = Harness(root / "app", run_kwargs=down, imports=[envelopes])
+            try:
+                self.assertIsNone(h.store.baseline_profile(h.store.baseline(KILIS)), "imported: no stored profile")
+                before = {claim["field"] for claim in h.store.latest(KILIS)["claims"] if claim["availability"] == "available"}
+                done = h.wait(h.post("/api/research", {"org": KILIS})[1]["id"])
+                self.assertEqual(done["state"], "partial", done)
+                envelope = h.store.latest(KILIS)
+                kinds = {change["change_type"] for change in envelope["changes"]}
+                self.assertNotIn("removed", kinds, [change for change in envelope["changes"] if change["change_type"] == "removed"][:3])
+                self.assertIn("unavailable", kinds)
+                website = next(claim for claim in envelope["claims"] if claim["field"] == "official_website")
+                self.assertEqual((website["availability"], website.get("carried_forward")), ("available", True))
+                news = [claim for claim in envelope["claims"] if claim["field"] == "news_item" and claim["availability"] == "available"]
+                self.assertTrue(news and all(claim.get("carried_forward") for claim in news))
+                after = {claim["field"] for claim in envelope["claims"] if claim["availability"] == "available"}
+                self.assertLessEqual(before, after, "every previously published field is still published, as retained")
+                self.assertEqual(envelope["modules"]["site_research"]["state"], "carried_forward")
+                from norway_company_agent.contract import validate_envelope
+                self.assertEqual(validate_envelope(envelope), [])
+            finally:
+                h.close()
+
+
 class Persistence(unittest.TestCase):
     def test_researched_profiles_survive_a_restart_and_imports_are_read_only(self):
         with tempfile.TemporaryDirectory() as raw:

@@ -45,3 +45,27 @@ dev-audit label is corrected, with this evidence, in
 - `test_v3_regressions.py::SocialAttribution::test_asak_does_not_take_the_profiles_of_asak_miljostein` — ASAK held,
   ASAK MILJØSTEIN keeps both;
 - `test_v3_regressions.py::SocialAttribution::test_ashtead_norwegian_as_does_not_take_the_global_linkedin`.
+
+## R5 — first re-check of an imported envelope during a source outage
+
+**Cause.** Outage carry-forward needs the previous *profile*. An envelope imported into the app, or given as
+`--previous-envelopes` alone, has none. A source that failed in the re-check therefore turned the published values
+into `removed` events.
+
+**Change.** `refresh.carry_forward_from_envelope`, used only when the baseline is a published envelope without a
+profile:
+- For each source that failed in this run (`source_error`, `blocked`, `not_fetched`, missing, or site research not
+  re-checkable because the website module failed) **and** completed in the baseline, the baseline's available claims
+  from that source are kept, with their evidence entries, marked `carried_forward` and with `last_verified_at`.
+- This run's non-available claims for those fields are dropped.
+- The module state is `carried_forward`, and one `unavailable` event is emitted per source.
+- Only values the baseline published are kept; nothing is invented.
+- When a profile exists, the profile path is used as before.
+
+**Tests.** Both fail without the fix:
+- `test_v3_app.py::ImportedRecheckOutage` — an imported company, re-checked while the website and site research are
+  down: no `removed`, `unavailable` present, website and news retained, contract valid.
+- `test_v3_history.py::EnvelopeOnlyBaseline` — `--previous-envelopes` alone through an outage: only `unavailable`, and
+  the same published facts.
+
+A guard test checks that a source that does answer still reports real removals.

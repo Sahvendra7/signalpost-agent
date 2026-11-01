@@ -124,6 +124,34 @@ class PublishedBaseline(unittest.TestCase):
         self.assertEqual(refreshed["refresh"]["new_items"]["news_item"], 1)
 
 
+class EnvelopeOnlyBaseline(unittest.TestCase):
+    def test_previous_envelopes_without_profiles_carry_forward_through_an_outage(self):
+        """--previous-envelopes alone (no profile): an outage keeps the published values (remediation R5)."""
+        from norway_company_agent.evidence import evidence
+        from norway_company_agent.http import ByteFetch
+        baseline = PublishedBaseline.run_v3(None, KILIS)
+        fixture = Fixture(KILIS, base=V3)
+        down = {**fixture.injected(),
+                "site_fetcher": lambda url, **kwargs: ByteFetch(url, 0, 0, b"", None, {}, None, "2026-11-01T00:00:00Z", 1, "URLError"),
+                "website_fetcher": lambda url: (evidence("website", "source_error", "registry_linked_company_website", "https://kilishockey.no/", note="timeout"),
+                                                {"requests": 1, "bytes": 0, "latencies_ms": []})}
+        refreshed = run_batch([InputRow(0, KILIS, KILIS)], run_id="later", previous_envelopes={KILIS: baseline}, **down)["envelopes"][0]
+        self.assertEqual({change["change_type"] for change in refreshed["changes"]}, {"unavailable"}, refreshed["changes"][:3])
+        published = lambda envelope: {(claim["field"], json.dumps(claim["value"], sort_keys=True)) for claim in envelope["claims"] if claim["availability"] == "available"}
+        self.assertEqual(published(refreshed), published(baseline))
+        self.assertEqual(validate_envelope(refreshed), [])
+
+    def test_an_answering_source_still_reports_real_removals(self):
+        baseline = PublishedBaseline.run_v3(None, KILIS)
+        baseline = copy.deepcopy(baseline)
+        feed = next(item for item in baseline["evidence"] if item["source_url"].endswith("/feed/"))
+        baseline["claims"].append({"field": "news_item", "category": "public_activity", "availability": "available", "evidence_ids": [feed["id"]],
+                                   "value": {"title": "Gammel sak", "url": "https://kilishockey.no/gammel/", "publication_date": "2026-01-01T10:00:00Z"},
+                                   "source_page": feed["source_url"]})
+        refreshed = PublishedBaseline.run_v3(None, KILIS, baseline)
+        self.assertEqual([change["change_type"] for change in refreshed["changes"] if change.get("field") == "news_item"], ["removed"])
+
+
 class FirstObservation(unittest.TestCase):
     """Live release run, 929336038: the baseline's website returned an HTTP error, the refresh read it. Its profile and
     careers page were reported "added" and the profile "new" — they were simply not observable before."""

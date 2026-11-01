@@ -25,7 +25,7 @@ from .official import accounting_obligation_assessment, fetch_official_modules
 from .operations import latency_summary
 from .privacy import redacting_fetcher
 from .provenance import code_version
-from .refresh import carry_forward, claim_changes, refine_additions, refine_removals, site_was_read, stamp_first_seen
+from .refresh import carry_forward, carry_forward_from_envelope, claim_changes, refine_additions, refine_removals, site_was_read, stamp_first_seen
 from .status import company_status, identity_block
 from .synthesis import company_summary
 from .site_research import SiteSession, research_company_site
@@ -525,8 +525,16 @@ def _research_envelope(
         # current rules withdraw shows up as a retraction instead of disappearing silently.
         try:
             baseline_claims = list(baseline_envelope.get("claims") or [])
+            records = dict(profile["evidence"])
+            if previous is None:
+                # No profile for this baseline (imported envelope, or --previous-envelopes alone): carry forward from the
+                # published envelope, so a source outage is never reported as a removal.
+                from_envelope = carry_forward_from_envelope(baseline_envelope, profile["evidence"], claim_set.claims, claim_set._evidence, refresh_outcome["carried"])
+                records.update(from_envelope)
+                refresh_outcome["carried"] = refresh_outcome["carried"] + sorted(from_envelope)
+                refresh_outcome["from_envelope"] = sorted(from_envelope)
             changes, refresh_block = claim_changes(baseline_claims, list(baseline_envelope.get("evidence") or []), claim_set.claims, claim_set.evidence,
-                                                   carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=profile["evidence"])
+                                                   carried=refresh_outcome["carried"], unverified=refresh_outcome["unverified"], current_records=records)
             base_run = baseline_envelope.get("run") or {}
             refine_removals(changes, refresh_block, baseline_claims, profile["evidence"].get("site_research"),
                             baseline_code=base_run.get("code_version"), current_code=code_version())
@@ -535,7 +543,7 @@ def _research_envelope(
             refresh_block["baseline"] = {"kind": "published_envelope", "run_id": base_run.get("run_id"), "started_at": base_run.get("started_at"),
                                          "code_version": base_run.get("code_version")}
             for module in refresh_outcome["carried"]:
-                attempt = profile["evidence"][module].get("current_attempt") or {}
+                attempt = (records.get(module) or {}).get("current_attempt") or {}
                 errors.append({"code": "source_unavailable_value_retained", "stage": module, "message": f"{module} failed in this run ({attempt.get('status')}: {attempt.get('note')}); last supported value retained"})
         except Exception as exc:
             errors.append({"code": "refresh_diff_failed", "stage": "refresh", "message": f"{type(exc).__name__}: {str(exc)[:200]}"})
@@ -566,8 +574,8 @@ def _research_envelope(
         errors.append({"code": "identity_unresolved", "stage": "identity", "message": "Neither the bulk snapshot nor the live registry returned this organisation number"})
     module_states = {
         module: {
-            "state": "carried_forward" if (profile["evidence"].get(module) or {}).get("carried_forward") and module in refresh_outcome["carried"] else evidence_terminal_state(profile["evidence"].get(module)),
-            "note": ((profile["evidence"].get(module) or {}).get("current_attempt") or {}).get("note") if module in refresh_outcome["carried"] else (profile["evidence"].get(module) or {}).get("note"),
+            "state": "carried_forward" if ((profile["evidence"].get(module) or {}).get("carried_forward") or module in refresh_outcome.get("from_envelope", [])) and module in refresh_outcome["carried"] else evidence_terminal_state(profile["evidence"].get(module)),
+            "note": ((profile["evidence"].get(module) or {}).get("current_attempt") or {}).get("note") if module in refresh_outcome["carried"] and module not in refresh_outcome.get("from_envelope", []) else (profile["evidence"].get(module) or {}).get("note"),
         }
         for module in modules
     }
