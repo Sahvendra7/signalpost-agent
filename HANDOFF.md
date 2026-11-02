@@ -13,13 +13,16 @@ This is where the work stands for whoever continues on another machine or accoun
 | Revision 1 | `05d7566` (code `a5e06ce`), submitted by the owner. Builderr C300 directional row (2026-10-17): 56.85/100 (recall 26.18, precision 28.27, synthesis 2.40, UX 0). Which tree Builderr processed is not determinable from the available metadata. |
 | C300 revision candidate | Code `6487205` (code commits `7492f32`, `6487205`); the docs/measurements commit on top is code-identical. Not submitted, not scored. See `docs/c300-revision.md`. |
 | Previously submitted | `ff3b515` (branch `claude/c300-refresh-fix`) — the V3 baseline. |
-| **V3 candidate 2** | Code `7b8fc69` plus documentation and measurements, after the pre-release remediation pass (`docs/v3-remediation.md`). Not pushed, not submitted, not scored. Independent news precision 25.6%: the target is not met. |
+| **V3.1 candidate 1** | Tag `v3.1-candidate-1` (local), code `0e4c426`, after the news accuracy remediation (`docs/v31-release-report.md`). Not pushed, not submitted, not scored. Independent news precision 80.2% (eval200b): the 90% target is not met. Social 100%. |
+| V3 candidate 2 | Code `7b8fc69` plus documentation and measurements, after the pre-release remediation pass (`docs/v3-remediation.md`). Not pushed, not submitted, not scored. Independent news precision 25.6%: the target is not met. |
 | V3 candidate 1 | Branch `claude/awesome-sagan-m2lppu`, code `730ccfe` plus documentation and measurements. **Not submitted, not scored.** See `docs/v3-changelog.md`, `docs/v3-accuracy.md` and the V3 section of `docs/final-submission-manifest.md`. |
 | Earlier release candidate | Branch `claude/c300-refresh-fix`. Code `71fa494` (C300 `6487205` + refresh fix `8fba893` + race fix); the docs commit on top is code-identical. **Not submitted, not scored.** See `docs/c300-refresh-fix.md` §0 and `docs/final-submission-manifest.md`. Superseded: `7879be3` (code `8fba893`). |
 
 ## Read in this order
 
-0. V3:
+0. V3.1: `docs/v31-release-report.md` (outcome, all measurements, the recommended commit), then
+   `docs/v31-news-analysis.md` (the 29-error analysis, the comparison of approaches, both independent evaluations).
+   V3:
    - `docs/superpowers/specs/2026-11-01-signalpost-v3-design.md` (design review and final design);
    - `docs/v3-changelog.md` (every behaviour change);
    - `docs/v3-accuracy.md` (measurement, including the failed held-out gates);
@@ -49,7 +52,7 @@ This is where the work stands for whoever continues on another machine or accoun
 
 ```bash
 uv sync --locked
-uv run --with pytest pytest -q   # V3 candidate 2: expect 487 passed, 172 subtests passed
+uv run --with pytest pytest -q   # V3.1 candidate 1: expect 526 passed, 172 subtests passed
 uv run python scripts/serve.py --data-dir out/app   # local search app (docs/search-app.md)
 ```
 

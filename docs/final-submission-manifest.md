@@ -1,5 +1,18 @@
 # Final submission manifest
 
+## V3.1 candidate 1 — news classification accuracy remediation (not submitted, not scored)
+
+| | |
+|---|---|
+| Branch | `claude/awesome-sagan-m2lppu` (local; not pushed) |
+| Tag | `v3.1-candidate-1` (local) on the final docs and measurements commit |
+| **Code under test** | **`0e4c426986885c2661b5e55946deae0f0f046429`**. Later commits change only documentation and measurements; `git diff 0e4c426 v3.1-candidate-1 -- src tests scripts pyproject.toml uv.lock` is empty. |
+| Previous candidate | `v3-candidate-2` (code `7b8fc69`), unchanged and reproducible |
+| What changed | `docs/v31-news-analysis.md`, `docs/v31-release-report.md`: content-anchored news with recorded attribution, the registry-group site rule, site-wide text never naming an item's company |
+| Tests | 526 passed and 172 subtests, in the working tree and in 3 of 3 clean-room runs |
+| Live check (2026-11-02) | 100/100 `completed`; 0 contract findings (3,993 hashes re-checked); $0; no LLM; no social-platform host. The refresh baseline was the published envelopes, with 2 outage events that kept their last values. The 8 reproduction companies are as intended. |
+| **Independent accuracy** (new sample eval200b, scored once, `assistant_blind`) | **News 80.2% (105/131, CI 72.5–86.1): the 90% target is NOT met.** News retention 70.6%. Social 100% (68/68, CI 94.7–100). Careers page 7/7. Job ads: not validated. |
+
 ## V3 candidate 2 — after the pre-release remediation pass (not submitted, not scored)
 
 | | |
