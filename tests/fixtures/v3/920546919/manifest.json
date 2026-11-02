@@ -1,0 +1,204 @@
+{
+ "organisation_number": "920546919",
+ "name": "JENTENEPAATUNET AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://jentenepaatunet.no/",
+  "retrieved_at": "2026-11-01T21:57:49.789860Z",
+  "value": {
+   "requested_url": "https://www.jentenepaatunet.no/",
+   "final_url": "https://jentenepaatunet.no/",
+   "registered_domain": "jentenepaatunet.no",
+   "title": "Jentene på tunet | Chocolatier | Prisvinnende norsk sjokolade",
+   "description": "Hos Jentene på tunet får du håndlaget sjokolade av høy kvalitet basert på de aller beste råvarene. Sjokoladefryd - lykke i hver bit.",
+   "main_text_excerpt": "Prisvinnende\nhåndverkssjokolade\t\nSLIK LAGER VI SJOKOLADEFRYD\nPRISVINNENDE SJOKOLADE\nÅ lage sjokolade er et møysommelig arbeid. Hver eneste bit med Sjokoladefryd er laget for hånd - av Jentene på Tunet.\nNavnet 'Sjokoladefryd' følger alle våre produkter da vi ønsker å gi en smaksopplevelse som skal være en fryd for både øye og gane.\nSe, lukt, smak og nyt.\nDe siste ti årene har inneholdt lange dager og mange arbeidstimer - og det har vært litt som et eventyr. Tilbakemeldingene har vært fantastiske! Jentene på Tunet - Chocolatier er stolt prisvinner i International Chocolate Awards hvert eneste år mellom 2017-2023. Vi er blitt:\n- Mestvinnende i ICA Skandinavia\n- Mestvinnende i ICA Europa\n- Og til slutt også mestvinnende i ICA Verden!\nSJOKOLADEBITER\nVisste du at vi kun bruker de beste råvarene og at det tar 3 dager fra vi begynner å lage en sjokoladebit til den er klar for å pakkes i esker og sendes ut til mottaker?\nDenne tiden sikrer at hver bit blir til med omtanke og presisjon, fra temperering av sjokoladen til den siste kvalitetssjekken før pakking.\nKjenner du til våre fylte sjokoladebiter?\nNØYE UTVALGTE RÅVARER\nEn iboende nysgjerrighet og kjærlighet til ekte, rene og gode råvarer gjør at hver eneste munnfull Sjokoladefryd er unik.\nÅ få være kreative med så fantastiske råvarer gir oss stolthet og lidenskap for sjokoladehåndverket, hvor hver eneste sjokoladebit er en fryd å lage.\nVår sjokoladeleverandør Valrhona er B Corp sertifisert - møter de strengeste krav ift bærekraft og sosialt ansvar! Les mer i artikkelen vi har skrevet HER!",
+   "identity_text_excerpt": "Vil du ha vårt NYHETSBREV? Meld deg på og vær den første som får nyheter fra oss! Du får også eksklusive tilbud og vi sender ut historier vi kun deler her på mail - til deg som mottar nyhetsbrevet vårt! \" * \" obligatorisk felt E-post * Samtykke * Jeg godtar at Jentene på Tunet sender tips, gode tilbud og markedsføring Ja - meld meg på! Tiden stopper opp. Vi ser, smaker, føler og nyter. Det er Sjokoladefryd. Litt lykke i hver bit. Kontakt Jentene på Tunet Kammen 39, 7580 Selbu, Norway post@jentenepaatunet.no + 47 41 11 31 31 (Hovednummer) +47 95 55 85 55 (Eivind) +47 41 63 66 63 (Iris) 920546919 (orgnr, Jentenepaatunet AS) Privatpersoner Sjokolade Retningslinjer for personvern Salgsbetingelser Bedrift Bli forhandler Firmagaver © 2026 Jentene på Tunet. All Rights Reserved.",
+   "social_links": [
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/jentenepaatunet"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://jentenepaatunet.no/#organization",
+     "name": "Jentene På Tunet",
+     "url": "https://jentenepaatunet.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "nb-NO",
+      "@id": "https://jentenepaatunet.no/#/schema/logo/image/",
+      "url": "https://jentenepaatunet.no/wp-content/uploads/2026/04/jpt-chocolatier-logo-oval-turkis.png",
+      "contentUrl": "https://jentenepaatunet.no/wp-content/uploads/2026/04/jpt-chocolatier-logo-oval-turkis.png",
+      "width": 2000,
+      "height": 1346,
+      "caption": "Jentene På Tunet"
+     },
+     "image": {
+      "@id": "https://jentenepaatunet.no/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/jentenepaatunet/",
+      "https://www.instagram.com/jentenepaatunet/"
+     ],
+     "description": "Jentene på Tunet er en gårdsbasert sjokoladeprodusent fra Selbu i Trøndelag. Vi lager håndverksjokolade av høy kvalitet og rene råvarer, og tilbyr i tillegg opplevelser som sjokoladesmaking, gårdskafé og møtelokaler. Vår håndlaget sjokolade selges både i egen nettbutikk og gjennom et bredt forhandlernettverk over hele Norge.",
+     "email": "post@jentenepaatunet.no",
+     "telephone": "+4741113131",
+     "legalName": "Jentenepaatunet AS",
+     "foundingDate": "2018-03-07",
+     "vatID": "920546919",
+     "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": "11",
+      "maxValue": "50"
+     }
+    }
+   ],
+   "content_sha256": "8132bc1c864f5d7abf62f5f40e0fb54a1adacc6836d35c61514de2bb7203ec15",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://jentenepaatunet.no/",
+     "title": "Jentene på tunet | Chocolatier | Prisvinnende norsk sjokolade",
+     "main_text_excerpt": "Prisvinnende\nhåndverkssjokolade\t\nSLIK LAGER VI SJOKOLADEFRYD\nPRISVINNENDE SJOKOLADE\nÅ lage sjokolade er et møysommelig arbeid. Hver eneste bit med Sjokoladefryd er laget for hånd - av Jentene på Tunet.\nNavnet 'Sjokoladefryd' følger alle våre produkter da vi ønsker å gi en smaksopplevelse som skal være en fryd for både øye og gane.\nSe, lukt, smak og nyt.\nDe siste ti årene har inneholdt lange dager og mange arbeidstimer - og det har vært litt som et eventyr. Tilbakemeldingene har vært fantastiske! Jentene på Tunet - Chocolatier er stolt prisvinner i International Chocolate Awards hvert eneste år mellom 2017-2023. Vi er blitt:\n- Mestvinnende i ICA Skandinavia\n- Mestvinnende i ICA Europa\n- Og til slutt også mestvinnende i ICA Verden!\nSJOKOLADEBITER\nVisste du at vi kun bruker de beste råvarene og at det tar 3 dager fra vi begynner å lage en sjokoladebit til den er klar for å pakkes i esker og sendes ut til mottaker?\nDenne tiden sikrer at hver bit blir til med omtanke og presisjon, fra temperering av sjokoladen til den siste kvalitetssjekken før pakking.\nKjenner du til våre fylte sjokoladebiter?\nNØYE UTVALGTE RÅVARER\nEn iboende nysgjerrighet og kjærlighet til ekte, rene og gode råvarer gjør at hver eneste munnfull Sjokoladefryd er unik.\nÅ få være kreative med så fantastiske råvarer gir oss stolthet og lidenskap for sjokoladehåndverket, hvor hver eneste sjokoladebit er en fryd å lage.\nVår sjokoladeleverandør Valrhona er B Corp sertifisert - møter de strengeste krav ift bærekraft og sosialt ansvar! Les mer i artikkelen vi har skrevet HER!",
+     "content_sha256": "8132bc1c864f5d7abf62f5f40e0fb54a1adacc6836d35c61514de2bb7203ec15"
+    }
+   ],
+   "crawl_errors": [
+    {
+     "url": "https://jentenepaatunet.no/om-oss/",
+     "error": "skipped: robots.txt Crawl-delay 10s"
+    },
+    {
+     "url": "https://jentenepaatunet.no/om-oss/historien/",
+     "error": "skipped: robots.txt Crawl-delay 10s"
+    },
+    {
+     "url": "https://jentenepaatunet.no/om-oss/kontakt/",
+     "error": "skipped: robots.txt Crawl-delay 10s"
+    },
+    {
+     "url": "https://jentenepaatunet.no/om-oss/vil-du-jobbe-med-oss/",
+     "error": "skipped: robots.txt Crawl-delay 10s"
+    }
+   ],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "jentenepaatunet"
+    ],
+    "matched_tokens": [
+     "jentenepaatunet"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/jentenepaatunet"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/jentenepaatunet",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "jentenepaatunet"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "8132bc1c864f5d7abf62f5f40e0fb54a1adacc6836d35c61514de2bb7203ec15",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/920546919": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "ba39613eb9377bec.json.gz",
+   "content_sha256": "ba39613eb9377bec0773b44c93b5a40a75500e7cb87baee831247bf2e6531c2c",
+   "retrieved_at": "2026-11-01T21:57:33.896156Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/920546919": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1bf55ea326e07735.json.gz",
+   "content_sha256": "1bf55ea326e077351ab9371ecdd16d8ee0d4f5c143cf5ba081522cbde32e73e9",
+   "retrieved_at": "2026-11-01T21:57:34.608341Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/920546919/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "3a578e77186a886e.json.gz",
+   "content_sha256": "3a578e77186a886e04cf0092dde35b248c35ec08d76be74b9c917bcc01704b75",
+   "retrieved_at": "2026-11-01T21:57:36.734992Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/920546919": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T21:57:35.315172Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=920546919&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1747854d586f038f.json.gz",
+   "content_sha256": "1747854d586f038f6168a71158f2dea09ec0ebe8adb3f3d91c52014b53b50d67",
+   "retrieved_at": "2026-11-01T21:57:36.025958Z"
+  },
+  "https://jentenepaatunet.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "2f9e64b7e39c69ab.html.gz",
+   "content_sha256": "2f9e64b7e39c69abebadfcc49d19cd8150bb9fac9eb0a45c52bb14153af8890a",
+   "retrieved_at": "2026-11-01T21:58:01.829641Z"
+  },
+  "https://jentenepaatunet.no/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "1b4b6a020e82cfc1.html.gz",
+   "content_sha256": "1b4b6a020e82cfc10f62afebf974f5e1dd7d4c9854d55594dd26af73f8ac377c",
+   "retrieved_at": "2026-11-01T21:58:10.787357Z"
+  },
+  "https://jentenepaatunet.no/om-oss/kontakt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "547e7fe2a7b855db.html.gz",
+   "content_sha256": "547e7fe2a7b855dbea5d2365575821a1bd0de865be78e00b52f4d5916348dc2b",
+   "retrieved_at": "2026-11-01T21:58:20.782389Z"
+  },
+  "https://jentenepaatunet.no/blogg/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ac71667bc13fa321.html.gz",
+   "content_sha256": "ac71667bc13fa321af3daccff178b1fe8c157e05f5e2684f26335a37d9f5a425",
+   "retrieved_at": "2026-11-01T21:58:40.751251Z"
+  },
+  "https://jentenepaatunet.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "9895cefda60f6d68.xml.gz",
+   "content_sha256": "9895cefda60f6d6877ce3c01fb7a0b2c2e386c00bfd195bb06212b5f39428b3f",
+   "retrieved_at": "2026-11-01T21:58:30.479135Z"
+  }
+ }
+}

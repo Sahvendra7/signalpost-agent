@@ -1,0 +1,199 @@
+{
+ "organisation_number": "899115562",
+ "name": "PROVENDO AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.provendo.no/",
+  "retrieved_at": "2026-11-01T22:04:00.917857Z",
+  "value": {
+   "requested_url": "https://www.provendo.no/",
+   "final_url": "https://www.provendo.no/",
+   "registered_domain": "provendo.no",
+   "title": "Provendo – Trygg IT nær deg",
+   "description": "",
+   "main_text_excerpt": "Vi er opptatt av å kjenne kundene våre og for oss er alle kunder like viktige – uavhengig av størrelse.\nVåre konsulenter har lang erfaring med skybasert drift og er til stede med personlig support når du trenger det. Personlig oppfølging er noe vi setter svært høyt og er selve kjernen i en god skyreise.\nFor oss er IT noe som må fungere sømløst. \nMed Provendo får vi dette.\nOle August Karlsen – Daglig leder – Morgan AS\nNoen av våre kunder:\nVi valgte for noen år tilbake å se lokalt etter en dataleverandør som kunne sette seg inn i hvordan vi tenker og forstå vår drift. Det har vi fått hos Provendo og deres ansatte. De løfter oss som firma med god veiledning og effektiv problemløsning. Jeg som ansvarlig for Hybeko kan på det sterkeste anbefale å ta en prat med Provendo og teamet deres. Takk til Team Provendo.\nEspen Johannessen – Hybeko AS",
+   "identity_text_excerpt": "",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/provendo"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/provendoas"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "a8a9816cc31a04ba0966056fef16860c9949ca76d269377b02ff932e7cd5785c",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.provendo.no/",
+     "title": "Provendo – Trygg IT nær deg",
+     "main_text_excerpt": "Vi er opptatt av å kjenne kundene våre og for oss er alle kunder like viktige – uavhengig av størrelse.\nVåre konsulenter har lang erfaring med skybasert drift og er til stede med personlig support når du trenger det. Personlig oppfølging er noe vi setter svært høyt og er selve kjernen i en god skyreise.\nFor oss er IT noe som må fungere sømløst. \nMed Provendo får vi dette.\nOle August Karlsen – Daglig leder – Morgan AS\nNoen av våre kunder:\nVi valgte for noen år tilbake å se lokalt etter en dataleverandør som kunne sette seg inn i hvordan vi tenker og forstå vår drift. Det har vi fått hos Provendo og deres ansatte. De løfter oss som firma med god veiledning og effektiv problemløsning. Jeg som ansvarlig for Hybeko kan på det sterkeste anbefale å ta en prat med Provendo og teamet deres. Takk til Team Provendo.\nEspen Johannessen – Hybeko AS",
+     "content_sha256": "a8a9816cc31a04ba0966056fef16860c9949ca76d269377b02ff932e7cd5785c"
+    },
+    {
+     "url": "https://www.provendo.no/kontakt/om-oss/",
+     "title": "OM OSS – Provendo",
+     "main_text_excerpt": "Om oss\nProvendo AS er en totalleverandør av tjenester og produkter innen IT, skytjenester, videokonferanseutstyr, kassasystemer, betalingsløsninger, digital integrasjon og infrastruktur, nettverk og telefoni. Vi tilbyr skreddersydde IT- og telefoniløsninger til privat og offentlig virksomhet, uansett størrelse.\nVår historie\nProvendo AS ble etablert i 2012 og har sakte, men sikkert bygget seg opp til å bli en fullverdig leverandør av IT- og telefonitjenester. Vi holder til i Skien, hovedstaden i Telemark.\nDen 1. juli 2024 fusjonerte vi med Protekt IT AS og er i dag 17 ansatte under navnet Provendo AS.\nSeptember 2025 slo Provendo seg sammen med Nestit Group, en ledende IT-aktør i Norden.\nSom medlem av den nasjonale Mobit-kjeden har vi muligheten til å være lokale, ikke bare i Skien, men over hele Norge.",
+     "identity_text_excerpt": "",
+     "content_sha256": "bf79a97e1bf36e72eaf0a02d5117287c9ca7f87d14900f42c6ce6edbcbe6f916"
+    },
+    {
+     "url": "https://www.provendo.no/kontakt/",
+     "title": "KONTAKT – Provendo",
+     "main_text_excerpt": "Skip to content",
+     "identity_text_excerpt": "",
+     "content_sha256": "d2070bf8a7becb6b6eac7ea009be4fe0fa48775e9e0c389f59edc59331570366"
+    },
+    {
+     "url": "https://www.provendo.no/kontakt/book-mote/",
+     "title": "BOOK MØTE – Provendo",
+     "main_text_excerpt": "Skip to content",
+     "identity_text_excerpt": "",
+     "content_sha256": "f1d1947af9c9b2d2ef62f5c017dc24fcb72ab004734693ca19517719cb48cfcc"
+    },
+    {
+     "url": "https://www.provendo.no/blogg/",
+     "title": "Blogg – Provendo",
+     "main_text_excerpt": "Hva er tofaktorautentisering? Tofaktorautentisering, flerfaktorautentisering eller multifaktorautentisering. Kjært barn har mange navn. Uansett hvilket begrep\nForenkle og spar tid Bookings gir deg et raskere alternativ til tidkrevende og gjentakende planleggingsoppgaver,\nIkke bland arbeid og fritid Etter utstrakt bruk av hjemmekontor under koronapandemien, så har skillet\nAlt klart til bruk – uten bekymring Videokonferanser blir mer og mer aktuelt. Men oppkoblingsproblemer,\nSmarte infoskjermer Med våre infoskjerm-løsninger kan du enkelt presentere ønsket innhold på dine skjermer. Skjermene\nEn smart dagsplanlegger Sats på å lykkes med Min dag, intelligente og personaliserte forslag til\nSkreddersydd og optimalisert for ditt møterom Vi er opptatt av å skreddersy en løsning som\nKonsekvenser av manglende IT-sikkerhet Mange bedrifter har en for avslappet tilnærming til IT-sikkerhet. De lever\nProgramvare, samarbeid, kommunikasjon, deling og lagring i skyen De aller fleste arbeidsplasser har behov for\nDet er lett å overse typiske fallgruver I en hektisk hverdag er det fort å",
+     "identity_text_excerpt": "",
+     "content_sha256": "a434c2648d112fb9478ec30d432d438a954fbfa0c664e26207243051637fa4b7"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "provendo"
+    ],
+    "matched_tokens": [
+     "provendo"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/provendo"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/provendoas"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/provendo",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "provendo"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/provendoas",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "provendo"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "a8a9816cc31a04ba0966056fef16860c9949ca76d269377b02ff932e7cd5785c",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/899115562": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "45c1740241abe7d8.json.gz",
+   "content_sha256": "45c1740241abe7d83b3eca23aa719315b36b3d57989f160dce0890bf9937e55d",
+   "retrieved_at": "2026-11-01T22:03:46.352381Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/899115562": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "fc26a633c3c8365b.json.gz",
+   "content_sha256": "fc26a633c3c8365b27902373d58af79ddd52c30e3862dbca19492e8e805d53aa",
+   "retrieved_at": "2026-11-01T22:03:47.058313Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/899115562/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6d51852153db21a8.json.gz",
+   "content_sha256": "6d51852153db21a8238d3c4644927e85c27bed172eff879e40a05c0e7302b1d2",
+   "retrieved_at": "2026-11-01T22:03:49.197566Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/899115562": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T22:03:47.767669Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=899115562&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "9a895dbf5ef584d7.json.gz",
+   "content_sha256": "9a895dbf5ef584d754e344d0f7c2486fff1387a24c1f33cb65c7e5d77a9d51f0",
+   "retrieved_at": "2026-11-01T22:03:48.474450Z"
+  },
+  "https://www.provendo.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a8a9816cc31a04ba.html.gz",
+   "content_sha256": "a8a9816cc31a04ba0966056fef16860c9949ca76d269377b02ff932e7cd5785c",
+   "retrieved_at": "2026-11-01T22:04:03.197094Z"
+  },
+  "https://www.provendo.no/kontakt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "d2070bf8a7becb6b.html.gz",
+   "content_sha256": "d2070bf8a7becb6b6eac7ea009be4fe0fa48775e9e0c389f59edc59331570366",
+   "retrieved_at": "2026-11-01T22:04:04.523473Z"
+  },
+  "https://www.provendo.no/kontakt/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "bf79a97e1bf36e72.html.gz",
+   "content_sha256": "bf79a97e1bf36e72eaf0a02d5117287c9ca7f87d14900f42c6ce6edbcbe6f916",
+   "retrieved_at": "2026-11-01T22:04:06.191622Z"
+  },
+  "https://www.provendo.no/blogg/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a434c2648d112fb9.html.gz",
+   "content_sha256": "a434c2648d112fb9478ec30d432d438a954fbfa0c664e26207243051637fa4b7",
+   "retrieved_at": "2026-11-01T22:04:08.734287Z"
+  },
+  "https://www.provendo.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "5a97fd6694892c9f.xml.gz",
+   "content_sha256": "5a97fd6694892c9f97623cd154300199b060eb922c477f023fa9610352f86891",
+   "retrieved_at": "2026-11-01T22:04:07.386284Z"
+  }
+ }
+}

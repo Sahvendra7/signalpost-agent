@@ -1,0 +1,222 @@
+{
+ "organisation_number": "990892687",
+ "name": "BE KRAFTSALG AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://bodoenergi.no/",
+  "retrieved_at": "2026-11-02T00:19:50.697930Z",
+  "value": {
+   "requested_url": "https://www.bodoenergi.no/",
+   "final_url": "https://bodoenergi.no/",
+   "registered_domain": "bodoenergi.no",
+   "title": "Bodø Energi",
+   "description": "",
+   "main_text_excerpt": "⚡ Lokalt strømselskap siden 1909\nLokal kraft for livet i nord.\nVelg en lokal strømleverandør som gir noe tilbake. Hos Bodø Energi får du en enkel og trygg strømavtale med smarte produkter som gir deg full kontroll på forbruket.\nStrømpris nå · NO4 Nord-Norge\nSpotpris for private i Nord-Norge. Med sanntidsmåler kan du enkelt styre forbruket til de billigste timene i døgnet.\nKilde: Nord Pool · spotpris eks. mva · NO4\n- 120+ lag støttetIdrettDrakter, utstyr og baner til lokale idrettslag for store og små.\n- 40+ aktørerKulturKorps, kor, festivaler og kulturhus som gjør Salten levende.\n- Fra 0 kr i deltakeravgiftBarn & ungeTiltak som gir barn og ungdom gode og trygge møteplasser.\n- Året rundtFrivillighetIldsjeler og frivillige lag som stiller opp for nærmiljøet.\n📊 Sanntidsmåler\nSe strømforbruket ditt – akkurat nå\nFølg forbruket ditt sekund for sekund, få varsler ved uvanlig høyt forbruk, og se hvordan strømbruken endrer seg idet du lader bilen eller skrur på varmen.\n- Forbruk i sanntid, rett i Bodø Energi-appen\n- Varsler ved høyt forbruk eller strømbrudd\n- Enkel tilkobling – ingen elektriker nødvendig\n💙 Hjemmehørende i Bodø\nKraft som blir i landsdelen\nNår du er kunde hos oss, går verdiene tilbake til Salten. Vi sponser over 200 lokale lag og foreninger – fordi et levende lokalsamfunn er god energi.",
+   "identity_text_excerpt": "Bodø Energi Om oss Vår historie Karriere Ansatte Kundeservice Kontakt oss Ofte stilte spørsmål Min side - logg inn App Priser og vilkår Prisliste Avtalevilkår Angrerett © 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687 · Jernbaneveien 85, 8006 Bodø Personvernerklæring og informasjonskapsler Endre personverninnstillinger Redegjørelse Åpenhetsloven Universelt utformet nettside fra Digitalt Byrå",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "6f57a2ad934278269ed8fdae24e47a65bd3b1b5d7b5ffc1183329b7be1230aaa",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://bodoenergi.no/",
+     "title": "Bodø Energi",
+     "main_text_excerpt": "⚡ Lokalt strømselskap siden 1909\nLokal kraft for livet i nord.\nVelg en lokal strømleverandør som gir noe tilbake. Hos Bodø Energi får du en enkel og trygg strømavtale med smarte produkter som gir deg full kontroll på forbruket.\nStrømpris nå · NO4 Nord-Norge\nSpotpris for private i Nord-Norge. Med sanntidsmåler kan du enkelt styre forbruket til de billigste timene i døgnet.\nKilde: Nord Pool · spotpris eks. mva · NO4\n- 120+ lag støttetIdrettDrakter, utstyr og baner til lokale idrettslag for store og små.\n- 40+ aktørerKulturKorps, kor, festivaler og kulturhus som gjør Salten levende.\n- Fra 0 kr i deltakeravgiftBarn & ungeTiltak som gir barn og ungdom gode og trygge møteplasser.\n- Året rundtFrivillighetIldsjeler og frivillige lag som stiller opp for nærmiljøet.\n📊 Sanntidsmåler\nSe strømforbruket ditt – akkurat nå\nFølg forbruket ditt sekund for sekund, få varsler ved uvanlig høyt forbruk, og se hvordan strømbruken endrer seg idet du lader bilen eller skrur på varmen.\n- Forbruk i sanntid, rett i Bodø Energi-appen\n- Varsler ved høyt forbruk eller strømbrudd\n- Enkel tilkobling – ingen elektriker nødvendig\n💙 Hjemmehørende i Bodø\nKraft som blir i landsdelen\nNår du er kunde hos oss, går verdiene tilbake til Salten. Vi sponser over 200 lokale lag og foreninger – fordi et levende lokalsamfunn er god energi.",
+     "content_sha256": "6f57a2ad934278269ed8fdae24e47a65bd3b1b5d7b5ffc1183329b7be1230aaa"
+    },
+    {
+     "url": "https://bodoenergi.no/bodo-energi/om-oss",
+     "title": "Om oss",
+     "main_text_excerpt": "Bodø Energi\nBodø Energi – med kraft til utvikling!\nBodø Energi har elektrifisert og utviklet Bodøsamfunnet siden 1909. Morselskapet Bodø Energi AS har som formål å investere i ulike virksomheter innen energisektoren og beslektet virksomhet. Konsernet består av seks komplementære datterselskaper, med Bodø Energi AS som morselskap.\nBodø Energi har alltid vært en sentral del av Bodøs utvikling. Siden 1909 har vi levert ren energi og bidratt til et levende lokalsamfunn. For oss handler det ikke bare om å sikre lys i hver husholdning og varme i alle hjem, men også om å skape bærekraftige opplevelser og engasjement som fyller byen med Bodøenergi.\nMen hva er egentlig Bodøenergi?\nDet er det som skiller oss ut fra alle andre steder i verden: Hvor kan du gå på ei rosa sandstrand for 30 minutter senere gå til Keiservarden langs Sherpatrappa i midnattsol, stoltheten hele byen følte etter å ha sendt Roma hjem med 6–1, eller den helt spesielle følelsen av å sitte ytterst på Skansen i skumringen og høre Kari Bremnes synge \"Hurtigruta\" mens skipet seiler forbi.\nMen Bodøenergi handler ikke bare om de store opplevelsene. Det er summen av alle de små tingene som bare bodøværinger kan kjenne seg igjen i: lukten av havet en tidlig morgen, lyden av måkeskrik når man sitter på moloen og spiser en is sammen med mulig kjæreste og synet av Børvasstindan i januarlyset mot den klare vinterhimmelen. Det handler også om alle ildsjelene som hver dag gjør en forskjell. Enten det er pappatreneren som trener laget sitt i Saltstraumen, Bjørnar i Skarmoen, Sindre i Fjølhangaren eller Kjetil på Aspmyra – alle sammen bidrar til å gjøre byen vår til en bedre plass.\nSlike øyeblikk er det vi ønsker å bidra til – å skape minner som varer livet ut, og som gir Bodø den unike energien og varmen vi alle kjenner. Det er for oss Bodøenergi.\nBærekraft\nVår forretningsidé er å investere i ulike virksomheter med fokus på bærekraft og vekst. Vi retter oss spesielt mot energisektoren og tilknyttede områder, og ønsker å bidra til en utvikling som er bærekraftig både for miljøet og lokalsamfunnet vårt.\nKultur skaper bolyst, og bolyst skaper bærekraftige samfunn. Bærekraftige samfunn trenger løsninger som tar hensyn til både miljø og mennesker. Et levende kulturliv gir folk en grunn til å bosette seg, skaper tilhørighet og sørger for at lokalsamfunn trives og vokser. I Bodø Energi jobber vi for å støtte dette gjennom initiativer som fremmer både kultur og miljøvennlig utvikling, fordi vi mener at et rikt kulturliv og bærekraftige løsninger sammen legger grunnlaget for en positiv samfunnsutvikling.\nI Bodø Energi ser vi alltid fremover, med fokus på å skape bærekraftige løsninger for en by hvor mennesker kan trives, leve og vokse. Bærekraft handler for oss om mer enn bare tilrettelegging – det handler om å forme et levende fellesskap som inspirerer, utvikler og styrker både dagens og fremtidens innbyggere. Derfor bygger vi infrastruktur som varer, utvider fjernvarmenettet, og satser på spillvarme fra nye produksjonsanlegg. Slik bidrar vi til et mer bærekraftig Bodø, hvor fornybare energikilder og reduserte utslipp er selvfølgelige mål.\nVårt hovedbidrag til bærekraft i Bodø kommer gjennom ren strøm, som sikrer at hjem og bedrifter får nok miljøvennlig energi, samt gjennom fremtidige prosjekter som utvidelse av fjernvarmenettet, økt bruk av spillvarme fra hydrogenproduksjon, hurtiglading av tunge kjøretøy, landstrøm til skip og utbygging av lynladenettverket i hele fylket – ikke bare i byene.\nVi gjør dette for å ta et skritt mot en mer bærekraftig energiproduksjon, samtidig som vi viser hvordan effektiviteten og verdien av industrielle prosesser kan økes gjennom smart energibruk. Vårt mål er å være et ledende eksempel på hvordan bærekraftige løsninger kan bidra til både bærekraftig økonomisk vekst og et bedre miljø.\nVi er Bodø Energi. Vi er de som gir kraft til hverdagen din og næring til drømmene for fremtiden. Sammen skaper vi ekte, god, ren Bodøenergi.\n- VisjonMed kraft til utvikling\n- VerdierUtviklende · Ansvarlig · Kraftfull\n- HovedmålBodø Energi skal være et attraktivt og lønnsomt selskap innen fornybare energiløsninger.\n- Heleid av Bodø Energi, fokuserer på leveranse av strøm til husholdninger og bedrifter. Tilbyr også elbilladere, solcelleanlegg og smarthusløsninger for bærekraftig energibruk.\n- Produserer og distribuerer fjernvarme til kunder i Bodø, som borettslag, hoteller, sykehus, eneboliger og kontorbygg. Heleid av Bodø Energi.\n- Utfører tilsyn og kontroll av elektriske anlegg, samt tilbyr tjenester innen elsikkerhet, inkludert markedskontroll, revisjoner, brannetterforskning og opplæring. Eies av Bodø Energi AS (51 %) og Troms Kraft AS (49 %).\n- Nord-Norges største totalentreprenør innen kraftentreprenørtjenester, inkludert utbygging, drift, vedlikehold og beredskap av elektrisk infrastruktur og fiber. Eies av Bodø Energi AS (51 %).\n- Leverer, overfører og fordeler energi på en sikker og effektiv måte til skip, båter og andre kunder ved Bodø Havn. Sels",
+     "identity_text_excerpt": "Bodø Energi Om oss Vår historie Karriere Ansatte Kundeservice Kontakt oss Ofte stilte spørsmål Min side - logg inn App Priser og vilkår Prisliste Avtalevilkår Angrerett © 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687 · Jernbaneveien 85, 8006 Bodø Personvernerklæring og informasjonskapsler Endre personverninnstillinger Redegjørelse Åpenhetsloven Universelt utformet nettside fra Digitalt Byrå",
+     "content_sha256": "9a2256059ab95552368d2e4609d338f10b4bf68a7928caed67330f1a6bf1b461"
+    },
+    {
+     "url": "https://bodoenergi.no/kundeservice",
+     "title": "Kundeservice",
+     "main_text_excerpt": "Kundeservice\nVelkommen til vår kundeservice\nHos oss får du snakke med en av våre dyktige rådgivere og vi svarer deg i løpet av kort tid.\nTelefonÅpent 09.00–15.30\n75 54 51 00\nE-post\nkunde@bodoenergi.no\nFakturaspørsmål\nkunde@bodoenergi.no\nBesøksadresseKontortid 08.00–15.30\nEnergihuset, Jernbaneveien 85, 8006 Bodø\nPostadresse\nJernbaneveien 85, 8006 Bodø",
+     "identity_text_excerpt": "Bodø Energi Om oss Vår historie Karriere Ansatte Kundeservice Kontakt oss Ofte stilte spørsmål Min side - logg inn App Priser og vilkår Prisliste Avtalevilkår Angrerett © 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687 · Jernbaneveien 85, 8006 Bodø Personvernerklæring og informasjonskapsler Endre personverninnstillinger Redegjørelse Åpenhetsloven Universelt utformet nettside fra Digitalt Byrå",
+     "content_sha256": "5953461c74baecddbb1d69f8d563d2812892a02d945c69d81468cfcafd5ba44d"
+    },
+    {
+     "url": "https://bodoenergi.no/aktuelt/kraftsalg-loste-nasjonal-ladefloke",
+     "title": "Kraftsalg løste nasjonal ladefloke: – Sparer oss for hundrevis av timer — Bodø Energi",
+     "main_text_excerpt": "For styreleder Martin-Arne Nyheim i sameiet Bryggerihagen ble administrasjon av elbil-lading en tidstyv av dimensjoner.\n– Det gikk med mange timer bare for å regne seg frem til hvem som skulle betale hva. I tillegg måtte dette diskuteres på flere styremøter og årsmøter, og vi måtte overføre penger frem og tilbake via regnskapsfører. Nå er det bare gevinst, gevinst, gevinst for oss, sier Nyheim.\nLøsningen han snakker om er et helt nytt system utviklet lokalt i Bodø. I stedet for at borettslaget får én stor regning de selv må splitte opp, går regningen for ladingen nå direkte til den enkelte beboers egen strømregning.\nTar et oppgjør med bransjen\nDirektør i BE Kraftsalg, Ole Angellsen, forteller at produktet ble til som en reaksjon på at eksisterende aktører i markedet skrudde opp prisene.\n– Mange aktører i markedet forstår enten bare ladeteknologien, eller bare betalingsløsningene. Resultatet blir at kunden sitter igjen med regningen, der alle ledd skal ha sin del. Vi har tatt ansvar for hele verdikjeden, fra strømmen går i kabelen til fakturaen sendes, forklarer Angellsen.\nSelv om BE Kraftsalg er en liten aktør i nasjonal sammenheng, er løsningen ikke forbeholdt kunder i nord.\n– Vi har allerede kunder i Oslo og i Bergen. Vi kan levere dette i hele landet, slår direktøren fast.\nKnekte koden lokalt\nDa prisene hos de nasjonale leverandørene økte, var det systemutvikler Kristian Hoff i Bodø Energi som så muligheten for å bygge noe helt eget.\n– Vi så at aktørene begynte å kreve på høye avgifter for lading, samtidig som systemene ble dårligere for kundene. Teknisk sett handlet det bare om å hente ut riktig data fra smartladerne og koble det direkte mot vår fakturering. Så da bestemte vi oss for å bygge en rettferdig løsning selv, forteller Hoff.\nBedriftsrådgiver Roy Navjord i Bodø Energi Kraftsalg forteller at systemet fungerer sømløst, og peker på at det er få tekniske barrierer for borettslag som vil ta det i bruk.\n– For å få dette til, er det eneste kravet at man har en smartlader. Det betyr ingenting om det er en delt lader der man identifiserer seg med brikke, eller om hver beboer har sin egen dedikerte lader. Vi henter ut dataene og fordeler etter hvor mye som er brukt, sier han.\nHan legger til at responsen har vært overveldende.\n– Vi har passert nærmere 40 sameier, borettslag og bedrifter med felles lading på den nye løsningen, og både styrene og bedriftene er superfornøyde. De slipper all administrasjon, og de som lader får full oversikt over hvor mye de har ladet for.\nFor styreleder Martin-Arne Nyheim er dommen klar:\n– Nå slipper vi å regne oss frem og tilbake, ta det opp på årsmøtet og betale tilbake i etterkant. Borettslaget sparer penger, beboerne er fornøyde, og ingen har klaget. Du får det rett og slett ikke bedre enn det.",
+     "identity_text_excerpt": "Bodø Energi Om oss Vår historie Karriere Ansatte Kundeservice Kontakt oss Ofte stilte spørsmål Min side - logg inn App Priser og vilkår Prisliste Avtalevilkår Angrerett © 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687 · Jernbaneveien 85, 8006 Bodø Personvernerklæring og informasjonskapsler Endre personverninnstillinger Redegjørelse Åpenhetsloven Universelt utformet nettside fra Digitalt Byrå",
+     "content_sha256": "0c53d2e22e55f6e1695c184822a2fa6a423b0ecc606a5937cfba3e812a3f9df9"
+    },
+    {
+     "url": "https://bodoenergi.no/aktuelt",
+     "title": "Aktuelt | Bodø Energi",
+     "main_text_excerpt": "- Pressemelding1 min lesetidKraftsalg løste nasjonal ladefloke: – Sparer oss for hundrevis av timerÅ fordele strømregningen for elbil-lading har lenge gitt hodebry for styrer landet rundt. Nå har Bodø Energi utviklet et helt nytt system som fjerner hele problemet. Løsningen er de trolig alene om i Norge.\n- Bodø Energi-gaven1 min lesetidStafett for livet på Fauske mottok Bodø Energi-gavenMed et stort hjerte for kreftsaken og utallige dugnadstimer har ildsjeler på Fauske samlet lokalsamfunnet til Kreftforeningens Stafett for livet. Nå har arrangementet mottatt Bodø Energi-gaven, som bidrar til å støtte det viktige arbeidet for mennesker som er rammet av kreft.\n- Bodø Energi-gaven1 min lesetidBodø Bunkermuseum får Bodø Energi-gavenHistorien som tas vare på i Bodøs største betongbunker vekker interesse langt utenfor byens grenser. Bare i juli og august har Bodø Bunkermuseum hatt besøkende fra 15 ulike nasjoner. Nå får den frivillige foreningen Bodø Energi-gaven på 10.000 kroner.\n- Bodø Energi-gaven1 min lesetidVil skape et enda sterkere fellesskap på KjerringøyPå Kjerringøy spirer nye idéer for et enda mer levende lokalsamfunn. Med støtte fra Bodø Energi Gaven ønsker Kjerringøy Frivilligsentral å skape flere aktiviteter og møteplasser for mennesker i alle aldre.\n- Pressemelding1 min lesetidBodø Energi-løpet under Marcialonga Bodø – 6 km med ekte lokal energi!Vi i Bodø Energi er stolte samarbeidspartnere for Marcialonga Bodø og i år har vi fått vårt helt eget skiløp: Bodø Energi-løpet på 6 km.\n- Bodø Energi-gaven1 min lesetidMusikk, mestring og store drømmer – SlåDæNed fikk Bodø Energi GavenPå Kaktus Tverlandet er det noe helt spesielt som skjer. Vi følger lyden av musikk gjennom gangene, og blir vi møtt av store smil og en smittende god stemning.\n- Sponsing1 min lesetidRoy NavjordBodø Energi Kraftsalg forlenger samarbeidet med Bodø/GlimtBodø Energi forlenger samarbeidet med FK Bodø/Glimt, og blir med videre i to nye år. Samarbeidet, som strekker seg over 20 år tilbake i tid, står sterkere enn noen gang.",
+     "identity_text_excerpt": "Bodø Energi Om oss Vår historie Karriere Ansatte Kundeservice Kontakt oss Ofte stilte spørsmål Min side - logg inn App Priser og vilkår Prisliste Avtalevilkår Angrerett © 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687 · Jernbaneveien 85, 8006 Bodø Personvernerklæring og informasjonskapsler Endre personverninnstillinger Redegjørelse Åpenhetsloven Universelt utformet nettside fra Digitalt Byrå",
+     "content_sha256": "a13c0e091a1ae463c3675262a486c8480006a8ab288f7e201fe04ea130325ae8"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "be",
+     "kraftsalg"
+    ],
+    "matched_tokens": [
+     "be",
+     "kraftsalg"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bodoenergi"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bodoenergi"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bodo-energi"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/bodoenergi",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/bodoenergi",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/bodo-energi",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "6f57a2ad934278269ed8fdae24e47a65bd3b1b5d7b5ffc1183329b7be1230aaa",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/990892687": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2679997dfa680f06.json.gz",
+   "content_sha256": "2679997dfa680f06957329e5889508f0731cf10789df5161e6a07a2cbcdb663e",
+   "retrieved_at": "2026-11-02T00:19:37.428164Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/990892687": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "fdbc9f757463a645.json.gz",
+   "content_sha256": "fdbc9f757463a6458817b12aeceb64ac5628b1cee963627f979db58f100b0da4",
+   "retrieved_at": "2026-11-02T00:19:38.137133Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/990892687/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "23e8c83ac010207a.json.gz",
+   "content_sha256": "23e8c83ac010207a2e51fdde749a5f0ea206de616d57ee68440a2bb03feeb4a3",
+   "retrieved_at": "2026-11-02T00:19:40.286440Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/990892687": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "391b6819f933fd9f.json.gz",
+   "content_sha256": "391b6819f933fd9f9be072bc0cbee3361489d35ac18f31b42608231bc032503e",
+   "retrieved_at": "2026-11-02T00:19:38.856601Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=990892687&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "cd8954a0d78b36d6.json.gz",
+   "content_sha256": "cd8954a0d78b36d67f79f0b3f6f72052bef36b870ef320bce317e3adb749eb0b",
+   "retrieved_at": "2026-11-02T00:19:39.574981Z"
+  },
+  "https://bodoenergi.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "6f57a2ad93427826.html.gz",
+   "content_sha256": "6f57a2ad934278269ed8fdae24e47a65bd3b1b5d7b5ffc1183329b7be1230aaa",
+   "retrieved_at": "2026-11-02T00:19:51.971904Z"
+  },
+  "https://bodoenergi.no/bodo-energi/om-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "9a2256059ab95552.html.gz",
+   "content_sha256": "9a2256059ab95552368d2e4609d338f10b4bf68a7928caed67330f1a6bf1b461",
+   "retrieved_at": "2026-11-02T00:19:52.796713Z"
+  },
+  "https://bodoenergi.no/kundeservice": {
+   "kind": "site",
+   "status": 200,
+   "file": "5953461c74baecdd.html.gz",
+   "content_sha256": "5953461c74baecddbb1d69f8d563d2812892a02d945c69d81468cfcafd5ba44d",
+   "retrieved_at": "2026-11-02T00:19:53.525700Z"
+  },
+  "https://bodoenergi.no/aktuelt": {
+   "kind": "site",
+   "status": 200,
+   "file": "a13c0e091a1ae463.html.gz",
+   "content_sha256": "a13c0e091a1ae463c3675262a486c8480006a8ab288f7e201fe04ea130325ae8",
+   "retrieved_at": "2026-11-02T00:19:54.432925Z"
+  },
+  "https://bodoenergi.no/bodo-energi/karrieremuligheter": {
+   "kind": "site",
+   "status": 200,
+   "file": "ba4f970d83ba1e3e.html.gz",
+   "content_sha256": "ba4f970d83ba1e3e3aa859a20f715a7a997ece1d61d772f26afedc7a6d35407e",
+   "retrieved_at": "2026-11-02T00:19:55.139575Z"
+  },
+  "https://bodoenergi.no/aktuelt/kraftsalg-loste-nasjonal-ladefloke": {
+   "kind": "site",
+   "status": 200,
+   "file": "0c53d2e22e55f6e1.html.gz",
+   "content_sha256": "0c53d2e22e55f6e1695c184822a2fa6a423b0ecc606a5937cfba3e812a3f9df9",
+   "retrieved_at": "2026-11-02T00:19:56.395997Z"
+  },
+  "https://bodoenergi.no/aktuelt/stafett-for-livet-pa-fauske-mottok-bodo-energi-gaven": {
+   "kind": "site",
+   "status": 200,
+   "file": "4cfa7ba44f98335d.html.gz",
+   "content_sha256": "4cfa7ba44f98335dacae1e9f04e81c2e01496741a223a35646c2bc0479af8961",
+   "retrieved_at": "2026-11-02T00:19:57.308795Z"
+  },
+  "https://bodoenergi.no/aktuelt/bodo-bunkermuseum-bodo-energi-gaven": {
+   "kind": "site",
+   "status": 200,
+   "file": "701a054f18e21daf.html.gz",
+   "content_sha256": "701a054f18e21dafbebe813cf333f9152b7d5de4fe3d61ae0f6a0a201470ac63",
+   "retrieved_at": "2026-11-02T00:19:58.289886Z"
+  }
+ }
+}

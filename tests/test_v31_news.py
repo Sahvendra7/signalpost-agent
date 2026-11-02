@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from norway_company_agent.attribution.names import LegalName  # noqa: E402
-from norway_company_agent.attribution.news import (POLICIES, ContentAssessment, assess_content, company_names, mentions_company,  # noqa: E402
+from norway_company_agent.attribution.news import (POLICIES, ContentAssessment, assess_content, company_names, mentions_company, strip_boilerplate,  # noqa: E402
                                                    news_policy_decision, source_tier, voiced_development)
 from norway_company_agent.attribution.operator import assess_operator, registry_group_company_named_by, registry_group_names  # noqa: E402
 
@@ -38,8 +38,9 @@ class ContentKinds(unittest.TestCase):
         # 921774087 opts, 985095779 Nordic Solutions (A2)
         self.assertEqual(kind("Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker",
                               "Har du lurt på hvor mange kalorier du spiser? Med en matjournal ser du det svart på hvitt."), "advice")
-        self.assertEqual(kind("Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker"), "insufficient",
-                         "a title alone is not advice by the title rules, but it is still withheld: nothing anchors it to the company")
+        self.assertEqual(kind("Hvorfor matjournal kan være det viktigste verktøyet du ikke bruker"), "advice",
+                         "a 'Hvorfor …' explainer title (V3.1, found on eval200)")
+        self.assertNotEqual(kind("Hvorfor vi flytter til Bergen"), "advice", "the company explaining its own decision")
         self.assertEqual(kind("Mobilsikkerhet for bedrifter – 8 tiltak"), "advice")
         body = "Har du vondt i ryggen? Da bør du trene. Du kan starte med lette øvelser, og du må huske å strekke ut. Gjør dette hver dag."
         self.assertEqual(kind("Markløft", body), "advice")
@@ -141,3 +142,59 @@ class RegistryGroupSite(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FoundAfterEval200(unittest.TestCase):
+    """Failures found on eval200 (scored once on 8223a37, then used for development) and in the 8223a37 live run."""
+
+    def test_feed_boilerplate_does_not_name_the_company(self):
+        # 966732024 Lugn: "The post Hei, verden! appeared first on Lugn Hytter." made a default post company_named
+        body = "Velkommen til WordPress. Dette er ditt første innlegg. The post Hei, verden! appeared first on Lugn Hytter ."
+        self.assertNotIn(kind("Hei, verden!", body, names=["lugn", "lugn hytter"]), ("company_named", "development"))
+        self.assertEqual(strip_boilerplate("A. Innlegget X dukket først opp på Proba Samfunnsanalyse . B").split(), ["A.", "B"])
+
+    def test_product_and_rental_pages_are_not_news(self):
+        # 912158845 Steinkjer Liftutleie: ten lift pages in the feed, "Pris på forespørsel … Ring oss"
+        self.assertEqual(kind("12m – Diesel – Snorkel S3370RT", "Pris på forespørsel Ta kontakt for tilgjengelighet. Ring oss: 918 84 233"), "product")
+
+    def test_job_advertisements_in_more_phrasings(self):
+        for title, body in [("Vi søker tilkallingsvikarer!", ""), ("Er du Vårtuns nye rektor?", ""),
+                            ("Systemutvecklare sökes!", "Vi på Logscom söker efter en systemutvecklare. Sök senast 8 januari."),
+                            ("Software developer", "Logscom is now hiring a software developer.")]:
+            self.assertEqual(kind(title, body), "recruitment", title)
+        self.assertNotEqual(kind("Vi søker å bli bedre", "Vi søker å forbedre tjenestene våre hver dag."), "recruitment")
+
+    def test_a_development_must_be_attributed_to_the_company(self):
+        # 996217647 / 899115562: event nouns in marketing text ("investering", "leveranse", "utvidet garanti")
+        self.assertNotEqual(kind("TSC Etikettskrivere", "Investering i riktig teknologi gir effektivitet for alle bedrifter."), "development")
+        self.assertEqual(kind("Ny avtale", "Proba har inngått avtale med KS.", names=["proba"]), "development")
+        self.assertEqual(kind("5 gode grunner til å velge en Tesla leiebil"), "advice", "a listicle with an adjective")
+
+    def test_sentences_do_not_break_at_abbreviations(self):
+        text = "Barna leser våre bøker. «Detektivbyrå nr. 2» oversettes nå til 18 språk."
+        self.assertIsNotNone(voiced_development(text))
+
+    def test_strict_policy(self):
+        voice = ContentAssessment("company_voice", "x")
+        self.assertEqual(news_policy_decision("strict", tier="post", content=voice, names_company=False).code, "no_attributed_development")
+        self.assertIsNone(news_policy_decision("strict", tier="newsroom", content=voice, names_company=False))
+        self.assertIsNone(news_policy_decision("strict", tier="blog", content=ContentAssessment("development", "x"), names_company=False))
+
+
+class SiteChrome(unittest.TestCase):
+    def test_a_footer_byline_repeated_on_every_page_is_not_the_item_naming_the_company(self):
+        # 990892687 BE Kraftsalg, live run of 8223a37: the article page's footer "BE Kraftsalg AS · Org.nr. 990 892 687"
+        # made every Bodø Energi story "name" the company on its group-brand site.
+        from norway_company_agent.site_facts import CapturedPage, item_names_entity, item_page_text, site_chrome
+        footer = '<div class="byline"><span>© 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS · Org.nr. 990 892 687</span></div>'
+        def page(url, body):
+            raw = f"<html><body><main>{body}</main>{footer}</body></html>".encode()
+            return CapturedPage(url, raw, "x", "2026-11-02T08:00:00Z")
+        home = page("https://bodoenergi.no/", "<h1>Strøm til folk i nord</h1>")
+        article = page("https://bodoenergi.no/aktuelt/gaven", "<h1>Bodø Bunkermuseum får Bodø Energi-gaven</h1><p>Museet mottok gaven.</p>")
+        chrome = site_chrome([home, article])
+        self.assertNotIn("990 892 687", item_page_text(article, chrome))
+        item = {"title": "Bodø Bunkermuseum får Bodø Energi-gaven", "url": article.url, "page_url": article.url}
+        profile = {"organisation_number": "990892687", "name": "BE KRAFTSALG AS"}
+        self.assertIsNone(item_names_entity(profile, item, {home.url: home, article.url: article}, chrome))
+        self.assertIsNotNone(item_names_entity(profile, item, {home.url: home, article.url: article}), "without the chrome rule it would name it")

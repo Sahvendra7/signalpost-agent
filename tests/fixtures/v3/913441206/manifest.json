@@ -1,0 +1,233 @@
+{
+ "organisation_number": "913441206",
+ "name": "SOLA HUNDESENTER AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://solahundesenter.com/",
+  "retrieved_at": "2026-11-01T22:04:47.545550Z",
+  "value": {
+   "requested_url": "https://www.solahundesenter.com/",
+   "final_url": "https://solahundesenter.com/",
+   "registered_domain": "solahundesenter.com",
+   "title": "Hjem - Sola Hundesenter",
+   "description": "Flere titalls poter trasker gjennom det fuktige gresset mens våte snuter sniffer seg frem. Hos oss står hundens trivsel og relasjonen mellom hund og eier i",
+   "main_text_excerpt": "Flere titalls poter trasker gjennom det fuktige gresset mens våte snuter sniffer seg frem. Hos oss står hundens trivsel og relasjonen mellom hund og eier i sentrum.\nVi tilbyr kurs, analyser, foredrag og aktiviteter for alle – fra valp til voksen, fra nybegynner til viderekommen.\nHos Sola Hundesenter jobber vi uten hastverk og uten press.\nVi skaper forutsigbare rammer som gir trygghet, mestring og utvikling – tilpasset hver enkelt hund og eier.\nOver 30 år med hund, mentalitet, trening og adferdsarbeid.\nMetoder basert på forståelse, etikk og moderne fagkunnskap.\nVi jobber i hundens tempo – for varige og gode resultater.\nFra dagsenter og kurs til adferdspakker og individuell veiledning.\nEnten du ønsker kurs, adferdsveiledning, dagsenterplass, privat undervisning eller valpeanalyse – vi veileder deg gjerne.\nSend oss en forespørsel, så hjelper vi deg å finne riktig tilbud.",
+   "identity_text_excerpt": "Abonner på vårt nyhetsbrev for å få de siste oppdateringene Trygt sted for hund og eier – med fagkunnskap, erfaring og ærlighet. Lenker Hjem Dagsenter Adferdspakker Valpeanalyse Utleie Kurskalender Kursoversikt Privat undervisning Foredrag Medieomtale Om oss Kontakt oss Kontaktinformasjon Tanangervegen 213, 4056 Tananger 92 62 16 75 Mandag – Fredag: 07.30 – 17.00 post@solahundesenter.no ©2026 SOLA HUNDESENTER AS – ALLE RETTIGHETER RESERVERT",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/SolaHundesenter"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/solahundesenter1"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://solahundesenter.com/#organization",
+     "name": "Sola Hundesenter AS",
+     "url": "https://solahundesenter.com",
+     "logo": {
+      "@type": "ImageObject",
+      "@id": "https://solahundesenter.com/#logo",
+      "url": "https://solahundesenter.com/wp-content/uploads/2025/10/Logo-nettside.png",
+      "contentUrl": "https://solahundesenter.com/wp-content/uploads/2025/10/Logo-nettside.png",
+      "caption": "Sola Hundesenter",
+      "inLanguage": "nb-NO",
+      "width": "500",
+      "height": "100"
+     }
+    }
+   ],
+   "content_sha256": "add04e4b08039850f933c63d3eb862e78fd915ba05c92e38d61f770ffab1886f",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://solahundesenter.com/",
+     "title": "Hjem - Sola Hundesenter",
+     "main_text_excerpt": "Flere titalls poter trasker gjennom det fuktige gresset mens våte snuter sniffer seg frem. Hos oss står hundens trivsel og relasjonen mellom hund og eier i sentrum.\nVi tilbyr kurs, analyser, foredrag og aktiviteter for alle – fra valp til voksen, fra nybegynner til viderekommen.\nHos Sola Hundesenter jobber vi uten hastverk og uten press.\nVi skaper forutsigbare rammer som gir trygghet, mestring og utvikling – tilpasset hver enkelt hund og eier.\nOver 30 år med hund, mentalitet, trening og adferdsarbeid.\nMetoder basert på forståelse, etikk og moderne fagkunnskap.\nVi jobber i hundens tempo – for varige og gode resultater.\nFra dagsenter og kurs til adferdspakker og individuell veiledning.\nEnten du ønsker kurs, adferdsveiledning, dagsenterplass, privat undervisning eller valpeanalyse – vi veileder deg gjerne.\nSend oss en forespørsel, så hjelper vi deg å finne riktig tilbud.",
+     "content_sha256": "add04e4b08039850f933c63d3eb862e78fd915ba05c92e38d61f770ffab1886f"
+    },
+    {
+     "url": "https://solahundesenter.com/om-oss/",
+     "title": "Om oss - Sola Hundesenter",
+     "main_text_excerpt": "Sola Hundesenter er et sted der hunder får omsorg, trygghet og sosialisering i et miljø tilpasset deres behov.\nMed over 30 års erfaring med hunder av alle raser og personligheter, har vi bygget et senter hvor både hunder og eiere føler seg trygge, sett og ivaretatt.\nVi holder til i Tananger i Sola kommune, med kort vei til Stavanger og Sandnes, og har kunder gjennom dagsenteret fra hele regionen.\nSamtidig hjelper vi hundeeiere i hele Norge gjennom adferdspakker, valpeanalyse, kurs, foredrag og seminarer.\nSenteret vårt er utviklet spesielt for hunders trivsel og læring, med både store innendørsarealer og trygge uteområder til lek, trening og ro.\nHos oss møter du et dedikert og faglig sterkt team med flere dyrefagarbeidere med hund som fordypning, erfarne instruktører, veiledere og lærlinger.\nMålet vårt er enkelt: glade hunder, trygge eiere og et miljø som skaper mestring – hver dag.\nHos Sola Hundesenter bygger alt vi gjør på filosofien TTT – tålmodighet, trygghet og tillit.\nDette er grunnpilarene i hvordan vi møter både hunder og mennesker – i trening, veiledning og daglig samhandling.\nVi tror på å ta oss tid, skape forutsigbare rammer og bygge relasjoner basert på tillit.\nGjennom denne tilnærmingen legger vi til rette for læring, utvikling og god hundevelferd – tilpasset hvert enkelt individ.\nGod hundevelferd handler om balanse:\ntålmodig fremgang, trygg tilstedeværelse og tillit i samspillet mellom hund og eier.\nHver hund utvikler seg i sitt eget tempo.\nVi jobber uten hastverk og uten press, og gir rom for trygg fremgang og mestring.\nTålmodighet skaper forutsetninger for læring, refleksjon og varig utvikling – for både hund og eier.\nTrygghet er fundamentet for all læring og utvikling.\nHos oss skal hver hund føle seg sett, forstått og ivaretatt – både fysisk og mentalt.\nVi skaper trygghet gjennom ro, forutsigbarhet og tydelig kommunikasjon, tilpasset situasjon og individ.\nTillit bygges over tid – gjennom konsekvent, ærlig og respektfull samhandling.\nNår tillit er på plass, blir samarbeid, læring og utvikling mulig.\nVi jobber målrettet for å styrke tilliten mellom hund og eier, og mellom hund og fagperson.\nSola Hundesenter ble etablert av Eric Sandvold i 2014, etter helseutfordringer som gjorde det umulig å fortsette i tidligere yrke.\nI stedet for å bli ufør, valgte han å skape en arbeidsplass hvor både mennesker og hunder kan vokse, lære og hjelpe hverandre.\nI 2015 overtok han et drivhuslokale og bygde det gradvis om til et fullverdig hundesenter, med løsninger tilpasset hunders behov.\nDet som startet som et personlig prosjekt, har i dag blitt et etablert fagmiljø for hunder og eiere fra hele landet.\nSenteret startet med 10 hunder i uken, og vokste til 60 hunder innen 2016.\nI dag håndterer vi 140–150 hunder i uken gjennom dagsenter og adferdstilbud, og får henvendelser fra hele landet.\nFasiliteter\nInnendørs senter\nTreningshall\nUteområde\nTreningsbane\nOppstallingskapasitet for 38 hunder\nUndervisningsrom for 30–40 personer\nGode parkeringsforhold\nAnerkjennelser\nVi vokser fordi vi hver dag leverer trygghet, faglighet og god hundevelferd — og fordi vi ser hele bildet: både hund og eier.\nVi er lærebedrift for lærlinger i dyrefaget med hund som fordypning, og bidrar aktivt til å utdanne nye dyrefagarbeidere.\nVi tilbyr også arbeidstrening og gir mennesker muligheten til å oppleve mestring, struktur og arbeidsglede gjennom samspill med hund.\nHer lærer mennesker av hunder – og hunder av mennesker.\nTeamet vårt består av dyrefagarbeidere med hund som fordypning, erfarne hundefaglige medarbeidere, lærlinger, instruktører og veiledere.\nSammen kombinerer vi formell fagkompetanse med lang praktisk erfaring. Vi jobber med ro, varme og struktur, og møter hver hund som et individ.\nHar du spørsmål om dagsenter, adferd, kurs, valpeanalyse eller utleie?\nTa kontakt med oss — vi svarer gjerne, og hjelper deg videre basert på hva du og hunden din trenger.\nMøt Eric G. Sandvold, daglig leder og primus motor for vårt hundesenter. Med erfaring som strekker seg helt tilbake til 1990, har Eric viet livet sitt til å forstå og jobbe med hunder. Denne langvarige erfaringen danner grunnlaget for hans unike tilnærming til hundetrening og adferdsproblemer.\nEric har fagbrev i dyrefaget med hund som fordypning.\nEn solid utdannelse og bred erfaring. Eric har hatt gleden av å lære av en av Norges fremste eksperter på atferd og mentalitet, Major Randulf Gimre, der fokus ligger på individet og samarbeid mellom hund og eier. Dette har formet hans filosofi: samarbeid og det enkelte individ i sentrum.\nErics utdanningsløp er omfattende. Han startet sin reise mot å bli en av Norges mest anerkjente hundeeksperter i 2009 da han begynte på NKKs utdanningsprogram for mentalbeskrivere og karaktertest-dommere.\nEric er en av få som er godkjent for alle tre av Norsk Kennel Klubs (NKK) mentaltester, noe som er et bevis på hans solide kunnskap og forståelse av hundenes psyke. Dette inkluderer:\nDenne kompetansen er sjeldent god og utgjør en uvurderlig ressurs for hun",
+     "identity_text_excerpt": "Abonner på vårt nyhetsbrev for å få de siste oppdateringene Trygt sted for hund og eier – med fagkunnskap, erfaring og ærlighet. Lenker Hjem Dagsenter Adferdspakker Valpeanalyse Utleie Kurskalender Kursoversikt Privat undervisning Foredrag Medieomtale Om oss Kontakt oss Kontaktinformasjon Tanangervegen 213, 4056 Tananger 92 62 16 75 Mandag – Fredag: 07.30 – 17.00 post@solahundesenter.no ©2026 SOLA HUNDESENTER AS – ALLE RETTIGHETER RESERVERT",
+     "content_sha256": "07217dafdf3ebd793427fe653fa2512e56714a3122792e63797f31c9f95ae1cf"
+    },
+    {
+     "url": "https://solahundesenter.com/om-oss/",
+     "title": "Om oss - Sola Hundesenter",
+     "main_text_excerpt": "Sola Hundesenter er et sted der hunder får omsorg, trygghet og sosialisering i et miljø tilpasset deres behov.\nMed over 30 års erfaring med hunder av alle raser og personligheter, har vi bygget et senter hvor både hunder og eiere føler seg trygge, sett og ivaretatt.\nVi holder til i Tananger i Sola kommune, med kort vei til Stavanger og Sandnes, og har kunder gjennom dagsenteret fra hele regionen.\nSamtidig hjelper vi hundeeiere i hele Norge gjennom adferdspakker, valpeanalyse, kurs, foredrag og seminarer.\nSenteret vårt er utviklet spesielt for hunders trivsel og læring, med både store innendørsarealer og trygge uteområder til lek, trening og ro.\nHos oss møter du et dedikert og faglig sterkt team med flere dyrefagarbeidere med hund som fordypning, erfarne instruktører, veiledere og lærlinger.\nMålet vårt er enkelt: glade hunder, trygge eiere og et miljø som skaper mestring – hver dag.\nHos Sola Hundesenter bygger alt vi gjør på filosofien TTT – tålmodighet, trygghet og tillit.\nDette er grunnpilarene i hvordan vi møter både hunder og mennesker – i trening, veiledning og daglig samhandling.\nVi tror på å ta oss tid, skape forutsigbare rammer og bygge relasjoner basert på tillit.\nGjennom denne tilnærmingen legger vi til rette for læring, utvikling og god hundevelferd – tilpasset hvert enkelt individ.\nGod hundevelferd handler om balanse:\ntålmodig fremgang, trygg tilstedeværelse og tillit i samspillet mellom hund og eier.\nHver hund utvikler seg i sitt eget tempo.\nVi jobber uten hastverk og uten press, og gir rom for trygg fremgang og mestring.\nTålmodighet skaper forutsetninger for læring, refleksjon og varig utvikling – for både hund og eier.\nTrygghet er fundamentet for all læring og utvikling.\nHos oss skal hver hund føle seg sett, forstått og ivaretatt – både fysisk og mentalt.\nVi skaper trygghet gjennom ro, forutsigbarhet og tydelig kommunikasjon, tilpasset situasjon og individ.\nTillit bygges over tid – gjennom konsekvent, ærlig og respektfull samhandling.\nNår tillit er på plass, blir samarbeid, læring og utvikling mulig.\nVi jobber målrettet for å styrke tilliten mellom hund og eier, og mellom hund og fagperson.\nSola Hundesenter ble etablert av Eric Sandvold i 2014, etter helseutfordringer som gjorde det umulig å fortsette i tidligere yrke.\nI stedet for å bli ufør, valgte han å skape en arbeidsplass hvor både mennesker og hunder kan vokse, lære og hjelpe hverandre.\nI 2015 overtok han et drivhuslokale og bygde det gradvis om til et fullverdig hundesenter, med løsninger tilpasset hunders behov.\nDet som startet som et personlig prosjekt, har i dag blitt et etablert fagmiljø for hunder og eiere fra hele landet.\nSenteret startet med 10 hunder i uken, og vokste til 60 hunder innen 2016.\nI dag håndterer vi 140–150 hunder i uken gjennom dagsenter og adferdstilbud, og får henvendelser fra hele landet.\nFasiliteter\nInnendørs senter\nTreningshall\nUteområde\nTreningsbane\nOppstallingskapasitet for 38 hunder\nUndervisningsrom for 30–40 personer\nGode parkeringsforhold\nAnerkjennelser\nVi vokser fordi vi hver dag leverer trygghet, faglighet og god hundevelferd — og fordi vi ser hele bildet: både hund og eier.\nVi er lærebedrift for lærlinger i dyrefaget med hund som fordypning, og bidrar aktivt til å utdanne nye dyrefagarbeidere.\nVi tilbyr også arbeidstrening og gir mennesker muligheten til å oppleve mestring, struktur og arbeidsglede gjennom samspill med hund.\nHer lærer mennesker av hunder – og hunder av mennesker.\nTeamet vårt består av dyrefagarbeidere med hund som fordypning, erfarne hundefaglige medarbeidere, lærlinger, instruktører og veiledere.\nSammen kombinerer vi formell fagkompetanse med lang praktisk erfaring. Vi jobber med ro, varme og struktur, og møter hver hund som et individ.\nHar du spørsmål om dagsenter, adferd, kurs, valpeanalyse eller utleie?\nTa kontakt med oss — vi svarer gjerne, og hjelper deg videre basert på hva du og hunden din trenger.\nMøt Eric G. Sandvold, daglig leder og primus motor for vårt hundesenter. Med erfaring som strekker seg helt tilbake til 1990, har Eric viet livet sitt til å forstå og jobbe med hunder. Denne langvarige erfaringen danner grunnlaget for hans unike tilnærming til hundetrening og adferdsproblemer.\nEric har fagbrev i dyrefaget med hund som fordypning.\nEn solid utdannelse og bred erfaring. Eric har hatt gleden av å lære av en av Norges fremste eksperter på atferd og mentalitet, Major Randulf Gimre, der fokus ligger på individet og samarbeid mellom hund og eier. Dette har formet hans filosofi: samarbeid og det enkelte individ i sentrum.\nErics utdanningsløp er omfattende. Han startet sin reise mot å bli en av Norges mest anerkjente hundeeksperter i 2009 da han begynte på NKKs utdanningsprogram for mentalbeskrivere og karaktertest-dommere.\nEric er en av få som er godkjent for alle tre av Norsk Kennel Klubs (NKK) mentaltester, noe som er et bevis på hans solide kunnskap og forståelse av hundenes psyke. Dette inkluderer:\nDenne kompetansen er sjeldent god og utgjør en uvurderlig ressurs for hun",
+     "identity_text_excerpt": "Abonner på vårt nyhetsbrev for å få de siste oppdateringene Trygt sted for hund og eier – med fagkunnskap, erfaring og ærlighet. Lenker Hjem Dagsenter Adferdspakker Valpeanalyse Utleie Kurskalender Kursoversikt Privat undervisning Foredrag Medieomtale Om oss Kontakt oss Kontaktinformasjon Tanangervegen 213, 4056 Tananger 92 62 16 75 Mandag – Fredag: 07.30 – 17.00 post@solahundesenter.no ©2026 SOLA HUNDESENTER AS – ALLE RETTIGHETER RESERVERT",
+     "content_sha256": "7cd2c5efc552bcef530881736dbb45379fd9de4011073378fa705d23a5ab1b6c"
+    },
+    {
+     "url": "https://solahundesenter.com/kontakt-oss/",
+     "title": "Kontakt oss - Sola Hundesenter",
+     "main_text_excerpt": "Mandag – fredag: 07:30–17:00\nDagsenteret er åpent for hunder med avtalt plass.\nSkjema for inntak i Dagsenteret\nMandag – fredag: 18:00–21:00\nKveldstid brukes til:\nPris for hall-leie: 500,- per time per gruppe\nSe Kurskalenderen for oversikt over kurs og arrangement.\nTelefontid: Mandag–fredag 09:30–15:00",
+     "identity_text_excerpt": "Abonner på vårt nyhetsbrev for å få de siste oppdateringene Trygt sted for hund og eier – med fagkunnskap, erfaring og ærlighet. Lenker Hjem Dagsenter Adferdspakker Valpeanalyse Utleie Kurskalender Kursoversikt Privat undervisning Foredrag Medieomtale Om oss Kontakt oss Kontaktinformasjon Tanangervegen 213, 4056 Tananger 92 62 16 75 Mandag – Fredag: 07.30 – 17.00 post@solahundesenter.no ©2026 SOLA HUNDESENTER AS – ALLE RETTIGHETER RESERVERT",
+     "content_sha256": "b1dd768e7d58b7c365a34a64e3f42ee20face5fdc38a7b16a9c8144b23dbf30b"
+    },
+    {
+     "url": "https://solahundesenter.com/kontakt-oss/",
+     "title": "Kontakt oss - Sola Hundesenter",
+     "main_text_excerpt": "Mandag – fredag: 07:30–17:00\nDagsenteret er åpent for hunder med avtalt plass.\nSkjema for inntak i Dagsenteret\nMandag – fredag: 18:00–21:00\nKveldstid brukes til:\nPris for hall-leie: 500,- per time per gruppe\nSe Kurskalenderen for oversikt over kurs og arrangement.\nTelefontid: Mandag–fredag 09:30–15:00",
+     "identity_text_excerpt": "Abonner på vårt nyhetsbrev for å få de siste oppdateringene Trygt sted for hund og eier – med fagkunnskap, erfaring og ærlighet. Lenker Hjem Dagsenter Adferdspakker Valpeanalyse Utleie Kurskalender Kursoversikt Privat undervisning Foredrag Medieomtale Om oss Kontakt oss Kontaktinformasjon Tanangervegen 213, 4056 Tananger 92 62 16 75 Mandag – Fredag: 07.30 – 17.00 post@solahundesenter.no ©2026 SOLA HUNDESENTER AS – ALLE RETTIGHETER RESERVERT",
+     "content_sha256": "af1100a1bfa742bd39205803d52912003923f0d52bc7631a77b16666c4318a22"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "sola",
+     "hundesenter"
+    ],
+    "matched_tokens": [
+     "hundesenter",
+     "sola"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/SolaHundesenter"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/solahundesenter1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/channel/UCbqtI47k47MKpTH4xygBKvQ"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/SolaHundesenter",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "sola",
+      "hundesenter"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/solahundesenter1",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "sola",
+      "hundesenter"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/channel/UCbqtI47k47MKpTH4xygBKvQ",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "add04e4b08039850f933c63d3eb862e78fd915ba05c92e38d61f770ffab1886f",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/913441206": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "bc231cb4e041703d.json.gz",
+   "content_sha256": "bc231cb4e041703dc674cbd6557ebfd1aedea67338273146bd5935f7ff0abc5b",
+   "retrieved_at": "2026-11-01T22:04:22.819979Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/913441206": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "4b2773f57a02f8db.json.gz",
+   "content_sha256": "4b2773f57a02f8dbb86dd1746b0de4805eee6cba0436391292d642732ca46f18",
+   "retrieved_at": "2026-11-01T22:04:23.500870Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/913441206/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b322c8f299a61bae.json.gz",
+   "content_sha256": "b322c8f299a61bae80c7ddc8eaf305f1e6a8d2e2098c6b27b6053ead6e228aaa",
+   "retrieved_at": "2026-11-01T22:04:25.610294Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/913441206": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T22:04:24.176593Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=913441206&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "87e82f0f45cebf69.json.gz",
+   "content_sha256": "87e82f0f45cebf69dd6815da9596959d3d956562b540360dc2651fc334ded2b6",
+   "retrieved_at": "2026-11-01T22:04:24.897401Z"
+  },
+  "https://solahundesenter.com/": {
+   "kind": "site",
+   "status": 200,
+   "file": "5e2122888fffe0ae.html.gz",
+   "content_sha256": "5e2122888fffe0aef136ccb2dcc98b767baae806edb63f7cf490f036d43c8d41",
+   "retrieved_at": "2026-11-01T22:04:50.045698Z"
+  },
+  "https://solahundesenter.com/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "b7661c607d3685ac.html.gz",
+   "content_sha256": "b7661c607d3685acd28df0f50601a2d072453fabf97ccc1b40b365f59abe4c3b",
+   "retrieved_at": "2026-11-01T22:04:51.948006Z"
+  },
+  "https://solahundesenter.com/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ef9f8b764d8d2cd8.html.gz",
+   "content_sha256": "ef9f8b764d8d2cd82f772c5723416d9e7dd548f13bb8fa7faadc83df448e8d6d",
+   "retrieved_at": "2026-11-01T22:04:53.486697Z"
+  },
+  "https://solahundesenter.com/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "d79c8d7b04e31abe.html.gz",
+   "content_sha256": "d79c8d7b04e31abeb41114111297b496f14596cc220382266eb7dd6622ce90cc",
+   "retrieved_at": "2026-11-01T22:04:55.625016Z"
+  },
+  "https://solahundesenter.com/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "73cb76eeb6a30fa1.xml.gz",
+   "content_sha256": "73cb76eeb6a30fa1cd904ff1d19ebdbca79f806d29904a69ad39aaf8bb13a4f2",
+   "retrieved_at": "2026-11-01T22:04:54.349692Z"
+  }
+ }
+}

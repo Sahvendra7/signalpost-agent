@@ -1,0 +1,144 @@
+{
+ "organisation_number": "976756118",
+ "name": "STIFTELSEN STEINERSKOLEN I ÅS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://aas.steinerskole.no/",
+  "retrieved_at": "2026-11-01T22:03:10.700075Z",
+  "value": {
+   "requested_url": "https://www.aas.steinerskolen.no/",
+   "final_url": "https://aas.steinerskole.no/",
+   "registered_domain": "steinerskole.no",
+   "title": "Steinerskolen i Ås – En helhetlig skole i hjertet av Follo",
+   "description": "",
+   "main_text_excerpt": "Vi er en liten fådelt 1-10 skole i landlige omgivelser på Holstad, midt mellom Ski og Ås sentrum.\nNB: For\nHer kan du lese siste nytt og de seneste oppdateringer.\nTil: Regjeringen Regjeringen har uttrykt at de ønsker et supplement til den offentlige skolen, i dag er dette i stor grad ivaretatt av Norges friskoler…\n13.juni braket det løs med 9./10.klasse sin teaterforestilling \"Alice i eventyrland\". Oppsetningen ble avslutningsstykket til 10.klassingene. Skuespillertroppen synes det har vært mye jobbing men også…\nVi har søknadsfrister:\nStyret stenger for opptak/oppstart rutinemessig vært år fra august/september og frem til våren påfølgende skoleår. Men selv om oppstart kun er mulig august/september, så tar vi imot søknader fortløpende hele året.",
+   "identity_text_excerpt": "",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "a8acc15f6580a3e1846ea6b6306ed879aca54bd0dffef7e80595491050f159c4",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://aas.steinerskole.no/",
+     "title": "Steinerskolen i Ås – En helhetlig skole i hjertet av Follo",
+     "main_text_excerpt": "Vi er en liten fådelt 1-10 skole i landlige omgivelser på Holstad, midt mellom Ski og Ås sentrum.\nNB: For\nHer kan du lese siste nytt og de seneste oppdateringer.\nTil: Regjeringen Regjeringen har uttrykt at de ønsker et supplement til den offentlige skolen, i dag er dette i stor grad ivaretatt av Norges friskoler…\n13.juni braket det løs med 9./10.klasse sin teaterforestilling \"Alice i eventyrland\". Oppsetningen ble avslutningsstykket til 10.klassingene. Skuespillertroppen synes det har vært mye jobbing men også…\nVi har søknadsfrister:\nStyret stenger for opptak/oppstart rutinemessig vært år fra august/september og frem til våren påfølgende skoleår. Men selv om oppstart kun er mulig august/september, så tar vi imot søknader fortløpende hele året.",
+     "content_sha256": "a8acc15f6580a3e1846ea6b6306ed879aca54bd0dffef7e80595491050f159c4"
+    },
+    {
+     "url": "https://aas.steinerskole.no/contact/",
+     "title": "Kontakt oss – Steinerskolen i Ås",
+     "main_text_excerpt": "ADRESSE\nHaugerudveien 25,\n1434 Ås\nÅPNINGSTID KONTORET\nMandag: 08:00-13:00\nTirsdag: 08:00-15:00\nOnsdag: 08:00-15:00\nTorsdag: 08:00-15:00\nFredag: 08:00-15:30\nHelger: Stengt\nTELEFON\n64 97 76 60 (Hovednummer)\n64 97 76 60 (Daglig leder - Tastevalg 3)\n64 97 76 62 (Regnskap/økonomi - Eva)\n458 02941  (Vaktmester - PK)\nE-POST\naas@steinerskolen.no (postmottak)",
+     "identity_text_excerpt": "",
+     "content_sha256": "f24414188003c588719c788c2f2f2b413a001a3f721d50f55efb7410c2f3d959"
+    },
+    {
+     "url": "https://aas.steinerskole.no/news/",
+     "title": "Skolenytt – Steinerskolen i Ås",
+     "main_text_excerpt": "Til: Regjeringen Regjeringen har uttrykt at de ønsker et supplement til den offentlige skolen, i dag er dette i stor grad ivaretatt av Norges friskoler (privatskoler med rett til statsstøtte). Foreldre har en grunnleggende menneskerett til å velge skole for sitt barn i tråd med religiøs eller filosofisk overbevisning. Dette er nedfelt i FNs konvensjon om økonomiske, sosiale og kulturelle \n…\nSiste kommentarer",
+     "identity_text_excerpt": "",
+     "content_sha256": "3245d862d831869e58787e6618f619dd72074707bbc0626ead349814bb28dcd9"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "steinerskolen"
+    ],
+    "matched_tokens": [
+     "steinerskolen"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "a8acc15f6580a3e1846ea6b6306ed879aca54bd0dffef7e80595491050f159c4",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/976756118": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "583ef4afc65a13c4.json.gz",
+   "content_sha256": "583ef4afc65a13c409d4579255be520d865e4a272caabc0a78dc0d06d3cdce85",
+   "retrieved_at": "2026-11-01T22:02:58.901228Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/976756118": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "7631bdb86ee7d7d5.json.gz",
+   "content_sha256": "7631bdb86ee7d7d5ca8d399525fdd4594b00333b8c579e9ac239d6c59ea78f90",
+   "retrieved_at": "2026-11-01T22:02:59.619213Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/976756118/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "3919d554a740bc7c.json.gz",
+   "content_sha256": "3919d554a740bc7c3ccf5d8fff2c94029b10c5d6609a197a1533d8d40884de50",
+   "retrieved_at": "2026-11-01T22:03:01.763834Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/976756118": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T22:03:00.328015Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=976756118&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "4967f7d1d28b9a2d.json.gz",
+   "content_sha256": "4967f7d1d28b9a2dc0ad70869bfc2321f5d2fd222b43b944243af94f3770da90",
+   "retrieved_at": "2026-11-01T22:03:01.045285Z"
+  },
+  "https://aas.steinerskole.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a8acc15f6580a3e1.html.gz",
+   "content_sha256": "a8acc15f6580a3e1846ea6b6306ed879aca54bd0dffef7e80595491050f159c4",
+   "retrieved_at": "2026-11-01T22:03:12.399992Z"
+  },
+  "https://aas.steinerskole.no/school-info/": {
+   "kind": "site",
+   "status": 200,
+   "file": "077fc11d39425847.html.gz",
+   "content_sha256": "077fc11d39425847db5885f3926716106fe3730a290b397607f72940859a4efa",
+   "retrieved_at": "2026-11-01T22:03:13.562824Z"
+  },
+  "https://aas.steinerskole.no/contact/": {
+   "kind": "site",
+   "status": 200,
+   "file": "f24414188003c588.html.gz",
+   "content_sha256": "f24414188003c588719c788c2f2f2b413a001a3f721d50f55efb7410c2f3d959",
+   "retrieved_at": "2026-11-01T22:03:14.427456Z"
+  },
+  "https://aas.steinerskole.no/news/": {
+   "kind": "site",
+   "status": 200,
+   "file": "3245d862d831869e.html.gz",
+   "content_sha256": "3245d862d831869e58787e6618f619dd72074707bbc0626ead349814bb28dcd9",
+   "retrieved_at": "2026-11-01T22:03:16.907835Z"
+  },
+  "https://aas.steinerskole.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "27731b2ff861ebb2.xml.gz",
+   "content_sha256": "27731b2ff861ebb224dad4a8412625125c2541be25c3ef3456d15c73b9c1ff58",
+   "retrieved_at": "2026-11-01T22:03:15.839536Z"
+  }
+ }
+}

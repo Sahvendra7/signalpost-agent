@@ -236,6 +236,55 @@ class V31NewsContent(unittest.TestCase):
                 self.assertTrue(attribution.get("basis") and attribution.get("source_tier"), (org, claim["value"]))
 
 
+V31LIVE = ROOT / "tests" / "fixtures" / "v31live"
+
+
+class V31AfterEval200(unittest.TestCase):
+    """Failures found after the first V3.1 freeze (8223a37): on eval200 (scored once on 8223a37, then used for
+    development) and in its live release run. Captured bytes: eval200 through the baseline ff3b515 (2026-11-01);
+    BE Kraftsalg through 8223a37 live (2026-11-02). Each published on 8223a37; the controls must keep their news."""
+
+    def test_product_and_rental_item_pages_are_not_news(self):
+        """912158845 Steinkjer Liftutleie: ten lift pages in the WordPress feed ("Pris på forespørsel … Ring oss")."""
+        self.assertEqual(news_titles("912158845"), [])
+        self.assertIn("content product", V31NewsContent.withheld(self, "912158845"))
+
+    def test_job_advertisements_in_more_phrasings(self):
+        """889169672 Vårtun ("Vi søker tilkallingsvikarer!", "Er du Vårtuns nye rektor?"); 830872752 Logscom (Swedish)."""
+        self.assertEqual(news_titles("889169672"), [])
+        self.assertEqual(news_titles("830872752"), [])
+
+    def test_feed_boilerplate_does_not_name_the_company(self):
+        """966732024 Lugn: "Hei, verden!" named the company only in "The post … appeared first on Lugn Hytter"."""
+        self.assertEqual(news_titles("966732024"), [])
+
+    def test_marketing_and_advice_in_the_company_s_voice(self):
+        """996217647 Frankeringsrekvisita (product marketing), 913441206 Sola Hundesenter and 899115562 Provendo (advice)."""
+        self.assertLessEqual(len(news_titles("996217647")), 1)
+        self.assertEqual(news_titles("913441206"), [])
+        titles = news_titles("899115562")
+        for title in ("Hvorfor ny PC?", "Hvorfor digitalt vedlikehold av PC er viktig"):
+            self.assertNotIn(title, titles)
+        self.assertIn("Provendo lanserer blogg", titles, "the company's own announcement stays")
+
+    def test_site_wide_footer_does_not_name_the_company(self):
+        """990892687 BE Kraftsalg, live run of 8223a37: each article page's footer "BE Kraftsalg AS · Org.nr. 990 892 687"
+        made the Bodø Energi stories "name" the company on its group-brand site ("Bodø Bunkermuseum får Bodø
+        Energi-gaven", "Stafett for livet på Fauske mottok Bodø Energi-gaven")."""
+        envelope = run_batch([InputRow(0, "990892687", "990892687")], run_id="v3-regression", **Fixture("990892687", base=V31LIVE).injected())["envelopes"][0]
+        titles = [claim["value"].get("title") for claim in envelope["claims"] if claim["field"] == "news_item" and claim["availability"] == "available"]
+        self.assertNotIn("Bodø Bunkermuseum får Bodø Energi-gaven", titles)
+        self.assertFalse([title for title in titles if "Bodø Energi-gaven" in title], titles)
+
+    def test_eval200_controls_keep_their_news(self):
+        """Organisations whose eval200 news was labelled correct keep it (on 8223a37 Jentene på Tunet also published
+        "Vertinnegaven som blir lagt merke til …", gift advice labelled incorrect, which is now withheld)."""
+        self.assertEqual(len(news_urls("994642340")), 9, "Proba: new projects, reports, a new employee")
+        self.assertEqual(len(news_urls("971348496")), 10, "IKA Hordaland: conferences, governance meetings, a new collaboration")
+        self.assertEqual(len(news_urls("976756118")), 8, "Steinerskolen i Ås: the weekly newsletter")
+        self.assertEqual(len(news_urls("920546919")), 8, "Jentene på Tunet: awards, nominations, festival anniversary")
+
+
 class CareersPages(unittest.TestCase):
     def test_service_pages_are_not_careers_pages(self):
         self.assertEqual(careers("933164896"), [], "/for-bedrifter/ is a staffing agency's service page")

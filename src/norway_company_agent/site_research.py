@@ -32,7 +32,7 @@ from .identity import _tokens
 from .attribution.jobs import is_recruiter
 from .attribution.news import is_publisher
 from .site_facts import CAREER_PATH, is_careers_page  # noqa: F401
-from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, in_site_scope, is_shared_site_section, item_names_entity, job_postings, parse_date  # noqa: F401  (re-exported)
+from .site_facts import ARTICLE_TYPES, CapturedPage, article_links, extract_site_facts, feed_items, html_items, in_site_scope, is_shared_site_section, item_names_entity, job_postings, parse_date, site_chrome  # noqa: F401  (re-exported)
 from .site_identity import FREE_MAIL, classify_site, manager_designated
 from .website import MAX_CRAWL_DELAY_SECONDS, USER_AGENT, _registered_domain, crawl_delay, normalize_homepage, robots_policy
 
@@ -540,9 +540,10 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
             counts["job:manager_site_vacancy"] = counts.get("job:manager_site_vacancy", 0) + len(result.jobs)
         result.profiles, result.jobs, result.careers_page, result.careers_checked = [], [], None, []
         by_url = {page.url: page for page in pages or []}
+        chrome = site_chrome(list(pages or []))  # V3.1: a footer naming every entity the manager runs names none of them
         about = []
         for item in result.activities:
-            basis = item_names_entity(profile or {}, item, by_url)
+            basis = item_names_entity(profile or {}, item, by_url, chrome)
             if basis:
                 about.append({**item, "subject_basis": basis})
             else:

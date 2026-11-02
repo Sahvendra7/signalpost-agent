@@ -1,0 +1,163 @@
+{
+ "organisation_number": "912158845",
+ "name": "STEINKJER LIFTUTLEIE AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://slift.no/",
+  "retrieved_at": "2026-11-01T21:59:00.679569Z",
+  "value": {
+   "requested_url": "https://www.steinkjerliftutleie.no/",
+   "final_url": "https://slift.no/",
+   "registered_domain": "slift.no",
+   "title": "Steinkjer Liftutleie AS",
+   "description": "",
+   "main_text_excerpt": "",
+   "identity_text_excerpt": "Kontakt skjema Navn * Ditt fulle navn Firmanavn Epost adresse * Telefon nummer Melding 0 / 180 Send Message Kontaktinformasjon 918 84 233 post (@) steinkjerliftutleie.no Åpningstider Alle hverdager 08:00 - 15:00 Besøksadresse Sjøfartsgata 10B, 7714 Steinkjer Google Maps Juridisk © Steinkjer Liftutleie AS2025 Org nr 912 158 845 MVA Personvern Vilkår Trønder Data Nettside utviklet av Trønderdata for Steinkjer Liftutleie AS tronderdata.no",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "c355aa51c9d8fa13709a9728599a581de5efde3d20d2493d096d2c07e046818c",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://slift.no/",
+     "title": "Steinkjer Liftutleie AS",
+     "main_text_excerpt": "",
+     "content_sha256": "c355aa51c9d8fa13709a9728599a581de5efde3d20d2493d096d2c07e046818c"
+    },
+    {
+     "url": "https://slift.no/index.php/forsiden/om-oss/",
+     "title": "Om oss – Steinkjer Liftutleie AS",
+     "main_text_excerpt": "Jobb trygt i høyden!\nI dag har vi 70 lifter av ulike størrelser. Fra enkle garasjelokaler i oppstarten, via fine år hos steinkjer mekaniske og i Jæktsmedgata, til vi flyttet inn i egne lokaler i Sjøfartsgata 10b i 2020.\nVåre kunder er firma og private. Tror vi kan si at vi har lært opp mange firma og private på Inherred til å bruke lift i små og større oppdrag, noe som var uvanlig når vi startet opp i 1999/2000. Da var det stige og stilas.\nVi legger vekt på fagkunnskap slik at våre ansatte kan anbefale den liften som passer for jobben du skal gjennomføre.\nMed egne biler, har vi mulighet til å levere hurtig når det er nødvendig.",
+     "identity_text_excerpt": "Kontakt skjema Navn * Ditt fulle navn Firmanavn Epost adresse * Telefon nummer Melding 0 / 180 Send Message Kontaktinformasjon 918 84 233 post (@) steinkjerliftutleie.no Åpningstider Alle hverdager 08:00 - 15:00 Besøksadresse Sjøfartsgata 10B, 7714 Steinkjer Google Maps Juridisk © Steinkjer Liftutleie AS2025 Org nr 912 158 845 MVA Personvern Vilkår Trønder Data Nettside utviklet av Trønderdata for Steinkjer Liftutleie AS tronderdata.no",
+     "content_sha256": "9d441619bb310c6d824f16595658609381c43fe21428a8a4f3ca57c090a15bf6"
+    },
+    {
+     "url": "https://slift.no/index.php/forsiden/om-oss/leievilkar-og-betingelser/",
+     "title": "Leievilkår og betingelser – Steinkjer Liftutleie AS",
+     "main_text_excerpt": "Leietiden løper fra og med den dag utleieobjektet blir levert fra utleier eller i henhold til avtale. Leieobjektet stilles til leietakers disposisjon til og med den dagen utleieobjektene kommer tilbake til utleiers adresse, eller etter avtale med utleier på mail eller sms.\nLeietiden beregnes mandag-fredag. Brukes utstyret i helgene, kommer det i tillegg. Leieprisen for maskiner er basert på normal 8 t arbeidsdag. Blir utstyret brukt utover normal arbeidsdag må utleier på forhånd varsle om dette. Betingelser og pristillegg for dette er avhengig av omfang og type utleieobjekt og vil bli skjønnsmessig beregnet i hvert enkelt tilfelle hvis ikke annet er avtalt skriftlig. Ny dagleie belastes dersom innlevering av utstyr skjer etter kl.0800.\n2. UTLEVERING OG TILBAKELEVERING\nRisiko og ansvar for utstyret beror hos leietakeren fra det forlater utleier,eller tas i bruk av leietaker utstyret. Utstyr som er bestilt må hentes til avtalt tid. Utleier vil derfor uansett belaste leie fra og med avtalt hente dag, inntil utstyret er levert tilbake i Sjøfartsgata 10b, eller at avtalen er hevet på mail eller sms.\nDersom det leverte utstyret avviker fra det som er avtalt eller ved feil og mangler på utstyret, skal leietaker umiddelbart underrette utleier, som på sin side kan foreta omlevering eller annen rettelse. Avmelding av feil eller mangler etter leieperiode, tilfredsstiller ikke vilkårene for evt. redusert leie. Slikt skal umiddelbart meldes til utleier. Mangler på utstyret og manglende rengjøring, bortsett fra normal slitasje, vil ved tilbakeleveringen bli utbedret av utleieren for leietakers regning.\n3. HVA LEIEBELØPET INKLUDERER\nInkludert i leien er følgende ytelser:\nDisponering av den kapital og investeringsrisiko utstyret representerer.\nForebyggende vedlikehold og sikkerhetsinspeksjoner.\nReparasjoner som følge av normal slitasje.\nUtleieren plikter å overlevere utstyret rengjort og fritt for skader. Utleieren er ansvarlig for at utstyret ved overlevering er sertifisert, og vedlikeholdt i henhold det til enhver tid gjeldende regelverk for det aktuelle utstyret.\nLeietakeren dekker separat:\nUtgifter til drivstoff og eventuell etterfylling av motorolje, frostvæske etc.\nReparasjoner i forbindelse med punktering.\nTransportutgifter fra leveringssted til tilbakeleveringssted.\nRengjøring av utstyr før tilbakelevering.\nNødvendig forebyggende vedlikehold, eks er leietaker ansvarlig for at det er vann på batterier og sjekke olje på forbreningsmotorer.\n4. ANSVAR , FORSIKRING OG SKADER.\nUtstyret er forsikret via utleieren og forsikringen svarer for :\nBrann:\n(inkl. Eksplosjon og lynnedslag).\n*Skader der feil og mangler på utleieobjektet, er den direkte årsak til skaden.\nTyveri/innbruddskade:\nLeietaker er økonomisk ansvarlig for at leieobjektet er sikret i henhold til forsikringsselskapenes krav til innbrudds-sikring, ref FG’s Beskyttelsesklasse B2 krav.\nFølgende unntak gjelder:\nSkade forvoldt ved grov uaktsomhet.\nSkade som skyldes bruk i strid med utleierens forskrifter / opplæring.\nSkade som skyldes manglende ettersyn, etterfylling av frostvæske, olje, vann etc. I leieperioden.\n5. SKADER\nVed skader på leieobjekt, skal utleieren kontaktes umiddelbart.\nNår skader er oppstått plikter leietaker hvis mulig å medvirke til at skade begrenses.\nPREMIE\nPremie for forsikring belastes leietaker med 5 % av leiebeløp\nEgenadel belastes leietaker med kr.15000,-\n6. TILSYN OG BRUK AV UTSTYRET\nLeietakeren plikter å tilse at utstyret i leieperioden kun benyttes av personell som har fått opplæring i dets bruk, og således har den nødvendige ferdighet for å behandle utstyret korrekt og unngå å utsette seg selv eller andre for skade. Leietakeren plikter å følge instruksjon vedr. utstyrets bruk. Utstyrets angitte kapasitet må ikke overskrides. Leietaker plikter videre å påse at utstyret beskyttes mot uvedkommende, samt unødig ytre påvirkning. For bruk til arbeider som utsetter utstyret for spesielle miljømessige belastninger, må dette forhåndsavtales, slik at spesielle forebyggende tiltak kan gjøres.\nPriser for slik beskyttelse vil bli oppgitt ved forespørsel. For å forebygge unødvendig driftsstans/reparasjoner eller at farlige situasjoner skal oppstå som følge av at utstyret er gått i stykker, skal leietaker daglig foreta kontroll av dette og om nødvendig foreta etterfylling av drivstoff, olje, frostvæske, vann på batteri etc. Leien inkluderer ikke slike driftsmidler og hjelpestoffer.\nDersom utstyret fungerer utilfredsstillende skal det straks tas ut av bruk. Utleier skal straks varsles, slik at feilen kan rettes. Når forebyggende vedlikehold er nødvendig blir leietaker på forhånd kontaktet av utleier, slik at hensiktsmessig tidspunkt for dette arbeidet kan avtales.\nUtleier har til enhver tid rett til å inspisere utstyret, og skal av leietaker holdes underrettet om hvor dette benyttes under leieperioden.\n7. FREMLEIE\nLeietaker kan ikke fremleie eller overlate sine rettigheter etter denne avtale til andre eller foreta noen rettslige disposisjoner (overdrag",
+     "identity_text_excerpt": "Kontakt skjema Navn * Ditt fulle navn Firmanavn Epost adresse * Telefon nummer Melding 0 / 180 Send Message Kontaktinformasjon 918 84 233 post (@) steinkjerliftutleie.no Åpningstider Alle hverdager 08:00 - 15:00 Besøksadresse Sjøfartsgata 10B, 7714 Steinkjer Google Maps Juridisk © Steinkjer Liftutleie AS2025 Org nr 912 158 845 MVA Personvern Vilkår Trønder Data Nettside utviklet av Trønderdata for Steinkjer Liftutleie AS tronderdata.no",
+     "content_sha256": "a16cd2ede25054a2a0055c241d4b6fd9f2248da31f352e98fa81703a95783e86"
+    },
+    {
+     "url": "https://slift.no/index.php/forsiden/om-oss/personvernserklaering/",
+     "title": "Personvernserklæring – Steinkjer Liftutleie AS",
+     "main_text_excerpt": "Steinkjer Liftutleie ønsker at du som bruker skal være trygg på at vi ivaretar ditt personvern og behandler alle personopplysninger i henhold til lovgivningen.\nPersonopplysninger\nFor å bruke nett-bookingtjenesten, må du oppgi navn, adresse, telefonnummer og epost. For å registrere en ordre må det nødvendigvis også bli lagret opplysninger om tidspunkt for utleie og hva slags utstyr som er reservert/bestilt. Det er 18 års aldersgrense på bruk av tjenesten og du må derfor også oppgi ditt fødselsår.\nVed bruk av tjenesten lagres din ordrehistorikk. Disse personopplysninger brukes for å levere tjenesten til deg. Disse personopplysningene oppbevares så lenge du står registrert som bruker hos oss. De personopplysninger vi har registrert er tilgjengelig og kan endres på din side. Du kan også kontakte oss og be om at vi fjerner dine personopplysninger eller bli avregistrert fra våre systemer. Du vil da ikke lenger kunne bruke tjenesten med mindre du registrer deg på nytt.\nPersonopplysninger til tredjepart\nSteinkjer Liftutleie vil ikke selge, bytte, eller videreformidle dine personopplysninger. Nett-bookingen håndteres i et system som leveres av Sharefox AS.\nBruk av innsamlede opplysninger\nPersonopplysningene som samles inn for disse formålene inkluderer både opplysninger du selv oppgir (navn, e-postadresse m.m.) og informasjon som samles inn gjennom bruk av tjenesten, som hvilket utstyr du leier og informasjon om posisjon og teknisk informasjon om din enhet og internett-tilkobling. Personopplysningene vil kunne bli supplert med tilgjengelig informasjon fra tredjepartsaktører.\nInformasjonskapsler\nNår du besøker vår tjeneste bruker vi ulike teknologier for å gjenkjenne deg som bruker og samle inn data. Vi bruker eksempelvis informasjonskapsler (cookies) for å huske leiedatoer, og utstyr. Informasjonskapsler forenkler bruken av tjeneste og for å gi deg relevant informasjon når du besøker nettstedet vårt. De brukes også til å mellomlagre data som tilgjengelige utleiedatoer, priser og lignende.\nGjennom tjenerlogger og andre verktøy kan vi registrere informasjon om enheten og tilkoblingen til vår tjeneste, herunder operativsystem, nettleserversjon, IP-adresse, informasjonskapsler og unike identifikasjonsfiler. Denne informasjon brukes i anonym og aggregert statistikk, men kan også kobles mot din brukerkonto. Informasjonen gjør blant annet at vi kan tilpasse visningen av vår tjeneste til den enheten du bruker.",
+     "identity_text_excerpt": "Kontakt skjema Navn * Ditt fulle navn Firmanavn Epost adresse * Telefon nummer Melding 0 / 180 Send Message Kontaktinformasjon 918 84 233 post (@) steinkjerliftutleie.no Åpningstider Alle hverdager 08:00 - 15:00 Besøksadresse Sjøfartsgata 10B, 7714 Steinkjer Google Maps Juridisk © Steinkjer Liftutleie AS2025 Org nr 912 158 845 MVA Personvern Vilkår Trønder Data Nettside utviklet av Trønderdata for Steinkjer Liftutleie AS tronderdata.no",
+     "content_sha256": "e0386c439eebd5991afb96a325e368e86fc96fe9c43012fb0ea08f20f34c7e24"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "steinkjer",
+     "liftutleie"
+    ],
+    "matched_tokens": [
+     "liftutleie",
+     "steinkjer"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/liftutleie"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/liftutleie",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "liftutleie"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "c355aa51c9d8fa13709a9728599a581de5efde3d20d2493d096d2c07e046818c",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/912158845": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "3cf2eebf6727e269.json.gz",
+   "content_sha256": "3cf2eebf6727e2698ed5ada9a830e70e64fd321d2dcef935e732e9000a17d760",
+   "retrieved_at": "2026-11-01T21:58:49.194407Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/912158845": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "571b1ee6f18571b4.json.gz",
+   "content_sha256": "571b1ee6f18571b47767d6f7237cf49f72cd8292b27aa0ecec380f18f80b1d84",
+   "retrieved_at": "2026-11-01T21:58:49.871736Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/912158845/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "de568b1cf05efe7a.json.gz",
+   "content_sha256": "de568b1cf05efe7aa07789222013708124f5baca99799bcb90e7b2c8248e932c",
+   "retrieved_at": "2026-11-01T21:58:51.971788Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/912158845": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T21:58:50.545457Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=912158845&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "5078c3e96c7d69d3.json.gz",
+   "content_sha256": "5078c3e96c7d69d33f1d62c80c73403a853cff0627ed0461c59065443f60bab1",
+   "retrieved_at": "2026-11-01T21:58:51.246751Z"
+  },
+  "https://slift.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "34dcb462afb83f0c.html.gz",
+   "content_sha256": "34dcb462afb83f0c1fdb5d9e91156045cfb2d41570a790608561bfce4c24627b",
+   "retrieved_at": "2026-11-01T21:59:02.086174Z"
+  },
+  "https://slift.no/index.php/forsiden/om-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "9d441619bb310c6d.html.gz",
+   "content_sha256": "9d441619bb310c6d824f16595658609381c43fe21428a8a4f3ca57c090a15bf6",
+   "retrieved_at": "2026-11-01T21:59:02.968256Z"
+  },
+  "https://slift.no/index.php/forsiden/om-oss/personvernserklaering/": {
+   "kind": "site",
+   "status": 200,
+   "file": "e0386c439eebd599.html.gz",
+   "content_sha256": "e0386c439eebd5991afb96a325e368e86fc96fe9c43012fb0ea08f20f34c7e24",
+   "retrieved_at": "2026-11-01T21:59:03.916336Z"
+  },
+  "https://slift.no/index.php/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "168c85ed7107b4d2.xml.gz",
+   "content_sha256": "168c85ed7107b4d212a961141b73ffc548330064b8a21d625da32eb78809fe4d",
+   "retrieved_at": "2026-11-01T21:59:05.194873Z"
+  }
+ }
+}

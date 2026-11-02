@@ -150,6 +150,30 @@ class CapturedPage:
 HOME_SEGMENTS = {"no", "nb", "nn", "en", "sv", "se", "da", "dk", "de", "index.html", "index.htm", "index.php", "hjem", "home", "forside", "start", "default.aspx"}
 
 
+_CHROME_TAGS = ("header", "footer", "nav", "aside")
+
+
+def page_lines(page: CapturedPage) -> list[str]:
+    """The visible text lines of an HTML page, without scripts and without header/footer/nav/aside."""
+    soup = BeautifulSoup(page.html, "lxml")
+    for node in soup(list(_DROP_TAGS) + list(_CHROME_TAGS)):
+        node.decompose()
+    return [line for line in (" ".join(chunk.split()) for chunk in soup.get_text("\n").split("\n")) if line]
+
+
+def item_page_text(page: CapturedPage, chrome: frozenset[str] = frozenset()) -> str:
+    """V3.1: the item's own text on its article page: no header, footer, menu or sidebar, and no line the site repeats
+    on its homepage (a footer byline with the organisation number, a menu, a cookie notice). Site-wide text names the
+    company on every page, so it says nothing about any one item."""
+    return " ".join(line for line in page_lines(page) if line not in chrome)
+
+
+def site_chrome(pages: list[CapturedPage]) -> frozenset[str]:
+    """Lines of the homepage (pages[0]): what the site repeats everywhere."""
+    home = pages[0] if pages and pages[0].kind == "html" else None
+    return frozenset(page_lines(home)) if home is not None else frozenset()
+
+
 def is_shared_site_section(url: str) -> bool:
     """The verified website is a section of a larger domain (a federation's region page, a chain's branch page),
     not a homepage: two or more path segments, or one that is not a language or index page."""
@@ -815,7 +839,7 @@ def validate_activity(item: dict[str, Any], page: CapturedPage) -> str | None:
     return None
 
 
-def item_names_entity(profile: dict[str, Any], item: dict[str, Any], pages: dict[str, CapturedPage]) -> str | None:
+def item_names_entity(profile: dict[str, Any], item: dict[str, Any], pages: dict[str, CapturedPage], chrome: frozenset[str] = frozenset()) -> str | None:
     """Where a news item on a site the entity does not own (a business manager's) explicitly names the entity as
     its subject, else None. Being on the designated website is not attribution: the manager's own news, campaigns
     and announcements are about the manager. Only two official identifiers count, and only in the item itself:
@@ -823,13 +847,15 @@ def item_names_entity(profile: dict[str, Any], item: dict[str, Any], pages: dict
       * its full legal name as a phrase (not its distinctive words alone: a manager runs several entities of one
         housing complex, e.g. "X BORETTSLAG" and "SAMEIET X DRIFT").
     The item itself is its title and summary, plus its own article page when that page is the cited one; a
-    listing page's text is never used, since it carries every other item."""
+    listing page's text is never used, since it carries every other item. V3.1: nor is text the site repeats on every
+    page (`chrome`: the homepage's lines; a footer "Org.nr. …"), nor feed boilerplate ("The post … appeared first on …")."""
+    from .attribution.news import strip_boilerplate
     org = re.sub(r"\D", "", str(profile.get("organisation_number") or ""))
     name = fold(profile.get("name"))
-    texts = [("title", item.get("title")), ("summary", item.get("summary"))]
+    texts = [("title", item.get("title")), ("summary", strip_boilerplate(item.get("summary") or ""))]
     page = pages.get(str(item.get("page_url") or ""))
     if page is not None and page.kind == "html" and str(item.get("url") or "").split("#")[0].rstrip("/") == page.url.split("#")[0].rstrip("/"):
-        texts.append(("article page", page.text))
+        texts.append(("article page", item_page_text(page, chrome if page.url.rstrip("/") != next(iter(pages), "").rstrip("/") else frozenset())))
     for where, text in texts:
         if not text:
             continue
@@ -1021,6 +1047,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                               and NEWS_SEGMENT.match(([segment for segment in urllib.parse.unquote(urllib.parse.urlsplit(str(item["url"])).path).casefold().split("/") if segment] or [""])[0])})
     typed: dict[str, bool] = {}
     by_url = {page.url: page for page in pages}
+    chrome = site_chrome(pages)  # V3.1: lines the site repeats on every page are never an item's own words
     news_pages = {page.url for page in pages if page.kind == "html" and (is_news_page(page.url) or has_news_path(page.url))}
     order = sorted(range(len(candidates)), key=lambda index: priority.get(candidates[index][0].get("method"), 9))
     publisher = is_publisher(profile)
@@ -1044,7 +1071,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         if not reason and index in bursts:
             reason = "bulk_entry_burst"
         if not reason and operator.kind != "manager":
-            subject, basis = subject_of(item, legal, names_entity=lambda: item_names_entity(profile, {**item, "page_url": page.url}, by_url),
+            subject, basis = subject_of(item, legal, names_entity=lambda: item_names_entity(profile, {**item, "page_url": page.url}, by_url, chrome),
                                         siblings=lambda categories: sibling_names(legal, categories))
             if subject == "SIBLING":
                 reason = "sibling_entity_item"
@@ -1059,7 +1086,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             if not reason:
                 # V3.1 (docs/v31-news-analysis.md): where an item appears is never enough; what it says must qualify.
                 own_page = by_url.get(item_url) if item_url != page.url else (page if page.kind == "html" and is_article_path(page.url) else None)
-                body = " ".join(filter(None, [item.get("body") or item.get("summary"), own_page.text[:4000] if own_page is not None and own_page.kind == "html" else None]))
+                own_text = item_page_text(own_page, chrome if own_page.url != site_url else frozenset())[:4000] if own_page is not None and own_page.kind == "html" else None
+                body = " ".join(filter(None, [item.get("body") or item.get("summary"), own_text]))
                 tier = source_tier(item_url, page.url if page.kind == "html" else "", page.url if page.kind == "feed" else "")
                 content = assess_content(item.get("title") or "", body, names_company=subject == "THIS", names=anchor_names)
                 withheld = news_policy_decision(NEWS_POLICY, tier=tier, content=content, names_company=subject == "THIS")

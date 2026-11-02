@@ -1,0 +1,209 @@
+{
+ "organisation_number": "966732024",
+ "name": "LUGN AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://lugnhytter.no/",
+  "retrieved_at": "2026-11-01T21:59:05.515024Z",
+  "value": {
+   "requested_url": "https://www.lugnhytter.no/",
+   "final_url": "https://lugnhytter.no/",
+   "registered_domain": "lugnhytter.no",
+   "title": "LUGN HYTTER - Lugn Hytter",
+   "description": "",
+   "main_text_excerpt": "Våre Hytter\nDet viktigste med våre hytter er at det skal bli din hytte. Og det vil si at vi kan bygge hytta akkurat som du vil ha den. Kall det gjerne skreddersøm.\nVi tilbyr en rekke modeller og stiler som utgangspunkt, og det er helt opp til deg om du vil ha den ferdig levert med nøkkelen i døra, eller kjøpe den som et byggesett. Vi gleder oss til en inspirerende hytteprat med deg.\nHelt Lugn\nHytte, kjære hytte. Takk for dine sene morgener mens snøen laver, og høstbladene som rasler i vinden. Takk for luften, den tindrende klare luften, som klarner hodet og skjerper sansene. Og for dempede samtaler, ord som uttales langsomt, behagelig taushet. For lyden av en bokside som vendes om og barnas trygge pust. Byen er der på mandag, men ikke nå.\nFra planlegging til nøkkelen i døra\nVi har oppført hytter i mer enn 40 år og vet akkurat hva som skal til for å gjøre hele byggeprosessen så smidig og rask som mulig - til riktig pris, med topp kvalitet. Vi tar oss av alt, frem til ferdigattest og innflytting...\nHytteområder\nVi leverer hytter over hele landet. Her presenterer vi noen utvalgte områder der vi tilbyr tomt og spesialtilpassede hytter til samlet god pris.\nNordseterlia, Lillehammer\nNordseter er en bygd og tidligere setergrend på Lillehammerfjellet, beliggende 720-850 moh. og ca. 14 km fra Lillehammer sentrum. Vi har så langt oppført 65 hytter på Nordseter i Sandbakken, Vintervegen og Sandhellinga.\nGautefall Panorama\nVi bygger hytter fortløpende på Gautefall Panorama i Telemark. Dette er helårshytter i ordets rette forstand – virkelige perler som ligger flott til på toppen av Laukfjell med fantastisk utsikt og særdeles gode solforhold.\nØlsjølitoppen\nHyttefeltet på Ølsjølitoppen er en helt ny perle i Valdres.\nTomtene ligger i naturskjønne omgivelser på over 1000 meter og byr på flotte opplevelser året rundt. Her har du snøgaranti gjennom hele vinteren.\nGamlestølen, Valdres\nGamlestølen, i Synnfjell Vest, belliggende i Etnedal/Valdres - midt imellom Fagernes og Lillehammer er et unikt hytteområde på Norges tak. Nyt ekte norsk fjell-landskap sommer som vinter. GAMLESTØLEN -fjelleventyret i Valdres.\nDombås Hyttepark\nDombås Hyttepark har 40 fantastiske hyttetomter med slående utsikt nedover vakre Lesja i retning Bjorli - med et flott alpin/langrennsanlegg som nærmeste nabo – ski in, ski out!\nKambeseth i Tinn\nKambeseth ligger i Skirvedalen i Tinn kommune i Telemark, i utkanten av Hardangervidda med muligheter for fantastiske naturopplevelser hele året. Tomtene ligger fra 930 til 980 meter over havet - tett oppunder tregrensa.\nEikenes Hyttegrend\nEikenes Hyttegrend ligger ved Tokevannet – lengst sør i Drangedal kommune på grensen til Kragerø, i Telemark fylke. Toke er den største innsjøen i Drangedal, med 160 km strandlinje og mange flotte badestrender. Vannet er omgitt av skog og fjell.\nTrysil-Knuts fjellverden, Eltsjøen\n15 ferdigregulerte hyttetomter i populært friluftsområde. Stedet ble kåret til Trysils mest attraktive friluftsområde i 2015. Skogen, fjellet og Eltsjøen innbyr til aktiviteter året rundt; 230 km med skiløyper, turstier, sykkel, jakt og fiske.\nHytter ved sjøen\nHytte ved sjøen er for mange den ultimate drømmen, med måkeskrik og bølgesus. Hvem drømmer vel ikke om late dager på svabergene, med høy solfaktor og saltvann i håret! Her presenterer vi noen av våre siste prosjekter ved kysten.\nSvanstul, Telemark\nMed sin spennende kulturhistorie, seterdrift og tømmerfløting, rike dyreliv og flotte turområder i delvis uberørt natur, er Svanstul et attraktivt og populært utfartsområde…",
+   "identity_text_excerpt": "",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Lugn.hytter"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/lugn.hytter"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://lugnhytter.no/#organization",
+     "name": "Lugn Hytter AS",
+     "url": "https://lugnhytter.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "en-GB",
+      "@id": "https://lugnhytter.no/#/schema/logo/image/",
+      "url": "https://lugnhytter.no/wp-content/uploads/2021/04/Lugn_hvit.png",
+      "contentUrl": "https://lugnhytter.no/wp-content/uploads/2021/04/Lugn_hvit.png",
+      "width": 600,
+      "height": 275,
+      "caption": "Lugn Hytter AS"
+     },
+     "image": {
+      "@id": "https://lugnhytter.no/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/Lugn.hytter/",
+      "https://www.instagram.com/lugn.hytter/",
+      "https://www.youtube.com/channel/UC36NlqASSUo6X5k3f3pfYDA"
+     ]
+    }
+   ],
+   "content_sha256": "ff32c4e9b88824b02961f6a431b234f7f2eb7c1dc4c9122fe783f174c97ed2ed",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://lugnhytter.no/",
+     "title": "LUGN HYTTER - Lugn Hytter",
+     "main_text_excerpt": "Våre Hytter\nDet viktigste med våre hytter er at det skal bli din hytte. Og det vil si at vi kan bygge hytta akkurat som du vil ha den. Kall det gjerne skreddersøm.\nVi tilbyr en rekke modeller og stiler som utgangspunkt, og det er helt opp til deg om du vil ha den ferdig levert med nøkkelen i døra, eller kjøpe den som et byggesett. Vi gleder oss til en inspirerende hytteprat med deg.\nHelt Lugn\nHytte, kjære hytte. Takk for dine sene morgener mens snøen laver, og høstbladene som rasler i vinden. Takk for luften, den tindrende klare luften, som klarner hodet og skjerper sansene. Og for dempede samtaler, ord som uttales langsomt, behagelig taushet. For lyden av en bokside som vendes om og barnas trygge pust. Byen er der på mandag, men ikke nå.\nFra planlegging til nøkkelen i døra\nVi har oppført hytter i mer enn 40 år og vet akkurat hva som skal til for å gjøre hele byggeprosessen så smidig og rask som mulig - til riktig pris, med topp kvalitet. Vi tar oss av alt, frem til ferdigattest og innflytting...\nHytteområder\nVi leverer hytter over hele landet. Her presenterer vi noen utvalgte områder der vi tilbyr tomt og spesialtilpassede hytter til samlet god pris.\nNordseterlia, Lillehammer\nNordseter er en bygd og tidligere setergrend på Lillehammerfjellet, beliggende 720-850 moh. og ca. 14 km fra Lillehammer sentrum. Vi har så langt oppført 65 hytter på Nordseter i Sandbakken, Vintervegen og Sandhellinga.\nGautefall Panorama\nVi bygger hytter fortløpende på Gautefall Panorama i Telemark. Dette er helårshytter i ordets rette forstand – virkelige perler som ligger flott til på toppen av Laukfjell med fantastisk utsikt og særdeles gode solforhold.\nØlsjølitoppen\nHyttefeltet på Ølsjølitoppen er en helt ny perle i Valdres.\nTomtene ligger i naturskjønne omgivelser på over 1000 meter og byr på flotte opplevelser året rundt. Her har du snøgaranti gjennom hele vinteren.\nGamlestølen, Valdres\nGamlestølen, i Synnfjell Vest, belliggende i Etnedal/Valdres - midt imellom Fagernes og Lillehammer er et unikt hytteområde på Norges tak. Nyt ekte norsk fjell-landskap sommer som vinter. GAMLESTØLEN -fjelleventyret i Valdres.\nDombås Hyttepark\nDombås Hyttepark har 40 fantastiske hyttetomter med slående utsikt nedover vakre Lesja i retning Bjorli - med et flott alpin/langrennsanlegg som nærmeste nabo – ski in, ski out!\nKambeseth i Tinn\nKambeseth ligger i Skirvedalen i Tinn kommune i Telemark, i utkanten av Hardangervidda med muligheter for fantastiske naturopplevelser hele året. Tomtene ligger fra 930 til 980 meter over havet - tett oppunder tregrensa.\nEikenes Hyttegrend\nEikenes Hyttegrend ligger ved Tokevannet – lengst sør i Drangedal kommune på grensen til Kragerø, i Telemark fylke. Toke er den største innsjøen i Drangedal, med 160 km strandlinje og mange flotte badestrender. Vannet er omgitt av skog og fjell.\nTrysil-Knuts fjellverden, Eltsjøen\n15 ferdigregulerte hyttetomter i populært friluftsområde. Stedet ble kåret til Trysils mest attraktive friluftsområde i 2015. Skogen, fjellet og Eltsjøen innbyr til aktiviteter året rundt; 230 km med skiløyper, turstier, sykkel, jakt og fiske.\nHytter ved sjøen\nHytte ved sjøen er for mange den ultimate drømmen, med måkeskrik og bølgesus. Hvem drømmer vel ikke om late dager på svabergene, med høy solfaktor og saltvann i håret! Her presenterer vi noen av våre siste prosjekter ved kysten.\nSvanstul, Telemark\nMed sin spennende kulturhistorie, seterdrift og tømmerfløting, rike dyreliv og flotte turområder i delvis uberørt natur, er Svanstul et attraktivt og populært utfartsområde…",
+     "content_sha256": "ff32c4e9b88824b02961f6a431b234f7f2eb7c1dc4c9122fe783f174c97ed2ed"
+    },
+    {
+     "url": "https://lugnhytter.no/kontakt/",
+     "title": "KONTAKT - Lugn Hytter",
+     "main_text_excerpt": "Kontakt oss\nStolt leverandør av kundetilpassede hytter.\nVåre oppdrag varierer fra å levere byggesett til å oppføre innflytningsklare hytter.\nFra små til store hytter. I alle stilarter. Hvor som helst i landet.\nVi leverer helnorske produkter med basis i tradisjonsrik byggeskikk (plassbygger). Vi tilpasser hytta etter budsjett, ønsker og tomt (kostnadsfri tegnetilpasning). Vi legger vår sjel i at du skal oppleve prosessen som effektiv og positiv. Fra første kontakt, til nøkkelen i døra.\nSend en e-post til post@lugnhytter.no eller kontakt en av våre erfarne ansatte direkte.",
+     "identity_text_excerpt": "",
+     "content_sha256": "6f14b50cf6befed8eec7122e5df33b514b2afed4ddb675283682dca9fa6ac225"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "lugn"
+    ],
+    "matched_tokens": [
+     "lugn"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Lugn.hytter"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/lugn.hytter"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/channel/UC36NlqASSUo6X5k3f3pfYDA"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Lugn.hytter",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "lugn"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/lugn.hytter",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "lugn"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/channel/UC36NlqASSUo6X5k3f3pfYDA",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "ff32c4e9b88824b02961f6a431b234f7f2eb7c1dc4c9122fe783f174c97ed2ed",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/966732024": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "00eceb9104825e65.json.gz",
+   "content_sha256": "00eceb9104825e652691c3ddac1039fb18bf4b16d40b613e1275025ecd3abcb0",
+   "retrieved_at": "2026-11-01T21:58:51.284182Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/966732024": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "74446c1435f54ae7.json.gz",
+   "content_sha256": "74446c1435f54ae718910dfa91cf4e42f4b9d8dc38eb4cc9d682ce58b95e28ae",
+   "retrieved_at": "2026-11-01T21:58:52.028702Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/966732024/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "55e470e5b1251140.json.gz",
+   "content_sha256": "55e470e5b1251140f98c3a841848c9bbd330ec5f995100c6b82a2531b31bb44f",
+   "retrieved_at": "2026-11-01T21:58:54.199042Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/966732024": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T21:58:52.752163Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=966732024&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "0b252aa26c92a1de.json.gz",
+   "content_sha256": "0b252aa26c92a1dee834146445df0dfa2bc72b4ea5cec1b9f1f5063bc85c9a75",
+   "retrieved_at": "2026-11-01T21:58:53.471153Z"
+  },
+  "https://lugnhytter.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ff32c4e9b88824b0.html.gz",
+   "content_sha256": "ff32c4e9b88824b02961f6a431b234f7f2eb7c1dc4c9122fe783f174c97ed2ed",
+   "retrieved_at": "2026-11-01T21:59:07.568663Z"
+  },
+  "https://lugnhytter.no/kontakt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "6f14b50cf6befed8.html.gz",
+   "content_sha256": "6f14b50cf6befed8eec7122e5df33b514b2afed4ddb675283682dca9fa6ac225",
+   "retrieved_at": "2026-11-01T21:59:08.594481Z"
+  },
+  "https://lugnhytter.no/personvern/": {
+   "kind": "site",
+   "status": 200,
+   "file": "d389051a337d76d6.html.gz",
+   "content_sha256": "d389051a337d76d6714fcf344949ba29cd61a50751081061e6b4e17201a3d0de",
+   "retrieved_at": "2026-11-01T21:59:09.570758Z"
+  },
+  "https://lugnhytter.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "3a822a23619b417a.xml.gz",
+   "content_sha256": "3a822a23619b417a61f042aa7fdc7da8432acae6dd324cf91b9944ec46b4f6d7",
+   "retrieved_at": "2026-11-01T21:59:10.599117Z"
+  }
+ }
+}

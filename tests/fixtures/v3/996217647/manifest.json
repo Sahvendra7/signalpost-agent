@@ -1,0 +1,145 @@
+{
+ "organisation_number": "996217647",
+ "name": "FRANKERINGSREKVISITA NUF",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://frankeringsrekvisita.no/",
+  "retrieved_at": "2026-11-01T22:04:14.213333Z",
+  "value": {
+   "requested_url": "https://www.frankeringsrekvisita.no/",
+   "final_url": "https://frankeringsrekvisita.no/",
+   "registered_domain": "frankeringsrekvisita.no",
+   "title": "Frankeringsrekvisita - Totalleverandør av rekvisita til frankeringsmaskiner",
+   "description": "Frankeringsrekvisita er en totalleverandør av rekvisita til frankeringsmaskiner. Vårt mål er å gi kunden personlig service, rask levering og et førsteklasses produkt til meget konkurranse dyktige priser. Vi har mange års erfaring i post- og papirbehandlingsbransjen.",
+   "main_text_excerpt": "Viktig info! Har du en Pitney Bowes maskin? Les her",
+   "identity_text_excerpt": "Frankeringsrekvisita er en totalleverandør av rekvisita til frankeringsmaskiner. Vårt mål er å gi kunden personlig service, rask levering og et førsteklasses produkt til meget konkurranse dyktige priser. Nyheter Quadient iX-3 / iX-5 frankeringsblekk 1,090 kr mva Brother DK11247 sort på hvit store frakt/adresseetiketter, 103 mm x 164 mm (180 per rull) 229 kr mva Frankeringsrekvisita Forsiden Spørsmål og svar Salgsbetingelser Kontakt oss Kontakt oss Post adresse: Frankeringsrekvisita Durudveien 16A 1344 Haslum Mail: [email protected] Orgnr: 996 217 647 Telefon: +47 40 30 56 57 COPYRIGHT - FRANKERINGSREKVISTA - 2023 - HJEMMESIDE LEVERT AV NORSK DESIGN & WEBTJENESTER",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Frankeringsrekvisita"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "5a26a6e8f8b6eeaddd087303a3756197ce14a4fc1b98b020489b80db9b513060",
+   "extraction_state": "js_fallback_candidate",
+   "pages": [
+    {
+     "url": "https://frankeringsrekvisita.no/",
+     "title": "Frankeringsrekvisita - Totalleverandør av rekvisita til frankeringsmaskiner",
+     "main_text_excerpt": "Viktig info! Har du en Pitney Bowes maskin? Les her",
+     "content_sha256": "5a26a6e8f8b6eeaddd087303a3756197ce14a4fc1b98b020489b80db9b513060"
+    },
+    {
+     "url": "https://frankeringsrekvisita.no/kontakt-oss/",
+     "title": "Kontakt oss - Frankeringsrekvisita",
+     "main_text_excerpt": "Viktig info! Har du en Pitney Bowes maskin? Les her\nPost adresse:\nFrankeringsrekvisita\nDurudveien 16A\n1344 Haslum\nMail: [email protected]\nOrgnr: 996 217 647\nTelefon: +47 40 30 56 57\nØnsker du besøk av en av våre selgere? Ta kontakt så avtaler vi en tid som passer for deg.",
+     "identity_text_excerpt": "Frankeringsrekvisita er en totalleverandør av rekvisita til frankeringsmaskiner. Vårt mål er å gi kunden personlig service, rask levering og et førsteklasses produkt til meget konkurranse dyktige priser. Nyheter Quadient iX-3 / iX-5 frankeringsblekk 1,090 kr mva Brother DK11247 sort på hvit store frakt/adresseetiketter, 103 mm x 164 mm (180 per rull) 229 kr mva Frankeringsrekvisita Forsiden Spørsmål og svar Salgsbetingelser Kontakt oss Kontakt oss Post adresse: Frankeringsrekvisita Durudveien 16A 1344 Haslum Mail: [email protected] Orgnr: 996 217 647 Telefon: +47 40 30 56 57 COPYRIGHT - FRANKERINGSREKVISTA - 2023 - HJEMMESIDE LEVERT AV NORSK DESIGN & WEBTJENESTER",
+     "content_sha256": "9bdae713d14ebaf9161df623469da1271a030b9cb3e78cb3ca6a7d1ae2c1b9d8"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "frankeringsrekvisita"
+    ],
+    "matched_tokens": [
+     "frankeringsrekvisita"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Frankeringsrekvisita"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/Frankeringsrekvisita",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "frankeringsrekvisita"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "5a26a6e8f8b6eeaddd087303a3756197ce14a4fc1b98b020489b80db9b513060",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/996217647": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "37d8b48304fbe684.json.gz",
+   "content_sha256": "37d8b48304fbe6842c02684e4b34082a9c1f1cd09e26ddb7c9ebf00cab0ee840",
+   "retrieved_at": "2026-11-01T22:04:01.581137Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/996217647": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "3e48d4b3d2e184c3.json.gz",
+   "content_sha256": "3e48d4b3d2e184c34f8b2de95832d174965e11214207651f58aa32230198ecd3",
+   "retrieved_at": "2026-11-01T22:04:02.291105Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/996217647/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "de91b2fa9f3d04cf.json.gz",
+   "content_sha256": "de91b2fa9f3d04cfd01178b67f5835ddd5ba5539de4d70bf76a5a8d458ce9c9c",
+   "retrieved_at": "2026-11-01T22:04:04.454437Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/996217647": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T22:04:03.013675Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=996217647&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "028f3603e26c1a4a.json.gz",
+   "content_sha256": "028f3603e26c1a4a4063f55ddbe37b1684e260635b2fa3c3378370432bfe5f90",
+   "retrieved_at": "2026-11-01T22:04:03.724822Z"
+  },
+  "https://frankeringsrekvisita.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "723fc58086696b87.html.gz",
+   "content_sha256": "723fc58086696b8790e73981078e9b81dee4eb7363c4e02c0b4fb38673c695ff",
+   "retrieved_at": "2026-11-01T22:04:16.347350Z"
+  },
+  "https://frankeringsrekvisita.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "6e7cf281ab015291.html.gz",
+   "content_sha256": "6e7cf281ab015291b6c55c383ff27b56846a62802509356d2ef008302eaec4fa",
+   "retrieved_at": "2026-11-01T22:04:18.119346Z"
+  },
+  "https://frankeringsrekvisita.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "f9c605ecda573401.xml.gz",
+   "content_sha256": "f9c605ecda573401c5764f1ab487eded700ba5d7fc1931b5096c59292f6413a9",
+   "retrieved_at": "2026-11-01T22:04:19.518255Z"
+  }
+ }
+}

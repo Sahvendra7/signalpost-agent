@@ -295,3 +295,64 @@ far from the target, and it keeps fewer correct items.
   - root-level posts accepted on name or voice alone: 17/39.
 
 Any rule built from these observations is tuned on eval200 and needs a new independent sample before it can be reported.
+
+## 9. Second round: fixes after eval200, and the second freeze
+
+eval200 was scored once on `8223a37` (§8). From then on it is a development set, like eval120. Two new defects were
+found, both general.
+
+**1. Site-wide text counted as the item naming the company.**
+- On `8223a37`'s live release run, BE Kraftsalg published "Bodø Bunkermuseum får Bodø Energi-gaven" and "Stafett for
+  livet på Fauske mottok Bodø Energi-gaven". Each article page's footer reads "BE Kraftsalg AS · Org.nr. 990 892 687",
+  so V3's subject rule ("organisation number in the item's article page") was satisfied on every page of the group-brand
+  site. The eval120 capture had not fetched those pages.
+- On eval200, the same mechanism worked through feed boilerplate: "The post Hei, verden! appeared first on Lugn Hytter",
+  "… first appeared on Logscom AB".
+- Fix (`site_facts.item_page_text`, `site_chrome`, `news.strip_boilerplate`): an item's own text has
+  - no header, footer, nav or aside,
+  - no line the site repeats on its homepage,
+  - no "The post … appeared first on …" line (Norwegian, Swedish, Danish and German forms).
+
+  This applies to the subject rule (including business-manager sites) and to the content layer.
+
+**2. Weak content evidence.**
+- Fixes:
+  - a development counts only when the text attributes it to the company: in the title, in a sentence (or a neighbouring
+    sentence) in the company's voice, or in a sentence naming the company;
+  - sentence breaks ignore abbreviations ("nr. 2");
+  - noun-only lexicon entries are narrowed ("investering", "leveranse", "utvidet garanti");
+  - new negatives:
+    - `product`: "pris på forespørsel", cart, specifications;
+    - a commercial offer: "vi tilbyr", "i nettbutikken", "uforpliktende tilbud" — only when no development is
+      attributed;
+    - article marketing: "i denne artikkelen", "la oss se på";
+    - standing-page titles: "Forside", "Kontakt", "Om oss", a bare "Velkommen";
+    - more job-ad phrasings: "vi søker …", "er du vår nye …", "ledige stillinger", Swedish "söker / sökes / sök
+      senast", English "is hiring";
+    - advice titles: "Når bør …?", "Hvorfor …" (but not "Hvorfor vi …"), "råd til …";
+  - listicle titles allow one adjective ("5 gode grunner").
+- Every fix has a unit test (`tests/test_v31_news.py::FoundAfterEval200`, `SiteChrome`). Regression fixtures from the
+  eval200 bytes (Steinkjer Liftutleie, Logscom, Vårtun, Lugn, Provendo, Frankeringsrekvisita, Sola Hundesenter) and from
+  the live BE capture (`tests/fixtures/v31live/`) each fail on `8223a37`. Eval200 controls (Proba, IKA Hordaland,
+  Steinerskolen i Ås, Jentene på Tunet) keep their news.
+
+**Policy choice.** A `strict` policy (outside a news section, require an attributed development) was measured. It
+reaches its precision by gutting the positive controls: 911771098 16→2, Birralee 18→2, IKA Hordaland 10→2, Grønsand
+14→4. So `anchored` (with the fixes above) is kept.
+
+**News on the development sets after the fixes.** All of these are tuned, so optimistic.
+
+| Set | current | anchored (final) | strict |
+|---|---|---|---|
+| Tuned sets | 95.0%, retention 95.9% | **98.2% (111/113), retention 69.6%** | 98.2% (56/57), retention 32.4% |
+| fresh60b | 100% / 100% | 100% (28/28) / 53.8% | 100% / 34.6% |
+| eval120 | 25.8% | 66.7% (6/9) | 66.7% |
+| eval200 (now development) | 47.3% | **90.2% (46/51)**, retention 52.9% | 96.6% (28/29), retention 27.1% |
+
+Social and careers pages are unchanged by these fixes (eval200 social 73/75, careers 4/4).
+
+The remaining eval200 errors are explainers and product articles in the company's voice. There is no deterministic
+signal that separates them without overfitting: "Brannmur – beskyttelse i den digitale verden", "Trygg administrering
+av sikre passord", "TSC Etikettskrivere …", "Et lite inspill i et omfattende temafelt", and the Kameo landing page.
+
+The final rules are frozen before the new sample eval200b is opened (§10).

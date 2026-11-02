@@ -1,0 +1,211 @@
+{
+ "organisation_number": "994642340",
+ "name": "PROBA AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://proba.no/",
+  "retrieved_at": "2026-11-01T22:02:15.897196Z",
+  "value": {
+   "requested_url": "https://www.proba.no/",
+   "final_url": "https://proba.no/",
+   "registered_domain": "proba.no",
+   "title": "Proba Samfunnsanalyse",
+   "description": "",
+   "main_text_excerpt": "Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement.",
+   "identity_text_excerpt": "Om Proba Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement. Følg oss på LinkedIn Meny Hjem Aktuelt Ansatte Proba-rapporter Andre rapporter Jobbe i Proba? Kompetanse Kontakt oss post@proba.no +47 416 07 426 Hausmanns gate 27, 0182 Oslo Org. nr.: 994 642 340 Kopirett 2026 © Proba AS Nettsiden utviklet av Fredrikstad Webdesign AS",
+   "social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/proba-samfunnsanalyse"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://proba.no/#organization",
+     "name": "Proba Samfunnsanalyse",
+     "url": "https://proba.no/",
+     "logo": {
+      "@type": "ImageObject",
+      "inLanguage": "nb-NO",
+      "@id": "https://proba.no/#/schema/logo/image/",
+      "url": "https://proba.no/wp-content/uploads/2025/11/Proba-Sammfunnsanalyse.jpg",
+      "contentUrl": "https://proba.no/wp-content/uploads/2025/11/Proba-Sammfunnsanalyse.jpg",
+      "width": 1200,
+      "height": 675,
+      "caption": "Proba Samfunnsanalyse"
+     },
+     "image": {
+      "@id": "https://proba.no/#/schema/logo/image/"
+     },
+     "sameAs": [
+      "https://www.facebook.com/probasamfunnsanalyse",
+      "https://www.linkedin.com/company/proba-samfunnsanalyse/"
+     ]
+    }
+   ],
+   "content_sha256": "86c4bea633247c9fd066c3903a605ea7a730f06504a49ddddae9955cf62f2aa4",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://proba.no/",
+     "title": "Proba Samfunnsanalyse",
+     "main_text_excerpt": "Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement.",
+     "content_sha256": "86c4bea633247c9fd066c3903a605ea7a730f06504a49ddddae9955cf62f2aa4"
+    },
+    {
+     "url": "https://proba.no/kontakt-oss/",
+     "title": "Kontakt oss - Proba Samfunnsanalyse",
+     "main_text_excerpt": "Kontakt oss\nVi holder til i nyoppussede og hyggelige lokaler i Hausmanns gate 27 i den østre delen av Oslo sentrum. Inngang fra Torggata til høyre for Peloton restaurant. Det er mindre enn ti minutters gangavstand til Jernbanetorget og Grønland T-banestasjoner. Stoppestedet Jakob kirke på busslinje 54 og 34 er rett utenfor. Det er gateparkering i området, men få plasser og ikke bare lett å finne fram med bil.",
+     "identity_text_excerpt": "Om Proba Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement. Følg oss på LinkedIn Meny Hjem Aktuelt Ansatte Proba-rapporter Andre rapporter Jobbe i Proba? Kompetanse Kontakt oss post@proba.no +47 416 07 426 Hausmanns gate 27, 0182 Oslo Org. nr.: 994 642 340 Kopirett 2026 © Proba AS Nettsiden utviklet av Fredrikstad Webdesign AS",
+     "content_sha256": "4cf33dbde671bb3fb326ac6099f0277c1e08ed27a5656d3b5dccbc6f4763e069"
+    },
+    {
+     "url": "https://proba.no/kontakt-oss/",
+     "title": "Kontakt oss - Proba Samfunnsanalyse",
+     "main_text_excerpt": "Kontakt oss\nVi holder til i nyoppussede og hyggelige lokaler i Hausmanns gate 27 i den østre delen av Oslo sentrum. Inngang fra Torggata til høyre for Peloton restaurant. Det er mindre enn ti minutters gangavstand til Jernbanetorget og Grønland T-banestasjoner. Stoppestedet Jakob kirke på busslinje 54 og 34 er rett utenfor. Det er gateparkering i området, men få plasser og ikke bare lett å finne fram med bil.",
+     "identity_text_excerpt": "Om Proba Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement. Følg oss på LinkedIn Meny Hjem Aktuelt Ansatte Proba-rapporter Andre rapporter Jobbe i Proba? Kompetanse Kontakt oss post@proba.no +47 416 07 426 Hausmanns gate 27, 0182 Oslo Org. nr.: 994 642 340 Kopirett 2026 © Proba AS Nettsiden utviklet av Fredrikstad Webdesign AS",
+     "content_sha256": "580b0084c9edb5649da4cd2bf1f54d366f34dee2e9f2be7f3ffad3874608dd9d"
+    },
+    {
+     "url": "https://proba.no/pagaende-prosjekt/nytt-prosjekt-folgeevaluering-av-tilskuddsordningene-en-til-en-oppfolging-og-beredskapsteam/",
+     "title": "Nytt prosjekt: Følgeevaluering av tilskuddsordningene \"Én-til-én-oppfølging\" og \"Beredskapsteam\" - Proba Samfunnsanalyse",
+     "main_text_excerpt": "Nytt prosjekt: Følgeevaluering av tilskuddsordningene \"Én-til-én-oppfølging\" og \"Beredskapsteam\"\nBarne-, ungdoms- og familiedirektoratet er oppdragsgiver for dette toårige prosjektet. En hovedprioritering for regjeringen er å styrke det forebyggende arbeidet mot barne- og ungdomskriminalitet. De målrettede tilskuddsordningene “Én-til-én-oppfølging” og “Beredskapsteam” er sentrale i den nasjonale satsingen og omfatter flere av de største bykommunene.\nFølgeevalueringen har tre hovedformål:\n- Den skal gi innsikt i hvordan de to tilskuddsordningene fungerer i praksis i kommunene. Dette omfatter erfaringer med gjennomføring, samarbeidet mellom tjenester og aktører samt god praksis. Innsikten skal fortløpende bidra til læring og utvikling i kommunene.\n- Den skal bidra til videreutvikling av tilskuddsordningene.\n- Den skal bidra til å styrke det generelle kunnskapsgrunnlaget for kriminalitetsforebyggende arbeid rettet mot barn og unge.\nJens Plahte er prosjektleder og kontaktperson i Proba.",
+     "identity_text_excerpt": "Om Proba Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement. Følg oss på LinkedIn Meny Hjem Aktuelt Ansatte Proba-rapporter Andre rapporter Jobbe i Proba? Kompetanse Kontakt oss post@proba.no +47 416 07 426 Hausmanns gate 27, 0182 Oslo Org. nr.: 994 642 340 Kopirett 2026 © Proba AS Nettsiden utviklet av Fredrikstad Webdesign AS",
+     "content_sha256": "9301b3af84c832af0b061e0c79cab9762b686248e41956ac4c4af9b4917f59a8"
+    },
+    {
+     "url": "https://proba.no/aktuelt/nye-prosjekter-barnevernets-kompetanse-om-nevrologiske-lidelser-og-samarbeid-med-helsetjenestene/",
+     "title": "Nye prosjekter: Barnevernets kompetanse om nevrologiske lidelser og utviklingsforstyrrelser, og samarbeidet med helsetjenestene - Proba Samfunnsanalyse",
+     "main_text_excerpt": "Nye prosjekter: Barnevernets kompetanse om nevrologiske lidelser og utviklingsforstyrrelser, og samarbeidet med helsetjenestene\nProba samfunnsanalyse har fått to oppdrag fra Helsedirektoratet. Begge handler om barn og unge i barnevernet som har, eller viser tegn på, nevrologiske lidelser eller utviklingsforstyrrelser. Arbeidet gjennomføres i samarbeid med Kristin Romvig Øvergaard, professor i barne- og ungdomspsykiatri ved Oslo universitetssykehus HF. Begge oppdragene er forankret i Nasjonal hjernehelsestrategi og skal ses i sammenheng med Nasjonalt forløp for barnevern.\nBarn i barnevernet har oftere helseutfordringer enn andre barn. Tegnene kan være sammensatte og vanskelige å tolke. Vansker med regulering, oppmerksomhet, læring eller søvn kan ha flere forklaringer samtidig: En nevrologisk eller utviklingsmessig tilstand hos barnet kan bli forstått som en reaksjon på en ustabil livssituasjon, omsorgssvikt eller traumer – og motsatt. Tjenestene forstår heller ikke alltid de samme tegnene likt. Barnevernet skal ikke ta stilling til hvilken diagnose et barn eventuelt har, men fange opp bekymringstegn som bør følges opp i helsetjenesten. Da er samarbeidet mellom barnevernet og helsetjenestene avgjørende for at barna får riktig hjelp til rett tid.\nBarnevernets kompetanse til å gjenkjenne tegn på nevrologiske lidelser og utviklingsforstyrrelser hos barn og unge\nI dette prosjektet kartlegger vi barnevernets kompetanse, verktøy og rutiner for å gjenkjenne tegn som kan skyldes nevrologiske lidelser eller utviklingsforstyrrelser. Kartleggingen skal gi grunnlag for tiltak som kan styrke riktig identifisering.\nSamarbeid mellom barnevern og helse- og omsorgstjenesten hos barn og unge med nevrologiske lidelser og utviklingsforstyrrelser\nI dette prosjektet undersøker vi hvordan samarbeidet mellom barnevernet og helse- og omsorgstjenestene fungerer når barn har en diagnostisert nevrologisk lidelse eller utviklingsforstyrrelse.\nMer om prosjektene\nI begge prosjektene kombinerer vi registerdata, spørreundersøkelser og kvalitative intervjuer i datainnsamlingen. Sluttrapportene skal være klare i desember 2026.\nProsjektleder er Trude Thorbjørnsrud. Kontaktperson i Proba er Frida Bjørneseth.\nSe også oppslag på Hjernerådets webside.",
+     "identity_text_excerpt": "Om Proba Proba er et analyse- og utredningsselskap med spisskompetanse på velferdsfeltet. Vi bidrar med relevant kunnskap til våre oppdragsgivere, med faglig tyngde og engasjement. Følg oss på LinkedIn Meny Hjem Aktuelt Ansatte Proba-rapporter Andre rapporter Jobbe i Proba? Kompetanse Kontakt oss post@proba.no +47 416 07 426 Hausmanns gate 27, 0182 Oslo Org. nr.: 994 642 340 Kopirett 2026 © Proba AS Nettsiden utviklet av Fredrikstad Webdesign AS",
+     "content_sha256": "9735949ce908c773878bb159376848bd5cf02a48a215b62c1f5932ef36028f16"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "proba"
+    ],
+    "matched_tokens": [
+     "proba"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/proba-samfunnsanalyse"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/proba-samfunnsanalyse",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "proba"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "86c4bea633247c9fd066c3903a605ea7a730f06504a49ddddae9955cf62f2aa4",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/994642340": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "6d9863ab0d4010bf.json.gz",
+   "content_sha256": "6d9863ab0d4010bfd326c059e82e7b54a53022a0a916dcf7afa7061a4618d4a7",
+   "retrieved_at": "2026-11-01T22:01:57.773979Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/994642340": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "022e2fcd778d9205.json.gz",
+   "content_sha256": "022e2fcd778d920523f9d8870699746000958a973b810220b09fa68b5885c3f4",
+   "retrieved_at": "2026-11-01T22:01:58.449808Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/994642340/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "da0ade6e0891dee0.json.gz",
+   "content_sha256": "da0ade6e0891dee0ac7da97bf39fc27cdccb60b16f2611976e7ce6380a2a6e9c",
+   "retrieved_at": "2026-11-01T22:02:00.499019Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/994642340": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T22:01:59.125259Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=994642340&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2b45b44f02944c48.json.gz",
+   "content_sha256": "2b45b44f02944c487f5effa9fd6e5a679960b86395619a20ad621578e00ec5e2",
+   "retrieved_at": "2026-11-01T22:01:59.813762Z"
+  },
+  "https://proba.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "2b2a234fe6a26c04.html.gz",
+   "content_sha256": "2b2a234fe6a26c04ae7becde8b2c8956d32e9a3854674b9e5185fc1dcfa18604",
+   "retrieved_at": "2026-11-01T22:02:18.256726Z"
+  },
+  "https://proba.no/kontakt-oss/": {
+   "kind": "site",
+   "status": 200,
+   "file": "ac6c0802e2420210.html.gz",
+   "content_sha256": "ac6c0802e242021006e2f804e4a86f91730af0441c76647a1d0c639fc1cfe1da",
+   "retrieved_at": "2026-11-01T22:02:19.720304Z"
+  },
+  "https://proba.no/kontakt-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "63aa15b13655bba0.html.gz",
+   "content_sha256": "63aa15b13655bba0eb0f5a2789289214b5142884135622b503b0c71afa21c035",
+   "retrieved_at": "2026-11-01T22:02:21.676558Z"
+  },
+  "https://proba.no/kategori/aktuelt/": {
+   "kind": "site",
+   "status": 200,
+   "file": "82ae826c72cd1147.html.gz",
+   "content_sha256": "82ae826c72cd114760634211058b9d6b66a7f158774f3c744c915b503708dc59",
+   "retrieved_at": "2026-11-01T22:02:24.558353Z"
+  },
+  "https://proba.no/jobbe-i-proba/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a0998be3e19394f8.html.gz",
+   "content_sha256": "a0998be3e19394f8e068d1a4e0dfc7972007a89ea073d66db17c00b0f986a0dc",
+   "retrieved_at": "2026-11-01T22:02:25.727808Z"
+  },
+  "https://proba.no/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "d44449cafdcfe315.xml.gz",
+   "content_sha256": "d44449cafdcfe315618a2787daa16d7b268caf3cf088eb12ed9ee6f909980a1a",
+   "retrieved_at": "2026-11-01T22:02:22.983421Z"
+  }
+ }
+}

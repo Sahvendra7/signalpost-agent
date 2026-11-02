@@ -1,0 +1,209 @@
+{
+ "organisation_number": "971348496",
+ "name": "INTERKOMMUNALT ARKIV I HORDALAND IKS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.ikah.no/",
+  "retrieved_at": "2026-11-01T21:59:52.902273Z",
+  "value": {
+   "requested_url": "https://www.ikah.no/",
+   "final_url": "https://www.ikah.no/",
+   "registered_domain": "ikah.no",
+   "title": "Framside - Interkommunalt arkiv i Hordaland IKS",
+   "description": "Framside",
+   "main_text_excerpt": "Sett av 26. og 27. oktober for årets kontaktkonferanse for arkiv-Hordaland på Sandsli. Vi ser fram til to svært kjekke dagar på Quality Hotel Edvard G...\nHausten 2025 har Kultur- og likestillingsdepartementet sendt ut forslag til ny arkivforskrift på høyring. Det same har Riksarkivaren gjort med ny beva...\nTirsdag den 6. januar 2026 publiserte vi dei fyrste bileta på Digitalarkivet foto. Aller fyrst for tur står fotosamlinga etter Radøy bygdeboknemnd. De...\nVi har inngått samarbeidsavtale med Universitetet i Bergen om å ta imot studentar frå emnet AHKR202 Digitalisering av kulturarven: Teoretisk innføring...",
+   "identity_text_excerpt": "Kontakt oss Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348 Våre erklæringar Tilgjengelegheitserklæring Serviceerklæring Følg oss Nettstaden er levert av CustomPublish Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348",
+   "social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/interkommunalt-arkiv-i-hordaland-iks"
+    }
+   ],
+   "structured_organisations": [],
+   "content_sha256": "6fb5a6b97ee7f481b99436901d579e0c9d879408dca2ce67344ebfcd0279d180",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.ikah.no/",
+     "title": "Framside - Interkommunalt arkiv i Hordaland IKS",
+     "main_text_excerpt": "Sett av 26. og 27. oktober for årets kontaktkonferanse for arkiv-Hordaland på Sandsli. Vi ser fram til to svært kjekke dagar på Quality Hotel Edvard G...\nHausten 2025 har Kultur- og likestillingsdepartementet sendt ut forslag til ny arkivforskrift på høyring. Det same har Riksarkivaren gjort med ny beva...\nTirsdag den 6. januar 2026 publiserte vi dei fyrste bileta på Digitalarkivet foto. Aller fyrst for tur står fotosamlinga etter Radøy bygdeboknemnd. De...\nVi har inngått samarbeidsavtale med Universitetet i Bergen om å ta imot studentar frå emnet AHKR202 Digitalisering av kulturarven: Teoretisk innføring...",
+     "content_sha256": "6fb5a6b97ee7f481b99436901d579e0c9d879408dca2ce67344ebfcd0279d180"
+    },
+    {
+     "url": "https://www.ikah.no/om-oss.587269.nn.html",
+     "title": "Om oss - Interkommunalt arkiv i Hordaland IKS",
+     "main_text_excerpt": "Hopp til toppmenyen på siden\n\t\tHopp til hovedinnholdet på siden",
+     "identity_text_excerpt": "Kontakt oss Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348 Våre erklæringar Tilgjengelegheitserklæring Serviceerklæring Følg oss Nettstaden er levert av CustomPublish Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348",
+     "content_sha256": "6827fda9658588a27ba3382ea669cde310565154bb1d6ecd1cfb362ab60b8fa3"
+    },
+    {
+     "url": "https://www.ikah.no/kontakt-oss.587270.nn.html",
+     "title": "Kontakt oss - Interkommunalt arkiv i Hordaland IKS",
+     "main_text_excerpt": "Vi ber om at du krev innsyn i arkiva ved å nytte skjema for å tinge opplysingar via vår nettstad.\nDersom du har andre førespurnader ber vi om at du sender oss ein e-post. Vi gjer merksam på at alle saker registrerast i vårt sak-/ arkivsystem.\nVi er ofte på vitjing i kommunane i Hordaland, eller utan telefondekning inne i arkivmagasina. Vi ber difor om forståing for at det kan vera vanskeleg å nå oss på telefon.\nTelefon: 55 30 60 90\nPostadresse:\nInterkommunalt arkiv i Hordaland IKS\nKalfarveien 82\n5022 Bergen\nBesøksadresse: Kalfarveien 82, 5022 Bergen\nOrganisasjonsnummer: 971 348 496\nBankkontonummer: 3624 34  92348",
+     "identity_text_excerpt": "Kontakt oss Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348 Våre erklæringar Tilgjengelegheitserklæring Serviceerklæring Følg oss Nettstaden er levert av CustomPublish Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348",
+     "content_sha256": "70d7cf881bd9525c5d3d64ff75479b06c5636ee619f7b90fca153ffc1ee76a56"
+    },
+    {
+     "url": "https://www.ikah.no/kontaktkonferansen-2025.6724446-532477.html",
+     "title": "Kontaktkonferansen 2025 - Interkommunalt arkiv i Hordaland IKS",
+     "main_text_excerpt": "Hardangerfjord Hotel har lange tradisjoner for godt vertskap og kjekke og smakfulle opplevelser for både kropp og gane. Vi har det beste av vestlandsk natur like utenfor døren, fra fjord til fonn. Vi skreddersyr fantastiske hotellopplevelser i og langs Hardangerfjorden. Med vår unik atmosfære og sammen med våre ansatte ligger vi tilrette for et opphold hos oss som virkelig er verdt turen til Hardanger.\n2025 er året for tidlig blomstring og de gode temperaturene i mai har gitt oss en fantastisk vår så langt. Det ligger an til en nydelig eplehøst allerede. Enkelte sjeler vil også ha det til at Hardangerfjordens badetemperatur allerede er innenfor rekkevidde.\nHardangerbadet ligger vegg-i-vegg med Hardangerfjord Hotel. Her kan du svømme, bade, leke eller bare slappe av. Som gjest hos oss får du gratis inngang til badeanleggett\nÅrets program inneheld mellom anna:\n \nNy æra for dokumentasjonsplanen og internkontroll for arkiv\nMed ny arkivlov med tilhøyrande forskrift og oppdatering av arkivplan.no skjer det store endringar på området. Å ivareta ein funksjonell dokumentasjonsplan blir berre viktigare også i tida framover for å halde kontroll på- og å nytte data riktig i alle kommunale tenester. Dokumentasjonsplanen har difor blitt meir enn eitt dokument og eitt system. I denne bolken utforskar vi strategiar for vidare arbeid med dokumentasjonplan i kvalitetssystem og systemforvaltingssystem- samt spørsmål kring publisering.\nInnleiing ved IKA Hordaland \nDel 1 ved Hilde Kristine Bøe, rådgjevar ved Digitalisering og innovasjon Nordhordland og Signe Morvik, fagleiar for dokumentsenteret i Osterøy kommune. \nDel 2 ved Birte Young, avdelingsleiar for dokumentsenteret i Øygarden kommune\nKunstig intelligens og postlister\nÅ ivareta personvern og å kontrollere dokumentinnhald i fulltekstpubliserte dokument på kommunen si postliste har vekt mykje merksemd i media det siste året - på godt og vondt. Med den raske utviklinga av kunstig intelligens ser vi stadig nye mogelegheiter for gje offentlegheita meir, men for like mykje eller mindre ressursar enn før. Korleis nyttar Øvre Eiker kommune kunstig intelligens for å ivareta og sikre opplysingane i dokumenta på postlista si?\nVed Trine Bryn Jensen, arkivleiar i Øvre Eiker kommune\nImplementering av kunstig intelligens i ulike delar av forvaltinga\nFor å effektivisere og auke kvaliteten på ulike tenester i forvaltinga har Bamble kommune vore innovative i bruken av kunstig intelligens. Dei vil fortelja om bruk av KI til mellom anna chatbotter og Acos Websak, plattform for opplæring av lærarar og transkribering og automatisk genererte møtereferat. I tillegg jobbast det med å iverksette KI til å rekne ut lønsansenitet og i sakshandsaminga. Kva vinster og utfordringar møter Bamble på?\n \nNytt lovverk for arkiv og forvalting\nMed verknad frå 01.01.2026 innførast det nytt lovverk i Noreg. Både forvaltingslova frå 1967 og arkivlova frå 1999 er revidert og planlagt å tre i kraft. Kva er det nye me skal sjå etter i lovverket, og korleis påverkar dette måten me arbeider på i dag? \nFøredragshaldar ikkje offentleggjort\n \nE-arkiv og innsyn\nKommunane i Hordaland har deponert mange hundre sak-/arkiv- og fagsystem til IKA Hordaland dei seinare åra. Databasane er ofte tilgjengelege i kommunane også etter deponering som historiske oppslagsbasar- enn så lenge. IKA Hordaland arbeidar med strategiar og konkrete tiltak for å gjera systema tilgjengelege, fyrst internt. Dei fleste deponerte systema er for hybridarkiv- arkiv med både papir- og elektronisk dokumentasjon. Korleis og når bør kommunen få tilgang til dokumentasjon i deponerte fagsystem?\nVed Knut Kjosås, fagleiar hjå IKA Hordaland\n \nBeredskap \nInformasjon om emnet kjem.\n \nSAMLA.no – digitalisering av kulturhistoriske arkiv\nPå 18- og 1900-talet har folkeminnesamlarar saumfara fjord, kyst og fjell i Hordaland etter folkekulturen til folket som budde der. Songar, kunnskap, viser, forteljingar, byggeskikkar og jordbruksteknikkar, skumle skikkelser, folketru- ja, dei ville dokumentere heile kulturen. Ein ordentleg innsats har vore gjennomført for å gjera desse mangfaldige kulturane i Hordaland og over heile Noreg tilgjengelege og søkbare på Samla.no. Ei ordentleg skattekiste for alle!\nVed Kyrre Kverndokk, professor i Kulturvitskap hjå UIB og Angun Sønnesyn Olsen, stipendiat i kulturhistorie hjå UIB\nOrienteringar frå IKA Hordaland\nVi vil orientere om mellom anna byggesak, innsyn og tilgjengeleggjering, mediekonvertering, depotsituasjonen, Arkivarar utan grenser, med meir.\n Ved IKA Hordaland",
+     "identity_text_excerpt": "Kontakt oss Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348 Våre erklæringar Tilgjengelegheitserklæring Serviceerklæring Følg oss Nettstaden er levert av CustomPublish Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348",
+     "content_sha256": "be8624cd47dd4347b580e93e9cef847a3a9f66aedf79de3a7fb49f013f9cf467"
+    },
+    {
+     "url": "https://www.ikah.no/kontaktkonferansen-2026.6745346-532477.html",
+     "title": "Kontaktkonferansen 2026 - Interkommunalt arkiv i Hordaland IKS",
+     "main_text_excerpt": "Velkomen til ein heilt ny konferanseavdeling over to plan med møteromma plassert rett ut mot skogen og Fana Golf. Der er store, herlige glassflater å hente lys og inspirasjon fra. Med terasse, popcorn- og iskremmaskin blir det i tillegg til møtemat, heilt magiske småpauser mellom dei faglege innlegga.\nMed moderne hotellrom, festmiddag, underhaldning og deilige lunsjar blir det topp stemning på Edvard Grieg. For ikkje snakke om gode arkivfolk.\nTrykk her for å melde deg på (Påmeldinga er no stengt).\nMåndag 26. oktober\n10.00 - 11.00 registrering, kaffi og snacks\n11.00 - 11.15 Opning av konferansen\nFor å opne konferansen får vi besøk av statssekretær Trude Storheim frå Voss. Ho har lang erfaring frå kultursektoren, mellom anna som dagleg leiar for Vossa Jazz frå 2008 til 2023 og som kommunalsjef for kultur og fritid i Voss herad frå 2023 til 2024. Den 28. februar 2025 vart ho utnemnd til statssekretær i Kultur- og likestillingsdepartementet.\nVed statssekretær Trude Storheim, Kultur- og likestillingsdepartementet\n11.15 - 11.30 Praktisk informasjon ved Rune Lothe, IKA Hordaland\n11.30 – 11.50 Arkiv og beredskap i ei uroleg tid\nI ei uroleg tid er arkiva viktig for samfunnet sin beredskap og motstandskraft. Når krisa treffer, kan helseregistre, reguleringsplanar, byggteikningar og kritisk samfunnsinformasjon avgjera liv og tryggleik. Nasjonalarkivar Inga Bolstad tek oss inn i eit trusselbilete i endring, og i Nasjonalarkivet sitt arbeid med digital sikring og beredskap. Ho fortel også om kva dei lærte då vatnet steig i Hamar.\nVed Inga Bolstad, Nasjonalarkivar hjå Nasjonalarkivet\n11.50 - 13.00 Lunsj\n13.00 - 13.45 Kva skjer når vi mistar dataane våre?\nI 2021 vart datasystema i Østre Toten kommune åteken og dei mista tilgang til alle fagsystema i kommunen. Kva skjer når kommunen plutseleg mistar tilgang til og kontroll over alle sine data? Kommunedirektør Ole Magnus Stensrud delar sine erfaringar frå krisehandteringa, sine lærdommar frå stridas heite og korleis vi kan vera betre budd neste gong eit slikt åtak treff.\nVed Ole Magnus Stensrud, kommunedirektør i Østre Toten kommune\n13.45 - 14.30 Tryggleik, beredskap og offentleg innsyn\nOffentleg innsyn er eit grunnleggjande prinsipp for eit ope og demokratisk styre. Likevel krev tryggings- og beredskapsomsyn ofte unnatak frå regelen om ei ope forvalting. Erland Aamodt er advokat i KS med kommunalrett og offentlegheit som sine primære kompetanseområde. Han tek utgangspunkt i mellom anna offentleglova når han fortel om korleis vi kan trygge opplysingar og dokumentasjon i det strategisk viktige Hordaland.\nVed Erland Aamodt, Advokat i Kommunesektorens organisasjon\n14.30 - 15.00 Pause\n15.00 - 15.45 Det klinkande klåre nye lovverket\nMed ferdig rettleiar til den nye paragraf 43 \"Handsaming av søknader om kassasjon av enkeltopplysningar\" er alt klinkande klårt, eller er det ikkje? Tenesteleiar for arkiv og dokumentasjonsforvalting i Bærum kommune, Kjersti Myro, tek uss med på djupdykk inn i nokre av arkivlova sine omdiskuterte paragrafar. Blir vi klokare?\nVed Kjersti Myro, Tenesteleiar for arkiv og dokumentasjonsforvalting, Bærum kommune\n15.45 - 16.30 Debatt om innføring av nytt lovverk\nArkivlovverket som trådte i kraft 01.01.2026 har medført mange endringar for kommunane, og no har vi hatt snart eit år med erfaringar. Kva er enkelt for kommunane å innføre? Kva er meir utfordrande eller uforståeleg? Vi har eit rom med høg takhøgde og vonleg snakkeglade konferansedeltakarar. \nVed IKA Hordaland, Kjersti Myro, Olav Sataslåtten, Inga Bolstad, konferansedeltakane m.fl. \n16.30 - 16.45 Avslutning dag 1\n16.45 - 19.30 Eigentid\n19.30 - 20.00 Apertiff og underhaldning\n20.00 - 22.30 Festmiddag i restauranten + quiz med Birte Young\nTysdag 27. oktober\n09.15 - 09.45 Orienteringar frå IKA\nVi fortel om arbeidet vi gjer med arkiva til alle kommunane i Hordaland. Tema famnar digitalisering, ordning, e-arkiv, statistikk, fotografi, kartlegging, byggesak, møtebøker, framtid, lokala i Kalfaret med meir.\nVed Rune Lothe, Knut Kjosås, Sandra Valskog og Lars Fivelstad Smaaberg hjå IKA Hordaland\n09.45 - 10.30 Integrasjon eller innebygd arkivering?\nKravet til Noark for å oppbevare og langtidslagre dokumentasjon har forsvunne, erstatta av eit mjukt sett med spørsmål. Gjev dette grunnlag for å byrje arbeidet med å vurdere informasjonssystem som innebygde arkiv eller skal vi behalde integrasjonane? Olav Sataslåtten er spesialkonsulent II hjå Oslo byarkiv og er engasjert i korleis vi kan utnytte handlingsrommet i det nye arkivlovverket.\nVed Olav Sataslåtten, Spesialkonsulent II i Oslo kommune\n10.30 - 11.00 Pause med utsjekk\n11.00 - 11.45 Funksjonsbasert klassifikasjon og bevaringsplan\nKorleis kan funksjonsbasert klassifikasjon og bevaringsplan bli gode verktøy for å styre dokumentasjonen frå skaping til kassasjon eller bevaring? Det nye arkivregelverket vert ofte omtala som funksjonsbasert og legg opp til auka automatisering av arkivet. Marius Bjørnson Hofstad er seniorrådgjevar i Nasjonalarkivet og vil presente",
+     "identity_text_excerpt": "Kontakt oss Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348 Våre erklæringar Tilgjengelegheitserklæring Serviceerklæring Følg oss Nettstaden er levert av CustomPublish Interkommunalt arkiv i Hordaland IKS Kalfarveien 82, 5022 Bergen Tlf: 55 30 60 90 Org.nr.: 971 348 496 Konto: 3624 34 92348",
+     "content_sha256": "e769f5805be137baf06875deb3e60a094e190e229976336f7ced34be7ab71e21"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "interkommunalt",
+     "arkiv",
+     "hordaland"
+    ],
+    "matched_tokens": [
+     "arkiv",
+     "hordaland",
+     "interkommunalt"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/ikahordaland"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/ikahordaland"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/interkommunalt-arkiv-i-hordaland-iks"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/ikahordaland",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "hordaland"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/ikahordaland",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "hordaland"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/interkommunalt-arkiv-i-hordaland-iks",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "interkommunalt",
+      "arkiv",
+      "hordaland"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "6fb5a6b97ee7f481b99436901d579e0c9d879408dca2ce67344ebfcd0279d180",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/971348496": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1f0500ab62e48039.json.gz",
+   "content_sha256": "1f0500ab62e480396b20cdadaa79df536b75b241daff1624c8ab3b3ed54dcb5b",
+   "retrieved_at": "2026-11-01T21:59:42.544272Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/971348496": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "5e0a0b98b71d831b.json.gz",
+   "content_sha256": "5e0a0b98b71d831baa7bc655a9918ed7d61826ab0e95e12f2f82fefe7909c283",
+   "retrieved_at": "2026-11-01T21:59:43.216010Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/971348496/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "25fcf71d1f9f3767.json.gz",
+   "content_sha256": "25fcf71d1f9f376796c6ccffbf5cf10bd5651668e3de62dc0ae0200fa461364f",
+   "retrieved_at": "2026-11-01T21:59:45.393578Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/971348496": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T21:59:43.887096Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=971348496&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "84eec6702ea9f239.json.gz",
+   "content_sha256": "84eec6702ea9f239b1296bba9eac0554cd400c9ba3da06cb2fd412d02784c279",
+   "retrieved_at": "2026-11-01T21:59:44.574042Z"
+  },
+  "https://www.ikah.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "fdd505aea6284e42.html.gz",
+   "content_sha256": "fdd505aea6284e4255abed1ed5ea31f67f67b1535bf0e7e0bd28d4f51de228b5",
+   "retrieved_at": "2026-11-01T21:59:54.170283Z"
+  },
+  "https://www.ikah.no/min-kommunekontakt.537736.nn.html": {
+   "kind": "site",
+   "status": 200,
+   "file": "5ec8d98bbe26b866.html.gz",
+   "content_sha256": "5ec8d98bbe26b86619956093a8e0a9ed8583002bb1502c236cee2ae7c3917774",
+   "retrieved_at": "2026-11-01T21:59:54.933734Z"
+  },
+  "https://www.ikah.no/om-oss.587269.nn.html": {
+   "kind": "site",
+   "status": 200,
+   "file": "4112f2b2d2f9f50b.html.gz",
+   "content_sha256": "4112f2b2d2f9f50b62dcd271781c1444161c9b4f7a906d2e7658b6439822c26b",
+   "retrieved_at": "2026-11-01T21:59:55.668737Z"
+  },
+  "https://www.ikah.no/rss.php/cat/532482": {
+   "kind": "feed",
+   "status": 200,
+   "file": "440c5990d9d42b0c.xml.gz",
+   "content_sha256": "440c5990d9d42b0c86a807ba011b3268af6bce01dc4ba7cb92c360b8e7ac2f80",
+   "retrieved_at": "2026-11-01T21:59:56.286858Z"
+  }
+ }
+}

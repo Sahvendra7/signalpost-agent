@@ -1,0 +1,64 @@
+{
+ "organisation_number": "889169672",
+ "name": "VÅRTUN KRISTNE OPPVEKSTSENTER - BARNEHAGE SA",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "blocked",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://vaartun.barnehage.no/",
+  "retrieved_at": "2026-11-01T22:01:46.794873Z",
+  "value": null,
+  "as_of": null,
+  "note": "robots.txt unreachable (5xx/429/network; RFC 9309: assume disallow)",
+  "content_sha256": null,
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/889169672": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "4b13347f6d740c2b.json.gz",
+   "content_sha256": "4b13347f6d740c2bca771fcaf175645fcc7a0cf5d1b4833f40b0815b32ca2643",
+   "retrieved_at": "2026-11-01T22:01:43.470119Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/889169672": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1a1484a79bbbc992.json.gz",
+   "content_sha256": "1a1484a79bbbc9924f4886d5a0da0abd88c453eaedce9b1f3c974acf062b641a",
+   "retrieved_at": "2026-11-01T22:01:44.146932Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/889169672/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b69bd73ebccea49b.json.gz",
+   "content_sha256": "b69bd73ebccea49b7f2a44a4cf594fff0afa5de836bf9e4e6e7022a560716972",
+   "retrieved_at": "2026-11-01T22:01:46.310629Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/889169672": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T22:01:44.829803Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=889169672&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "00be1a74f57524ce.json.gz",
+   "content_sha256": "00be1a74f57524cef044891d8f24e2eca7c7a464e2738fe49b6403fd76fa9849",
+   "retrieved_at": "2026-11-01T22:01:45.513359Z"
+  },
+  "https://vko.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "de9d3233a213a8d1.html.gz",
+   "content_sha256": "de9d3233a213a8d1a60427334b057f7255deafec6bf2fe0416b1685291213454",
+   "retrieved_at": "2026-11-01T22:01:53.083025Z"
+  }
+ }
+}

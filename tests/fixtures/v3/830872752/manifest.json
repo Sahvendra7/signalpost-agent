@@ -1,0 +1,208 @@
+{
+ "organisation_number": "830872752",
+ "name": "LOGSCOM AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://logscom.com/",
+  "retrieved_at": "2026-11-01T21:57:42.301705Z",
+  "value": {
+   "requested_url": "https://logscom.com/",
+   "final_url": "https://logscom.com/",
+   "registered_domain": "logscom.com",
+   "title": "We make logs communicate - Logscom AB",
+   "description": "WORLD-LEADING TIMBER TAGGING/ MARKING SOLUTIONS We Make Logs Communicate, With our world leading tagging solutions. Do you want to make sure your timber isnt mixed up with illegally harvested wood between the forest and industry?Then Logscom tagging system, together with MetricBoost™, will make it possible to verify the harvester measurements where ever your marked timber shows",
+   "main_text_excerpt": "WORLD-LEADING TIMBER TAGGING/ MARKING SOLUTIONS\nWe Make Logs Communicate, With our world leading tagging solutions. Do you want to make sure your timber isnt mixed up with illegally harvested wood between the forest and industry?\nThen Logscom tagging system, together with MetricBoost™, will make it possible to verify the harvester measurements where ever your marked timber shows up. \nTEKNIKEN FÖR ATT MÄRKA OCH SPÅRA VIRKE\nLogscom AB har sedan starten utvecklat lösningar för att märka och spåra virkesråvaran, från skog till industri. Idag har vi två lösningar för att råda bot på ditt arbete med att märka virke; vår storsäljare Logscom GTP som märker virket från din skotare och Logscom HTP som märker virket direkt i skördaraggregatet. Du hittar oss i Åsele!\nUTBUD\nHYDRAULIK\nTillsammans med AMAB Hydraul och Manuli erbjuder vi världsledande lösningar för hydraulslangar och allt annat inom hydraulik. Ring 0941-10041 direkt när du behöver en hydraulslang, alltid öppet!\nLOGSCOMS TEAM\nWhy Us?\nBest Tagging Equipment\nLogscom AB offer the only automatic tagging system for the mecanical forestry business.\n10 Years of Experience\nSince 2011 Logscom has been developing taggingsystem, we are the first one to run timber tagging system out in a profersinal forestry business.\nWorld Wide Market Knowledge\nDue to a world wide contact network and experience of the forestry business from all over the world where mechanized forestry production will go on - we will be a perfect partner to make your timber log to comunicate - LOGSCOM.\nVår Adress\nBlåviksvägen 11, 919 31 Åsele, SWEDEN",
+   "identity_text_excerpt": "Om oss Logscom AB utvecklar och säljer teknik för virkesmärkning och spårbarhet. Härutöver har vi ett komplett utbud för att fixa allt inom hydraulik och vattensport! Vår adress Blåviksvägen 11 919 31 Åsele SWEDEN Kontakta oss Tel +4694110041 Följ oss Håll dig uppdaterad: facebook instagram Inspiro Theme av WPZOOM",
+   "social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/logscom"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/logscom_ab"
+    }
+   ],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://logscom.com/#organization",
+     "name": "Logscom AB",
+     "description": "Vi märker ditt virke!",
+     "url": "https://logscom.com/",
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://i0.wp.com/logscom.com/wp-content/uploads/2026/01/cropped-Logscom-orange-one-row-with-timberprinters-251201.png?fit=661%2C131&ssl=1",
+      "@id": "https://logscom.com/#organizationLogo",
+      "width": 661,
+      "height": 131
+     },
+     "image": {
+      "@id": "https://logscom.com/#organizationLogo"
+     }
+    }
+   ],
+   "content_sha256": "a32c525b3d017567fb4ed21cb5b5e497b8ea1974aaef8504c8270e614734b13b",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://logscom.com/",
+     "title": "We make logs communicate - Logscom AB",
+     "main_text_excerpt": "WORLD-LEADING TIMBER TAGGING/ MARKING SOLUTIONS\nWe Make Logs Communicate, With our world leading tagging solutions. Do you want to make sure your timber isnt mixed up with illegally harvested wood between the forest and industry?\nThen Logscom tagging system, together with MetricBoost™, will make it possible to verify the harvester measurements where ever your marked timber shows up. \nTEKNIKEN FÖR ATT MÄRKA OCH SPÅRA VIRKE\nLogscom AB har sedan starten utvecklat lösningar för att märka och spåra virkesråvaran, från skog till industri. Idag har vi två lösningar för att råda bot på ditt arbete med att märka virke; vår storsäljare Logscom GTP som märker virket från din skotare och Logscom HTP som märker virket direkt i skördaraggregatet. Du hittar oss i Åsele!\nUTBUD\nHYDRAULIK\nTillsammans med AMAB Hydraul och Manuli erbjuder vi världsledande lösningar för hydraulslangar och allt annat inom hydraulik. Ring 0941-10041 direkt när du behöver en hydraulslang, alltid öppet!\nLOGSCOMS TEAM\nWhy Us?\nBest Tagging Equipment\nLogscom AB offer the only automatic tagging system for the mecanical forestry business.\n10 Years of Experience\nSince 2011 Logscom has been developing taggingsystem, we are the first one to run timber tagging system out in a profersinal forestry business.\nWorld Wide Market Knowledge\nDue to a world wide contact network and experience of the forestry business from all over the world where mechanized forestry production will go on - we will be a perfect partner to make your timber log to comunicate - LOGSCOM.\nVår Adress\nBlåviksvägen 11, 919 31 Åsele, SWEDEN",
+     "content_sha256": "a32c525b3d017567fb4ed21cb5b5e497b8ea1974aaef8504c8270e614734b13b"
+    },
+    {
+     "url": "https://logscom.com/contact-2/",
+     "title": "Kontakta oss - Logscom AB",
+     "main_text_excerpt": "Vår adress\nLogscom AB\nBlåviksvägen 11\nSE-91931 Åsele\nSweden\nVårt telefonnummer:\n+4694110041\nHör av dig till oss\nHojta till så snart du har en fundering kring våra virkesmärkningssystem och vårt sätt att märka virke!\nSjälvklart är det bara att titta in till oss eller ringa oss om du behöver nya hydraulslangar. Du når oss på 094110041. Är du inte i Åsele kan du alltid ringa vår nationella mobila slangservice på 010-222 98 00.\nGår såklart också bra att skicka oss ett mail till oss på info@logscom.com",
+     "identity_text_excerpt": "Om oss Logscom AB utvecklar och säljer teknik för virkesmärkning och spårbarhet. Härutöver har vi ett komplett utbud för att fixa allt inom hydraulik och vattensport! Vår adress Blåviksvägen 11 919 31 Åsele SWEDEN Kontakta oss Tel +4694110041 Följ oss Håll dig uppdaterad: facebook instagram Inspiro Theme av WPZOOM",
+     "content_sha256": "1373bf105f3fd3fda0e7bfa93e17ac70f7bd3ad20abbb5d8ff49fe37000a3b30"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "logscom"
+    ],
+    "matched_tokens": [
+     "logscom"
+    ],
+    "reasons": [
+     "single distinctive legal-name token appears in homepage identity evidence with substantive content"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/logscom"
+    },
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/wpzoom"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/logscom_ab"
+    },
+    {
+     "platform": "x",
+     "url": "https://x.com/wpzoom"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/logscom",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "logscom"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/wpzoom",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/logscom_ab",
+     "identity_score": 0.98,
+     "publishable": true,
+     "matched_tokens": [
+      "logscom"
+     ],
+     "reason": "normalized legal-name sequence appears in the social handle",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "x",
+     "url": "https://x.com/wpzoom",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "a32c525b3d017567fb4ed21cb5b5e497b8ea1974aaef8504c8270e614734b13b",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/830872752": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "2727670418774279.json.gz",
+   "content_sha256": "272767041877427961dda574884766c61c14db047899acf573378150f9b017d7",
+   "retrieved_at": "2026-11-01T21:57:33.923970Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/830872752": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "e11271bc9d5db7d9.json.gz",
+   "content_sha256": "e11271bc9d5db7d9735205cad79e5cd994b02ce97f60050527e9128ef024533d",
+   "retrieved_at": "2026-11-01T21:57:34.645213Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/830872752/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "13519f768d49430d.json.gz",
+   "content_sha256": "13519f768d49430dea7d77a78a1aa1a0ee09b78dde9a2d3fbe8be79f7efd3cde",
+   "retrieved_at": "2026-11-01T21:57:36.793359Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/830872752": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T21:57:35.357691Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=830872752&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "fd4d3c05f4e7f238.json.gz",
+   "content_sha256": "fd4d3c05f4e7f23834ad947808785fbab08d431bb5994f7eed8659dbe423f455",
+   "retrieved_at": "2026-11-01T21:57:36.076075Z"
+  },
+  "https://logscom.com/": {
+   "kind": "site",
+   "status": 200,
+   "file": "a32c525b3d017567.html.gz",
+   "content_sha256": "a32c525b3d017567fb4ed21cb5b5e497b8ea1974aaef8504c8270e614734b13b",
+   "retrieved_at": "2026-11-01T21:57:43.957265Z"
+  },
+  "https://logscom.com/contact-2/": {
+   "kind": "site",
+   "status": 200,
+   "file": "1373bf105f3fd3fd.html.gz",
+   "content_sha256": "1373bf105f3fd3fda0e7bfa93e17ac70f7bd3ad20abbb5d8ff49fe37000a3b30",
+   "retrieved_at": "2026-11-01T21:57:44.844854Z"
+  },
+  "https://logscom.com/feed/": {
+   "kind": "feed",
+   "status": 200,
+   "file": "5513f2a548a18ace.xml.gz",
+   "content_sha256": "5513f2a548a18ace726e41600134698dc28969ca19c26cac0dc4fecd749a68fe",
+   "retrieved_at": "2026-11-01T21:57:48.790082Z"
+  }
+ }
+}
