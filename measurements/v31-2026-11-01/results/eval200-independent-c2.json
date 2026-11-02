@@ -1,0 +1,253 @@
+{
+ "labeller": "assistant (blind to version; captured text shown)",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 308,
+ "units_without_verdict": 98,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 77,
+    "correct": 73,
+    "incorrect": 2,
+    "unsure": 2,
+    "precision": 0.9733,
+    "ci95": [
+     0.9079,
+     0.9927
+    ]
+   },
+   "news_item": {
+    "published_labelled": 200,
+    "correct": 70,
+    "incorrect": 122,
+    "unsure": 8,
+    "precision": 0.3646,
+    "ci95": [
+     0.2998,
+     0.4347
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 15,
+    "correct": 7,
+    "incorrect": 5,
+    "unsure": 3,
+    "precision": 0.5833,
+    "ci95": [
+     0.3195,
+     0.8067
+    ]
+   }
+  },
+  "c2": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 78,
+    "correct": 73,
+    "incorrect": 2,
+    "unsure": 3,
+    "precision": 0.9733,
+    "ci95": [
+     0.9079,
+     0.9927
+    ]
+   },
+   "news_item": {
+    "published_labelled": 140,
+    "correct": 61,
+    "incorrect": 73,
+    "unsure": 6,
+    "precision": 0.4552,
+    "ci95": [
+     0.3733,
+     0.5396
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 6,
+    "correct": 4,
+    "incorrect": 0,
+    "unsure": 2,
+    "precision": 1.0,
+    "ci95": [
+     0.5101,
+     1.0
+    ]
+   }
+  },
+  "v31": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 78,
+    "correct": 73,
+    "incorrect": 2,
+    "unsure": 3,
+    "precision": 0.9733,
+    "ci95": [
+     0.9079,
+     0.9927
+    ]
+   },
+   "news_item": {
+    "published_labelled": 85,
+    "correct": 46,
+    "incorrect": 35,
+    "unsure": 4,
+    "precision": 0.5679,
+    "ci95": [
+     0.4594,
+     0.6703
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 6,
+    "correct": 4,
+    "incorrect": 0,
+    "unsure": 2,
+    "precision": 1.0,
+    "ci95": [
+     0.5101,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 73,
+   "retained": 69,
+   "retention": 0.9452,
+   "lost_correct": [
+    "966732024|social_profile|youtube.com/channel/uc36nlqassuo6x5k3f3pfyda",
+    "988494534|social_profile|facebook.com/fendermarine",
+    "988494534|social_profile|linkedin.com/company/fender-marine-as",
+    "944774521|social_profile|facebook.com/leiftfaraas"
+   ],
+   "gained_correct": [
+    "976482425|social_profile|facebook.com/syltemoa",
+    "932468352|social_profile|linkedin.com/company/kameo-norge",
+    "932468352|social_profile|instagram.com/kameo.norge",
+    "932468352|social_profile|facebook.com/kameonorge"
+   ],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 70,
+   "retained": 52,
+   "retention": 0.7429,
+   "lost_correct": [
+    "994642340|news_item|proba.no/ukategorisert/informasjon-om-intervjuundersokelse-okt-rekruttering-av-unge-til-helsefagarbeideryrket|2026-10-01",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-06-03",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-01-19",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-10-12",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-06-09",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-08-12",
+    "994642340|news_item|proba.no/andre-rapporter/delrapport-evaluering-av-voldserstatningsloven|2026-09-15",
+    "994642340|news_item|proba.no/ukategorisert/informasjon-om-behandling-av-personopplysninger-i-forskningsprosjekt|2026-08-27",
+    "994642340|news_item|proba.no/andre-rapporter/evaluering-av-voldserstatningsloven|2026-09-15",
+    "899115562|news_item|provendo.no/laerling|2023-11-06",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-04-20",
+    "994642340|news_item|proba.no/rapporter/evaluering-av-solid|2026-08-11",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-03-04",
+    "994642340|news_item|proba.no/ukategorisert/sporreundersokelse-i-prosjektet-okt-rekruttering-av-unge-til-helsefagarbeideryrket|2026-09-17",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-06-08",
+    "994642340|news_item|proba.no/rapporter/ekstern-gjennomgang-av-kulturradet|2026-10-26",
+    "994642340|news_item|proba.no/kategori/aktuelt|2026-01-06",
+    "994642340|news_item|proba.no/rapporter/evaluering-av-koreografisatsingen-artemisia|2026-09-28"
+   ],
+   "gained_correct": [
+    "994642340|news_item|proba.no/aktuelt/nytt-prosjekt-ekstern-gjennomgang-av-kulturradet|2026-06-03",
+    "994642340|news_item|proba.no/aktuelt/nytt-prosjekt-evaluering-av-ungdomsgarantien-i-nav|2026-06-03",
+    "994642340|news_item|proba.no/aktuelt/ny-rapport-fra-deloitte-og-proba-om-etterlevelse-av-barnehageloven|2026-04-20",
+    "994642340|news_item|proba.no/aktuelt/nytt-prosjekt-erfaringer-og-utbytte-av-minikvalifikasjoner-innen-karriereveiledning|2026-10-12",
+    "994642340|news_item|proba.no/pagaende-prosjekt/nytt-prosjekt-folgeevaluering-av-tilskuddsordningene-en-til-en-oppfolging-og-beredskapsteam|2026-08-12",
+    "994642340|news_item|proba.no/aktuelt/nye-prosjekter-barnevernets-kompetanse-om-nevrologiske-lidelser-og-samarbeid-med-helsetjenestene|2026-06-09",
+    "994642340|news_item|proba.no/aktuelt/velkommen-til-oss-sanna|2026-01-06",
+    "994642340|news_item|proba.no/aktuelt/nytt-prosjekt-okt-rekruttering-av-unge-til-helsefagarbeideryrket|2026-06-08",
+    "994642340|news_item|proba.no/aktuelt/nytt-prosjekt-samarbeid-mellom-flyktningenheten-og-arbeids-og-velferdsetaten|2026-03-04"
+   ],
+   "errors_removed": 49,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 7,
+   "retained": 4,
+   "retention": 0.5714,
+   "lost_correct": [
+    "920546919|careers_page|jentenepaatunet.no/om-oss/vil-du-jobbe-med-oss",
+    "987445378|careers_page|temp-team.no/jobbsokere",
+    "944774521|careers_page|faraas.no/stillinger"
+   ],
+   "gained_correct": [],
+   "errors_removed": 5,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

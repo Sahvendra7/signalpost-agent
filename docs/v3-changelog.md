@@ -395,3 +395,38 @@ directories were.
   - `test_v3_app.py::RecheckOutage`.
 
   Both fail without the fix, reproducing the live symptom.
+
+## V3.1 — news classification accuracy remediation (code `8223a37`, on V3 candidate 2 `7b8fc69`)
+
+The analysis and the comparison of approaches are in `docs/v31-news-analysis.md`.
+
+- **News: content anchoring (`attribution.news.assess_content`, policy `anchored`).** After V3's item gate, entity rules
+  and subject rules, each item is judged by its own captured words: the title, the feed body (`content:encoded` or the
+  description, up to 4,000 characters), the listing card, and the article page when one was fetched.
+  - Advice, property and plot listings, service and membership pages, and job advertisements are withheld:
+    `content_advice`, `content_listing`, `content_service`, `content_recruitment`.
+  - Any other item is published only if it names the company, speaks in its voice, or states a company development.
+    Otherwise it is withheld as `not_anchored_to_the_company`.
+  - A news section never qualifies an item on its own.
+  - Fixes: the eval120 errors in categories A1–A4 and C (huspro, opts, Nordic Solutions, SOBBL, Day of Week, FFOR,
+    Kystsnekker'n, Frosterød Takst, Sjokoladesmaking), and the diag80 job ad (Sabi Sushi).
+- **News provenance.** Every published `news_item` claim carries `attribution {code, basis, source_tier, evidence}`.
+  The code is one of development, company_named or company_voice; the evidence is the quoted span that qualified the
+  item.
+- **Entity: site named after a registry group company (`operator.registry_group_company_named_by`).** If the domain is
+  named after another company in the registry group structure, and not after this company, the operator is
+  `group_or_brand` (`site_named_after_registry_group_company`). This applies even when the site states this company's
+  organisation number.
+  - Fixes: BE KRAFTSALG AS (990892687) on bodoenergi.no, the brand of its parent BODØ ENERGI AS: 5 news items and 3
+    profiles.
+- **Feeds and cards.** `feed_items` and `html_items` keep the entry's or card's text, for classification only. It is
+  never published.
+- **Tests changed (each with its reason in the test).**
+  - Synthetic item-gate feeds gain a description in the company's voice.
+  - "Sommerfest på Tveit" gains its card text.
+  - Control counts: Birralee 20→18, Grønsand 15→14, Beredt 6→5 and 911771098 20→16. The withheld items are named in
+    the tests: class reports and teasers whose text never names the company, and four cards with only a book title.
+  - Kilis keeps all 10 plain-slug WordPress posts.
+  - "Du store verden" is kept, because its text reports the book's translations in the author's voice.
+- **New tests:** 8 eval120/diag80 regression tests on captured bytes (`tests/test_v3_regressions.py::V31NewsContent`),
+  each failing on `7b8fc69`; 18 unit tests (`tests/test_v31_news.py`).

@@ -151,3 +151,36 @@ The full method and tables are in `docs/v3-remediation.md` (R3 §2–§4), and t
 - **Job advertisements.** No sample in this pass had a decidable published job ad, so job-ad accuracy is not
   measured.
 - **Social** independent precision is 93.0% (CI 81.4–97.6%), with retention 87.0%.
+
+## V3.1 (2026-11-01/02) — news classification remediation, new independent evaluation eval200
+
+Details are in `docs/v31-news-analysis.md` §6 (comparison of approaches) and §8 (independent evaluation). Artefacts
+are in `measurements/v31-2026-11-01/`.
+
+**Set roles.**
+- eval120 is consumed: it was used to diagnose the 29 errors.
+- fresh60b is consumed.
+- smoke100, midsize40, fresh60 and diag80 are tuned.
+- eval200 is new: drawn and captured through the baseline before V3.1 existed, opened only after V3.1 was frozen
+  (`8223a37`), labelled once (blind to version, captured text visible) and scored once.
+
+| eval200 (independent) | Baseline `ff3b515` | Candidate 2 `7b8fc69` | V3.1 `8223a37` |
+|---|---|---|---|
+| News precision (95% CI) | 70/192 = 36.5% (30.0–43.5) | 61/134 = 45.5% (37.3–54.0) | **46/81 = 56.8% (45.9–67.0)** |
+| News retention (recall proxy) | — | 52/70 = 74.3% | 37/70 = 52.9% |
+| Social precision | 73/75 = 97.3% (90.8–99.3) | 73/75 = 97.3% | 73/75 = 97.3% |
+| Social retention | — | 69/73 = 94.5% | 69/73 = 94.5% |
+| Careers-page precision | 7/12 = 58.3% | 4/4 (CI 51.0–100) | 4/4 (CI 51.0–100) |
+| Job postings | none published | none | none |
+
+The sample is 200 organisations. The census holds 308 labelled units (211 news, 82 social, 15 careers).
+
+**Targets.**
+- News ≥90%: **not met** (56.8%).
+- Social ≥95%: met on this sample (97.3%; the lower CI bound is 90.8%).
+- Careers pages: too few to establish (4 decided).
+- Job ads: not validated; no labelled sample.
+
+**Tuned sets, for comparison only (optimistic):** news 119/122 = 97.5%, retention 74.3%; fresh60b 30/30; eval120 7/11.
+The gap between 97.5% on the tuned sets and 56.8% on eval200 is the main finding of this round. Development-set
+precision is not evidence of independent precision.

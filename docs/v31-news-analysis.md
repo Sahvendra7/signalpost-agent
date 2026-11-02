@@ -125,3 +125,173 @@ registry website carries a registry group company's name is affected. It is not 
    the item must be **withheld**.
 4. **Entity.** The registry group structure must be used: a site named after the registry parent is a group site. Its
    stories and profiles are the subsidiary's only when they name the subsidiary.
+
+## 6. Comparison of approaches (added after the diagnosis)
+
+Every approach keeps V3's item gate, entity rules and subject rules, and adds one policy on top
+(`attribution.news.news_policy_decision`; the policy is chosen by `site_facts.NEWS_POLICY`, which only the comparison
+scripts change). All of them read the same captured text: title, feed body (`content:encoded` or description), listing
+card, and article page when one was fetched. No extra requests are made, no LLM is used, cost is $0.
+
+| Policy | Rule on top of V3 |
+|---|---|
+| `current` | none (V3 candidate 2 news rules) |
+| `newsroom` | only items in a dedicated news or press section |
+| `newsroom_item` | `newsroom`, and withhold advice, listings, service pages and job ads |
+| `newsroom_item_content` | `newsroom_item`, and require a stated company development |
+| `newsroom_item_content_entity` | `newsroom_item_content`, and require the item to name the company |
+| `layered` | withhold negatives; require a development, except a newsroom item that names the company |
+| `hybrid` | withhold negatives; outside a news section, require the item to name the company, use its voice or state a development |
+| **`anchored`** (chosen) | withhold negatives; everywhere, require the item to name the company, use its voice or state a development |
+
+The registry-group entity rule (§6.1) is in every row, because it is part of the operator assessment.
+
+**News on the labelled sets, final code (`8223a37`).** Precision is correct ÷ (correct + incorrect), with a Wilson 95%
+interval. Retention is the share of the baseline's correct items still published. It is a recall proxy, never true
+recall.
+
+| Policy | Tuned sets¹ precision | Tuned retention | fresh60b² precision / retention | eval120³ precision |
+|---|---|---|---|---|
+| current | 95.0% (152/160) | 142/148 = 95.9% | 100% / 100% | 25.0% (8/32) |
+| newsroom | 96.6% (56/58) | 31.1% | 100% / 65.4% | 63.6% (7/11) |
+| newsroom_item | 96.4% (53/55) | 29.7% | 100% / 65.4% | 70.0% (7/10) |
+| newsroom_item_content | 100% (15/15) | 8.8% | 100% / 9.6% | 3/3 |
+| newsroom_item_content_entity | 100% (2/2) | 1.4% | — / 0% | 0 decided |
+| layered | 98.1% (52/53) | 33.8% | 100% / 21.2% | 60.0% (3/5) |
+| hybrid | 96.4% (135/140) | 85.1% | 100% / 96.2% | 53.8% (7/13) |
+| **anchored** | **97.5% (119/122)** | **74.3%** | **100% / 57.7%** | **63.6% (7/11)** |
+
+¹ smoke100, midsize40, fresh60 and diag80: the rules were developed on these, so their precision is optimistic.
+² Consumed by an earlier remediation round. ³ Consumed; used for the §1 diagnosis.
+
+**Social** (the registry-group rule only; the news policy has no effect): tuned 114/114, fresh60b 55/55, eval120 40/40
+(retention 87.0%, against 40/43 before). **Careers pages:** unchanged (tuned 18/18, fresh60b 9/9, eval120 4/4).
+
+**Why `anchored`.** The dedicated-section policies reach their precision by publishing almost nothing (retention 1–34%),
+and a section is not evidence on its own: eval120's 29 errors included 7 from `/aktuelt/` sections. `anchored` makes
+every published item carry a reason drawn from its own words (`attribution.code` ∈ development, company_named,
+company_voice), and loses fewer correct items than the newsroom policies.
+
+The independent result is in §8. It shows that the company_named and company_voice reasons are weak evidence on the
+company's own website.
+
+### 6.1 Entity: BE Kraftsalg / Bodø Energi (correction to §1 B and §4)
+
+`bodoenergi.no` is BE KRAFTSALG AS's own website. Its footer reads "© 2026 Bodø Energi Kraftsalg · BE Kraftsalg AS ·
+Org.nr. 990 892 687". The site trades under the name of the registry parent, BODØ ENERGI AS (890892612). A story or
+profile under "Bodø Energi" may therefore belong to either company.
+
+The general rule (`operator.registry_group_company_named_by`): if the website's domain is named after another company
+in the registry group structure, and not after this company, the site is `group_or_brand`
+(`site_named_after_registry_group_company`). This holds even when the site states this company's organisation number.
+On such a site:
+- only items that name this company are attributed to it;
+- profiles whose handle is the domain name are held back;
+- the website itself is still published as the company's.
+
+Measured effect:
+- social: removes the 3 BE errors and nothing else, on every set;
+- news: removes the 5 BE errors, and also 2 correct BE items, which use the trading name "Bodø Energi Kraftsalg"
+  rather than the legal name.
+
+### 6.2 Label noise in eval120
+
+eval120 was labelled without body text. With the body visible, 3 of the 4 items `anchored` still publishes there and
+that are labelled incorrect show genuine company activity:
+- FFOR "Mekanisk behandling": a course day the company held;
+- FFOR "Velkommen": its new website;
+- Huspro "Hurdal - Nytt prosjekt": "et nytt prosjekt er i anmarsj".
+
+The labels were **not** changed, and the eval120 numbers above use them as they are. eval200 (§8) was labelled with the
+captured text visible.
+
+## 7. Final architecture
+
+1. **Source (unchanged from V3):**
+   - the item gate rejects media files, project and portfolio paths, default CMS posts, bulk-entry bursts, dates that
+     contradict the title, and feed items outside the site's own news section;
+   - the date is the published time, never "updated";
+   - publishers' journalism is not their news.
+2. **Entity:** V3's operator assessment plus the registry-group rule (§6.1). On a group, brand, manager or section site,
+   an item must name the company.
+3. **Subject (unchanged):** an item about a named sibling or another company is withheld.
+4. **Content (new; `attribution.news.assess_content`):** read the item's own captured text.
+   - **Negative**, withheld:
+     - `listing`: for sale, plot, m², "meld interesse";
+     - `service`: "bli medlem", "meld skade", booking or pricing;
+     - `recruitment`: "send søknad", "søknadsfrist", "vi søker (en …)";
+     - `advice`: an advice or listicle title, or reader-addressing text that outweighs the company's voice.
+
+     A development stated in the title, or in the company's own voice ("inviterer vi …"), overrides a body-advice
+     signal.
+   - **Positive**, publish with that reason:
+     - `development`: an event word from a fixed lexicon, stated in the title, in the company's voice, or naming the
+       company;
+     - `company_named`;
+     - `company_voice`.
+   - **Otherwise** withheld (`not_anchored_to_the_company`).
+5. **Provenance:** every published item carries `attribution {code, basis, source_tier, evidence}`, with the quoted
+   span that qualified it. Every withheld item is counted by reason in the claim's "not published" reason.
+
+## 8. Independent evaluation (eval200), scored once
+
+**Sample.**
+- 200 organisations newly drawn on 2026-11-01 (`measurements/v31-2026-11-01/inputs/eval200.jsonl`, SHA-256
+  `636a2b31…`).
+- Captured live through the baseline `ff3b515` **before any V3.1 code existed**, and not inspected until V3.1 was
+  frozen (commit `8223a37`).
+- Replayed through three versions: the baseline, V3 candidate 2 (`7b8fc69`) and V3.1 (`8223a37`).
+
+**Labelling.**
+- Census of every unit any version published: 308 units (211 news, 82 social, 15 careers; websites not labelled).
+- Labelled once by the assistant, blind to version (`assistant_blind`). For each news item the captured feed entry,
+  card or page text was shown (`measurements/v31-2026-11-01/audits/eval200/aid.md`).
+- Rubric as in V3. Job advertisements are labelled as careers content, not news, in every version.
+
+| Category | Baseline `ff3b515` | V3 candidate 2 `7b8fc69` | **V3.1 `8223a37`** |
+|---|---|---|---|
+| News precision | 70/192 = 36.5% (30.0–43.5) | 61/134 = 45.5% (37.3–54.0) | **46/81 = 56.8% (45.9–67.0)** |
+| News retention (correct baseline items kept) | — | 52/70 = 74.3% | 37/70 = 52.9% |
+| News errors removed / introduced vs baseline | — | 49 / 0 | 89 / 2 |
+| Social precision | 73/75 = 97.3% (90.8–99.3) | 73/75 = 97.3% | 73/75 = 97.3% |
+| Social retention | — | 69/73 = 94.5% | 69/73 = 94.5% |
+| Careers-page precision | 7/12 = 58.3% | 4/4 (51.0–100) | 4/4 (51.0–100) |
+| Job postings | none published | none | none |
+
+Unsure (excluded from precision): news 8 / 6 / 4; social 2 / 3 / 3; careers 3 / 2 / 2.
+
+**The news target (≥90%) is not met.** V3.1 is better than candidate 2 on independent data (56.8% against 45.5%), but
+far from the target, and it keeps fewer correct items.
+
+**Where V3.1's 35 errors come from** (by the reason V3.1 recorded):
+
+| Attribution reason | Correct | Incorrect | Precision |
+|---|---|---|---|
+| development | 22 | 7 | 75.9% |
+| company_voice | 14 | 18 | 43.8% |
+| company_named | 10 | 10 | 50.0% |
+
+| Error type | Errors | Companies | Example |
+|---|---|---|---|
+| Product or rental-item pages in the feed | 10 | 1 (Steinkjer Liftutleie) | "12m – Diesel – Snorkel S3370RT": "Pris på forespørsel … Ring oss" |
+| Product marketing articles | 6 | 2 | Frankeringsrekvisita "Brother etiketter for nettbutikker" |
+| Advice written in the company's voice | 9 | 4 | Provendo "Hvorfor ny PC?", Sola Hundesenter "Når bør valpen …" |
+| Job advertisements the recruitment rule misses | 6 | 2 | "Vi søker tilkallingsvikarer!", "Er du Vårtuns nye rektor?", Swedish "sökes" |
+| Another company's site (Logscom AB, Sweden, for LOGSCOM AS) | 1 (+4 job ads above) | 1 | "The Forestry Boost" |
+| Default post / homepage / landing page | 3 | 3 | "Hei, verden!", "Forside" |
+
+**Concentration.**
+- The 81 decided items come from 22 companies, and the 35 errors from 12 of them; one company contributes 10.
+- The confidence interval above treats items as independent, so it is narrower than a company-clustered interval
+  would be.
+
+**What this shows.**
+- On a company's own site, "names the company" and "speaks in its voice" are not evidence of news: product pages,
+  marketing and advice do both.
+- A stated development is better evidence (76%), but still not enough.
+- By section (diagnostic only, eval200 is now consumed):
+  - development in a dedicated news section: 10/10;
+  - development in a blog section: 7/8;
+  - root-level posts accepted on name or voice alone: 17/39.
+
+Any rule built from these observations is tuned on eval200 and needs a new independent sample before it can be reported.

@@ -1,0 +1,308 @@
+1 correct dated stock announcement in the company's own news section
+2 incorrect lorem-ipsum theme demo post
+3 incorrect listicle advice (5 grunner)
+4 incorrect software how-to advice
+5 incorrect "Produkt i fokus": product marketing, no company development
+6 incorrect cookie settings page, not careers
+7 incorrect product (lift) page in the feed
+8 correct
+9 correct
+10 correct
+11 incorrect default WordPress post
+12 correct
+13 correct airfield operator's own notice of airspace and manual changes
+14 correct school's own weekly newsletter
+15 correct kindergarten's own activity post
+16 incorrect default WordPress post
+17 incorrect job advertisement (careers content)
+18 correct new project
+19 incorrect contact page
+20 correct new project
+21 incorrect advice
+22 correct the company's own ongoing study, call for interviewees
+23 correct school's own weekly newsletter
+24 incorrect treatment advice/marketing
+25 incorrect advice
+26 incorrect thought-leadership opinion piece
+27 correct
+28 correct
+29 incorrect theme demo post
+30 incorrect job advertisement (careers content)
+31 correct
+32 correct
+33 correct VilVite is the centre's brand
+34 correct airfield operator's own notice
+35 correct
+36 incorrect theme demo post
+37 correct
+38 incorrect theme demo post
+39 incorrect default Wix post
+40 correct channel linked from the company's own site
+41 correct
+42 incorrect advice
+43 incorrect product marketing
+44 correct kindergarten's own event
+45 correct
+46 incorrect advice
+48 incorrect advice
+47 incorrect a news post about airspace use, not a careers page
+49 correct Fender is the company's trading name on its registry website
+50 incorrect generic safety advice to pilots, no development
+52 incorrect theme demo post
+53 correct
+54 incorrect theme demo post
+55 incorrect job advertisement (careers content)
+56 correct
+57 correct
+58 correct
+59 incorrect service marketing page
+60 incorrect product marketing
+61 correct
+62 incorrect product explainer
+63 incorrect theme demo post
+64 incorrect aftercare advice page
+65 correct the company's new project; the link is the news listing that shows it
+66 correct
+67 incorrect campaign/advice content (car-cost calculator)
+68 correct
+69 correct
+70 incorrect advice
+71 correct the company's new project; the link is the news listing that shows it
+72 correct annual report
+74 correct
+75 correct school's own weekly newsletter
+76 correct
+77 correct
+78 correct
+79 incorrect product marketing
+80 correct
+81 correct the company's own consultation response
+82 correct
+83 correct
+84 incorrect advice
+85 correct
+86 correct
+87 correct the company's own open day
+88 incorrect advice
+89 correct
+90 correct the operator's facility back in operation
+91 incorrect product page
+93 correct
+94 incorrect listicle product marketing
+95 correct
+96 incorrect treatment marketing
+97 correct the company's own weekly visitor (Aktuelt card)
+98 correct
+99 incorrect treatment marketing
+100 correct
+101 correct
+102 incorrect theme demo post
+103 correct
+51 unsure chain brand account (Meglerhuset Rele); whether this office's entity owns it is not shown
+73 incorrect the site is Logscom AB's (Swedish company); this is that company's event, not LOGSCOM AS's
+92 unsure shopping centre's vacancies page (no content captured); may list tenants' jobs rather than the company's
+104 incorrect the site is Logscom AB's (Swedish company); its event, not LOGSCOM AS's
+105 correct the company's own conference
+106 correct dated stock announcement in the company's own news section
+107 correct the company's new project; the link is the news listing that shows it
+108 incorrect guide/advice
+109 correct staffing agency's page for job seekers (employment through the company)
+110 correct the company's own delivery to a customer
+111 correct
+112 incorrect product page
+113 correct the company's new projects; the link is the news listing that shows them
+114 correct the company's new project; the link is the news listing that shows it
+115 incorrect treatment marketing
+116 incorrect advice
+117 correct operator's notice of a change affecting its airfield
+118 incorrect marketing campaign text
+119 incorrect homepage
+120 correct the company's own governance meeting
+121 correct
+122 incorrect default Wix post
+123 correct new employee
+124 correct the company's report
+125 correct
+126 correct
+127 correct the company's own price change
+128 incorrect product page
+129 correct information about the company's own research project
+130 correct school's own performance
+131 unsure a sector petition text shared by the school; not about the school itself
+132 incorrect theme demo post
+133 incorrect job advertisement (careers content)
+134 incorrect product listing page
+135 correct
+136 incorrect treatment marketing
+137 incorrect about page
+138 incorrect the site is Logscom AB's; product description
+139 unsure title only; the company's part in the event is not shown
+140 correct the company's own new booking rule
+141 correct the company's report
+142 incorrect product marketing; link is the blog listing
+143 correct operator's updated manual
+144 incorrect treatment marketing
+145 correct the company's 10-year anniversary coverage
+146 incorrect listicle advice
+147 unsure marketing article about its supplier; partnership not shown as new
+148 correct the foundation's own participation
+149 incorrect theme demo post
+150 incorrect a project page, not careers
+151 correct Fender Marine is the company's brand on its site
+152 incorrect product marketing
+153 incorrect default WordPress post
+154 correct
+155 correct
+156 incorrect product marketing
+157 incorrect product guide
+158 incorrect the site is Logscom AB's; its event
+159 correct
+160 incorrect service marketing
+161 incorrect theme demo post
+162 unsure evergreen brand story (mentions past awards), no dated development
+163 incorrect theme demo post
+164 correct
+165 incorrect opinion piece
+166 correct the company owns and runs the centre
+167 correct
+168 incorrect CV advice
+169 correct
+170 correct employee completed apprenticeship
+171 correct finalist for a grant
+172 correct
+173 correct school's own weekly newsletter
+174 correct operator reports its input to Avinor and the current rules at its airfield
+175 incorrect advice
+176 incorrect thought-leadership piece
+177 correct
+178 incorrect thought-leadership piece
+179 incorrect CV advice
+180 correct
+181 incorrect job advertisement (careers content)
+182 correct
+183 incorrect advice
+184 correct the company's report; the link is the news listing that shows it
+185 correct
+186 incorrect treatment marketing
+187 incorrect a listing page, not an article
+188 correct
+189 unsure generic chain handle (Meglerhuset); this office entity's ownership not shown
+190 incorrect theme demo post
+191 correct the company's report
+192 correct
+193 correct
+194 correct the company's new project; the link is the news listing that shows it
+195 correct product won an international award
+196 correct
+197 correct
+199 correct the Norwegian branch's own LinkedIn
+200 unsure admissions notice (standing service) rather than a development
+201 correct the company's 10th festival participation
+202 incorrect product page
+203 correct
+204 incorrect product marketing
+205 correct
+206 correct
+207 incorrect product page
+208 incorrect advice/service
+209 correct the company's quarterly report
+198 correct the registry-listed site's own LinkedIn
+210 correct Fender Marine AS is the name shown on the company's own site, which states its org. number
+211 correct the company's own survey in its project
+212 correct new collaboration agreement
+213 incorrect theme demo post
+214 correct
+215 incorrect advice
+216 incorrect the site and profile are Logscom AB's (Swedish company), not LOGSCOM AS's
+217 correct
+218 incorrect buying guide
+219 correct the company launches its blog
+220 correct the company's own governance meeting
+221 incorrect a standing "visit us" page
+222 incorrect reflective opinion piece
+223 incorrect job advertisement (careers content)
+224 correct school's own weekly newsletter
+225 incorrect theme demo post
+226 incorrect opinion piece
+227 correct
+228 incorrect the site is Logscom AB's; its seminar
+229 correct visitors programme
+230 incorrect product page
+231 unsure the news feed announces bundled services but the item is the standing service page
+232 correct
+233 incorrect advice
+234 correct the company's new project; the link is the news listing that shows it
+235 incorrect commuter-ticket campaign page, not careers
+236 unsure chain brand jobs page; whether jobs are this office entity's is not shown
+237 correct
+238 correct the company's report
+239 correct dated stock announcement
+240 incorrect default WordPress post
+241 incorrect service marketing
+242 correct
+243 correct an intern's account of work at the company
+244 incorrect a product landing page, not the launch article
+245 correct
+246 correct new employee; the link is the news listing that shows it
+247 correct operator's restriction after complaints
+248 unsure campaign appeal; captured text is empty
+249 incorrect explainer/advice
+250 incorrect ticket marketing/advice
+251 correct
+252 correct
+253 incorrect product marketing
+254 incorrect advice
+255 incorrect treatment marketing
+256 incorrect product marketing
+257 incorrect product page
+258 incorrect gift advice/product marketing
+259 correct new acting CEO
+260 correct the company's own delivery to a customer
+261 correct the company at a trade fair
+262 correct
+263 unsure recruitment agency's page for candidates; jobs are mostly at clients
+264 correct school's own weekly newsletter
+265 correct
+266 correct
+267 incorrect product marketing
+268 correct operator's training-area notice (NOTAM)
+269 correct school's own weekly newsletter
+270 incorrect product page
+271 correct
+272 incorrect service marketing
+273 incorrect product marketing
+274 unsure ice-hall account on the hall's site; whether the property company or another entity runs the hall is not shown
+275 incorrect theme demo post
+276 correct the Norwegian branch's own Facebook
+277 incorrect product page
+278 incorrect product marketing
+279 incorrect job advertisement on Logscom AB's site
+280 correct kindergarten joins a national programme
+281 incorrect advice
+282 incorrect service marketing
+283 correct
+284 incorrect exhibitions page, not careers
+285 incorrect product explainer
+286 correct
+287 unsure mostly a checklist (advice); mentions the company presenting at a business association that day
+288 incorrect job advertisement on Logscom AB's site
+289 incorrect service marketing
+290 correct
+291 correct new products launched
+292 correct
+293 correct
+294 incorrect theme demo post
+295 correct the company's own governance meeting
+296 correct
+297 correct finalist in an international competition
+298 incorrect theme demo post
+299 correct the company's own delivery to a customer
+300 correct
+301 correct
+302 correct the company's report
+303 incorrect Logscom AB's (Swedish company) account
+304 incorrect service marketing
+305 incorrect service marketing/advice
+306 correct the company's own conference
+307 correct
+308 incorrect service marketing
