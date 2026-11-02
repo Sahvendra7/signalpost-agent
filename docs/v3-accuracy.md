@@ -184,3 +184,22 @@ The sample is 200 organisations. The census holds 308 labelled units (211 news, 
 **Tuned sets, for comparison only (optimistic):** news 119/122 = 97.5%, retention 74.3%; fresh60b 30/30; eval120 7/11.
 The gap between 97.5% on the tuned sets and 56.8% on eval200 is the main finding of this round. Development-set
 precision is not evidence of independent precision.
+
+### V3.1 freeze 2 (`0e4c426`) — eval200b, new and independent, scored once
+
+The sample is 200 new organisations, captured through the baseline before the freeze and opened after it. The census
+holds 448 labelled units. Labels are `assistant_blind`, with the captured text visible. Details are in
+`docs/v31-news-analysis.md` §10.
+
+| eval200b | Baseline | Candidate 2 `7b8fc69` | Freeze 1 `8223a37` | **Freeze 2 `0e4c426`** |
+|---|---|---|---|---|
+| News precision (95% CI) | 45.5% (40.1–51.1) | 60.6% (54.1–66.8) | 71.6% (63.9–78.3) | **105/131 = 80.2% (72.5–86.1)** |
+| News retention (recall proxy) | — | 93.0% | 71.3% | **70.6% (101/143)** |
+| Social precision | 92.3% | 100% (68/68) | 100% | **100% (68/68, 94.7–100)** |
+| Careers-page precision | 61.5% | 7/7 | 7/7 | **7/7 (64.6–100)** |
+
+**Targets.**
+- News ≥90%: **not met** (80.2%).
+- Social ≥95%: met on this sample.
+- Careers: 7 decided, which is too few to establish a rate.
+- Job ads: not validated; one job was published by the baseline only, and its label is unsure.

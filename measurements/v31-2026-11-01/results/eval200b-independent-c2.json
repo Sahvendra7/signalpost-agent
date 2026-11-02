@@ -1,0 +1,289 @@
+{
+ "labeller": "assistant (blind to version; captured text shown)",
+ "labeller_kind": "assistant_blind",
+ "units_labelled": 448,
+ "units_without_verdict": 95,
+ "draft_agreement": 0,
+ "arms": {
+  "base": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 80,
+    "correct": 72,
+    "incorrect": 6,
+    "unsure": 2,
+    "precision": 0.9231,
+    "ci95": [
+     0.8422,
+     0.9643
+    ]
+   },
+   "news_item": {
+    "published_labelled": 348,
+    "correct": 143,
+    "incorrect": 171,
+    "unsure": 34,
+    "precision": 0.4554,
+    "ci95": [
+     0.4012,
+     0.5107
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 1,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 1,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 13,
+    "correct": 8,
+    "incorrect": 5,
+    "unsure": 0,
+    "precision": 0.6154,
+    "ci95": [
+     0.3552,
+     0.8229
+    ]
+   }
+  },
+  "c2": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 68,
+    "correct": 68,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.9465,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 259,
+    "correct": 137,
+    "incorrect": 89,
+    "unsure": 33,
+    "precision": 0.6062,
+    "ci95": [
+     0.5412,
+     0.6676
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 7,
+    "correct": 7,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.6457,
+     1.0
+    ]
+   }
+  },
+  "f1": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 68,
+    "correct": 68,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.9465,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 162,
+    "correct": 106,
+    "incorrect": 42,
+    "unsure": 14,
+    "precision": 0.7162,
+    "ci95": [
+     0.6388,
+     0.7827
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 7,
+    "correct": 7,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.6457,
+     1.0
+    ]
+   }
+  },
+  "f2": {
+   "official_website": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "social_profile": {
+    "published_labelled": 68,
+    "correct": 68,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.9465,
+     1.0
+    ]
+   },
+   "news_item": {
+    "published_labelled": 146,
+    "correct": 105,
+    "incorrect": 26,
+    "unsure": 15,
+    "precision": 0.8015,
+    "ci95": [
+     0.7251,
+     0.8608
+    ]
+   },
+   "job_posting": {
+    "published_labelled": 0,
+    "correct": 0,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": null,
+    "ci95": null
+   },
+   "careers_page": {
+    "published_labelled": 7,
+    "correct": 7,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "ci95": [
+     0.6457,
+     1.0
+    ]
+   }
+  }
+ },
+ "retention": {
+  "official_website": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "social_profile": {
+   "baseline_correct": 72,
+   "retained": 66,
+   "retention": 0.9167,
+   "lost_correct": [
+    "963706820|social_profile|linkedin.com/company/karmsund-havnevesen-iks",
+    "921147325|social_profile|linkedin.com/company/alpha-solutions-norway",
+    "981271386|social_profile|facebook.com/kulturbyraetmesen",
+    "981673506|social_profile|linkedin.com/company/imencomanoda",
+    "997817273|social_profile|linkedin.com/company/9465313",
+    "998056519|social_profile|instagram.com/norgeshus_storeste"
+   ],
+   "gained_correct": [
+    "979897901|social_profile|facebook.com/eikas.no",
+    "980236226|social_profile|instagram.com/amrorslitu"
+   ],
+   "errors_removed": 6,
+   "errors_introduced": []
+  },
+  "news_item": {
+   "baseline_correct": 143,
+   "retained": 133,
+   "retention": 0.9301,
+   "lost_correct": [
+    "981271386|news_item|mesen.no/aktuelt/slik-har-vi-jobbet-med-kunsten-p-sjukehuset-nordmre-og-romsdal|2025-06-19",
+    "984756925|news_item|eiendomnorge.no/getfile.php/1321804-1792396989/bilder/logo%20eiendom%20norge/h%c3%b8ringsnotat%20om%20statsbudsjettet%20for%202027_naeringskommiteen.pdf|2026-10-19",
+    "984756925|news_item|eiendomnorge.no/getfile.php/1321798-1792396015/h%c3%b8ringssvar/h%c3%b8ringsnotat%20om%20statsbudsjettet_kommunal.pdf|2026-10-16",
+    "984756925|news_item|eiendomnorge.no/getfile.php/1321801-1792396610/h%c3%b8ringssvar/h%c3%b8ringsnotat%20til%20stortingets%20justiskomit%c3%a9%20om%20statsbudsjettet%20for%202027.pdf|2026-10-19",
+    "984756925|news_item|eiendomnorge.no/getfile.php/1321767-1791897058/bilder/logo%20eiendom%20norge/horingssvar_boligpolitikk_eiendom_norge.pdf|2026-10-13",
+    "995695987|news_item|alexanderrybak.com/new-video-alexander-rybak-ft-kseniya-simonova-let-the-music-guide-you|2021-03-19",
+    "996569071|news_item|bil.kristiania.no/2023/11/17/vil-du-vaere-med-pa-bedriftslaget-i-fotball|2023-11-17",
+    "981271386|news_item|mesen.no/aktuelt/slik-jobber-vi-med-kunsten-til-nye-hammerfest-sykehus|2024-04-22",
+    "984756925|news_item|eiendomnorge.no/getfile.php/1321764-1791889958/bilder/logo%20eiendom%20norge/til%20stortinget%20finanskomit%c3%a9.pdf|2026-10-12",
+    "981271386|news_item|mesen.no/aktuelt/formidling-av-kunst-i-helsebygg|2025-05-23"
+   ],
+   "gained_correct": [
+    "984756925|news_item|eiendomnorge.no/aktuelt|2026-10-13",
+    "984756925|news_item|eiendomnorge.no/aktuelt|2026-10-19",
+    "984756925|news_item|eiendomnorge.no/aktuelt|2026-10-16",
+    "984756925|news_item|eiendomnorge.no/aktuelt|2026-10-12"
+   ],
+   "errors_removed": 82,
+   "errors_introduced": []
+  },
+  "job_posting": {
+   "baseline_correct": 0,
+   "retained": 0,
+   "retention": null,
+   "lost_correct": [],
+   "gained_correct": [],
+   "errors_removed": 0,
+   "errors_introduced": []
+  },
+  "careers_page": {
+   "baseline_correct": 8,
+   "retained": 7,
+   "retention": 0.875,
+   "lost_correct": [
+    "898734242|careers_page|acewelltechnology.com/careers"
+   ],
+   "gained_correct": [],
+   "errors_removed": 5,
+   "errors_introduced": []
+  }
+ },
+ "note": "Local engineering measurement; not an official Builderr score."
+}

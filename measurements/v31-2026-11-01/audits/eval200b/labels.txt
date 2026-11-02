@@ -1,0 +1,448 @@
+1 correct the company's own installation for a customer
+2 correct the company's 10-year anniversary
+3 incorrect advice
+4 incorrect the US sister company's account
+5 incorrect a values page, not careers
+6 incorrect the national federation's news on its site, not the regional entity's; link is the listing
+7 correct
+8 correct
+9 incorrect advice listicle
+10 incorrect a publisher's journalism, not news about the publisher
+11 incorrect a marketing blurb, not an article
+12 incorrect advice/guide
+13 correct the foundation's own anniversary letter
+14 correct the company's own Easter event in Bergen
+15 correct
+16 incorrect job advertisement (careers content)
+17 unsure title only; the company's part in the art walk is not shown
+18 incorrect a reference-project page
+19 incorrect the national federation's news; link is the listing
+20 correct
+21 correct the company's own project story
+22 correct
+23 correct the artist's (company's) TV appearance
+24 incorrect a publisher's journalism
+25 incorrect job advertisement (careers content)
+26 correct the artist's performance
+27 incorrect the national federation's news; link is the listing
+28 correct
+29 correct the club's own relay team
+30 incorrect a regulatory notice, not company news
+31 correct the company's own survey report
+32 incorrect the national federation's news; link is the listing
+33 correct
+34 correct the artist's new video
+35 incorrect a publisher's journalism
+36 incorrect a law-change notice, not company news
+37 correct
+38 correct the company's own exhibition opening
+39 correct
+40 correct
+41 correct the club's own relay team
+42 incorrect a supplier's product news; link is the listing
+43 incorrect the national federation's news; link is the listing
+44 correct the company's own delivery
+45 correct
+46 unsure press coverage of the artist's private life, not the company's activity
+47 correct the artist's new video
+48 correct the company curates and produces the exhibition
+49 incorrect thought-leadership piece
+50 correct press interview about the artist's work
+51 unsure customer video; captured text is site chrome only
+52 unsure title only; the company's part is not shown
+53 correct the company expands its team
+54 incorrect a listing page, not an article
+55 correct
+56 correct new framework agreement
+57 correct the artist's TV appearance
+58 correct
+59 incorrect a publisher's content (daily poem)
+60 correct
+61 correct new employee
+62 incorrect tips list
+63 incorrect a regulatory news item, not company news
+64 correct
+65 incorrect a publisher's journalism
+66 correct
+67 incorrect a supplier's product news; link is the listing
+68 correct a person leaving the organisation (its own news)
+69 correct the company's own new course for young people
+70 correct
+71 incorrect cost explainer/advice
+72 correct
+73 correct a new class at the centre (its news page "Dette skjer hos oss")
+74 incorrect thought-leadership article series
+75 incorrect a regulatory notice
+76 incorrect product explainer
+77 unsure title only; a reflective piece or the centre's own news is not shown
+78 correct the artist launches a merchandise line
+79 unsure title only; a reflective piece or press coverage is not shown
+80 unsure title only; link is the blog listing
+81 correct
+82 correct the artist's new video
+83 incorrect a publisher's reader letter
+84 incorrect the national federation's news; link is the listing
+85 correct the club's own team
+86 incorrect advice
+87 incorrect the national federation's news; link is the listing
+88 unsure title only; the company's part is not shown
+89 correct the association's own consultation response
+90 incorrect the national federation's news; link is the listing
+91 incorrect "what shipowners need to know" explainer
+92 correct
+93 correct the company starts a construction job
+94 correct
+95 correct the association's own new conference
+96 correct the artist's new song
+97 correct the company's own analysis report
+98 correct new technical manager
+99 incorrect the national federation's news; link is the listing
+100 correct the company's own deliveries
+101 incorrect advice
+102 incorrect a reference-project write-up ("Våre prosjekter")
+103 correct the club's own team
+104 incorrect the national federation's news; link is the listing
+105 incorrect listicle advice
+106 unsure a job posted 2026-09-14; whether it is still open is not stated
+107 incorrect opinion piece
+108 correct the company's own investment
+109 incorrect the US sister company's account
+110 correct anniversary of the company's exhibition
+111 incorrect advice/checklist
+112 correct
+113 incorrect SEO guide
+114 correct the association's own housing-price statistics release
+115 correct new employees
+116 incorrect the national federation's news; link is the listing
+117 incorrect a product tool landing page
+118 correct the artist's new videos
+119 incorrect a regulatory notice
+120 correct long-serving employee retiring
+121 correct new trainee
+122 incorrect a publisher's journalism
+123 correct
+124 incorrect an opinion piece
+125 unsure title only; a personal story, not clearly the centre's news
+126 correct the artist's new collaboration
+127 correct the company starts a new construction project
+128 correct
+129 incorrect job advertisement (careers content)
+130 correct the company's 30-year anniversary
+131 incorrect a publisher's theatre review
+132 correct organisational changes at the centre
+133 correct
+134 correct the association's own consultation response
+135 incorrect the national federation's new leader; link is the listing
+136 unsure title only; link is the blog listing
+137 correct the artist's new song
+138 correct
+139 incorrect service marketing/explainer
+140 correct the club's own trip
+141 correct
+142 correct the artist's concert tour
+143 correct the company's own analysis report
+144 correct new employee
+145 correct the Norwegian entity's LinkedIn
+146 incorrect a publisher's journalism
+147 correct the port's own development
+148 correct new board
+149 correct new services announced
+150 incorrect a publisher's review
+151 incorrect product promotion
+152 incorrect a supplier's product news; link is the listing
+153 incorrect a publisher's journalism
+154 correct the company's summer greeting with its highlights
+155 correct annual report
+156 correct the company's own instrumentation project
+157 incorrect guide
+158 correct new CEO
+159 correct the foundation thanks its supporters
+160 incorrect a study programme page, not careers
+161 correct
+162 incorrect a supplier's product news; link is the listing
+163 correct new employee
+164 correct
+165 correct new employee
+166 incorrect a supplier's product news; link is the listing
+167 correct
+168 unsure title only; link is the blog listing
+169 correct the artist's own page (the company is his)
+170 correct a new class at the centre
+171 incorrect a promotional student profile
+172 incorrect the US sister company's account
+173 correct the association's statement at a parliamentary hearing
+174 correct
+175 correct new café opening
+176 incorrect opinion piece
+177 correct
+178 incorrect explainer ("Innsikt")
+179 incorrect job advertisement (careers content)
+180 incorrect a property-for-rent listing
+181 correct
+182 correct new port director
+183 incorrect the national federation's news; link is the listing
+184 correct the association's consultation response; link is the listing
+185 correct
+186 correct
+187 incorrect apartments-for-sale listing
+188 incorrect explainer ("Innsikt")
+189 correct
+190 incorrect job advertisement (careers content)
+191 incorrect lorem-ipsum demo post
+192 incorrect a supplier's product news; link is the listing
+193 correct
+194 correct the artist's new video
+195 correct the company's own customer story
+196 correct the company starts a new construction project
+197 correct
+198 correct new employee
+199 incorrect the national federation's account, not the regional entity's
+200 incorrect a regulatory notice
+201 correct
+202 correct new employee
+203 correct the company at a trade forum
+204 correct
+205 correct
+206 incorrect the national federation's news; link is the listing
+207 correct
+208 correct the company's own delivery
+209 correct
+210 incorrect advice
+211 incorrect guide
+212 correct the company's LinkedIn under its group brand (Imenco Manoda), linked from its own site
+213 correct the company launches a podcast
+214 incorrect a supplier's product news; link is the listing
+215 incorrect a supplier's product news; link is the listing
+216 correct a new class at the centre
+217 incorrect lorem-ipsum demo post
+218 incorrect a reference-project page
+219 incorrect default WordPress post
+220 correct the company's year in review (two new bakeries)
+221 unsure title only; the company's part in the conference is not shown
+222 incorrect advice
+223 correct the company starts a construction job
+224 correct
+225 incorrect the national federation's account
+226 incorrect the national federation's account
+227 incorrect a reader letter on the national federation's site
+228 correct the artist's new song
+229 incorrect a supplier's project marketing
+230 correct the association's consultation response; link is the listing
+231 correct new employee
+232 correct the company's year in review
+233 correct new employee
+234 correct
+235 correct handover of a completed apartment
+236 correct new bakery opening
+237 correct long-serving employee retiring
+238 incorrect advice
+239 correct
+240 incorrect advice
+241 correct handover of a completed house
+242 correct the port's own auction notice
+243 correct the centre's new plan
+244 correct 50-year anniversary
+245 correct the company as gold sponsor at a trade event
+246 correct the association's own consultation response
+247 incorrect guide
+248 correct acting retreat leader appointed
+249 incorrect the national federation's news; link is the listing
+250 incorrect service marketing
+251 incorrect a promotional employee profile
+252 correct the artist's new video
+253 correct
+254 correct
+255 incorrect guide
+256 incorrect lorem-ipsum demo post
+257 correct the association's own position, quoted from its CEO
+258 incorrect a publisher's podcast content
+259 correct the ski centre's own snow production and opening notice
+260 incorrect an opinion piece
+261 unsure title only
+262 incorrect a regulatory notice
+263 incorrect a regulatory notice
+264 incorrect guide
+265 correct
+266 correct press coverage about the artist's work
+267 correct the artist's new video
+268 correct a new group class at the centre
+269 incorrect service marketing
+270 correct new employee
+271 incorrect an opinion/appeal piece
+272 correct
+273 incorrect a regulatory notice
+274 correct the company at Arendalsuka
+275 unsure press coverage of the artist's private life
+276 correct
+277 correct admitted to the national incubator programme
+278 correct the company's own index report
+279 correct
+280 correct
+281 unsure title only; reflections from a conference
+282 incorrect lorem-ipsum demo post
+283 unsure an employer-branding piece; link is the listing
+284 correct
+285 unsure title only
+286 incorrect the national federation's partnership; link is the listing
+287 incorrect the national federation's barometer
+288 incorrect news about another body's report
+289 incorrect guide
+290 incorrect the national federation's news; link is the listing
+291 unsure title only; link is the blog listing
+292 incorrect checklist
+293 correct
+294 unsure the company's part in the event is not shown
+295 incorrect thought-leadership piece
+296 incorrect a product tip
+297 correct the company's own delivery
+298 correct the company's own commissioned report
+299 correct the artist's new video
+300 incorrect a publisher's journalism
+301 incorrect a regulatory notice
+302 incorrect a supplier's product news; link is the listing
+303 incorrect a regulatory notice
+304 correct
+305 correct
+306 correct the company's shop wins its internal Store of the Year award
+307 incorrect a regulatory notice
+308 correct new employee
+309 incorrect a regulatory notice
+310 incorrect guide
+311 incorrect a regulatory notice
+312 incorrect service marketing
+313 correct the club's own relay team
+314 incorrect a contact page, not careers
+315 incorrect the national federation's news
+316 incorrect guide
+317 correct the foundation's finances
+318 correct the centre's new cancellation rules
+319 unsure title only
+320 correct 40-year anniversary
+321 incorrect a publisher's journalism
+322 incorrect a regulatory/budget notice
+323 correct
+324 incorrect platform explainer
+325 correct
+326 correct new employee
+327 incorrect the national federation's news
+328 incorrect a regulatory/budget notice
+329 incorrect default WordPress post
+330 correct
+331 correct new CEO
+332 correct the artist's new song
+333 correct the club's own competition
+334 incorrect a publisher's reader letter
+335 correct the association's consultation response; link is the listing
+336 correct the association's own policy position
+337 correct
+338 incorrect a publisher's journalism
+339 incorrect the national federation's news; link is the listing
+340 incorrect service marketing
+341 correct
+342 incorrect a talk (lecture) page, not careers
+343 incorrect guide
+344 correct the association's statement at a parliamentary hearing
+345 correct the company's local branch account, linked from its own site
+346 correct the company's year in review
+347 correct
+348 incorrect guide
+349 correct
+350 incorrect a regulatory notice
+351 unsure title only; a reflective piece
+352 correct the association's own consultation response
+353 correct
+354 correct the artist's new video
+355 incorrect a supplier's product news; link is the listing
+356 unsure title only; a reflective piece on the field
+357 incorrect a career-guidance service page, not careers
+358 incorrect a supplier's product news; link is the listing
+359 correct
+360 correct the company's account under its franchise brand
+361 correct the company's own analysis report
+362 correct
+363 correct the club's own team results
+364 incorrect a regulatory notice
+365 correct
+366 correct new board member
+367 incorrect a regulatory/budget notice
+368 incorrect the national federation's news; link is the listing
+369 correct the company's own project work
+370 unsure the international group's LinkedIn, not clearly the Norwegian entity's
+371 incorrect guide
+372 correct the artist's film score
+373 correct a new class at the centre
+374 unsure the international group's YouTube channel
+375 unsure may concern the regional entity (Oslo), not shown; link is the listing
+376 unsure title only
+377 correct new employee
+378 correct new employee
+379 incorrect a supplier's product news; link is the listing
+380 correct the company's own analysis
+381 correct
+382 incorrect a publisher's podcast content
+383 correct
+384 correct environmental certification
+385 incorrect job advertisement (careers content)
+386 incorrect job advertisement (careers content)
+387 unsure title only
+388 unsure press coverage of the artist's private life
+389 correct
+390 unsure captured text is site chrome only
+391 incorrect lorem-ipsum demo post
+392 incorrect job advertisement (careers content)
+393 correct
+394 correct the association's own consultation response
+395 incorrect a publisher's journalism
+396 incorrect the national federation's news; link is the listing
+397 incorrect service marketing
+398 correct the club's own team entry
+399 incorrect a supplier's project marketing
+400 correct
+401 incorrect a publisher's commentary
+402 incorrect an opinion/appeal piece
+403 unsure a member-benefits programme; a launch or a standing offer is not shown
+404 unsure an "Innsikt" piece about a municipal project; the company's part is not clear
+405 correct
+406 incorrect a listing page, not an article
+407 correct new employee
+408 unsure a press release about Havnekraft; its relation to the company is not shown
+409 correct the company's own holiday closing notice
+410 incorrect guide
+411 correct new employee
+412 unsure title only; link is the blog listing
+413 incorrect lorem-ipsum demo post
+414 incorrect a publisher's journalism
+415 incorrect a supplier's product news; link is the listing
+416 unsure title only
+417 incorrect an opinion/appeal piece
+418 correct the artist's TV appearance
+419 incorrect tips list
+420 correct record donations to the foundation
+421 correct the company receives project funding
+422 correct first cruise call at its new facility
+423 incorrect a supplier's project marketing
+424 incorrect the national federation's news; link is the listing
+425 incorrect the national federation's news; link is the listing
+426 unsure press coverage of the artist's private life
+427 correct the artist's year greeting and highlights
+428 incorrect the national federation's board
+429 incorrect a publisher's journalism
+430 correct new cruise calls at its port
+431 incorrect another regional entity's news; link is the listing
+432 correct the company's own project work
+433 unsure title only
+434 correct
+435 incorrect guide
+436 incorrect a publisher's journalism
+437 incorrect a publisher's review
+438 correct
+439 correct the club's own teams
+440 correct the centre's own spinning event
+441 incorrect guide
+442 incorrect explainer ("Innsikt")
+443 correct the company's own rental job
+444 correct the association's consultation response; link is the listing
+445 incorrect job advertisement (careers content)
+446 incorrect guide
+447 correct
+448 incorrect a regulatory/budget notice

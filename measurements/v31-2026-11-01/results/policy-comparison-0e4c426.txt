@@ -1,0 +1,66 @@
+     21 exit 0
+category news_item
+== tuned (smoke100+midsize40+fresh60+diag80)
+  baseline ff3b515                 correct  148 incorrect  162 precision 0.477
+  current                          correct  152 incorrect    8 unsure  25 unlabelled   0 precision 0.950 (0.904-0.974) retention 142/148=0.959 (0.914-0.981)
+  anchored                         correct  111 incorrect    2 unsure  17 unlabelled   0 precision 0.982 (0.938-0.995) retention 103/148=0.696 (0.618-0.764)
+  strict                           correct   56 incorrect    1 unsure  13 unlabelled   0 precision 0.982 (0.907-0.997) retention 48/148=0.324 (0.254-0.403)
+== fresh60b (consumed)
+  baseline ff3b515                 correct   52 incorrect   19 precision 0.732
+  current                          correct   52 incorrect    0 unsure  18 unlabelled   0 precision 1.000 (0.931-1.000) retention 52/52=1.000 (0.931-1.000)
+  anchored                         correct   28 incorrect    0 unsure  11 unlabelled   0 precision 1.000 (0.879-1.000) retention 28/52=0.538 (0.405-0.667)
+  strict                           correct   18 incorrect    0 unsure   5 unlabelled   0 precision 1.000 (0.824-1.000) retention 18/52=0.346 (0.232-0.482)
+== eval120 (consumed; diagnostic now)
+  baseline ff3b515                 correct   13 incorrect   76 precision 0.146
+  current                          correct    8 incorrect   23 unsure  15 unlabelled   0 precision 0.258 (0.137-0.432) retention 8/13=0.615 (0.355-0.823)
+  anchored                         correct    6 incorrect    3 unsure   9 unlabelled   0 precision 0.667 (0.354-0.879) retention 6/13=0.462 (0.232-0.709)
+  strict                           correct    6 incorrect    3 unsure   7 unlabelled   0 precision 0.667 (0.354-0.879) retention 6/13=0.462 (0.232-0.709)
+== eval200 (consumed after scoring 8223a37; development now)
+  baseline ff3b515                 correct   70 incorrect  122 precision 0.365
+  current                          correct   61 incorrect   68 unsure   6 unlabelled   0 precision 0.473 (0.389-0.559) retention 52/70=0.743 (0.630-0.831)
+  anchored                         correct   46 incorrect    5 unsure   4 unlabelled   0 precision 0.902 (0.790-0.957) retention 37/70=0.529 (0.413-0.641)
+  strict                           correct   28 incorrect    1 unsure   2 unlabelled   0 precision 0.966 (0.828-0.994) retention 19/70=0.271 (0.181-0.385)
+category social_profile
+== tuned (smoke100+midsize40+fresh60+diag80)
+  baseline ff3b515                 correct  121 incorrect   14 precision 0.896
+  current                          correct  114 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.967-1.000) retention 111/121=0.917 (0.855-0.954)
+  anchored                         correct  114 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.967-1.000) retention 111/121=0.917 (0.855-0.954)
+  strict                           correct  114 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.967-1.000) retention 111/121=0.917 (0.855-0.954)
+== fresh60b (consumed)
+  baseline ff3b515                 correct   57 incorrect   11 precision 0.838
+  current                          correct   55 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.935-1.000) retention 55/57=0.965 (0.881-0.990)
+  anchored                         correct   55 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.935-1.000) retention 55/57=0.965 (0.881-0.990)
+  strict                           correct   55 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.935-1.000) retention 55/57=0.965 (0.881-0.990)
+== eval120 (consumed; diagnostic now)
+  baseline ff3b515                 correct   46 incorrect    8 precision 0.852
+  current                          correct   40 incorrect    0 unsure   2 unlabelled   0 precision 1.000 (0.912-1.000) retention 40/46=0.870 (0.743-0.939)
+  anchored                         correct   40 incorrect    0 unsure   2 unlabelled   0 precision 1.000 (0.912-1.000) retention 40/46=0.870 (0.743-0.939)
+  strict                           correct   40 incorrect    0 unsure   2 unlabelled   0 precision 1.000 (0.912-1.000) retention 40/46=0.870 (0.743-0.939)
+== eval200 (consumed after scoring 8223a37; development now)
+  baseline ff3b515                 correct   73 incorrect    2 precision 0.973
+  current                          correct   73 incorrect    2 unsure   3 unlabelled   0 precision 0.973 (0.908-0.993) retention 69/73=0.945 (0.867-0.978)
+  anchored                         correct   73 incorrect    2 unsure   3 unlabelled   0 precision 0.973 (0.908-0.993) retention 69/73=0.945 (0.867-0.978)
+  strict                           correct   73 incorrect    2 unsure   3 unlabelled   0 precision 0.973 (0.908-0.993) retention 69/73=0.945 (0.867-0.978)
+category careers_page
+== tuned (smoke100+midsize40+fresh60+diag80)
+  baseline ff3b515                 correct   18 incorrect   12 precision 0.600
+  current                          correct   18 incorrect    0 unsure   1 unlabelled   0 precision 1.000 (0.824-1.000) retention 18/18=1.000 (0.824-1.000)
+  anchored                         correct   18 incorrect    0 unsure   1 unlabelled   0 precision 1.000 (0.824-1.000) retention 18/18=1.000 (0.824-1.000)
+  strict                           correct   18 incorrect    0 unsure   1 unlabelled   0 precision 1.000 (0.824-1.000) retention 18/18=1.000 (0.824-1.000)
+== fresh60b (consumed)
+  baseline ff3b515                 correct   10 incorrect    5 precision 0.667
+  current                          correct    9 incorrect    0 unsure   3 unlabelled   0 precision 1.000 (0.701-1.000) retention 9/10=0.900 (0.596-0.982)
+  anchored                         correct    9 incorrect    0 unsure   3 unlabelled   0 precision 1.000 (0.701-1.000) retention 9/10=0.900 (0.596-0.982)
+  strict                           correct    9 incorrect    0 unsure   3 unlabelled   0 precision 1.000 (0.701-1.000) retention 9/10=0.900 (0.596-0.982)
+== eval120 (consumed; diagnostic now)
+  baseline ff3b515                 correct    6 incorrect    3 precision 0.667
+  current                          correct    4 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.510-1.000) retention 4/6=0.667 (0.300-0.903)
+  anchored                         correct    4 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.510-1.000) retention 4/6=0.667 (0.300-0.903)
+  strict                           correct    4 incorrect    0 unsure   0 unlabelled   0 precision 1.000 (0.510-1.000) retention 4/6=0.667 (0.300-0.903)
+== eval200 (consumed after scoring 8223a37; development now)
+  baseline ff3b515                 correct    7 incorrect    5 precision 0.583
+  current                          correct    4 incorrect    0 unsure   2 unlabelled   0 precision 1.000 (0.510-1.000) retention 4/7=0.571 (0.250-0.842)
+  anchored                         correct    4 incorrect    0 unsure   2 unlabelled   0 precision 1.000 (0.510-1.000) retention 4/7=0.571 (0.250-0.842)
+  strict                           correct    4 incorrect    0 unsure   2 unlabelled   0 precision 1.000 (0.510-1.000) retention 4/7=0.571 (0.250-0.842)
+
+[exited with code 0]

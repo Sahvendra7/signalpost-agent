@@ -430,3 +430,28 @@ The analysis and the comparison of approaches are in `docs/v31-news-analysis.md`
   - "Du store verden" is kept, because its text reports the book's translations in the author's voice.
 - **New tests:** 8 eval120/diag80 regression tests on captured bytes (`tests/test_v3_regressions.py::V31NewsContent`),
   each failing on `7b8fc69`; 18 unit tests (`tests/test_v31_news.py`).
+
+## V3.1 freeze 2 (code `0e4c426`) — after eval200 and the first live release run
+
+Details are in `docs/v31-news-analysis.md` §9.
+
+- **Site-wide text never counts as an item naming the company.** This covers the subject rule (including business
+  manager sites) and the content layer:
+  - header, footer, nav and aside are removed;
+  - so is every line the site repeats on its homepage;
+  - so is feed boilerplate ("The post … appeared first on …", "Innlegget … dukket først opp på …").
+
+  Fixes: BE KRAFTSALG AS (live): the footer "Org.nr. 990 892 687" made every Bodø Energi story name the company. Also
+  default posts on 966732024 Lugn and 830872752 Logscom that "named" the company only in boilerplate.
+- **A development must be attributed to the company.** It must appear in the title, in the company's voice in that
+  sentence or a neighbouring one, or in a sentence naming the company. Sentence breaks ignore abbreviations, and
+  noun-only lexicon entries are narrowed.
+- **New negative signals:**
+  - product and rental-item pages;
+  - commercial offers and article marketing (only when no development is attributed);
+  - standing-page titles;
+  - more job-ad phrasings, including Swedish and English;
+  - "Når bør …?", "Hvorfor …" and "råd til …" advice titles;
+  - listicles with an adjective.
+- **Tests:** 526 pass (6 regression tests on eval200 and live-BE fixtures, 7 unit tests). Each new regression test
+  fails on `8223a37`.

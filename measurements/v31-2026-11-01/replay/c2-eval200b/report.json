@@ -1,0 +1,221 @@
+{
+  "run_id": "c2-eval200b",
+  "code_version": {
+    "source_sha256": "4ced56fe693e8369226f0409e7c4ce99befe20b0e8012abb9eb06f6bb699280f",
+    "package_version": "0.3.0",
+    "git_commit": "7b8fc69d10aed1a3677b2646bd44c49db7ae78d8",
+    "git_dirty": false
+  },
+  "started_at": "2026-11-02T00:54:22.268098Z",
+  "completed_at": "2026-11-02T00:55:25.693091Z",
+  "runtime_ms": 63419,
+  "input_rows": 200,
+  "emitted_envelopes": 200,
+  "unique_companies_researched": 200,
+  "terminal_status_counts": {
+    "completed": 200
+  },
+  "modules": [
+    "registry",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website",
+    "site_research"
+  ],
+  "registry": {
+    "bulk": null,
+    "snapshot_status": "absent",
+    "fallback": "live_registry"
+  },
+  "category_coverage": {
+    "description": {
+      "available": 200
+    },
+    "filings": {
+      "available": 200
+    },
+    "hiring": {
+      "not_available": 186,
+      "not_applicable": 13,
+      "failed": 1
+    },
+    "identity": {
+      "available": 200
+    },
+    "leadership": {
+      "available": 200
+    },
+    "locations": {
+      "available": 200
+    },
+    "public_activity": {
+      "not_available": 131,
+      "available": 53,
+      "not_applicable": 10,
+      "ambiguous": 5,
+      "failed": 1
+    },
+    "registry_activity": {
+      "available": 200
+    },
+    "relationships": {
+      "not_available": 180,
+      "available": 20
+    },
+    "websites": {
+      "available": 198,
+      "not_available": 2
+    }
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 1.0,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 1.0,
+    "locations": 1.0,
+    "public_activity": 0.265,
+    "registry_activity": 1.0,
+    "relationships": 0.1,
+    "websites": 0.99
+  },
+  "area_coverage": {
+    "filings": 200,
+    "leadership": 200,
+    "locations": 200,
+    "websites": 95,
+    "public_footprint": 53,
+    "hiring": 0
+  },
+  "companies_all_five_areas": 53,
+  "module_states": {
+    "financials": {
+      "complete": 200
+    },
+    "group": {
+      "not_found": 180,
+      "complete": 20
+    },
+    "locations": {
+      "complete": 200
+    },
+    "registry": {
+      "not_found": 200
+    },
+    "registry_live": {
+      "complete": 200
+    },
+    "roles": {
+      "complete": 200
+    },
+    "site_research": {
+      "complete": 94,
+      "not_found": 105,
+      "source_error": 1
+    },
+    "website": {
+      "complete": 150,
+      "blocked_policy": 12,
+      "blocked_robots": 32,
+      "source_error": 3,
+      "not_found": 3
+    }
+  },
+  "error_codes": {},
+  "claims": {
+    "available_total": 9291,
+    "available_per_company_mean": 46.45,
+    "evidence_total": 9291,
+    "changes_total": 0
+  },
+  "operations": {
+    "requests": 2015,
+    "bytes": 2587170,
+    "request_latency": {
+      "n": 1000,
+      "p50_ms": 1.0,
+      "p95_ms": 1.0,
+      "max_ms": 1
+    },
+    "company_runtime": {
+      "n": 200,
+      "p50_ms": 169.0,
+      "p95_ms": 11671.0,
+      "max_ms": 18221
+    },
+    "third_party_cost_usd": 0,
+    "llm_calls": 0
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "one_envelope_per_input_row": true,
+      "envelopes_follow_input_order": true,
+      "all_terminal": true,
+      "all_envelopes_valid": true
+    },
+    "findings": {}
+  },
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "resumed_profiles": 0,
+  "baseline": {
+    "source": null,
+    "companies_with_baseline": 0
+  },
+  "new_items": {
+    "social_profile": 0,
+    "news_item": 0,
+    "job_posting": 0,
+    "retracted": 0
+  },
+  "checks": {
+    "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+    "withheld": {
+      "activity:bulk_entry_burst": 27,
+      "activity:default_cms_post": 1,
+      "activity:evergreen_advice_not_news": 28,
+      "activity:generic_title": 5,
+      "activity:item_not_about_entity_on_other_entity_site": 33,
+      "activity:listing_not_item": 4,
+      "activity:manager_news_not_about_entity": 67,
+      "activity:no_article_evidence": 4,
+      "activity:outside_news_section": 6,
+      "activity:page_date_on_non_news_page": 34,
+      "activity:project_category": 1,
+      "activity:publisher_content_not_about_company": 11,
+      "careers:not_a_careers_page": 6,
+      "job:currency_unknown": 1,
+      "social:brand_handle_on_group_or_brand_site": 5,
+      "social:brand_handle_uncorroborated": 1,
+      "social:extended_handle_uncorroborated": 5,
+      "social:handle_names_other_entity": 4,
+      "social:handle_unrelated": 23,
+      "social:site_operated_by_manager": 24,
+      "social:site_operated_by_other_entity": 3
+    }
+  },
+  "manual_audit": {
+    "state": "not_audited",
+    "note": "no manual audit supplied (scripts/audit_kit.py score; --audit-results)"
+  },
+  "history": {
+    "written": false,
+    "dir": null,
+    "reason": "disabled (--no-history)"
+  },
+  "viewer": {
+    "written": false,
+    "path": null,
+    "reason": "disabled (--no-viewer)"
+  }
+}

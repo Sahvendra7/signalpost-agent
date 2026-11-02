@@ -356,3 +356,68 @@ signal that separates them without overfitting: "Brannmur – beskyttelse i den 
 av sikre passord", "TSC Etikettskrivere …", "Et lite inspill i et omfattende temafelt", and the Kameo landing page.
 
 The final rules are frozen before the new sample eval200b is opened (§10).
+
+## 10. Independent evaluation of the second freeze (eval200b), scored once
+
+**Sample.**
+- 200 new organisations (`measurements/v31-2026-11-01/inputs/eval200b.jsonl`, SHA-256 `fabeb996…`), drawn with a new
+  seed from the same universe filter, excluding every organisation used in any earlier set (2,014).
+- Captured live through the baseline `ff3b515` before the second freeze, and opened only after `0e4c426` was committed.
+- Replayed through four versions:
+  - the baseline `ff3b515`;
+  - V3 candidate 2 `7b8fc69`;
+  - V3.1 freeze 1 `8223a37`;
+  - V3.1 freeze 2 `0e4c426`, from a clean worktree.
+
+**Labelling.**
+- Census of every unit any version published: 448 units (352 news, 82 social, 13 careers, 1 job).
+- Labelled once by the assistant, blind to version, with the captured text shown, under the same rubric as eval200.
+
+| Category | Baseline `ff3b515` | Candidate 2 `7b8fc69` | Freeze 1 `8223a37` | **Freeze 2 `0e4c426`** |
+|---|---|---|---|---|
+| News precision (95% CI) | 143/314 = 45.5% (40.1–51.1) | 137/226 = 60.6% (54.1–66.8) | 106/148 = 71.6% (63.9–78.3) | **105/131 = 80.2% (72.5–86.1)** |
+| News retention (correct baseline items kept) | — | 133/143 = 93.0% | 102/143 = 71.3% | **101/143 = 70.6%** |
+| News errors removed / introduced vs baseline | — | 82 / 0 | 129 / 0 | 145 / 0 |
+| Social precision | 72/78 = 92.3% (84.2–96.4) | 68/68 = 100% (94.7–100) | 68/68 | **68/68 = 100% (94.7–100)** |
+| Social retention | — | 66/72 = 91.7% | 66/72 | 66/72 = 91.7% |
+| Careers-page precision | 8/13 = 61.5% | 7/7 (64.6–100) | 7/7 | 7/7 (64.6–100) |
+| Job postings | 1 published, unsure | none | none | none |
+
+Unsure (excluded from precision): news 34 / 33 / 14 / 15; social 2 / 0 / 0 / 0.
+
+**The news target (≥90%) is not met:** 80.2%, with a 95% interval of 72.5–86.1%.
+
+**Social (≥95%)** is met on this sample: 68/68, lower bound 94.7%. The six baseline social errors were:
+- the US and international Alpha Solutions accounts;
+- the national Matsentralen accounts.
+
+All three V3 versions withhold them.
+
+**Where freeze 2's 26 news errors come from** (diagnostic only; eval200b is now consumed):
+
+| Recorded reason | Correct | Incorrect | Precision |
+|---|---|---|---|
+| development | 38 | 6 | 86.4% |
+| company_named | 43 | 10 | 81.1% |
+| company_voice | 24 | 10 | 70.6% |
+
+By section type: newsroom 48/55 = 87.3%, blog 22/31 = 71.0%, post 35/45 = 77.8%.
+
+| Error type | Errors | Examples |
+|---|---|---|
+| Guides, explainers, thought leadership and advice without an advice marker | 12 | Agenta "Nettbutikk i 2026: Slik velger …", Tiny Elephant "Shopify eller WooCommerce …", Rosim "Innsikt" articles, Fram Marine "Ship Emissions Compliance …" |
+| Product, service, reference-project and supplier-project marketing | 8 | Comfort Solskjerming Renson projects, Fram Marine "Improving Operational Performance", Lux Fide supplier news, Fresvik "Innfesting mot golv" |
+| Opinion, appeal and promotional profiles | 4 | Rett Fram op-eds, Fagskolen Diakonova student profile, Fram Marine "Five Quick Questions" |
+| Job advertisements the rule misses | 2 | "KPB søker seniorrådgiver" ("søker nå etter en …") |
+
+**Conclusion.** Every remaining error type is content marketing or opinion written on the company's own site, usually
+in its voice and naming it. In this sample:
+- no deterministic signal tested separates it from voice-only news without removing most positive controls (§9,
+  `strict`);
+- items with a development attributed to the company reach 86%, still below 90%.
+
+The 90% target would need one of the following:
+- a classifier that reads the article's purpose (not allowed here: no LLM);
+- publishing only attributed developments in news sections, which keeps far fewer items and still needs its own
+  independent measurement;
+- owner-verified labels to establish how much of the gap is labelling judgment.
