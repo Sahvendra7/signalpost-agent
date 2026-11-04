@@ -30,5 +30,16 @@
   "company coverage",
   "V3.1 correct-item retention"
  ],
- "labelling": "assistant_blind: the labeller sees only the captured text (sheet.md: no arm, no V3.1 reason, no model output); rubric docs/v3-accuracy.md \u00a75 + V3.1 additions; labels committed before any Gemini call on evalg250"
+ "labelling": "assistant_blind: the labeller sees only the captured text (sheet.md: no arm, no V3.1 reason, no model output); rubric docs/v3-accuracy.md \u00a75 + V3.1 additions; labels committed before any Gemini call on evalg250",
+ "addendum_2026-11-04T19:05Z": {
+  "written_before": "any dev80 prompt-grid result for prompts other than P2 was inspected, and before any evalg250 model call",
+  "free_tier_constraint": "gemini-3.6-flash, gemini-3-flash-preview and gemini-3.8-flash allow ~20 requests/day on this project; only gemini-3.1-flash-lite and gemini-3.5-flash-lite can process a full set today",
+  "final_runs": [
+   "P2 news-p2-evidence-v1 on gemini-3.1-flash-lite (all 338 evalg250 units)",
+   "P2 news-p2-evidence-v1 on gemini-3.5-flash-lite (all 338 units) - model comparison on independent data",
+   "PRIMARY: the prompt chosen by the selection rule below on gemini-3.1-flash-lite (if it is P2, run 1 is the primary run)"
+  ],
+  "selection_rule": "on eval200 dev80 with gemini-3.1-flash-lite, maximise (correct published - 3 x incorrect published); ties broken by fewer API calls per item, then lower median latency. The 3x weight encodes that a published error costs more than a missed item (precision-first product goal). Prompts with >5% API failures are excluded.",
+  "primary_arm_of_interest": "A_filter (V3.1 + LLM second-stage filter) and C_hybrid; all pre-registered arms are reported"
+ }
 }
