@@ -1,0 +1,34 @@
+{
+ "registered_at": "2026-11-04, before any evalg250 item was read or labelled and before any model call on evalg250",
+ "rule": "The final configuration is chosen ONLY among these prompt versions (and the models already tested), using diagnostic results (eval200/eval200b). No prompt text, schema, validator or arm definition may change after this point; any change would require a new independent sample.",
+ "prompts": {
+  "news-p1-binary-v1": "b058be3b12bf4666ee4af4a9164cb9692519c98cc1fb7f8dc4928c289bd10880",
+  "news-p2-evidence-v1": "6c18d63dfb9e33e9751a82b5ef794bfde4bb81e9ae8adee6e4bd71070dc10d49",
+  "news-p2-evidence-think-v1": "18c84afa233b4b840fe90d1dfa3ec1ef12823cafa8815c3239f1a99f38637907",
+  "news-p3-counter-v1": "781dc2888e1a9b6decaa6050d77c97a277c7f57084474423e9afc54d6fa39497",
+  "news-p4-twostage-v1": "15e3bbb8ac4ac11fb5896eed6942cdf2bc45cb8a8e2da600fc58984311cc4c05"
+ },
+ "files_sha256": {
+  "src/norway_company_agent/llm_experiments/prompts.py": "fe518cf4898ccd39a422e842037b26d4a4d90afe8d6004caeee9fe6ca99b2470",
+  "src/norway_company_agent/llm_experiments/policies.py": "ea424bb5fdfecb6fa966f1274e9633866c2dd8db983a3c37ce95d54b0132d2a4",
+  "src/norway_company_agent/llm_experiments/news_contract.py": "3c664783a3624f2bcee2a8c8e09479676bf13908a8cb4c1753eada1e8b34982d",
+  "src/norway_company_agent/llm_experiments/scoring.py": "fecd2f9f7e851b84ca230ef560d39f488ab6d3a47789362545d411319aa8c6cc"
+ },
+ "evalg250_inputs_sha256": "585676e6d7bd16af0b52533d86d379eaeefba518d41105fccba52b2e7fec830d",
+ "arms": [
+  "v31",
+  "A_filter",
+  "A_lenient",
+  "B_llm_only",
+  "C_hybrid",
+  "D_conservative",
+  "D_filter"
+ ],
+ "primary_metrics": [
+  "news precision (Wilson and company-clustered 95% CI)",
+  "pool coverage",
+  "company coverage",
+  "V3.1 correct-item retention"
+ ],
+ "labelling": "assistant_blind: the labeller sees only the captured text (sheet.md: no arm, no V3.1 reason, no model output); rubric docs/v3-accuracy.md \u00a75 + V3.1 additions; labels committed before any Gemini call on evalg250"
+}
