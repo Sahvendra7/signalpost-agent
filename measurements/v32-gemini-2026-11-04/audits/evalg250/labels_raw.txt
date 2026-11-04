@@ -1,0 +1,338 @@
+1|incorrect|advice_or_educational|winter-readiness tips for BMW owners
+2|incorrect|structural_or_default|calendar comments feed, no item
+3|incorrect|structural_or_default|static welcome/activities page
+4|incorrect|structural_or_default|"Test" default post
+5|incorrect|opinion_or_promotional_profile|archive of a lawyer's newspaper op-eds (2015)
+6|incorrect|opinion_or_promotional_profile|op-ed by a lawyer, on a hei-verden URL
+7|correct|news|the company's own op-ed appearance in EnergiWatch (company activity)
+8|incorrect|opinion_or_promotional_profile|founder's personal history (Utøya search 2011), not a company development
+9|correct|news|the company's follow-up debate piece in EnergiWatch
+10|correct|news|the company's project meetings in Eastern Europe
+11|correct|news|the company upgrades its captain certification (service area)
+12|correct|news|signed agreement for EU/EEA projects in Slovakia
+13|correct|news|Bulgarian ministry uses the company's projects as reference
+14|correct|news|the company's assignment and meetings in Bulgaria
+15|correct|news|the company invited as captain to Monaco Yacht Show
+16|correct|news|new energy/infrastructure assignment starting October 2026
+17|correct|news|becomes official training partner to Lean Forum Sweden
+18|incorrect|advice_or_educational|advice blog built on an anonymised client case
+19|correct|news|kick-off of a client leadership program in Skien
+20|incorrect|product_service_marketing|customer-stories service page
+21|incorrect|advice_or_educational|performance-management advice
+22|correct|news|the company hosts seminars with a Toyota manager
+23|incorrect|advice_or_educational|leadership model explainer
+24|incorrect|opinion_or_promotional_profile|employee profile
+25|incorrect|advice_or_educational|first-line leader advice
+26|incorrect|opinion_or_promotional_profile|employee profile
+27|incorrect|project_or_property_listing|trade service page listing past projects/clients
+28|incorrect|project_or_property_listing|trade service page listing past projects
+29|incorrect|project_or_property_listing|trade service page listing a client
+30|incorrect|project_or_property_listing|trade service page listing past projects
+31|incorrect|project_or_property_listing|trade service page listing past projects
+32|incorrect|project_or_property_listing|trade service page listing past projects
+33|incorrect|product_service_marketing|cleaning service page
+34|incorrect|project_or_property_listing|trade service page listing past projects
+35|incorrect|project_or_property_listing|trade service page listing past projects
+36|incorrect|project_or_property_listing|trade service page listing past projects
+37|incorrect|advice_or_educational|tinnitus FAQ
+38|incorrect|advice_or_educational|noise-protection advice
+39|incorrect|product_service_marketing|hearing-aid price/marketing FAQ
+40|incorrect|advice_or_educational|FAQ
+41|incorrect|advice_or_educational|FAQ
+42|incorrect|advice_or_educational|maintenance FAQ
+43|incorrect|advice_or_educational|FAQ
+44|incorrect|advice_or_educational|when to test hearing (advice)
+45|incorrect|product_service_marketing|product article
+46|incorrect|advice_or_educational|installation advice
+47|incorrect|advice_or_educational|product comparison article
+48|incorrect|advice_or_educational|how artificial turf is installed
+49|incorrect|advice_or_educational|buyer advice
+50|incorrect|advice_or_educational|product/sustainability advice
+51|correct|news|completed tennis-to-padel conversion for a named club (company's own project)
+52|correct|news|the company renovated a playground surface for Ystad municipality (own project)
+53|correct|news|the company's sponsor event with HK Malmö
+54|incorrect|product_service_marketing|product-generation marketing (Sureplay)
+55|correct|news|partnership: Frödin represents the company in northern Sweden
+56|incorrect|opinion_or_promotional_profile|customer story: club painted courts itself with paint bought from the company
+57|correct|news|the company's court renovation/installation at Stora Wäsby
+58|incorrect|product_service_marketing|product promotion
+59|correct|news|the company as partner in a Malmö tennis project
+60|incorrect|product_service_marketing|product concept promotion
+61|correct|news|the company equipped a hotel with padel and pickleball courts
+62|correct|news|multisport facility built with the company at Gislövs IP
+63|correct|news|the company becomes part-owner of Padel Courts Deluxe
+64|correct|news|the company built Europe's first poptennis court on turf
+65|incorrect|advice_or_educational|poptennis explainer
+66|incorrect|product_service_marketing|product promotion
+67|incorrect|product_service_marketing|product-improvement marketing
+68|unsure|news|inauguration of a customer's facility; the company's role is not shown in the text
+69|correct|news|the company's repainting project at Hackholmssund
+70|incorrect|opinion_or_promotional_profile|customer testimonial about leased robots
+71|correct|news|the company built hybrid clay courts in Staffanstorp
+72|correct|news|acquisition of Presenco Sport
+73|correct|news|acquisition of Frödin Natur & Fritid
+74|correct|news|acquisition of Grönt & Rent
+75|incorrect|advice_or_educational|family/criminal-law advice article
+76|correct|news|the firm's own recent case: assisted a mother in a parental-responsibility case
+77|incorrect|advice_or_educational|family/criminal-law advice article
+78|incorrect|advice_or_educational|family/criminal-law advice article
+79|incorrect|advice_or_educational|family/criminal-law advice article
+80|incorrect|advice_or_educational|family/criminal-law advice article
+81|incorrect|advice_or_educational|family/criminal-law advice article
+82|incorrect|advice_or_educational|family/criminal-law advice article
+83|incorrect|advice_or_educational|family/criminal-law advice article
+84|incorrect|advice_or_educational|family/criminal-law advice article
+85|correct|news|the researcher's (sole proprietor's) own journal article published (duplicate unit, title with <em> markup)
+86|correct|news|the researcher's (sole proprietor's) own journal article published
+87|correct|news|the researcher's (sole proprietor's) own book chapter published
+88|correct|news|the researcher's (sole proprietor's) own her plenary address at a Nordic conference
+89|correct|news|the researcher's (sole proprietor's) own journal article published (duplicate unit, <em> markup)
+90|correct|news|the researcher's (sole proprietor's) own journal article published
+91|correct|news|the researcher's (sole proprietor's) own journal article published (duplicate unit, <em> markup)
+92|correct|news|the researcher's (sole proprietor's) own journal article published
+93|correct|news|the researcher's (sole proprietor's) own journal article published (duplicate unit, <em> markup)
+94|correct|news|the researcher's (sole proprietor's) own journal article published
+95|correct|news|the researcher's (sole proprietor's) own report published (duplicate unit, <em> markup)
+96|correct|news|the researcher's (sole proprietor's) own report published
+97|correct|news|the researcher's (sole proprietor's) own new book (duplicate unit, <em> markup)
+98|correct|news|the researcher's (sole proprietor's) own new book
+99|correct|news|the researcher's (sole proprietor's) own book (duplicate unit, <em> markup)
+100|correct|news|the researcher's (sole proprietor's) own book
+101|unsure|news|research project description page; whether it announces a new project is not shown
+102|incorrect|structural_or_default|generic card title 'Mer information' (CEO blog card), not an item title
+103|incorrect|job_advertisement|recruitment post for production team
+104|correct|news|the company expands into Denmark (listing card)
+105|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+106|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+107|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+108|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+109|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+110|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+111|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+112|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+113|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+114|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+115|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+116|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+117|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+118|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+119|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+120|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+121|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+122|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+123|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+124|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+125|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+126|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+127|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+128|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+129|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+130|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+131|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+132|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+133|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+134|incorrect|other_entity_or_unrelated|Valmet Oyj (Finnish group) release on the group site, not about VALMET AS (Norwegian subsidiary)
+135|correct|news|the municipality's adult-education course start (own service announcement)
+136|correct|news|the municipality's vaccination days (own event)
+137|correct|news|the municipality adjusts its health and care leadership structure
+138|incorrect|advice_or_educational|public fireworks-rules notice (regulatory information)
+139|incorrect|job_advertisement|vacancy
+140|correct|news|the fire service launches a podcast episode with a competition (own activity)
+141|correct|news|the fire service's rescue operation in Åseral
+142|correct|news|the fire services publish a joint guide (own publication)
+143|incorrect|advice_or_educational|chimney-sweep preparation advice
+144|incorrect|job_advertisement|vacancies
+145|correct|news|the fire service's forest-fire operation
+146|correct|news|opening of the fire service's new station at Vanse
+147|incorrect|structural_or_default|podcast landing page
+148|correct|news|the party's own statement, proposal or activity (press release)
+149|correct|news|the party's own statement, proposal or activity (press release)
+150|correct|news|the party's own statement, proposal or activity (press release)
+151|correct|news|the party's own statement, proposal or activity (press release)
+152|correct|news|the party's own statement, proposal or activity (press release)
+153|correct|news|the party's own statement, proposal or activity (press release)
+154|correct|news|the party's own statement, proposal or activity (press release)
+155|correct|news|the party's own statement, proposal or activity (press release)
+156|correct|news|the party's own statement, proposal or activity (press release)
+157|correct|news|the party's own statement, proposal or activity (press release)
+158|correct|news|the party's own statement, proposal or activity (press release)
+159|unsure|news|new leader of FpU, the party's youth organisation (a separate legal entity; relationship not in the registry data)
+160|correct|news|the party's own statement, proposal or activity (press release)
+161|unsure|news|new leader of FpU, the party's youth organisation (a separate legal entity; relationship not in the registry data)
+162|correct|news|the party's own statement, proposal or activity (press release)
+163|correct|news|the party's own statement, proposal or activity (press release)
+164|correct|news|the party's own statement, proposal or activity (press release)
+165|correct|news|the party's own statement, proposal or activity (press release)
+166|correct|news|the party's own statement, proposal or activity (press release)
+167|correct|news|the party's own statement, proposal or activity (press release)
+168|incorrect|job_advertisement|vacancy at the party's head office
+169|correct|news|the party's own statement, proposal or activity (press release)
+170|correct|news|the party's own statement, proposal or activity (press release)
+171|correct|news|the party's own statement, proposal or activity (press release)
+172|correct|news|the party's own statement, proposal or activity (press release)
+173|correct|news|the party's own statement, proposal or activity (press release)
+174|correct|news|the party's own statement, proposal or activity (press release)
+175|correct|news|the party's own statement, proposal or activity (press release)
+176|correct|news|the party's own statement, proposal or activity (press release)
+177|correct|news|the party's own statement, proposal or activity (press release)
+178|correct|news|the party's own statement, proposal or activity (press release)
+179|correct|news|the party's own statement, proposal or activity (press release)
+180|correct|news|the party's own statement, proposal or activity (press release)
+181|correct|news|the party's own statement, proposal or activity (press release)
+182|correct|news|the party's own statement, proposal or activity (press release)
+183|correct|news|the party's own statement, proposal or activity (press release)
+184|correct|news|the party's own statement, proposal or activity (press release)
+185|correct|news|the party's own statement, proposal or activity (press release)
+186|correct|news|the party's own statement, proposal or activity (press release)
+187|incorrect|opinion_or_promotional_profile|profile of the youth organisation's leader
+188|correct|news|the party's own statement, proposal or activity (press release)
+189|correct|news|the party's own statement, proposal or activity (press release)
+190|correct|news|the party's own statement, proposal or activity (press release)
+191|correct|news|the party's own statement, proposal or activity (press release)
+192|correct|news|the party's own statement, proposal or activity (press release)
+193|incorrect|product_service_marketing|hall rental offer
+194|unsure|news|title only; the club's role in the cup is not shown
+195|correct|news|the club's own running series
+196|incorrect|job_advertisement|vacancy (cleaner)
+197|unsure|news|title only; the club's part in the 17 May parade is not shown
+198|correct|news|the association's member magazine issued
+199|unsure|news|grief conference; whether the association organises it is not shown
+200|incorrect|product_service_marketing|membership campaign
+201|correct|news|the association arranges webinars
+202|correct|news|the association changes its name
+203|correct|news|the association's member magazine issued
+204|correct|news|the association's member magazine issued
+205|correct|news|the association's member magazine issued
+206|incorrect|other_entity_or_unrelated|another institution's research recruitment
+207|incorrect|opinion_or_promotional_profile|appeal for a private fundraising auction
+208|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+209|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+210|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+211|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+212|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+213|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+214|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+215|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+216|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+217|incorrect|structural_or_default|theme demo content (lorem ipsum property listing)
+218|correct|news|the club's team to the national championships
+219|unsure|news|regional team (Team Vest); whether the club runs it is not shown
+220|unsure|news|club clothing order deadline (member notice)
+221|incorrect|other_entity_or_unrelated|national/regional federation (NTN) event, not the club's
+222|correct|news|the club's own belt gradings
+223|correct|news|the club's training camp
+224|incorrect|other_entity_or_unrelated|national/regional federation (NTN) event, not the club's
+225|incorrect|other_entity_or_unrelated|national/regional federation (NTN) event, not the club's
+226|unsure|news|regional team (Team Vest); whether the club runs it is not shown
+227|correct|news|the club's annual meeting
+228|unsure|news|card text belongs to another post (schedule dated 11 Sept); date not verifiable
+229|unsure|news|cadet championship; organiser not shown
+230|correct|news|the club's own belt gradings
+231|unsure|news|regional team (Team Vest); whether the club runs it is not shown
+232|correct|news|the club's training schedule change
+233|incorrect|other_entity_or_unrelated|national/regional federation (NTN) event, not the club's
+234|correct|news|the club's own belt gradings
+235|unsure|news|summer camps; organiser not shown
+236|unsure|news|referee course; organiser not shown
+237|unsure|news|card text belongs to another post (schedule dated 11 Sept); date not verifiable
+238|correct|news|the club's team to the national championships
+239|unsure|news|regional team (Team Vest); whether the club runs it is not shown
+240|unsure|news|cadet championship; organiser not shown
+241|incorrect|other_entity_or_unrelated|another club's championship invitation
+242|unsure|news|championship schedule; organiser not shown
+243|unsure|news|regional team (Team Vest); whether the club runs it is not shown
+244|incorrect|other_entity_or_unrelated|ITF World Cup (international federation event)
+245|incorrect|other_entity_or_unrelated|national/regional federation (NTN) event, not the club's
+246|incorrect|other_entity_or_unrelated|the national federation's (NTN) app launch
+247|correct|news|the club invites regional members to its training camp
+248|incorrect|other_entity_or_unrelated|a member kennel's litter
+249|correct|news|the breed club's special show at Oslo Dogshow
+250|correct|news|the club publishes its new winners page
+251|incorrect|other_entity_or_unrelated|a member kennel's litter
+252|correct|news|the club upgraded its website
+253|incorrect|other_entity_or_unrelated|a member's dog story
+254|correct|news|the designer's own exhibition, collaboration or product launch for a client
+255|correct|news|the designer's own exhibition, collaboration or product launch for a client
+256|correct|news|the designer's own exhibition, collaboration or product launch for a client
+257|correct|news|the designer's own exhibition, collaboration or product launch for a client
+258|correct|news|the designer's own exhibition, collaboration or product launch for a client
+259|correct|news|the designer's own exhibition, collaboration or product launch for a client
+260|correct|news|the designer's own exhibition, collaboration or product launch for a client
+261|correct|news|the designer's own exhibition, collaboration or product launch for a client
+262|correct|news|the designer's own exhibition, collaboration or product launch for a client
+263|correct|news|the designer's own exhibition, collaboration or product launch for a client
+264|correct|news|the designer's own exhibition, collaboration or product launch for a client
+265|correct|news|the designer's own exhibition, collaboration or product launch for a client
+266|correct|news|the designer's own exhibition, collaboration or product launch for a client
+267|correct|news|the designer's own exhibition, collaboration or product launch for a client
+268|incorrect|structural_or_default|'follow me on Instagram' notice
+269|incorrect|structural_or_default|generic blog listing title 'Hva er nytt?'
+270|correct|news|the committee launches its new website
+271|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+272|unsure|news|the psychologist's media/podcast appearance; dated with the site's bulk re-publication date, the real date is not shown
+273|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+274|incorrect|product_service_marketing|Christmas-calendar product promotion
+275|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+276|incorrect|misdated|talk in Cannes on 26 April 2024 presented under a 28 Oct 2025 bulk date
+277|unsure|news|the psychologist's media/podcast appearance; dated with the site's bulk re-publication date, the real date is not shown
+278|unsure|news|the psychologist's media/podcast appearance; dated with the site's bulk re-publication date, the real date is not shown
+279|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+280|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+281|unsure|news|the psychologist's media/podcast appearance; dated with the site's bulk re-publication date, the real date is not shown
+282|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+283|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+284|incorrect|product_service_marketing|Christmas-calendar product promotion
+285|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+286|incorrect|opinion_or_promotional_profile|audience-feedback testimonial
+287|incorrect|structural_or_default|'see you on LinkedIn' notice
+288|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+289|unsure|news|the psychologist's media/podcast appearance; dated with the site's bulk re-publication date, the real date is not shown
+290|incorrect|product_service_marketing|'summer gift for employees' product promotion
+291|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+292|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+293|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+294|incorrect|opinion_or_promotional_profile|workshop testimonials (workshop held January 2025, bulk-dated)
+295|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+296|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+297|incorrect|advice_or_educational|psychology advice post (bulk-dated 28 Oct 2025)
+298|incorrect|opinion_or_promotional_profile|new profile photos
+299|incorrect|product_service_marketing|Christmas-calendar 2025 teaser
+300|incorrect|opinion_or_promotional_profile|customer reviews page ('what customers say')
+301|incorrect|advice_or_educational|weekly reflection/advice column
+302|incorrect|advice_or_educational|weekly reflection/advice column
+303|incorrect|advice_or_educational|weekly reflection/advice column
+304|incorrect|advice_or_educational|weekly reflection/advice column
+305|incorrect|advice_or_educational|weekly reflection/advice column
+306|incorrect|advice_or_educational|weekly reflection/advice column
+307|correct|news|the jazz club's own concert/festival
+308|correct|news|the jazz club's own concert/festival
+309|correct|news|the jazz club's own concert/festival
+310|correct|news|the jazz club's own concert/festival
+311|correct|news|the jazz club's own concert/festival
+312|correct|news|the jazz club's own concert/festival
+313|correct|news|the jazz club's own concert/festival
+314|correct|news|the jazz club's own concert/festival
+315|correct|news|the jazz club's own concert/festival
+316|correct|news|the jazz club's own concert/festival
+317|correct|news|the jazz club's own concert/festival
+318|incorrect|structural_or_default|title is the club's about-blurb, not an item
+319|correct|news|the jazz club's own concert/festival
+320|unsure|news|2011 link to a magazine article; whether it is about the company is not shown
+321|incorrect|other_entity_or_unrelated|newspaper interview with another person (2011)
+322|unsure|news|2011 magazine facsimile; subject not shown
+323|incorrect|advice_or_educational|thought leadership / explainer
+324|incorrect|advice_or_educational|thought leadership / explainer
+325|incorrect|advice_or_educational|thought leadership / explainer
+326|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+327|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+328|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+329|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+330|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+331|incorrect|advice_or_educational|thought leadership / explainer
+332|incorrect|advice_or_educational|thought leadership / explainer
+333|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+334|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+335|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+336|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+337|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
+338|incorrect|advice_or_educational|explainer of Oracle's release/patch (another company's product news)
