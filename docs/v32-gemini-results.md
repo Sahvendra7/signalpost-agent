@@ -206,7 +206,7 @@ Remaining pre-registered work:
 
 * **Free tier:** about 2 days, at 500 calls per day per model. Daily quotas reset at 08:00 UTC. All completed
   responses are cached, so nothing is re-requested.
-* **Billed project (paid tier):** about 1,750 calls ≈ **$1.6 paid-equivalent** at current prices, within an hour.
+* **Billed project (paid tier):** about 1,750 calls ≈ **$1.8 paid-equivalent** at current prices, within an hour.
   This would also allow `gemini-3.6-flash` on the same sets (≈$3 more).
 * The local commits exist only in this container. If it is reclaimed before the work resumes, they are lost unless
   pushed. Pushing was not done, as instructed.
