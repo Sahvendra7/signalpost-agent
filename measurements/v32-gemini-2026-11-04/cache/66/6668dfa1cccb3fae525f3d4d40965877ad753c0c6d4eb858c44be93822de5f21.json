@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "post@oddsmaage.no Om oss Odd Småge AS Odd Småge AS Molde Pukkverk"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Odd Småge AS",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page content is entirely about an unrelated entity, Odd Småge AS, and does not mention the target company LUX FIDE AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 57440,
+ "input_tokens": 1610,
+ "output_tokens": 198,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:09:29.106203+00:00"
+}

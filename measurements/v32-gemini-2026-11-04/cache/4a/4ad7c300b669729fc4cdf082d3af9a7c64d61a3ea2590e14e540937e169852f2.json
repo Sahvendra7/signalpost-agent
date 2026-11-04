@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Du må være ute i god tid for å få registrert fusjon, fisjon, kapitalnedsettelse og avvikling i Foretaksregisteret før årsskiftet."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Brønnøysundregistrene",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-09-09",
+  "date_evidence": "9. september 2025",
+  "decision": "withhold",
+  "reason": "The item provides regulatory advice regarding deadlines for corporate registrations with the Brønnøysundregistrene, rather than reporting an event or development about the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 80885,
+ "input_tokens": 1643,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:16:23.083374+00:00"
+}

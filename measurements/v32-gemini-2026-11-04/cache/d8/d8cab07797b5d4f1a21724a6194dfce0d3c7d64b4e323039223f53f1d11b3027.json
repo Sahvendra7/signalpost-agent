@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Är du vår nästa säljare?",
+   "Därför söker vi nu efter vår nästa säljare."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Logscom",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-12-17",
+  "date_evidence": "Tue, 17 Dec 2024 18:17:10 +0000",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement looking for a new salesperson and does not qualify as company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 20189,
+ "input_tokens": 2266,
+ "output_tokens": 223,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:35.347154+00:00"
+}

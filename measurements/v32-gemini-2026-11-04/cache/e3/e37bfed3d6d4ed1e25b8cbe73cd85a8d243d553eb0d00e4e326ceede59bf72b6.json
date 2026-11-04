@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fiskesykdommen francisellose er påvist ved lokalitet 25315 «Skogsøya» i Frøya kommune i Trøndelag, der Norcod AS driver matfiskproduksjon av torsk."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Norcod AS",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article reports on a disease outbreak affecting a location operated by Norcod AS, not the target company Fisk Media AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 75638,
+ "input_tokens": 2284,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:09:02.401722+00:00"
+}

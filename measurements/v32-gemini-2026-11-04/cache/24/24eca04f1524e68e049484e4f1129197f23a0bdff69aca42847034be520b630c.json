@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Zebra",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational blog post providing advice on why Zebra label printers are a good choice for businesses, rather than reporting on a specific development or event of Frankeringsrekvisita NUF.",
+  "evidence_quotes": [
+   "5 grunner til at Zebra etikettskrivere er bedriftens beste valg"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 8983,
+ "input_tokens": 2406,
+ "output_tokens": 199,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:37.840640+00:00"
+}

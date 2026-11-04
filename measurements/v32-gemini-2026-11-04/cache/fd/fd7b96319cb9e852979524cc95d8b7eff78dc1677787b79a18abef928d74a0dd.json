@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Slik kan du forberede deg for jobben mens du studerer",
+   "Ønsker du å legge grunnlaget for en smidig overgang fra studieliv til arbeidsliv?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "TEMP TEAM AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an educational or advice article providing tips for students rather than reporting a specific development or event concerning TEMP TEAM AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9452,
+ "input_tokens": 1500,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:31.512116+00:00"
+}

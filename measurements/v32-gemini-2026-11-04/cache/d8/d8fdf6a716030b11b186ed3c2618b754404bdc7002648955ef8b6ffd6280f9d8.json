@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Pityful a rethoric question ran – Midt-Telemark Kommunale Eigedom AS"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Midt-Telemark Kommunale Eigedom AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2016-06-06",
+  "date_evidence": "Mon, 06 Jun 2016 11:27:49 +0000",
+  "decision": "withhold",
+  "reason": "The article is a placeholder or default CMS text (Lorem Ipsum) and does not report any genuine development, action, or event related to the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18142,
+ "input_tokens": 2774,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:34.202476+00:00"
+}

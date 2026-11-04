@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "AtB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a promotional tool (a car cost calculator) designed to encourage the use of the company's services, such as public transport tickets, rather than reporting a specific company development.",
+  "evidence_quotes": [
+   "Test bilkalkulator! Hva koster bilen deg?",
+   "Finn ut hvor mye bilen koster deg, og hva du heller kan bruke pengene på.",
+   "Periodebillett fra AtB : Reis miljøvennlig og ubegrenset med kollektivtransport."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 65548,
+ "input_tokens": 1882,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:23.851994+00:00"
+}

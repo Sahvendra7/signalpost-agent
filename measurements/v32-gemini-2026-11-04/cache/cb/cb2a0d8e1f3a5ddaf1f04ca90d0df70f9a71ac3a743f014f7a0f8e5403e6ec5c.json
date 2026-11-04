@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hovedutstillingen er kuratert av Tina Skedsmo og Vibeke Christensen fra Mesén."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-20",
+  "date_evidence": "20. aug.",
+  "decision": "publish",
+  "reason": "The text reports on the art biennale exhibition curated by Mesén representatives, representing the target company's professional activity and event participation.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 117283,
+ "input_tokens": 2577,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:10:02.107969+00:00"
+}

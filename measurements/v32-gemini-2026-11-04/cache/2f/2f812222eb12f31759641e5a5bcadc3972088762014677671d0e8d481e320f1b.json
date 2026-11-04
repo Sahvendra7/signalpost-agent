@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "23m – Bomlift – Elektrisk",
+   "Lift Navn Pris på forespørsel Ta kontakt for tiljenglighet, pris og for andre spørsmål."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Steinkjer Liftutleie AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a product listing describing a specific rental lift offered by the target company rather than reporting a corporate news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 37233,
+ "input_tokens": 1809,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:03:58.451196+00:00"
+}

@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det har i løpet av året skjedd noen endringer i bemanningen på Lia.",
+   "De viktigste endringene som har skjedd på Lia Gård til nå i år, er at Stephanie Keller fra Østerrrike har gått inn i rollen som ansvarlig renholder",
+   "Konklusjonen er at jeg fortsetter i rollen som daglig leder inntil videre, forteller Ingar Bø."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Lia Gård",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2025-05-08",
+  "date_evidence": "Endringer på Lia 8. mai",
+  "decision": "publish",
+  "reason": "The article reports official updates about personnel and management changes at Lia Gård, including new staff members and the continuation of the current general manager.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 57386,
+ "input_tokens": 2068,
+ "output_tokens": 289,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:17:37.590477+00:00"
+}

@@ -1,0 +1,36 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Mpenergi AS signerte 5. august avtale om bistand til prosjekter i Slovakia som er EU og EEA finansiert."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mpenergi AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-05",
+  "date_evidence": "05/08/2026",
+  "decision": "publish",
+  "reason": "The company announced that it has signed a contract to provide assistance for EU and EEA-funded projects in Slovakia.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 111081,
+ "input_tokens": 1670,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  13.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:37.895311+00:00"
+}

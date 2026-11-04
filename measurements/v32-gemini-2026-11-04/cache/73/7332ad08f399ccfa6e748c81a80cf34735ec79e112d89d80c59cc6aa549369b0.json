@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hva er en voldtekt og når har jeg krav på bistandsadvokat?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "ADVOKATFIRMAET RIEBER-MOHN AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article provides general legal information and definitions regarding rape and the right to a legal assistant, which constitutes educational content rather than a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 65455,
+ "input_tokens": 3304,
+ "output_tokens": 201,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  59.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:05.996916+00:00"
+}

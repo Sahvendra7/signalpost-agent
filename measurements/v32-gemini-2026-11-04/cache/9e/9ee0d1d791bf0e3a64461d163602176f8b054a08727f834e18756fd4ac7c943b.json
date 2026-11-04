@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sammen med kunstutvalget utviklet vi i Mesén følgende kuratoriske prinsipper for arbeidet, som ble en del av Kunstplanen",
+   "19. juni"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-06-19",
+  "date_evidence": "19. juni",
+  "decision": "withhold",
+  "reason": "The page describes the target company's past art curation and project work for a hospital, which functions as a reference or portfolio project rather than reporting a new corporate event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 76226,
+ "input_tokens": 3260,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:42.474171+00:00"
+}

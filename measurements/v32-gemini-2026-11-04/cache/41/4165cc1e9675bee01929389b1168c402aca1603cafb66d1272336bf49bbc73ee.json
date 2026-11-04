@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Etter 44 år med dedikert arbeid, er Agnar Bøtun klar for pensjonisttilværelsen - eller er han?",
+   "Agnar skal jobbe 50% fram til sommaren. Etter det blir Agnar 100% pensjonist."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2023-12-20",
+  "date_evidence": "20. des.",
+  "decision": "publish",
+  "reason": "The article announces that long-time employee Agnar Bøtun at Fresvik Produkt is transitioning to a 50% schedule before retiring fully, representing a personnel update about the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 91995,
+ "input_tokens": 2516,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:16:40.200294+00:00"
+}

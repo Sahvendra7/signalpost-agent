@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Den nya generationens Sureplay har förbättrade miljöegenskaper, förbättrad stötdämpande funktion och fantastiska visuella kvalitéer.",
+   "Välkommen till vår monter på Fastighetsmässan Syd där vi gärna visar och berättar mer om detta!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2020-02-14",
+  "date_evidence": "14 februari, 2020",
+  "decision": "publish",
+  "reason": "The company announces the launch of a new generation of their Sureplay product with improved environmental and functional properties, and invites customers to see it at a trade fair.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 34514,
+ "input_tokens": 2299,
+ "output_tokens": 264,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:17:20.676173+00:00"
+}

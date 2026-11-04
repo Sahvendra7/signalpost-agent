@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid är stolt partner till projektet för hållbar tennis – ”Tennis skapar Fair Play i hela Malmö” – som i somras slog rekord."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2021-01-19",
+  "date_evidence": "19 januari, 2021",
+  "decision": "publish",
+  "reason": "The article reports on the company's involvement as a partner in a specific community project, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 47821,
+ "input_tokens": 2364,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:18:27.054100+00:00"
+}

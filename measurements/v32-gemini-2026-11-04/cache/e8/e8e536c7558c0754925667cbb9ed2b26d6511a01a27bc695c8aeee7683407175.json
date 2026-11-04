@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "What gives you energy? I get energy from seeing different industries and businesses.",
+   "What advice do you have for organizations that want to create a stronger culture of improvement? To be inspired by others and not copy."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Linda Rosén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-04-29",
+  "date_evidence": "Mon, 29 Apr 2024 10:10:32 +0000",
+  "decision": "withhold",
+  "reason": "The item is an interview or profile piece featuring an employee's thoughts and advice, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1411,
+ "input_tokens": 1888,
+ "output_tokens": 253,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:33.911760+00:00"
+}

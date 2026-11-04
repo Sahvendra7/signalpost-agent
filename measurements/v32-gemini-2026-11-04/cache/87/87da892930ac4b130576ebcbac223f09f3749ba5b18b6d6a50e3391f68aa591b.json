@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vertinnegaven som blir lagt merke til – og som smaker fantastisk!",
+   "Se våre gavefavoritter"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Jentene på tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-21",
+  "date_evidence": "Jentene på tunet / april 21, 2026",
+  "decision": "withhold",
+  "reason": "The article provides advice and marketing tips on choosing a hostess gift, ultimately promoting the company's own products rather than reporting a specific company development or news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 32558,
+ "input_tokens": 2154,
+ "output_tokens": 220,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:03:16.929745+00:00"
+}

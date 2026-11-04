@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi er glade for å ønske Håkon Undli velkommen i teamet som vår nye seniorrådgiver."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "KUNNSKAPSPARKEN BODØ AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2023-08-15",
+  "date_evidence": "15. aug.",
+  "decision": "publish",
+  "reason": "The text announces a new appointment at the target company, specifically welcoming Håkon Undli as a senior advisor.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 75535,
+ "input_tokens": 2237,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:10:57.431828+00:00"
+}

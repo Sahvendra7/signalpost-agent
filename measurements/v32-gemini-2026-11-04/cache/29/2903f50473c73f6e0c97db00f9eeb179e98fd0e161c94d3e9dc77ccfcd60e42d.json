@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I hjertet av Bergen inviterer Baker Brun til en smakfull og avslappende bypåske, enten du rusler langs historiske omgivelser eller tar en pause med søte fristelser og smakfull lunsj."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Baker Brun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-03-25",
+  "date_evidence": "Baker Brun 25.03.2026",
+  "decision": "publish",
+  "reason": "The article announces Baker Brun's Easter opening hours and activities across their bakeries in Bergen.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 46626,
+ "input_tokens": 2399,
+ "output_tokens": 239,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:06:51.445636+00:00"
+}

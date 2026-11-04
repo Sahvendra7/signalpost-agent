@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "arrangerer Mesén en samtale om hvordan kunst i offentlige rom kan bidra til å nå disse målene."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2024-08-06",
+  "date_evidence": "6. aug.",
+  "decision": "publish",
+  "reason": "The item announces an event hosted and organized by Mesén at Arendalsuka regarding art in public spaces.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 65233,
+ "input_tokens": 2947,
+ "output_tokens": 207,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:15:02.194028+00:00"
+}

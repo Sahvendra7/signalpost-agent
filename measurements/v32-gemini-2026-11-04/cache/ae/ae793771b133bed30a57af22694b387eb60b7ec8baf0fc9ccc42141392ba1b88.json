@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Har du lyst til å bli sterkere og smidigere - helt i ditt eget tempo? SomaMove er en herlig time hvor vi trener helt uten bruk av vekter eller kompliserte trinn."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Oppdal Treningssenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item promotes a class or service offered by the company without reporting a specific company development, action, or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 59289,
+ "input_tokens": 1604,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:20:46.013248+00:00"
+}

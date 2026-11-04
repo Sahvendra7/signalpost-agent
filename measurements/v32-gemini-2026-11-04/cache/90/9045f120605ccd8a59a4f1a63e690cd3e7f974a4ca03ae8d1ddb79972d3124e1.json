@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Gör ett hållbart val – välj konstgräs som håller i längden",
+   "Den nya generationens konstgräs har sand som infill. Förutom att sand är ett rent naturmaterial behöver det i princip aldrig fyllas på ytterligare."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-12-26",
+  "date_evidence": "26 december, 2018",
+  "decision": "withhold",
+  "reason": "The article is a promotional piece advocating for the environmental benefits of sand-infill artificial turf, which is a product offered by the company, rather than reporting on a specific corporate event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 178440,
+ "input_tokens": 2492,
+ "output_tokens": 260,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:17:19.229053+00:00"
+}

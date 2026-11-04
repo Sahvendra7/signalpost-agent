@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Utstillingsåpning og bakgårdsfest: “I RAND OG BILDE”"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "I RAND OG BILDE",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text refers to an exhibition opening and backyard party unrelated to the target company's own developments.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 78225,
+ "input_tokens": 1530,
+ "output_tokens": 186,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:32.192828+00:00"
+}

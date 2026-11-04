@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oppstart på tilbygg på eldre enebolig 27 okt 2017",
+   "Denne uken startet vi opp med tilbygg på en eldre enebolig på Løken på Storslett/strømfjord."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Storesté Entreprenør AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2017-10-27",
+  "date_evidence": "27 okt 2017",
+  "decision": "publish",
+  "reason": "The text announces the start of a new construction project for an extension on an older single-family home by Storesté Entreprenør AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4992,
+ "input_tokens": 1598,
+ "output_tokens": 255,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:49.040030+00:00"
+}

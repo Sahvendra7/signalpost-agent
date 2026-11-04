@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Logscom is now hiring a software developer."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Logscom AB",
+  "subject_relation": "other_group_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-07-01",
+  "date_evidence": "Mon, 01 Jul 2024 14:42:18 +0000",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for a software developer at Logscom AB, which is a related or similarly named entity rather than a corporate development news item for the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 25396,
+ "input_tokens": 1679,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:12.395669+00:00"
+}

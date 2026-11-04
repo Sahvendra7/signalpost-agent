@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Denne uken startet vi opp med bygging av rekkehus beliggende på det nye Bjørkholt boligfeltet i Birtavarre."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Unknown",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text describes construction work on a housing project in Birtavarre, which has no relation to the target company Oppdal Treningssenter AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 56040,
+ "input_tokens": 1661,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:11:39.723569+00:00"
+}

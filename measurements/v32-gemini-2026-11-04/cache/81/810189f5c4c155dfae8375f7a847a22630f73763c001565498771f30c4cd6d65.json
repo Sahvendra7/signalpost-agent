@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hos JOY Medispa Bodø tilbyr vi avanserte behandlinger som reduserer arrvev og forbedrer hudens tekstur"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "JOY Medispa Bodø",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "The page describes scar treatments offered by the company without reporting a specific new development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 33852,
+ "input_tokens": 2568,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:03:05.367188+00:00"
+}

@@ -1,0 +1,29 @@
+  25/80
+  50/80
+  75/80
+  80/80
+{
+ "experiment_id": "dev80-news-p2-evidence-think-v1-gemini-3.1-flash-lite",
+ "items": 80,
+ "ok": 13,
+ "api_failures": 67,
+ "api_calls_made": 18,
+ "cache_hits": 0,
+ "input_tokens": 27836,
+ "output_tokens": 3347,
+ "thoughts_tokens": 3060,
+ "paid_equivalent_cost_usd": 0.01657,
+ "latency_ms_p50": 50925,
+ "decisions": {
+  "publish": 13,
+  "uncertain": 67
+ },
+ "errors": {
+  "http_503": 1,
+  "http_429_daily_quota": 4,
+  "not_called_daily_quota_exhausted": 62
+ },
+ "budget_stop": "daily_quota_exhausted",
+ "quotes_total": 27,
+ "quotes_verified": 26
+}

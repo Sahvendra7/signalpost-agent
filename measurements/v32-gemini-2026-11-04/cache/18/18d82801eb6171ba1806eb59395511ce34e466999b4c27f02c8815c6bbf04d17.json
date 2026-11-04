@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid Skandinavien förvärvar det danska bolaget Presenco Sport A/S.",
+   "Trafik & Fritid Skandinavien har tecknat avtal om att förvärva samtliga aktier i danska Presenco Sport A/S ."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid Skandinavien AB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2026-03-09",
+  "date_evidence": "9 mars, 2026 Trafik & Fritid stärker positionen i Skandinavien genom förvärv av Presenco Sport",
+  "decision": "publish",
+  "reason": "The article reports that the target company, Trafik & Fritid Skandinavien AB, has acquired the Danish company Presenco Sport A/S.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 60843,
+ "input_tokens": 2532,
+ "output_tokens": 290,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  59.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:01.385831+00:00"
+}

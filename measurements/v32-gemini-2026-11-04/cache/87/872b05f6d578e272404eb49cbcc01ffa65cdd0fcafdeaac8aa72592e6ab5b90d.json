@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "91UL anlegget – Kjeller Aero Senter"
+  ],
+  "content_category": "uncertain",
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-02-20",
+  "date_evidence": "Fri, 20 Feb 2026 08:11:56 +0000",
+  "decision": "withhold",
+  "reason": "The item title mentions a facility, but the article content is missing and the feed category suggests unrelated educational content. There is no evidence of a specific development, action, or event.",
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 53558,
+ "input_tokens": 2014,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:15:30.931591+00:00"
+}

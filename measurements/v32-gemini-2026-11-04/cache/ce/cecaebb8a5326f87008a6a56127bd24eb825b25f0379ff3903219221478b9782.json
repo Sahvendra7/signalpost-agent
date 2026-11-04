@@ -1,0 +1,36 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Sola Hundesenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-15",
+  "date_evidence": "15. september 2026",
+  "decision": "withhold",
+  "reason": "The article provides general advice and information regarding local leash laws and dog training tips, rather than reporting a specific development or event concerning the company itself.",
+  "evidence_quotes": [
+   "Når er båndtvangen over? Regler i Sola og Rogaland",
+   "God innkalling handler ikke bare om lydighet. Det handler om å kunne gi hunden frihet på en trygg og ansvarlig måte.",
+   "Tren innkalling når forholdene tillater det"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 145760,
+ "input_tokens": 2764,
+ "output_tokens": 259,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:04.331089+00:00"
+}

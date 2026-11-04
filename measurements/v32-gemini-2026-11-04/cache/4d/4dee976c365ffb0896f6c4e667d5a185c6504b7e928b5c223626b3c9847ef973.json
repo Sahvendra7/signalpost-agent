@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Frankeringsrekvisita",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-11",
+  "date_evidence": "Wed, 11 Sep 2024 12:09:07 +0000",
+  "decision": "withhold",
+  "reason": "The article is a promotional post describing various Zebra label products offered by the company, rather than reporting a specific corporate development or event.",
+  "evidence_quotes": [
+   "Derfor tilbyr vi et bredt utvalg av etiketter som er spesifikt designet for å møte de mest krevende kravene.",
+   "Zebra-etikettene er designet for å tilby spesifikke løsninger som møter din bransjes unike utfordringer."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 13730,
+ "input_tokens": 2107,
+ "output_tokens": 273,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  7.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:05:07.301011+00:00"
+}

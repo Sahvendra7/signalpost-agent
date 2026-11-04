@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Våre tips til Arendalsuka 2024 8. aug. Skrevet av Web Er du kunstinteressert og skal på Arendalsuka i år? Her er våre tips til hva du bør få med deg!",
+   "kl. 13.00 Hvordan kan kunst i offentlige rom bidra til mindre ulikhet og mer likestilling? Mesén inviterer til panelsamtale om kunst i offentlige rom, sosial bærekraft, demokrati og ytring."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-08-08",
+  "date_evidence": "8. aug.",
+  "decision": "withhold",
+  "reason": "The item is an editorial guide offering tips for events at Arendalsuka 2024 rather than reporting on a specific development or corporate action of Mesén.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 71711,
+ "input_tokens": 2992,
+ "output_tokens": 301,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:11:02.976647+00:00"
+}

@@ -1,0 +1,36 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alexander Rybak as a surprise-guest in “Stjernekamp” on NRK",
+   "Sep 28, 2020",
+   "he invites his friend Alexander Rybak to join him on stage with his violin for his performance of “Se Ilden Lyse”"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2020-09-28",
+  "date_evidence": "Sep 28, 2020",
+  "decision": "publish",
+  "reason": "The item reports on the target artist's appearance as a surprise guest performer on the TV show Stjernekamp on NRK.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 141637,
+ "input_tokens": 1895,
+ "output_tokens": 258,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:52.171045+00:00"
+}

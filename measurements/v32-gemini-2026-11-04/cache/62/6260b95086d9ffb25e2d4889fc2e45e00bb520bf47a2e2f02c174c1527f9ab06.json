@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Article in the Nordic Journal of Criminology: The social dynamics of revictimization and intimate partner violence: an embodied, gendered, institutional and life course perspective – Margunn Bjørnholt"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The item announces the publication of an article authored by the target company, which constitutes a professional activity and development for the entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 106054,
+ "input_tokens": 1622,
+ "output_tokens": 216,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:25:35.864479+00:00"
+}

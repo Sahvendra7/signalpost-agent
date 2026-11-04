@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi i KPB er stolte over å introdusere vår nye podcastserie, KPB & Co."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The target company announces the launch of its new podcast series, KPB & Co.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24964,
+ "input_tokens": 2003,
+ "output_tokens": 189,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:25.561632+00:00"
+}

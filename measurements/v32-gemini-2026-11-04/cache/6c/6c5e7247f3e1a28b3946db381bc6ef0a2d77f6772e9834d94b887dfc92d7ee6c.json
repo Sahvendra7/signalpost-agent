@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Långasands IF i Halland köpte färg från Mapei av oss och målade banorna själva"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Långasands IF",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-09-23",
+  "date_evidence": "23 september, 2020",
+  "decision": "withhold",
+  "reason": "The article describes a project completed by a customer (Långasands IF) using products supplied by the company, which constitutes a reference project or portfolio listing rather than a company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 17907,
+ "input_tokens": 1980,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:17:24.069284+00:00"
+}

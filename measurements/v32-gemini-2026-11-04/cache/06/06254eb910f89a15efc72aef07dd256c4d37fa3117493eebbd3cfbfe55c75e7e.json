@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Webapp eller mobilapp i 2026? Guide for småbedrifter Velg riktig mellom webapp utvikling og mobilapp for småbedrifter i 2026."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "AGENTA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational guide or advice piece on choosing between a web app and a mobile app, rather than reporting on a specific development or event concerning the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 59344,
+ "input_tokens": 3124,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:19:46.722149+00:00"
+}

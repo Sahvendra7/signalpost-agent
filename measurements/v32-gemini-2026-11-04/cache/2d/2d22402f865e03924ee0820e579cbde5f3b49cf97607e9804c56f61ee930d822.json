@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hva er tofaktorautentisering? Tofaktorautentisering, flerfaktorautentisering eller multifaktorautentisering. Kjært barn har mange navn.",
+   "December 5, 2023"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-12-05",
+  "date_evidence": "December 5, 2023",
+  "decision": "withhold",
+  "reason": "The article provides general educational information and an explanation of two-factor authentication rather than reporting on a specific development or event concerning Provendo AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 39304,
+ "input_tokens": 2167,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:35.179680+00:00"
+}

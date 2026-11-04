@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "mpenergi AS ved Morten Pedersen har fått invitasjon som kaptein til årets Monaco Yacht Show.",
+   "Deltagelsen er et ledd i at vi ønsker fokus på maritime næringen både over og under vann."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "mpenergi AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-15",
+  "date_evidence": "15/09/2026",
+  "decision": "publish",
+  "reason": "The company reports that it has been invited to participate in the Monaco Yacht Show, which constitutes a company event or participation.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 45996,
+ "input_tokens": 1701,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:19.495586+00:00"
+}

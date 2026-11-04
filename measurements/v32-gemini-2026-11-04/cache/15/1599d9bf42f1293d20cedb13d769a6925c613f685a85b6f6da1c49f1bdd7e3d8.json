@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "A few months ago, Fredrik and Samir worked with a tier 2 automotive supplier based in Europe.",
+   "The use of the simple tool process map revealed a possibility to reduce the lead time by 85%."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "C2U Group",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-05-08",
+  "date_evidence": "Mon, 08 May 2023 12:43:43 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post providing advice on how to use process maps to reduce inventory, rather than reporting a specific development or event of the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 13672,
+ "input_tokens": 2080,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:46.172049+00:00"
+}

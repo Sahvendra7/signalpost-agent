@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tidigare i april stod den klar, europas första poptennisbana på konstgräs! Vi fick den stora äran att anlägga denna hos Arvika Idrottscenter"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2022-04-22",
+  "date_evidence": "22 april, 2022",
+  "decision": "publish",
+  "reason": "The company reports that they have completed the construction of Europe's first pop tennis court with artificial grass for a customer, Arvika Idrottscenter.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 45476,
+ "input_tokens": 2476,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:19:14.708379+00:00"
+}

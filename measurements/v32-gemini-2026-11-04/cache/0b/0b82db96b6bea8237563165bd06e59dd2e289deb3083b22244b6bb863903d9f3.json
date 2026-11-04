@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Advokat Cathrine Rieber-Mohn har nylig bistått en mor i sak om foreldreansvar etter barneloven, hvor kravet var at hun skulle få foreldreansvaret alene for deres tenåring."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Advokat Cathrine Rieber-Mohn",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational piece describing a legal case to illustrate legal principles and promote the firm's services, rather than reporting a corporate development or event of the firm itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1477,
+ "input_tokens": 3612,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:20:42.020085+00:00"
+}

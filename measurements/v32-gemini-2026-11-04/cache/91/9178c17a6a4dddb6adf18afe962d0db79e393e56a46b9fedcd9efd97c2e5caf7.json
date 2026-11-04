@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvordan vurderer retten påstander om overgrep under samvær?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Advokatfirmaet Rieber-Mohn AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article provides legal information and guidance regarding how courts handle allegations of abuse in custody disputes, which constitutes educational content rather than a report on a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3244,
+ "input_tokens": 3608,
+ "output_tokens": 198,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:43.786460+00:00"
+}

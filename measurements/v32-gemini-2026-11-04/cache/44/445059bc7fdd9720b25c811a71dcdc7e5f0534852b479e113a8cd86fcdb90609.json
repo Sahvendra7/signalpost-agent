@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Innan sommaren fick Trafik & Fritid uppdraget att renovera just minitennisplanerna. Vi är mycket stolta över resultatet och är glada över att dela med oss av det."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2023-09-22",
+  "date_evidence": "22 september, 2023",
+  "decision": "publish",
+  "reason": "The article reports on a completed project where the company renovated minitennis courts at the Hackholmssund conference facility.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 92368,
+ "input_tokens": 2085,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  2.0,
+  57.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:02.910683+00:00"
+}

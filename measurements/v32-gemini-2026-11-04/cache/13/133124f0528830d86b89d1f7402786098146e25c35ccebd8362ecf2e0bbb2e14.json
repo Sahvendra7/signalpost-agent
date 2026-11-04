@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "New large Karm Fork",
+   "We have delivered a set of the new size Karm Fork."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Karmøy Winch AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2014-04-23",
+  "date_evidence": "April 23, 2014",
+  "decision": "publish",
+  "reason": "The target company announces that it has delivered a set of a new size product.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 59763,
+ "input_tokens": 1534,
+ "output_tokens": 207,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:47.503441+00:00"
+}

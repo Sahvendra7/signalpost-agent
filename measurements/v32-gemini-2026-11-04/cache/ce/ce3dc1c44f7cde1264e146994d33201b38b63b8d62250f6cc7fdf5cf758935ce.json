@@ -1,0 +1,36 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Brother DK-22246",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a promotional blog post describing the features and benefits of a specific product (Brother DK-22246) sold by the company, rather than reporting a development or event of the company itself.",
+  "evidence_quotes": [
+   "Hvorfor Brother DK-22246 er skreddersydd perfekt for dine etikett behov",
+   "Brother DK-22246 er et utmerket valg",
+   "En av de fremragende egenskapene til Brother DK-22246 er dens fleksibilitet og allsidighet."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 11548,
+ "input_tokens": 2479,
+ "output_tokens": 264,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:35.119099+00:00"
+}

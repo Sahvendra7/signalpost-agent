@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "21. oktober 2026 Artikkel Bli funnet i AI-søk: Slik gjør du nettsiden klar for Google AI-oversikter og svar fra chatboter Slik øker du synlighet i AI-søk: FAQ-svar, strukturert data og oppdatert info som hjelper Google AI-oversikter og chatboter å finne bedriften din."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "S4S NORDIC AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-21",
+  "date_evidence": "21. oktober 2026",
+  "decision": "withhold",
+  "reason": "The text is an educational guide providing tips on how to improve website visibility in AI search, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 48518,
+ "input_tokens": 1525,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:12:14.755293+00:00"
+}

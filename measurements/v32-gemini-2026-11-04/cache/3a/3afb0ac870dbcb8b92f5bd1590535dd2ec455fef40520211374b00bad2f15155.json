@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "New Video: “Give Me Rain” / “Позади” Jul 23, 2020 | 0 Comments Give Me Rain Thanks to the best fans in the world, we now have a video about fighting away your worst nightmares."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text discusses a music video release by Alexander Rybak, which is entirely unrelated to the target company Eiendom Norge.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 13614,
+ "input_tokens": 1619,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:31.354668+00:00"
+}

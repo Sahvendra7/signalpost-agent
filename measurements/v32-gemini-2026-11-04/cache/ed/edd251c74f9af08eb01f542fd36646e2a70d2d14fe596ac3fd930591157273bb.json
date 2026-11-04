@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Skolevalg – hvem bestemmer hvilken skole barnet skal gå på?",
+   "Etter samlivsbrudd er det mange beslutninger som må tas av foreldre i felleskap. Ofte oppstår det uenigheter om store og små spørsmål. En av uenighetene som ofte tilspisser seg er skolevalg."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Advokatfirmaet Rieber-Mohn AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article provides legal information and guidance regarding school choice disputes after a separation, which constitutes educational content rather than a report on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 21564,
+ "input_tokens": 3489,
+ "output_tokens": 258,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:22.106488+00:00"
+}

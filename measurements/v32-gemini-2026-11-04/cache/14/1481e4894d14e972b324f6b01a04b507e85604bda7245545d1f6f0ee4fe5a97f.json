@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Forenkle og spar tid Bookings gir deg et raskere alternativ til tidkrevende og gjentakende planleggingsoppgaver, samtidig som du optimaliserer organisasjonens ressurser."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Microsoft Bookings",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-28",
+  "date_evidence": "November 28, 2023",
+  "decision": "withhold",
+  "reason": "The article is an informational and educational guide about Microsoft Bookings and its features rather than a specific news event regarding Provendo AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 33613,
+ "input_tokens": 2303,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:40.199574+00:00"
+}

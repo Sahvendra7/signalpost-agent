@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Asylretten – vår livsforsikring som flyktning Av dr. juris Terje Einarsen"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Terje Einarsen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational or opinion piece written by an external author (dr. juris Terje Einarsen) about asylum law and international refugee conventions, not a report on a development or event concerning Humlen & Helle Advokater AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2674,
+ "input_tokens": 3732,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:49.488419+00:00"
+}

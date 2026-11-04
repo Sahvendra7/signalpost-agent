@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rapport: Q2 og H1 2026",
+   "Kameos grunnlegger og adm. dir. Sebastian Martens Harung oppsummerer andre kvartal og første halvår 2026 for Kameo Sverige og Kameo Norge"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kameo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "financial_result",
+  "publication_date": "2026-08-19",
+  "date_evidence": "19. august 2026",
+  "decision": "publish",
+  "reason": "The item reports on the company's financial performance for the second quarter and first half of 2026, presented by the company's CEO.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2189,
+ "input_tokens": 1547,
+ "output_tokens": 253,
+ "thoughts_tokens": 124,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:15.934054+00:00"
+}

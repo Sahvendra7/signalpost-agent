@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Når samlivsbruddet er et faktum er det store spørsmålet hvordan ektefellenes verdier skal fordeles.",
+   "Ifølge ekteskapsloven er utgangspunktet at ektefeller har felleseie hvis ikke særeie er spesielt avtalt i en ektepakt."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "ADVOKATFIRMAET RIEBER-MOHN AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article provides general legal information and advice regarding the division of assets during a divorce, rather than reporting on a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3707,
+ "input_tokens": 3793,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:14.249040+00:00"
+}

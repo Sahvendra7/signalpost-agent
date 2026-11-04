@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Stiftelsen 10. august",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-14",
+  "date_evidence": "14. aug.",
+  "decision": "publish",
+  "reason": "The article reports on the target company's participation in the Arendalsuka event, where they hosted and contributed to several panel debates and workshops.",
+  "evidence_quotes": [
+   "For første gang deltok Stiftelsen 10. august på Arendalsuka.",
+   "Gjennom flere arrangementer i Menneskerettighetsteltet bidro vi til samtaler om temaer som står sentralt i arbeidet vårt"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12790,
+ "input_tokens": 2987,
+ "output_tokens": 253,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:46.361196+00:00"
+}

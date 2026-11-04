@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Furulunds IK leasar två robotgräsklippare och en linjeringsrobot från Trafik & Fritid.",
+   "Klubben leasar också en linjeringsmaskin, en TF Linjeringsmaskin Sport , som målar linjer med hjälp av GPS."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-04-19",
+  "date_evidence": "19 april, 2024 ”Det sparar oss oerhört mycket tid”",
+  "decision": "withhold",
+  "reason": "The article is a customer testimonial/case study promoting the company's products and leasing services, rather than reporting a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1789,
+ "input_tokens": 3000,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:19:42.331294+00:00"
+}

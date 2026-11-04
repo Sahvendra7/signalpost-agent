@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har satt sammen en kunstløype som består av våre egne og andres kunstprosjekter i offentlige rom, og laget en vandring gjennom byen fra vest til øst.",
+   "Kunstvandring fra Tjuvholmen til Kampen 27. juni"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-06-27",
+  "date_evidence": "27. juni",
+  "decision": "publish",
+  "reason": "The text reports on an art walk event created and organized by the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 58085,
+ "input_tokens": 1691,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:11.475587+00:00"
+}

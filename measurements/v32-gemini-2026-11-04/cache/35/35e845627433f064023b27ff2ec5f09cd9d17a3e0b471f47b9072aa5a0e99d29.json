@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Avisartikler – Humlen & Helle Advokater",
+   "Professor i flyktningrett Terje Einarsen foreslår at FN kan leie landområder for mennesker på flukt."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Terje Einarsen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a collection of links to external newspaper articles written by or about third parties, not a report on a development or event concerning Humlen & Helle Advokater AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 30970,
+ "input_tokens": 1856,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:57.784125+00:00"
+}

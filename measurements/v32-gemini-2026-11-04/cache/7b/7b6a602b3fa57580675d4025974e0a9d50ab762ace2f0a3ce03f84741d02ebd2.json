@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "ABB Den originale AP9 koblingsboksen fra",
+   "1. januar 2024 Krav til kjønnsbalanse i norske styrer Nye lovkrav om at store og mellomstore selskaper skal ha minst 40 prosent kjønnsbalanse i styret trer i kraft fra 1. januar 2024"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Udefinert",
+  "subject_relation": "unclear",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item discusses general legal requirements regarding gender balance in boards or refers to product listings, without reporting any specific development, action, or event concerning LUX FIDE AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 59878,
+ "input_tokens": 1535,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:20:06.073266+00:00"
+}

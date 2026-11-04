@@ -179,3 +179,23 @@ def test_release_run_path_never_imports_experiment_code():
     code = ("import sys; sys.path.insert(0, 'src'); import norway_company_agent.cli, norway_company_agent.pipeline; "
             "print(any(m.startswith(('norway_company_agent.llm_experiments', 'norway_company_agent.llm.gemini')) for m in sys.modules))")
     assert subprocess.run([sys.executable, "-c", code], cwd=ROOT, capture_output=True, text=True).stdout.strip() == "False"
+
+
+def test_aid_excerpts_are_matched_to_their_own_unit(tmp_path):
+    """Regression: the label aid numbers only labelled units (it skips official_website rows); an excerpt must be
+    attached by its header (org + value), never by row position."""
+    import csv
+    from norway_company_agent.llm_experiments.datasets import labelled_news_items
+    rows = [
+        {"uid": "1|official_website|a.no", "org": "1", "company": "A AS", "category": "official_website", "value": "https://a.no/", "source_url": "https://a.no/", "verdict": "", "note": ""},
+        {"uid": "1|news_item|a.no/x|2026-01-01", "org": "1", "company": "A AS", "category": "news_item", "value": "Ny avtale | 2026-01-01 | https://a.no/x", "source_url": "https://a.no/feed/", "verdict": "correct", "note": "n"},
+        {"uid": "2|news_item|b.no/y|2026-02-02", "org": "2", "company": "B AS", "category": "news_item", "value": "Gode tips | 2026-02-02 | https://b.no/y", "source_url": "https://b.no/feed/", "verdict": "incorrect", "note": "advice"},
+    ]
+    with open(tmp_path / "items.labelled.csv", "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0]) + ["claim_span", "retrieved_at", "snapshot_path", "registry_url", "draft_verdict", "draft_by"])
+        w.writeheader(); [w.writerow(r) for r in rows]
+    (tmp_path / "aid.md").write_text(
+        "1. [news] A AS (1) | Ny avtale | 2026-01-01 | https://a.no/x | src https://a.no/feed/\n   feed entry (categories []): Vi har signert en avtale\n"
+        "2. [news] B AS (2) | Gode tips | 2026-02-02 | https://b.no/y | src https://b.no/feed/\n   feed entry (categories []): Fem gode tips for vinteren\n", encoding="utf-8")
+    items = {i["org"]: i for i in labelled_news_items(tmp_path, {}, "t")}
+    assert "signert" in items["1"]["source_text_aid"] and "tips" in items["2"]["source_text_aid"]

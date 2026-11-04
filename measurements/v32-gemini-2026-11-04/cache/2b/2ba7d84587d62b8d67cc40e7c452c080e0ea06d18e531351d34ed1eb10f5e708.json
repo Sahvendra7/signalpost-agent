@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Article in the Journal of European Social Policy : Same but different: Polish and Norwegian parents’ work–family adaptations in Norway"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2018-03-21",
+  "date_evidence": "Posted by Margunn Bjørnholt 21 March 2018",
+  "decision": "publish",
+  "reason": "The item announces the publication of an academic article authored by the target entity, which constitutes a professional development and activity for this research-based sole proprietorship.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 41941,
+ "input_tokens": 1706,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:23:42.483191+00:00"
+}

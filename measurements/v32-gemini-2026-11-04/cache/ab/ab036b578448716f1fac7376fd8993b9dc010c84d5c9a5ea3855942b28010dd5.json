@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Skrive av Aimar Steen De siste årene har Universitetet i Bergen (UiB) og flere arbeidsplasser deltatt i AHKR201, også kalt Praksis i arbeidslivet.",
+   "min praksisplass var ved Interkommunalt arkiv Hordaland (IKA Hordaland)."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Interkommunalt arkiv Hordaland",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text is an intern or student reflection piece about completing a work placement (praksis) at the company, rather than reporting a corporate news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 95787,
+ "input_tokens": 2879,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:39.809227+00:00"
+}

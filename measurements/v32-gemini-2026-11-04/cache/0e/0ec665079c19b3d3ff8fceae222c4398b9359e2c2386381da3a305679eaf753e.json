@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Äntligen är det officiell premiär för Logscom i Södra-skogarna! Onsdagen den 21 oktober mellan kl 11 och 15, är du välkommen till Vetlanda",
+   "Från och med Nu kan Du använda Logscom GTP-märkarn i Södra-skogarna!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Logscom",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The article announces an official event/premiere for the company's product in the Södra forests, which constitutes a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1703,
+ "input_tokens": 2823,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:20:52.763472+00:00"
+}

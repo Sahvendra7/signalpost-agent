@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Høringssvar - Statsbudsjettet i næringskomiteen"
+  ],
+  "content_category": "uncertain",
+  "subject_entity": "EIENDOM NORGE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "uncertain",
+  "reason": "The title indicates a consultation response, but the article text is not captured and the source text contains completely unrelated SEO content, leaving insufficient evidence of a specific company event.",
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 71161,
+ "input_tokens": 1603,
+ "output_tokens": 191,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:13:20.566657+00:00"
+}

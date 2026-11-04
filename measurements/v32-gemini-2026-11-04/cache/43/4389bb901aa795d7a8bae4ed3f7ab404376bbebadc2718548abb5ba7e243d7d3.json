@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid blir delägare i Padel Courts Deluxe",
+   "Nu går vi in som delägare hos bantillverkaren Padel Courts Deluxe (PCDLX)."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2021-12-20",
+  "date_evidence": "20 december, 2021",
+  "decision": "publish",
+  "reason": "The article announces that the target company, Trafik & Fritid, has become a part-owner of the company Padel Courts Deluxe.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 38224,
+ "input_tokens": 2274,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:18:57.456674+00:00"
+}

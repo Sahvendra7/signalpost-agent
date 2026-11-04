@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "«Voices in Public Art» – Refleksjoner fra en konferansedag 22. apr.",
+   "Tusen takk til alle som deltok både på scenen og i salen under konferansen «Voices in Public Art: Mapping Freedom of Speech and Expression in the Nordic Region» på fredag"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The target company hosted and organized the conference 'Voices in Public Art', which is a company event reported directly in the article.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12008,
+ "input_tokens": 2735,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:22:47.484516+00:00"
+}

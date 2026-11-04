@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet nr. 32 6. mai 2022",
+   "Dugnad lørdag 14.05.22 fra 10.00 – 16.00",
+   "På 17. mai inviteres alle elever med familie til feiring av nasjonaldagen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-05-06",
+  "date_evidence": "Fredagsbladet nr. 32 6. mai 2022",
+  "decision": "publish",
+  "reason": "The newsletter announces specific upcoming events held by the school, including a volunteer work day (dugnad) and 17th of May celebrations.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 74946,
+ "input_tokens": 3447,
+ "output_tokens": 273,
+ "thoughts_tokens": 1031,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:24:57.025020+00:00"
+}

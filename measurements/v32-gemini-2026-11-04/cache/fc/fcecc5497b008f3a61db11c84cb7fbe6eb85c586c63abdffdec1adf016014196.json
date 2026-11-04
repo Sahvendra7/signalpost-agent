@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvorfor Brother DK-22246 er skreddersydd perfekt for dine etikett behov",
+   "Brother DK-22246 er et utmerket valg . Om du skriver etiketter til pakker, konvolutter eller skilt, kan du med Brother DK-22246 justere lengden på etiketter og feste disse sikkert med rullens sterke lim for permanent feste."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Brother DK-22246",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a promotional product description for a specific label roll (Brother DK-22246) sold by the company, rather than reporting a specific development or event of the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1470,
+ "input_tokens": 2893,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:18:10.281720+00:00"
+}

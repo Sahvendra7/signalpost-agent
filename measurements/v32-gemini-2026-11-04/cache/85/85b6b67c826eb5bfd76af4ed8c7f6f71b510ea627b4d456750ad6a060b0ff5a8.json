@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Samaneh Shakeri, ny teknisk sjef i Fresvik Produkt.",
+   "Vi har gleda av å presentere vår nye tekniske sjef ved Fresvik Produkt.",
+   "Sam (Sam) Shakeri tok til i stillinga 1. oktober 2024.",
+   "Fresvik Produkt 16. des."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2024-12-16",
+  "date_evidence": "Fresvik Produkt 16. des.",
+  "decision": "publish",
+  "reason": "The article announces the appointment of a new technical manager, Samaneh Shakeri, at the target company Fresvik Produkt.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 71368,
+ "input_tokens": 1986,
+ "output_tokens": 267,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:14:08.674014+00:00"
+}

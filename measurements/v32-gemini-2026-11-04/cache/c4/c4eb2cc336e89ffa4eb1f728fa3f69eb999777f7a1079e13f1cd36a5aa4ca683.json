@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "skriver Kåre Jørgensen",
+   "Artikkelforfatter Kåre Jørgensen er utdannet historiker og driver YouTube-siden Kåres historietime."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Kåre Jørgensen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an opinion piece/essay written by guest author Kåre Jørgensen, not a report on a specific development or event concerning the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 48188,
+ "input_tokens": 3132,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:12:26.011820+00:00"
+}

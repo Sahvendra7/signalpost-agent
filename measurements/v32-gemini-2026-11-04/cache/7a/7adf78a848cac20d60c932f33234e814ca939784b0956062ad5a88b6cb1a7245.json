@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "We are delighted to welcome Mr Akinori Hyodo, one of the most renowned managers from Toyota Group, to Scandinavia in November.",
+   "Besides being a speaker at Lean Forum Norway’s Årskonferanse Nov 14-15, he will give two exclusive seminars in Göteborg, Sweden on Nov 17."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "C2U Group",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2023-10-03",
+  "date_evidence": "Tue, 03 Oct 2023 12:39:40 +0000",
+  "decision": "publish",
+  "reason": "C2U Group is hosting and organizing seminars featuring Mr. Akinori Hyodo, which constitutes a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2356,
+ "input_tokens": 1786,
+ "output_tokens": 277,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:14.856350+00:00"
+}

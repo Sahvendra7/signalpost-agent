@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Velkommen til Betel Horten Du er hjertelig velkommen til våre aktiviteter"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Betel Horten",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text is a general welcome page describing the organization's recurring activities and services rather than reporting a specific, unique development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1438,
+ "input_tokens": 1753,
+ "output_tokens": 191,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:18.252426+00:00"
+}

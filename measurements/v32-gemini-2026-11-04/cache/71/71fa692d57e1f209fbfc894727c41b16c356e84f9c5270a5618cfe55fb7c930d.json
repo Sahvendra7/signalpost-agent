@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fresvik Produkt har levert fryserom med fryseport og tre kjølerom til Storcash sin nye butikk på Rudshøgda.",
+   "31. juli"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The article reports on a specific completed delivery by the target company Fresvik Produkt to a customer (Storcash på Rudshøgda).",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 69340,
+ "input_tokens": 1802,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:27.016839+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "New Collaboration: XTV featuring Alexander Rybak – “Зафиналили” (“Finished”)"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2021-06-21",
+  "date_evidence": "Jun 21, 2021",
+  "decision": "publish",
+  "reason": "The item announces a new musical collaboration and song release involving the target artist Alexander Rybak.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 63692,
+ "input_tokens": 2241,
+ "output_tokens": 200,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:17:09.354127+00:00"
+}

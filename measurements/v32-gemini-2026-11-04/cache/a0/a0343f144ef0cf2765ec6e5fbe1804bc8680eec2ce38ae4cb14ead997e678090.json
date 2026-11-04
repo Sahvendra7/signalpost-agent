@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "We are excited to introduce Mona Alavi as the newest member of Fram Marine, joining us as Project Manager.",
+   "Posted 08.09.2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2025-09-08",
+  "date_evidence": "Posted 08.09.2025",
+  "decision": "publish",
+  "reason": "The item announces a new hire (Project Manager Mona Alavi) joining the target company Fram Marine.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 65224,
+ "input_tokens": 1969,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:18:42.817733+00:00"
+}

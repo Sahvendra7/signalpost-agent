@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Og denne høsten har det skjedd mye på Tunet. Vi har laget fire helt nye sjokoladebiter , tre gamle favoritter har fått nytt utseende – og det er kommet noe helt nytt!",
+   "september 22, 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-09-22",
+  "date_evidence": "september 22, 2026",
+  "decision": "publish",
+  "reason": "The company announces the launch of four brand new chocolate pieces and new seasonal items for the autumn assortment.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 16842,
+ "input_tokens": 2967,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:40.571840+00:00"
+}

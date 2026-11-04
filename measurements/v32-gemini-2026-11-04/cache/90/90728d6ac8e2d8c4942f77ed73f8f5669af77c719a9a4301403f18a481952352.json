@@ -1,0 +1,36 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Sola Hundesenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-30",
+  "date_evidence": "2026-08-30",
+  "decision": "withhold",
+  "reason": "The article is an educational guide providing advice on when and why to start puppy training, rather than reporting a specific company development or event.",
+  "evidence_quotes": [
+   "Når bør valpen starte på valpekurs?",
+   "Det viktigste er likevel ikke å starte på en bestemt dato, men at treningen tilpasses valpen som individ."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 92741,
+ "input_tokens": 3101,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:46.044496+00:00"
+}

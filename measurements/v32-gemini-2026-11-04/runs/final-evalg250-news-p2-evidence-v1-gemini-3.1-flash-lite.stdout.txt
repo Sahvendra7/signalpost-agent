@@ -1,0 +1,30 @@
+  325/338
+  338/338
+{
+ "experiment_id": "final-evalg250-news-p2-evidence-v1-gemini-3.1-flash-lite",
+ "items": 338,
+ "ok": 64,
+ "api_failures": 274,
+ "api_calls_made": 96,
+ "cache_hits": 0,
+ "input_tokens": 150530,
+ "output_tokens": 15232,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.06048,
+ "latency_ms_p50": 17354,
+ "decisions": {
+  "withhold": 35,
+  "uncertain": 274,
+  "publish": 29
+ },
+ "errors": {
+  "http_503": 16,
+  "http_429": 8,
+  "transport_TimeoutError": 3,
+  "http_429_daily_quota": 5,
+  "not_called_daily_quota_exhausted": 242
+ },
+ "budget_stop": "daily_quota_exhausted",
+ "quotes_total": 88,
+ "quotes_verified": 87
+}

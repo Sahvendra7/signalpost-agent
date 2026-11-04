@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Gjør e-post signaturer enkelt med CodeTwo CodeTwo er en anerkjent programvareplattform som spesialiserer seg på administrasjon av e-post signaturer."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "CodeTwo",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-07",
+  "date_evidence": "November 7, 2023",
+  "decision": "withhold",
+  "reason": "The page is a promotional blog post about the third-party software CodeTwo and does not report any internal development, action, or event of Provendo AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 43241,
+ "input_tokens": 1962,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:03:49.041786+00:00"
+}

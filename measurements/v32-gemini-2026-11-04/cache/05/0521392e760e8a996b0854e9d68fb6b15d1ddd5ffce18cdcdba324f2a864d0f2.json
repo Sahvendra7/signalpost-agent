@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "unrelated_content",
+  "subject_entity": "Seistar",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is an 'About Us' page which provides general company information rather than reporting a specific, time-bound development or event.",
+  "evidence_quotes": [
+   "Om Seistar"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4065,
+ "input_tokens": 1394,
+ "output_tokens": 172,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:02.636231+00:00"
+}

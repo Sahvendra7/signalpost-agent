@@ -1,0 +1,30 @@
+  275/352
+  300/352
+  325/352
+  350/352
+  352/352
+{
+ "experiment_id": "diag-eval200b-news-p2-evidence-v1-gemini-3.5-flash-lite",
+ "items": 352,
+ "ok": 174,
+ "api_failures": 178,
+ "api_calls_made": 159,
+ "cache_hits": 20,
+ "input_tokens": 363666,
+ "output_tokens": 38729,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.205922,
+ "latency_ms_p50": 60332,
+ "decisions": {
+  "publish": 72,
+  "withhold": 101,
+  "uncertain": 179
+ },
+ "errors": {
+  "http_429_daily_quota": 5,
+  "not_called_daily_quota_exhausted": 173
+ },
+ "budget_stop": "daily_quota_exhausted",
+ "quotes_total": 254,
+ "quotes_verified": 250
+}

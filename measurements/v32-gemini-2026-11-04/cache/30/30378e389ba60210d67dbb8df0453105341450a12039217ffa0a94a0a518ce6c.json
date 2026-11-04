@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har levert betongarbeidere til følgende prosjekter: 1. Skillemoen EPC 2. Luostejok kraftverk 3. Alta Omsorgssenter 4. Nordkapp VGS 5. Narvik Brannstasjon 6. Transformatorstasjon i Breivikbotn"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Personell AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-12-04",
+  "date_evidence": "des 4, 2020",
+  "decision": "withhold",
+  "reason": "The content is a list of reference projects where the company has provided labor, which constitutes a project portfolio or reference list rather than a specific news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2223,
+ "input_tokens": 1815,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:09:14.723714+00:00"
+}

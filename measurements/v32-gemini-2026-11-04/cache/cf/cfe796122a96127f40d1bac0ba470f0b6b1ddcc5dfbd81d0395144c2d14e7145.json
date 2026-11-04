@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Produkt i fokus - Oktober 2025: Shinnoki fra Decospan",
+   "Shinnoki fra Decospan er en serie av overflatebehandlede finerplater som er utviklet for å tilby et slitesterkt, pent og naturlig ultramatt plateprodukt."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Shinnoki fra Decospan",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-03",
+  "date_evidence": "3. oktober 2025",
+  "decision": "withhold",
+  "reason": "The item is a product promotion for Shinnoki from Decospan rather than a report on a specific event or development of Oslofinér AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 37948,
+ "input_tokens": 1667,
+ "output_tokens": 260,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:53.460913+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Throughout the year Fram Marine has had the privilege to welcome 4 new colleagues.",
+   "We are proud to present Marek Kaklin, Synnøve Evensen, Erik Løken and Bjarne Birkeland and dive into their valuable expertise."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2023-12-01",
+  "date_evidence": "Posted 01.12.2023",
+  "decision": "publish",
+  "reason": "The item announces new team members joining the target company Fram Marine.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 93754,
+ "input_tokens": 2212,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:16:05.658627+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi bygger 4 leiligheter i Sentrum 28, på baksiden av Svetlanabygget. I den anledning har vi to leiligheter til salgs."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Storesté Entreprenør AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a real estate and property listing for apartments for sale rather than a standalone corporate news development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 27064,
+ "input_tokens": 1595,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:19.089765+00:00"
+}

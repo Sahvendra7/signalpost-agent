@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ship Emissions Compliance in 2025 Going Forward: What Shipowners Need to Know"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-05-30",
+  "date_evidence": "Posted 30.05.2025",
+  "decision": "withhold",
+  "reason": "The article is an educational guide explaining upcoming maritime emissions regulations and general compliance strategies for shipowners rather than reporting a specific corporate event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 68155,
+ "input_tokens": 2351,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:13:26.132577+00:00"
+}

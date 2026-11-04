@@ -1,0 +1,58 @@
+{
+ "successful_cached_responses": {
+  "gemini-3-flash-preview": {
+   "calls": 19,
+   "input_tokens": 39625,
+   "output_tokens": 4711,
+   "thoughts_tokens": 0,
+   "paid_equivalent_usd": 0.0339,
+   "latency_s_p50": 2.2,
+   "latency_s_p90": 34.3
+  },
+  "gemini-3.1-flash-lite": {
+   "calls": 138,
+   "input_tokens": 314640,
+   "output_tokens": 33791,
+   "thoughts_tokens": 0,
+   "paid_equivalent_usd": 0.1293,
+   "latency_s_p50": 5.7,
+   "latency_s_p90": 19.4
+  },
+  "gemini-3.5-flash-lite": {
+   "calls": 273,
+   "input_tokens": 591369,
+   "output_tokens": 60994,
+   "thoughts_tokens": 0,
+   "paid_equivalent_usd": 0.3299,
+   "latency_s_p50": 27.4,
+   "latency_s_p90": 65.5
+  },
+  "gemini-3.6-flash": {
+   "calls": 21,
+   "input_tokens": 45255,
+   "output_tokens": 5124,
+   "thoughts_tokens": 0,
+   "paid_equivalent_usd": 0.0532,
+   "latency_s_p50": 3.3,
+   "latency_s_p90": 7.5
+  }
+ },
+ "errors_recorded_in_runs": {
+  "gemini-3.5-flash-lite|transport_ConnectionResetError": 1,
+  "gemini-3.6-flash|http_503": 1,
+  "gemini-3.6-flash|http_429_daily_quota": 4,
+  "gemini-3.8-flash|http_503": 6,
+  "gemini-3.8-flash|http_429_daily_quota": 1,
+  "gemini-3-flash-preview|http_429_daily_quota": 2
+ },
+ "quota_ids_seen": {
+  "gemini-3.1-flash-lite|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 1,
+  "gemini-3.5-flash-lite|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 1,
+  "gemini-3.6-flash|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 5,
+  "gemini-3.6-flash|GenerateRequestsPerDayPerProjectPerModel-FreeTier": 4,
+  "gemini-3.8-flash|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 4,
+  "gemini-3.8-flash|GenerateRequestsPerDayPerProjectPerModel-FreeTier": 1,
+  "gemini-3-flash-preview|GenerateRequestsPerDayPerProjectPerModel-FreeTier": 2,
+  "gemini-3-flash-preview|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 2
+ }
+}

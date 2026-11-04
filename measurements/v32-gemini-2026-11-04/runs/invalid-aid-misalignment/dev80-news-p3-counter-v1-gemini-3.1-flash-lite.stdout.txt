@@ -1,0 +1,30 @@
+  25/80
+  50/80
+  75/80
+  80/80
+{
+ "experiment_id": "dev80-news-p3-counter-v1-gemini-3.1-flash-lite",
+ "items": 80,
+ "ok": 39,
+ "api_failures": 41,
+ "api_calls_made": 80,
+ "cache_hits": 0,
+ "input_tokens": 106990,
+ "output_tokens": 9032,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.040295,
+ "latency_ms_p50": 11666,
+ "decisions": {
+  "uncertain": 41,
+  "publish": 4,
+  "withhold": 35
+ },
+ "errors": {
+  "http_503": 26,
+  "http_429": 11,
+  "transport_TimeoutError": 4
+ },
+ "budget_stop": null,
+ "quotes_total": 57,
+ "quotes_verified": 56
+}

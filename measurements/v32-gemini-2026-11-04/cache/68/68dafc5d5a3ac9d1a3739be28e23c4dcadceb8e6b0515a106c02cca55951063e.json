@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Post with fancy header – Midthaug zink"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Midthaug zink",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-31",
+  "date_evidence": "31 mars, 2014",
+  "decision": "withhold",
+  "reason": "The item is a default CMS template post (Lorem ipsum) used to demonstrate website theme features, not a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 31148,
+ "input_tokens": 3389,
+ "output_tokens": 199,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:17:33.808315+00:00"
+}

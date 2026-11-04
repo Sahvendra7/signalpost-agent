@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Signert avtale for EU/EEA prosjekter i Slovakia"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mpenergi",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-02",
+  "date_evidence": "02/08/2026",
+  "decision": "publish",
+  "reason": "The company reports that it has signed an agreement for EU/EEA projects in Slovakia, which constitutes a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 118248,
+ "input_tokens": 1662,
+ "output_tokens": 206,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:07:25.062581+00:00"
+}

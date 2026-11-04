@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For many of our clients, we set-up and run a simple but practical training program for the leaders, adapted to their baseline and their needs."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "C2U Group",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-05-22",
+  "date_evidence": "Wed, 22 May 2024 08:32:55 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post providing general advice on leadership training and does not report a specific, unique development or event for the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1970,
+ "input_tokens": 2184,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:44.469858+00:00"
+}

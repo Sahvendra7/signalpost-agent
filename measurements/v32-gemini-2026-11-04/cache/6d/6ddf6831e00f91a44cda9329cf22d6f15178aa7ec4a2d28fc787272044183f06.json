@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet nr. 32 6. mai 2022"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-05-06",
+  "date_evidence": "Fredagsbladet nr. 32 6. mai 2022",
+  "decision": "withhold",
+  "reason": "This is a routine internal school newsletter (Fredagsbladet) communicating practical information to parents and guardians regarding upcoming events such as 17. mai and working bees, which does not constitute publishable corporate news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 30831,
+ "input_tokens": 3447,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:03:32.346325+00:00"
+}

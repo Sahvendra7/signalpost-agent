@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Interkommunalt arkiv i Hordaland IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-09",
+  "date_evidence": "Publisert 09. August 2026",
+  "decision": "publish",
+  "reason": "The company is hosting its own annual conference, 'Kontaktkonferansen 2026', which is a specific event organized by the target company.",
+  "evidence_quotes": [
+   "Kontaktkonferansen 2026 - Interkommunalt arkiv i Hordaland IKS",
+   "Sett av 26. og 27. oktober for årets kontaktkonferanse for arkiv-Hordaland på Sandsli."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12767,
+ "input_tokens": 3473,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:41.338886+00:00"
+}

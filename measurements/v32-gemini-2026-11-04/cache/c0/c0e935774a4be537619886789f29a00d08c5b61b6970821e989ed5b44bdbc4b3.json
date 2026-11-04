@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Arrangementer KI-Dagen 2027 29.10.2026 Bli med på vår nye konferanse som tar pulsen på kunstig intelligens i eiendomsmeglingsbransjen."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "eiendomsmeglingsbransjen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The content describes an external conference and industry politics for the real estate brokerage sector, completely unrelated to the target company Alpha Solutions Norge AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 56226,
+ "input_tokens": 1762,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:11:50.519535+00:00"
+}

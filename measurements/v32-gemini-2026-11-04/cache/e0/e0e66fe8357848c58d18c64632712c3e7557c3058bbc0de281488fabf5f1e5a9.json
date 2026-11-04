@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "KORO, Oslo kommunes kunstsamling (OKK), Kunstsentrene i Norge (KiN) og Mesén har gått sammen og inviterer til en samtale om de kunstneriske og politiske handlings- og mulighetsrommene for kunst i offentlige rom.",
+   "Mesén ved Tina Skedsmo: Om Julie Polys kunstprosjekt Ukrzaliznytsia 2017–2025 , som åpner 25. juni på Oslo S."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-06-19",
+  "date_evidence": "19. juni",
+  "decision": "publish",
+  "reason": "The target company Mesén is co-hosting a public event and participating in discussions regarding public art projects.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 56101,
+ "input_tokens": 2705,
+ "output_tokens": 289,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:12:57.303742+00:00"
+}

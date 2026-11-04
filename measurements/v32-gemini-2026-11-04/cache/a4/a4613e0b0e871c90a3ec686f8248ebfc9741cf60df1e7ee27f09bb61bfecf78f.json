@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Project reviews are important checkpoints that ensure a project stays on track, identifies and mitigates risks, and aligns with involved parties."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-12-10",
+  "date_evidence": "Posted 10.12.2024",
+  "decision": "withhold",
+  "reason": "The article provides general educational information and promotes the company's consulting services regarding project reviews rather than reporting a specific company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 65804,
+ "input_tokens": 2092,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:18:17.187210+00:00"
+}

@@ -1,0 +1,52 @@
+{
+ "items": 80,
+ "ok": 13,
+ "api_failures": 67,
+ "api_failure_rate": 0.8375,
+ "errors": {
+  "http_503": 1,
+  "http_429_daily_quota": 4,
+  "not_called_daily_quota_exhausted": 62
+ },
+ "api_calls_made": 18,
+ "cache_hits": 0,
+ "input_tokens": 27836,
+ "output_tokens": 3347,
+ "thoughts_tokens": 3060,
+ "paid_equivalent_cost_usd": 0.01657,
+ "latency_ms_p50": 50925,
+ "latency_ms_p90": 71209,
+ "retries": 8,
+ "decisions": {
+  "publish": 13,
+  "uncertain": 67
+ },
+ "model_decisions": {
+  "publish": 13,
+  "null": 67
+ },
+ "quotes_total": 27,
+ "quotes_verified": 26,
+ "quotes_exact": 26,
+ "flags": {
+  "date_unsupported": 3,
+  "api_failure": 67,
+  "quote_not_in_source": 1
+ },
+ "model_versions": {
+  "gemini-3.1-flash-lite": 13,
+  "null": 67
+ },
+ "experiment_id": "dev80-news-p2-evidence-think-v1-gemini-3.1-flash-lite",
+ "dataset": "eval200",
+ "model": "gemini-3.1-flash-lite",
+ "prompt_id": "news-p2-evidence-think-v1",
+ "prompt_sha256": "18c84afa233b4b840fe90d1dfa3ec1ef12823cafa8815c3239f1a99f38637907",
+ "git": {
+  "commit": "e4f1255da53abe5178cd3cf0257d142d0fa9a521",
+  "src_dirty": false
+ },
+ "budget_stop": "daily_quota_exhausted",
+ "prices_source": "https://aistudio.google.com/docs/pricing (read 2026-11-04; 3.6/3.8 Flash rise to $1.50/$7.50 on 2027-01-01)",
+ "finished_at": "2026-11-04T19:24:57.030913+00:00"
+}

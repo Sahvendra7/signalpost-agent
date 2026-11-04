@@ -1,0 +1,39 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid har fått äran att bygga nya hybridgrusbanor för tennis i Staffanstorp.",
+   "Uppdraget innebar totalentreprenad med att gräva bort gammalt grus, installera nytt bevattningssystem och lägga nya hybridgrusbanor."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2024-09-26",
+  "date_evidence": "26 september, 2024 Conipur Pro Clay ger förlängd tennissäsong på grus",
+  "decision": "publish",
+  "reason": "The article reports on a completed project where the company performed a total contract to build new hybrid clay tennis courts for a customer.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 71514,
+ "input_tokens": 2345,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  10.0,
+  59.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:21:02.056411+00:00"
+}

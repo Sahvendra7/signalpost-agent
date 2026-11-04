@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Slik gjør du din BMW klar for vinteren",
+   "har vi samlet våre beste tips til hvordan du gjør bilen klar for vinteren."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Sulland",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-11-03",
+  "date_evidence": "Publisert: 03. november 2026",
+  "decision": "withhold",
+  "reason": "The article provides general advice and tips on how to prepare a car for winter, which is educational content rather than a report on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 8740,
+ "input_tokens": 2850,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  3.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:05.554167+00:00"
+}

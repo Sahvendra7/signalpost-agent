@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "K Simonsen i Tromsø har leid inn en mobilkranfører av oss til oppdrag på et prosjekt i Nord."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "MOBIL OG TÅRNKRANFØRER AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2025-05-15",
+  "date_evidence": "mai 15, 2025",
+  "decision": "publish",
+  "reason": "The item reports that a customer has hired a crane operator from the target company for a project, constituting a business transaction and event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4045,
+ "input_tokens": 1746,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:49.203230+00:00"
+}

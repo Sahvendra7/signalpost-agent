@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommaren 2022 starta vi arbeidet med å automatisere pakkinga i produksjonen.",
+   "Etter sommarferien i år kunne vi spent ta i bruk roboten, og det vi kallar “kaos-lager”, der elementa vert lagra."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "expansion_or_new_location",
+  "publication_date": "2023-12-20",
+  "date_evidence": "20. des.",
+  "decision": "publish",
+  "reason": "The article reports on the company's own implementation of a new automated packing robot and warehouse system to improve production and working conditions.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 71051,
+ "input_tokens": 1864,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:15:12.297398+00:00"
+}

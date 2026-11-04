@@ -75,13 +75,20 @@ def parse_value(value: str) -> dict[str, Any]:
     return {"title": " | ".join(bits[:-2]) if len(bits) >= 3 else (bits[0] if bits else ""), "date": bits[-2][:10] if len(bits) >= 2 else None, "url": url}
 
 
-def aid_texts(path: Path) -> dict[int, str]:
-    out: dict[int, str] = {}
+def aid_texts(path: Path) -> dict[tuple[str, str], str]:
+    """Excerpts from a label aid, keyed by (org, value prefix) taken from each entry's own header.
+
+    The aid numbers only the units it lists (it skips official_website rows), so its numbers are NOT row positions in
+    items.labelled.csv: an excerpt is attached by what its header says, never by position (regression, 2026-11-04)."""
+    out: dict[tuple[str, str], str] = {}
     lines = path.read_text(encoding="utf-8").splitlines()
     for i, line in enumerate(lines):
-        match = re.match(r"^(\d+)\. \[news\]", line)
+        match = re.match(r"^\d+\. \[news\] .*? \((\d+)\) \| (.*) \| src ", line)
         if match and i + 1 < len(lines) and lines[i + 1].startswith("   "):
-            out[int(match.group(1))] = lines[i + 1].strip()
+            key = (match.group(1), match.group(2)[:200])
+            if key in out:
+                raise ValueError(f"ambiguous aid header for {key}")
+            out[key] = lines[i + 1].strip()
     return out
 
 
@@ -96,7 +103,7 @@ def labelled_news_items(audit_dir: Path, base_envelopes: dict[str, dict[str, Any
     arms = json.loads((audit_dir / "arms.json").read_text(encoding="utf-8")) if (audit_dir / "arms.json").exists() else {}
     aids = aid_texts(audit_dir / "aid.md") if (audit_dir / "aid.md").exists() else {}
     items = []
-    for n, row in enumerate(rows, 1):
+    for row in rows:
         if row["category"] != "news_item":
             continue
         parsed = parse_value(row["value"])
@@ -109,7 +116,9 @@ def labelled_news_items(audit_dir: Path, base_envelopes: dict[str, dict[str, Any
                 match = c
                 break
         v = (match or {}).get("value") or {}
-        aid = aids.get(n)
+        aid = aids.get((row["org"], row["value"][:230][:200])) if aids else None
+        if aids and aid is None:
+            raise ValueError(f"no aid excerpt for {row['uid']}")
         kind = None
         if aid:
             kind = "feed_entry" if aid.startswith("feed entry") else "listing_card" if aid.startswith("listing card") else "article_page_excerpt" if aid.startswith("article page") else "other"

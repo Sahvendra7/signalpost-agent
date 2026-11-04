@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi leverer tårnkranfører til Trio Betong i Oslo"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mobil og Tårnkranfører AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2025-06-07",
+  "date_evidence": "jun 7, 2025",
+  "decision": "publish",
+  "reason": "The text reports that the target company supplies tower crane operators to a customer (Trio Betong) in Oslo.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 28069,
+ "input_tokens": 1750,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:03:21.012370+00:00"
+}

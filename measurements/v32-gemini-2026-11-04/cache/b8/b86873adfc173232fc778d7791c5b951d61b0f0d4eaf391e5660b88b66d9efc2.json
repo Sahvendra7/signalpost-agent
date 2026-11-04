@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Drawing on our collective expertise and experiences, we developed the To Lead model, a holistic framework designed to empower leaders at all levels to excel in their roles."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "To Lead model",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article describes a leadership framework developed by consultants from different companies and provides educational information on how to use it, rather than reporting a specific development or event of C2U Group AB.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1238,
+ "input_tokens": 2092,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:08:23.738430+00:00"
+}

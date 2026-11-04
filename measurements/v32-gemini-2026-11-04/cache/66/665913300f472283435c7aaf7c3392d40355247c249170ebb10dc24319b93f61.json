@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article is a promotional page describing the company's services and products related to meeting room solutions, rather than reporting a specific company development or event.",
+  "evidence_quotes": [
+   "Vi skreddersyr komplette og profesjonelle møteromsløsninger",
+   "Vi er opptatt av å skreddersy en løsning som får det beste ut av ditt møterom og som møter din bedrifts behov."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4408,
+ "input_tokens": 2523,
+ "output_tokens": 246,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:04:22.979847+00:00"
+}
