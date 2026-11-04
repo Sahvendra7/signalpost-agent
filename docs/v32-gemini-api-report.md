@@ -19,8 +19,8 @@ configured key. They change often; re-check before any integration.
 
 | Model | Status (docs) | Context in / out | Free tier | Standard price in / out per 1M tokens | Used here |
 |---|---|---|---|---|---|
-| `gemini-3.5-flash-lite` (`3.5-flash-lite-07-2026`) | Stable | 1,048,576 / 65,536 | yes, **daily cap > 1,000 requests not reached** (exact number not published outside AI Studio login) | $0.30 / $2.50 | **primary** |
-| `gemini-3.1-flash-lite` (`3.1-flash-lite-05-2026`) | Stable | 1M / 65k | yes (frequent 503 "overloaded" on the free tier) | $0.25 / $1.50 | comparison |
+| `gemini-3.5-flash-lite` (`3.5-flash-lite-07-2026`) | Stable | 1,048,576 / 65,536 | yes, **500 requests/day** (429 message: `generate_content_free_tier_requests limit 500`); slow on the free tier (median 36 s, p90 80 s) | $0.30 / $2.50 | diagnostic + model comparison |
+| `gemini-3.1-flash-lite` (`3.1-flash-lite-05-2026`) | Stable | 1M / 65k | yes, **500 requests/day** (same 429 message); median 8 s; occasional 503 "overloaded" | $0.25 / $1.50 | **primary** |
 | `gemini-3.6-flash` (`3.6-flash-07-2026`) | Stable | 1M / 65k | yes, **≈20 requests/day** (stopped at 21) | $0.75 / $3.75 → $1.50 / $7.50 from 2027-01-01 | small comparison |
 | `gemini-3-flash-preview` | Preview | 1M / 65k | yes, **≈20 requests/day** | $0.50 / $3.00 | small comparison |
 | `gemini-3.8-flash` | New | 1M / 65k | yes, **20 requests/day** (429 message: `generate_content_free_tier_requests limit 20`); rejects `thinkingLevel: MINIMAL` | $0.75 / $3.75 → $1.50 / $7.50 | no successful call |
@@ -28,7 +28,8 @@ configured key. They change often; re-check before any integration.
 | `gemini-2.5-flash`, `gemini-2.5-pro` | Deprecated; requests route to 3.5 Flash-Lite / 3.8 Flash on 2026-12-01 | — | — | — | not used |
 | `gemini-4-argon`, `gemini-3.1-pro-preview` | flagship / preview | 1M | **no free tier** | $2–4 / $10–20 | not used |
 
-Free-tier per-minute limits were also hit occasionally (`GenerateRequestsPerMinutePerProjectPerModel-FreeTier`) and
+**Free-tier daily caps were the binding constraint of this research**: 500 requests/day/model for the two Flash-Lite
+models and ≈20 for every Flash model, which ruled out a full multi-model comparison in one day. Free-tier per-minute limits were also hit occasionally (`GenerateRequestsPerMinutePerProjectPerModel-FreeTier`) and
 retried after the server's `RetryInfo` delay. Limits are per project, not per key; daily quotas reset at midnight
 Pacific time.
 
@@ -37,8 +38,8 @@ Pacific time.
 * **Structured output.** `generationConfig.responseMimeType = application/json` with `responseJsonSchema` (JSON Schema
   subset: types, enum, required, nullable via type arrays, min/maxItems). Constrained decoding guarantees syntactically
   valid JSON of the schema's shape, **not** correct content: every value is re-validated in code (quotes, dates,
-  decisions). `minLength`/`maxLength` and similar are silently ignored by the API. All 1,000+ successful calls here
-  returned schema-valid JSON.
+  decisions). `minLength`/`maxLength` and similar are silently ignored by the API. All 752 successful calls in this
+  research returned schema-valid JSON (0 non-JSON responses).
 * **Thinking.** Gemini 3.x takes `thinkingConfig.thinkingLevel` (MINIMAL/LOW/MEDIUM/HIGH); 2.5 models take
   `thinkingBudget` (the provider maps it). Thinking content was never requested or stored; only its token count.
 * **Determinism.** `temperature`, `topP` and `topK` are *silently ignored* on Gemini 3.6 Flash and newer. Repeat
@@ -55,10 +56,11 @@ spend in this research: $0** (Free Tier). "Paid-equivalent" figures are what the
 project; they are computed per call from `usageMetadata` (`promptTokenCount`, `candidatesTokenCount`,
 `thoughtsTokenCount`).
 
-Measured per news item (see the results report for the exact runs): ≈2,100–2,300 input tokens and ≈200–260 output
-tokens with MINIMAL thinking, i.e. ≈$0.0012 per item on `gemini-3.5-flash-lite`. Per 100 companies in the universe
-(≈134 candidate news items per 100 companies on evalg250, all items classified): ≈$0.17; classifying only V3.1's
-published items (Experiment A): ≈$0.08. Cost is dominated by input; the prompt (~1,100 tokens) is the same for every
+Measured per news item (evalg250 final records): median 2,213 input and 238 output tokens with MINIMAL thinking, i.e.
+**$0.00095 per item on `gemini-3.1-flash-lite`** (≈$0.0013 on `gemini-3.5-flash-lite`). evalg250 has 135 candidate
+news items and 64 V3.1-published items per 100 companies, so per 100 companies: Experiment B/C (classify the
+candidate pool) ≈ **$0.13**, Experiment A (classify only V3.1's items) ≈ **$0.06**; at 1,200 companies ≈ $1.5 / $0.7.
+Total paid-equivalent value of every call made in this research (752 successful calls): ≈ $0.88; actual spend $0. Cost is dominated by input; the prompt (~1,100 tokens) is the same for every
 item, so implicit/explicit context caching would cut it further. The 2027-01-01 price rise applies to 3.6/3.8 Flash,
 not to 3.5 Flash-Lite.
 

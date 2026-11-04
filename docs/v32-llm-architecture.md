@@ -67,9 +67,10 @@ change in LLM verdict alone is recorded as `reassessed`, not as a company change
 
 ## 4. Recommended policy if integrated
 
-Choose by measured trade-off (see results): the default recommendation is **Experiment A as a filter on V3.1's
-published items** (`A_filter`): it cannot add an item V3.1 would not publish, removes most of the remaining content
-marketing and other-entity errors, and its cost is proportional to V3.1's output, not to the whole candidate pool.
+**Pending the independent result** (the evalg250 evaluation is incomplete; see results §5): the candidate design is
+**Experiment A as a filter on V3.1's published items** (`A_filter`): it cannot add an item V3.1 would not publish, and
+its cost is proportional to V3.1's output, not to the whole candidate pool. Whether it removes enough errors without
+losing too much legitimate coverage is exactly what the unfinished evaluation must show.
 The hybrid `C_hybrid` (LLM may rescue soft-withheld items) adds coverage and is the stronger result where a
 company's own site is the only news source, but it lets the model's judgment *add* items; it should be a separate,
 later opt-in after its own independent measurement.
