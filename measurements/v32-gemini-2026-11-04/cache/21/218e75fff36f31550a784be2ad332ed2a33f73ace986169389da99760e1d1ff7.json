@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Oslofinér",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-06-04",
+  "date_evidence": "4. juni 2026",
+  "decision": "withhold",
+  "reason": "The item is a product announcement regarding an expanded inventory of specific veneer boards, which constitutes marketing of the company's product range rather than a significant corporate development.",
+  "evidence_quotes": [
+   "Vi utvider sortimentet og tilbyr nå 3 varianter Adagio",
+   "Lagerførte plater: Eik Querkus Adagio"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5251,
+ "input_tokens": 1791,
+ "output_tokens": 229,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:03.822945+00:00"
+}

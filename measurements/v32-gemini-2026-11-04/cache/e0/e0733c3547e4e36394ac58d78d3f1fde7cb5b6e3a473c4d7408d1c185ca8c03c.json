@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hos JOY Medispa Bodø kan vi hjelpe deg med å gjenopprette volum og få tilbake en mer ungdommelig fylde i ansiktet."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "JOY Medispa Bodø",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a standard service and treatment description promoting cosmetic procedures for volume loss, lacking any specific company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12800,
+ "input_tokens": 2447,
+ "output_tokens": 203,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:52:42.966666+00:00"
+}

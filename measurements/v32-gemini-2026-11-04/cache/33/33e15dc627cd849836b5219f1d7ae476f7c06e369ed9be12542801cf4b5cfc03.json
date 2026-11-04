@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Matsentralen Norge - Food Banks Norway",
+   "Matsentralene er et nettverk av åtte matsentraler som som hjelper mennesker ved at overskuddsmat"
+  ],
+  "profile_owner_relation": "group_or_brand_account",
+  "owner_as_evidenced": "Matsentralen Norge (umbrella organization/network for all eight regional food banks including Matsentralen Øst)",
+  "decision": "withhold",
+  "reason": "The Instagram profile represents 'Matsentralen Norge', which is the national umbrella organization/network representing all eight regional food banks in Norway. The target legal entity is Matsentralen Øst (one of the regional entities within this network, with its own distinct organisation number), meaning the national account is a group or brand-level account rather than exclusively owned by the target entity itself.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18692,
+ "input_tokens": 1486,
+ "output_tokens": 208,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:55:11.610294+00:00"
+}

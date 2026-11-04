@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I denne artikkelen vil vi utforske hva som gjør EDI etiketter uunnværlige for e-handelsbedrifter, hvor du kan kjøpe høykvalitets fraktetikketer, og hvorfor din bedrift bør velge EDI etiketter.",
+   "For å sikre høykvalitets transportetikett som passer dine behov, besøk Frankeringsrekvisita.no !"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Frankeringsrekvisita",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational blog post explaining the benefits of EDI labels and providing general advice on why businesses should use them, rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 11135,
+ "input_tokens": 2704,
+ "output_tokens": 264,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:53:37.685354+00:00"
+}

@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "explanations": [
+   {
+    "event_ids": [
+     "e1"
+    ],
+    "kind": "source_outage",
+    "text": "For event e1, a source outage occurred with site_research on 2026-11-02T01:00:15.312010Z, retaining careers_page and social_profile."
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18975,
+ "input_tokens": 292,
+ "output_tokens": 80,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:54:06.382978+00:00"
+}

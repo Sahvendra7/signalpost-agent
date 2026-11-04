@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Interkommunalt arkiv i Hordaland IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2025-12-03",
+  "date_evidence": "Publisert 03. December 2025",
+  "decision": "publish",
+  "reason": "The company reports that it has submitted formal consultation responses (høyringsfråsegn) regarding new national archive regulations on behalf of its owner municipalities.",
+  "evidence_quotes": [
+   "Vi har sendt inn høyringsfråsegn til dei nye forskriftene på vegne av våre eigarkommunar.",
+   "Publisert 03. December 2025"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1682,
+ "input_tokens": 2598,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:00:30.253892+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oppdatert Driftshåndbok"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item merely points to an updated operations manual and maps, which is administrative reference material rather than a publishable company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9447,
+ "input_tokens": 1512,
+ "output_tokens": 179,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:52:35.328807+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "5 tips til hvordan du kan bedre din bedrifts IT-sikkerhet",
+   "1. Skytjenester Vi anbefaler alle bedrifter å flytte opp i skyen."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article provides general advice and tips on IT security rather than reporting a specific event, development, or action undertaken by the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 32132,
+ "input_tokens": 2350,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:53:19.442175+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba Samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "Proba Samfunnsanalyse has been commissioned by the Norwegian Labour and Welfare Directorate (Arbeids- og velferdsdirektoratet) to conduct a research project on cooperation between municipal refugee units and NAV.",
+  "evidence_quotes": [
+   "På oppdrag for Arbeids- og velferdsdirektoratet skal Proba undersøke hvordan samarbeidet mellom enhet med ansvar for flyktninger i kommunen og Nav fungerer."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5367,
+ "input_tokens": 1725,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:00:28.938513+00:00"
+}

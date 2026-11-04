@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Welcome to WordPress. This is your first post."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "WordPress",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a default WordPress boilerplate post ('Welcome to WordPress. This is your first post.') rather than genuine news about the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 66569,
+ "input_tokens": 1620,
+ "output_tokens": 179,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:01:55.873836+00:00"
+}

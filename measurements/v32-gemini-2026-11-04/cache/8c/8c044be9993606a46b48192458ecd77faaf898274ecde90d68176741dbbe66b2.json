@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Self hosted audio post – Midthaug zink Audio Player Upload self hosted audio Self hosted audio post 28 mars, 2014 Posted by Moldezink Uncategorized Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Moldezink",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-28",
+  "date_evidence": "28 mars, 2014",
+  "decision": "withhold",
+  "reason": "This is a default test or placeholder blog post template containing placeholder text, published by 'Moldezink', and does not represent genuine news or events concerning the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 56743,
+ "input_tokens": 2411,
+ "output_tokens": 244,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:57:20.531680+00:00"
+}

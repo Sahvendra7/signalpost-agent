@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvorfor bør man ha en komplett møteromsløsning?",
+   "Videokonferanser blir mer og mer aktuelt. Men oppkoblingsproblemer, manglende teknisk kunnskap, for dårlige produkter og ustabilt nettverk er blant mange årsaker til at det digitale møterommet kan skape frustrasjon og ineffektivitet i hverdagen."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "PROVENDO AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "This is an educational or advisory blog post explaining why businesses need complete meeting room solutions and discussing video conferencing challenges, rather than reporting a specific news development about the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 112436,
+ "input_tokens": 3004,
+ "output_tokens": 281,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:56:23.785431+00:00"
+}

@@ -1,0 +1,672 @@
+[
+ {
+  "set": "eval200b",
+  "org": "921147325",
+  "company": "ALPHA SOLUTIONS NORGE AS",
+  "profile": "https://www.instagram.com/alpha_solutions_us",
+  "label": "incorrect",
+  "note": "the US sister company's account",
+  "ok": true,
+  "error": null,
+  "latency_ms": 25565,
+  "input_tokens": 1393,
+  "output_tokens": 121,
+  "paid_equivalent_cost_usd": 0.0007204,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "foreign_namesake",
+  "quotes": [
+   {
+    "quote": "https://www.instagram.com/alpha_solutions_us",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The Instagram profile url explicitly ends with _us indicating it belongs to the United States branch or entity, whereas the target company is the Norwegian legal entity ALPHA SOLUTIONS NORGE AS."
+ },
+ {
+  "set": "eval200b",
+  "org": "921147325",
+  "company": "ALPHA SOLUTIONS NORGE AS",
+  "profile": "https://www.linkedin.com/company/alpha-solutions-usa",
+  "label": "incorrect",
+  "note": "the US sister company's account",
+  "ok": true,
+  "error": null,
+  "latency_ms": 19416,
+  "input_tokens": 1393,
+  "output_tokens": 125,
+  "paid_equivalent_cost_usd": 0.0007304,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "foreign_namesake",
+  "quotes": [
+   {
+    "quote": "https://www.linkedin.com/company/alpha-solutions-usa",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The profile URL explicitly points to 'alpha-solutions-usa', which indicates a foreign or regional US entity, whereas the target company is the Norwegian legal entity ALPHA SOLUTIONS NORGE AS."
+ },
+ {
+  "set": "eval200b",
+  "org": "921147325",
+  "company": "ALPHA SOLUTIONS NORGE AS",
+  "profile": "https://www.facebook.com/alphasolutionsus",
+  "label": "incorrect",
+  "note": "the US sister company's account",
+  "ok": true,
+  "error": null,
+  "latency_ms": 22507,
+  "input_tokens": 1393,
+  "output_tokens": 121,
+  "paid_equivalent_cost_usd": 0.0007204,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "foreign_namesake",
+  "quotes": [
+   {
+    "quote": "https://www.facebook.com/alphasolutionsus",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The Facebook profile URL explicitly indicates the US branch of Alpha Solutions (alphasolutionsus), which is a foreign namesake or regional entity separate from the Norwegian legal entity ALPHA SOLUTIONS NORGE AS."
+ },
+ {
+  "set": "eval200b",
+  "org": "915643787",
+  "company": "MATSENTRALEN ØST",
+  "profile": "https://www.facebook.com/matsentralen",
+  "label": "incorrect",
+  "note": "the national federation's account, not the regional entity's",
+  "ok": true,
+  "error": null,
+  "latency_ms": 24319,
+  "input_tokens": 1486,
+  "output_tokens": 166,
+  "paid_equivalent_cost_usd": 0.0008608,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "group_or_brand_account",
+  "quotes": [
+   {
+    "quote": "Matsentralene Innlandet Nord-Norge Øst Rogaland Sør Trøndelag Vestfold og Telemark Vestland",
+    "status": "exact"
+   },
+   {
+    "quote": "Matsentralen Norge",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The linked Facebook profile is the general brand/umbrella account for Matsentralen Norge, whereas the target entity is one specific regional entity (Matsentralen Øst). Therefore, the profile represents the broader network or group rather than the exact target legal entity."
+ },
+ {
+  "set": "eval200b",
+  "org": "915643787",
+  "company": "MATSENTRALEN ØST",
+  "profile": "https://www.instagram.com/matsentralen/",
+  "label": "incorrect",
+  "note": "the national federation's account",
+  "ok": true,
+  "error": null,
+  "latency_ms": 18692,
+  "input_tokens": 1486,
+  "output_tokens": 208,
+  "paid_equivalent_cost_usd": 0.0009658,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "group_or_brand_account",
+  "quotes": [
+   {
+    "quote": "Matsentralen Norge - Food Banks Norway",
+    "status": "exact"
+   },
+   {
+    "quote": "Matsentralene er et nettverk av åtte matsentraler som som hjelper mennesker ved at overskuddsmat",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The Instagram profile represents 'Matsentralen Norge', which is the national umbrella organization/network representing all eight regional food banks in Norway. The target legal entity is Matsentralen Øst (one of the regional entities within this network, with its own distinct organisation number), meaning the national account is a group or brand-level account rather than exclusively owned by the target entity itself."
+ },
+ {
+  "set": "eval200b",
+  "org": "915643787",
+  "company": "MATSENTRALEN ØST",
+  "profile": "https://www.facebook.com/MatsentralenNorge/",
+  "label": "incorrect",
+  "note": "the national federation's account",
+  "ok": true,
+  "error": null,
+  "latency_ms": 18991,
+  "input_tokens": 1486,
+  "output_tokens": 177,
+  "paid_equivalent_cost_usd": 0.0008883,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "group_or_brand_account",
+  "quotes": [
+   {
+    "quote": "Matsentralen Norge - Food Banks Norway",
+    "status": "exact"
+   },
+   {
+    "quote": "Matsentralene er et nettverk av åtte matsentraler som som hjelper mennesker",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The Facebook profile represents 'Matsentralen Norge', which is the national umbrella organization and network for the eight regional food banks, whereas the target entity is 'Matsentralen Øst', a specific regional legal entity within that network. Therefore, the profile belongs to a group/umbrella organization rather than the exact regional entity."
+ },
+ {
+  "set": "eval200",
+  "org": "830872752",
+  "company": "LOGSCOM AS",
+  "profile": "https://www.facebook.com/logscom",
+  "label": "incorrect",
+  "note": "the site and profile are Logscom AB's (Swedish company), not LOGSCOM AS's",
+  "ok": true,
+  "error": null,
+  "latency_ms": 24563,
+  "input_tokens": 1448,
+  "output_tokens": 147,
+  "paid_equivalent_cost_usd": 0.0008019,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "foreign_namesake",
+  "quotes": [
+   {
+    "quote": "Logscom AB",
+    "status": "exact"
+   },
+   {
+    "quote": "Vi märker ditt virke!",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The website clearly states the operator is the Swedish company Logscom AB, whereas the target entity is the Norwegian company LOGSCOM AS (organisasjonsnummer 830872752). The Facebook profile linked from the site belongs to this Swedish entity rather than the Norwegian legal entity."
+ },
+ {
+  "set": "eval200",
+  "org": "830872752",
+  "company": "LOGSCOM AS",
+  "profile": "http://instagram.com/logscom_ab",
+  "label": "incorrect",
+  "note": "Logscom AB's (Swedish company) account",
+  "ok": true,
+  "error": null,
+  "latency_ms": 20408,
+  "input_tokens": 1448,
+  "output_tokens": 160,
+  "paid_equivalent_cost_usd": 0.0008344,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "foreign_namesake",
+  "quotes": [
+   {
+    "quote": "Instagram logscom_ab • Följ",
+    "status": "exact"
+   },
+   {
+    "quote": "Logscom AB",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The metadata indicates the target entity is LOGSCOM AS, a Norwegian company (organisation number 830872752), while the Instagram handle logscom_ab and website content clearly refer to 'Logscom AB', a Swedish entity located in Åsele, Sweden."
+ },
+ {
+  "set": "eval200b",
+  "org": "921147325",
+  "company": "ALPHA SOLUTIONS NORGE AS",
+  "profile": "https://www.linkedin.com/company/alpha-solutions",
+  "label": "unsure",
+  "note": "the international group's LinkedIn, not clearly the Norwegian entity's",
+  "ok": true,
+  "error": null,
+  "latency_ms": 19579,
+  "input_tokens": 1393,
+  "output_tokens": 186,
+  "paid_equivalent_cost_usd": 0.0008829,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "sister_company",
+  "quotes": [
+   {
+    "quote": "https://www.linkedin.com/company/alpha-solutions-norway/",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The website links to a general global LinkedIn profile (linkedin.com/company/alpha-solutions) while also listing a separate localized profile for Norway (linkedin.com/company/alpha-solutions-norway/). Therefore, the generic profile represents the broader group or brand rather than exclusively and directly being the exact target legal entity, which has its own specific regional profile."
+ },
+ {
+  "set": "eval200b",
+  "org": "921147325",
+  "company": "ALPHA SOLUTIONS NORGE AS",
+  "profile": "https://www.youtube.com/@alpha-solutions",
+  "label": "unsure",
+  "note": "the international group's YouTube channel",
+  "ok": true,
+  "error": null,
+  "latency_ms": 29499,
+  "input_tokens": 1393,
+  "output_tokens": 102,
+  "paid_equivalent_cost_usd": 0.0006729,
+  "page_text_captured": true,
+  "final_decision": "withhold",
+  "relation": "group_or_brand_account",
+  "quotes": [],
+  "verified_quotes": 0,
+  "flags": [],
+  "reason": "The YouTube profile uses the generic handle @alpha-solutions representing the global brand rather than the specific Norwegian legal entity ALPHA SOLUTIONS NORGE AS."
+ },
+ {
+  "set": "eval200",
+  "org": "997175565",
+  "company": "MEGLERHUSET RELE HAUGESUND AS",
+  "profile": "http://www.instagram.com/meglerhusetrele/",
+  "label": "unsure",
+  "note": "chain brand account (Meglerhuset Rele); whether this office's entity owns it is not shown",
+  "ok": true,
+  "error": null,
+  "latency_ms": 15907,
+  "input_tokens": 476,
+  "output_tokens": 102,
+  "paid_equivalent_cost_usd": 0.0003978,
+  "page_text_captured": false,
+  "final_decision": "uncertain",
+  "relation": "unclear",
+  "quotes": [],
+  "verified_quotes": 0,
+  "flags": [],
+  "reason": "The page text was not captured, and there is insufficient text evidence to verify whether the Instagram profile directly belongs to MEGLERHUSET RELE HAUGESUND AS or another entity within the same brand."
+ },
+ {
+  "set": "eval200",
+  "org": "997175565",
+  "company": "MEGLERHUSET RELE HAUGESUND AS",
+  "profile": "https://www.facebook.com/Meglerhuset",
+  "label": "unsure",
+  "note": "generic chain handle (Meglerhuset); this office entity's ownership not shown",
+  "ok": true,
+  "error": null,
+  "latency_ms": 19304,
+  "input_tokens": 476,
+  "output_tokens": 134,
+  "paid_equivalent_cost_usd": 0.0004778,
+  "page_text_captured": false,
+  "final_decision": "uncertain",
+  "relation": "unclear",
+  "quotes": [],
+  "verified_quotes": 0,
+  "flags": [],
+  "reason": "The profile URL simply points to facebook.com/Meglerhuset, which uses a generic brand name. There is no page text or explicit evidence linking this exact Facebook handle to the specific Norwegian legal entity MEGLERHUSET RELE HAUGESUND AS (997175565) rather than another entity using the Meglerhuset name."
+ },
+ {
+  "set": "eval200",
+  "org": "914152682",
+  "company": "KVELDROVEIEN EIENDOM AS",
+  "profile": "https://www.instagram.com/vinterbro.ishall/?igshid",
+  "label": "unsure",
+  "note": "ice-hall account on the hall's site; whether the property company or another entity runs the hall is not shown",
+  "ok": true,
+  "error": null,
+  "latency_ms": 5158,
+  "input_tokens": 449,
+  "output_tokens": 83,
+  "paid_equivalent_cost_usd": 0.0003422,
+  "page_text_captured": false,
+  "final_decision": "uncertain",
+  "relation": "unclear",
+  "quotes": [],
+  "verified_quotes": 0,
+  "flags": [],
+  "reason": "The page text is not captured and there is no text evidence in the metadata to confirm the exact profile ownership."
+ },
+ {
+  "set": "eval200",
+  "org": "913441206",
+  "company": "SOLA HUNDESENTER AS",
+  "profile": "https://www.facebook.com/SolaHundesenter/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 12246,
+  "input_tokens": 1469,
+  "output_tokens": 151,
+  "paid_equivalent_cost_usd": 0.0008182,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "Hjem - Sola Hundesenter",
+    "status": "exact"
+   },
+   {
+    "quote": "Velkommen til Sola Hundesenter Et sted for trygghet, utvikling og ekte hundeglede – for både hund og eier.",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The Facebook profile is directly linked from the verified official website of Sola Hundesenter AS, and the website prominently features the exact name and services matching the target legal entity."
+ },
+ {
+  "set": "eval200b",
+  "org": "981271386",
+  "company": "MESÉN AS",
+  "profile": "https://www.facebook.com/kulturbyraetmesen/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 12696,
+  "input_tokens": 903,
+  "output_tokens": 144,
+  "paid_equivalent_cost_usd": 0.0006309,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "Mesén AS",
+    "status": "absent"
+   },
+   {
+    "quote": "https://www.facebook.com/kulturbyraetmesen/",
+    "status": "exact"
+   },
+   {
+    "quote": "Facebook Instagram Motta invitasjoner og nyheter rett i innboksen!",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [
+   "quote_not_in_source"
+  ],
+  "reason": "The Facebook profile is directly linked from the official verified website of MESÉN AS (mesen.no), which represents the target company."
+ },
+ {
+  "set": "eval200",
+  "org": "920546919",
+  "company": "JENTENEPAATUNET AS",
+  "profile": "https://www.instagram.com/jentenepaatunet/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 18927,
+  "input_tokens": 1580,
+  "output_tokens": 152,
+  "paid_equivalent_cost_usd": 0.000854,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "FØLG MED PÅ INSTAGRAM @jentenepaatunet jentenepaatunet",
+    "status": "exact"
+   },
+   {
+    "quote": "View Instagram post by jentenepaatunet Nov 2",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The Instagram profile @jentenepaatunet is directly embedded and linked from the official verified website of JENTENEPAATUNET AS, with content matching the company's brand name and products."
+ },
+ {
+  "set": "eval200b",
+  "org": "979897901",
+  "company": "EIKÅS HYTTER OG HUS AS",
+  "profile": "https://www.facebook.com/eikas.no/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 24290,
+  "input_tokens": 1574,
+  "output_tokens": 139,
+  "paid_equivalent_cost_usd": 0.0008197,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "Eikås Hytter & Hus",
+    "status": "exact"
+   },
+   {
+    "quote": "https://www.facebook.com/eikas.no/",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The Facebook profile is linked directly from the official verified website of the target company EIKÅS HYTTER OG HUS AS and uses the brand name matching the company name."
+ },
+ {
+  "set": "eval200b",
+  "org": "988376442",
+  "company": "A. LARSEN HUSFLID AS",
+  "profile": "https://www.instagram.com/alarsenhusflidas/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 23301,
+  "input_tokens": 451,
+  "output_tokens": 134,
+  "paid_equivalent_cost_usd": 0.0004703,
+  "page_text_captured": false,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "https://www.instagram.com/alarsenhusflidas/",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The Instagram profile handle alarsenhusflidas directly matches the exact legal name of the target entity A. LARSEN HUSFLID AS and is linked directly from the company's verified website."
+ },
+ {
+  "set": "eval200",
+  "org": "920546919",
+  "company": "JENTENEPAATUNET AS",
+  "profile": "https://www.facebook.com/jentenepaatunet/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 12647,
+  "input_tokens": 1608,
+  "output_tokens": 128,
+  "paid_equivalent_cost_usd": 0.0008024,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "Jentene på tunet",
+    "status": "exact"
+   },
+   {
+    "quote": "Jentene på Tunet - Chocolatier",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The Facebook profile is directly linked from the verified official website of JENTENEPAATUNET AS and matches the unique brand name and trade of the target company."
+ },
+ {
+  "set": "eval200b",
+  "org": "911626519",
+  "company": "MUSEUMSFORLAGET AS",
+  "profile": "https://www.facebook.com/Museumsforlaget/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 11354,
+  "input_tokens": 459,
+  "output_tokens": 91,
+  "paid_equivalent_cost_usd": 0.0003652,
+  "page_text_captured": false,
+  "final_decision": "uncertain",
+  "relation": "unclear",
+  "quotes": [],
+  "verified_quotes": 0,
+  "flags": [],
+  "reason": "The page text is not captured and there is no textual evidence to verify ownership of the Facebook profile by the target company despite being linked from the website."
+ },
+ {
+  "set": "eval200",
+  "org": "856409252",
+  "company": "JOHS SÆLEN & SØNN AS",
+  "profile": "http://www.linkedin.com/company/johs--sælen-&-sønn-as",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 18003,
+  "input_tokens": 615,
+  "output_tokens": 126,
+  "paid_equivalent_cost_usd": 0.0004995,
+  "page_text_captured": false,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "http://www.linkedin.com/company/johs--sælen-&-sønn-as",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The LinkedIn profile URL explicitly matches the exact legal name of the target company and is linked directly from the company's verified website."
+ },
+ {
+  "set": "eval200",
+  "org": "987445378",
+  "company": "TEMP TEAM AS",
+  "profile": "https://instagram.com/tempteamnorge",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 79070,
+  "input_tokens": 1477,
+  "output_tokens": 124,
+  "paid_equivalent_cost_usd": 0.0007531,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "https://instagram.com/tempteamnorge",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The Instagram profile @tempteamnorge is directly linked from the verified official website of Temp Team AS (temp-team.no), and the handle 'tempteamnorge' clearly corresponds to the Norwegian entity."
+ },
+ {
+  "set": "eval200b",
+  "org": "917503729",
+  "company": "RETT FRAM OPPLEVELSER",
+  "profile": "http://instagram.com/rettframopplevelser",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 9092,
+  "input_tokens": 801,
+  "output_tokens": 132,
+  "paid_equivalent_cost_usd": 0.0005703,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "Rett Fram Opplevelser Org nr. 917 503 729",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 1,
+  "flags": [],
+  "reason": "The Instagram profile is directly linked from the verified website of the target company Rett Fram Opplevelser, which displays the exact organisation number 917503729."
+ },
+ {
+  "set": "eval200",
+  "org": "988494534",
+  "company": "PEN UNDERWRITING EUROPE AS",
+  "profile": "https://www.linkedin.com/company/fender-marine-as/",
+  "label": "correct",
+  "note": "Fender Marine AS is the name shown on the company's own site, which states its org. number",
+  "ok": true,
+  "error": null,
+  "latency_ms": 8362,
+  "input_tokens": 474,
+  "output_tokens": 94,
+  "paid_equivalent_cost_usd": 0.0003772,
+  "page_text_captured": false,
+  "final_decision": "withhold",
+  "relation": "unrelated_account",
+  "quotes": [],
+  "verified_quotes": 0,
+  "flags": [],
+  "reason": "The target company is PEN UNDERWRITING EUROPE AS, while the LinkedIn profile belongs to Fender Marine AS, which is a different entity."
+ },
+ {
+  "set": "eval200b",
+  "org": "922582270",
+  "company": "FRESVIK PRODUKT AS",
+  "profile": "https://www.linkedin.com/company/fresvik-produkt-as/",
+  "label": "correct",
+  "note": "",
+  "ok": true,
+  "error": null,
+  "latency_ms": 9613,
+  "input_tokens": 1550,
+  "output_tokens": 125,
+  "paid_equivalent_cost_usd": 0.0007775,
+  "page_text_captured": true,
+  "final_decision": "attribute",
+  "relation": "target_company",
+  "quotes": [
+   {
+    "quote": "Fresvik Produkt AS",
+    "status": "exact"
+   },
+   {
+    "quote": "https://www.linkedin.com/company/fresvik-produkt-as/",
+    "status": "exact"
+   }
+  ],
+  "verified_quotes": 2,
+  "flags": [],
+  "reason": "The LinkedIn profile URL matches the exact legal name and entity FRESVIK PRODUKT AS, and is linked directly from the verified website."
+ }
+]

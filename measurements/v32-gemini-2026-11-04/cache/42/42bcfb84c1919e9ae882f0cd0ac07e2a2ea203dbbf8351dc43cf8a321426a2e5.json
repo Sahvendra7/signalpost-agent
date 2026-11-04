@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet nr. 36 – 03.06.22 – Steinerskolen i Ås"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-06-07",
+  "date_evidence": "7. juni 2022",
+  "decision": "publish",
+  "reason": "The item reports on the school's weekly newsletter covering teacher activities, student field trips, and upcoming dates for the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 63924,
+ "input_tokens": 2801,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:55:20.111631+00:00"
+}

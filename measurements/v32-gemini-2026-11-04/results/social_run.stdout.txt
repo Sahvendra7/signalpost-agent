@@ -1,0 +1,26 @@
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+incor -> withhold  foreign_namesake       ALPHA SOLUTIONS NORGE AS https://www.instagram.com/alpha_solutions_us
+incor -> withhold  foreign_namesake       ALPHA SOLUTIONS NORGE AS https://www.linkedin.com/company/alpha-solutions-usa
+incor -> withhold  foreign_namesake       ALPHA SOLUTIONS NORGE AS https://www.facebook.com/alphasolutionsus
+incor -> withhold  group_or_brand_account MATSENTRALEN ØST         https://www.facebook.com/matsentralen
+incor -> withhold  group_or_brand_account MATSENTRALEN ØST         https://www.instagram.com/matsentralen/
+incor -> withhold  group_or_brand_account MATSENTRALEN ØST         https://www.facebook.com/MatsentralenNorge/
+incor -> withhold  foreign_namesake       LOGSCOM AS               https://www.facebook.com/logscom
+incor -> withhold  foreign_namesake       LOGSCOM AS               http://instagram.com/logscom_ab
+unsur -> withhold  sister_company         ALPHA SOLUTIONS NORGE AS https://www.linkedin.com/company/alpha-solutions
+unsur -> withhold  group_or_brand_account ALPHA SOLUTIONS NORGE AS https://www.youtube.com/@alpha-solutions
+unsur -> uncertain unclear                MEGLERHUSET RELE HAUGESU http://www.instagram.com/meglerhusetrele/
+unsur -> uncertain unclear                MEGLERHUSET RELE HAUGESU https://www.facebook.com/Meglerhuset
+unsur -> uncertain unclear                KVELDROVEIEN EIENDOM AS  https://www.instagram.com/vinterbro.ishall/?igshid
+corre -> attribute target_company         SOLA HUNDESENTER AS      https://www.facebook.com/SolaHundesenter/
+corre -> attribute target_company         MESÉN AS                 https://www.facebook.com/kulturbyraetmesen/
+corre -> attribute target_company         JENTENEPAATUNET AS       https://www.instagram.com/jentenepaatunet/
+corre -> attribute target_company         EIKÅS HYTTER OG HUS AS   https://www.facebook.com/eikas.no/
+corre -> attribute target_company         A. LARSEN HUSFLID AS     https://www.instagram.com/alarsenhusflidas/
+corre -> attribute target_company         JENTENEPAATUNET AS       https://www.facebook.com/jentenepaatunet/
+corre -> uncertain unclear                MUSEUMSFORLAGET AS       https://www.facebook.com/Museumsforlaget/
+corre -> attribute target_company         JOHS SÆLEN & SØNN AS     http://www.linkedin.com/company/johs--sælen-&-sønn-as
+corre -> attribute target_company         TEMP TEAM AS             https://instagram.com/tempteamnorge
+corre -> attribute target_company         RETT FRAM OPPLEVELSER    http://instagram.com/rettframopplevelser
+corre -> withhold  unrelated_account      PEN UNDERWRITING EUROPE  https://www.linkedin.com/company/fender-marine-as/
+corre -> attribute target_company         FRESVIK PRODUKT AS       https://www.linkedin.com/company/fresvik-produkt-as/

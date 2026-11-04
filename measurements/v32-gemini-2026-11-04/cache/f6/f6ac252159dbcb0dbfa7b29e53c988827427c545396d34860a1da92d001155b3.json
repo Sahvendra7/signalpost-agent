@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FØLG MED PÅ INSTAGRAM @jentenepaatunet jentenepaatunet",
+   "View Instagram post by jentenepaatunet Nov 2"
+  ],
+  "profile_owner_relation": "target_company",
+  "owner_as_evidenced": "JENTENEPAATUNET AS",
+  "decision": "attribute",
+  "reason": "The Instagram profile @jentenepaatunet is directly embedded and linked from the official verified website of JENTENEPAATUNET AS, with content matching the company's brand name and products.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18927,
+ "input_tokens": 1580,
+ "output_tokens": 152,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:58:30.026319+00:00"
+}

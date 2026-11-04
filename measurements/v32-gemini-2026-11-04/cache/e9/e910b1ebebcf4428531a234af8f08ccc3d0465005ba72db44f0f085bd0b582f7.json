@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Klyngeutvikling: Ikke vent på at det skal skje!",
+   "Dietz Foresight har allsidig erfaring med foresightbasert klyngeutvikling."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Dietz Foresight",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-04-06",
+  "date_evidence": "6. apr.",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post discussing the concept of cluster development and the benefits of foresight processes, rather than reporting on a specific development or event of the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 11324,
+ "input_tokens": 2049,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:53:12.874677+00:00"
+}

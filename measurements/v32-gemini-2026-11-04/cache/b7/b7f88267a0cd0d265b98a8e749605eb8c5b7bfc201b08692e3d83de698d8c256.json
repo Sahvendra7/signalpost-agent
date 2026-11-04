@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Visning i Gävle - Logscom AB Ajöss till vältlapparna Kom och kolla på hur du kan säga ajöss till vältlapparna, onsdagen den 19 november mellan klockan 11 och 15 ich visar vi vår Logscom GTP."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Logscom AB",
+  "subject_relation": "sister_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item announces an event hosted by Logscom AB, a related group entity, rather than the target company LOGSCOM AS itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 52781,
+ "input_tokens": 1913,
+ "output_tokens": 239,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:54:05.804825+00:00"
+}

@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [],
+  "content_category": "unrelated_content",
+  "subject_entity": "Seistar",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an 'About Us' page which provides general company information rather than reporting a specific development, action, or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6814,
+ "input_tokens": 1425,
+ "output_tokens": 161,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:52:43.364171+00:00"
+}

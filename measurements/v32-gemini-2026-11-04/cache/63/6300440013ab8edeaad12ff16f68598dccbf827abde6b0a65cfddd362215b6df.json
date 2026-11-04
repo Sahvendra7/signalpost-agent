@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "5 gode grunner til å velge en Tesla leiebil",
+   "Vi i Evutleie spesialiserer oss på utleie av Tesla, men tilbyr også elbilutleie av varebil."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "EVUTLEIE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-08-29",
+  "date_evidence": "29. august 2020",
+  "decision": "withhold",
+  "reason": "The article is a promotional blog post listing reasons to choose a Tesla for rental, which constitutes marketing content rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 19618,
+ "input_tokens": 3459,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:54:41.168278+00:00"
+}

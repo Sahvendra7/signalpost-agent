@@ -3,129 +3,576 @@
   {
    "org": "988185701",
    "company": "ROSIM AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 70,
    "derived_facts": 14,
    "deterministic_statements": 31,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 6710,
+   "output_tokens": 586,
+   "latency_ms": 11939,
+   "paid_equivalent_cost_usd": 0.003478,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "ROSIM AS is a registered legal form AS with organisation number 988185701, founded on 2005-04-11 and registered on 2005-05-21.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3",
+      "f8",
+      "f9"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company operates in the industry code 58.290 for publishing other software, with a registry employee count of 12.",
+     "fact_ids": [
+      "f4",
+      "f7"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "company_reported",
+     "text": "The company's website reports that ROSIM are experts on water flow measurement and network modeling, providing insight into stormwater and wastewater systems, precipitation measurement, and extraneous water.",
+     "fact_ids": [
+      "f12"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Revenue increased from 25,957,519 NOK to 27,000,247 NOK between the periods 2023-01-01 to 2023-12-31 and 2024-01-01 to 2024-12-31, but then decreased to 26,065,153 NOK for the period 2025-01-01 to 2025-12-31.",
+     "fact_ids": [
+      "f26",
+      "f33",
+      "f40",
+      "d1",
+      "d2"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "Geir Johan Lindholm serves as the daglig leder and styremedlem, while Gorm Andreas Pedersen is the styrets leder.",
+     "fact_ids": [
+      "f14",
+      "f15",
+      "f17"
+     ]
+    }
+   ],
    "rejected": []
   },
   {
    "org": "993973645",
    "company": "FRAM MARINE AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 78,
    "derived_facts": 14,
    "deterministic_statements": 31,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 7703,
+   "output_tokens": 686,
+   "latency_ms": 13939,
+   "paid_equivalent_cost_usd": 0.0040259,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "FRAM MARINE AS is registered with the organisation number 993973645 and has the legal form AS.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company operates in the industry of other technical consultancy activities and was founded on March 15, 2009.",
+     "fact_ids": [
+      "f4",
+      "f8"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "company_reported",
+     "text": "The company's website reports that it combines years of experience in project execution and management with technical and operational expertise in the Marine, Energy, and Renewable industry.",
+     "fact_ids": [
+      "f12",
+      "f48"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Revenue decreased from 40,012,265 NOK in the period from 2023-01-01 to 2023-12-31 down to 31,994,381 NOK in the period from 2024-01-01 to 2024-12-31, and further down to 25,943,930 NOK in the period from 2025-01-01 to 2025-12-31.",
+     "fact_ids": [
+      "f25",
+      "f32",
+      "f39",
+      "d1",
+      "d2"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Operating result went down from 5,147,707 NOK in the 2023 period to 2,143,423 NOK in the 2024 period, and then to -870,904 NOK in the 2025 period.",
+     "fact_ids": [
+      "f26",
+      "f33",
+      "f40",
+      "d3",
+      "d4"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "Karen Grøttheim Algaard serves as the chief executive officer while Per Grieg is the board chair.",
+     "fact_ids": [
+      "f14",
+      "f15"
+     ]
+    }
+   ],
    "rejected": []
   },
   {
    "org": "984047320",
    "company": "KUNNSKAPSPARKEN BODØ AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 82,
    "derived_facts": 14,
    "deterministic_statements": 31,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 7901,
+   "output_tokens": 548,
+   "latency_ms": 8225,
+   "paid_equivalent_cost_usd": 0.0037403,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "KUNNSKAPSPARKEN BODØ AS is registered under organisation number 984047320 as a private limited company with the legal form AS.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company operates in business consulting and other administrative consulting, and lists activities including research and development, teaching, and real estate rental.",
+     "fact_ids": [
+      "f4",
+      "f10"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "Erlend Bullvåg serves as the chief executive officer while Ole-Henrik Hjartøy is the board chair.",
+     "fact_ids": [
+      "f13",
+      "f14"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Revenue decreased from 44,620,608 NOK for the period ending December 31, 2023 to 40,205,329 NOK for the period ending December 31, 2024, and then increased to 42,421,421 NOK for the period ending December 31, 2025.",
+     "fact_ids": [
+      "d1",
+      "d2"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Operating result decreased from 949,911 NOK for the period ending December 31, 2023 to 113,241 NOK for the period ending December 31, 2024, and subsequently increased to 2,699,309 NOK for the period ending December 31, 2025.",
+     "fact_ids": [
+      "d3",
+      "d4"
+     ]
+    }
+   ],
    "rejected": []
   },
   {
    "org": "922582270",
    "company": "FRESVIK PRODUKT AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 75,
    "derived_facts": 14,
    "deterministic_statements": 29,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 7212,
+   "output_tokens": 457,
+   "latency_ms": 8408,
+   "paid_equivalent_cost_usd": 0.0033061,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "FRESVIK PRODUKT AS is a limited company with organisation number 922582270, founded on 1978-02-11.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3",
+      "f8"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company engages in producing prefabricated insulation panels, other industrial production, and participating in other business agencies and trade.",
+     "fact_ids": [
+      "f10"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "Espen Skjerven Holen serves as the chief executive officer and Trygve Simlenes acts as the board chair.",
+     "fact_ids": [
+      "f13",
+      "f14"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "From the period of 2023-12-31 to 2025-12-31, the company's revenue decreased from 77,951,787 NOK down to 66,726,366 NOK.",
+     "fact_ids": [
+      "f26",
+      "f40",
+      "d1",
+      "d2"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "During the same period from 2023-12-31 to 2025-12-31, operating results decreased from 4,714,009 NOK to 758,412 NOK.",
+     "fact_ids": [
+      "f27",
+      "f41",
+      "d3",
+      "d4"
+     ]
+    },
+    {
+     "section": "developments",
+     "kind": "company_reported",
+     "text": "The company's website reports that they have implemented a robot and a chaotic storage system for elements after the summer of 2023.",
+     "fact_ids": [
+      "f48",
+      "f53"
+     ]
+    }
+   ],
    "rejected": []
   },
   {
    "org": "996569071",
    "company": "KRISTIANIA BEDRIFTSIDRETTSLAG",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 65,
    "derived_facts": 14,
    "deterministic_statements": 25,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 6287,
+   "output_tokens": 645,
+   "latency_ms": 10237,
+   "paid_equivalent_cost_usd": 0.0034986,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "KRISTIANIA BEDRIFTSIDRETTSLAG, with organisation number 996569071, is a legal form FLI registered on 2011-02-16 and founded on 1984-09-03.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3",
+      "f7",
+      "f8"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company operates as a sports club and association under industry code 93.120, serving as a corporate sports team for employees at Høyskolen Kristiania - Ernst G Mortensens Stiftelse.",
+     "fact_ids": [
+      "f4",
+      "f9"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "The board consists of Kamilla Kolvig as chair, alongside board members Knut Erik Gaustad, Sindre Sommerfelt, and Morten Michaelsen Gjestrud.",
+     "fact_ids": [
+      "f11",
+      "f12",
+      "f13",
+      "f14"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Between the periods of 2023-12-31 and 2024-12-31, revenue increased by 51,705 NOK from 432,545 NOK to 484,250 NOK, and subsequently decreased by 172,471 NOK to 311,779 NOK by 2025-12-31.",
+     "fact_ids": [
+      "f20",
+      "f27",
+      "f34",
+      "d1",
+      "d2"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Operating results changed from -44,019 NOK in 2023 to 22,405 NOK in 2024, and further improved to 25,248 NOK by the end of 2025.",
+     "fact_ids": [
+      "f21",
+      "f28",
+      "f35",
+      "d3",
+      "d4"
+     ]
+    },
+    {
+     "section": "uncertainty",
+     "kind": "uncertainty",
+     "text": "There is no information regarding the specific details of operations beyond registered activities and public announcements.",
+     "fact_ids": [
+      "f9"
+     ]
+    }
+   ],
    "rejected": []
   },
   {
    "org": "927293056",
    "company": "STIFTELSEN LIA GÅRD RETREATSENTER",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 71,
    "derived_facts": 14,
    "deterministic_statements": 30,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
-   "rejected": []
+   "input_tokens": 6537,
+   "output_tokens": 471,
+   "latency_ms": 8949,
+   "paid_equivalent_cost_usd": 0.0031386,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "STIFTELSEN LIA GÅRD RETREATSENTER has the legal form STI and organisation number 927293056.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "company_reported",
+     "text": "The company's website reports that Lia Gård is an inhabited resting place outside the asphalt under an open sky for those on their way.",
+     "fact_ids": [
+      "f11"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "From the period 2023-12-31 to 2024-12-31, revenue decreased from 15,965,803 NOK to 9,560,570 NOK, which is a down direction of 40.1 percent.",
+     "fact_ids": [
+      "d1"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "From the period 2024-12-31 to 2025-12-31, revenue increased from 9,560,570 NOK to 9,714,082 NOK, representing an upward change of 1.6 percent.",
+     "fact_ids": [
+      "d2"
+     ]
+    }
+   ],
+   "rejected": [
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company's registered activity is Christian retreat and course operations.",
+     "fact_ids": [
+      "f10"
+     ],
+     "reason": "name_not_in_cited_facts"
+    }
+   ]
   },
   {
    "org": "963706820",
    "company": "KARMSUND HAVN IKS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 81,
    "derived_facts": 14,
    "deterministic_statements": 32,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 7727,
+   "output_tokens": 447,
+   "latency_ms": 13221,
+   "paid_equivalent_cost_usd": 0.0034356,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "KARMSUND HAVN IKS has the organization number 963706820 and was founded on 1992-01-01.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f8"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company engages in public port operations according to the act on ports and fairways, rental of halls and outdoor areas, rental of patrol and guard boats, and the sale of water and electricity for shipping use.",
+     "fact_ids": [
+      "f10"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "Torfinn Gaupås serves as the chief executive officer, while Olav Linga is the board chair.",
+     "fact_ids": [
+      "f13",
+      "f20"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "From the period ending 2023-12-31 to the period ending 2024-12-31, revenue decreased from 179,891,000 NOK to 174,177,000 NOK.",
+     "fact_ids": [
+      "d1"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "From the period ending 2024-12-31 to the period ending 2025-12-31, revenue increased from 174,177,000 NOK to 206,321,000 NOK.",
+     "fact_ids": [
+      "d2"
+     ]
+    },
+    {
+     "section": "developments",
+     "kind": "company_reported",
+     "text": "The company's website reports news items including the establishment of the technology company Shorly by Havnekraft and cruise calls to Kopervik.",
+     "fact_ids": [
+      "f61",
+      "f64"
+     ]
+    }
+   ],
    "rejected": []
   },
   {
    "org": "911814684",
    "company": "AGENTA AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "facts": 66,
    "derived_facts": 14,
    "deterministic_statements": 29,
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "paid_equivalent_cost_usd": null,
-   "model_version": null,
-   "accepted": [],
+   "input_tokens": 5897,
+   "output_tokens": 691,
+   "latency_ms": 12527,
+   "paid_equivalent_cost_usd": 0.0034966,
+   "model_version": "gemini-3.5-flash-lite",
+   "accepted": [
+    {
+     "section": "overview",
+     "kind": "verified_fact",
+     "text": "AGENTA AS, with organization number 911814684, is a registered AS founded on 2013-03-01 and located in Trondheim.",
+     "fact_ids": [
+      "f1",
+      "f2",
+      "f3",
+      "f7",
+      "f17"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "verified_fact",
+     "text": "The company's industry is classified under code 74.120 for graphic design and visual communication design.",
+     "fact_ids": [
+      "f4"
+     ]
+    },
+    {
+     "section": "activity",
+     "kind": "company_reported",
+     "text": "The company's website reports that Agenta in Trondheim creates websites, webshops, AI agents, and integrations as a total supplier since 2013.",
+     "fact_ids": [
+      "f11"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Revenue increased from 1,376,443 NOK in the period ending 2023-12-31 to 1,444,629 NOK for the period ending 2024-12-31, and further increased to 1,601,430 NOK for the period ending 2025-12-31.",
+     "fact_ids": [
+      "f21",
+      "f28",
+      "f35",
+      "d1",
+      "d2"
+     ]
+    },
+    {
+     "section": "financial_trend",
+     "kind": "derived_comparison",
+     "text": "Operating results changed from -87,300 NOK for the period ending 2023-12-31 to -74,525 NOK for the period ending 2024-12-31, and then changed to -169,022 NOK for the period ending 2025-12-31.",
+     "fact_ids": [
+      "f22",
+      "f29",
+      "f36",
+      "d3",
+      "d4"
+     ]
+    },
+    {
+     "section": "leadership",
+     "kind": "verified_fact",
+     "text": "Silje Åstum Hildrum serves as the chief executive officer and board deputy member, while Kris Ingar Åstum Hildrum is the board chair.",
+     "fact_ids": [
+      "f13",
+      "f14",
+      "f15"
+     ]
+    }
+   ],
    "rejected": []
   }
  ],
@@ -135,8 +582,8 @@
    "synthetic": false,
    "org": "933217469",
    "company": "AMANDUS INVESTMENT AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [
     {
      "event_id": "e1",
@@ -198,13 +645,49 @@
      }
     }
    ],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "accepted": [],
+   "input_tokens": 611,
+   "output_tokens": 248,
+   "latency_ms": 18001,
+   "accepted": [
+    {
+     "event_ids": [
+      "e1"
+     ],
+     "kind": "updated",
+     "text": "For event e1, the role_count changed from 3 to 2."
+    },
+    {
+     "event_ids": [
+      "e2"
+     ],
+     "kind": "new",
+     "text": "For event e2, a new accountant was added: GERHARD & SØNN AS with organisation number 913107209."
+    },
+    {
+     "event_ids": [
+      "e3"
+     ],
+     "kind": "updated",
+     "text": "For event e3, roles_last_changed was updated from 2026-10-16 to 2026-10-19."
+    },
+    {
+     "event_ids": [
+      "e4"
+     ],
+     "kind": "retracted",
+     "text": "For event e4, the accountant GERHARD & SØNN AS with organisation number 913107209 was retracted."
+    },
+    {
+     "event_ids": [
+      "e5"
+     ],
+     "kind": "retracted",
+     "text": "For event e5, the accountant SYSTEM REGNSKAP AS with organisation number 915075223 was retracted."
+    }
+   ],
    "rejected": [],
    "events": 5,
-   "events_explained": 0,
+   "events_explained": 5,
    "fabricated": 0
   },
   {
@@ -212,12 +695,12 @@
    "synthetic": false,
    "org": "817510302",
    "company": "COGNIXAR INVEST AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
+   "input_tokens": 203,
+   "output_tokens": 11,
+   "latency_ms": 10709,
    "accepted": [],
    "rejected": [],
    "events": 0,
@@ -229,12 +712,12 @@
    "synthetic": false,
    "org": "820776372",
    "company": "THINK AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
+   "input_tokens": 200,
+   "output_tokens": 11,
+   "latency_ms": 11510,
    "accepted": [],
    "rejected": [],
    "events": 0,
@@ -246,12 +729,12 @@
    "synthetic": false,
    "org": "822156002",
    "company": "KVERNELAND NÆRINGSPARK IX-A AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
+   "input_tokens": 210,
+   "output_tokens": 7,
+   "latency_ms": 27102,
    "accepted": [],
    "rejected": [],
    "events": 0,
@@ -263,8 +746,8 @@
    "synthetic": false,
    "org": "929336038",
    "company": "SJØLOFTET AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [
     {
      "event_id": "e1",
@@ -278,11 +761,20 @@
      "current_attempt_status": "source_error"
     }
    ],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
+   "input_tokens": 292,
+   "output_tokens": 80,
+   "latency_ms": 18975,
    "accepted": [],
-   "rejected": [],
+   "rejected": [
+    {
+     "event_ids": [
+      "e1"
+     ],
+     "kind": "source_outage",
+     "text": "For event e1, a source outage occurred with site_research on 2026-11-02T01:00:15.312010Z, retaining careers_page and social_profile.",
+     "reason": "name_not_in_cited_facts"
+    }
+   ],
    "events": 1,
    "events_explained": 0,
    "fabricated": 0
@@ -292,8 +784,8 @@
    "synthetic": false,
    "org": "980807568",
    "company": "STIFTELSEN SKANSEHYTTA ASKIM",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [
     {
      "event_id": "e1",
@@ -307,11 +799,20 @@
      "current_attempt_status": "blocked"
     }
    ],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
+   "input_tokens": 294,
+   "output_tokens": 89,
+   "latency_ms": 21313,
    "accepted": [],
-   "rejected": [],
+   "rejected": [
+    {
+     "event_ids": [
+      "e1"
+     ],
+     "kind": "source_outage",
+     "text": "For event e1, a source outage occurred on 2026-11-02T01:00:19.526250Z with the current attempt status as blocked, while the fields official_website and website_description were retained for website.",
+     "reason": "name_not_in_cited_facts"
+    }
+   ],
    "events": 1,
    "events_explained": 0,
    "fabricated": 0
@@ -321,8 +822,8 @@
    "synthetic": false,
    "org": "911814684",
    "company": "AGENTA AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [
     {
      "event_id": "e1",
@@ -403,13 +904,56 @@
      }
     }
    ],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "accepted": [],
+   "input_tokens": 1296,
+   "output_tokens": 560,
+   "latency_ms": 20690,
+   "accepted": [
+    {
+     "event_ids": [
+      "e1"
+     ],
+     "kind": "retracted",
+     "text": "The news item with the title \"Er det på tide med ny hjemmeside? 7 tegn på at nettsiden din koster deg kunder\" and publication date 2026-10-24 was retracted."
+    },
+    {
+     "event_ids": [
+      "e2"
+     ],
+     "kind": "retracted",
+     "text": "The news item with the title \"Bli funnet i AI-søk: Slik gjør du nettsiden klar for Google AI-oversikter og svar fra chatboter\" and publication date 2026-10-21 was retracted."
+    },
+    {
+     "event_ids": [
+      "e3"
+     ],
+     "kind": "retracted",
+     "text": "The news item with the title \"Intranett for små og mellomstore bedrifter: Slik samler du dokumenter, rutiner og kommunikasjon ett sted\" and publication date 2026-10-18 was retracted."
+    },
+    {
+     "event_ids": [
+      "e4"
+     ],
+     "kind": "retracted",
+     "text": "The news item with the title \"Mobilapp for håndverksbedrifter: Timeføring, avvik og bilder fra byggeplass i lomma\" and publication date 2026-10-15 was retracted."
+    },
+    {
+     "event_ids": [
+      "e5"
+     ],
+     "kind": "retracted",
+     "text": "The news item with the title \"Proffgruppen og nettside: Slik får byggefirmaer i Proffgruppen en profesjonell nettside som gir henvendelser\" and publication date 2026-10-12 was retracted."
+    },
+    {
+     "event_ids": [
+      "e6"
+     ],
+     "kind": "retracted",
+     "text": "The news item with the title \"SEO-verktøy for norske bedrifter: Slik velger du riktig programvare uten å drukne i funksjoner\" and publication date 2026-10-09 was retracted."
+    }
+   ],
    "rejected": [],
    "events": 6,
-   "events_explained": 0,
+   "events_explained": 6,
    "fabricated": 0
   },
   {
@@ -417,8 +961,8 @@
    "synthetic": false,
    "org": "993973645",
    "company": "FRAM MARINE AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [
     {
      "event_id": "e1",
@@ -473,11 +1017,44 @@
      }
     }
    ],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
+   "input_tokens": 879,
+   "output_tokens": 346,
+   "latency_ms": 22837,
    "accepted": [],
-   "rejected": [],
+   "rejected": [
+    {
+     "event_ids": [
+      "e1"
+     ],
+     "kind": "retracted",
+     "text": "Event e1 retracted the news item titled \"Supporting Success with Project Reviews\" published on 2024-12-10T14:08:38Z.",
+     "reason": "name_not_in_cited_facts"
+    },
+    {
+     "event_ids": [
+      "e2"
+     ],
+     "kind": "retracted",
+     "text": "Event e2 retracted the news item titled \"Your next challenge awaits with Fram Marine – Apply now\" published on 2024-09-18T23:40:37Z.",
+     "reason": "name_not_in_cited_facts"
+    },
+    {
+     "event_ids": [
+      "e3"
+     ],
+     "kind": "retracted",
+     "text": "Event e3 retracted the news item titled \"Ship Efficiency through technology\" published on 2023-12-19T12:00:00Z.",
+     "reason": "name_not_in_cited_facts"
+    },
+    {
+     "event_ids": [
+      "e4"
+     ],
+     "kind": "retracted",
+     "text": "Event e4 retracted the news item titled \"Looking for new challenges – we’re hiring\" published on 2022-02-11T12:00:00Z.",
+     "reason": "name_not_in_cited_facts"
+    }
+   ],
    "events": 4,
    "events_explained": 0,
    "fabricated": 0
@@ -487,8 +1064,8 @@
    "synthetic": true,
    "org": "988185701",
    "company": "ROSIM AS",
-   "ok": false,
-   "error": "cache_miss_offline",
+   "ok": true,
+   "error": null,
    "events_input": [
     {
      "event_id": "e1",
@@ -503,13 +1080,21 @@
      "currency": "NOK"
     }
    ],
-   "input_tokens": null,
-   "output_tokens": null,
-   "latency_ms": null,
-   "accepted": [],
+   "input_tokens": 294,
+   "output_tokens": 88,
+   "latency_ms": 18086,
+   "accepted": [
+    {
+     "event_ids": [
+      "e1"
+     ],
+     "kind": "corrected",
+     "text": "For the period from 2025-01-01 to 2025-12-31, the revenue for ROSIM AS was corrected from 26065153.0 NOK to 26190153.0 NOK."
+    }
+   ],
    "rejected": [],
    "events": 1,
-   "events_explained": 0,
+   "events_explained": 1,
    "fabricated": 0
   }
  ]

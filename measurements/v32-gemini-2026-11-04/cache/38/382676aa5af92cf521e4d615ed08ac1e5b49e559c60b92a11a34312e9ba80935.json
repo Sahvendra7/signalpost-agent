@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nye kriser: Med et smell eller på kattepoter? 8. mai Skrevet av Jan Dietz",
+   "Koronakrisen byr på mange lærdommer - uventede, ubehagelige og til og med oppløftende."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Dietz Foresight",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-05-08",
+  "date_evidence": "8. mai",
+  "decision": "withhold",
+  "reason": "The blog post provides general commentary, thought leadership and reflections on crisis preparedness rather than reporting a specific business development or event about the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 49208,
+ "input_tokens": 2919,
+ "output_tokens": 247,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:54:30.141249+00:00"
+}

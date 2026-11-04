@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "10 gode tips til en bedre CV"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "TEMP TEAM AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an educational article providing tips for writing a CV rather than reporting a specific development or event about the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 95224,
+ "input_tokens": 1515,
+ "output_tokens": 177,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:56:27.537969+00:00"
+}

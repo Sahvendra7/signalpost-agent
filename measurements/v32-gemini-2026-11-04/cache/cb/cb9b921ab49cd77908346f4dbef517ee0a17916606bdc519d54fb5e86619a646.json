@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nå lanserer vi Auto-invest, funksjonen som gjør at kapitalen din aldri trenger å stå stille.",
+   "Nyhet fra Kameo Investeringsrobot for eiendomslån Auto-invest er Kameos investeringsrobot."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kameo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The text announces the launch of a new investment robot feature called Auto-invest by Kameo.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 67200,
+ "input_tokens": 3278,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:15.508008+00:00"
+}

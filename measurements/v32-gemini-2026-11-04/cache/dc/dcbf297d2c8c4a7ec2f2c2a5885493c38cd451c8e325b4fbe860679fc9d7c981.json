@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Høyrisiko å blande arbeid og fritid på bedriftens IT-utstyr",
+   "Provendo leverer ulike PC pakker til ulike behov."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article provides general security advice and tips regarding mixing work and personal IT equipment, functioning as educational or promotional content rather than reporting a specific event or development about the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 41169,
+ "input_tokens": 1958,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:01:04.019897+00:00"
+}

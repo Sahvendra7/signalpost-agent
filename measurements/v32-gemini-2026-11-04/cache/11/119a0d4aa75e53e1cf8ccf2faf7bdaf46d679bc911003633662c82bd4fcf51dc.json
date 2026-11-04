@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Scenarier 6. apr. Skrevet av Jan Dietz Hvis vi vet hvordan det går, trenger vi ikke scenarier."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Dietz Foresight",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-04-06",
+  "date_evidence": "6. apr.",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post discussing scenario methodology and how to deal with uncertainty, rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 105601,
+ "input_tokens": 1850,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:56:25.522375+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "28. september 2026 Ny lagervare!",
+   "21. august 2026 Yrkes-NM i Møbelsnekkerfaget"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Oslofinér",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The source text contains unrelated content about products and events for another entity such as Oslofinér, not the target company PROBA AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 66313,
+ "input_tokens": 1669,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:57:38.672905+00:00"
+}

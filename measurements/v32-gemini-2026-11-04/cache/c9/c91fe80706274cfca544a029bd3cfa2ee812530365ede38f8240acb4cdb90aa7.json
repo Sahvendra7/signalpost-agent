@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "uncertain",
+  "subject_entity": "Proba",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "uncertain",
+  "reason": "The title mentions a report from Proba, but the provided source text does not contain the article content or any details about the report, making it impossible to confirm if it is a genuine company event.",
+  "evidence_quotes": [
+   "Ny rapport fra Deloitte og Proba om etterlevelse av barnehageloven"
+  ],
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 7542,
+ "input_tokens": 1629,
+ "output_tokens": 196,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:00:41.113701+00:00"
+}

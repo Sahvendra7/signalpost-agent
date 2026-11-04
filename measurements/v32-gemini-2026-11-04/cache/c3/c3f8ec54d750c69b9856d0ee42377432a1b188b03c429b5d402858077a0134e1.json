@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Logscom AB",
+   "Vi märker ditt virke!"
+  ],
+  "profile_owner_relation": "foreign_namesake",
+  "owner_as_evidenced": "Logscom AB",
+  "decision": "withhold",
+  "reason": "The website clearly states the operator is the Swedish company Logscom AB, whereas the target entity is the Norwegian company LOGSCOM AS (organisasjonsnummer 830872752). The Facebook profile linked from the site belongs to this Swedish entity rather than the Norwegian legal entity.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24563,
+ "input_tokens": 1448,
+ "output_tokens": 147,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:55:55.272231+00:00"
+}

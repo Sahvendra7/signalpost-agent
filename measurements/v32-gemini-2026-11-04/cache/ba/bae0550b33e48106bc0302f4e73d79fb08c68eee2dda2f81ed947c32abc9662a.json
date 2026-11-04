@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Interkommunalt arkiv i Hordaland IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a personal reflection and testimonial written by a student about their internship experience at the company, which does not constitute a formal company development or news event.",
+  "evidence_quotes": [
+   "I år var jeg en av de heldige studentene som fikk delta – og min praksisplass var ved Interkommunalt arkiv Hordaland (IKA Hordaland).",
+   "Praksisopplegget som jeg har fått ta del i har vært veldig lærerikt og utfyllende."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2858,
+ "input_tokens": 2848,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:02:06.429352+00:00"
+}

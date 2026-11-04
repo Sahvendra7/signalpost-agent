@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-04-22",
+  "date_evidence": "22. april 2022",
+  "decision": "publish",
+  "reason": "The article is a weekly newsletter from the school detailing school activities, upcoming events, and operational information, which constitutes genuine news about the school's activities.",
+  "evidence_quotes": [
+   "Fredagsbladet nr 30 – 22.04.22 – Steinerskolen i Ås",
+   "22. april 2022",
+   "Viktige datoer Onsdag 04.05 . Foreldremøte for foreldre til de elevene som blir høstens 1.klasse.",
+   "Lørdag 07.05. Vårdugnad på skolen fra 10.00 -16.00."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5197,
+ "input_tokens": 2866,
+ "output_tokens": 319,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T19:01:33.768832+00:00"
+}

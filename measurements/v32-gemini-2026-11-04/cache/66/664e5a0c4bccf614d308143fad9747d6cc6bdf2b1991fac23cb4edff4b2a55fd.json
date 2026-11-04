@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [],
+  "profile_owner_relation": "group_or_brand_account",
+  "owner_as_evidenced": "Alpha Solutions (global/group brand)",
+  "decision": "withhold",
+  "reason": "The YouTube profile uses the generic handle @alpha-solutions representing the global brand rather than the specific Norwegian legal entity ALPHA SOLUTIONS NORGE AS.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 29499,
+ "input_tokens": 1393,
+ "output_tokens": 102,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T18:57:04.848535+00:00"
+}

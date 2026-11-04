@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Er du Vårtuns nye rektor?",
+   "Vi er på jakt etter nye ringevikarer for dette barnehageår Vi søker en dyktig, fleksibel og omsorgsfull vikar til vår fine barnehage"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Vårtun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a job advertisement seeking substitutes ('ringevikarer') and asking 'Er du Vårtuns nye rektor?', which is not a publishable company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 102979,
+ "input_tokens": 1666,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:56:46.144649+00:00"
+}

@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hjem - Sola Hundesenter",
+   "Velkommen til Sola Hundesenter Et sted for trygghet, utvikling og ekte hundeglede – for både hund og eier."
+  ],
+  "profile_owner_relation": "target_company",
+  "owner_as_evidenced": "Sola Hundesenter AS",
+  "decision": "attribute",
+  "reason": "The Facebook profile is directly linked from the verified official website of Sola Hundesenter AS, and the website prominently features the exact name and services matching the target legal entity.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12246,
+ "input_tokens": 1469,
+ "output_tokens": 151,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:57:58.309292+00:00"
+}

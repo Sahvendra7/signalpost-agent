@@ -1,0 +1,23 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [],
+  "profile_owner_relation": "unclear",
+  "owner_as_evidenced": "",
+  "decision": "uncertain",
+  "reason": "The page text was not captured, and there is insufficient text evidence to verify whether the Instagram profile directly belongs to MEGLERHUSET RELE HAUGESUND AS or another entity within the same brand.",
+  "uncertainty": "high"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 15907,
+ "input_tokens": 476,
+ "output_tokens": 102,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:57:20.757077+00:00"
+}

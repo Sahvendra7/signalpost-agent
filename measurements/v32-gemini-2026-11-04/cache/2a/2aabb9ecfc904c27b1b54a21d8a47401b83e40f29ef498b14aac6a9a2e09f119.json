@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Instagram logscom_ab • Följ",
+   "Logscom AB"
+  ],
+  "profile_owner_relation": "foreign_namesake",
+  "owner_as_evidenced": "Logscom AB (Swedish entity)",
+  "decision": "withhold",
+  "reason": "The metadata indicates the target entity is LOGSCOM AS, a Norwegian company (organisation number 830872752), while the Instagram handle logscom_ab and website content clearly refer to 'Logscom AB', a Swedish entity located in Åsele, Sweden.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 20408,
+ "input_tokens": 1448,
+ "output_tokens": 160,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:56:15.703535+00:00"
+}

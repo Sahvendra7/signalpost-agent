@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nye kriser: Med et smell eller på kattepoter?",
+   "Corona, svarte åler og scenarier",
+   "Regional foresight fornyer strategi og planlegging",
+   "Klyngeutvikling: Ikke vent på at det skal skje!"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jan Dietz",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The content consists of articles written by Jan Dietz regarding general topics like crisis management, strategy, and foresight, which do not constitute news about Jarlsberg Hestesport AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 21132,
+ "input_tokens": 1672,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:55:12.682317+00:00"
+}

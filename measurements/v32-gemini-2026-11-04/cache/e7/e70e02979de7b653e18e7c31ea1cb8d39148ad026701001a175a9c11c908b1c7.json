@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Matsentralen Norge - Food Banks Norway",
+   "Matsentralene er et nettverk av åtte matsentraler som som hjelper mennesker"
+  ],
+  "profile_owner_relation": "group_or_brand_account",
+  "owner_as_evidenced": "Matsentralen Norge (umbrella/network organization)",
+  "decision": "withhold",
+  "reason": "The Facebook profile represents 'Matsentralen Norge', which is the national umbrella organization and network for the eight regional food banks, whereas the target entity is 'Matsentralen Øst', a specific regional legal entity within that network. Therefore, the profile belongs to a group/umbrella organization rather than the exact regional entity.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18991,
+ "input_tokens": 1486,
+ "output_tokens": 177,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:55:30.609515+00:00"
+}

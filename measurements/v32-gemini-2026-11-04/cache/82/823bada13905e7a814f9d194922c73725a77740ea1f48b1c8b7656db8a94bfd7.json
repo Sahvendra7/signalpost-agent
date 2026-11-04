@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Brannmur – beskyttelse i den digitale verden April 22, 2024",
+   "En av de mest kritiske forsvarsverkene for bedrifters digitale infrastruktur er brannmuren."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-04-22",
+  "date_evidence": "Brannmur – beskyttelse i den digitale verden April 22, 2024",
+  "decision": "withhold",
+  "reason": "The article is an educational explainer about firewalls and digital security rather than a news report on a specific event or development at the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 90219,
+ "input_tokens": 3019,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:56:50.333473+00:00"
+}

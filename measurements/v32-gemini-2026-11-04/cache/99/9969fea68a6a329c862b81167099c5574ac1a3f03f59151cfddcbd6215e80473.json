@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "10 år på Trøndersk Matfestival",
+   "Og i år er det faktisk et lite jubileum: Det er tiende gang vi deltar på festivalen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Jentene på tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "anniversary",
+  "publication_date": "2026-08-04",
+  "date_evidence": "august 4, 2026",
+  "decision": "publish",
+  "reason": "The article reports on the company's 10-year anniversary and continuous participation at the Trøndersk Matfestival, detailing their history and milestones.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 66762,
+ "input_tokens": 2723,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:58:17.397371+00:00"
+}

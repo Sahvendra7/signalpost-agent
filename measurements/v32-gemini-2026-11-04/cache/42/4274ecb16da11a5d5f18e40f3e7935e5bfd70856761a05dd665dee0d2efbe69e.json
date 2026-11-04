@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Frankeringsrekvisita.no tilbyr et bredt utvalg av Brother transportetiketter, som dekker forskjellige behov.",
+   "I vår nettbutikk finner du blant annet: DK-22243 EDI / Transportetiketter til Brother etikettskriver"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "FRANKERINGSREKVISITA NUF",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The blog post promotes products and labels available in the company's online store without reporting a specific company development, contract, or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 43784,
+ "input_tokens": 2581,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:53:48.236983+00:00"
+}
