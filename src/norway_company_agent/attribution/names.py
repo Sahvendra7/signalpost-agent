@@ -10,6 +10,11 @@ from typing import Any
 from ..identity import _tokens
 
 LEGAL_FORMS = {"as", "asa", "sa", "da", "ans", "enk", "nuf", "iks", "ba", "bbl", "brl", "sti", "ks", "fli", "ab", "gmbh", "ltd", "inc", "aps", "oy", "ag", "llc", "plc"}
+# Legal forms of other countries' company registers. Written after this company's name by a company whose own legal
+# name does not carry it, the form names a separately registered namesake ("logscom_ab" next to LOGSCOM AS: the
+# Swedish Logscom AB), not this company. A Norwegian branch of a foreign company (NUF) carries the form in its own
+# legal name ("KAMEO INVESTMENT PLATFORM AB NUF"), so for it the form is its own.
+FOREIGN_FORMS = {"ab", "gmbh", "ltd", "limited", "inc", "aps", "oy", "oyj", "ag", "llc", "plc", "bv"}
 # Words a handle may add to the legal name without naming another entity.
 NEUTRAL = {"norge", "norway", "no", "nor", "norwegian", "official", "offisiell", "hq", "hovedkontor", "the", "www", "page", "side", "info"}
 # Words that turn the legal name into another entity's name: a group, holding, other country or business line.
@@ -70,6 +75,12 @@ class LegalName:
         first = fold(self.name).split()[:1]
         # "AS JACO", "AS SOLREGN": a leading legal form is part of how the company writes its name ("asjaco", "as-solregn")
         self.leading_form = first[0] if first and first[0] in LEGAL_FORMS else ""
+        # The legal forms written in the company's own name ("as"; "ab" and "nuf" for "… AB NUF")
+        self.own_forms = {word for word in letters if word in LEGAL_FORMS or word in FOREIGN_FORMS}
+
+    def foreign_form(self, word: str) -> bool:
+        """`word` is another country's legal form that this company's own legal name does not carry."""
+        return word in FOREIGN_FORMS and word not in self.own_forms
 
     @classmethod
     def from_profile(cls, profile: dict[str, Any]) -> LegalName:
@@ -196,8 +207,12 @@ def handle_relation(legal: LegalName, platform: str, url: str) -> Relation:
         return Relation("UNRELATED", handle)
     # A handle spelling a legal name ("tyin-filefjell-as", "bdt-viken-revisjon-as"): the name before the legal form must
     # be this company's (optionally with neutral affixes); any other name is another registered or registrable entity.
-    if len(words) >= 2 and words[-1] in LEGAL_FORMS:
+    if len(words) >= 2 and words[-1] in LEGAL_FORMS | FOREIGN_FORMS:
         named = "".join(word for word in words[:-1] if word not in ("og", "and"))
+        if legal.foreign_form(words[-1]):
+            # V3.1: "logscom_ab" for LOGSCOM AS spells the name of a namesake registered under another country's legal
+            # form (the Swedish Logscom AB), whichever name precedes it.
+            return Relation("OTHER_ENTITY", handle, f"{named} {words[-1]}")
         if legal.leading_form and words[0] == legal.leading_form and len(words) >= 3:
             named = "".join(word for word in words[1:-1] if word not in ("og", "and"))
         for prefix in PREFIXES:
@@ -225,6 +240,8 @@ def _relation(legal: LegalName, handle: str) -> Relation:
         if not handle.startswith(base):
             continue
         rest = handle[len(base):]
+        if rest and legal.foreign_form(rest):
+            return Relation("OTHER_ENTITY", handle, rest)  # "logscomab": a foreign-form namesake (see FOREIGN_FORMS)
         if not rest or (exact_kind == "EXACT" and rest in LEGAL_FORMS):
             return Relation(exact_kind, handle, rest)
         remaining = legal.strip_neutral(rest)

@@ -1,0 +1,315 @@
+{
+ "organisation_number": "921147325",
+ "name": "ALPHA SOLUTIONS NORGE AS",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.alpha-solutions.com/no",
+  "retrieved_at": "2026-11-02T00:25:35.069135Z",
+  "value": {
+   "requested_url": "https://www.alpha-solutions.no/",
+   "final_url": "https://www.alpha-solutions.com/no",
+   "registered_domain": "alpha-solutions.com",
+   "title": "Alpha Solutions - Digital utviklingspartner",
+   "description": "Din samarbeidspartner til e-handel, portaler, AI-implementering og digital forretningsutvikling.",
+   "main_text_excerpt": "Få innsikt på under en time. Få en demo på AI-assistenten som opererer og svarer på innholdet ditt. Sikkert, transparent og på dine premisser.\nHelhetlig ansvar for komplekse systemlandskap\nDin samarbeidspartner til utvikling av e-handel, AI-implementering og digital forretningsutvikling.\nVi bygger digitale løsninger for deres virksomhet, slik at dere kan lykkes med deres forretningsmål.\nVed å lytte til deres behov og ambisjoner, utfordre og bygge videre på ideer og gi deg objektive råd, kan vi skape mest mulig verdi på både kort og lang sikt. Vi bygger ikke bare det dere ber oss om, vi bygger det dere trenger for å lykkes.\nHos Alpha Solutions utvikler vi løsninger som løser dagens utfordringer og kan støtte morgendagens ambisjoner. Resultatet er digitale løsninger som er robuste, skalerbare og designet for å styrke din virksomhet i praksis.\nSiste nyheter og innsikter\nFå din egen AI-assistent på en time\nTeknologier\nVåre teknologipartnere\nVi designer, utvikler og drifter basert på etablerte plattformer, og er plattformuavhengige. Det gir oss et unikt objektivt utgangspunkt for å vurdere hvordan teknologien best kan støtte forretningsmålene deres.",
+   "identity_text_excerpt": "+47 900 54 940 oslo@alpha-solutions.com KØBENHAVN Titangade 9-13 DK-2200 København N Danmark NEW JERSEY 221 River St., 9th Fl Hoboken, NJ 07030 USA OSLO Drammensveien 130, C19 0277 Oslo Norge LinkedIn YouTube InteraktAI Demo Om oss Personvern Cookies",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "@type": "Organization",
+     "@id": "https://alpha-solutions.com/#brand",
+     "name": "Alpha Solutions",
+     "url": "https://alpha-solutions.com",
+     "description": "Alpha Solutions is a digital commerce consultancy and development house that designs, builds, and integrates composable commerce, AI, search, PIM, and content solutions for B2B and B2C businesses. With offices in Denmark, Norway, and the United States, Alpha partners with platforms including commercetools, Sitecore, Optimizely, Salesforce, Adobe Commerce, Shopify, and Storyblok to deliver customized technical implementations.",
+     "knowsAbout": [
+      "Digital commerce",
+      "Composable commerce",
+      "Headless commerce",
+      "B2B e-commerce",
+      "B2C e-commerce",
+      "Agentic commerce",
+      "AI architecture",
+      "AI-powered search",
+      "Product Information Management (PIM)",
+      "Content Management Systems (CMS)",
+      "Customer Data Platforms (CDP)",
+      "Digital Experience Platforms (DXP)",
+      "Customer portals",
+      "System integration",
+      "commercetools",
+      "Salesforce",
+      "Sitecore",
+      "Optimizely",
+      "Adobe Commerce",
+      "Shopify",
+      "Storyblok",
+      "Medusa",
+      "Umbraco",
+      "DynamicWeb",
+      "Ibexa",
+      "Squiz",
+      "Contentstack",
+      "Hygraph",
+      "Inriver",
+      "Struct PIM",
+      "Raptor CDP",
+      "Relewise",
+      "Microsoft Azure",
+      "Vercel",
+      "Jitterbit",
+      "Uniform",
+      "Shopspray"
+     ],
+     "logo": {
+      "@type": "ImageObject",
+      "url": "https://a.storyblok.com/f/286550723629127/300x55/3bf657f02b/alpha-logo.svg",
+      "width": 300,
+      "height": 55,
+      "caption": "Alpha Solutions logo"
+     },
+     "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "info@alpha-solutions.com",
+      "availableLanguage": [
+       "en",
+       "da",
+       "no"
+      ]
+     },
+     "sameAs": [
+      "https://www.linkedin.com/company/alpha-solutions",
+      "https://www.linkedin.com/company/alpha-solutions-usa",
+      "https://www.linkedin.com/company/alpha-solutions-norway",
+      "https://www.youtube.com/@alpha-solutions"
+     ],
+     "subOrganization": [
+      {
+       "@id": "https://alpha-solutions.com/#org-us"
+      },
+      {
+       "@id": "https://alpha-solutions.com/#org-dk"
+      },
+      {
+       "@id": "https://alpha-solutions.com/#org-no"
+      }
+     ]
+    },
+    {
+     "@type": "LocalBusiness",
+     "@id": "https://alpha-solutions.com/#office-us-hoboken",
+     "name": "Alpha Solutions — New Jersey",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "221 River Street, Floor 9",
+      "addressLocality": "Hoboken",
+      "addressRegion": "NJ",
+      "postalCode": "07030",
+      "addressCountry": "US"
+     },
+     "telephone": "+1-347-338-2220",
+     "email": "ny@alpha-solutions.com"
+    },
+    {
+     "@type": "LocalBusiness",
+     "@id": "https://alpha-solutions.com/#office-us-dallas",
+     "name": "Alpha Solutions — Dallas",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "17250 Dallas Parkway, Suite 108",
+      "addressLocality": "Dallas",
+      "addressRegion": "TX",
+      "postalCode": "75248",
+      "addressCountry": "US"
+     },
+     "telephone": "+1-347-338-2220",
+     "email": "dallas@alpha-solutions.com"
+    },
+    {
+     "@type": "LocalBusiness",
+     "@id": "https://alpha-solutions.com/#office-us-la",
+     "name": "Alpha Solutions — Los Angeles",
+     "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "15303 Ventura Boulevard, Suite 900",
+      "addressLocality": "Sherman Oaks",
+      "addressRegion": "CA",
+      "postalCode": "91403",
+      "addressCountry": "US"
+     },
+     "telephone": "+1-347-338-2220",
+     "email": "la@alpha-solutions.com"
+    }
+   ],
+   "content_sha256": "9651cf1f86db2333af7e27a2667cea8174655803ea5074e217b323781d84a4f9",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.alpha-solutions.com/no",
+     "title": "Alpha Solutions - Digital utviklingspartner",
+     "main_text_excerpt": "Få innsikt på under en time. Få en demo på AI-assistenten som opererer og svarer på innholdet ditt. Sikkert, transparent og på dine premisser.\nHelhetlig ansvar for komplekse systemlandskap\nDin samarbeidspartner til utvikling av e-handel, AI-implementering og digital forretningsutvikling.\nVi bygger digitale løsninger for deres virksomhet, slik at dere kan lykkes med deres forretningsmål.\nVed å lytte til deres behov og ambisjoner, utfordre og bygge videre på ideer og gi deg objektive råd, kan vi skape mest mulig verdi på både kort og lang sikt. Vi bygger ikke bare det dere ber oss om, vi bygger det dere trenger for å lykkes.\nHos Alpha Solutions utvikler vi løsninger som løser dagens utfordringer og kan støtte morgendagens ambisjoner. Resultatet er digitale løsninger som er robuste, skalerbare og designet for å styrke din virksomhet i praksis.\nSiste nyheter og innsikter\nFå din egen AI-assistent på en time\nTeknologier\nVåre teknologipartnere\nVi designer, utvikler og drifter basert på etablerte plattformer, og er plattformuavhengige. Det gir oss et unikt objektivt utgangspunkt for å vurdere hvordan teknologien best kan støtte forretningsmålene deres.",
+     "content_sha256": "9651cf1f86db2333af7e27a2667cea8174655803ea5074e217b323781d84a4f9"
+    },
+    {
+     "url": "https://www.alpha-solutions.com/no/om-oss",
+     "title": "Alpha Solutions | Digital konsulenthus innenfor e-commerce & AI",
+     "main_text_excerpt": "Alpha Solutions designer, utvikler og drifter netthandelsløsninger for nordiske bedrifter basert på etablerte plattformer. Mer enn 15 års erfaring i faget, på tvers av B2C og B2B, er vi en kompetent, pålitelig og objektiv partner for våre kunder både IT teknisk og forretningstrategisk.\nEn av de tingene som skiller Alpha Solutions fra mange andre aktører på markedet er spesialiseringen på netthandel og tilknyttede løsninger. Dette fokuset gjør at vi har kunnet opparbeide oss en unik fagkompetanse ikke bare på IT implementering og integrasjon, men også i dybdeforståelsen av forretningsprosessene som er kritiske for å lykkes med netthandel over tid.\nVi er en av få aktører i Norden som kan levere komplette løsninger, fra front-end til back-end, inkludert selve netthandelsplattformen og alle integrasjoner til eksempelvis ERP, 3PL og betalingsløsninger, samt implementering av PIM/DAM, OMS, CMS, CRM, POS mv.\nVårt utgangspunkt er å hjelpe deg som kunde til å velge de teknologiplattformene som er best tilpasset din virksomhets behov, ambisjoner og budsjett. Vi står helt objektive og plattformuavhengige, og leverer alt fra rimelige SMB løsninger til store konsernløsninger.\nMed litt over 120 ansatte (de fleste er utviklere) er vi store nok til å kunne levere større og internasjonale prosjekter, men samtidig små nok til at hver kunde er viktig for oss. Med Alpha Solutions som partner får du trygghet på at tingene blir gjort riktig første gang, og du får en proaktiv medspiller som kan rådgi, gjennomføre og ta ansvar.\nTenker du på å bygge en ny nettbutikk eller videreutvikle en løsning du har fra før? Eller kanskje ser du etter en ny IT partner for din netthandelsvirksomhet? Kontakt oss for en uforpliktende prat.",
+     "identity_text_excerpt": "+47 900 54 940 oslo@alpha-solutions.com KØBENHAVN Titangade 9-13 DK-2200 København N Danmark NEW JERSEY 221 River St., 9th Fl Hoboken, NJ 07030 USA OSLO Drammensveien 130, C19 0277 Oslo Norge LinkedIn YouTube InteraktAI Demo Om oss Personvern Cookies",
+     "content_sha256": "67b37233c6822d38bb46d59412adf2b05013d6c0465b864a85804cb612b17011"
+    },
+    {
+     "url": "https://www.alpha-solutions.com/no/kontakt",
+     "title": "Kontakt oss - Alpha Solutions",
+     "main_text_excerpt": "Hva jobber du med?\nHar du en utfordring du vil ha løst?\nEller er du bare nysgjerrig på hvordan vi kan hjelpe eller jobbe sammen?\nFyll ut skjemaet, så kommer vi raskt tilbake.\nVi tar gjerne en uforpliktende dialog om din situasjon og gir en ærlig vurdering av hvor vi kan skape verdi.\nEnten du trenger hjelp til å forbedre ditt eksisterende oppsett eller søker å utvikle noe nytt, er vi klare.\nJo mer kontekst du gir om din bedrift, dine mål og dine utfordringer, jo bedre kan vi forberede oss til dialogen.\nKort sagt:\nFortell oss litt om din bedrift og ditt behov – så tar vi det derfra.\nVi kommer tilbake så raskt som mulig og tar gjerne en innledende prat om mulighetene.",
+     "identity_text_excerpt": "+47 900 54 940 oslo@alpha-solutions.com KØBENHAVN Titangade 9-13 DK-2200 København N Danmark NEW JERSEY 221 River St., 9th Fl Hoboken, NJ 07030 USA OSLO Drammensveien 130, C19 0277 Oslo Norge LinkedIn YouTube InteraktAI Demo Om oss Personvern Cookies",
+     "content_sha256": "9fa3537a6fe4214dc6fe3b397c56272f271845b0056ae27bf6c246cf8e92f5c2"
+    },
+    {
+     "url": "https://www.alpha-solutions.com/no/tjenester/data-management",
+     "title": "Data Management og strategi til CRM, CDP og marketing automation",
+     "main_text_excerpt": "Vi implementerer og integrerer CRM- og kundeserviceplattformer som gir bedre kundeinnsikt, kundeopplevelser og lønnsomhet.\nVi implementerer og bistår i disiplinene som er grunnlaget for AI-aktivering, personalisering, salgsoptimalisering og skalerbare kundeopplevelser.\nHva kan vi hjelpe med?\nVi integrerer systemer og orkestrerer data, så vi er klare til å automatisere oppgaver som løfter salget og markedsføringen til nye nivåer.",
+     "identity_text_excerpt": "+47 900 54 940 oslo@alpha-solutions.com KØBENHAVN Titangade 9-13 DK-2200 København N Danmark NEW JERSEY 221 River St., 9th Fl Hoboken, NJ 07030 USA OSLO Drammensveien 130, C19 0277 Oslo Norge LinkedIn YouTube InteraktAI Demo Om oss Personvern Cookies",
+     "content_sha256": "55bf37e73c0a90e26d10ed3af17714eb49ffaf17db895a2f45be7acc1a5b1665"
+    },
+    {
+     "url": "https://www.alpha-solutions.com/no/tjenester/ai/effektiviser-salgsteamet-med-ai",
+     "title": "Effektiviser salgsteamet med AI | Flere leads og høyere konvertering",
+     "main_text_excerpt": "I dagens konkurransepregede B2B-marked er hastighet og presisjon avgjørende. Mens konkurrentene bruker timer på manuell databehandling, kan AI-drevne løsninger gi deg et reelt konkurransefortrinn.\nHvorfor AI i salgsprosessen?\nDu kjenner det sikkert igjen: et salgsteam fullt av flinke folk – men bundet opp i en endeløs rekke manuelle oppgaver. Tilbudsforespørsler som må behandles, ordrer som skal tastes, data som må oppdateres på tvers av systemer. Alt dette stjeler tid fra det som faktisk skaper verdi: kunderelasjoner og strategisk salg.\nKunstig intelligens endrer spillereglene. Brukt strategisk kan AI ta over de rutinepregede oppgavene – samtidig som kvaliteten øker og feilmarginen krymper.",
+     "identity_text_excerpt": "+47 900 54 940 oslo@alpha-solutions.com KØBENHAVN Titangade 9-13 DK-2200 København N Danmark NEW JERSEY 221 River St., 9th Fl Hoboken, NJ 07030 USA OSLO Drammensveien 130, C19 0277 Oslo Norge LinkedIn YouTube InteraktAI Demo Om oss Personvern Cookies",
+     "content_sha256": "5b2b5e7af4f86b3eb5f681b9e62587f5325a83193faab24d9b2ba93112cf81ee"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "alpha",
+     "solutions",
+     "norge"
+    ],
+    "matched_tokens": [
+     "alpha",
+     "norge",
+     "solutions"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/alpha-solutions-norway"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@alpha-solutions"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/alpha-solutions-norway",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "alpha",
+      "solutions"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@alpha-solutions",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "alpha",
+      "solutions"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "9651cf1f86db2333af7e27a2667cea8174655803ea5074e217b323781d84a4f9",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/921147325": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "5cfd09fa4d1c98ce.json.gz",
+   "content_sha256": "5cfd09fa4d1c98ce8219ccc2abbf0d50ea71a3565587fb43291f2073a4ac42bd",
+   "retrieved_at": "2026-11-02T00:25:26.598575Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/921147325": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "209a5c07663da651.json.gz",
+   "content_sha256": "209a5c07663da651df288c5b1e15976b6815ee61438dd7462d6950dbbe538f8e",
+   "retrieved_at": "2026-11-02T00:25:27.271758Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/921147325/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "b4a02337ef1e2414.json.gz",
+   "content_sha256": "b4a02337ef1e241436a723469d4af5f2e9d05cfe9599b1615459c46189b69279",
+   "retrieved_at": "2026-11-02T00:25:29.320475Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/921147325": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-02T00:25:27.957824Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=921147325&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "1fda673982963b71.json.gz",
+   "content_sha256": "1fda673982963b718e2d38d2636acc0d91fac4b3abfc1bdc3a196ef2812f36d2",
+   "retrieved_at": "2026-11-02T00:25:28.637316Z"
+  },
+  "https://www.alpha-solutions.com/no": {
+   "kind": "site",
+   "status": 200,
+   "file": "9651cf1f86db2333.html.gz",
+   "content_sha256": "9651cf1f86db2333af7e27a2667cea8174655803ea5074e217b323781d84a4f9",
+   "retrieved_at": "2026-11-02T00:25:35.805854Z"
+  },
+  "https://www.alpha-solutions.com/no/kontakt": {
+   "kind": "site",
+   "status": 200,
+   "file": "9fa3537a6fe4214d.html.gz",
+   "content_sha256": "9fa3537a6fe4214dc6fe3b397c56272f271845b0056ae27bf6c246cf8e92f5c2",
+   "retrieved_at": "2026-11-02T00:25:36.167281Z"
+  },
+  "https://www.alpha-solutions.com/no/om-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "67b37233c6822d38.html.gz",
+   "content_sha256": "67b37233c6822d38bb46d59412adf2b05013d6c0465b864a85804cb612b17011",
+   "retrieved_at": "2026-11-02T00:25:36.476069Z"
+  },
+  "https://www.alpha-solutions.com/no/nyheter-artikler/vejen-til-den-ai-ready-eksportvirksomhed-datakvalitet-vejen-til-den-ai-ready-eksportvirksomhed-selvbetjening-how-to-become-ai-ready-export-company-data-quality": {
+   "kind": "site",
+   "status": 200,
+   "file": "c3fe91686800f062.html.gz",
+   "content_sha256": "c3fe91686800f062a94d990de50b4f0b1e41a9e3ecc6d0b22eb84393217b9756",
+   "retrieved_at": "2026-11-02T00:25:36.911026Z"
+  }
+ }
+}

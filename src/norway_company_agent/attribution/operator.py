@@ -6,8 +6,9 @@ Kinds, first match wins:
   section         a section of a larger organisation's domain (C300)
   self            the company's own organisation number is stated on a captured page
   other_entity    another organisation number is stated in an imprint, ours nowhere
-  group_or_brand  the site is a group's or a brand's: a redirect to another domain, a domain unrelated to the legal
-                  name with the name absent, a "BRAND + own town" name in a corporate group with the full name absent
+  group_or_brand  the site is a group's or a brand's: a site named after another registry group company, a site that
+                  names a foreign-form namesake and never the company (V3.1), a redirect to another domain, a domain
+                  unrelated to the legal name with the name absent, a "BRAND + own town" name in a corporate group with the full name absent
                   from the homepage, or sibling "BRAND + other place" names in the site's own taxonomy
   self            otherwise
 """
@@ -124,6 +125,25 @@ def registry_group_company_named_by(label: str, profile: dict[str, Any], legal: 
     return None
 
 
+def foreign_namesake_named(legal: LegalName, text: str) -> str | None:
+    """V3.1: the site writes this company's name followed by another country's legal form ("Logscom AB") and never with
+    the company's own form ("Logscom AS"). The written name is returned; None when the company's own form appears or no
+    foreign-form namesake is written. A Norwegian branch (NUF) carries the foreign form in its own name, so it never
+    matches (`LegalName.foreign_form`)."""
+    folded = fold(text)
+    namesake = None
+    for match in legal.phrase_re.finditer(folded):
+        following = re.match(r"[\s,.]*([a-z]+)", folded[match.end():match.end() + 16])
+        if not following:
+            continue
+        word = following.group(1)
+        if word in legal.own_forms:
+            return None
+        if namesake is None and legal.foreign_form(word):
+            namesake = f"{folded[match.start():match.end()]} {word}"
+    return namesake
+
+
 def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[tuple[str, str]], homepage_text: str = "",
                     website_value: dict[str, Any] | None = None, identity_class: str | None = None, shared_kind: str | None = None,
                     taxonomy: list[str] | None = None, legal: LegalName | None = None) -> SiteOperator:
@@ -165,6 +185,17 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
         return SiteOperator("other_entity", "other_org_number_on_site",
                             f"The website states organisation number {number}, not this company's ({org}); it is run by another company.",
                             tuple({"signal": "other_org_number_stated", "organisation_number": n, "span": s, "page_url": u} for n, s, u in others[:5]), number)
+    all_text = " ".join(text for _, text in page_texts)
+    namesake = foreign_namesake_named(legal, all_text)
+    if namesake:
+        # V3.1: LOGSCOM AS's registry website logscom.com is run by its Swedish parent ("Logscom AB, Blåviksvägen 11,
+        # SE-91931 Åsele"); the site states neither LOGSCOM AS nor its organisation number. A separately registered
+        # namesake under another country's legal form runs the site: profiles and stories under the shared name may be
+        # either company's, so only items naming this company are attributed to it.
+        return SiteOperator("group_or_brand", "site_of_a_foreign_namesake",
+                            f"The website names \"{namesake}\", a company with this company's name under another country's legal form, and never "
+                            "this company itself or its organisation number; profiles and stories under the shared name may be that company's.",
+                            ({"signal": "site_of_a_foreign_namesake", "named": namesake},))
     group: list[dict[str, Any]] = []
     value = website_value or {}
     requested, final = str(value.get("requested_url") or ""), str(value.get("final_url") or "")
@@ -173,7 +204,6 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
         # the company's Norwegian domain now redirects to an international domain (bartec-technor.no -> bartec.com): the
         # group's site. A move to another .no domain (stalheim.com -> stalheimhotel.no, hadeland.net -> hadeland.no) is not.
         group.append({"signal": "registry_website_redirects_to_other_domain", "detail": f"{requested} -> {final}"})
-    all_text = " ".join(text for _, text in page_texts)
     phrase_present = legal.phrase_in(all_text)
     label = _label(site_url)
     if label and not phrase_present and not legal.domain_related(label):

@@ -170,3 +170,42 @@ class SlugifiedLegalForm(unittest.TestCase):
         legal = LegalName("BOARD COMPANY NORGE AS")
         self.assertEqual(handle_relation(legal, "linkedin", "https://www.linkedin.com/company/board-assure-a-s/").kind, "OTHER_ENTITY")
         self.assertEqual(handle_relation(LegalName("BOARD ASSURE AS"), "linkedin", "https://www.linkedin.com/company/board-assure-a-s/").kind, "EXACT")
+
+
+class ForeignNamesakes(unittest.TestCase):
+    """A separately registered company abroad that shares the name (Logscom AB, Åsele, for LOGSCOM AS 830872752).
+
+    Norway's registry cannot name a foreign parent (Brreg konsernstruktur stops at the border), so the evidence is the
+    foreign legal form itself: "Logscom AB" is not "Logscom AS". A NUF (Norwegian branch of a foreign company) carries
+    the foreign form in its own registered name, so the form is its own and nothing changes for it."""
+
+    def test_handle_carrying_a_foreign_legal_form_names_another_entity(self):
+        legal = LegalName("LOGSCOM AS")
+        for platform, url in (("instagram", "https://www.instagram.com/logscom_ab/"), ("instagram", "https://www.instagram.com/logscomab/"),
+                              ("linkedin", "https://www.linkedin.com/company/logscom-gmbh")):
+            with self.subTest(url=url):
+                self.assertEqual(handle_relation(legal, platform, url).kind, "OTHER_ENTITY")
+        self.assertEqual(handle_relation(legal, "linkedin", "https://www.linkedin.com/company/logscom-as").kind, "EXACT")
+        self.assertEqual(handle_relation(legal, "facebook", "https://www.facebook.com/logscom").kind, "EXACT")
+
+    def test_a_nuf_keeps_the_foreign_form_of_its_own_name(self):
+        legal = LegalName("KAMEO INVESTMENT PLATFORM AB NUF")
+        self.assertEqual(handle_relation(legal, "linkedin", "https://www.linkedin.com/company/kameoinvestmentplatformab").kind, "EXACT")
+        self.assertEqual(handle_relation(legal, "linkedin", "https://www.linkedin.com/company/kameo-norge").kind, "BRAND")
+
+    def test_foreign_namesake_named_on_the_site(self):
+        from norway_company_agent.attribution.operator import foreign_namesake_named
+        legal = LegalName("LOGSCOM AS")
+        self.assertEqual(foreign_namesake_named(legal, "We make logs communicate - Logscom AB. Logscom AB Blåviksvägen 11 SE-91931 Åsele"), "logscom ab")
+        self.assertIsNone(foreign_namesake_named(legal, "Logscom AB, Åsele · Logscom AS, Lillehammer"), "the site also names this company")
+        self.assertIsNone(foreign_namesake_named(legal, "Logscom logs communicate"))
+        self.assertIsNone(foreign_namesake_named(LegalName("KAMEO INVESTMENT PLATFORM AB NUF"), "Kameo Investment Platform AB, filial i Norge"))
+
+    def test_the_operator_of_a_namesake_s_site(self):
+        profile = {"organisation_number": "830872752", "name": "LOGSCOM AS"}
+        text = "We make logs communicate - Logscom AB · Contact: Logscom AB Blåviksvägen 11 SE-91931 Åsele Sweden"
+        op = assess_operator(profile, "https://www.logscom.com/", page_texts=[("https://www.logscom.com/", text)])
+        self.assertEqual((op.kind, op.code), ("group_or_brand", "site_of_a_foreign_namesake"))
+        own = text + " · Norge: Logscom AS org.nr. 830 872 752"
+        self.assertEqual(assess_operator(profile, "https://www.logscom.com/", page_texts=[("https://www.logscom.com/", own)]).kind, "self",
+                         "a site that states this company's own organisation number stays its own")

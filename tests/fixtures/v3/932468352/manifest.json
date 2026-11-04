@@ -1,0 +1,260 @@
+{
+ "organisation_number": "932468352",
+ "name": "KAMEO INVESTMENT PLATFORM AB NUF",
+ "captured_by": "scripts/run_competition_batch.py (Revision 1 working tree) with --snapshot-dir",
+ "note": "Exact captured bytes. Robots.txt answers are not captured: the replay serves 'Allow: /'.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.kameo.no/",
+  "retrieved_at": "2026-11-01T21:58:38.404657Z",
+  "value": {
+   "requested_url": "https://www.kameo.no/",
+   "final_url": "https://www.kameo.no/",
+   "registered_domain": "kameo.no",
+   "title": "Kameo | Kameo tilbyr lån til bedrifter og eiendomsprosjekter",
+   "description": "Kameo tilbyr finansiering til eiendomsutviklere og investeringsmuligheter til investorer. Les mer om Kameos investeringsplattform her.",
+   "main_text_excerpt": "Nyhet: Auto-invest – roboten som investerer for deg\nSett innstillingene dine én gang. Roboten investerer i nye eiendomslån når de legges ut, legger bud og reinvesterer rentene dine automatisk.\nTest kostnadsfritt til og med 31. desember 2026.\nmrd\nTotalt formidlet (NOK)\n+\nLån\n%*\nGjennomsnittlig årlig rente\n%\nBekreftet tap\n*Historisk avkastning er ingen garanti for fremtidig avkastning.\nHva gjør Kameo?\nKameo er plattformen for eiendomsfinansiering, der eiendomsutviklere får tilgang til kapital og investorer får mulighet til å investere i eiendomsprosjekter. \nSom investor investerer du i eiendomsprosjekter, alt fra boliger til næringseiendommer. Renten utbetales direkte til Kameo-kontoen din, og minste investering er 500 kr. Vil du velge prosjekter selv, gjør du det når nye lån legges ut. Vil du investere passivt, aktiverer du Auto-invest, som investerer for deg innenfor rammene du setter.\nSom eiendomsutvikler får du rask og fleksibel finansiering tilpasset prosjektets behov. Det er et mer moderne og fleksibelt alternativ til tradisjonell bankfinansiering.\nMed dokumentert track record og grundig kredittanalyse er Kameo en markedsledende aktør som skaper verdi for både investorer og utviklere. \nHva sier våre investorer?\nAktuelle lån\nPrøv vår kalkulator!\nMed vår kalkulator kan du beregne din potensielle avkastning og se hva investeringen din kan være verdt over tid!",
+   "identity_text_excerpt": "Kameo Investment Platform AB NUF Org.nr. 932 468 352 c/o ABG Sundal Collier ASA Postboks 1444 VIKA 0115 Oslo +47 24 07 60 40 helpdesk@kameo.no Kontakt oss Abonner på vårt nyhetsbrev Spørsmål og svar Ledige stillinger Presse Cookies Gebyrer Investeringsrisiko Juridisk Personvernerklæring Last ned appen vår *Historisk avkastning er ingen garanti for fremtidig avkastning. Alle investering er forbundet med risiko, og du kan tape hele eller deler av det investerte beløpet. Kameo Investment Platform AB har tillatelse fra svenske Finansinspektionen til å tilby folkefinansieringstjenester i Norge, Sverige og Danmark, samt tilknyttede betalingstjenester i Sverige og Danmark.I I Norge leveres betalingstjenestene avKameo Investment Platform AB NUF (norsk filial).",
+   "social_links": [],
+   "structured_organisations": [],
+   "content_sha256": "eb7afd8abbc66fddd0f275b321914edd7e500f0900edca20905a6c2a7517d479",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.kameo.no/",
+     "title": "Kameo | Kameo tilbyr lån til bedrifter og eiendomsprosjekter",
+     "main_text_excerpt": "Nyhet: Auto-invest – roboten som investerer for deg\nSett innstillingene dine én gang. Roboten investerer i nye eiendomslån når de legges ut, legger bud og reinvesterer rentene dine automatisk.\nTest kostnadsfritt til og med 31. desember 2026.\nmrd\nTotalt formidlet (NOK)\n+\nLån\n%*\nGjennomsnittlig årlig rente\n%\nBekreftet tap\n*Historisk avkastning er ingen garanti for fremtidig avkastning.\nHva gjør Kameo?\nKameo er plattformen for eiendomsfinansiering, der eiendomsutviklere får tilgang til kapital og investorer får mulighet til å investere i eiendomsprosjekter. \nSom investor investerer du i eiendomsprosjekter, alt fra boliger til næringseiendommer. Renten utbetales direkte til Kameo-kontoen din, og minste investering er 500 kr. Vil du velge prosjekter selv, gjør du det når nye lån legges ut. Vil du investere passivt, aktiverer du Auto-invest, som investerer for deg innenfor rammene du setter.\nSom eiendomsutvikler får du rask og fleksibel finansiering tilpasset prosjektets behov. Det er et mer moderne og fleksibelt alternativ til tradisjonell bankfinansiering.\nMed dokumentert track record og grundig kredittanalyse er Kameo en markedsledende aktør som skaper verdi for både investorer og utviklere. \nHva sier våre investorer?\nAktuelle lån\nPrøv vår kalkulator!\nMed vår kalkulator kan du beregne din potensielle avkastning og se hva investeringen din kan være verdt over tid!",
+     "content_sha256": "eb7afd8abbc66fddd0f275b321914edd7e500f0900edca20905a6c2a7517d479"
+    },
+    {
+     "url": "https://www.kameo.no/kontakt-oss",
+     "title": "Kontakt oss for kundeservice og spørsmål | Kameo",
+     "main_text_excerpt": "Har du spørsmål om Kameo, lånene vi formidler eller investeringene dine? Opplever du problemer i tjenesten, eller har du forslag til hvordan vi kan bli bedre? Da vil vi gjerne høre fra deg!",
+     "identity_text_excerpt": "Kameo Investment Platform AB NUF Org.nr. 932 468 352 c/o ABG Sundal Collier ASA Postboks 1444 VIKA 0115 Oslo +47 24 07 60 40 helpdesk@kameo.no Kontakt oss Abonner på vårt nyhetsbrev Spørsmål og svar Ledige stillinger Presse Cookies Gebyrer Investeringsrisiko Juridisk Personvernerklæring Last ned appen vår *Historisk avkastning er ingen garanti for fremtidig avkastning. Alle investering er forbundet med risiko, og du kan tape hele eller deler av det investerte beløpet. Kameo Investment Platform AB har tillatelse fra svenske Finansinspektionen til å tilby folkefinansieringstjenester i Norge, Sverige og Danmark, samt tilknyttede betalingstjenester i Sverige og Danmark.I I Norge leveres betalingstjenestene avKameo Investment Platform AB NUF (norsk filial).",
+     "content_sha256": "d501cff2028887e108350b8cb3d8a8b79c7e44aa18f2a15b5980961dab9ede63"
+    },
+    {
+     "url": "https://www.kameo.no/om-kameo",
+     "title": "Om oss",
+     "main_text_excerpt": "Om Kameo\nPlattformen for eiendomsfinansiering i Skandinavia\nKameo er den ledende skandinaviske plattformen for investering i eiendom, der utviklere og vekstselskaper møter tusenvis av investorer. Vi tilbyr et fleksibelt alternativ til tradisjonelle banklån for å finansiere ulike typer eiendomsprosjekter, og gjør det samtidig mulig for både privatpersoner og bedrifter å investere i eiendomsprosjekter som ikke er tilgjengelige i det tradisjonelle markedet.\nI 2016 fikk Kameo konsesjon som betalingsforetak, og siden har vi vokst og ekspandert i Norge og Sverige. Kameo har kontor i Stockholm og Oslo.\nVåre eiere\nTeam Kameo\nEnkelt å investere i eiendomslån\nLogg inn for å se våre aktuelle investeringsmuligheter, eller opprett en konto for å komme i gang med Kameo.",
+     "identity_text_excerpt": "Kameo Investment Platform AB NUF Org.nr. 932 468 352 c/o ABG Sundal Collier ASA Postboks 1444 VIKA 0115 Oslo +47 24 07 60 40 helpdesk@kameo.no Kontakt oss Abonner på vårt nyhetsbrev Spørsmål og svar Ledige stillinger Presse Cookies Gebyrer Investeringsrisiko Juridisk Personvernerklæring Last ned appen vår *Historisk avkastning er ingen garanti for fremtidig avkastning. Alle investering er forbundet med risiko, og du kan tape hele eller deler av det investerte beløpet. Kameo Investment Platform AB har tillatelse fra svenske Finansinspektionen til å tilby folkefinansieringstjenester i Norge, Sverige og Danmark, samt tilknyttede betalingstjenester i Sverige og Danmark.I I Norge leveres betalingstjenestene avKameo Investment Platform AB NUF (norsk filial).",
+     "content_sha256": "2a0e1636c22edcf14f500e1c6465777e3f0f657c60b03a26d7f1140486e3b22f"
+    },
+    {
+     "url": "https://www.kameo.no/media",
+     "title": "Media og presseinformasjon | Kameo",
+     "main_text_excerpt": "I media\nPresse\nHer finner du nyhetsartikler og pressemeldinger om Kameo, og de siste oppdateringene fra selskapet og markedet.",
+     "identity_text_excerpt": "Kameo Investment Platform AB NUF Org.nr. 932 468 352 c/o ABG Sundal Collier ASA Postboks 1444 VIKA 0115 Oslo +47 24 07 60 40 helpdesk@kameo.no Kontakt oss Abonner på vårt nyhetsbrev Spørsmål og svar Ledige stillinger Presse Cookies Gebyrer Investeringsrisiko Juridisk Personvernerklæring Last ned appen vår *Historisk avkastning er ingen garanti for fremtidig avkastning. Alle investering er forbundet med risiko, og du kan tape hele eller deler av det investerte beløpet. Kameo Investment Platform AB har tillatelse fra svenske Finansinspektionen til å tilby folkefinansieringstjenester i Norge, Sverige og Danmark, samt tilknyttede betalingstjenester i Sverige og Danmark.I I Norge leveres betalingstjenestene avKameo Investment Platform AB NUF (norsk filial).",
+     "content_sha256": "d730db015923b99fcb8fb03ada2573429df01ba0952cb8deb34009c3ead9dbb4"
+    },
+    {
+     "url": "https://www.kameo.no/laer-mer",
+     "title": "Lær mer om investering og folkefinansiering",
+     "main_text_excerpt": "Lær mer\nUtforsk Kameo Academy - et sted for deg som vil lære mer om investering og Kameo. Her finner du webinarer, guider og artikler som gir innsikt i hvordan du kan bygge en diversifisert portefølje og komme i gang som investor. Du kan også lese nyheter og pressemeldinger med de siste oppdateringene om våre produkter og tjenester.\nKameo lanserer Auto-invest\nPenger som står stille, gir ingen avkastning. Nå lanserer vi Auto-invest, funksjonen som gjør at kapitalen din aldri trenger å stå stille.\nNy lov om folkefinansiering i Norge - hva betyr den for deg?\nDen 1. august 2026 fikk Norge en ny lov om folkefinansiering. Den innfører EUs felles regelverk med styrket investorbeskyttelse, og fjerner den norske grensen på 1 million kroner i året. Selve investorbeskyttelsen er ny i norsk lov, men ikke for deg som investerer via Kameo. Norske investorer på plattformen har vært omfattet av den helt siden de samme reglene kom i Sverige i 2023.\nRapport: Q2 og H1 2026\nNok et rekordkvartal for oss! Kameos grunnlegger og adm. dir. Sebastian Martens Harung oppsummerer andre kvartal og første halvår 2026 for Kameo Sverige og Kameo Norge sammen med Linda Borgudd.\nKameo når milepælen 10 milliarder kroner i finansiering\nKameo har passert 10 milliarder kroner i formidlet kapital til eiendomsprosjekter over hele Skandinavia. En milepæl vi deler med titusenvis av investorer, låntakere og samarbeidspartnere\nPetter Leidvik blir Kameos nye Vice VD og Chief Operating Officer\nJanuar 2018 begynte Petter hos Kameo som Administrator and Marketing Assistant. Det var starten på en reise som skulle utvikle seg i takt med selskapet, om enn i en litt annen retning enn kontrakten opprinnelig beskrev.\nRapport: Q1 2026\nQ1 2026 var et rekordkvartal for Kameo, med nesten 800 millioner kroner formidlet på plattformen. Norge satte ny rekord med 66 millioner kroner, og Sverige hadde også rekordvolum – i stor grad drevet av et nytt samarbeid med det britiske fondet Royal London Asset Management.\nBygger stort lagerprosjekt i Åsane\nBERGEN: Lagertrenden som har rullet over hele landet har nådd Bergen. I Åsane, rundt 20 minutter fra sentrum, utvikler selskapet Lager For Alle et nytt lagerprosjekt som skal ferdigstilles i løpet av 2026. Interessen har vært formidabel. Alle de 40 enhetene ble revet vekk på kort tid.\nLinda Borgudd blir Kameos Chief Marketing Officer\nVåren 2019 begynte Linda i Kameo som markedskoordinator samtidig som hun skrev sin masteroppgave. Det var hennes første jobb innen markedsføring etter universitetet,og starten på en reise som skulle utvikle seg i takt med selskapet.\nKameo har passert milliarden i Norge\nTil å starte året har Kameo hatt god vekst i formidlet utlån i både Norge og Sverige, og med en milepæl passert, ser daglig leder og gründer positivt på veien videre.\nDaniel Nylund går inn som Kameos Chief Commercial Officer\nEtter årsskiftet tok Daniel steget inn i Kameos ledergruppe. Fra studentmedarbeider til kredittanalytiker, og fra kredittanalytiker til Head of Institutional Capital, er vi stolte over at Daniel har blitt Kameos CCO. Vi har spurt ham om hans syn på ledelse og hva som har gjort at han ønsket å vokse videre i selskapet.\nJonas Bergman blir ny Chief Sales Officer\nEtter årsskiftet tok fire velkjente ansikter steget inn i Kameos ledergruppe. Samtlige har vært en del av Kameo i mange år. Jonas Bergman, tidligere salgssjef, er en av dem. I dag kan vi stolt presentere Jonas som Kameos Chief Sales Officer. Vi har spurt ham om hans syn på lederskap og hva som har gjort at han ønsket å vokse videre i selskapet.\nRapport: Q4 og året 2025\nSebastian Harung og Linda Borgudd oppsummerer Q4 og det fartsfylte året 2025.\nSvenske profiler kjøper seg inn i Kameo\nDe svenske næringslivsprofilene Günther Mårder og Fabian Bengtsson kjøper 4 prosent av aksjene i Kameo. Om noen år vil selskapet på børs.\nLagertrenden fortsetter. Nå er det Kristiansund sin tur\nLagertrenden som har rullet over landet har nå nådd Kristiansund. Bak utviklingen står selskapet Lager For Alle, som nylig har ferdigstilt 24 lagerseksjoner i Pilotveien. Over 260 investorer fra hele Norge har bidratt til finansieringen gjennom plattformen Kameo.\nKameo med rekordhalvår - nær én milliard i utlån\nInvesteringsplattformen Kameo fortsetter veksten og økte lånevolumet med 32 prosent i første halvår 2025, fra 738 til 971 millioner kroner, sammenlignet samme periode i fjor.\nGjør smartere investeringer – oppdag vår nye mobilapp!\nNå kan du investere smartere og raskere – uansett hvor du er. Den nye Kameo-appen gjør det enklere enn noensinne å investere og holde oversikt over porteføljen din direkte på mobilen.\nKameo lanserer forhåndstegning\nNå blir det enda enklere å investere i våre spennende eiendomsprosjekter. Kameo lanserer den nye funksjonen forhåndstegning, der du kan legge inn bud på lån allerede før den ordinære tegningsperioden starter.\nKameo velger Neonomics for å effektivisere betalinger med open banking og Nello Pay\nNeonomics, et ledende open banking-selskap, er glade",
+     "identity_text_excerpt": "Kameo Investment Platform AB NUF Org.nr. 932 468 352 c/o ABG Sundal Collier ASA Postboks 1444 VIKA 0115 Oslo +47 24 07 60 40 helpdesk@kameo.no Kontakt oss Abonner på vårt nyhetsbrev Spørsmål og svar Ledige stillinger Presse Cookies Gebyrer Investeringsrisiko Juridisk Personvernerklæring Last ned appen vår *Historisk avkastning er ingen garanti for fremtidig avkastning. Alle investering er forbundet med risiko, og du kan tape hele eller deler av det investerte beløpet. Kameo Investment Platform AB har tillatelse fra svenske Finansinspektionen til å tilby folkefinansieringstjenester i Norge, Sverige og Danmark, samt tilknyttede betalingstjenester i Sverige og Danmark.I I Norge leveres betalingstjenestene avKameo Investment Platform AB NUF (norsk filial).",
+     "content_sha256": "bd208921d22b27ae6f077a2cec34e289f034588343590ca9b83799a6021b665e"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 1.0,
+    "publishable": true,
+    "legal_name_tokens": [
+     "kameo",
+     "investment",
+     "platform"
+    ],
+    "matched_tokens": [
+     "investment",
+     "kameo",
+     "platform"
+    ],
+    "reasons": [
+     "exact organisation number appears in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/KameoNorge"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/kameo.norge"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/kameo-norge"
+    },
+    {
+     "platform": "x",
+     "url": "https://x.com/kameonorge"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@kameosverige367"
+    }
+   ],
+   "social_link_assessments": [
+    {
+     "platform": "facebook",
+     "url": "https://facebook.com/KameoNorge",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "kameo"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "instagram",
+     "url": "https://instagram.com/kameo.norge",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "kameo"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "linkedin",
+     "url": "https://linkedin.com/company/kameo-norge",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "kameo"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "x",
+     "url": "https://x.com/kameonorge",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "kameo"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    },
+    {
+     "platform": "youtube",
+     "url": "https://youtube.com/@kameosverige367",
+     "identity_score": 0.3,
+     "publishable": false,
+     "matched_tokens": [
+      "kameo"
+     ],
+     "reason": "social handle lacks strong exact-entity name evidence",
+     "method": "deterministic_social_handle_identity_v1"
+    }
+   ]
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "eb7afd8abbc66fddd0f275b321914edd7e500f0900edca20905a6c2a7517d479",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/932468352": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "23d5569f5a850d59.json.gz",
+   "content_sha256": "23d5569f5a850d59a20abc95fa6b3464bcd278d8efefda67f0b2149c2397fc46",
+   "retrieved_at": "2026-11-01T21:58:23.646385Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/932468352": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "902f02a91c015345.json.gz",
+   "content_sha256": "902f02a91c015345e0fb6772398e6c42ec04c9343a152dd5b84a07a5ee762344",
+   "retrieved_at": "2026-11-01T21:58:24.412960Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/932468352/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "eeb2849d3c992d2f.json.gz",
+   "content_sha256": "eeb2849d3c992d2f68c7343b4b11317380a4b8bde51f38e304ce1be92cf8ee15",
+   "retrieved_at": "2026-11-01T21:58:26.587668Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/932468352": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-01T21:58:25.130874Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=932468352&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "046f81cc5539f5e7.json.gz",
+   "content_sha256": "046f81cc5539f5e71ecec1e2adea29b92c183b4981eb09bd1dfc407c3881849c",
+   "retrieved_at": "2026-11-01T21:58:25.848249Z"
+  },
+  "https://www.kameo.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "e1bacaa01d343478.html.gz",
+   "content_sha256": "e1bacaa01d3434787ba805d4071b72deb55cad0fea8cab9ad6f7c6294771eb4e",
+   "retrieved_at": "2026-11-01T21:58:40.374098Z"
+  },
+  "https://www.kameo.no/om-kameo": {
+   "kind": "site",
+   "status": 200,
+   "file": "6413780ce16a0503.html.gz",
+   "content_sha256": "6413780ce16a0503d7b3ee8845d9faa538ce70ed7c8f2d2b7af3478887dde650",
+   "retrieved_at": "2026-11-01T21:58:41.778338Z"
+  },
+  "https://www.kameo.no/contact": {
+   "kind": "site",
+   "status": 200,
+   "file": "2aa746ff303dce5e.html.gz",
+   "content_sha256": "2aa746ff303dce5e976c4e3b236f157d35c00dd71330e85b31706379f4b0a140",
+   "retrieved_at": "2026-11-01T21:58:44.417386Z"
+  },
+  "https://www.kameo.no/laer-mer?article-category=news": {
+   "kind": "site",
+   "status": 200,
+   "file": "e4517d1fc31df456.html.gz",
+   "content_sha256": "e4517d1fc31df4563fb82638694a8752af42645431874a4cf2e4e95026f4adce",
+   "retrieved_at": "2026-11-01T21:58:45.801605Z"
+  },
+  "https://www.kameo.no/jobb-hos-oss": {
+   "kind": "site",
+   "status": 200,
+   "file": "9b9748ae1a771e8b.html.gz",
+   "content_sha256": "9b9748ae1a771e8bd36abfe4857baae34d6b5a3bf44043abfb468f550e395cd5",
+   "retrieved_at": "2026-11-01T21:58:47.006347Z"
+  },
+  "https://www.kameo.no/laer-mer/artikler/kameo-lanserer-auto-invest": {
+   "kind": "site",
+   "status": 200,
+   "file": "eb10c9b87d4c1dcc.html.gz",
+   "content_sha256": "eb10c9b87d4c1dccf966f80ba632b6e96158aadea06e4a1cce0bea3be4538af0",
+   "retrieved_at": "2026-11-01T21:58:48.723321Z"
+  },
+  "https://www.kameo.no/laer-mer/artikler/ny-lov-om-folkefinansiering-i-norge": {
+   "kind": "site",
+   "status": 200,
+   "file": "3a465854dea75137.html.gz",
+   "content_sha256": "3a465854dea751373e48dcf7c92e88b60940e0ab6d9fda0638591a6917203c36",
+   "retrieved_at": "2026-11-01T21:58:50.074669Z"
+  },
+  "https://www.kameo.no/laer-mer/artikler/rapport-q2-og-h1-2026": {
+   "kind": "site",
+   "status": 200,
+   "file": "6ff3a1f0701d7727.html.gz",
+   "content_sha256": "6ff3a1f0701d77279ba4e0c8849e2d1bc1a7a6d6b1ec71a33331b3158dfa406a",
+   "retrieved_at": "2026-11-01T21:58:51.392679Z"
+  }
+ }
+}

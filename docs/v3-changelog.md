@@ -455,3 +455,44 @@ Details are in `docs/v31-news-analysis.md` §9.
   - listicles with an adjective.
 - **Tests:** 526 pass (6 regression tests on eval200 and live-BE fixtures, 7 unit tests). Each new regression test
   fails on `8223a37`.
+
+## V3.1 candidate 2 (code: this entry's commit) — companies abroad that share the name
+
+The news rules are unchanged from `0e4c426`. This entry changes entity resolution only, and it was not tuned on
+eval200b.
+
+- **Defect.** LOGSCOM AS (830872752, Lillehammer, founded 2022) published two profiles of Logscom AB, Åsele, Sweden:
+  `facebook.com/logscom` and `instagram.com/logscom_ab`. Both are labelled incorrect in the eval200 audit.
+  - The registry website `logscom.com` is the Swedish company's site. Its title is "We make logs communicate -
+    Logscom AB", its contact is "Logscom AB Blåviksvägen 11 SE-91931 Åsele Sweden", and it never names Logscom AS or
+    830872752.
+  - Brreg records no group for a foreign parent, so `0e4c426` found no contrary signal and judged the site the
+    company's own.
+  - "ab" was in the neutral legal-form list, so the handle `logscom_ab` read as "the company's legal name".
+- **Rule 1 — a handle that carries a foreign legal form names another entity** (`attribution/names.py`).
+  - The foreign forms are AB, GmbH, Ltd, Limited, Inc, ApS, Oy, Oyj, AG, LLC, PLC and BV.
+  - The rule applies when a handle ends with one of these forms and the company's own registered name does not carry
+    it.
+  - A NUF (a Norwegian branch of a foreign company, e.g. "KAMEO INVESTMENT PLATFORM AB NUF") carries the form in its
+    own name, so the form counts as its own.
+- **Rule 2 — the site of a foreign namesake is a group or brand site** (`attribution/operator.py`, code
+  `site_of_a_foreign_namesake`).
+  - The rule applies when the verified site names this company's name followed by a foreign legal form that is not
+    its own, and never names the name under one of its own forms.
+  - It is checked after the site-imprint checks, so a site that states this company's organisation number stays the
+    company's own.
+  - The existing group-or-brand rules then apply unchanged: a bare shared-name handle is held
+    (`group_name_handle_on_group_or_brand_site`), and stories about the shared name are withheld.
+  - The registry-linked website itself is still published, with the role `group_or_brand_site`.
+- **Impact on captured bytes (8 sets, 860 organisations, 411 of them with a verified site, compared with `0e4c426`).**
+  - The only change in published units or operator decisions is Logscom: its operator changes, and its 2 incorrect
+    profiles are now withheld.
+  - Kameo NUF (3 correct profiles) and Alpha Solutions Norge are unchanged.
+  - One eval120 news unit differs from the stored `0e4c426` replay. It is not caused by this change: `0e4c426`
+    replayed on the same day publishes it too. See the release report.
+- **New tests.**
+  - 3 regression tests on captured bytes (`tests/test_v3_regressions.py::SharedNameAcrossBorders`):
+    - Logscom, which fails on `0e4c426`;
+    - Kameo NUF and Alpha Solutions, legitimate controls that pass on both.
+  - 4 unit tests (`tests/test_v3_attribution.py::ForeignNamesakes`): 3 fail on `0e4c426` and one is a NUF control.
+  - New fixtures: `tests/fixtures/v3/932468352` and `tests/fixtures/v3/921147325`.

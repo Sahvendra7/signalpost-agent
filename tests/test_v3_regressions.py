@@ -285,6 +285,56 @@ class V31AfterEval200(unittest.TestCase):
         self.assertEqual(len(news_urls("920546919")), 8, "Jentene på Tunet: awards, nominations, festival anniversary")
 
 
+@lru_cache(maxsize=None)
+def site_research(org: str) -> dict:
+    fixture = Fixture(org, base=V3)
+    profile = run_batch([InputRow(0, org, org)], run_id="v3-regression", **fixture.injected())["profiles"][0]
+    return ((profile.get("evidence") or {}).get("site_research") or {}).get("value") or {}
+
+
+def held_social(org: str) -> dict[str, str]:
+    return {entry["key"]: entry["code"] for entry in site_research(org).get("rejected_keys") or [] if entry["family"] == "social"}
+
+
+class SharedNameAcrossBorders(unittest.TestCase):
+    """Separately registered companies that share a name (eval200, fixtures captured 2026-11-01 through ff3b515).
+
+    LOGSCOM AS (830872752, Lillehammer, 2022) sells "det svenske morselskapets produkter". Its registry website
+    logscom.com is Logscom AB's site ("We make logs communicate - Logscom AB", contact "Logscom AB Blåviksvägen 11
+    SE-91931 Åsele Sweden") and never names Logscom AS or 830872752; Brreg has no group record for a foreign parent.
+    0e4c426 judged the site the company's own (no contrary signal) and published facebook.com/logscom and
+    instagram.com/logscom_ab as the Norwegian company's profiles (both labelled incorrect in the eval200 audit)."""
+
+    def test_logscom_as_does_not_take_the_swedish_logscom_ab_profiles(self):
+        self.assertEqual(profiles("830872752"), set())
+        operator = site_research("830872752")["operator"]
+        self.assertEqual((operator["kind"], operator["code"]), ("group_or_brand", "site_of_a_foreign_namesake"))
+        held = held_social("830872752")
+        self.assertEqual(held.get("https://facebook.com/logscom"), "group_name_handle_on_group_or_brand_site", "the bare shared name")
+        self.assertEqual(held.get("https://instagram.com/logscom_ab"), "handle_names_other_entity", "'ab' is the Swedish company's legal form")
+        site = available("830872752", "official_website")
+        self.assertEqual([claim["value"] for claim in site], ["https://logscom.com/"], "the registry-linked website itself stays")
+        self.assertEqual(site[0].get("site_role"), "group_or_brand_site")
+        self.assertEqual(news_titles("830872752"), [])
+
+    def test_a_nuf_keeps_the_profiles_of_its_own_name(self):
+        """KAMEO INVESTMENT PLATFORM AB NUF (932468352, eval200): the Norwegian branch of the Swedish AB. Its site states
+        its own organisation number; kameo-norge / kameo.norge / KameoNorge were labelled correct."""
+        self.assertEqual(site_research("932468352")["operator"]["kind"], "self")
+        self.assertEqual(profiles("932468352"), {"https://www.facebook.com/KameoNorge", "https://www.instagram.com/kameo.norge/?hl=en",
+                                                 "https://www.linkedin.com/company/kameo-norge"})
+
+    def test_alpha_solutions_norge_keeps_its_earlier_decision(self):
+        """ALPHA SOLUTIONS NORGE AS (921147325, eval200b): the registry website redirects into the international group's
+        site, which links the US company's profiles (alpha-solutions-usa, alpha_solutions_us: labelled incorrect).
+        The namesake rule does not apply (no foreign legal form follows the name) and nothing changes."""
+        operator = site_research("921147325")["operator"]
+        self.assertEqual((operator["kind"], operator["code"]), ("group_or_brand", "registry_website_redirects_to_other_domain"))
+        self.assertEqual(profiles("921147325"), set())
+        held = held_social("921147325")
+        self.assertIn("https://linkedin.com/company/alpha-solutions-usa", held)
+
+
 class CareersPages(unittest.TestCase):
     def test_service_pages_are_not_careers_pages(self):
         self.assertEqual(careers("933164896"), [], "/for-bedrifter/ is a staffing agency's service page")
