@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Praksis i domstolene har over tid utviklet en del momenter som blir tillagt vekt i vurderingen av hvor et barn skal bo fast."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "ADVOKATFIRMAET RIEBER-MOHN AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational explainer about how courts determine the primary residence of children, not reporting on a specific corporate event or action of the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1432,
+ "input_tokens": 3713,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:18.080616+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For EPM teams, the message is clear. Review the bulletin, check what applies to your estate, plan the patching window, and validate the full EPM technology stack after implementation.",
+   "inlumi can help you assess your current patch level, plan the next CPU window, and apply the required security updates safely across your Oracle EPM 11.2 on-prem stack"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "INLUMI AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-30",
+  "date_evidence": "30 April 2026",
+  "decision": "withhold",
+  "reason": "The article provides technical advice and guidance on how to manage Oracle Critical Patch Updates for EPM systems, rather than reporting on a specific development or event of the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1549,
+ "input_tokens": 3152,
+ "output_tokens": 275,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:48.958382+00:00"
+}

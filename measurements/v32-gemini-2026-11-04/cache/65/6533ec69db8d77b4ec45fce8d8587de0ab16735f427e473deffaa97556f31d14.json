@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Høstens utgave er nå sendt ut til alle medlemmene med posten."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "FORENINGEN ET BARN FOR LITE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2025-11-07",
+  "date_evidence": "Fri, 07 Nov 2025 10:24:04 +0000",
+  "decision": "publish",
+  "reason": "The association announces the distribution of the autumn edition of its member magazine, which constitutes a specific activity and development of the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8066,
+ "input_tokens": 1932,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:25.475194+00:00"
+}

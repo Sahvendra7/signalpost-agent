@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trio Oro lørdag 14. mars 2026 15:30 16:30",
+   "Trio Oro — Nesodden jazzklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesodden jazzklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-03-14",
+  "date_evidence": "lørdag 14. mars 2026",
+  "decision": "publish",
+  "reason": "The item announces a concert event hosted by Nesodden jazzklubb, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1031,
+ "input_tokens": 1502,
+ "output_tokens": 239,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:28.440346+00:00"
+}

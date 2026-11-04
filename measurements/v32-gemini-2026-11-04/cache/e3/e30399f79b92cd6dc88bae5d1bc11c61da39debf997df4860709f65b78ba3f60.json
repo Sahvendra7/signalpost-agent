@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "New Video. Alexander Rybak ft. Kseniya Simonova – Let The Music Guide You",
+   "Mar 19, 2021"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2021-03-19",
+  "date_evidence": "Mar 19, 2021",
+  "decision": "publish",
+  "reason": "The item announces the release of a new music video by the target artist, constituting genuine company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1298,
+ "input_tokens": 2058,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:57.992080+00:00"
+}

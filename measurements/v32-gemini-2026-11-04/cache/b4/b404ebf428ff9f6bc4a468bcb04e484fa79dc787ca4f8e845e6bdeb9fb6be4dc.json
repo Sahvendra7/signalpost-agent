@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kontaktkonferansen 2025 - Interkommunalt arkiv i Hordaland IKS",
+   "I år arrangerer vi kontaktkonferansen på fantastiske Hardangerfjord hotell."
+  ],
+  "subject_entity": "Interkommunalt arkiv i Hordaland IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is published on the target company's website and explicitly states that the company is organizing the conference.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1023,
+ "input_tokens": 2377,
+ "output_tokens": 143,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:46.586054+00:00"
+}

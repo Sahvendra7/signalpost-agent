@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hun sier Fremskrittspartiet ønsker å styrke ordningen heller enn å svekke den og vil ha en opptrappingsplan for aktivitetshjelpemidler."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-10-19",
+  "date_evidence": "Mon, 19 Oct 2026 21:30:00 +0200",
+  "decision": "publish",
+  "reason": "The article reports on Fremskrittspartiet's political initiative and stance concerning activity aids in response to the government's proposal.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2277,
+ "input_tokens": 2075,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:03.926196+00:00"
+}

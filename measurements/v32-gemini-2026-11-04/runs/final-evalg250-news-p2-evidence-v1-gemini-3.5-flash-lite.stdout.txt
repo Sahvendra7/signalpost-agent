@@ -1,0 +1,30 @@
+  150/338
+  175/338
+  200/338
+  225/338
+  250/338
+  275/338
+  300/338
+  325/338
+  338/338
+{
+ "experiment_id": "final-evalg250-news-p2-evidence-v1-gemini-3.5-flash-lite",
+ "items": 338,
+ "ok": 338,
+ "api_failures": 0,
+ "api_calls_made": 338,
+ "cache_hits": 0,
+ "input_tokens": 698972,
+ "output_tokens": 79077,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.407384,
+ "latency_ms_p50": 1382,
+ "decisions": {
+  "withhold": 165,
+  "publish": 173
+ },
+ "errors": {},
+ "budget_stop": null,
+ "quotes_total": 502,
+ "quotes_verified": 501
+}

@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For deg som jobber i støy og oppholder deg i uønskede lydmiljø, anbefaler vi formstøpte støypropper.",
+   "Vi finner den beste løsningen sammen med deg"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Melhus hørsel",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-02-02",
+  "date_evidence": "Sat, 02 Feb 2019 12:34:33 +0000",
+  "decision": "withhold",
+  "reason": "The article provides general advice on how to protect one's hearing and promotes the company's products, rather than reporting on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 84359,
+ "input_tokens": 1804,
+ "output_tokens": 259,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  40.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:43.354455+00:00"
+}

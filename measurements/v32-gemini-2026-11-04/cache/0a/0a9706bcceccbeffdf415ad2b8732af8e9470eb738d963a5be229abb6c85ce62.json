@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lørdag 19. september kl. 10.00 var det endelig duket for åpning av den nye brannstasjonen på Vanse.",
+   "Lars Tjelland, politiker i Farsund og styreleder i brannvesenet Sør IKS, fikk æren av å klippe «snoren»"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Brannvesenet Sør IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "expansion_or_new_location",
+  "publication_date": "2026-09-23",
+  "date_evidence": "Oppdatert: 23. september 2026",
+  "decision": "publish",
+  "reason": "The article reports on the official opening of a new fire station by Brannvesenet Sør IKS, which constitutes a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 21022,
+ "input_tokens": 2238,
+ "output_tokens": 284,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:48.850513+00:00"
+}

@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "12m – Diesel – Snorkel S3370RT",
+   "Pris på forespørsel Ta kontakt for tiljenglighet, pris og for andre spørsmål."
+  ],
+  "content_category": "product_service_marketing",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-09-22",
+  "date_evidence": "Mon, 22 Sep 2025 10:44:35 +0000",
+  "reason": "The item is a product listing for a specific piece of equipment available for rent, which constitutes marketing rather than a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9280,
+ "input_tokens": 1820,
+ "output_tokens": 198,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:11:39.029910+00:00"
+}

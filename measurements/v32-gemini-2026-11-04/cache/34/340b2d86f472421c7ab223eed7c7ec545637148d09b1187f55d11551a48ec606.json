@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet to deliver a new BCTMP line to ITC Bhadrachalam mill in India to increase high quality pulp production",
+   "The order was included in Valmet’s orders received for the second quarter of 2026."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-10-26",
+  "date_evidence": "Oct 26, 2026",
+  "decision": "publish",
+  "reason": "The article reports on a new contract where Valmet will deliver a BCTMP line to ITC Bhadrachalam mill, which constitutes a genuine company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 35843,
+ "input_tokens": 2804,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:45:34.384608+00:00"
+}

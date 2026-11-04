@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tillsammans med Trafik & Fritid gjordes den om till två padelbanor , ett utegym, en minitennisbana och ett bollplank."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "ATL i Lund",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-03-04",
+  "date_evidence": "4 mars, 2019",
+  "decision": "withhold",
+  "reason": "The page describes a reference project and customer case for ATL i Lund rather than a direct news event of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1634,
+ "input_tokens": 2400,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:53.282349+00:00"
+}

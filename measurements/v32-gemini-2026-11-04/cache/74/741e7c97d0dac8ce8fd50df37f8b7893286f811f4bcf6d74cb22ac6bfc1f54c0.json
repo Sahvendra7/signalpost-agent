@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Blogg og nyheter Alle Tur Info Sosialt 18. mai 2026 Turrapport Smøla rundt 17 mai 2026 Runding av Smøla i løpet av ei mai-langhelg"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trondhjems Kajakklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The page is the club's blog listing its own past trips and club activities such as the trip around Smøla.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1859,
+ "input_tokens": 3078,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:03.508006+00:00"
+}

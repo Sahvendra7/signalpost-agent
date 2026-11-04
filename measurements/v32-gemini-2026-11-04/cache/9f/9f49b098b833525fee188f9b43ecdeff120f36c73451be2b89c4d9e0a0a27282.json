@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "JOY Medispa",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post explaining the causes of dry skin and describing general treatment options offered by the company, rather than reporting a specific company development.",
+  "evidence_quotes": [
+   "Tørr hud kan oppstå av mange grunner, inkludert kaldt vær, dehydrering eller feil hudpleieprodukter.",
+   "Hvorfor oppstår tørr hud? Tørr hud kan være forårsaket av eksterne faktorer som vær og klima, eller interne faktorer som dehydrering eller hormonforandringer."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1399,
+ "input_tokens": 2403,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:48.233114+00:00"
+}

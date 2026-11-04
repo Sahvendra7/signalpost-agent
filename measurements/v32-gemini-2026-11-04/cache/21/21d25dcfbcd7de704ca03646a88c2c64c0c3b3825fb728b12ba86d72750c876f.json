@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Interkommunalt arkiv i Hordaland IKS sitt representantskapsmøte vert helde på teams fredag 13. juni 2025 kl. 09:00-11.00."
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-05-13",
+  "date_evidence": "Publisert 13. May 2025",
+  "reason": "The article announces an upcoming representative meeting (representantskapsmøte) for the company, which is a specific internal event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1529,
+ "input_tokens": 1788,
+ "output_tokens": 203,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:07:27.092103+00:00"
+}

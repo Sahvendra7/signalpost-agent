@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Høstens store aktivitetskonkurranse er avsluttet, og Axel Eikner kjempet seg til seieren."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristiania Bedriftsidrettslag",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2023-11-17",
+  "date_evidence": "Fri, 17 Nov 2023 08:40:15 +0000",
+  "decision": "publish",
+  "reason": "The text announces the conclusion of the organization's activity competition and names the winner.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1797,
+ "input_tokens": 1657,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:48.491281+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Sola Hundesenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-30",
+  "date_evidence": "Aktuelt 30. august 2026",
+  "decision": "withhold",
+  "reason": "The article provides general advice and educational information about when puppies should start training courses, rather than reporting on a specific development or event concerning the company.",
+  "evidence_quotes": [
+   "Når bør valpen starte på valpekurs?",
+   "Det korte svaret er: Valpen kan med fordel starte tidlig – så snart den har fått litt tid til å bli trygg i sitt nye hjem og er klar for nye opplevelser."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 7950,
+ "input_tokens": 3274,
+ "output_tokens": 254,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:14.783957+00:00"
+}

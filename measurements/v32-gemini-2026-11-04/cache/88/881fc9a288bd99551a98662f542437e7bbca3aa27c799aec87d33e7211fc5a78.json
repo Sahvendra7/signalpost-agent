@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lillespesial 2026 – Norsk Rhodesian Ridgeback klubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Norsk Rhodesian Ridgeback klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-10",
+  "date_evidence": "Thu, 10 Sep 2026 19:30:17 +0000",
+  "decision": "publish",
+  "reason": "The item announces the 'Lillespesial 2026' event organized by the Norsk Rhodesian Ridgeback klubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 952,
+ "input_tokens": 1692,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:08.361031+00:00"
+}

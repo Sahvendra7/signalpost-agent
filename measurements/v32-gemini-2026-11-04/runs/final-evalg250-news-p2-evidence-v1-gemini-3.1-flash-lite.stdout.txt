@@ -1,30 +1,30 @@
+  175/338
+  200/338
+  225/338
+  250/338
+  275/338
+  300/338
   325/338
   338/338
 {
  "experiment_id": "final-evalg250-news-p2-evidence-v1-gemini-3.1-flash-lite",
  "items": 338,
- "ok": 64,
- "api_failures": 274,
- "api_calls_made": 96,
- "cache_hits": 0,
- "input_tokens": 150530,
- "output_tokens": 15232,
+ "ok": 338,
+ "api_failures": 0,
+ "api_calls_made": 3,
+ "cache_hits": 335,
+ "input_tokens": 698972,
+ "output_tokens": 82192,
  "thoughts_tokens": 0,
- "paid_equivalent_cost_usd": 0.06048,
- "latency_ms_p50": 17354,
+ "paid_equivalent_cost_usd": 0.298031,
+ "latency_ms_p50": 1557,
  "decisions": {
-  "withhold": 35,
-  "uncertain": 274,
-  "publish": 29
+  "withhold": 165,
+  "publish": 171,
+  "uncertain": 2
  },
- "errors": {
-  "http_503": 16,
-  "http_429": 8,
-  "transport_TimeoutError": 3,
-  "http_429_daily_quota": 5,
-  "not_called_daily_quota_exhausted": 242
- },
- "budget_stop": "daily_quota_exhausted",
- "quotes_total": 88,
- "quotes_verified": 87
+ "errors": {},
+ "budget_stop": null,
+ "quotes_total": 536,
+ "quotes_verified": 535
 }

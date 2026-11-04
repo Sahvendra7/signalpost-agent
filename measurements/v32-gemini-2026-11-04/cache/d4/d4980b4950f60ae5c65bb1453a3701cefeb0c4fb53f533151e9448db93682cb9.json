@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Baker Brun åpner på Voss!",
+   "dagen da Baker Brun åpner sitt første bakeri på Voss."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Baker Brun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "expansion_or_new_location",
+  "publication_date": "2025-11-28",
+  "date_evidence": "28.11.2025",
+  "decision": "publish",
+  "reason": "The text announces that Baker Brun is opening a new bakery on Voss, representing a genuine company expansion event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1848,
+ "input_tokens": 1918,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:03.542369+00:00"
+}

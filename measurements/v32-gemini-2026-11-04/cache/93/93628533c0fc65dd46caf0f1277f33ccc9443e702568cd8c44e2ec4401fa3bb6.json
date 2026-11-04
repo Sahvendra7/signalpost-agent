@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I år var jeg en av de heldige studentene som fikk delta – og min praksisplass var ved Interkommunalt arkiv Hordaland (IKA Hordaland).",
+   "Praksisopplegget som jeg har fått ta del i har vært veldig lærerikt og utfyllende."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Interkommunalt arkiv Hordaland",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-04-24",
+  "date_evidence": "Thu, 24 Apr 2025 14:57:28 +0200",
+  "decision": "withhold",
+  "reason": "This is a personal blog post or testimonial written by a student about their internship experience, which constitutes a promotional profile rather than a report of a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2006,
+ "input_tokens": 2969,
+ "output_tokens": 286,
+ "thoughts_tokens": 113,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:40.349717+00:00"
+}

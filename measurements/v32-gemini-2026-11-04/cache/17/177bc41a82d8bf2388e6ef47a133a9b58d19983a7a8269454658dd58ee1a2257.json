@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Skattedirektoratet har uttalt seg om bestemmelsene for uttaksmerverdiavgift for virksomheter som oppfører eiendom i egen regi."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Skattedirektoratet",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-12-19",
+  "date_evidence": "19. desember 2023",
+  "decision": "withhold",
+  "reason": "The text reports on a principle statement by Skattedirektoratet regarding VAT regulations, which is regulatory commentary rather than news about Bjørgvin Revisjon AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1240,
+ "input_tokens": 1685,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:42.934150+00:00"
+}

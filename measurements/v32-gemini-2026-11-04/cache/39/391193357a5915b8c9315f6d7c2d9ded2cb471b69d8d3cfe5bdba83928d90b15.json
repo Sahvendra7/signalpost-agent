@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kristine Bjaadal | Exhibition: Norway Designs NÅ, Vol. 3 – SEKSTEN"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristine Bjaadal",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2016-10-06",
+  "date_evidence": "Thu, 06 Oct 2016 12:37:34 +0000",
+  "decision": "publish",
+  "reason": "The item announces the participation of Kristine Bjaadal in the exhibition 'Norway Designs NÅ, Vol. 3 – SEKSTEN'.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1141,
+ "input_tokens": 1565,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:58.550038+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hva er en voldtekt og når har jeg krav på bistandsadvokat?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Advokat Cathrine Rieber-Mohn",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-08-09",
+  "date_evidence": "Tue, 09 Aug 2022 11:50:29 +0000",
+  "decision": "withhold",
+  "reason": "This article provides legal information and guidance regarding rape and the right to a legal aid lawyer, which is educational and advisory content rather than a specific corporate event or news development about the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1278,
+ "input_tokens": 3304,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:07.926371+00:00"
+}

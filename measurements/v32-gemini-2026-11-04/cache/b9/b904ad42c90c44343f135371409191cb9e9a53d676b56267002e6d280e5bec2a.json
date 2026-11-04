@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vertinnegaven som blir lagt merke til – og som smaker fantastisk!",
+   "Jentene på tunet / april 21, 2026 / Gaver & anledninger"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-21",
+  "date_evidence": "Jentene på tunet / april 21, 2026 / Gaver & anledninger",
+  "decision": "withhold",
+  "reason": "The article is a blog post providing general advice and tips on how to choose a hostess gift, rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1457,
+ "input_tokens": 2638,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:17.890437+00:00"
+}

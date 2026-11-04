@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Den nye kokken, André Ertesvåg, har gikk kjøkkenet et løft.",
+   "André trives så godt på Lia Gård at han blir værende."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Lia Gård",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2025-04-08",
+  "date_evidence": "8. apr.",
+  "decision": "publish",
+  "reason": "The article reports on personnel developments at Lia Gård, specifically introducing their new chef André Ertesvåg and detailing his work and background at the retreat center.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1474,
+ "input_tokens": 2068,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:58.167762+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Førstehjelpskurs - førstehjelp ved strømulykker"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "ODD SMÅGE AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a course or educational title about first aid during electrical accidents rather than a specific corporate development or event of Odd Småge AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1117,
+ "input_tokens": 1655,
+ "output_tokens": 193,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:07.811402+00:00"
+}

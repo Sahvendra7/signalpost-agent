@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "unrelated_content",
+  "subject_entity": "Seistar Holding AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is an 'About Us' page providing historical background and company information, which does not constitute a specific, reportable news event.",
+  "evidence_quotes": [
+   "Om Seistar",
+   "Seivåg AS, som i dag er Seistar Holding AS, ble opprettet i 2000."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18027,
+ "input_tokens": 1593,
+ "output_tokens": 203,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:49.860955+00:00"
+}

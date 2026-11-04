@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For første gang deltok Stiftelsen 10. august på Arendalsuka.",
+   "Gjennom flere arrangementer i Menneskerettighetsteltet bidro vi til samtaler om temaer som står sentralt i arbeidet vårt"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Stiftelsen 10. august",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-14",
+  "date_evidence": "14. august 2026",
+  "decision": "publish",
+  "reason": "The article reports on the target company's participation in the Arendalsuka event, including hosting and contributing to several discussions and workshops.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 64507,
+ "input_tokens": 3122,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:08.111910+00:00"
+}

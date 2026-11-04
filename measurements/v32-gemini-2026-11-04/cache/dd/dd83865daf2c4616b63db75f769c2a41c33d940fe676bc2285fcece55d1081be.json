@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Marie Thrana Tindstad er vår nye fungerende daglige leder.",
+   "Hun skal lede Stiftelsen 10. august frem til 1. juni 2027, mens vår daglige leder er i permisjon."
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-09-02",
+  "date_evidence": "2. september 2026",
+  "reason": "The article announces the appointment of a new acting general manager for the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1251,
+ "input_tokens": 1944,
+ "output_tokens": 186,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:07:41.813670+00:00"
+}

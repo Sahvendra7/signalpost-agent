@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Helgen 13.-14. februar reiste junior regionslaget Team Vest til Stavanger for å delta på…",
+   "19. februar 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-02-19",
+  "date_evidence": "19. februar 2026",
+  "decision": "publish",
+  "reason": "The article reports on the club's participation in a regional championship through its junior regional team, Team Vest.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1669,
+ "input_tokens": 1473,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:39.078016+00:00"
+}

@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 2020 leverte vi rundt 40 malere til våre kunder."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Personell AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-12-04",
+  "date_evidence": "des 4, 2020",
+  "decision": "withhold",
+  "reason": "The text is a portfolio or reference list of projects and customers served, which does not constitute a specific, reportable company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 78405,
+ "input_tokens": 2025,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T23:16:25.400150+00:00"
+}

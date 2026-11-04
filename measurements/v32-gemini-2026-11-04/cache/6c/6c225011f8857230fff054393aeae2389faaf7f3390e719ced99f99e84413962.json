@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Daglig leder har ordet Denne uken kommer fredagsbladet ut litt forsinket rett over pinsen, grunnet studietur til Ålesund.",
+   "Mens vi var i Ålesund var det skole for våre elever, og de lærerene som av ulike grunner ikke hadde mulighet til å bli med på studieturen, holdt i undervisningen."
+  ],
+  "subject_entity": "STIFTELSEN STEINERSKOLEN I ÅS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The text is written in the first person by the school's leadership, detailing activities and updates for the students and staff of the target school.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2157,
+ "input_tokens": 2272,
+ "output_tokens": 191,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:57.720125+00:00"
+}

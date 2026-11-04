@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "– Ap får ikke flere i jobb med dette budsjettet. Dette er et budsjett hvor de store pengene går til mennesker utenfor arbeidslivet, og med stadig færre folk til å finansiere det, sier FrPs arbeidspolitiske talsperson Julia Brännström Nordtug."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item consists of political commentary and criticism of a government budget, which constitutes opinion or promotional content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5815,
+ "input_tokens": 1855,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:58.223513+00:00"
+}

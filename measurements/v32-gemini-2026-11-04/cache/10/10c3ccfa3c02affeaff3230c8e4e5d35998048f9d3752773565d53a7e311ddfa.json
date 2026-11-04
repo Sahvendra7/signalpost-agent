@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Steinkjer Liftutleie AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-01-21",
+  "date_evidence": "Tue, 21 Jan 2025 13:07:23 +0000",
+  "decision": "withhold",
+  "reason": "The item is a product description page for a specific piece of equipment available for rent, which constitutes marketing rather than a reportable company development.",
+  "evidence_quotes": [
+   "10m Mastelift Pris på forespørsel Ta kontakt for tiljenglighet, pris og for andre spørsmål.",
+   "Arbeidshøyde 9,9 meter Plattformhøyde 7,9 meter Maks rekkevidde 3,15 meter"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 37986,
+ "input_tokens": 1816,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:54.819944+00:00"
+}

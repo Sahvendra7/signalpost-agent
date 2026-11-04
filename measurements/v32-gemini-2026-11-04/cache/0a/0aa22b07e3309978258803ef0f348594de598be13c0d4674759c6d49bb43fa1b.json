@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Change in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer",
+   "Valmet has appointed Pia Aaltonen-Forsell (M. Soc.Sc. (Econ.), MBA) Chief Financial Officer and member of the Valmet Executive Leadership Team."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-07-24",
+  "date_evidence": "Valmet Oyj’s stock exchange release on July 24, 2026, at 09.03 a.m. EEST",
+  "decision": "publish",
+  "reason": "The article announces the appointment of a new Chief Financial Officer for the company, which is a significant corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1228,
+ "input_tokens": 2209,
+ "output_tokens": 277,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:40:11.678195+00:00"
+}

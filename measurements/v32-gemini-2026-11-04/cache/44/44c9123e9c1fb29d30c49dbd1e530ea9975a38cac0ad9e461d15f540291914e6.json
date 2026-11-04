@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fram Marine has extensive experience within floating concepts and development of offshore wind, and can assist and provide services related to:"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-09-16",
+  "date_evidence": "Posted 16.09.2020",
+  "decision": "withhold",
+  "reason": "The text discusses offshore wind potential and general industry facts before listing the company's services, constituting service marketing rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1340,
+ "input_tokens": 2518,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:36:08.033755+00:00"
+}

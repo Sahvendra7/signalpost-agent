@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet nr. 32 – Steinerskolen i Ås",
+   "Eivind Karlsen Vaktmester Steinerskolen i Ås"
+  ],
+  "subject_entity": "Stiftelsen Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is a newsletter from the school, explicitly naming 'Steinerskolen i Ås' and discussing school-specific events like 17th of May celebrations and maintenance work.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1092,
+ "input_tokens": 2994,
+ "output_tokens": 153,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:46.654724+00:00"
+}

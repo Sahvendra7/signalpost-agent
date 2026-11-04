@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2022-06-10",
+  "date_evidence": "Fredagsbladet nr 37 – 10.06.2022",
+  "decision": "publish",
+  "reason": "The article is a newsletter from the school announcing personnel changes, including new teachers and a new daily leader, as well as upcoming school events.",
+  "evidence_quotes": [
+   "Nye lærere til neste skoleår er : Olav Støylen som skal være klasselærer i 2./3.klasse. Rasmus Krogh-Sand blir skolens gymlærer",
+   "Eli Moe blir skolens framtidige daglige leder."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5361,
+ "input_tokens": 2962,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:30:27.195513+00:00"
+}

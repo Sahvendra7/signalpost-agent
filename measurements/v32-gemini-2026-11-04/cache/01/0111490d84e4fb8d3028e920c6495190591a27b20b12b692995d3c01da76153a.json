@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Steinerskolen i Ås",
+   "Daglig leder har ordet",
+   "Eli Moe blir skolens framtidige daglige leder."
+  ],
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is a newsletter from the school's management, discussing school operations, staff changes, and upcoming events at Steinerskolen i Ås.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8507,
+ "input_tokens": 2415,
+ "output_tokens": 138,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:08:59.069325+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Våre flislegger har vært hos følgende kunder / prosjekter : 1. Elvekanten Alta 2. Industri & Maling – Sortland, Harstad, Tromsø 3. Byggmester Bengt Andersen – Berlevåg Basseng 4. Håndverksgruppen Alta 5. Entreprenør Harald Nilsen – Statnett 6. Alta Panorama 7. Bygg og Malermesteren, Kirkenes 8. Interiør services – Leknes 9. DSN, Leknes 10. Roald Johansen – Markveien Terrasse 11. T. Johansen Drift 12. Tømrer Andreasen 13. Malermester Løvoll"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Personell AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a reference or portfolio list showing past customer projects where workers have been assigned, which counts as a project or property listing rather than news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1751,
+ "input_tokens": 1879,
+ "output_tokens": 332,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:30:13.399190+00:00"
+}

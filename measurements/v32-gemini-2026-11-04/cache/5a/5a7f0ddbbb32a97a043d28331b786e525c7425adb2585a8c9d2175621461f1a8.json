@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nye lærere til neste skoleår er : Olav Støylen som skal være klasselærer i 2./3.klasse. Rasmus Krogh-Sand blir skolens gymlærer",
+   "Alex Nelson slutter som SFO leder og engelsklærer og inn for ham kommer Maria Hecimovic som SFO leder og hans etterfølger i engelsk blir Sule Yuksel Ertugrul. Eli Moe blir skolens framtidige daglige leder."
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2022-06-10",
+  "date_evidence": "Fredagsbladet nr 37 – 10.06.2022",
+  "reason": "The article is a school newsletter that announces specific personnel changes, including new teachers, a new SFO leader, and a new daily manager for the school.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2587,
+ "input_tokens": 2926,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:08:23.149896+00:00"
+}

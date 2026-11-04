@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "13 måneder gamle Kangelani’s Kenai har vært med på elgjakt i Trøndelag – og imponert garva jegere som vanligvis sverger til gråhund, elghund og jämthund!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Kangelani’s Kenai",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-28",
+  "date_evidence": "Wed, 28 Oct 2026 21:07:25 +0000",
+  "decision": "withhold",
+  "reason": "The item reports on a specific dog's hunting activities in Trøndelag rather than a development, action, or event of the target club itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1301,
+ "input_tokens": 1781,
+ "output_tokens": 266,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:42.949314+00:00"
+}

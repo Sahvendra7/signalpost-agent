@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I Sandnes har vi et unikt samarbeidsprosjekt: Sammen med Kirkens Bymisjon og Handle kan vi sammen redde mat, gi arbeidstrening til unge voksne og sørge for næringsrike ferdigmåltider til mennesker som trenger det."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Matsentralen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2026-04-12",
+  "date_evidence": "April 12, 2026",
+  "decision": "publish",
+  "reason": "The text reports on a unique collaboration project involving the target company in Sandnes to save food, provide job training, and supply meals.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1408,
+ "input_tokens": 1673,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:33.101669+00:00"
+}

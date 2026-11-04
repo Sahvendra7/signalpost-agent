@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Treningssamling 30. november i Haukelandshallen",
+   "4. november 2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "BERGEN TAEKWON-DO KLUBB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-11-04",
+  "date_evidence": "4. november 2025",
+  "decision": "publish",
+  "reason": "The item announces an upcoming training gathering hosted by the club on 30 November in Haukelandshallen, published on 4 November 2025.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 5518,
+ "input_tokens": 1478,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:46:17.166386+00:00"
+}

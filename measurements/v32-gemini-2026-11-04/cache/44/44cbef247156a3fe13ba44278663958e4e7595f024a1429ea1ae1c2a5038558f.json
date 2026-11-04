@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Jarlsberg Hestesport",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a general product category or marketing page listing brands and products rather than reporting a specific company development or event.",
+  "evidence_quotes": [
+   "Vi har samlet noen av de nyeste produktene for deg her"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5352,
+ "input_tokens": 1571,
+ "output_tokens": 186,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:00.329369+00:00"
+}

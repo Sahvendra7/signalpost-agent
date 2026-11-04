@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hva koster en nettside i Norge 2026? Komplett budsjettguide",
+   "Få oversikt over hjemmeside pris Norge 2026. Lær hvordan du budsjetterer nettside kostnad riktig og unngå kostnadssprekk."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "AGENTA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-25",
+  "date_evidence": "25. april 2026",
+  "decision": "withhold",
+  "reason": "The page is an educational guide and overview of website costs in Norway rather than a report of a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1304,
+ "input_tokens": 3243,
+ "output_tokens": 255,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:37.997570+00:00"
+}

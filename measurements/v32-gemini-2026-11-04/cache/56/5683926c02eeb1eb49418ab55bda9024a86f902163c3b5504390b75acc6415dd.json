@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Äntligen är det officiell premiär för Logscom i Södra-skogarna! Onsdagen den 21 oktober mellan kl 11 och 15, är du välkommen till Vetlanda för att kolla in hur du nu äntligen kan få en kvart över om dagen"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Logscom",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The company is announcing an official premiere event for their product in a specific region, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 33173,
+ "input_tokens": 2563,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:56.087999+00:00"
+}

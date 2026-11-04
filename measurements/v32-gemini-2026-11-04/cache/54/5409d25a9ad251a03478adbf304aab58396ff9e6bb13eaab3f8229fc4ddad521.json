@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi leverer Tårnkranfører til Ø.M Fjeld på Ask utenfør Gjerdrum.",
+   "Typen Kran er Potain MDT N 178"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mobil og Tårnkranfører AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2025-05-15",
+  "date_evidence": "mai 15, 2025",
+  "decision": "publish",
+  "reason": "The company announces that it is supplying a tower crane operator to a specific project for a customer, Ø.M Fjeld, which constitutes a genuine company event (a service delivery).",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1735,
+ "input_tokens": 1815,
+ "output_tokens": 252,
+ "thoughts_tokens": 135,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:55.079528+00:00"
+}

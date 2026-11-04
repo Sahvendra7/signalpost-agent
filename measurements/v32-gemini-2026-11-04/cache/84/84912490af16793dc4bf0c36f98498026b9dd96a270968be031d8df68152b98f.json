@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Helseinnovasjonsuka arrangeres av Inovacare, Nordlandssykehuset og Bodø kommune sin felles innovasjonsarena som drives av KPB."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2023-08-24",
+  "date_evidence": "24.08.2023",
+  "decision": "publish",
+  "reason": "The article announces and details Helseinnovasjonsuka, an event driven and organized by the target company KPB.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1226,
+ "input_tokens": 2715,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:52:02.919605+00:00"
+}

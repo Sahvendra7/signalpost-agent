@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "unrelated_content",
+  "subject_entity": "Infinite Demos Sites",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2016-07-01",
+  "date_evidence": "Fri, 01 Jul 2016 20:07:26 +0000",
+  "decision": "withhold",
+  "reason": "The content is a default CMS 'Hello world' post for a demo site and does not report any genuine development of the target company.",
+  "evidence_quotes": [
+   "Welcome to Infinite Demos Sites . This is your first post."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2735,
+ "input_tokens": 1579,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:59.569093+00:00"
+}

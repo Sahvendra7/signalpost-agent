@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Få har fulgt Lia Gård så lenge som Ragnhild Jordet. Sammen med mann og barn var hun med på familieretreat alt i 1989. Så glad ble hun i stedet at hun gikk inn i styret, da Stiftelsen Lia Gård ble opprettet."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Ragnhild Jordet",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-20",
+  "date_evidence": "20. sep.",
+  "decision": "withhold",
+  "reason": "The item is an interview profile about Ragnhild Jordet and her personal history with Lia Gård rather than reporting a direct news development or corporate action of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1571,
+ "input_tokens": 2777,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:53.264862+00:00"
+}

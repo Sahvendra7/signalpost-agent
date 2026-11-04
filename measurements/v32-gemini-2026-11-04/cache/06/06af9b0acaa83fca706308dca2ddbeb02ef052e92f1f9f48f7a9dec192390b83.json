@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Stortingsrepresentant Kristoffer Sivertsen vil ha en garanti for utbygging av det omstridte Wisting-feltet for å berge norsk industri."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-23",
+  "date_evidence": "Fri, 23 Oct 2026 07:55:00 +0200",
+  "decision": "withhold",
+  "reason": "The article reports on a political statement and opinion expressed by a representative of the party regarding the Wisting oil field, which does not constitute a specific development or event of the party itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1299,
+ "input_tokens": 1940,
+ "output_tokens": 259,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:52:23.707660+00:00"
+}

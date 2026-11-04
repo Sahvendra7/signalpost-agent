@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Finalist i Frivillighetsprisen 2023"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Matsentralene",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item lists Matsentralene as a finalist for Frivillighetsprisen 2023, which refers to a group or umbrella entity rather than the exact target company Matsentralen Øst.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1491,
+ "input_tokens": 1615,
+ "output_tokens": 202,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:53.185157+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kristine Bjaadal | Norwegian Structure at Ventura Lambrate, Milan, April 2016."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristine Bjaadal",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2016-03-22",
+  "date_evidence": "Tue, 22 Mar 2016 12:49:36 +0000",
+  "decision": "publish",
+  "reason": "The item announces the participation of Kristine Bjaadal in the 'Norwegian Structure' exhibition at Ventura Lambrate in Milan, which constitutes a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1476,
+ "input_tokens": 1539,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:53.885193+00:00"
+}

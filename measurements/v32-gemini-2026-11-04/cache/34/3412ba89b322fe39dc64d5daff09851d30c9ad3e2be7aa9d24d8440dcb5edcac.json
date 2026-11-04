@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alle brannvesenene i regionen har nå gått sammen om en felles veileder.",
+   "Den nye fellesveilederen for Agder er laget for å komplettere og utdype disse kravene"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Brannvesenet Sør IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-05-26",
+  "date_evidence": "Oppdatert: 26. mai 2026",
+  "decision": "publish",
+  "reason": "Brannvesenet Sør IKS has announced the publication of a new regional guide for fire safety and building requirements in Agder, which they developed in collaboration with other fire departments.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 112707,
+ "input_tokens": 2454,
+ "output_tokens": 260,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:53.971883+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nyheter Dette skjer hos oss Nye timer, nye tilbud og praktisk informasjon til deg som trener hos oss. 27. oktober 2026 Treningslappen 2026"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "OPPDAL TRENINGSSENTER AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a general news and information section outlining upcoming youth training initiatives rather than reporting a completed company development or action.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1365,
+ "input_tokens": 1729,
+ "output_tokens": 216,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:33.058739+00:00"
+}

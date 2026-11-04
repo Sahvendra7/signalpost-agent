@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ledig stilling – Kranfrer/Fagarbeider",
+   "Stillingsutlystning: Kranfrer/fagarbeider Karmsund Havn har to Liebherr LHM 550 kraner, med en samlet lastekapasitet p 308 tonn. Som flge av kt aktivitet styrker vi teamet med to 100% faste stillinger som kranfrer/fagarbeider."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Karmsund Havn IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-14",
+  "date_evidence": "14. september, 2026",
+  "decision": "withhold",
+  "reason": "This item is a job advertisement for open positions at the target company rather than publishable corporate news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1884,
+ "input_tokens": 2377,
+ "output_tokens": 329,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:43.577575+00:00"
+}

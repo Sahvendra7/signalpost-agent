@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Årets resultater fra foreldreundersøkelsen For 3. år på rad viser foreldreundersøkelsen stor tilfredshet med vårt tilbud.",
+   "20.02.2026"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-02-20",
+  "date_evidence": "20.02.2026",
+  "reason": "The item reports on the results of a parent survey conducted for the kindergarten, which constitutes a report on the company's own performance and quality metrics.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1316,
+ "input_tokens": 1564,
+ "output_tokens": 197,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:41.878633+00:00"
+}

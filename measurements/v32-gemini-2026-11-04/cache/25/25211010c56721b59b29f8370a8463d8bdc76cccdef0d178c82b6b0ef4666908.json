@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Høringssvar - Statsbudsjettet i finanskomiteen 12.10.2026 Les Eiendom Norges høringssvar her."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Eiendom Norge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-10-12",
+  "date_evidence": "12.10.2026",
+  "decision": "publish",
+  "reason": "The item reports that Eiendom Norge has published a consultation response (\"høringssvar\") regarding the state budget, dated 2026-10-12.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1410,
+ "input_tokens": 1557,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:23.103670+00:00"
+}

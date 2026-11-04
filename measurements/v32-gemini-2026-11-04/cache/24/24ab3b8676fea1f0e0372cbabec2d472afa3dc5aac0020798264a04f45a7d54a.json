@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Den 1. september ble 30-dagersbilletten billigere for alle billettkategorier i én billettsone.",
+   "Nå er 30-dagersbilletten enda billigere!"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "AtB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a promotional announcement regarding a price reduction for tickets, which constitutes marketing of the company's services rather than a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1683,
+ "input_tokens": 2607,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:58.116799+00:00"
+}

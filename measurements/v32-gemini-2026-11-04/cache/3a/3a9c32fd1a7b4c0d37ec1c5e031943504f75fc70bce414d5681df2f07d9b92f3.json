@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Stiftelsen 10. august",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-24",
+  "date_evidence": "24. september 2026",
+  "decision": "publish",
+  "reason": "The article reports on the foundation's ongoing collaboration with Voksenåsen Kultursenter, which has resulted in 240 Swedish teachers visiting the foundation's learning center over the past two years.",
+  "evidence_quotes": [
+   "Gjennom samarbeidet med Voksenåsen Kultursenter har rundt 240 svenske lærere besøkt Stiftelsen 10. august.",
+   "Samarbeidet mellom Stiftelsen 10. august og Voksenåsen Kultursenter startet i 2024.",
+   "siden har rundt 240 svenske lærere besøkt oss som en del av Hågkomstresor."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1468,
+ "input_tokens": 2836,
+ "output_tokens": 312,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:30:43.301965+00:00"
+}

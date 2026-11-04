@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På oppdrag for Arbeids- og velferdsdirektoratet skal Proba undersøke hvordan samarbeidet mellom enhet med ansvar for flyktninger i kommunen og Nav fungerer.",
+   "Proba skal innhente kunnskap om suksessfaktorer for godt samarbeid og gode resultater.",
+   "I oppdraget skal vi også undersøke den videre oppfølgingen i Nav av tidligere introduksjonsdeltakere."
+  ],
+  "subject_entity": "Proba",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The text describes a research project being conducted by Proba, using the first-person pronoun 'vi' to refer to the company's work on the assignment.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1448,
+ "input_tokens": 1309,
+ "output_tokens": 201,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:07.010956+00:00"
+}

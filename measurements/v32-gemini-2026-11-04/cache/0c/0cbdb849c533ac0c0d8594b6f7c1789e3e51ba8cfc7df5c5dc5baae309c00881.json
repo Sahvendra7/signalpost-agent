@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tidsskjema Vest-Norsk mesterskap 12. september"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-11",
+  "date_evidence": "11. september 2026",
+  "decision": "publish",
+  "reason": "The item announces the schedule for the Vest-Norsk mesterskap, which is an event the club is participating in or hosting.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 13378,
+ "input_tokens": 1474,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:35.786909+00:00"
+}

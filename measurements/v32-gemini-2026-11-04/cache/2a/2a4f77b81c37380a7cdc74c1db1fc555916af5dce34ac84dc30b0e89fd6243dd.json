@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det nye havneanlegget er et viktig tiltak for å legge til rette for økt cruiseaktivitet.",
+   "Karmsund Havn ønsker både skip, mannskap og gjester hjertelig velkommen tilbake – og ser frem til mange flere anløp i årene som kommer."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Karmsund Havn IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-10-10",
+  "date_evidence": "10. oktober, 2025",
+  "decision": "publish",
+  "reason": "The article reports on the first cruise ship arrival at the new port facility in Skudeneshavn, welcoming the vessel and highlighting Karmsund Havn's involvement and future cruise activity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1542,
+ "input_tokens": 2252,
+ "output_tokens": 276,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:00:33.235567+00:00"
+}

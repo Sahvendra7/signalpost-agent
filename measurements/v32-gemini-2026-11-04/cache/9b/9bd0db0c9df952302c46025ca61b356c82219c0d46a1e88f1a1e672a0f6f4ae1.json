@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Stortingsrepresentant Bjørn-Kristian Svendsrud reagerer på at arbeids- og inkluderingsminister Kjersti Stenseng (Ap) omtaler de nye plassene for varig tilrettelagt arbeid (VTA) i statsbudsjettet for 2027 som en satsing."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-11-03",
+  "date_evidence": "Tue, 03 Nov 2026 06:30:00 +0100",
+  "decision": "withhold",
+  "reason": "The article is a political commentary and criticism of a government minister's statements, which constitutes opinion rather than a specific development or event of the party itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2703,
+ "input_tokens": 1940,
+ "output_tokens": 283,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:25.111409+00:00"
+}

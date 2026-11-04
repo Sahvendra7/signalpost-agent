@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det viser en ny rapport fra KPB som på oppdrag fra Rana Utvikling har analysert hvilke ringvirkninger FREYR bidrar med gjennom sin satsing på batteriproduksjon i Mo i Rana.",
+   "Analysen som KPB har gjennomført viser at etableringen av Freyr gir ringvirkninger over store deler av landet."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2023-09-21",
+  "date_evidence": "Erik Liland 21.09.2023",
+  "decision": "publish",
+  "reason": "The target company KPB published a new report analyzing the economic impact of FREYR's battery production initiative in Mo i Rana.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1506,
+ "input_tokens": 3345,
+ "output_tokens": 269,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:33.200310+00:00"
+}

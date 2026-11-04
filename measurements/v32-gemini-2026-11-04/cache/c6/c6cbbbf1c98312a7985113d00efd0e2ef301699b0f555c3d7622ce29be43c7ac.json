@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Våre kunder og prosjektene vi har jobbet med: 1. X5 Elektro ,Alta –Alta Nærsykehus 2. OP Elektro, Lakselv –Alta Omsorgssenteret 3. AB Elektro, Alta –Markveien Terrasse 4. Vadsø Installasjon – Kvenmuseum Vadsø"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Personell AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-12-04",
+  "date_evidence": "des 4, 2020",
+  "decision": "withhold",
+  "reason": "The content is a list of reference projects and customers, which falls under the category of project or property listings rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 95732,
+ "input_tokens": 1790,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T23:16:37.727333+00:00"
+}

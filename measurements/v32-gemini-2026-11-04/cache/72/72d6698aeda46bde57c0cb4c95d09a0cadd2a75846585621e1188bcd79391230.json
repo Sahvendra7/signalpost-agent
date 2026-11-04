@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Besøk hos NRK's Nyhetsmorgen: Tilbake fra ferie til jobb Se video fra da jeg var hos NRK's Nyhetsmorgen 28. okt 2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "publish",
+  "reason": "The item announces and shares a video of the target company's participation/appearance on NRK's Nyhetsmorgen on October 28, 2025.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1377,
+ "input_tokens": 1567,
+ "output_tokens": 250,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:18.025780+00:00"
+}

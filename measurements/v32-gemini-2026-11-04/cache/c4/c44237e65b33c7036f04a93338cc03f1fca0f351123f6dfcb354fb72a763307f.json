@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "jan. 23. The Brazz Brothers fredag 23. januar 2026 15:30 16:30",
+   "The Brazz Brothers — Nesodden jazzklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesodden jazzklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-01-23",
+  "date_evidence": "fredag 23. januar 2026",
+  "decision": "publish",
+  "reason": "The item announces a concert event hosted by the target club featuring The Brazz Brothers on January 23, 2026.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1258,
+ "input_tokens": 1555,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:22.906546+00:00"
+}

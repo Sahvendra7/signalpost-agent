@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 12 år har vår organisasjon Rett Fram Opplevelser jobbet med barn og unge i Norge som vokser opp i ekstremt vanskelige kår."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Rett Fram Opplevelser",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-06-19",
+  "date_evidence": "19. juni",
+  "decision": "withhold",
+  "reason": "The text is an opinion piece/commentary on youth crime and prevention rather than a report on a specific new company event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1472,
+ "input_tokens": 2965,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:13.166048+00:00"
+}

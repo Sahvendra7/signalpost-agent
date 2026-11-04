@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På oppdrag fra Justis- og beredskapsdepartementet har NKVTS undersøkt hva kjønn og likestilling betyr for vold i parforhold.",
+   "Studien «Vold i … Continue reading “NKVTS-rapport: Vold i parforhold – kjønn, likestilling og makt “ Posted by Margunn Bjørnholt"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "NKVTS",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-06-20",
+  "date_evidence": "20 June 2019",
+  "decision": "withhold",
+  "reason": "The item reports on a research report published by NKVTS, not a development or event concerning the target company Margunn Bjørnholt.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 4752,
+ "input_tokens": 1722,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:30.201838+00:00"
+}

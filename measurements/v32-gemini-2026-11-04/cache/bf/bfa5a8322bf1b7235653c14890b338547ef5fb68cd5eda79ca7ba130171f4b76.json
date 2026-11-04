@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "EMD avsa i 2017 en avgjørelse som har sendt viktige signaler til norske domstoler om samværssabotasje ."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "EMD",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article discusses legal rules and European Court of Human Rights rulings regarding custody and visitation disputes rather than reporting a specific business development or action of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1318,
+ "input_tokens": 3575,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:02.966518+00:00"
+}

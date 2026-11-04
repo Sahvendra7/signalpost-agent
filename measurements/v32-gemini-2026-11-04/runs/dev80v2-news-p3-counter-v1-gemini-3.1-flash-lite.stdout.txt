@@ -1,0 +1,26 @@
+  25/80
+  50/80
+  75/80
+  80/80
+{
+ "experiment_id": "dev80v2-news-p3-counter-v1-gemini-3.1-flash-lite",
+ "items": 80,
+ "ok": 80,
+ "api_failures": 0,
+ "api_calls_made": 78,
+ "cache_hits": 2,
+ "input_tokens": 218359,
+ "output_tokens": 19285,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.083517,
+ "latency_ms_p50": 1457,
+ "decisions": {
+  "publish": 34,
+  "withhold": 45,
+  "uncertain": 1
+ },
+ "errors": {},
+ "budget_stop": null,
+ "quotes_total": 122,
+ "quotes_verified": 121
+}

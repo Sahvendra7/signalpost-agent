@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Jentene på Tunet er nominert til finalen i Top Food Gifts 2026",
+   "Alt vi lager, produseres fortsatt i fabrikken i vår ombygde låve på gården i Selbu"
+  ],
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person by the company Jentene på Tunet, discussing their nomination for an international food competition and their production process.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 997,
+ "input_tokens": 2061,
+ "output_tokens": 155,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:51.560283+00:00"
+}

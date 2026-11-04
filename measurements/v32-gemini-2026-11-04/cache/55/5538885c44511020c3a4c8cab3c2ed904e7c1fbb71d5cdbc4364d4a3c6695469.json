@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Her gir jeg 5 tips: Hvordan ta vare på din mentale helse i usikre tider."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The text provides general advice and tips on how to take care of mental health, which falls under advice or educational content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1230,
+ "input_tokens": 1699,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:22.878384+00:00"
+}

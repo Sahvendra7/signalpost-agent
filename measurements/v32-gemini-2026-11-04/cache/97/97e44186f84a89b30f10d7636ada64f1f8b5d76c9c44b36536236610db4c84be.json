@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "mars 14. kÖök med Sarah Camille & Tuva Færden lørdag 14. mars 2026 15:30 16:30",
+   "kÖök med Sarah Camille & Tuva Færden — Nesodden jazzklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesodden jazzklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-03-14",
+  "date_evidence": "14. mars 2026",
+  "decision": "publish",
+  "reason": "The item announces an upcoming concert event hosted by the target company on March 14, 2026.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1438,
+ "input_tokens": 1580,
+ "output_tokens": 260,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:48.086733+00:00"
+}

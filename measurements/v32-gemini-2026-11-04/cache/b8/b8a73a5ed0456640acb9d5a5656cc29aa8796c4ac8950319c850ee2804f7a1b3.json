@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kristiania stilte med totalt tre lag, i regi av både Kristiania bedriftsidrettslag og Fagskolen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristiania bedriftsidrettslag",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2023-11-17",
+  "date_evidence": "Fri, 17 Nov 2023 08:36:23 +0000",
+  "decision": "publish",
+  "reason": "The item reports on the target company's participation in the Holmenkollstafetten event, fulfilling the criteria for a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1452,
+ "input_tokens": 1702,
+ "output_tokens": 245,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:48.146153+00:00"
+}

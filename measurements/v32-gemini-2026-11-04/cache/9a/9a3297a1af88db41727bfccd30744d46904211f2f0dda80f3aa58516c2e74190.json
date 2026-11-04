@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fra 01.01.2026 vil Lia Gård retreatsenter ha nye avmeldingsregler."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Lia Gård retreatsenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-01-15",
+  "date_evidence": "15.01.2026",
+  "decision": "publish",
+  "reason": "The text announces a company development regarding new cancellation rules implemented by the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1350,
+ "input_tokens": 1753,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:48.044249+00:00"
+}

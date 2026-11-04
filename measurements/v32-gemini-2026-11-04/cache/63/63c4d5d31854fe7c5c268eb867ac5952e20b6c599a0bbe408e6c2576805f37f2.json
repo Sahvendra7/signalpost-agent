@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi utvider sortimentet og tilbyr nå 3 varianter Adagio",
+   "4. juni 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-06-04",
+  "date_evidence": "4. juni 2026",
+  "reason": "The company announces an expansion of their product range by stocking new variants of the Querkus Adagio veneer.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1544,
+ "input_tokens": 1755,
+ "output_tokens": 171,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:06:42.106499+00:00"
+}

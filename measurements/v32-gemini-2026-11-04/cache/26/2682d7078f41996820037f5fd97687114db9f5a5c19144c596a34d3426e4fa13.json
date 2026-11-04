@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Oslofinér",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-02-10",
+  "date_evidence": "10. februar 2026",
+  "decision": "publish",
+  "reason": "The company announces the addition of a new product line, Querkus Terra, to its stock, which constitutes a specific development for the company.",
+  "evidence_quotes": [
+   "Querkus Terra - Et klassisk eikefinér i ny drakt",
+   "Vi lagerfører fire karakterfulle nyanser"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1247,
+ "input_tokens": 1853,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:30:38.081067+00:00"
+}

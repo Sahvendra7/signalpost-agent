@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 2025 fylte Jentene på Tunet 10 år. Ti år med håndverkssjokolade.",
+   "Derfor bestemte vi oss for å utvikle flere nye produkter dette året. Ett av dem skulle vise seg å få en helt spesiell reise. Vi kalte gaveesken Selbu Rose ."
+  ],
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person by the company Jentene på Tunet, describing their own history, product development, and the 10-year anniversary of the business.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3672,
+ "input_tokens": 2014,
+ "output_tokens": 186,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:34.234276+00:00"
+}

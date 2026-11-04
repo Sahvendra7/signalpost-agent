@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "When is the right time to buy an apartment? Learn from our experts",
+   "Price Property Type bedrooms Property Size It's a perfect match INTERESTED IN THIS PROPERTY? WRITE A MESSAGE OR CALL US Contact Us"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Tønsberg Roklub",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a property listing or real estate advertisement ('When is the right time to buy an apartment?'), which does not report a publishable corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1263,
+ "input_tokens": 2537,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:45:37.912191+00:00"
+}

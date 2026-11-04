@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet delivers recovery boiler modification to Stora Enso Varkaus mill in Finland to improve reliability and cost efficiency",
+   "Valmet Oyj’s trade press release on August 28, 2026, at 8:30 a.m. EEST Valmet will deliver a recovery boiler modification including a new secondary superheater to Stora Enso’s Varkaus Mill in Finland."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-28",
+  "date_evidence": "Valmet Oyj’s trade press release on August 28, 2026",
+  "decision": "publish",
+  "reason": "The press release announces that Valmet has received an order to deliver a recovery boiler modification and signed a cooperation agreement with Stora Enso's Varkaus Mill.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1382,
+ "input_tokens": 2382,
+ "output_tokens": 300,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:03.030594+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rådgiver i Fremskrittspartiets hovedorganisasjon",
+   "Slik søker du: Send CV og søknad via Finn hvor du beskriver hva du kan og ønsker å bidra med i Fremskrittspartiets hovedorganisasjon."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-16",
+  "date_evidence": "Publisert 16.10.2026 kl.14:15",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for a position as an advisor in the party's main organization, which is classified as careers content rather than company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1527,
+ "input_tokens": 2607,
+ "output_tokens": 268,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:23.935716+00:00"
+}

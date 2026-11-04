@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oppstart rekkehus i Birtavarre. – Storesté Entreprenør AS",
+   "Denne uken startet vi opp med bygging av rekkehus beliggende på det nye Bjørkholt boligfeltet i Birtavarre."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Storesté Entreprenør AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2017-10-27",
+  "date_evidence": "27 okt 2017",
+  "decision": "publish",
+  "reason": "The text announces that Storesté Entreprenør AS has started construction on a new housing project in Birtavarre.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1640,
+ "input_tokens": 1743,
+ "output_tokens": 254,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:03.333990+00:00"
+}

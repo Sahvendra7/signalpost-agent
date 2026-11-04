@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sebastian Saltrø Ytrevik (23) er valgt til ny leder i Fremskrittspartiets Ungdom.",
+   "Publisert 12.10.2026 kl.13:09"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiets Ungdom",
+  "subject_relation": "other_group_entity",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-10-12",
+  "date_evidence": "Publisert 12.10.2026 kl.13:09",
+  "decision": "publish",
+  "reason": "The article announces the election of a new leader for Fremskrittspartiets Ungdom (FpU), which is the youth organization of the target company Fremskrittspartiet.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1347,
+ "input_tokens": 2027,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:48.755799+00:00"
+}

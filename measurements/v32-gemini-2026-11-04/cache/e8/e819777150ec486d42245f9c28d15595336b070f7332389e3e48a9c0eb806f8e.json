@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "15 år siden Utøya terroren – Morten Pedersen ledet søket",
+   "Morten Pedersen ble oppringt direkte fra myndighetene og ble bedt om å overta søket etter savnede og deres eiendeler mellom Utvika og Utøya."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Morten Pedersen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-07-22",
+  "date_evidence": "22/07/2026",
+  "decision": "withhold",
+  "reason": "The article describes the personal history of Morten Pedersen regarding the 2011 Utøya terror attack, which is not a development or event related to the company MPENERGI AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5304,
+ "input_tokens": 1783,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:27:47.122758+00:00"
+}

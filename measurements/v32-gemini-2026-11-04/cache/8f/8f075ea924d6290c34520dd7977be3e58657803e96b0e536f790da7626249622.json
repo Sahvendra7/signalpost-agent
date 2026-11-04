@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet will supply a Valmet IQ Quality Control System for corrugator to Sheets Unlimited",
+   "The order was included in Valmet’s orders received in the second quarter of 2026."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-12",
+  "date_evidence": "Valmet Oyj’s trade press release on August 12, 2026, at 3:30 p.m. EEST",
+  "decision": "publish",
+  "reason": "The article announces that Valmet has secured an order to supply a quality control system to Sheets Unlimited, which constitutes a genuine company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1354,
+ "input_tokens": 2483,
+ "output_tokens": 259,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:40:21.804384+00:00"
+}

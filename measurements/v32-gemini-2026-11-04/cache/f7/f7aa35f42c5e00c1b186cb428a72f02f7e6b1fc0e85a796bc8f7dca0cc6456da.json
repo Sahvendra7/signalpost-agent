@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alexander Rybak has launched a brand new line of clothes and merchandise."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2022-06-22",
+  "date_evidence": "Jun 22, 2022",
+  "decision": "publish",
+  "reason": "The text announces the target company's launch of a new product line of clothes and merchandise.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1417,
+ "input_tokens": 1742,
+ "output_tokens": 201,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:58.111244+00:00"
+}

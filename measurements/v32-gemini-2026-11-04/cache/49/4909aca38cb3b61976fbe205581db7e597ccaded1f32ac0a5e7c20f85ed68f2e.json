@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Derfor har bursdagshjelpen blitt noe av det fineste og viktigste vi jobber med hver eneste dag.",
+   "For å kunne arrangere over 300 barnebursdager i løpet av ett år kreves det midler, det kreves mennesker i form av frivillige"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Rett Fram Opplevelser",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-18",
+  "date_evidence": "18. sep.",
+  "decision": "withhold",
+  "reason": "The text is an opinion or commentary piece written by Stine Myklemyr on behalf of the organization about the social challenges surrounding children's birthdays, rather than reporting a distinct new development, action or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1531,
+ "input_tokens": 3034,
+ "output_tokens": 269,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:00:08.224729+00:00"
+}

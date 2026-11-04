@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I Rett Fram Opplevelser prøver vi å finne ut hvordan vi skal hjelpe alle familiene som tar kontakt.",
+   "Vi er jo så opptatt med å feire flere hundre barnebursdager i året, gjennomføre flere titalls julefeiringer og dele ut julegaver til flere hundre barnefamilier."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Rett Fram Opplevelser",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-08",
+  "date_evidence": "8. okt.",
+  "decision": "withhold",
+  "reason": "The item is an opinion piece/commentary by Stine Myklemyr on public economic debate and poverty among families, discussing the organization's general work rather than reporting a specific new development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1627,
+ "input_tokens": 3132,
+ "output_tokens": 276,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:48.321310+00:00"
+}

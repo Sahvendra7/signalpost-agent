@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "KPB søker seniorrådgiver",
+   "Vi utvider teamet vårt for å styrke utviklingen av Nord-Norges nærings- og samfunnsliv!",
+   "Søknadsfrist: 21. mars 2024"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-02-28",
+  "date_evidence": "28.02.2024",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement seeking a senior advisor, which is careers content rather than publishable corporate news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1486,
+ "input_tokens": 2159,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:28:53.342536+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Furulunds IK leasar två robotgräsklippare och en linjeringsrobot från Trafik & Fritid.",
+   "19 april, 2024 ”Det sparar oss oerhört mycket tid”"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Furulunds IK",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-04-19",
+  "date_evidence": "19 april, 2024",
+  "decision": "withhold",
+  "reason": "The article is a customer profile and interview featuring Furulunds IK discussing their use of leased equipment from Trafik & Fritid, which acts as promotional customer content rather than a primary announcement of a company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1898,
+ "input_tokens": 3000,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:28.546567+00:00"
+}

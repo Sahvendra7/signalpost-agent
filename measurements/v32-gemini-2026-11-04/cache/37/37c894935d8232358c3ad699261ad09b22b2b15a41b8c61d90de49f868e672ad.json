@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Partileder Sylvi Listhaug står midt på Place de la Républic i Paris – selve episenteret av protestene som har rammet Frankrike den siste tiden.",
+   "Publisert 29.10.2026 kl.15:30"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-29",
+  "date_evidence": "Publisert 29.10.2026 kl.15:30",
+  "decision": "withhold",
+  "reason": "The article is an opinion piece where the party leader comments on political events in France and uses them to advocate for the party's own political platform. It does not report on a specific development, action, or event of the party itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1298,
+ "input_tokens": 2699,
+ "output_tokens": 292,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:52:53.706638+00:00"
+}

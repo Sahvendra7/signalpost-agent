@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi skreddersyr komplette og profesjonelle møteromsløsninger"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "PROVENDO AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article is a promotional description of the company's meeting room solutions and services, rather than reporting a specific development, action, or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1382,
+ "input_tokens": 2930,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:27.815561+00:00"
+}

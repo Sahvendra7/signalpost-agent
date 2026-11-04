@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Viktig informasjon til medlemmer av Lux Fide",
+   "Elotec Orion alarmoverføring"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Lux Fide",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page lists product and equipment updates directed at members rather than reporting a specific corporate development, action or event of the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1633,
+ "input_tokens": 1621,
+ "output_tokens": 193,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:13.327317+00:00"
+}

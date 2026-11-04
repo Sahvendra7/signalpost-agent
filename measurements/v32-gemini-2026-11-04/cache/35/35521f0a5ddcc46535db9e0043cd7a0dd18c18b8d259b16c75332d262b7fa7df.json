@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "A Quick Refresher Oracle EPM Cloud is an integrated enterprise performance management platform built on Oracle Cloud Infrastructure."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Oracle EPM Cloud",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-06-26",
+  "date_evidence": "AI in Oracle EPM Cloud 26 June 2026 Guido",
+  "decision": "withhold",
+  "reason": "The article is an educational and informational guide about AI capabilities within Oracle EPM Cloud rather than a specific development or action undertaken by Inlumi AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1306,
+ "input_tokens": 2577,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:17.954493+00:00"
+}

@@ -12,6 +12,7 @@ configured key. They change often; re-check before any integration.
 |---|---|
 | Key variable | `GEMINI_API_KEY` present (value never printed; only its presence and that it is a plain token were checked) |
 | Other Google variables | none (`GOOGLE_API_KEY`, `GOOGLE_GENAI_API_KEY` not set) |
+| Additional keys | The owner later added `GEMINI_API_KEY_1` and `GEMINI_API_KEY_2`. Both are also **Free Tier** (same probe) and belong to separate projects (they ran while the first project was at its daily cap). The runs were spread across the three projects at the owner's request. Using several projects to exceed free-tier limits may conflict with Google's terms on circumventing usage limits; production should use one billed project. |
 | Billing tier | **Free Tier.** Verified by one request to `gemini-3.1-pro-preview` (a model with no free tier): `429 RESOURCE_EXHAUSTED`, quota ids `GenerateContentInputTokensPerModelPerDay-FreeTier`, limit 0. No billing account is linked, so no call in this research could be billed. Exceeding a free-tier limit returns 429; it does not bill. |
 | Transport | Native REST `POST /v1beta/models/{model}:generateContent`, key only in the `x-goog-api-key` header (never in a URL, log, report, fixture or commit). Errors are stored key-redacted and truncated. A scan of every new file for the key value found none. |
 

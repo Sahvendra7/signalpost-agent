@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Gode råd når barn ikke vil på samvær – samværsvegring",
+   "Hva gjør du når et barn nekter å dra på samvær? Samværsvegring – det er ikke uvanlig at barn i ulike faser kvier seg for å dra på samvær, såkalt samværsvegring."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "ADVOKATFIRMAET RIEBER-MOHN AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item provides legal advice and guidance regarding children's visitation refusal (samværsvegring) rather than reporting a specific event or development concerning the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1503,
+ "input_tokens": 3735,
+ "output_tokens": 260,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:53.151449+00:00"
+}

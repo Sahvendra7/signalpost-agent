@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det er derfor Fremskrittspartiet har kjempet for å redusere drivstoffavgiftene og halvere matmomsen, sier partileder Sylvi Listhaug.",
+   "FrP vil gjeninnføre kuttet på drivstoffavgiftene og halvere matmomsen."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-09",
+  "date_evidence": "Publisert 09.10.2026 kl.10:10",
+  "decision": "withhold",
+  "reason": "The article is a political opinion piece expressing the party's policy positions and criticism of other parties, rather than reporting on a specific development or event of the organization itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1495,
+ "input_tokens": 2342,
+ "output_tokens": 285,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:33.903590+00:00"
+}

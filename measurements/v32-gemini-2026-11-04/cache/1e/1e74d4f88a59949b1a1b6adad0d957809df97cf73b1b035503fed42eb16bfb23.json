@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Båndtvangen er over – eller er den egentlig det?",
+   "Den nasjonale båndtvangen er over, men lokale regler kan fortsatt gjelde. Her får du en enkel oversikt over reglene i Sola og råd om ansvar"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Sola Hundesenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-15",
+  "date_evidence": "Aktuelt 15. september 2026",
+  "decision": "withhold",
+  "reason": "The article provides general advice and information regarding local leash laws and dog ownership responsibilities, rather than reporting on a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1755,
+ "input_tokens": 3351,
+ "output_tokens": 255,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:48.189268+00:00"
+}

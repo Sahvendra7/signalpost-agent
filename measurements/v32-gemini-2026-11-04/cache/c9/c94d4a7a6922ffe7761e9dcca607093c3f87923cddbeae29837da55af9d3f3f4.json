@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Konferansen arrangeres av Sorgstøttealliansen, hvor Foreningen Vi som har et barn for lite er en av medlemsorganisasjonene."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Sorgstøttealliansen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The conference is organized by Sorgstøttealliansen, and the target company is merely one of several member organizations, meaning the event is not a development of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1343,
+ "input_tokens": 1923,
+ "output_tokens": 220,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:58.751924+00:00"
+}

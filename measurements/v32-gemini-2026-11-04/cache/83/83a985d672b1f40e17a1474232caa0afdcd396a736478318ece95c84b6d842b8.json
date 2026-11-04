@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Finansdepartementet foreslår endringer i reglene om tilgang til opplysninger i register over reelle rettighetshavere."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Finansdepartementet",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-12-19",
+  "date_evidence": "19. desember 2023",
+  "decision": "withhold",
+  "reason": "The text discusses legislative changes proposed by Finansdepartementet and links to Den norske Revisorforening, rather than reporting any development or event concerning Bjørgvin Revisjon AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1275,
+ "input_tokens": 1666,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:35:22.969339+00:00"
+}

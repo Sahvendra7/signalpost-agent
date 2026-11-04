@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-05-18",
+  "date_evidence": "mai 18, 2026",
+  "decision": "publish",
+  "reason": "The company announces its participation in the international final of the Top Food Gifts 2026 competition held in Crete, following their previous award as 'Årets Matgave 2025'.",
+  "evidence_quotes": [
+   "Jentene på Tunet er nominert til finalen i Top Food Gifts 2026 , som arrangeres på Kreta i mai.",
+   "Nominasjonen vår kommer etter at vi ble kåret til Årets Matgave 2025 under Trøndersk Matfestival."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 22875,
+ "input_tokens": 2608,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:28:19.709392+00:00"
+}

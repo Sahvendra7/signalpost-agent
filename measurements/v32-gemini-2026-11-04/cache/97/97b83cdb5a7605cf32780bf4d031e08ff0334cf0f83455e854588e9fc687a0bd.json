@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "NVE har kommet ut med en veileder for de som har behov for måledata i forbindelse med planlegging, modellering og prosjektering av overvannstiltak.",
+   "I forbindelse med arbeidet med veilederen ble det lånt en PCM4 vannføringsmåler fra Rosim til NVE."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "NVE / Rosim",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text discusses an NVE guideline and compares measurement technologies rather than reporting a newsworthy development or action of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1445,
+ "input_tokens": 2482,
+ "output_tokens": 244,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:03.139257+00:00"
+}

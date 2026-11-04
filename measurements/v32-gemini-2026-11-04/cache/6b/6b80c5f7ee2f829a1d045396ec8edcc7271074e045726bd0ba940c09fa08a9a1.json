@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rapport: Q2 og H1 2026",
+   "19. august 2026",
+   "Kvartalet satte ny volumrekord med 893 MNOK formidlet",
+   "Siden oppstarten i 2016 har nå totalt 10 milliarder kroner blitt formidlet gjennom plattformen"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kameo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "financial_result",
+  "publication_date": "2026-08-19",
+  "date_evidence": "19. august 2026",
+  "decision": "publish",
+  "reason": "The article reports on the company's financial performance for Q2 and H1 2026, including specific volume records and milestones achieved by the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2146,
+ "input_tokens": 1677,
+ "output_tokens": 279,
+ "thoughts_tokens": 565,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:50.490695+00:00"
+}

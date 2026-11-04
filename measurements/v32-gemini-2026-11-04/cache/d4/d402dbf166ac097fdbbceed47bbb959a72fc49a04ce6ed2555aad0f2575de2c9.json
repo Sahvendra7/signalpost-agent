@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Da er det fredag før vinterferien og skolen har lagt bak seg en uke med sirkus, en strålende kveldsforestilling og i dag en ny forestilling med avsluttende sirkusdisco.",
+   "Fredag 4.mars drar barneskolen til ishallen i ski, for å stå på skøyter."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-02-18",
+  "date_evidence": "18. februar 2022",
+  "decision": "publish",
+  "reason": "The article reports on school activities, specifically a completed circus week and upcoming school events, which constitute genuine news about the target company's operations.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1641,
+ "input_tokens": 3823,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:03.075042+00:00"
+}

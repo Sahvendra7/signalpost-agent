@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "OSLOFINÉR AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-03-18",
+  "date_evidence": "18. mars 2026",
+  "decision": "publish",
+  "reason": "The company announces that a new color variant, Cammello, has been added to their stock of Querkus Terra products.",
+  "evidence_quotes": [
+   "Querkus Terra - enda en farge lagerført; Cammello",
+   "Fargen Cammello er for fin til ikke å ha lagerført!"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1356,
+ "input_tokens": 1737,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:29:33.189936+00:00"
+}

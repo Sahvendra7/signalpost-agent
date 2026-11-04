@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny kaptein til Matsentral-skuta"
+  ],
+  "content_category": "uncertain",
+  "subject_entity": "Matsentral-skuta",
+  "subject_relation": "unclear",
+  "is_about_target_company": "unclear",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "uncertain",
+  "reason": "The article text was not captured and the title only gives a vague metaphor without sufficient details to verify if it concerns the target company.",
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2957,
+ "input_tokens": 1605,
+ "output_tokens": 178,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:59.650795+00:00"
+}

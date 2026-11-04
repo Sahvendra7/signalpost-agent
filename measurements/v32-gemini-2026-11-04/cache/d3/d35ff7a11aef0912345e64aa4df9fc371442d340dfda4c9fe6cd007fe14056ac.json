@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "How to use the To Lead model The model can be used to assess: Existing leadership program and trainings in an organisation",
+   "Drawing on our collective expertise and experiences, we developed the To Lead model, a holistic framework designed to empower leaders at all levels to excel in their roles."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "C2U Group",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item describes and explains a leadership assessment model rather than reporting a specific company news event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1349,
+ "input_tokens": 2092,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:29:32.997270+00:00"
+}

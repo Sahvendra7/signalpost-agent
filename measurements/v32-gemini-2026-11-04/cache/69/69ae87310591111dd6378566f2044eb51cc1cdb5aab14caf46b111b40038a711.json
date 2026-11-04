@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "91UL anlegget – Kjeller Aero Senter"
+  ],
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article explicitly identifies the subject as Kjeller Aero Senter, which is the target company.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12183,
+ "input_tokens": 972,
+ "output_tokens": 106,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:08:57.745666+00:00"
+}

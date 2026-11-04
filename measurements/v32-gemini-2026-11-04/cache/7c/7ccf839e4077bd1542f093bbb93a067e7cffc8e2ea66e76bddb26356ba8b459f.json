@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sep 13, 2020",
+   "This year’s artists Alexander Rybak, Rune Larsen, Maria Haukaas Mittet, Hans Marius Hoff Mittet and Ingrid Berg Mehus are the star team that will create a magical Christmas atmosphere in churches all over southern Norway in November and December!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2020-09-13",
+  "date_evidence": "Sep 13, 2020",
+  "decision": "publish",
+  "reason": "The item announces the target company's participation and upcoming tour schedule for the 'Stille Natt, Hellige Natt' Christmas concert tour.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1491,
+ "input_tokens": 1905,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:23.185288+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet to divest its pump business to Metso",
+   "Valmet has agreed to sell its pump business to Metso."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2026-08-24",
+  "date_evidence": "Aug 24, 2026",
+  "decision": "publish",
+  "reason": "The text reports that Valmet has agreed to sell its pump business to Metso, representing a major corporate development and ownership change.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1455,
+ "input_tokens": 2020,
+ "output_tokens": 216,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:36:48.103368+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dette har også vært kjernen i initiativet FORCE som vi etablerte i løpet av 2025. Sammen med partnere fra hele den nordiske regionen har vi startet et treårig prosjekt for å fremme kunstens rolle i demokratisk dialog og ytringsfrihet.",
+   "For å markere dette inviterte Bane NOR Eiendom i samarbeid med Mesén i november til en åpen prekvalifisering for en jubileumsutstilling på Oslo S."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2025-12-18",
+  "date_evidence": "18. des.",
+  "decision": "publish",
+  "reason": "The article is an end-of-year review written by Mesén summarizing its own activities, projects such as FORCE, and exhibitions completed during 2025.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1644,
+ "input_tokens": 3183,
+ "output_tokens": 300,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:33.338152+00:00"
+}

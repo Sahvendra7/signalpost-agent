@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny bok: Vold i nære relasjoner – Margunn Bjørnholt"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2019-08-10",
+  "date_evidence": "2019-08-10T15:08:34+00:00",
+  "decision": "publish",
+  "reason": "The item announces the publication of a new book authored by Margunn Bjørnholt, which constitutes a professional development and activity of the target entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1254,
+ "input_tokens": 1516,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:31.704580+00:00"
+}

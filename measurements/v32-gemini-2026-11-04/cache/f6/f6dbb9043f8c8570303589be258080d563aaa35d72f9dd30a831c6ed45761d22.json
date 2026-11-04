@@ -1,0 +1,38 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det er mange måter å behandle tinnitus på. Mange har god hjelp i å få tilpasset høreapparater, tinnituspute og andre tekniske løsninger",
+   "Vi anbefaler deg derfor å starte med en hørselstest, resultatet vil danne grunnlag for videre veiledning"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Melhus hørsel",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-02-01",
+  "date_evidence": "Fri, 01 Feb 2019 18:27:59 +0000",
+  "decision": "withhold",
+  "reason": "The article provides general educational information and advice regarding tinnitus treatment rather than reporting on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 128408,
+ "input_tokens": 1650,
+ "output_tokens": 269,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  2.0,
+  38.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:22.403558+00:00"
+}

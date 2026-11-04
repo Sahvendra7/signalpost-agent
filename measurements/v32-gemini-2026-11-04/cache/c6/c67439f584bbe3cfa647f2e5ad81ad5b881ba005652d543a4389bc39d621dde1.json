@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet will supply two Valmet IQ Quality Control Systems (QCS) to Viet Nam KORO Paper Joint Stock Company for its new tissue production lines TM3 and TM4 in Thanh Hoa Province, Vietnam.",
+   "Sep 9, 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-09-09",
+  "date_evidence": "Sep 9, 2026",
+  "decision": "publish",
+  "reason": "The article reports that Valmet received an order to supply quality control systems to Viet Nam KORO Paper.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1324,
+ "input_tokens": 2626,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:17.973086+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi fick den stora äran att anlägga denna hos Arvika Idrottscenter som drivs av två idrottslegender, Magnus Norman och Jörgen Jönsson."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2022-04-22",
+  "date_evidence": "2022-04-22",
+  "decision": "publish",
+  "reason": "The target company announced that it completed the construction of Europe's first artificial grass pop tennis court at Arvika Idrottscenter.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1383,
+ "input_tokens": 2476,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:58.032037+00:00"
+}

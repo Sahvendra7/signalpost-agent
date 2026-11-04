@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Administrerende direktør i Eiendom Norge, Henning Lauridsen ber finanskomiteen kutte i dokumentavgiften."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Eiendom Norge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-15",
+  "date_evidence": "15.10.2026",
+  "decision": "withhold",
+  "reason": "The item is a blog post and commentary by the target company's managing director regarding the state budget and housing tax policies, which falls under industry commentary and thought leadership rather than a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1540,
+ "input_tokens": 2390,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:23.234484+00:00"
+}

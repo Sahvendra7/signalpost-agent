@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "John Bøthun blir pensjonist",
+   "Den som i dag har vore lengst tilsett i Fresvik Produkt vil pensjonere seg frå 1. september."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2024-08-27",
+  "date_evidence": "27.08.2024",
+  "decision": "publish",
+  "reason": "The article announces that the target company's longest-serving employee, John Bøthun, is retiring.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2349,
+ "input_tokens": 2734,
+ "output_tokens": 229,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:09.043451+00:00"
+}

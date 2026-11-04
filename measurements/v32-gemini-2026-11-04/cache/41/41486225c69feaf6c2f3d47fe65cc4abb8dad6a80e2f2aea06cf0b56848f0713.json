@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid Skandinavien AB har förvärvat samtliga aktier i Grönt & Rent."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid Skandinavien AB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2026-04-14",
+  "date_evidence": "14 april, 2026",
+  "decision": "publish",
+  "reason": "The item announces an acquisition made by the target company Trafik & Fritid Skandinavien AB.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2699,
+ "input_tokens": 2350,
+ "output_tokens": 220,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:49.347608+00:00"
+}

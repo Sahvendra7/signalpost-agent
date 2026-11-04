@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "1. pinsedag feirer vi at det er 50 år siden vi flyttet hit sammen med våre 4 barn. Og med det etablerte retreatsenteret Lia gård.",
+   "Lia Gård feirer 50års jubileum i 2026, og inviterer til en rekke åpne arrangementer."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Lia Gård",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "anniversary",
+  "publication_date": "2026-05-13",
+  "date_evidence": "13. mai",
+  "decision": "publish",
+  "reason": "The item announces and celebrates the 50th anniversary of the target company Lia Gård, detailing its history, current leadership transition, and upcoming jubilee events.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1600,
+ "input_tokens": 2083,
+ "output_tokens": 267,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:28:08.456617+00:00"
+}

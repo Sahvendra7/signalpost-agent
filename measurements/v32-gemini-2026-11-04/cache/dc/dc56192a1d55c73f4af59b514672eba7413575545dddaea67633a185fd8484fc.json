@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid som levererat de båda banorna till Clarion Hotel Sea U i Helsingborg.",
+   "Den nya kongresshallen var egentligen tänkt att fyllas med människor, nu är den utrustad av Trafik & Fritid med såväl en padelbana som en picklebana ."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "TRAFIK & FRITID SKANDINAVIEN AB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2021-06-21",
+  "date_evidence": "2021-06-21",
+  "decision": "publish",
+  "reason": "The article reports on a specific project completed by the target company, where they installed padel and pickleball courts at the Clarion Hotel Sea U.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6933,
+ "input_tokens": 2459,
+ "output_tokens": 278,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:02.383112+00:00"
+}

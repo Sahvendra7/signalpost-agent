@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Avinor har bestemt at luftsportsområdene skal fjernes og erstattes av fareområder"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Avinor",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-03-25",
+  "date_evidence": "Mon, 25 Mar 2024 12:55:45 +0000",
+  "decision": "withhold",
+  "reason": "The article reports on a decision made by Avinor regarding airspace regulations, which is not a development or event of Kjeller Aero Senter AS itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 138074,
+ "input_tokens": 1849,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:31.184433+00:00"
+}

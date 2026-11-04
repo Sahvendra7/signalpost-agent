@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "TT-Line, one of Europe's leading ferry operators, has selected Valmet to deliver marine automation systems for two new Green Ships 2.0 that are currently being built at China Merchants Jinling Shipyard."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet Oyj",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-11-03",
+  "date_evidence": "Valmet Oyj’s trade press release on November 3, 2026 at 9:30 a.m. EET",
+  "decision": "publish",
+  "reason": "The article announces a new business contract where TT-Line selected Valmet to supply marine automation systems for two new ships.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1239,
+ "input_tokens": 2629,
+ "output_tokens": 244,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:42.888115+00:00"
+}

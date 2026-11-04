@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rapport: Q2 og H1 2026",
+   "19. august 2026",
+   "Kameos grunnlegger og adm. dir. Sebastian Martens Harung oppsummerer andre kvartal og første halvår 2026 for Kameo Sverige og Kameo Norge",
+   "Kvartalet satte ny volumrekord med 893 MNOK formidlet"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "financial_result",
+  "publication_date": "2026-08-19",
+  "date_evidence": "19. august 2026",
+  "reason": "The article reports on the company's financial performance for Q2 and H1 2026, including volume records and milestones achieved by the platform.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1304,
+ "input_tokens": 1610,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:26.866281+00:00"
+}

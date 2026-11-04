@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Bli med Team Bergen til NM/LM! NM/LM 2025 arrangeres Oslo helgen 31. oktober - 2. november.",
+   "30. august 2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "BERGEN TAEKWON-DO KLUBB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-08-30",
+  "date_evidence": "30. august 2025",
+  "decision": "publish",
+  "reason": "The item announces participation in a national championship event by Bergen Taekwon-Do Klubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1638,
+ "input_tokens": 1484,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:45:48.286590+00:00"
+}

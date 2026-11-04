@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alexanders’ greetings for Christmas and New-Year 2019",
+   "This year I will perform in Chisinau around 01.30 in the night 😅 🥳 🎻"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2019-12-28",
+  "date_evidence": "Dec 28, 2019",
+  "decision": "publish",
+  "reason": "The artist Alexander Rybak publishes holiday greetings and mentions recent and upcoming artistic activities such as performing in Chisinau.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 4515,
+ "input_tokens": 2409,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:01.208606+00:00"
+}

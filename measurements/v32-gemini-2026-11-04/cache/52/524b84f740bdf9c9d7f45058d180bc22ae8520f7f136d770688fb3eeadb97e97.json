@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Regjeringen lovet å satse på kommunene, men leverer det minste de varslet før sommeren.– Det er et puslete svar på en alvorlig situasjon.",
+   "sier kommunalpolitisk talsperson Erlend Wiborg."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-07",
+  "date_evidence": "Wed, 07 Oct 2026 11:50:00 +0200",
+  "decision": "withhold",
+  "reason": "The item is an opinion piece where a party spokesperson criticizes the government's policy, which does not constitute a specific development or event of the party itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1279,
+ "input_tokens": 1955,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:23.687701+00:00"
+}

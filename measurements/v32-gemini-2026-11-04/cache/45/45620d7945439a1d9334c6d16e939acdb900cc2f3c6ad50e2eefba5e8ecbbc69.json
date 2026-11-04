@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nesna kommune tilbyr vaksinering mot influensa, pneumokokksykdom og covid-19 tirsdag 17. og torsdag 26. november ."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesna kommune",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-27",
+  "date_evidence": "Publisert 27.10.2026 13:57",
+  "decision": "publish",
+  "reason": "The text announces that Nesna kommune is organizing and offering seasonal vaccinations for influenza, pneumococcal disease, and covid-19 on specific dates.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1245,
+ "input_tokens": 2152,
+ "output_tokens": 246,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:57.893170+00:00"
+}

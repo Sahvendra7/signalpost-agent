@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum, libero eu rutrum feugiat, urna orci porta magna, id scelerisque neque nunc sit amet felis."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Midthaug zink",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-31",
+  "date_evidence": "31 mars, 2014",
+  "decision": "withhold",
+  "reason": "The content is a placeholder 'Lorem ipsum' text used to demonstrate website theme features and does not report any genuine company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1437,
+ "input_tokens": 3409,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:37.870682+00:00"
+}

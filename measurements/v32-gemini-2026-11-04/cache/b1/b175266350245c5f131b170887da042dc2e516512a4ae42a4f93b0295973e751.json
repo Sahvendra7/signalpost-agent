@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Regionslaget høsten 2025",
+   "1. september 2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-09-01",
+  "date_evidence": "1. september 2025",
+  "decision": "publish",
+  "reason": "The item announces the regional team for the autumn of 2025, which is a specific activity and event organized by the club.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1262,
+ "input_tokens": 1473,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:38.671258+00:00"
+}

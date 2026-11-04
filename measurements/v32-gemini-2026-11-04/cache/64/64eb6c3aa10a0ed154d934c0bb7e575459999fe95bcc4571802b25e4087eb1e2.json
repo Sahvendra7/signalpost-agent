@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Play Sports Academy i Karlstad är först i Europa med Poptennisbanor inomhus."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Play Sports Academy",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-05-24",
+  "date_evidence": "24 maj, 2023",
+  "decision": "withhold",
+  "reason": "The article reports on the inauguration of an indoor pop tennis facility by Play Sports Academy in Karlstad, making it content about a third party rather than the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1436,
+ "input_tokens": 2017,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:18.084907+00:00"
+}

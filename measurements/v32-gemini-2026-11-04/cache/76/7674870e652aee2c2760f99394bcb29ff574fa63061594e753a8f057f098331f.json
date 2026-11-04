@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hos JOY Medispa Bodø tilbyr vi behandlinger som gjenoppretter fuktigheten og balansen i huden",
+   "Behandling av tørr hud hos JOY Medispa Vi fokuserer på behandlinger som tilfører fuktighet dypt i huden og gjenoppretter hudens naturlige balanse"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "JOY Medispa",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "The content is an educational and promotional article describing skin conditions and the services the company offers to treat them, rather than reporting a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1582,
+ "input_tokens": 2434,
+ "output_tokens": 270,
+ "thoughts_tokens": 100,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:49.926122+00:00"
+}

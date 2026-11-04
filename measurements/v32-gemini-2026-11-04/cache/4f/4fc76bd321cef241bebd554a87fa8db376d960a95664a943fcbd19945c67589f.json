@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vilka krav ställer du på ditt konstgräs?",
+   "Det är skillnad på konstgräs och konstgräs. Välj ett underlag som passar just dina behov!"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-12-18",
+  "date_evidence": "18 december, 2018",
+  "decision": "withhold",
+  "reason": "The item provides educational advice and product descriptions regarding artificial turf choices rather than reporting on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1182,
+ "input_tokens": 2505,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:42.830886+00:00"
+}

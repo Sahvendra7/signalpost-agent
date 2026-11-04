@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Summer 2018 we rented a winch for the land pull in of the powercable to the Johan Svedrup oilfields. The client was NKT , world know supplier for large subsea powercables."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Karmøy Winch AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2018-09-26",
+  "date_evidence": "September 26, 2018",
+  "decision": "publish",
+  "reason": "The text reports a specific past project and client relationship where the target company rented out a winch for a cable pull-in to the Johan Svedrup oilfields.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1266,
+ "input_tokens": 1588,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:07.959728+00:00"
+}

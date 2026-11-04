@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Opsjonen på tre nye politihelikoptre blir ikke utløst. Jon Engen-Helgheim mener beslutningen svekker beredskapen",
+   "sier leder for justiskomiteen, Jon Engen-Helgheim til Politiforum."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Politiforum",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text comments on a government/police decision regarding police helicopters via a statement given to an external publication (Politiforum), rather than reporting an internal development or action of Fremskrittspartiet itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1357,
+ "input_tokens": 1926,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:40:13.005994+00:00"
+}

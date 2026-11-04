@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommerens utgave er nå sendt ut til alle medlemmene med posten."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "FORENINGEN ET BARN FOR LITE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2025-07-01",
+  "date_evidence": "Tue, 01 Jul 2025 14:45:21 +0000",
+  "decision": "publish",
+  "reason": "The association has announced the distribution of its summer member magazine, which constitutes a specific development and activity of the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1553,
+ "input_tokens": 1889,
+ "output_tokens": 229,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:53.961836+00:00"
+}

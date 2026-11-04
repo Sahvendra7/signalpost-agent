@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Her gis en oversikt over noen viktige regelendringer fra 1. januar 2024 på Finansdepartementets ansvarsområde."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Finansdepartementet",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-01-01",
+  "date_evidence": "1. januar 2024",
+  "decision": "withhold",
+  "reason": "The item provides an overview of regulatory changes from the Ministry of Finance rather than reporting an event or development concerning the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1449,
+ "input_tokens": 1739,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:58.142808+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dette kommer frem i årets Levert-rapport, utarbeidet av analyse- og innovasjonsselskapet KPB."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2023-09-21",
+  "date_evidence": "21. sep.",
+  "decision": "publish",
+  "reason": "The target company KPB published its annual 'Levert-rapport' detailing deliveries to the petroleum sector in Northern Norway.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1664,
+ "input_tokens": 3060,
+ "output_tokens": 199,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:28.357960+00:00"
+}

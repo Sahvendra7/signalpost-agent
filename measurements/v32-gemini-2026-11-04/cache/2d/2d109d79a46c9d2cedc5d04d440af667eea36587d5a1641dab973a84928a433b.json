@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hele personalgruppen har gjennomført Fiskesprell kurs.",
+   "Vi vil hver uke servere sjømat på barnas premisser:))"
+  ],
+  "subject_entity": "Fossegrenda Barnehage",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person by the staff of the barnehage, describing their participation in the Fiskesprell program and their commitment to serving seafood to the children.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1056,
+ "input_tokens": 1279,
+ "output_tokens": 147,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:06:46.619043+00:00"
+}

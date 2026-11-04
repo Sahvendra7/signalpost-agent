@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Redaksjonell opplysning: Sivilisasjonen samarbeider med nettgalleriet Pinakoteket. Bork S. Nerdrum, som uttaler seg i saken, er også medlem av Sivilisasjonens redaksjon."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Pinakoteket",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article reports on an art exhibition held by Pinakoteket and features statements by its gallerist, making it third-party news rather than a direct development of the target company Sivilisasjonen AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1280,
+ "input_tokens": 3547,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:27.974084+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Viktigt att tänka på när du ska installera platgjutet gummugranulat",
+   "För fler tips – ladda ner vår gratisguide!"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-11-16",
+  "date_evidence": "2018-11-16",
+  "decision": "withhold",
+  "reason": "The page provides general advice, tips, and considerations when installing rubber granulate, rather than reporting a specific development or event about the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1379,
+ "input_tokens": 2771,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:28.027328+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Youtube Post – Midthaug zink Youtube Post 31 mars, 2014",
+   "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Midthaug zink",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-31",
+  "date_evidence": "31 mars, 2014",
+  "decision": "withhold",
+  "reason": "The item consists entirely of placeholder 'Lorem ipsum' text and does not report any specific development, action, or event regarding the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3385,
+ "input_tokens": 2391,
+ "output_tokens": 224,
+ "thoughts_tokens": 975,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:00:31.729025+00:00"
+}

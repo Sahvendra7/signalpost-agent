@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oracle EPM 11.2.24 is now available. This January 2026 release is a cumulative update for 11.2.15 and later"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Oracle",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-02-12",
+  "date_evidence": "12 February 2026",
+  "decision": "withhold",
+  "reason": "The article discusses a third-party software release (Oracle EPM 11.2.24) by Oracle rather than reporting a specific development or event about the target company Inlumi itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3282,
+ "input_tokens": 2710,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:54.930804+00:00"
+}

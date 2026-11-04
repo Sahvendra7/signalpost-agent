@@ -1,0 +1,25 @@
+  25/80
+  50/80
+  75/80
+  80/80
+{
+ "experiment_id": "dev80v2-news-p4-twostage-v1-gemini-3.1-flash-lite",
+ "items": 80,
+ "ok": 80,
+ "api_failures": 0,
+ "api_calls_made": 116,
+ "cache_hits": 0,
+ "input_tokens": 245709,
+ "output_tokens": 21569,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.093781,
+ "latency_ms_p50": 2638,
+ "decisions": {
+  "publish": 36,
+  "withhold": 44
+ },
+ "errors": {},
+ "budget_stop": null,
+ "quotes_total": 203,
+ "quotes_verified": 203
+}

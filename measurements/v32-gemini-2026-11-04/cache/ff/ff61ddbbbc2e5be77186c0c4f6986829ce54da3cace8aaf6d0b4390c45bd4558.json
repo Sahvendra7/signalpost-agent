@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "The Black Box Home - Tønsberg Roklub The perfect property for you The Black Box Home",
+   "Price $14,275,000 Property Type Private House bedrooms 6 Property Size 2800sq ft"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Tønsberg Roklub",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a property listing or template page showcasing a house for sale, not a company news development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1397,
+ "input_tokens": 2010,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:45:08.045621+00:00"
+}

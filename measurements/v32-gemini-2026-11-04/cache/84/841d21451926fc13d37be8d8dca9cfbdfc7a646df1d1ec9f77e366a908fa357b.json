@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet nr 30 – 22.04.22 – Steinerskolen i Ås",
+   "Da er vi ferdig med den første skoleuka etter påskeferien. 9./10.klasse er tilbake etter å ha prøvd seg i yrkeslivet en uke."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2022-04-22",
+  "date_evidence": "Fredagsbladet nr 30 – 22.04.22",
+  "decision": "publish",
+  "reason": "The item is a weekly newsletter from the school reporting on recent activities, school operations, and upcoming events, which constitutes genuine news about the target company's own activities.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1849,
+ "input_tokens": 2932,
+ "output_tokens": 282,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:01.468389+00:00"
+}

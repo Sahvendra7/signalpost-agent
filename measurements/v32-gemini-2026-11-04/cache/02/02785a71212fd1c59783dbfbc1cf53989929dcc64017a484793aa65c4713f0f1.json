@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "HVA MED EN DIGITAL SOMMERGAVE TIL DE ANSATTE MED EN VITAMINFILM OG SOMMERHILSEN FRA PSYKOLOGEN?"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Psykolog Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The article is a promotional pitch for a service (a digital summer greeting/vitamin film) offered by the psychologist, rather than reporting on a specific development or event of the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1413,
+ "input_tokens": 1830,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:33.822247+00:00"
+}

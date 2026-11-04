@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Frankeringsrekvisita",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-06-10",
+  "date_evidence": "Mon, 10 Jun 2024 12:32:10 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post explaining the benefits of EDI labels for e-commerce businesses and promoting the company's products, rather than reporting a specific company development.",
+  "evidence_quotes": [
+   "I denne artikkelen vil vi utforske hva som gjør EDI etiketter uunnværlige for e-handelsbedrifter",
+   "Hvorfor velge EDI-etiketter? Økt nøyaktighet og profesjonalitet"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2433,
+ "input_tokens": 2833,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:34.266990+00:00"
+}

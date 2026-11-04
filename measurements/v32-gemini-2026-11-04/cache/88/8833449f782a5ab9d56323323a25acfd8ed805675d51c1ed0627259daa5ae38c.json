@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Skrevet av Tor Kristiansen",
+   "Stillhetens betydning"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Tor Kristiansen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-06-23",
+  "date_evidence": "23. juni",
+  "decision": "withhold",
+  "reason": "The item is an essay or devotional text written by Tor Kristiansen about spiritual reflections rather than reporting a specific development or event of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1248,
+ "input_tokens": 1895,
+ "output_tokens": 208,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:47.941736+00:00"
+}

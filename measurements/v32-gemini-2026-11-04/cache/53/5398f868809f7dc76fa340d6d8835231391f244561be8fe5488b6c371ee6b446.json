@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Article Series How to become an AI-ready manufacturing company Part 5: AI Raises the Stakes for Data Quality"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Alpha Solutions",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an educational article and part of an article series offering industry commentary on AI and data quality rather than reporting a specific development or event about the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1252,
+ "input_tokens": 1694,
+ "output_tokens": 198,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:37.946221+00:00"
+}

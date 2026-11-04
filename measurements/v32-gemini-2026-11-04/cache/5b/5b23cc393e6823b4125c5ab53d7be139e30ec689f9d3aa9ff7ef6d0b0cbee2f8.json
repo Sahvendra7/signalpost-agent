@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvordan bevarer jeg god lyd i mine høreapparater?",
+   "Vedlikehold er avgjørende for god lyd. Høreapparatene står i et fuktig miljø og for å beskytte og holde lydutgang fri for ørevoks, trengs det jevnlig service og rens."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Melhus hørsel",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-03-06",
+  "date_evidence": "Wed, 06 Mar 2019 13:07:05 +0000",
+  "decision": "withhold",
+  "reason": "The article provides general advice and tips on how to maintain hearing aids, which constitutes educational content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 34132,
+ "input_tokens": 1724,
+ "output_tokens": 277,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:35.846196+00:00"
+}

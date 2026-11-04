@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FrP krever strengere kontroll med hvem som får ansvar for sårbare barn.",
+   "FrPs fraksjonsleder i familie- og kulturkomiteen, Mats Henriksen, understreker alvoret.",
+   "Vil ha saken til komitébehandling"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-10-15",
+  "date_evidence": "Publisert 15.10.2026 kl.11:51",
+  "decision": "publish",
+  "reason": "The article reports on the political party's official stance and parliamentary actions regarding child welfare services, which constitutes a genuine development for the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2234,
+ "input_tokens": 2232,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:19.642705+00:00"
+}

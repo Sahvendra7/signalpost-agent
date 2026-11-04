@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Why planning confined to finance limits business insight",
+   "For many CFOs, planning is a mature and well-governed finance capability."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "INLUMI AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-01-14",
+  "date_evidence": "14 January 2026",
+  "decision": "withhold",
+  "reason": "The article is an educational piece providing professional advice and commentary on financial planning practices, rather than reporting on a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1399,
+ "input_tokens": 2488,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:18.807937+00:00"
+}

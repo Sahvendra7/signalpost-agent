@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FrP har foreslått å granske feilaktige innmeldinger i trossamfunn og gjøre det enklere å melde seg ut.",
+   "Publisert 28.10.2026 kl.11:31"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-10-28",
+  "date_evidence": "Publisert 28.10.2026 kl.11:31",
+  "decision": "publish",
+  "reason": "The article announces a political proposal and initiative by the target company Fremskrittspartiet to investigate incorrect registrations in religious communities.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1553,
+ "input_tokens": 2298,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:48.201724+00:00"
+}

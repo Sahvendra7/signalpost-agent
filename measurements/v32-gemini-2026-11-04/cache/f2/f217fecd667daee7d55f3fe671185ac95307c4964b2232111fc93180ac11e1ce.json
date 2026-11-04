@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Brev til landbruks- og matministeren: Bærekraft må lønne seg!"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Matsentralen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an open letter or advocacy piece ('Brev til landbruks- og matministeren: Bærekraft må lønne seg!') rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1417,
+ "input_tokens": 1628,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:35:43.111113+00:00"
+}

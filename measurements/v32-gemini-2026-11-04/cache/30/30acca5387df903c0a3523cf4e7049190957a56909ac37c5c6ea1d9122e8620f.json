@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "unrelated_content",
+  "subject_entity": "Moldezink",
+  "subject_relation": "unclear",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-31",
+  "date_evidence": "31 mars, 2014",
+  "decision": "withhold",
+  "reason": "The item is a default CMS template post (Lorem Ipsum) used to demonstrate theme features, not a genuine news report about Midthaug Zink AS.",
+  "evidence_quotes": [
+   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+   "Make your post look amazing!",
+   "Everything is extremely customizable. Easily change every element on the page. That’s why Highend is so powerful."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1816,
+ "input_tokens": 2995,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:03.650094+00:00"
+}

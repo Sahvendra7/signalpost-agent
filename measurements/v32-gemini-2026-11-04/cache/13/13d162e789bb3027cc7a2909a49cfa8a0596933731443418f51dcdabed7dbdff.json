@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kennel Kifani har fått valper!",
+   "01.oktober ble det født 4 tispe og 6 hannhunder"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Kennel Kifani",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-01",
+  "date_evidence": "01.oktober",
+  "decision": "withhold",
+  "reason": "The item reports on a litter of puppies born at a private kennel (Kennel Kifani), which is not the target company Norsk Rhodesian Ridgeback Klubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1094,
+ "input_tokens": 1608,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:18.503163+00:00"
+}

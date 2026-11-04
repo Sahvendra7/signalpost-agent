@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Collaboration between Valmet and VTT supports faster innovation and technology scale-up",
+   "Valmet and VTT are strengthening their collaboration to help accelerate the development and scale-up of next-generation fibre-based products."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2026-10-01",
+  "date_evidence": "Oct 1, 2026",
+  "decision": "publish",
+  "reason": "The article reports on a new partnership and strengthened collaboration between Valmet and VTT to accelerate fibre-based product innovation.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1293,
+ "input_tokens": 2066,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:57.941728+00:00"
+}

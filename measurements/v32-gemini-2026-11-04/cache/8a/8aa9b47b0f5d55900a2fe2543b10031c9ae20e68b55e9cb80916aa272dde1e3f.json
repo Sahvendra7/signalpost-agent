@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Opplev Oslo Dogshow på Nova Spektrum i Lillestrøm, Meld på valpeshow eller utstilling å få inngangsbillett til alle standene inkludert i påmeldingen."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Oslo Dogshow",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item promotes Oslo Dogshow rather than reporting on a specific development or action of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2019,
+ "input_tokens": 1692,
+ "output_tokens": 207,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:23.668074+00:00"
+}

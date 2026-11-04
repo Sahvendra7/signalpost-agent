@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "This week Jonas and Fredrik was in Skien, Norway to kick-off an execute program with a client."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "C2U Group",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The item reports that representatives from C2U Group kicked off a training program for a client in Skien, Norway, representing a genuine company activity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1301,
+ "input_tokens": 1797,
+ "output_tokens": 201,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:29:12.949313+00:00"
+}

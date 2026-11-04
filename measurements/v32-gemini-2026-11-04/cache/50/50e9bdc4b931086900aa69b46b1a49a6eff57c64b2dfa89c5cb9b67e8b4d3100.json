@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Youtube Post – Midthaug zink",
+   "31 mars, 2014"
+  ],
+  "content_category": "unrelated_content",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-31",
+  "date_evidence": "31 mars, 2014",
+  "reason": "The content is a placeholder post containing Lorem Ipsum text and does not report any specific development, action, or event of Midthaug Zink AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6318,
+ "input_tokens": 2324,
+ "output_tokens": 166,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:10:06.880504+00:00"
+}

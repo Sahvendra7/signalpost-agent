@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "VITAMINFILM: Jobb-fritid balansen",
+   "28. okt 2025"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Vitaminfilm",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The item is about Vitaminfilm and its work-life balance video rather than any development concerning the target company Jan-Martin Berge.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1125,
+ "input_tokens": 1531,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:52:17.773408+00:00"
+}

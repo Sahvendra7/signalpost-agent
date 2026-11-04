@@ -98,7 +98,8 @@ def redact(text: str, secret: str) -> str:
     """Remove the key (and anything shaped like a Google key) from a message before it is stored."""
     if secret:
         text = text.replace(secret, "[REDACTED]")
-    return re.sub(r"AIza[0-9A-Za-z_\-]{20,}", "[REDACTED]", text)
+    text = re.sub(r"AIza[0-9A-Za-z_\-]{20,}", "[REDACTED]", text)
+    return re.sub(r"AQ\.[0-9A-Za-z_\-\.]{20,}", "[REDACTED]", text)  # newer Google key format
 
 
 def _retry_delay(details: list[Any]) -> float | None:

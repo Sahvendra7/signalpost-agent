@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Den nasjonale båndtvangen gjelder til og med 20. august. Kommunene kan imidlertid ha egne bestemmelser som gjelder utover denne perioden. I Sola er båndtvangen utvidet til 15. november",
+   "Båndtvangen er over – eller er den egentlig det?"
+  ],
+  "content_category": "advice_or_educational",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-15",
+  "date_evidence": "Aktuelt 15. september 2026",
+  "reason": "The article provides general information and advice regarding local leash laws in Sola and tips for dog owners, rather than reporting on a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 52886,
+ "input_tokens": 2901,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T23:11:38.448450+00:00"
+}

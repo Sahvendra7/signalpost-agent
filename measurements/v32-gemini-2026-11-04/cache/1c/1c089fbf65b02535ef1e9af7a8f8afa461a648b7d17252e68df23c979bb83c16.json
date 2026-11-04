@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I april arrangerte vi konferansen «Voices in Public Art: Mapping Freedom of Speech and Expression in the Nordic Region».",
+   "Her er noen glimt fra kunstprosjekter vi nylig har ferdigstilt! På Akershus universitetssykehus har Psykisk helsevern Nordbyhagen har kunsten tatt utgangspunkt i begrepene naturen, lyset og rommet."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-07-03",
+  "date_evidence": "3. juli",
+  "decision": "publish",
+  "reason": "The article reports on the company's recent activities and completed art projects, including organizing a conference and finalizing installations.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1575,
+ "input_tokens": 3141,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:18.269343+00:00"
+}

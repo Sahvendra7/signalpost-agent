@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Den nya kongresshallen var egentligen tänkt att fyllas med människor, nu är den utrustad av Trafik & Fritid med såväl en padelbana som en picklebana .",
+   "– Padel är väldigt populärt. Vi har installerat över 1000 banor hittills runtom i Norden. Pickle, eller pickleball som det också kallas, har hög potential. Pickle kräver inte samma ytor och rymd som padel men är likt padel en rolig och social sport som är lätt att komma i gång med, säger Erik Andersson, VD på Trafik & Fritid som levererat de båda banorna till Clarion Hotel Sea U i Helsingborg."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid Skandinavien",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2021-06-21",
+  "date_evidence": "2021-06-21 23:37:36",
+  "decision": "publish",
+  "reason": "The article reports on a completed project and delivery where the target company equipped a hotel congress hall with padel and pickle courts.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1590,
+ "input_tokens": 2459,
+ "output_tokens": 364,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:43.239142+00:00"
+}

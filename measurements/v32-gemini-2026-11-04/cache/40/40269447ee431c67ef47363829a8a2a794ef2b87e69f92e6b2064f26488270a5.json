@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi lanserer ny podcastserie: KPB & Co!",
+   "Vi i KPB er stolte over å introdusere vår nye podcastserie, KPB & Co."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Kunnskapsparken Bodø",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2023-01-25",
+  "date_evidence": "25.01.2023",
+  "decision": "publish",
+  "reason": "The target company announces the launch of its new podcast series, KPB & Co, which qualifies as a publishable company event and product/service launch.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1966,
+ "input_tokens": 2094,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:46:28.659953+00:00"
+}

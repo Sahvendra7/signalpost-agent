@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Morten Pedersen ble oppringt direkte fra myndighetene og ble bedt om å overta søket etter savnede og deres eiendeler mellom Utvika og Utøya."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Morten Pedersen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-07-22",
+  "date_evidence": "By Morten Pedersen on 22/07/2026",
+  "decision": "withhold",
+  "reason": "The article describes historical personal involvement by Morten Pedersen in the Utøya terror search, which is unrelated to any business development or action of MPENERGI AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1435,
+ "input_tokens": 1783,
+ "output_tokens": 241,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:28:18.083575+00:00"
+}

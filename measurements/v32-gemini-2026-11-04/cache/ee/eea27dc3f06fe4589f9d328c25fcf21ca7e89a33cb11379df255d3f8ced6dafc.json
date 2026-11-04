@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I mars i år kom Joscha Sölter til Lia Gard Retreatsenter med tanken om å gjøre en innsats her i tre år.",
+   "Raskt gikk han inn og tok medansvar for husfolkene og planleggingen av familieretreatene."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Joscha Sölter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-12-13",
+  "date_evidence": "Tor Kristiansen 13.12.2025",
+  "decision": "withhold",
+  "reason": "The article is a profile interview about an individual (Joscha Sölter) working at the retreat center rather than reporting a formal corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1523,
+ "input_tokens": 2472,
+ "output_tokens": 261,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:18.216592+00:00"
+}

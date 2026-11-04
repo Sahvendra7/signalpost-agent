@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Produkt i fokus - Oktober 2024: Valchromat",
+   "1. oktober 2024"
+  ],
+  "content_category": "product_service_marketing",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-10-01",
+  "date_evidence": "1. oktober 2024",
+  "reason": "The article is a product spotlight describing the features and benefits of Valchromat, which constitutes marketing content rather than a specific company event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1804,
+ "input_tokens": 1871,
+ "output_tokens": 170,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:12:21.553721+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Costumer stories",
+   "Building a Lean Business System to improve culture This customer had used Lean tools for many years and made many good improvements."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "C2U Group",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "This is a customer story describing a past project and services provided to an anonymous client, constituting reference-project and marketing content rather than a current company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1301,
+ "input_tokens": 2416,
+ "output_tokens": 208,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:29:17.950094+00:00"
+}

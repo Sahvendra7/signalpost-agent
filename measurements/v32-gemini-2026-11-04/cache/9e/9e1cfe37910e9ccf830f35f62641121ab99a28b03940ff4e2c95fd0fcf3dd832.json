@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Graderinger sommer 2026",
+   "12. mai 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "BERGEN TAEKWON-DO KLUBB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-05-12",
+  "date_evidence": "12. mai 2026",
+  "decision": "publish",
+  "reason": "The item announces the schedule for the club's upcoming summer grading events, which constitutes a genuine activity of the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1476,
+ "input_tokens": 1471,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:53.885148+00:00"
+}

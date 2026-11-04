@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tiny Line Marker – linjering har aldrig varit enklare",
+   "Nu finns en alternativ lösning – låt Tiny Line Marker göra jobbet!"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-10-20",
+  "date_evidence": "20 oktober, 2020",
+  "decision": "withhold",
+  "reason": "The page promotes the Tiny Line Marker product and invites customers to contact them for prices and demonstrations, without reporting a specific corporate development or news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1271,
+ "input_tokens": 2159,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:27.919548+00:00"
+}

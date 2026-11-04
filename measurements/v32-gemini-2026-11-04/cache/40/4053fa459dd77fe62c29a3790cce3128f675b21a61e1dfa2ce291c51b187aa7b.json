@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dommerkurs arrangeres på Sotra søndag 6. september."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "BERGEN TAEKWON-DO KLUBB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-07-26",
+  "date_evidence": "26. juli 2026",
+  "decision": "publish",
+  "reason": "The item announces a referee course (dommerkurs) being held by the club, which constitutes a specific event or activity for the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1087,
+ "input_tokens": 1464,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:03.496256+00:00"
+}

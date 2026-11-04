@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hun skal lede Stiftelsen 10. august frem til 1. juni 2027",
+   "Marie Thrana Tindstad er vår nye fungerende daglige leder.",
+   "Jeg gleder meg til å ta fatt på den spennende oppgaven som daglig leder i Stiftelsen 10. august de neste ti månedene."
+  ],
+  "subject_entity": "Stiftelsen 10. august",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article announces the appointment of a new acting general manager for the target company, Stiftelsen 10. august, and uses first-person language to describe the organization's activities.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1450,
+ "input_tokens": 1433,
+ "output_tokens": 195,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:08:12.013159+00:00"
+}

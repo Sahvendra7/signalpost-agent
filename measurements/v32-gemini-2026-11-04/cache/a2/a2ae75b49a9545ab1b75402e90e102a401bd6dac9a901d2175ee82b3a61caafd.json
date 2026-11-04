@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article is an educational blog post providing general advice on IT security and promoting the company's consulting services, rather than reporting a specific company development or event.",
+  "evidence_quotes": [
+   "Hvordan få full kontroll over IT-sikkerheten i din bedrift",
+   "Vi har lang kompetanse og erfaring rundt IT-sikkerhet. Våre rådgivere bruker mye tid og energi på å kartlegge dagens trusselbilde og hvilke midler som kan brukes for å demme opp for truslene."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2109,
+ "input_tokens": 2767,
+ "output_tokens": 267,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:18.942979+00:00"
+}

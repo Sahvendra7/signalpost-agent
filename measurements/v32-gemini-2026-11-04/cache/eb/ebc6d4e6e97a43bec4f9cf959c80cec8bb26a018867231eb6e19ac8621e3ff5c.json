@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Er du vår neste brannkonstabel? Syv ledige stillinger i Brannvesenet SØR",
+   "Vi har ledige deltidsstillinger som brannkonstabel og røykdykker ved flere av våre stasjoner."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Brannvesenet SØR",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-18",
+  "date_evidence": "Publisert: 18. august 2026",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for seven vacant positions at the company, which does not qualify as publishable company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 91199,
+ "input_tokens": 2055,
+ "output_tokens": 249,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:44.355000+00:00"
+}

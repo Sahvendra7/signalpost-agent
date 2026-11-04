@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Årsmøte 10. februar Velkommen til årsmøte i Bergen Taekwon-Do klubb."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-01-13",
+  "date_evidence": "13. januar 2026",
+  "decision": "publish",
+  "reason": "The item announces the annual general meeting (årsmøte) for the target company, which is a specific internal event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 17129,
+ "input_tokens": 1480,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:34.538099+00:00"
+}

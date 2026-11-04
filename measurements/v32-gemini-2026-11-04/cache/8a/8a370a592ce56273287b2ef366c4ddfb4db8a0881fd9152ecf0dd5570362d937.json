@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hos JOY Medispa Bodø tilbyr vi avanserte behandlinger som reduserer arrvev og forbedrer hudens tekstur",
+   "Behandling av arr hos JOY Medispa For å behandle arr, fokuserer vi på behandlinger som stimulerer hudens helingsprosess og fremmer ny kollagenproduksjon"
+  ],
+  "content_category": "product_service_marketing",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "reason": "The content is a service description page detailing how the company treats scars, including a booking form for these services, which constitutes marketing rather than a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 26510,
+ "input_tokens": 2542,
+ "output_tokens": 223,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:11:37.073017+00:00"
+}

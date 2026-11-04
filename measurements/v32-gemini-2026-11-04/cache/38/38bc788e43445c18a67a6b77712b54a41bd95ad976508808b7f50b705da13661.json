@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Gunnar Tjomlid samtaler med Adara Høeg om alternativ behandling, vaksiner og konspirasjonsteorier i den nyeste episoden av podkasten Usivilisert."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sivilisasjonen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-10-02",
+  "date_evidence": "Fri, 02 Oct 2026 16:28:26 +0000",
+  "decision": "publish",
+  "reason": "The target company publishes a new episode of its podcast Usivilisert featuring a conversation with Gunnar Tjomlid.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1205,
+ "input_tokens": 3155,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:37.898519+00:00"
+}

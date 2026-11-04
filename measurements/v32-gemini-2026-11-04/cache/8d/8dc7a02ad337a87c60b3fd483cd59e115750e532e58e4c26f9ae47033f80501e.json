@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Slik skriver du en stillingsannonse som tiltrekker",
+   "Her er hvordan du skriver en som faktisk får folk til å søke."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "HUMANO AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-03-11",
+  "date_evidence": "11. mars 2026",
+  "decision": "withhold",
+  "reason": "The article is an educational guide offering advice on how to write job advertisements, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1643,
+ "input_tokens": 1611,
+ "output_tokens": 220,
+ "thoughts_tokens": 120,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:04.987528+00:00"
+}

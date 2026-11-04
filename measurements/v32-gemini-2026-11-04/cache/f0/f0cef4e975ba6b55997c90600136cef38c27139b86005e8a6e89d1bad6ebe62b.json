@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Jeonju Paper Corporation has selected Valmet to rebuild a press section and predryer section in their paper machine PM 5 in South Korea.",
+   "Valmet Oyj’s press release on August 26, 2026, at 9:30 a.m. EEST"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet Oyj",
+  "subject_relation": "other_group_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-26",
+  "date_evidence": "Valmet Oyj’s press release on August 26, 2026, at 9:30 a.m. EEST",
+  "decision": "withhold",
+  "reason": "The press release describes an agreement involving Valmet Oyj, the Finnish parent entity, rather than the Norwegian target entity Valmet AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1367,
+ "input_tokens": 2391,
+ "output_tokens": 288,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:36:53.015376+00:00"
+}

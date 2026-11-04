@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fresvik Produkt er i haust blitt sertifisert som Miljøfyrtårn."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "award_or_certification",
+  "publication_date": "2022-12-09",
+  "date_evidence": "9. des.",
+  "decision": "publish",
+  "reason": "The article reports that Fresvik Produkt has been certified as a Miljøfyrtårn, representing a genuine award/certification event for the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1346,
+ "input_tokens": 1965,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:43.040384+00:00"
+}

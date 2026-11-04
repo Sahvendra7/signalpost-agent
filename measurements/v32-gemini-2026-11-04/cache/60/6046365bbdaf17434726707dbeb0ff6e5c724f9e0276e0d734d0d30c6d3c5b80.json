@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Markarbete, underlag och installation – så går det till när du ska lägga konstgräs !"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-12-10",
+  "date_evidence": "10 december, 2018",
+  "decision": "withhold",
+  "reason": "The page is an instructional guide explaining how artificial turf installation works rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1701,
+ "input_tokens": 2481,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:38.350064+00:00"
+}

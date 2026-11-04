@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Når vi i 2024 fyller 25 år, ønsker vi å rette blikket fremover og finne nye måter både vi og feltet sammen kan bli bedre på. Derfor lanserer vi nå vår nye bærekraftstrategi !"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2024-04-16",
+  "date_evidence": "16. apr.",
+  "decision": "publish",
+  "reason": "The target company Mesén announces its 25th anniversary and the launch of its new sustainability strategy.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1217,
+ "input_tokens": 2658,
+ "output_tokens": 239,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:07.911335+00:00"
+}

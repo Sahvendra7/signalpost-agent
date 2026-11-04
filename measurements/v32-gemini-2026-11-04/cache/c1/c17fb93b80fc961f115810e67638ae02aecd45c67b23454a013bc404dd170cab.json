@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "10. februar 2026 Querkus Terra - Et klassisk eikefinér i ny drakt",
+   "Vi lagerfører fire karakterfulle nyanser: Terra Macchiato Terra Cammello (Nyhet) Terra Mocha Terra Espresso"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Oslofinér",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-02-10",
+  "date_evidence": "10. februar 2026",
+  "decision": "withhold",
+  "reason": "The article is a product announcement describing new stock items (Querkus Terra) and their features, which constitutes marketing of products rather than a specific corporate event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 77921,
+ "input_tokens": 1884,
+ "output_tokens": 254,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:43.269040+00:00"
+}

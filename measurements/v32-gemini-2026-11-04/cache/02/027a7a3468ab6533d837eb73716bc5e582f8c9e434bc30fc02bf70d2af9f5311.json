@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "WordPress sikkerhet og backup-strategier 2026: Komplett guide for bedrifter"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "AGENTA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-06-09",
+  "date_evidence": "9. juni 2026",
+  "decision": "withhold",
+  "reason": "The item is an educational guide about WordPress security and backup strategies for businesses, not a report on a specific development or event concerning Agenta AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1688,
+ "input_tokens": 3134,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:33.381892+00:00"
+}

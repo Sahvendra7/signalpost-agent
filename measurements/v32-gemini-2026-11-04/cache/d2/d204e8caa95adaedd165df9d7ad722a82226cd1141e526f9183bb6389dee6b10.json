@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 2020 leverte vi rundt 40 malere til våre kunder.",
+   "Noen av våre prosjekter /kunder er: 1. Alta Omsorgssenter"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Personell AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-12-04",
+  "date_evidence": "des 4, 2020",
+  "decision": "withhold",
+  "reason": "The page is a portfolio or reference-project listing detailing past customer projects and workers supplied rather than reporting a standalone corporate news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1282,
+ "input_tokens": 2025,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:30:17.930712+00:00"
+}

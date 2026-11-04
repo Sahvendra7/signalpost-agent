@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Article in Central and Eastern European Migration Review : The Role of Family Policy Regimes in Work–Family Adaptations: Polish Parents in Norway and Poland"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2017-07-18",
+  "date_evidence": "Posted by Margunn Bjørnholt 18 July 2017",
+  "decision": "publish",
+  "reason": "The item announces an academic article publication authored by Margunn Bjørnholt.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1270,
+ "input_tokens": 1727,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:47.918729+00:00"
+}

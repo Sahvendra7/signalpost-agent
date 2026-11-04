@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 2025 fylte Jentene på Tunet 10 år. Ti år med håndverkssjokolade.",
+   "Derfor bestemte vi oss for å utvikle flere nye produkter dette året. Ett av dem skulle vise seg å få en helt spesiell reise. Vi kalte gaveesken Selbu Rose .",
+   "Jentene på tunet / juni 2, 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-06-02",
+  "date_evidence": "Jentene på tunet / juni 2, 2026",
+  "reason": "The article describes the development and launch of a new product, the 'Selbu Rose' gift box, created to celebrate the company's 10-year anniversary.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2891,
+ "input_tokens": 2525,
+ "output_tokens": 258,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:03.453297+00:00"
+}

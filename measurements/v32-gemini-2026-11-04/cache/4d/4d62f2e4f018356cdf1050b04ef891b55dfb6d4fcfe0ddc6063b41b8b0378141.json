@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Intranett for små og mellomstore bedrifter: Slik samler du dokumenter, rutiner og kommunikasjon ett sted"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "AGENTA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-18",
+  "date_evidence": "18. oktober 2026",
+  "decision": "withhold",
+  "reason": "The item is an educational guide and article about intranets for small and medium-sized businesses rather than a report on a specific corporate development, event, or action.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1405,
+ "input_tokens": 3224,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:13.099090+00:00"
+}

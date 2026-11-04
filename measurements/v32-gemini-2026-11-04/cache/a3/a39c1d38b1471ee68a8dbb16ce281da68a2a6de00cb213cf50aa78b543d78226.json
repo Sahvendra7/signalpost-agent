@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I sin tale til Fremskrittspartiets landsstyre trakk partileder Sylvi Listhaug frem boka «Innvandringens skyggesider, skrevet av Anders Magnus"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-10",
+  "date_evidence": "Sat, 10 Oct 2026 13:30:00 +0200",
+  "decision": "publish",
+  "reason": "The article reports on a speech given by the party leader at the party's national board meeting, which constitutes a genuine event for the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1706,
+ "input_tokens": 1880,
+ "output_tokens": 261,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:44.114698+00:00"
+}

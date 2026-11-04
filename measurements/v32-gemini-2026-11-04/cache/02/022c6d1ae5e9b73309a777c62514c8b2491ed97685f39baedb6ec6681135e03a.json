@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Derfor tilbyr vi et bredt utvalg av etiketter som er spesifikt designet for å møte de mest krevende kravene.",
+   "Zebra 8000D Jewelry: Den perfekte løsningen for smykkebutikker",
+   "Zebra 8000T All-Temp: Optimal ytelse ved enhver temperatur"
+  ],
+  "content_category": "product_service_marketing",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "reason": "The content is a promotional overview of various Zebra label products offered by the company, rather than reporting a specific corporate event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 32889,
+ "input_tokens": 2186,
+ "output_tokens": 203,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:11:33.451926+00:00"
+}

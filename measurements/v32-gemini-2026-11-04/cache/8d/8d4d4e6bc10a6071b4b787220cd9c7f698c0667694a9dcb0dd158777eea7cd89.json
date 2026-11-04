@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Delrapport: Evaluering av voldserstatningsloven",
+   "Rapport September 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba Samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "Proba Samfunnsanalyse has published a report titled 'Delrapport: Evaluering av voldserstatningsloven' in September 2026.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2666,
+ "input_tokens": 1578,
+ "output_tokens": 207,
+ "thoughts_tokens": 841,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:41.010057+00:00"
+}

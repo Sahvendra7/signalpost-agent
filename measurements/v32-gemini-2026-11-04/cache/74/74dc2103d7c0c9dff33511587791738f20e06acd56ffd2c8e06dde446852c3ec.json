@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Recently we delivered equipment for 3 newbuilding LNG tugs for Østensjø",
+   "February 5, 2016"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Karmøy Winch AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2016-02-05",
+  "date_evidence": "February 5, 2016",
+  "decision": "publish",
+  "reason": "The text reports on a specific delivery of equipment made by the target company for three newbuilding LNG tugs.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1161,
+ "input_tokens": 1581,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:32.855053+00:00"
+}

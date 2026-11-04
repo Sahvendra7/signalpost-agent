@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "The perfect property for you",
+   "Price $4,950,000 Property Type Private House bedrooms 4 Property Size 1700sq ft"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Tønsberg Roklub",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-08-09",
+  "date_evidence": "Sat, 09 Aug 2025 15:11:14 +0000",
+  "decision": "withhold",
+  "reason": "The item is a property listing for a private house, which does not constitute a genuine company development or event for the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1201,
+ "input_tokens": 2000,
+ "output_tokens": 246,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:58.610362+00:00"
+}

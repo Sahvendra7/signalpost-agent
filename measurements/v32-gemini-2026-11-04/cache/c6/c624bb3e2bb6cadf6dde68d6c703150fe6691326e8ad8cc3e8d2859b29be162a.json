@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "New Song: Magic",
+   "“Magic” is Alexander’s tribute to life after a long battle out of drug problems."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2020-07-17",
+  "date_evidence": "Jul 17, 2020",
+  "decision": "publish",
+  "reason": "The item announces the release of a new song titled 'Magic' by the artist Alexander Rybak.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1296,
+ "input_tokens": 2174,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:07.989643+00:00"
+}

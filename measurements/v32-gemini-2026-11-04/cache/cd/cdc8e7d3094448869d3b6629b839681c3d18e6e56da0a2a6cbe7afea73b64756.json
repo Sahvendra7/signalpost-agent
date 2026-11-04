@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Statsbudsjettet 2024 – MVA Avvikler avgiftsfritaket for hydrogenbiler og foreslår en innstramming i reglene for tilbakeføring av merverdiavgift for personkjøretøy."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Den Norske Revisorforening",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-10-09",
+  "date_evidence": "9. oktober 2023",
+  "decision": "withhold",
+  "reason": "The item summarizes changes to the national budget regarding VAT based on material from Den Norske Revisorforening, rather than reporting an internal development or action of Bjørgvin Revisjon AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2034,
+ "input_tokens": 1668,
+ "output_tokens": 258,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:28.728016+00:00"
+}

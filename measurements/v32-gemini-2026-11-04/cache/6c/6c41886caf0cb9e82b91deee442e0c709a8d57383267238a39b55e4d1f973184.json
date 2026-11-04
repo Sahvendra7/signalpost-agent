@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har laget fire helt nye sjokoladebiter",
+   "Møt våre fire nye sjokoladebiter",
+   "I høstens sortiment finner du fire helt nye smaker."
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-09-22",
+  "date_evidence": "Jentene på tunet / september 22, 2026",
+  "reason": "The article announces the launch of four new chocolate flavors and a new product category, which constitutes a specific development for the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 25195,
+ "input_tokens": 2997,
+ "output_tokens": 195,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:08:55.757588+00:00"
+}

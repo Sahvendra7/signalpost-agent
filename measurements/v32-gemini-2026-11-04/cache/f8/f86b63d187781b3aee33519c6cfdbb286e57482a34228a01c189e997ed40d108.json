@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet Oyj’s stock exchange release on August 31, 2026, at 4:00 p.m. EEST",
+   "Valmet will publish its Financial Statements Review, Half Year Financial Review and two Interim Reviews in 2027 as follows"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet Oyj",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "financial_result",
+  "publication_date": "2026-08-31",
+  "date_evidence": "Valmet Oyj’s stock exchange release on August 31, 2026, at 4:00 p.m. EEST",
+  "decision": "publish",
+  "reason": "The article is a stock exchange release announcing the company's financial reporting schedule for the upcoming year.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 165842,
+ "input_tokens": 2000,
+ "output_tokens": 271,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:46.292251+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Økokrims trusselvurdering 2026: Eiendom er en sentral arena for hvitvasking",
+   "Trusselvurderingen fra Økokrim for 2026 viser at eiendom er kilde til flere, og potensielt lønnsomme, hvitvaskingsmetodes."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Økokrim",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-09",
+  "date_evidence": "9.10.2026",
+  "decision": "withhold",
+  "reason": "The article summarizes Økokrim's threat assessment regarding money laundering in real estate rather than reporting on a development or action by the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1262,
+ "input_tokens": 2382,
+ "output_tokens": 264,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:37.956070+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kristiania skal igjen markere seg på Bergen City Marathon, men ikke slik vi så for oss."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristiania Bedriftsidrettslag",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-05-07",
+  "date_evidence": "Wed, 07 May 2025 08:27:05 +0000",
+  "decision": "publish",
+  "reason": "The text reports on the target company's participation and activities in the Bergen City Marathon 2025.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1278,
+ "input_tokens": 1666,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:47.972031+00:00"
+}

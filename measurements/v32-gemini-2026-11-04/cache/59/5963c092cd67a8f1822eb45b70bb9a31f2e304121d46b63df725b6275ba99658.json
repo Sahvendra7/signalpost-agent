@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "KPB søker senior analytiker",
+   "ledig stilling"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-11-28",
+  "date_evidence": "28.11.2022",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement seeking a senior analyst for the target company, which does not count as publishable company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1152,
+ "input_tokens": 2037,
+ "output_tokens": 188,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:47.845534+00:00"
+}

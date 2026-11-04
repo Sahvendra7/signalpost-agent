@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Anhui Linping Circular Development has selected Valmet to deliver a complete board making line with automation and lifecycle support for their mill in China.",
+   "Valmet Oyj’s press release on October 12, 2026, at 9:30 a.m. EEST"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-10-12",
+  "date_evidence": "Valmet Oyj’s press release on October 12, 2026, at 9:30 a.m. EEST",
+  "decision": "publish",
+  "reason": "The article is a press release announcing that Valmet has secured a contract to deliver a board making line to Anhui Linping Circular Development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 39760,
+ "input_tokens": 2509,
+ "output_tokens": 282,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:49.611221+00:00"
+}

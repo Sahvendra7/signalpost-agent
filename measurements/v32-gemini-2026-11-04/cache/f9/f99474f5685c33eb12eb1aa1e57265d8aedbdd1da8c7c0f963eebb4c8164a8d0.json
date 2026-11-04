@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommersamling for 60+ i Selbu 26.–28. mai 2027",
+   "10. oktober 2026"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "NTN",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-10",
+  "date_evidence": "10. oktober 2026",
+  "decision": "withhold",
+  "reason": "The event is organized by NTN (Nasjonalt Taekwon-Do Norge), not the target company Bergen Taekwon-Do Klubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1287,
+ "input_tokens": 1585,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:48.696087+00:00"
+}

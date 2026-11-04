@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FrP utfordrer den nye samferdselsministeren med 24 spørsmål om vei i Stortingets spørretime denne uken."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "FrP",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-19",
+  "date_evidence": "Mon, 19 Oct 2026 16:00:00 +0200",
+  "decision": "publish",
+  "reason": "The article reports on a specific political action taken by the party (FrP) in the Norwegian Parliament (Stortinget), which constitutes a genuine activity of the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1294,
+ "input_tokens": 1883,
+ "output_tokens": 249,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:43.702485+00:00"
+}

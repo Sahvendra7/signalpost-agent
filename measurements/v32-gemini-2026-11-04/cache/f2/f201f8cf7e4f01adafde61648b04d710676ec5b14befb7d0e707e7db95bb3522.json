@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Jentene på tunet / august 4, 2026",
+   "Vi visste egentlig ikke om sjokoladen vår var noe å satse ordentlig på, men vi meldte vi oss på Trøndersk Matfestival.",
+   "Festivalen har fulgt oss gjennom hele reisen – fra en liten stand med sommerfugler i magen til en etablert sjokoladeprodusent med internasjonale priser og kunder over hele Norge."
+  ],
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person by the company Jentene på Tunet, describing their ten-year history of participating in the Trøndersk Matfestival.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1028,
+ "input_tokens": 2284,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:41.590809+00:00"
+}

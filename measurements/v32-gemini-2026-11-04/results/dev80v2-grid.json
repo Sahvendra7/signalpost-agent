@@ -1,0 +1,82 @@
+{
+ "dev80v2-news-p1-binary-v1-gemini-3.1-flash-lite.jsonl": {
+  "n": 80,
+  "correct_published": "35/40",
+  "incorrect_published": "1/40",
+  "precision": 0.9722222222222222,
+  "precision_wilson95": [
+   0.8583,
+   0.9951
+  ],
+  "uncertain_rate": 0.0,
+  "api_failures": 0,
+  "quotes_verified": "158/160",
+  "input_tokens_median": 2329.0,
+  "output_tokens_median": 253.5,
+  "latency_s_median": 1.5
+ },
+ "dev80v2-news-p2-evidence-v1-gemini-3.1-flash-lite.jsonl": {
+  "n": 80,
+  "correct_published": "36/40",
+  "incorrect_published": "1/40",
+  "precision": 0.972972972972973,
+  "precision_wilson95": [
+   0.8618,
+   0.9952
+  ],
+  "uncertain_rate": 0.0,
+  "api_failures": 0,
+  "quotes_verified": "129/130",
+  "input_tokens_median": 2360.0,
+  "output_tokens_median": 238.5,
+  "latency_s_median": 1.5
+ },
+ "dev80v2-news-p3-counter-v1-gemini-3.1-flash-lite.jsonl": {
+  "n": 80,
+  "correct_published": "33/40",
+  "incorrect_published": "1/40",
+  "precision": 0.9705882352941176,
+  "precision_wilson95": [
+   0.8508,
+   0.9948
+  ],
+  "uncertain_rate": 0.013,
+  "api_failures": 0,
+  "quotes_verified": "121/122",
+  "input_tokens_median": 2743.0,
+  "output_tokens_median": 240.5,
+  "latency_s_median": 1.4
+ },
+ "dev80v2-news-p2-evidence-think-v1-gemini-3.1-flash-lite.jsonl": {
+  "n": 80,
+  "correct_published": "36/40",
+  "incorrect_published": "1/40",
+  "precision": 0.972972972972973,
+  "precision_wilson95": [
+   0.8618,
+   0.9952
+  ],
+  "uncertain_rate": 0.0,
+  "api_failures": 0,
+  "quotes_verified": "169/170",
+  "input_tokens_median": 2360.0,
+  "output_tokens_median": 386.0,
+  "latency_s_median": 1.6
+ },
+ "dev80v2-news-p4-twostage-v1-gemini-3.1-flash-lite.jsonl": {
+  "n": 80,
+  "correct_published": "35/40",
+  "incorrect_published": "1/40",
+  "precision": 0.9722222222222222,
+  "precision_wilson95": [
+   0.8583,
+   0.9951
+  ],
+  "uncertain_rate": 0.0,
+  "api_failures": 0,
+  "quotes_verified": "203/203",
+  "input_tokens_median": 2720.0,
+  "output_tokens_median": 223.0,
+  "latency_s_median": 2.6
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sebastian Ytrevik ny leder i FpU"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "FpU",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The news item concerns the appointment of a new leader for FpU (Fremskrittspartiets Ungdom), which is a separate organization from the target company Fremskrittspartiet.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1088,
+ "input_tokens": 1875,
+ "output_tokens": 202,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:38.497243+00:00"
+}

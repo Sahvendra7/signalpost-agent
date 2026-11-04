@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Morgan, tell a little bit of your self? I’m 57 years old, lives in Jönköping together with my wife Ingela to whom I have been married for 24 years.",
+   "Now after 39 years will I stop working for Kongsberg Automotive and focus on consultancy within cost engineering, purchasing and production."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Morgan Lundberg",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-05-30",
+  "date_evidence": "Thu, 30 May 2024 10:49:55 +0000",
+  "decision": "withhold",
+  "reason": "The article is a personal profile and interview with an individual named Morgan Lundberg about his career and expertise in cost engineering, rather than a development or event concerning C2U Group AB.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 7459,
+ "input_tokens": 2460,
+ "output_tokens": 291,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:28:14.276941+00:00"
+}

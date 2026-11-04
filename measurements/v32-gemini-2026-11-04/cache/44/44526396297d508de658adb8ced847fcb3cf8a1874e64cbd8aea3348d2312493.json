@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fra Senter for krisepsykologi: Vil du delta i prosjekt om evaluering av selvrapporteringsskalaer for sorg og forlenget sorg?"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Senter for krisepsykologi, Universitetet i Bergen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item describes a research project conducted by Senter for krisepsykologi at the University of Bergen, not a development or event concerning the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1265,
+ "input_tokens": 2864,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:47.914155+00:00"
+}

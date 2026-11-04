@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
+  ],
+  "content_category": "unrelated_content",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2016-06-06",
+  "date_evidence": "June 6, 2016",
+  "reason": "The content is a generic placeholder text (Lorem Ipsum) and does not report any specific development, action, or event related to the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1785,
+ "input_tokens": 2468,
+ "output_tokens": 167,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:10:22.347860+00:00"
+}

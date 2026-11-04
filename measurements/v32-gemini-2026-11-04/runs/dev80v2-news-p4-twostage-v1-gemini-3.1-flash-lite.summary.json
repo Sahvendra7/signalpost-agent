@@ -1,0 +1,45 @@
+{
+ "items": 80,
+ "ok": 80,
+ "api_failures": 0,
+ "api_failure_rate": 0.0,
+ "errors": {},
+ "api_calls_made": 116,
+ "cache_hits": 0,
+ "input_tokens": 245709,
+ "output_tokens": 21569,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.093781,
+ "latency_ms_p50": 2638,
+ "latency_ms_p90": 26421,
+ "retries": 1,
+ "decisions": {
+  "publish": 36,
+  "withhold": 44
+ },
+ "model_decisions": {
+  "publish": 36,
+  "withhold": 44
+ },
+ "quotes_total": 203,
+ "quotes_verified": 203,
+ "quotes_exact": 203,
+ "flags": {
+  "date_unsupported": 14
+ },
+ "model_versions": {
+  "gemini-3.1-flash-lite": 80
+ },
+ "experiment_id": "dev80v2-news-p4-twostage-v1-gemini-3.1-flash-lite",
+ "dataset": "eval200",
+ "model": "gemini-3.1-flash-lite",
+ "prompt_id": "news-p4-twostage-v1",
+ "prompt_sha256": "15e3bbb8ac4ac11fb5896eed6942cdf2bc45cb8a8e2da600fc58984311cc4c05",
+ "git": {
+  "commit": "e2eb072531b6443a5473a14f902ce6d886fd0b4b",
+  "src_dirty": true
+ },
+ "budget_stop": null,
+ "prices_source": "https://aistudio.google.com/docs/pricing (read 2026-11-04; 3.6/3.8 Flash rise to $1.50/$7.50 on 2027-01-01)",
+ "finished_at": "2026-11-04T23:13:05.763045+00:00"
+}

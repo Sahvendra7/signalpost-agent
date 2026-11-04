@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "JOY Medispa Bodø",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "The item is a service description page promoting acne treatments offered by the company, which constitutes marketing content rather than a specific company development or news event.",
+  "evidence_quotes": [
+   "Hos JOY Medispa Bodø tilbyr vi skreddersydde behandlinger for å bekjempe akne og gi deg en klarere, sunnere hud.",
+   "Vi tilbyr behandlinger som renser, eksfolierer og fremmer hudfornyelse for å redusere akne og forhindre fremtidige utbrudd"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 29976,
+ "input_tokens": 2404,
+ "output_tokens": 271,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:51.810144+00:00"
+}

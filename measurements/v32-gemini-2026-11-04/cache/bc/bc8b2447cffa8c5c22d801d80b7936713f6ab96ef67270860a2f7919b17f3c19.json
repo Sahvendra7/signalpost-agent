@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Publisert 02.11.2026 kl.07:30",
+   "Fremskrittspartiet er ikke enig med fylkesrådet i Nordland som har tatt til orde for å fjerne språkkrav for mannskap på ferjer."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-11-02",
+  "date_evidence": "Publisert 02.11.2026 kl.07:30",
+  "decision": "publish",
+  "reason": "The article is a political announcement and statement by Fremskrittspartiet regarding language requirements on ferries, published directly by the party on 2026-11-02.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1273,
+ "input_tokens": 2085,
+ "output_tokens": 289,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:22.922160+00:00"
+}

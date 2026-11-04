@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vellykket åpning av Baker Brun på AMFI Voss",
+   "da vi åpnet dørene på AMFI Voss i går"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Baker Brun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "expansion_or_new_location",
+  "publication_date": "2025-12-02",
+  "date_evidence": "02.12.2025",
+  "decision": "publish",
+  "reason": "The article announces the successful opening of a new Baker Brun location at AMFI Voss.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1167,
+ "input_tokens": 2008,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:27.861351+00:00"
+}

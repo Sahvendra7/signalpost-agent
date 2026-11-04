@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "To meet the challenges ahead, Fram Marine can act as an independent third party, to assess vessels in their current state, provide performance analysis and full in-service testing to measure the effect of technologies installed."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-19",
+  "date_evidence": "Posted 19.09.2024",
+  "decision": "withhold",
+  "reason": "The text discusses general industry challenges regarding emission reduction and describes the company's consulting services rather than reporting a specific development, action or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1379,
+ "input_tokens": 1955,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:23.072910+00:00"
+}

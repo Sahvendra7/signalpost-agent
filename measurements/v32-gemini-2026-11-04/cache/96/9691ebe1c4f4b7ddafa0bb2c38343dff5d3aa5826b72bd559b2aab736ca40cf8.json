@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "Frankeringsrekvisita",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an educational blog post providing advice on how to choose an label printer, rather than reporting on a specific development or event of the company itself.",
+  "evidence_quotes": [
+   "I dette innlegget vil vi gå igjennom noen viktige faktorer man burde vurdere når man står overfor kjøp av en etikettskriver"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9235,
+ "input_tokens": 2298,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:59.212743+00:00"
+}

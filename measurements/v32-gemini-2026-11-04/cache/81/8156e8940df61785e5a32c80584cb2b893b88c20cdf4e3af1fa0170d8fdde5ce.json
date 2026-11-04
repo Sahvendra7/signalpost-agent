@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har hatt gleden av å åpne to nye bakerier – Svensgården på Bryggen og Baker Brun Voss."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Baker Brun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "expansion_or_new_location",
+  "publication_date": "2026-01-05",
+  "date_evidence": "05.01.2026",
+  "decision": "publish",
+  "reason": "The article reports on developments at Baker Brun during 2025, specifically including the opening of two new bakeries.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2142,
+ "input_tokens": 1964,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:47:03.836210+00:00"
+}

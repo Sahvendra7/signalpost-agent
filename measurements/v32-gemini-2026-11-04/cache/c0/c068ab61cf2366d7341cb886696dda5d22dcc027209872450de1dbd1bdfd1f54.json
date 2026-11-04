@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For 3. år på rad viser foreldreundersøkelsen stor tilfredshet med vårt tilbud.",
+   "Dagens budstikka artikkel viser til at vi er en av de barnehager med sterke score og i alle punkter ligger godt over gjennomsnittet for Asker kommune."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "AS BARNAS HUS GULLHELLA",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-02-20",
+  "date_evidence": "20.02.2026",
+  "decision": "publish",
+  "reason": "The company reports on the results of its annual parent survey, noting high satisfaction scores compared to municipal and national averages.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1516,
+ "input_tokens": 2014,
+ "output_tokens": 261,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:07.950230+00:00"
+}

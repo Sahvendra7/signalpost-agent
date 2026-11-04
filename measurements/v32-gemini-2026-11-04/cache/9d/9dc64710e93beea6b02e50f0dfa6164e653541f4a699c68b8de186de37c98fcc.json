@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Endelig kan vi pressentere den nye siden med vinnerresultater i de ulike aktivitetsgrenene."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Norsk Rhodesian Ridgeback klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The club announces the launch of a new winner results page for its activities, which is a genuine development for the target association.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2544,
+ "input_tokens": 1836,
+ "output_tokens": 201,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:29.192269+00:00"
+}

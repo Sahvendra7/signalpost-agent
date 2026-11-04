@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "Zebra",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-12-18",
+  "date_evidence": "Mon, 18 Dec 2023 14:06:36 +0000",
+  "decision": "withhold",
+  "reason": "The article is a promotional blog post highlighting the benefits of Zebra label printers, which is a product marketing piece rather than a report on a development of the target company.",
+  "evidence_quotes": [
+   "5 grunner til at Zebra etikettskrivere er bedriftens beste valg",
+   "Blant de fremste valgene i markedet står Zebra etikettskrivere , berømt for sin kombinasjon av høy kvalitet, brukervennlighet og kostnadseffektivitet."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 25490,
+ "input_tokens": 2374,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:57.324703+00:00"
+}

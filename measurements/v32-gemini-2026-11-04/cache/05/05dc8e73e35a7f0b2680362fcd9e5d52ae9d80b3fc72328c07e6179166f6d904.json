@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hver fredag åpner jeg «kontoret» her på psykologberge.no og deler noen korte refleksjoner fra terapirommet og hverdagen....",
+   "Dette er fredagsbrevet fra psykologen – små refleksjoner til deg som ønsker å leve litt klokere med både hodet og kroppen."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-05-08",
+  "date_evidence": "08. mai 2026",
+  "decision": "withhold",
+  "reason": "The article is an educational piece providing reflections and advice on running and mental health, rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1543,
+ "input_tokens": 2458,
+ "output_tokens": 258,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:28.951815+00:00"
+}

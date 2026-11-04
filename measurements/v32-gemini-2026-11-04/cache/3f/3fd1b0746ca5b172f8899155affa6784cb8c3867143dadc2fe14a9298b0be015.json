@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid hjälpte Ystad Kommun med anläggningen av denna lekplats 2007.",
+   "Nu, tolv år senare, hade det blivit dags för renovering av lekställningen som tillgänglighetsanpassats och i samband med detta lades ny Sureplay under den nya lekställningen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2019-05-11",
+  "date_evidence": "11 maj, 2019",
+  "decision": "publish",
+  "reason": "The article reports on a completed project where the target company renovated a playground and installed new Sureplay surfaces for Ystad Kommun.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1332,
+ "input_tokens": 2298,
+ "output_tokens": 271,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:57.980508+00:00"
+}

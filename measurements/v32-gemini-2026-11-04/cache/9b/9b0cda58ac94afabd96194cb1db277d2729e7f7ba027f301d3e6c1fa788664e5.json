@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vårt prosjekt: Psykolog Berges Julekalender. Bakgrunn for dette er at Jens Peder, sønn (17), fikk avslag på jobbsøking, og tok avslaget med fatning og kom opp med ideen om at han og jeg kunne heller lage Psykolog Berges Julekalender.",
+   "Og nå er vi igang, med nettopp dette. Julekalenderen har 24 luker med råd og verktøy fra psykologen. Kanskje dette kunne være noe for deres ansatte? -En slags immateriell julegave altså"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Psykolog Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The item pitches and promotes a product/service ('Psykolog Berges Julekalender') to corporate clients as a gift for employees, constituting marketing rather than a standalone company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1653,
+ "input_tokens": 1858,
+ "output_tokens": 334,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:28.301761+00:00"
+}

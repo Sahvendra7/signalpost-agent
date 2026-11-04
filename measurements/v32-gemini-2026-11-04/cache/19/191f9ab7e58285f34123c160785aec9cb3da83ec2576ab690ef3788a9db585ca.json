@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Jentene på Tunet er nominert til finalen i Top Food Gifts 2026 , som arrangeres på Kreta i mai.",
+   "Nominasjonen vår kommer etter at vi ble kåret til Årets Matgave 2025 under Trøndersk Matfestival."
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "award_or_certification",
+  "publication_date": "2026-05-18",
+  "date_evidence": "Jentene på tunet / mai 18, 2026",
+  "reason": "The article announces that the company has been nominated for an international competition, Top Food Gifts 2026, following their previous award as 'Årets Matgave 2025'.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1221,
+ "input_tokens": 2572,
+ "output_tokens": 229,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:21.783543+00:00"
+}

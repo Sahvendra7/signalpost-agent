@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi er en komplett leverandør av IT-tjenester. Det betyr at du får alle nødvendige produkter og tjenester hos oss. Ved å bake alle våre tjenester og produkter inn til en komplett fullservice tjeneste"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article is a promotional description of the company's IT services and packages, rather than reporting a specific development, action, or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2117,
+ "input_tokens": 3553,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:48.550850+00:00"
+}

@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ni lærere fra skolen dro onsdag kveld til Steinerskolen i Ålesund, for å hospitere torsdag og fredag.",
+   "Torsdagen dro hele skolen til Drøbak for å besøke akvariet. Fredag dro ungdomsskolen til NMBU og hadde undervisning der mens barneskolen var i skogen med ulike aktiviteter"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-06-07",
+  "date_evidence": "7. juni 2022",
+  "reason": "The article reports on specific activities undertaken by the school, including a teacher study trip to Ålesund and various student excursions to Drøbak and NMBU.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2877,
+ "input_tokens": 2783,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:28.440146+00:00"
+}

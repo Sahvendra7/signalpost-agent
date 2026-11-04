@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi er på jakt etter nye ringevikarer for dette barnehageår",
+   "Vi søker en dyktig, fleksibel og omsorgsfull vikar til vår fine barnehage, Barnas Hus Gullhella."
+  ],
+  "content_category": "job_advertisement",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-05",
+  "date_evidence": "05.08.2026",
+  "reason": "The content is a job advertisement seeking new substitute staff (ringevikarer) for the kindergarten, which falls under the category of job advertisement.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 15425,
+ "input_tokens": 1563,
+ "output_tokens": 196,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:10:10.987231+00:00"
+}

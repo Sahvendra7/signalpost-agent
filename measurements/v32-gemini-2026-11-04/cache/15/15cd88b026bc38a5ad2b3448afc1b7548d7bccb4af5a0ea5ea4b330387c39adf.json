@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "«Rikelig med naturlig dagslys i huset» sto øverst på prioriteringslisten for eierne av dette moderne nybygget."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "eierne av dette moderne nybygget",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page describes a reference project or case study featuring Renson products on a residential building rather than reporting an action or development of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1247,
+ "input_tokens": 2480,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:47.941337+00:00"
+}

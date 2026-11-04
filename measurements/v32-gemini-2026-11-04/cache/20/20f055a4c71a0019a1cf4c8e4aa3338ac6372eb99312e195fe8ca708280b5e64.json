@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ved det nye Vikingtidsmuseet i Oslo leverer vi en spesialtilpasset utvendig solskjermingsløsning fra Comfort Solskjerming til et av Norges mest ambisiøse kulturbygg."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Comfort Solskjerming",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page describes a project delivery for the Vikingtidsmuseet, which falls under reference/portfolio project listings rather than standalone company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1330,
+ "input_tokens": 2176,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:43.023732+00:00"
+}

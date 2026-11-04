@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvorfor bør du investere i nye PC’er i din bedrift? Hvis du vil at bedriften din skal jobbe bedre og mer effektivt, kan det å kjøpe nye datamaskiner være en smart ting å gjøre.",
+   "I tillegg til 1 års standard garanti så tilbyr vi også utvidet garanti som et tilleggsprrodukt."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-28",
+  "date_evidence": "November 28, 2023",
+  "decision": "withhold",
+  "reason": "The article is an educational piece providing advice on why businesses should invest in new PCs, rather than reporting a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1841,
+ "input_tokens": 2596,
+ "output_tokens": 268,
+ "thoughts_tokens": 132,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:05.185339+00:00"
+}

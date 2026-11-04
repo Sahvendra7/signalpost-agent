@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Når du er usikker på hvor godt du hører, anbefaler vi deg å ta en hørselstest."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Melhus hørsel",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-03-10",
+  "date_evidence": "Sun, 10 Mar 2019 13:44:32 +0000",
+  "decision": "withhold",
+  "reason": "The article provides general advice and information about when to test one's hearing rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 34502,
+ "input_tokens": 1835,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:56.907200+00:00"
+}

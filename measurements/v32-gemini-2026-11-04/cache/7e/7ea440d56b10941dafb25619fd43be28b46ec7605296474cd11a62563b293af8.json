@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Utleie av hallen til Konfirmasjon 2027"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Siljan Idrettslag",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-03-13",
+  "date_evidence": "13. mars 2026",
+  "decision": "withhold",
+  "reason": "The item is a promotional notice regarding the rental of the company's hall, which constitutes product or service marketing rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1329,
+ "input_tokens": 1448,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:28.737838+00:00"
+}

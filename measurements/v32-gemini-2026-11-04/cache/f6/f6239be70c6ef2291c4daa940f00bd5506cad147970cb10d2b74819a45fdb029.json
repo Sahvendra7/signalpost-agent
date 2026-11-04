@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Eivind Arnevåg er ansatt i 50 % stilling som vikarierende retreatleder på Lia Gård Retreatsenter for første halvår av 2027",
+   "8. sep."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Lia Gård Retreatsenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The text announces a new personnel appointment (vikarierende retreatleder) at the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1370,
+ "input_tokens": 1729,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:58.063838+00:00"
+}

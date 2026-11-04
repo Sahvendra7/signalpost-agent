@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet will deliver a flue gas condensing plant to Helen’s Salmisaari K6 pellet heating plant in Helsinki, Finland.",
+   "Valmet Oyj’s press release on August 31, 2026, at 9:30 a.m. EEST"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet Oyj",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-31",
+  "date_evidence": "Valmet Oyj’s press release on August 31, 2026, at 9:30 a.m. EEST",
+  "decision": "publish",
+  "reason": "The press release announces a new commercial delivery and order contract by the target company Valmet to supply a flue gas condensing plant.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1272,
+ "input_tokens": 2672,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:07.921197+00:00"
+}

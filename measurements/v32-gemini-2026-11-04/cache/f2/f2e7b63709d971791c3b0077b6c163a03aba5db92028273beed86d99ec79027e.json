@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Barnekonsert med Linnea Dale – vokal, Erik Damberg – gitar/vokal, André Kassen – saxofon/vokal",
+   "Småting lørdag 17. januar 2026 15:30 16:30"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesodden jazzklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-01-17",
+  "date_evidence": "jan. 17. Småting lørdag 17. januar 2026",
+  "decision": "publish",
+  "reason": "The item announces a specific concert event hosted by the target company, Nesodden jazzklubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1368,
+ "input_tokens": 1525,
+ "output_tokens": 267,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:03.776790+00:00"
+}

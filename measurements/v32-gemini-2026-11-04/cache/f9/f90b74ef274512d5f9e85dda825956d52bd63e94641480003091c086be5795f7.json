@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nå krever Fremskrittspartiet svar.",
+   "Publisert 29.10.2026 kl.11:55",
+   "Frp vil ha svar fra samferdselsministeren om den økonomiske kontrollen i Fornebubanen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-10-29",
+  "date_evidence": "Publisert 29.10.2026 kl.11:55",
+  "decision": "publish",
+  "reason": "The article reports on Fremskrittspartiet's political action in demanding answers from the Minister of Transport regarding the cost overruns in the Fornebubanen project.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1429,
+ "input_tokens": 2289,
+ "output_tokens": 282,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:58.077421+00:00"
+}

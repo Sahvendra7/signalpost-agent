@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Querkus Terra - enda en farge lagerført; Cammello",
+   "18. mars 2026",
+   "Fargen Cammello er for fin til ikke å ha lagerført!"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-03-18",
+  "date_evidence": "18. mars 2026",
+  "reason": "The company announces that a new color variant, Cammello, has been added to their stock of Querkus Terra products.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1045,
+ "input_tokens": 1701,
+ "output_tokens": 196,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:06:36.607418+00:00"
+}

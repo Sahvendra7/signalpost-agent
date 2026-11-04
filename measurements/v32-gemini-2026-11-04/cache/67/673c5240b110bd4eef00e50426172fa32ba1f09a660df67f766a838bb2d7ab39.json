@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet has entered into an agreement to acquire the manufacturing execution system (MES) business from Tieto, including the modern AI-powered TIPS MES for production planning and execution.",
+   "Valmet Oyj’s press release on October 27, 2026 at 8:45 a.m. EET"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2026-10-27",
+  "date_evidence": "Valmet Oyj’s press release on October 27, 2026 at 8:45 a.m. EET",
+  "decision": "publish",
+  "reason": "The press release announces Valmet's agreement to acquire an MES business from Tieto, representing a concrete corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1379,
+ "input_tokens": 2509,
+ "output_tokens": 279,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:33.027737+00:00"
+}

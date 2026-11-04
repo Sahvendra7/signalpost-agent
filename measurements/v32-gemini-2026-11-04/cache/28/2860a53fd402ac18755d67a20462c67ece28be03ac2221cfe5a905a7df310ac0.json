@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alle brannvesenene i regionen har nå gått sammen om en felles veileder.",
+   "Den nye fellesveilederen for Agder er laget for å komplettere og utdype disse kravene, slik at ansvarlig prosjekterende i en byggesak enklere kan velge løsninger som oppfyller forskriftens funksjonskrav.",
+   "Oppdatert: 26. mai 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Brannvesenet Sør IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-05-26",
+  "date_evidence": "Oppdatert: 26. mai 2026",
+  "decision": "publish",
+  "reason": "The target company reports on its participation in creating and publishing a new joint guide for building requirements and firefighting efforts in the region.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1356,
+ "input_tokens": 2454,
+ "output_tokens": 288,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:28.005015+00:00"
+}

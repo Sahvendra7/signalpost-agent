@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Søndag 8. november 2026 kl. 11 taler Jan Veiby Torsdag 5. november 2026 kl. 19 samles vi til Bibelgrupp Minner om at tirsdag 10. november 2026 kl. 12 er kvinnemisjon"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Betel Horten",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text only lists recurring weekly activities and scheduled church services rather than reporting a new corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1396,
+ "input_tokens": 1753,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:27:53.044763+00:00"
+}

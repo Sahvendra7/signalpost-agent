@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Norwegian Centre for Violence and Traumatic Stress Studies – principal investigator: Margunn Bjørnholt"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-01-20",
+  "date_evidence": "2022-01-20T18:21:00+00:00",
+  "decision": "withhold",
+  "reason": "The text describes a research project conducted by a consortium of institutions, where Margunn Bjørnholt is listed as a principal investigator for the Norwegian Centre for Violence and Traumatic Stress Studies, not as the primary entity conducting the research as an independent business event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1230,
+ "input_tokens": 2014,
+ "output_tokens": 253,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:51.679844+00:00"
+}

@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Her finner du råd til hva du skal gjøre etter du har fått behandling hos oss."
+  ],
+  "content_category": "advice_or_educational",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "reason": "The content provides post-treatment care instructions and advice for patients, which is educational in nature rather than reporting a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1279,
+ "input_tokens": 3262,
+ "output_tokens": 160,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:12:36.028984+00:00"
+}

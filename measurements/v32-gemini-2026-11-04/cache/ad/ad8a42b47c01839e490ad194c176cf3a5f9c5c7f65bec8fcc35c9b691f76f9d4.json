@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I sin tale til Fremskrittspartiets landsstyre trakk partileder Sylvi Listhaug frem boka",
+   "Publisert 17.10.2026 kl.14:25",
+   "Fremskrittspartiet krever at Norge kartlegger omfanget av kriminelle organisasjoner og «klaner» i Norge."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-17",
+  "date_evidence": "Publisert 17.10.2026 kl.14:25",
+  "decision": "publish",
+  "reason": "The article reports on a speech given by the party leader at Fremskrittspartiet's national board meeting, announcing the party's political demands regarding immigration and crime mapping.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 10025,
+ "input_tokens": 3246,
+ "output_tokens": 297,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:51.673806+00:00"
+}

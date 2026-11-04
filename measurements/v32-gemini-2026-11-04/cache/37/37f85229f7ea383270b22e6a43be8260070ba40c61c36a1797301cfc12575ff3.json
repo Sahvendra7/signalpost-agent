@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Skrevet av Tor Kristiansen Som lærer, rektor, far og bestefar har Einar Graff Hugo vært opptatt av hvordan vi kan ivareta og utvikle barns egenart på best mulig måte",
+   "Tidlig så han hvordan Lia Gård Retreatsenter i familieretreatarbeidet ivaretar dette."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Einar Graff Hugo",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-12-19",
+  "date_evidence": "19. des.",
+  "decision": "withhold",
+  "reason": "The article is a profile interview focusing on Einar Graff Hugo and his personal history with retreats rather than reporting a specific development or event of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1984,
+ "input_tokens": 2886,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:37:53.678431+00:00"
+}

@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvorfor Brother DK-22246 er skreddersydd perfekt for dine etikett behov",
+   "For virksomheter som krever presise og tilpassbare etiketter, er Brother DK-22246 et utmerket valg ."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Brother DK-22246",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-05-28",
+  "date_evidence": "Tue, 28 May 2024 09:59:20 +0000",
+  "decision": "withhold",
+  "reason": "The article is a promotional product description for a specific label roll (Brother DK-22246) and does not report on a development or event concerning the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 66919,
+ "input_tokens": 2681,
+ "output_tokens": 277,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:45:57.449855+00:00"
+}

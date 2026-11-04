@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Frem til midten av 2025 har vi i Bulgaria under EU bistått med å rehabilitere og energieffektivisere ca 20 000m2 offentlige bygg, bygget 10 kraftanlegg, installert 12 større varmepumpeanlegg og byttet ca 10 000 gatelys til LED inkludert alt av styresystemer."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "MPENERGI AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2026-08-09",
+  "date_evidence": "09/08/2026",
+  "decision": "publish",
+  "reason": "The company reports on the completion of several energy efficiency and infrastructure projects in Bulgaria, which constitutes a genuine company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1384,
+ "input_tokens": 1725,
+ "output_tokens": 281,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:14:48.379614+00:00"
+}

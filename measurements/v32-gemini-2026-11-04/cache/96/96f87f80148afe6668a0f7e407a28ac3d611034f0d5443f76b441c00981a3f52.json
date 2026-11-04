@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det har igjen kommet klager på flyging i D109. Dette området bør derfor kun brukes på dagtid på hverdager."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-05-29",
+  "date_evidence": "Fri, 29 May 2026 05:58:14 +0000",
+  "decision": "withhold",
+  "reason": "The content is an advisory notice or reminder to pilots regarding noise complaints and regulations, rather than a report of a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1575,
+ "input_tokens": 1591,
+ "output_tokens": 239,
+ "thoughts_tokens": 114,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:44.918843+00:00"
+}

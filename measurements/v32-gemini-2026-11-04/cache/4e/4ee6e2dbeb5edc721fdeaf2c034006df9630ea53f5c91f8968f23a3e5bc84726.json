@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi deltar i energidebatten om kraftsystemet",
+   "Vi har 24. juli en oppfølger i EnergiWatch om kraftsystemet"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mpenergi",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-07-24",
+  "date_evidence": "24/07/2026",
+  "decision": "publish",
+  "reason": "The company announces its participation in a public energy debate by publishing a follow-up article in the industry publication EnergiWatch.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1313,
+ "input_tokens": 1603,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:14:43.308632+00:00"
+}

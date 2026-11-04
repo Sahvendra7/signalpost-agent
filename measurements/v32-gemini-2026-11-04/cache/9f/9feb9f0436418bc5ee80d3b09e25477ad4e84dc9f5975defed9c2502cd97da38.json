@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "My work – SFERA I – is a part of the exhibition."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristine Bjaadal",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2020-06-22",
+  "date_evidence": "Mon, 22 Jun 2020 12:26:02 +0000",
+  "decision": "publish",
+  "reason": "The item reports that the designer's work, SFERA I, is part of the exhibition 'Take your time', which constitutes a professional activity/event for the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1187,
+ "input_tokens": 1730,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:59:23.597162+00:00"
+}

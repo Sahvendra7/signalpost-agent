@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Og denne høsten har det skjedd mye på Tunet. Vi har laget fire helt nye sjokoladebiter",
+   "I høstens sortiment finner du fire helt nye smaker. De er ganske forskjellige – akkurat slik vi liker det. Ostekake med lime – frisk, kremet og sprø"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-09-22",
+  "date_evidence": "Jentene på tunet / september 22, 2026 / Håndverk & produksjon",
+  "decision": "publish",
+  "reason": "The company announces the launch of four new chocolate flavors as part of their autumn assortment.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1253,
+ "input_tokens": 3447,
+ "output_tokens": 269,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:07.687322+00:00"
+}

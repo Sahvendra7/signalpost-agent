@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har vært på følgende prosjekter / kunder: 1. Håndverksgruppen Alta – Alta Omsorgssenter, Alta Nærsykehus, Markveien terrasse, Elvekanten, Alta Brannstasjon, Alta Videregående skole, Coop Mehamn 2. Byggmester Bengt Andersen – Berlevåg Basseng, Burfjord skole 3. Entreprenør Harald Nilsen – Tannklinik Tana bru, Statsnett, Høgegga barnehage, Tannklinikken i Alta"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Personell AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-12-04",
+  "date_evidence": "des 4, 2020",
+  "decision": "withhold",
+  "reason": "The page is a reference list of past projects and customers rather than reporting a specific new development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1466,
+ "input_tokens": 1792,
+ "output_tokens": 300,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:29:53.115999+00:00"
+}

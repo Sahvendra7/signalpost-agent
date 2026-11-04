@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [],
+  "content_category": "uncertain",
+  "subject_entity": "unclear",
+  "subject_relation": "unclear",
+  "is_about_target_company": "unclear",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item contains no content or source text describing any event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1171,
+ "input_tokens": 1487,
+ "output_tokens": 147,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:27:47.819740+00:00"
+}

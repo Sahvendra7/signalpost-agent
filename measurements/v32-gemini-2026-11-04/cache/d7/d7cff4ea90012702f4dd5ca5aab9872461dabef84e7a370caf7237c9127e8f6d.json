@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Opsjonen på tre nye politihelikoptre blir ikke utløst. Jon Engen-Helgheim mener beslutningen svekker beredskapen"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-07",
+  "date_evidence": "Wed, 07 Oct 2026 20:11:00 +0200",
+  "decision": "withhold",
+  "reason": "The item consists of political commentary and criticism from a party representative regarding a government decision, rather than reporting on a development or event of the party itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1634,
+ "input_tokens": 1926,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:59.043073+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Som en del av aktivitetstilbudet i Bergen meldte vi på et lag på Bergen Vest sin futsal-cup."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristiania Bedriftsidrettslag",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The text reports on the target association's participation in a sports cup in Bergen as part of its activity offering.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1255,
+ "input_tokens": 1656,
+ "output_tokens": 202,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:27.948618+00:00"
+}

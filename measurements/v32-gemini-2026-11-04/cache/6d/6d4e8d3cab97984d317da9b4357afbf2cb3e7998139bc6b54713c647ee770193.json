@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fram Marine reinforces the team",
+   "Fram Marine is experiencing increasing demand and volume and has therefore strengthened the team with several skilled employees over the past year. One of them is Øystein Falleth – Project Manager within Environmental Technology."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2019-11-15",
+  "date_evidence": "Posted 15.11.2019",
+  "decision": "publish",
+  "reason": "The item announces that Fram Marine has strengthened its team with new employees, specifically appointing Øystein Falleth as Project Manager within Environmental Technology.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2078,
+ "input_tokens": 2080,
+ "output_tokens": 244,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:47:53.772374+00:00"
+}

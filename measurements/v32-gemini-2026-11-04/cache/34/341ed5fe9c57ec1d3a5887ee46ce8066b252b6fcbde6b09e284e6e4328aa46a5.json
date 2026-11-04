@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "product_service_marketing",
+  "subject_entity": "AtB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a guide to help customers choose the most cost-effective ticket type for their travel needs, which constitutes product marketing rather than a specific company development.",
+  "evidence_quotes": [
+   "Hvor ofte du reiser, avgjør hvilken billett som lønner seg. Vi hjelper deg med å finne den billigste billetten for deg."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 15980,
+ "input_tokens": 1942,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:52.813701+00:00"
+}

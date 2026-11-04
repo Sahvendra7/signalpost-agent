@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "The slides for my plenary address “Gender-blind or gender-based prevention?” at the Nordic conference “ Preventing violence against women in the Nordic countries ” on 8 March 2018 can be downloaded here .",
+   "Posted by Margunn Bjørnholt 9 March 2018"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2018-03-09",
+  "date_evidence": "Posted by Margunn Bjørnholt 9 March 2018",
+  "decision": "publish",
+  "reason": "The post announces Margunn Bjørnholt's plenary address at a Nordic conference and provides her presentation slides.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1301,
+ "input_tokens": 1663,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:57.950050+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 2025 – da vi hadde 10årsjubileum – hadde vi besøk av Selbyggen på tunet.",
+   "Fra de første forsiktige stegene i 2015, har vi vokst til å bli en arbeidsplass med ansatte i alle aldre"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "anniversary",
+  "publication_date": "2026-04-21",
+  "date_evidence": "Jentene på tunet / april 21, 2026 / Omtaler",
+  "decision": "publish",
+  "reason": "The article reports on the company's 10-year anniversary, which occurred in 2025, and reflects on the company's development since its founding in 2015.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1580,
+ "input_tokens": 2688,
+ "output_tokens": 286,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:33.014305+00:00"
+}

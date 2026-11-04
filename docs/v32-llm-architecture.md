@@ -67,13 +67,14 @@ change in LLM verdict alone is recorded as `reassessed`, not as a company change
 
 ## 4. Recommended policy if integrated
 
-**Pending the independent result** (the evalg250 evaluation is incomplete; see results §5): the candidate design is
-**Experiment A as a filter on V3.1's published items** (`A_filter`): it cannot add an item V3.1 would not publish, and
-its cost is proportional to V3.1's output, not to the whole candidate pool. Whether it removes enough errors without
-losing too much legitimate coverage is exactly what the unfinished evaluation must show.
-The hybrid `C_hybrid` (LLM may rescue soft-withheld items) adds coverage and is the stronger result where a
-company's own site is the only news source, but it lets the model's judgment *add* items; it should be a separate,
-later opt-in after its own independent measurement.
+Measured on the independent sample evalg250 (`docs/v32-gemini-results.md` §5):
+* the hybrid **`C_hybrid`** raised precision from 46.2% to 77.0% and correct coverage from 66 to 117 of 140 units;
+* the filter `A_filter` reached 65.2% at V3.1's coverage.
+
+The recommended production policy is therefore `C_hybrid`: V3.1's hard gates are final, and the LLM decides
+content for soft-withheld and published candidates. It comes after the entity-contract fix (no bare-brand aliases;
+explicit "operator is another legal entity" evidence) and a new independent measurement. `A_filter` is the
+conservative fallback when an operator wants the guarantee that the LLM never adds a unit.
 
 Configuration:
 

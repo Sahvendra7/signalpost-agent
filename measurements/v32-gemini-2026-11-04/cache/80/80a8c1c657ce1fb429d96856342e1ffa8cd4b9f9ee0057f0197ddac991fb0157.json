@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Arbeidslinja er taperen i statsbudsjettet – Ap får ikke flere i jobb med dette budsjettet.",
+   "Publisert 07.10.2026 kl.17:04"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-07",
+  "date_evidence": "Publisert 07.10.2026 kl.17:04",
+  "decision": "withhold",
+  "reason": "The article is a political opinion piece expressing the party's views on the national budget, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9902,
+ "input_tokens": 2240,
+ "output_tokens": 261,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:57.310797+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "VITAMINFILM: Jobb-fritid balansen"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "JAN-MARTIN BERGE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The item is an educational or advice-oriented video/article about work-life balance, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1091,
+ "input_tokens": 1531,
+ "output_tokens": 207,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:03.500161+00:00"
+}

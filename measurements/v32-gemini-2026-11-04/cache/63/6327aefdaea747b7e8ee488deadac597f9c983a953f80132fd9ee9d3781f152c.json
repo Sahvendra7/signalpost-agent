@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vurderer du ai chatbot i Trondheim? Se hva den løser, hva den koster og hvordan Agenta setter den opp på din eksisterende nettside."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "AGENTA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-13",
+  "date_evidence": "13. september 2026",
+  "decision": "withhold",
+  "reason": "This is an educational and promotional article explaining how AI chatbots work and how the target company sets them up, rather than reporting a specific news event or development about the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1408,
+ "input_tokens": 3145,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:18.102454+00:00"
+}

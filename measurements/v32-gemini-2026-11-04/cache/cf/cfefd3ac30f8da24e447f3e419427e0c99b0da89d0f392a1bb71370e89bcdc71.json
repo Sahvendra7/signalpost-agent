@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Idag har Frödin Natur & Fritid hand om samtliga kunder i Mellansverige och norra Sverige.",
+   "– När kunderna ringer oss eller vi ringer dem, så presenterar vi oss som Trafik & Fritid Norr. Så tätt är vårt samarbete idag."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Frödin Natur & Fritid",
+  "subject_relation": "other_group_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-05-26",
+  "date_evidence": "2020-05-26, 2020",
+  "decision": "withhold",
+  "reason": "The item is a promotional profile about partner Frödin Natur & Fritid acting on behalf of Trafik & Fritid, rather than reporting a direct action or event of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1293,
+ "input_tokens": 2860,
+ "output_tokens": 287,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:32:12.941923+00:00"
+}

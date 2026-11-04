@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nu har du chansen att bli en del av vårt fantastiska produktionsteam!",
+   "Det är full fart hos oss på Lideco och vi fortsätter att växa! Ta chansen att bli en del av vårt härliga team!"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Lideco",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a job advertisement inviting people to join the company's production team, which is not publishable company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1200,
+ "input_tokens": 1909,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:36:12.849072+00:00"
+}

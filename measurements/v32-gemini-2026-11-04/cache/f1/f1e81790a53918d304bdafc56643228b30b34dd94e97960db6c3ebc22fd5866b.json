@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trafik & Fritid Skandinavien har förvärvat Frödin Natur & Fritid AB.",
+   "13 mars, 2026 Trafik & Fritid stärker sin position i Sverige genom förvärv av Frödin Natur & Fritid"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid Skandinavien AB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2026-03-13",
+  "date_evidence": "13 mars, 2026",
+  "decision": "publish",
+  "reason": "The article announces that the target company Trafik & Fritid Skandinavien AB has acquired Frödin Natur & Fritid AB.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1437,
+ "input_tokens": 2524,
+ "output_tokens": 264,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:43.085248+00:00"
+}

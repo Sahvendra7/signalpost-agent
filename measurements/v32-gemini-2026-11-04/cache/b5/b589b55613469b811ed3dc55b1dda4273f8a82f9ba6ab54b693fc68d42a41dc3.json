@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sannsynligheten er stor for at vi kommer til å passere 20.000 millioner kroner i bompenger neste år, sier FrPs samferdselspolitiske talsperson, Bård Hoksrud."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-07",
+  "date_evidence": "Wed, 07 Oct 2026 12:00:00 +0200",
+  "decision": "withhold",
+  "reason": "The item consists of political commentary and criticism of the government's toll road policy rather than reporting on a specific development, action, or event of the party itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1311,
+ "input_tokens": 1833,
+ "output_tokens": 269,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:13.719997+00:00"
+}

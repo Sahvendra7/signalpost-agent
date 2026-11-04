@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "innfører KAS fra i dag av forhåndsbooking av slots for trening/airwork",
+   "Booking av treningsområder – Kjeller Aero Senter"
+  ],
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The text explicitly mentions 'Kjeller Aero Senter' and the abbreviation 'KAS' in the context of implementing a new booking system for training areas.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1131,
+ "input_tokens": 1213,
+ "output_tokens": 143,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:07:46.693937+00:00"
+}

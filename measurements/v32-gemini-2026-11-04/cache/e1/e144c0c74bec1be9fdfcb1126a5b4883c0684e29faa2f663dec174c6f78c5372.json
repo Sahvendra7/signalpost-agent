@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "VD-blogg 2026-10-02 Mer information"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "LIDECO AB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-02",
+  "date_evidence": "2026-10-02",
+  "decision": "withhold",
+  "reason": "The item is a link to a 'VD-blogg' (CEO blog) without any actual content or news provided in the text, making it a placeholder or navigation element rather than a report of a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1417,
+ "input_tokens": 1467,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:56.867701+00:00"
+}

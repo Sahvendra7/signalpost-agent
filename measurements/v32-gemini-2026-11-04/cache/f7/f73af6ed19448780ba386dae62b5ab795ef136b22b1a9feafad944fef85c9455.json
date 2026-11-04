@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FrP vil skjerpe kontrollen med velferdssvindel",
+   "FrP fremmet i mars en tiltakspakke mot organisert bedrageri og registerkriminalitet."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-19",
+  "date_evidence": "Publisert 19.10.2026 kl.13:09",
+  "decision": "withhold",
+  "reason": "The article presents political opinions, policy proposals, and commentary regarding welfare fraud by a representative of the party, rather than reporting a specific direct corporate development or event of the organisation itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2264,
+ "input_tokens": 2016,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:53.913143+00:00"
+}

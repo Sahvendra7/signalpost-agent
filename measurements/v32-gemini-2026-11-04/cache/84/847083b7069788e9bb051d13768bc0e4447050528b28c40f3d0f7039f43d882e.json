@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I Provendo driver vi både med fysiske produkter og programvare, support og drift, IT og Telekom, utvikling av nye løsninger og integrasjoner mellom eksisterende løsninger.",
+   "Vi i Provendo skal dele vår kunnskap og erfaring for å hjelpe deg med å trives i den digitale sfæren."
+  ],
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The text is written in the first person by the company Provendo, describing their own business activities and the launch of their own blog.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12215,
+ "input_tokens": 1488,
+ "output_tokens": 168,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:06:02.777566+00:00"
+}

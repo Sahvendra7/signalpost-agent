@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fresvik Produkt stenger fabrikken i romjula, slik at dei tilsette får velfortent ferie.",
+   "15. des."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2020-12-15",
+  "date_evidence": "15. des.",
+  "decision": "publish",
+  "reason": "The item announces a holiday closure schedule for the target company's factory, representing a genuine company operational update.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1388,
+ "input_tokens": 1774,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:59:28.082579+00:00"
+}

@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny rapport fra Deloitte og Proba om etterlevelse av barnehageloven",
+   "På oppdrag fra Utdanningsdirektoratet har Deloitte i samarbeid med Proba samfunnsanalyse evaluert etterlevelsen av barnehageloven og tilsyn på barnehageområdet.",
+   "Publisert 20. april 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-04-20",
+  "date_evidence": "Publisert 20. april 2026",
+  "reason": "The company announces the publication of a new report they produced in collaboration with Deloitte for the Norwegian Directorate for Education and Training.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1158,
+ "input_tokens": 1558,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:16.720831+00:00"
+}

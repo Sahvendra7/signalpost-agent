@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Slik skriver du en stillingsannonse som tiltrekker",
+   "En god stillingsannonse kan være forskjellen mellom et tilfeldig søkerfelt og kandidater som faktisk passer."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "HUMANO AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-03-11",
+  "date_evidence": "11. mars 2026",
+  "decision": "withhold",
+  "reason": "The article is an educational guide on how to write job advertisements, which falls under advice or educational content rather than reporting a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2473,
+ "input_tokens": 1994,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:38.906801+00:00"
+}

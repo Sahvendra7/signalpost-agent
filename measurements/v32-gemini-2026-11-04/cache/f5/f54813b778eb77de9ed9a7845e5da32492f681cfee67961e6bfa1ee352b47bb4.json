@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "En av vinnarna blev Gislövs IF som tillsammans med Trafik & Fritid skapade en multisportanläggning på idrottsplatsen",
+   "Trafik & Fritid levererade kunskap och all utrustning",
+   "Vi installerade en multicourt , specialanpassad efter kundens önskemål och våra egna erfarenheter från tidigare anläggningar. Vi levererade och monterade konstgräs på det aktuella området. Vi installerade också ett utomhusgym med totalt 12 maskiner."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2021-09-07",
+  "date_evidence": "7 september, 2021",
+  "decision": "publish",
+  "reason": "The article reports on a completed project where the company delivered equipment and installed a multisport facility and outdoor gym for a customer, Gislövs IF.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3189,
+ "input_tokens": 2640,
+ "output_tokens": 324,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:03.639415+00:00"
+}

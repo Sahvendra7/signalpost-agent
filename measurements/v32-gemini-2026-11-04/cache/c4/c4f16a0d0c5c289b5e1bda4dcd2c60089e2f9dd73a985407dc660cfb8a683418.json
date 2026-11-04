@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny rapport fra Deloitte og Proba om etterlevelse av barnehageloven"
+  ],
+  "subject_entity": "Proba",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The item title explicitly mentions Proba as one of the authors of a new report, confirming the target company is the subject.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 892,
+ "input_tokens": 1049,
+ "output_tokens": 111,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:31.454440+00:00"
+}

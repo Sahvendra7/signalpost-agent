@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "– Jeg må trekke frem André Søfteland, som hovedrollen, hvalfangeren Håkon Iversen.",
+   "Anmeldelse av musikalen «Krigen»"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Sivilisasjonen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a review of a musical written by a contributor for the publication, not a report on an internal development or corporate action of Sivilisasjonen AS itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1417,
+ "input_tokens": 3426,
+ "output_tokens": 220,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:43.110725+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredag 4.mars dro barneskolen (1.-6.klasse) til Ski Ishall for å leke og ha det gøy på isen.",
+   "Påminnelse om foreldremøte tirsdag 8.mars kl 18:00-20:00"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-03-04",
+  "date_evidence": "Fredagsbladet nr 24 – 04.03.2022",
+  "decision": "publish",
+  "reason": "The item reports on school activities, specifically a trip to an ice rink and an upcoming parent meeting, which are genuine events organized by the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1472,
+ "input_tokens": 2764,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:06.091651+00:00"
+}

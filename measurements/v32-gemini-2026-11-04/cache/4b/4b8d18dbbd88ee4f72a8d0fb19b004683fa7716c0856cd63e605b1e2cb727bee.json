@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kennel BelloRosario har fått valper!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Kennel BelloRosario",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-19",
+  "date_evidence": "Wed, 19 Aug 2026 09:41:33 +0000",
+  "decision": "withhold",
+  "reason": "The item reports on a litter of puppies born at a private kennel (Kennel BelloRosario), which is not a development or event of the target organization, Norsk Rhodesian Ridgeback Klubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1179,
+ "input_tokens": 1606,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:03.587930+00:00"
+}

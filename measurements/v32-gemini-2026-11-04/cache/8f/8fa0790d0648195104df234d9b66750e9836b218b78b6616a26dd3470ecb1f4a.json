@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FrP vil ta større nasjonal kontroll over utbyggingen av datasentre og stille krav til ny kraft og eller erstatningskraft eller beredskapskraft.",
+   "Fremskrittspartiet ber om fortgang fra regjeringen og vil ha en seriøs, grundig og hurtig behandling i energi- og miljøkomiteen av alle forslag rundt datasentre."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text presents the political party's policy positions and opinions on data center regulation rather than reporting on a specific development, action, or event of the organization itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2716,
+ "input_tokens": 1859,
+ "output_tokens": 264,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:55.124505+00:00"
+}

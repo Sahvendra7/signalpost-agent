@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Mens Torstein Træen sykler i gul ledertrøye i Tour de France, auksjonerer Matsentralen bort sykkelen hans til inntekt for folk som mangler mat.",
+   "Nå har Matsentralen kastet seg rundt for å utnytte øyeblikket mens Træen leder rittet."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Matsentralen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-07-08",
+  "date_evidence": "July 8, 2026",
+  "decision": "publish",
+  "reason": "The article reports that Matsentralen is auctioning off a Tour de France bicycle donated to them to raise funds for food distribution.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1472,
+ "input_tokens": 1942,
+ "output_tokens": 267,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:23.165654+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet delivers the first commercial-scale 3D Fiber line to Metsä Group, enabling high-quality molded fiber packaging production",
+   "Valmet Oyj’s press release on August 27, 2026, at 2:30 p.m. EEST Metsä Group has selected Valmet to deliver a 3D Fiber molded fiber production line for their mill in Äänekoski, Finland."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-08-27",
+  "date_evidence": "Valmet Oyj’s press release on August 27, 2026",
+  "decision": "publish",
+  "reason": "The press release announces that Valmet has been selected by Metsä Group to deliver a commercial-scale 3D Fiber line, representing a specific contract and company development for the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1638,
+ "input_tokens": 2594,
+ "output_tokens": 306,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:36:58.286775+00:00"
+}

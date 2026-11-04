@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Kameos grunnlegger og adm. dir. Sebastian Martens Harung oppsummerer andre kvartal og første halvår 2026 for Kameo Sverige og Kameo Norge sammen med Linda Borgudd.",
+   "Nok et rekordkvartal for oss!"
+  ],
+  "subject_entity": "Kameo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The text is written in the first person ('oss') and explicitly discusses the performance of Kameo, which is the target company.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1055,
+ "input_tokens": 1099,
+ "output_tokens": 155,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:56.617238+00:00"
+}

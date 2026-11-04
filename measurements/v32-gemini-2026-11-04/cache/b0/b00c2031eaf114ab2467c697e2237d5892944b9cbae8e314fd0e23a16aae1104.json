@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dette er flotte moderne leiligheter, prosjektert og gjennomført av Mesterbygg Nord med Byggmakker som byggherre. Vi er stolte av å kunne legge disse inn i vår referanseliste."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Storesté Entreprenør AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2017-10-13",
+  "date_evidence": "13 okt 2017",
+  "decision": "withhold",
+  "reason": "The item is a reference-project and property listing added to the company's reference list rather than reporting an independent company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2162,
+ "input_tokens": 1885,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:47:58.855620+00:00"
+}

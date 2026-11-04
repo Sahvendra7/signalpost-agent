@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Partileder Sylvi Listhaug mener det er naivt å tro at Arbeiderpartiet vil redusere skatter og avgifter.",
+   "Frp vil kutte skattene, halvere matmomsen og redusere drivstoffavgiftene for å gi folk mer økonomisk handlefrihet, sier Listhaug."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-08",
+  "date_evidence": "Thu, 08 Oct 2026 06:00:00 +0200",
+  "decision": "withhold",
+  "reason": "The article consists of political commentary and criticism of another party's policies, which constitutes opinion rather than a specific development or event of the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1301,
+ "input_tokens": 1964,
+ "output_tokens": 289,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:28.710049+00:00"
+}

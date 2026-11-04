@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Äntligen är det officiell premiär för Logscom i Södra-skogarna!",
+   "genom att effektivisera virkesmärkningen med Logscom GTP!",
+   "Från och med Nu kan Du använda Logscom GTP-märkarn i Södra-skogarna!",
+   "Skaffa en märkare nu! Ju förr du skaffar en Logscom-märkare"
+  ],
+  "subject_entity": "Logscom",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person by the company, announcing the launch of their product 'Logscom GTP' in the Södra forests.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1150,
+ "input_tokens": 1985,
+ "output_tokens": 191,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:12:55.899678+00:00"
+}

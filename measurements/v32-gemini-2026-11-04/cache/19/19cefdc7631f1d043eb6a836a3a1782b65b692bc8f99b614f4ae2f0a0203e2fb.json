@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Pust av deg stress og plager.",
+   "Faksimile, Hjemmet nr 14 / 2011"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "NYSIKT AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2011-09-29",
+  "date_evidence": "Thu, 29 Sep 2011 06:27:00 +0000",
+  "decision": "withhold",
+  "reason": "The item is a facsimile of a magazine article about the company's services, which constitutes promotional content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1477,
+ "input_tokens": 1494,
+ "output_tokens": 241,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:13.886106+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "advice_or_educational",
+  "subject_entity": "AtB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-12",
+  "date_evidence": "Wed, 12 Aug 2026 07:58:03 +0200",
+  "decision": "withhold",
+  "reason": "The item is an educational tool (a car cost calculator) designed to provide advice to users, rather than reporting a specific development or event of the company.",
+  "evidence_quotes": [
+   "Test bilkalkulator! Hva koster bilen deg?",
+   "Finn ut hvor mye bilen koster deg, og hva du heller kan bruke pengene på."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 38140,
+ "input_tokens": 1755,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:49.973782+00:00"
+}

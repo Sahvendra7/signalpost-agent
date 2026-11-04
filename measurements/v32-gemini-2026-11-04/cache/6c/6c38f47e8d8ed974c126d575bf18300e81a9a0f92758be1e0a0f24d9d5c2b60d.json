@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Regionale sortbeltegraderinger i region vest Påmelding til regionale sortbeltegraderinger for junior og senior. Mandag 1. desember kl 19:00:…",
+   "18. november 2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-11-18",
+  "date_evidence": "18. november 2025",
+  "decision": "publish",
+  "reason": "The text announces regional black belt gradings and registration for junior and senior members, which represents a club activity and event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2248,
+ "input_tokens": 1480,
+ "output_tokens": 250,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:46:23.896317+00:00"
+}

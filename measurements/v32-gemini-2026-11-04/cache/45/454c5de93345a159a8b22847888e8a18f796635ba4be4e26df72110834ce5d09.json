@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Article in Norwegian, published by TV2.no/underholdning 01.01.2021",
+   "Alexander Rybak feels that he has come back to himself again. Now he has entered the master’s program at Colombia College and will focus exclusively on this."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2021-01-01",
+  "date_evidence": "01.01.2021",
+  "decision": "publish",
+  "reason": "The article reports on the personal and professional activities of artist Alexander Rybak, including his enrollment in a master's program and his detoxification process during 2020.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1410,
+ "input_tokens": 2880,
+ "output_tokens": 262,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:03.103813+00:00"
+}

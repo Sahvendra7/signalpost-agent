@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Regionslaget Team Vest Invitasjon og terminliste for regionslaget høsten 2026",
+   "24. august 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-24",
+  "date_evidence": "24. august 2026",
+  "decision": "publish",
+  "reason": "The item announces an invitation and schedule for the regional team (Team Vest) for the autumn of 2026, which constitutes a specific activity/event for the club.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1265,
+ "input_tokens": 1449,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:18.673502+00:00"
+}

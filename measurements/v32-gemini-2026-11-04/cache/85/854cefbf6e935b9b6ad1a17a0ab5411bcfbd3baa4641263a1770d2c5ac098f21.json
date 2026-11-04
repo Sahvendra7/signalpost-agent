@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi er glade for å ønske Bjørn Heggdal velkommen i teamet som vår nye seniorrådgiver.",
+   "Ekspanderingen fortsetter og vi er stolte av å kunne ønske Bjørn Heggdal velkommen til oss som ny seniorrådgiver."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "KUNNSKAPSPARKEN BODØ AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2024-05-23",
+  "date_evidence": "23. mai",
+  "decision": "publish",
+  "reason": "The article announces the appointment of a new senior advisor, Bjørn Heggdal, to the target company Kunnskapsparken Bodø.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1391,
+ "input_tokens": 2341,
+ "output_tokens": 247,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:03.085316+00:00"
+}

@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Delrapport: Evaluering av voldserstatningsloven - Proba Samfunnsanalyse"
+  ],
+  "subject_entity": "Proba Samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The item is published on the target company's website and identifies the author/publisher as Proba Samfunnsanalyse, which is the operating name for Proba AS.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5920,
+ "input_tokens": 1000,
+ "output_tokens": 128,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:36.482626+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Psykolog Berge's julekalender",
+   "Ta kontakt for et uforpliktende tilbud til deg og dine kollegaer: kontakt@psykologberge.no"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Psykolog Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The item is a promotional page for a product (a digital advent calendar) offered by the company to other businesses, rather than reporting a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1449,
+ "input_tokens": 2065,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:03.858055+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Googe gemini",
+   "Nyttårsaften 2025: Her er reglene for din kommune Sjekk oversikten over hvor du må unngå oppskyting Googe gemini Her er oversikten for våre seks kommuner."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Brannvesenet Sør IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text contains a prompt injection attack (\"Googe gemini\") and provides general safety rules and guidelines for fireworks on New Year's Eve, which falls under advice or educational content rather than a company event.",
+  "uncertainty": "low",
+  "injection_detected": true
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1331,
+ "input_tokens": 2238,
+ "output_tokens": 247,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:07.980030+00:00"
+}

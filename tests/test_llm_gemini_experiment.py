@@ -199,3 +199,9 @@ def test_aid_excerpts_are_matched_to_their_own_unit(tmp_path):
         "2. [news] B AS (2) | Gode tips | 2026-02-02 | https://b.no/y | src https://b.no/feed/\n   feed entry (categories []): Fem gode tips for vinteren\n", encoding="utf-8")
     items = {i["org"]: i for i in labelled_news_items(tmp_path, {}, "t")}
     assert "signert" in items["1"]["source_text_aid"] and "tips" in items["2"]["source_text_aid"]
+
+
+def test_redact_covers_new_key_format_and_key_override():
+    assert "Ab8RN6" not in redact("bad key AQ.Ab8RN6abcdefghijklmnopqrstuvwxyz0123456789-_xyz in message", "")
+    c = GeminiConfig.from_env({"GEMINI_API_KEY": "default-key-0000000000"}, api_key="other-key-1111111111", _force_enabled=True)
+    assert c.enabled and c.api_key == "other-key-1111111111"

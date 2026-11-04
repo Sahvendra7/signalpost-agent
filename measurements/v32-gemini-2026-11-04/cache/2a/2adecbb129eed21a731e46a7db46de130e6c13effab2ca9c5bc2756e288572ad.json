@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "25.03.2026",
+   "Bypåske i Bergen med Baker Brun Bypåske i Bergen – nyt dagene sammen med Baker Brun Påsken i byen har en helt egen sjarm – roligere gater, frisk vår i luften og tid til å nyte de små øyeblikkene. I hjertet av Bergen inviterer Baker Brun…"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Baker Brun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-03-25",
+  "date_evidence": "25.03.2026",
+  "decision": "publish",
+  "reason": "The text announces an upcoming Easter event hosted by Baker Brun in Bergen, detailing company activities for the holiday season.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1465,
+ "input_tokens": 1535,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:59:13.159551+00:00"
+}

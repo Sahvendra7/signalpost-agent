@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tørr hud kan oppstå av mange grunner, inkludert kaldt vær, dehydrering eller feil hudpleieprodukter. Hos JOY Medispa Bodø tilbyr vi behandlinger som gjenoppretter fuktigheten og balansen i huden"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "JOY Medispa Bodø",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "The article is an educational post explaining the causes of dry skin and providing general information about treatments, rather than reporting a specific company event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 15370,
+ "input_tokens": 2434,
+ "output_tokens": 254,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:14:41.270209+00:00"
+}

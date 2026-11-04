@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Provendo, ALT inkludert. Komplett IT!",
+   "Vi er en komplett leverandør av IT-tjenester. Det betyr at du får alle nødvendige produkter og tjenester hos oss."
+  ],
+  "content_category": "product_service_marketing",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "reason": "The article is a promotional description of the company's IT service packages and offerings, rather than reporting a specific corporate event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3517,
+ "input_tokens": 3103,
+ "output_tokens": 187,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:49.079891+00:00"
+}

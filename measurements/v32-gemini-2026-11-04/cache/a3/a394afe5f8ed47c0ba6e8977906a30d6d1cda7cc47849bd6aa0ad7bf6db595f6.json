@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny rapport fra Deloitte og Proba om etterlevelse av barnehageloven"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "reason": "The item announces the publication of a new report co-authored by Proba AS regarding compliance with the Kindergarten Act, which constitutes a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1188,
+ "input_tokens": 1560,
+ "output_tokens": 147,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:01.751202+00:00"
+}

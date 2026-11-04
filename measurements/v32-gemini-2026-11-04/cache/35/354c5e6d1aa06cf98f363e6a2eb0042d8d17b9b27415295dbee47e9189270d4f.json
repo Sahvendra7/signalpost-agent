@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Looking for new challenges – we’re hiring",
+   "We are experiencing increased demand for our services and are searching for new colleagues to be a part of our growing company."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Fram Marine",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-02-11",
+  "date_evidence": "Posted 11.02.2022",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for multiple open positions at Fram Marine rather than a report of a corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1296,
+ "input_tokens": 1836,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:17.989665+00:00"
+}

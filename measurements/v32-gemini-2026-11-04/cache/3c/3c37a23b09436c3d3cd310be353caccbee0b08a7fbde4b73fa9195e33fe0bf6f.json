@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For oss i Jentene på Tunet handler god sjokolade selvfølgelig om gode råvarer og godt håndverk.",
+   "Og denne høsten har det skjedd mye på Tunet. Vi har laget fire helt nye sjokoladebiter"
+  ],
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person by the company 'Jentene på Tunet' (a known alias for the target company) and discusses their own products, new chocolate flavors, and business activities.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1226,
+ "input_tokens": 2486,
+ "output_tokens": 169,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:06.788346+00:00"
+}

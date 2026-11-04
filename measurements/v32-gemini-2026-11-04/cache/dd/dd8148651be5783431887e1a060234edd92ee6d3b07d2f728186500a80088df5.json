@@ -1,0 +1,25 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi utvider sortimentet og tilbyr nå 3 varianter Adagio"
+  ],
+  "subject_entity": "OSLOFINÉR AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article is written in the first person ('Vi') on the target company's website, describing the expansion of their own product assortment.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1260,
+ "input_tokens": 1244,
+ "output_tokens": 117,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:07:11.822605+00:00"
+}

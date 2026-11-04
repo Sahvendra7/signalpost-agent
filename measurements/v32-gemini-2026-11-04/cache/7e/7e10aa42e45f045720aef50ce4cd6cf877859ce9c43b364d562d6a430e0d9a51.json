@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi er utrolig glad for å ønske Håvard Sandaa Karlsen velkommen til vårt team som vår nye seniorrådgiver."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2024-02-20",
+  "date_evidence": "20. feb.",
+  "decision": "publish",
+  "reason": "The item announces a new hire and appointment of a senior advisor at the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1294,
+ "input_tokens": 2355,
+ "output_tokens": 208,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:17.988429+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet and Bharat Heavy Electricals Limited (BHEL) are strengthening their long-standing partnership in India’s transition towards flexible power plant operations.",
+   "Aug 18, 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2026-08-18",
+  "date_evidence": "Aug 18, 2026",
+  "decision": "publish",
+  "reason": "The article reports on Valmet and BHEL highlighting and strengthening their partnership at an event in India.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1264,
+ "input_tokens": 2296,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:36:37.913210+00:00"
+}

@@ -10,22 +10,22 @@
    "latency_s_p90": 34.3
   },
   "gemini-3.1-flash-lite": {
-   "calls": 274,
-   "input_tokens": 645884,
-   "output_tokens": 66316,
-   "thoughts_tokens": 3060,
-   "paid_equivalent_usd": 0.2655,
-   "latency_s_p50": 8.1,
-   "latency_s_p90": 69.3
+   "calls": 976,
+   "input_tokens": 2198563,
+   "output_tokens": 232563,
+   "thoughts_tokens": 18485,
+   "paid_equivalent_usd": 0.9262,
+   "latency_s_p50": 2.1,
+   "latency_s_p90": 51.7
   },
   "gemini-3.5-flash-lite": {
-   "calls": 438,
-   "input_tokens": 936780,
-   "output_tokens": 97617,
+   "calls": 1125,
+   "input_tokens": 2398636,
+   "output_tokens": 255618,
    "thoughts_tokens": 0,
-   "paid_equivalent_usd": 0.5251,
-   "latency_s_p50": 36.5,
-   "latency_s_p90": 79.7
+   "paid_equivalent_usd": 1.3586,
+   "latency_s_p50": 1.9,
+   "latency_s_p90": 60.5
   },
   "gemini-3.6-flash": {
    "calls": 21,
@@ -38,13 +38,11 @@
   }
  },
  "errors_recorded_in_runs": {
-  "gemini-3.1-flash-lite|http_503": 16,
-  "gemini-3.1-flash-lite|http_429": 8,
-  "gemini-3.1-flash-lite|transport_TimeoutError": 3,
-  "gemini-3.1-flash-lite|http_429_daily_quota": 5
+  "gemini-3.1-flash-lite|http_503": 26,
+  "gemini-3.1-flash-lite|transport_TimeoutError": 4,
+  "gemini-3.1-flash-lite|http_429": 1
  },
  "quota_ids_seen": {
-  "gemini-3.1-flash-lite|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 24,
-  "gemini-3.1-flash-lite|GenerateRequestsPerDayPerProjectPerModel-FreeTier": 5
+  "gemini-3.1-flash-lite|GenerateRequestsPerMinutePerProjectPerModel-FreeTier": 27
  }
 }

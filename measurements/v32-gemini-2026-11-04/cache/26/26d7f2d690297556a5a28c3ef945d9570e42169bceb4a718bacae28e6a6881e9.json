@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "TKK arrangerte midtsommertur til Sula i juni!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "TKK",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2024-06-28",
+  "date_evidence": "28. juni 2024 Referat fra midtsommartur til Sula fyr",
+  "decision": "publish",
+  "reason": "The item reports on a specific club event, the midsummer trip to Sula, organized and held by the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1536,
+ "input_tokens": 3078,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:59:48.944858+00:00"
+}

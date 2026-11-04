@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Mesén er kurator og kunstkonsulent for det nye sykehuset, og jobber for å integrere kunsten i bygget gjennom et bredt spekter av teknikker, materialer og motiver."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2024-04-22",
+  "date_evidence": "22. apr.",
+  "decision": "publish",
+  "reason": "The article details Mesén's role as curator and art consultant, describing how the company works on integrating site-specific art into the new Hammerfest hospital.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1334,
+ "input_tokens": 3175,
+ "output_tokens": 223,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:48.028486+00:00"
+}

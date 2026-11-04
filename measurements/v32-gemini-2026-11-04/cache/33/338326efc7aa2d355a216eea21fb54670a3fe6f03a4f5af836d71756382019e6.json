@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Regjeringen lovet å satse på kommunene, men leverer det minste de varslet før sommeren.– Det er et puslete svar på en alvorlig situasjon. Innbyggerne risikerer å betale prisen med dårligere eldreomsorg og færre lærere, sier kommunalpolitisk talsperson Erlend Wiborg."
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The item is a political press release published by Fremskrittspartiet commenting on government policy and conveying the party's official statements.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1758,
+ "input_tokens": 1955,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:40:38.406982+00:00"
+}

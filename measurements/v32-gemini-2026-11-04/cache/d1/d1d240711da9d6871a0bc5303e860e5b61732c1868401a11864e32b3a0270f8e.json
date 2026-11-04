@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For første gang deltok Stiftelsen 10. august på Arendalsuka.",
+   "Gjennom flere arrangementer i Menneskerettighetsteltet bidro vi til samtaler om temaer som står sentralt i arbeidet vårt",
+   "Stiftelsen jobber for å forebygge radikalisering og ekstremisme, og fremme demokrati og menneskerettigheter gjennom undervisning og dialogvirksomhet."
+  ],
+  "subject_entity": "Stiftelsen 10. august",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article describes the activities and participation of Stiftelsen 10. august at Arendalsuka 2026, written in the first person by the organization itself.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1674,
+ "input_tokens": 2544,
+ "output_tokens": 208,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:08:07.237002+00:00"
+}

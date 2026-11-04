@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet will provide extensive modernization services for the recovery boiler and evaporation plant at Södra Mönsterås pulp mill in Sweden.",
+   "The order is included in Valmet’s orders received for the third quarter of 2026.",
+   "Valmet Oyj’s trade press release on September 14, 2026, at 9:30 a.m. EEST"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-09-14",
+  "date_evidence": "Valmet Oyj’s trade press release on September 14, 2026, at 9:30 a.m. EEST",
+  "decision": "publish",
+  "reason": "The article announces that Valmet has received an order to provide modernization services for a customer, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 220615,
+ "input_tokens": 2299,
+ "output_tokens": 304,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:51.065385+00:00"
+}

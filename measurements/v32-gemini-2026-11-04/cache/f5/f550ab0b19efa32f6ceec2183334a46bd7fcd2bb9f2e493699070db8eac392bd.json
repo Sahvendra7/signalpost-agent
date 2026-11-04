@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I denne artikkelen vil vi utforske hva som gjør EDI etiketter uunnværlige for e-handelsbedrifter, hvor du kan kjøpe høykvalitets fraktetikketer, og hvorfor din bedrift bør velge EDI etiketter.",
+   "Når det kommer til å kjøpe transportetiketter, er det avgjørende å velge en pålitelig leverandør som tilbyr høy kvalitet og kompatibilitet med dine enheter og systemer. Her er noen anbefalte alternativer: DK-22246 EDI / Transportetiketter for Brother printer"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Frankeringsrekvisita",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-06-10",
+  "date_evidence": "Mon, 10 Jun 2024 12:32:10 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational/promotional blog post explaining the benefits of EDI labels and directing customers to specific products sold by the company, rather than reporting a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1655,
+ "input_tokens": 2864,
+ "output_tokens": 344,
+ "thoughts_tokens": 131,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:34.999273+00:00"
+}

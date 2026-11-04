@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Er det en fór lettvint løsning å sende ansatte på kurs i stresshåndtering eller Mindfulness , når det i virkeligheten er arbeidsplassen som er årsaken til stress?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The article provides professional commentary and advice regarding stress management in the workplace rather than reporting on a specific development or event concerning the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1377,
+ "input_tokens": 1721,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:01:38.786150+00:00"
+}

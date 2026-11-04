@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fordeling av verdier ved skilsmisse Når samlivsbruddet er et faktum er det store spørsmålet hvordan ektefellenes verdier skal fordeles."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Advokatfirmaet Rieber-Mohn",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "This article is an educational guide explaining the legal principles and rules regarding the division of assets during a divorce, rather than reporting a specific corporate event or action.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1421,
+ "input_tokens": 3793,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:34:13.069277+00:00"
+}

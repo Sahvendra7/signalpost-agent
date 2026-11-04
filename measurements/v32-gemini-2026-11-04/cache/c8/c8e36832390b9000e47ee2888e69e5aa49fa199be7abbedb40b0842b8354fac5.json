@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvordan gi gode, konkrete og relevante tilbakemeldinger til hverandre?",
+   "Positiv tilbakemelding øker motivasjonen til kollegaer, demper negativt stress og beskytter oss mot helseproblemer."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The item is an educational guide and advice piece about giving feedback rather than reporting a specific development or event regarding the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1273,
+ "input_tokens": 1737,
+ "output_tokens": 239,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:32.921491+00:00"
+}

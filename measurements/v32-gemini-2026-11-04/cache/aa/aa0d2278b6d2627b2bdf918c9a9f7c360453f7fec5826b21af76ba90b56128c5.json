@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Across many finance organisations, the Enterprise Performance Management (EPM) landscape is the result of years of pragmatic decisions."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Inlumi",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-01-19",
+  "date_evidence": "19 January 2026",
+  "decision": "withhold",
+  "reason": "The article provides general industry commentary and thought leadership on Enterprise Performance Management (EPM) landscapes and CFO offices rather than reporting a specific development or event about the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1307,
+ "input_tokens": 2538,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:37.955912+00:00"
+}

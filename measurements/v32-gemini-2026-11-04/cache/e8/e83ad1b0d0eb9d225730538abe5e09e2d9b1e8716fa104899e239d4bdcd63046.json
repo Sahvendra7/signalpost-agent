@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Viktigt att tänka på när du ska installera platgjutet gummugranulat",
+   "När du ska installera platsgjutet gummigranulat, är det viktigt att tänka på att välja kvalitet – både för att spara kostnader i längden och miljö."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-11-16",
+  "date_evidence": "16 november, 2018",
+  "decision": "withhold",
+  "reason": "The article provides general advice and tips on how to choose and install rubber granulate, rather than reporting on a specific development, action, or event involving the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24844,
+ "input_tokens": 2771,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:38:59.576106+00:00"
+}

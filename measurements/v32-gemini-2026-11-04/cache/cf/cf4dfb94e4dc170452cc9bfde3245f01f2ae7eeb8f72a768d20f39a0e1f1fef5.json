@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sammen med KrF løfter han nå saken inn i Stortingets kontrollkomité.",
+   "Etter initiativ fra FrP og KrF sendte Kontroll- og konstitusjonskomiteen disse spørsmålene til næringsministeren."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-13",
+  "date_evidence": "Publisert 13.10.2026 kl.20:07",
+  "decision": "publish",
+  "reason": "The article reports on an official political action taken by Fremskrittspartiet together with KrF to bring a case before the parliamentary control committee.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1325,
+ "input_tokens": 2038,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:07.973579+00:00"
+}

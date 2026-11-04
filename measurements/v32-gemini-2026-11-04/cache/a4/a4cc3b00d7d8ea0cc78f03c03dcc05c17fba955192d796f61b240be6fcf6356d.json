@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sureplay är ett platsgjutet gummigranulat som skapar inbjudande och lekfulla miljöer med rätt fallskydd."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Trafik & Fritid",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2018-11-04",
+  "date_evidence": "2018-11-04",
+  "decision": "withhold",
+  "reason": "The page describes and promotes a specific product (Sureplay safety surfacing) offered by the company without reporting any new company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1495,
+ "input_tokens": 2496,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:31:23.143462+00:00"
+}

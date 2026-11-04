@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Post with fancy header – Midthaug zink Enter any title Make your post look amazing!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Midthaug zink",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-31",
+  "date_evidence": "31 mars, 2014",
+  "decision": "withhold",
+  "reason": "The item is a placeholder or template post for a website theme ('Highend') and does not report any genuine company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6121,
+ "input_tokens": 3026,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:01.652266+00:00"
+}

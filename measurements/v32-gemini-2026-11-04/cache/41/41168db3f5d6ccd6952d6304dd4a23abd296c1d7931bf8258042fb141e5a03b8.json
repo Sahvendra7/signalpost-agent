@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Systemutvecklare sökes!",
+   "Vi på Logscom söker efter en systemutvecklare"
+  ],
+  "content_category": "job_advertisement",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-30",
+  "date_evidence": "Thu, 30 Nov 2023 19:17:51 +0000",
+  "reason": "The content is a job advertisement for a system developer position, which is explicitly excluded from being classified as company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 34185,
+ "input_tokens": 1671,
+ "output_tokens": 176,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:11:29.747493+00:00"
+}

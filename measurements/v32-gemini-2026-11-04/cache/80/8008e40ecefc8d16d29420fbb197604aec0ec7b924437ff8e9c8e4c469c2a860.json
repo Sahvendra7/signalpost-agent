@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "fredag 22. mai 2026 søndag 24. mai 2026",
+   "Nesodden jazzfestival 2026 — Nesodden jazzklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesodden Jazzklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-05-22",
+  "date_evidence": "fredag 22. mai 2026",
+  "decision": "publish",
+  "reason": "The text announces Nesodden jazzfestival 2026, an event organized by the target company Nesodden Jazzklubb, taking place from May 22 to May 24, 2026.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1367,
+ "input_tokens": 2221,
+ "output_tokens": 267,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:13.016046+00:00"
+}

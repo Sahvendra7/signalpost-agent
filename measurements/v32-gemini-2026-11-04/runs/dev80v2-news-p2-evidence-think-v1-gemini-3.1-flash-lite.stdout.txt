@@ -1,0 +1,25 @@
+  25/80
+  50/80
+  75/80
+  80/80
+{
+ "experiment_id": "dev80v2-news-p2-evidence-think-v1-gemini-3.1-flash-lite",
+ "items": 80,
+ "ok": 80,
+ "api_failures": 0,
+ "api_calls_made": 80,
+ "cache_hits": 0,
+ "input_tokens": 187719,
+ "output_tokens": 20734,
+ "thoughts_tokens": 15425,
+ "paid_equivalent_cost_usd": 0.101168,
+ "latency_ms_p50": 1629,
+ "decisions": {
+  "publish": 37,
+  "withhold": 43
+ },
+ "errors": {},
+ "budget_stop": null,
+ "quotes_total": 170,
+ "quotes_verified": 169
+}

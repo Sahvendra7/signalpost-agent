@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Spis deg fri fra stressfettet"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "nysikt as",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2011-09-16",
+  "date_evidence": "Fri, 16 Sep 2011 08:37:32 +0000",
+  "decision": "withhold",
+  "reason": "The item is an educational or advice-based article about health and stress, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1217,
+ "input_tokens": 1467,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:03.626476+00:00"
+}

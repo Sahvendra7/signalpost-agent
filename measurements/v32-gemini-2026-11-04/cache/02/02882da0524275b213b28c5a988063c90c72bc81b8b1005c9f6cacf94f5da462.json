@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Paraidrettsklasse under årets LM/NM i Kristiansand! Under årets Lands- og Norgesmesterskap i Kristiansand 6.-8. november blir det gjennomført en egen…",
+   "8. september 2025"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-09-08",
+  "date_evidence": "8. september 2025",
+  "decision": "publish",
+  "reason": "The club is announcing its participation in a specific event, the Lands- og Norgesmesterskap, where they will be conducting a para-sports class.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 7643,
+ "input_tokens": 1494,
+ "output_tokens": 261,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:55.052035+00:00"
+}

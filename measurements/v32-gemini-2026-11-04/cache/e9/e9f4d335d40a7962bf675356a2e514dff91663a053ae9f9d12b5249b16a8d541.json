@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi i KPB er tatt opp i det nasjonale inkubasjonsprogrammet til Siva for 2023-2032!",
+   "Av de 43 inkubatorene som søkte på opptaket til Siva, var KPBs søknad rangert som nummer 5 i Norge."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "award_or_certification",
+  "publication_date": "2022-12-01",
+  "date_evidence": "1. des. Skrevet av Erik Liland",
+  "decision": "publish",
+  "reason": "The target company Kunnskapsparken Bodø (KPB) announces that it has been accepted into Siva's national incubation program for 2023-2032 and ranked as number 5 in Norway.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1420,
+ "input_tokens": 2694,
+ "output_tokens": 281,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:50:58.114131+00:00"
+}

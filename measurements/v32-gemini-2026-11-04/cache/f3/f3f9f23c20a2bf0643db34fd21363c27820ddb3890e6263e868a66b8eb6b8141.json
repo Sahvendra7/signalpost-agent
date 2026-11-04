@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Test bilkalkulator! Hva koster bilen deg?",
+   "Kalkulatoren er utarbeidet av Samfunnsøkonomisk analyse med tall fra Opplysningsrådet for veitrafikken.",
+   "Bilkalkulatoren er opprinnelig et produkt av Kolumbus."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "AtB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an educational tool (a car cost calculator) developed by third parties and promoted by the company, rather than reporting a specific development or event of the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 72813,
+ "input_tokens": 1786,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:33.056766+00:00"
+}

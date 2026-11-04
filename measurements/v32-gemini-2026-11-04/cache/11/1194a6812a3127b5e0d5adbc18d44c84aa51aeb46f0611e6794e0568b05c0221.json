@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Resolusjon fra landsstyremøte",
+   "Fremskrittspartiet vil ta større nasjonal kontroll over utbyggingen av datasentre i Norge. Nå vil partiet endre strømkøen, stille krav om ny kraftproduksjon og prioritere norske arbeidsplasser"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-10-20",
+  "date_evidence": "Publisert 20.10.2026 kl.11:01",
+  "decision": "publish",
+  "reason": "The article reports on a resolution passed by the party's national board regarding their policy on data centers and power grid prioritization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1455,
+ "input_tokens": 3175,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:58.863959+00:00"
+}

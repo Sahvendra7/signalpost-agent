@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På Munchx galleri på Blommenholm stiller kunstfotograf Ole Marius Jørgensen ut sin storslåtte fotoserie «Jotunheimens disipler»"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Ole Marius Jørgensen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-14",
+  "date_evidence": "Wed, 14 Oct 2026 16:21:14 +0000",
+  "decision": "withhold",
+  "reason": "The article is a review or cultural report about an art exhibition by photographer Ole Marius Jørgensen, not a development or event concerning the target company Sivilisasjonen AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1370,
+ "input_tokens": 3619,
+ "output_tokens": 257,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:42:58.064363+00:00"
+}

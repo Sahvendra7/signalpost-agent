@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Physical Access, Digital Control: How Smart Access Systems are Reshaping Self-Storage"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Self-Storage",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an educational or thought-leadership blog post about smart access systems in self-storage rather than a report on a specific development or event of the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1414,
+ "input_tokens": 1588,
+ "output_tokens": 196,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:52:08.108243+00:00"
+}

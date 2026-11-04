@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Komplett guide til AI-implementering for norske småbedrifter."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Agenta",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-25",
+  "date_evidence": "25. april 2026",
+  "decision": "withhold",
+  "reason": "This is an educational guide and article providing advice on AI implementation for small businesses, not a report on a specific event, development, or action undertaken by the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 5189,
+ "input_tokens": 3136,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:46:26.883297+00:00"
+}

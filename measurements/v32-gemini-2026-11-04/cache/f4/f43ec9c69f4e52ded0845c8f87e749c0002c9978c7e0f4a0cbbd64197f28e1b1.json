@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oracle published the Oracle Critical Patch Update Advisory for October 2026 on 20 October 2026 .",
+   "Contact our Technical Application Team and we will confirm what applies to your specific release."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Oracle",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-26",
+  "date_evidence": "Published 26 October 2026",
+  "decision": "withhold",
+  "reason": "The article provides technical advice and commentary on Oracle's software patch updates, which is educational content rather than news about Inlumi AS itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1751,
+ "input_tokens": 3333,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:34.159727+00:00"
+}

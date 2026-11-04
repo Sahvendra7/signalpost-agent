@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Velkommen til WordPress. Dette er ditt første innlegg. Rediger det eller slett det og start skrivingen!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "WordPress",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2021-05-31",
+  "date_evidence": "May 31, 2021",
+  "decision": "withhold",
+  "reason": "The item is a default WordPress 'Hello World' post, which is not a genuine company event or news about LUGN AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1310,
+ "input_tokens": 1591,
+ "output_tokens": 213,
+ "thoughts_tokens": 104,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:14.654257+00:00"
+}

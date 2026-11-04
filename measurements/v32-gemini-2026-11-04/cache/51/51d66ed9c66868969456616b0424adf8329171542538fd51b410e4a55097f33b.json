@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvordan beskytte seg mot støy?",
+   "For deg som jobber i støy og oppholder deg i uønskede lydmiljø, anbefaler vi formstøpte støypropper."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Melhus hørsel",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-02-02",
+  "date_evidence": "Sat, 02 Feb 2019 12:34:33 +0000",
+  "decision": "withhold",
+  "reason": "This is an educational or advisory post explaining how to protect oneself against noise and promoting custom earplugs rather than reporting a specific event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1616,
+ "input_tokens": 1804,
+ "output_tokens": 255,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:30:48.264598+00:00"
+}

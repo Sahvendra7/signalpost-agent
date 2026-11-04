@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oracle has released its October 2026 update for Oracle EPM Cloud, continuing a heavy emphasis on Generative AI integration, modernizing user experiences, and streamlining data management."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Oracle",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-12",
+  "date_evidence": "12 October 2026",
+  "decision": "withhold",
+  "reason": "The item is an update summary detailing Oracle's product changes rather than any development, action, or event belonging to the target company Inlumi AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1347,
+ "input_tokens": 2966,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:42.995352+00:00"
+}

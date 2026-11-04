@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Team Vest på Rogalandsmesterskapet",
+   "19. februar 2026"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Team Vest",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-02-19",
+  "date_evidence": "19. februar 2026",
+  "decision": "withhold",
+  "reason": "The item reports on the activities of Team Vest, an external regional junior team, rather than a specific development of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2356,
+ "input_tokens": 1473,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:46:54.006606+00:00"
+}

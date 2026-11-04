@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Med hjälp av Padmax, en svensk uppfinning, håller du dina banor i bra skick på ett enkelt sätt.",
+   "Padmax har med sin uppfinning skapat en produkt som borstar konstgräsfibrerna för att öka både spelupplevelsen och livslängden på banorna."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Padmax",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-06-29",
+  "date_evidence": "29 juni, 2022",
+  "decision": "withhold",
+  "reason": "The item promotes a product called Padmax rather than reporting a specific event, development, or action of the target company Trafik & Fritid Skandinavien AB.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1460,
+ "input_tokens": 2242,
+ "output_tokens": 266,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:33:08.108519+00:00"
+}

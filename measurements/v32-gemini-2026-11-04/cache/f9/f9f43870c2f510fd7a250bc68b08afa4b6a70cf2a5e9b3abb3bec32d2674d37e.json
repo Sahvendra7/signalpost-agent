@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Exhibition: Icons of Norway at Skandium, February 4 – 15 2016."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristine Bjaadal",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2016-02-04",
+  "date_evidence": "Thu, 04 Feb 2016 12:43:02 +0000",
+  "decision": "publish",
+  "reason": "The item reports on the target company's participation in an exhibition titled 'Icons of Norway' at Skandium in February 2016.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2959,
+ "input_tokens": 1602,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:50.368264+00:00"
+}

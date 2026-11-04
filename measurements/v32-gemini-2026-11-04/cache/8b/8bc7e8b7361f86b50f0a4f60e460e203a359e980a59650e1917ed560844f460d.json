@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Produkt i fokus - Oktober 2024: Valchromat",
+   "1. oktober 2024",
+   "I stedet for å være en enkel trefiberplate, er Valchromat gjennomfarget, noe som betyr at fargepigmenter er jevnt fordelt gjennom hele materialet"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "OSLOFINÉR AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-10-01",
+  "date_evidence": "1. oktober 2024",
+  "decision": "withhold",
+  "reason": "The article is a product spotlight describing the features and benefits of a specific material (Valchromat) rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1775,
+ "input_tokens": 1938,
+ "output_tokens": 264,
+ "thoughts_tokens": 123,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:35.118747+00:00"
+}

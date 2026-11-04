@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hun sier Fremskrittspartiet ønsker å styrke ordningen heller enn å svekke den og vil ha en opptrappingsplan for aktivitetshjelpemidler."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-19",
+  "date_evidence": "Mon, 19 Oct 2026 21:30:00 +0200",
+  "decision": "withhold",
+  "reason": "The article consists of political commentary and statements from a party representative regarding government policy, which constitutes opinion or promotional content rather than a specific company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1475,
+ "input_tokens": 2075,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:48.883685+00:00"
+}

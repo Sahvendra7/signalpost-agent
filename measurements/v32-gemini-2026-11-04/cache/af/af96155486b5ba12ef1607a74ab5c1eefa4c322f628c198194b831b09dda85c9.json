@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har nå hatt en grundig gjennomgang av hjemmesiden, etter gode innspill fra medlemmene."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Norsk Rhodesian Ridgeback klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-10-09",
+  "date_evidence": "Fri, 09 Oct 2026 14:57:21 +0000",
+  "decision": "publish",
+  "reason": "The club announces a completed upgrade of their website following member feedback, which constitutes a specific development for the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1144,
+ "input_tokens": 1731,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:23.553167+00:00"
+}

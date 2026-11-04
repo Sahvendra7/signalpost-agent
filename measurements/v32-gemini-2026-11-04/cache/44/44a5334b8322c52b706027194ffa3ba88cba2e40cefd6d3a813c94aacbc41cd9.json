@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ledig stilling som brannkonstabel deltid i Kvinesdal"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Brannvesenet Sør IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-02-03",
+  "date_evidence": "Oppdatert: 03. februar 2026",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for a part-time firefighter position and therefore does not report publishable company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1110,
+ "input_tokens": 1918,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:12.758514+00:00"
+}

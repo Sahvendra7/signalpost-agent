@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "13 måneder gamle Kangelani’s Kenai har vært med på elgjakt i Trøndelag – og imponert garva jegere som vanligvis sverger til gråhund, elghund og jämthund!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Kangelani’s Kenai",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-28",
+  "date_evidence": "Wed, 28 Oct 2026 21:07:25 +0000",
+  "decision": "withhold",
+  "reason": "The article describes the hunting performance of a specific dog named Kangelani’s Kenai, which is not a development or event of the Norsk Rhodesian Ridgeback Klubb itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1323,
+ "input_tokens": 1781,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:58:28.732211+00:00"
+}

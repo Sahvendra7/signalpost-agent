@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.",
+   "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "None",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2016-06-06",
+  "date_evidence": "June 6, 2016",
+  "decision": "withhold",
+  "reason": "The content is a placeholder text (Lorem Ipsum) and does not describe any genuine development, action, or event related to the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1397,
+ "input_tokens": 2535,
+ "output_tokens": 243,
+ "thoughts_tokens": 119,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:03:09.740938+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alle inntekter fra auksjonene og annet salg blir delt likt mellom Foreningen Et barn for lite og Landsforeningen uventet barnedød (LUB).",
+   "Alle midlene til foreningen vår vil gå uavkortet til prosjektet Adjø Bitteliten minneboks."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Foreningen Et barn for lite",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-12",
+  "date_evidence": "Mon, 12 Oct 2026 11:37:38 +0000",
+  "decision": "publish",
+  "reason": "The article reports on the organization's participation in a fundraising auction where proceeds are donated to their specific project, 'Adjø Bitteliten minneboks'.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1386,
+ "input_tokens": 2536,
+ "output_tokens": 287,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:38.794796+00:00"
+}

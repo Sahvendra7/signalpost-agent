@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Som en del av omstillingsprosessen i Helse og omsorg i Nesna kommune er lederstrukturen justert for å tydeliggjøre ansvar, oppgaver og roller.",
+   "Den nye lederstrukturen er iverksatt fra 1. november."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Nesna kommune",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-11-02",
+  "date_evidence": "Publisert 02.11.2026 14:04",
+  "decision": "publish",
+  "reason": "Nesna kommune reports a structural adjustment and new leadership assignments within its Health and Care department.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1280,
+ "input_tokens": 2227,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:02.928749+00:00"
+}

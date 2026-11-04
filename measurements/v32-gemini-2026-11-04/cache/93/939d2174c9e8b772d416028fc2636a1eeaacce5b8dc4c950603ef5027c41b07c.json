@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lær hvordan din bedrift kan dominere lokale søkeresultater i Trondheim. Komplett guide til lokal SEO-strategi, Google My Business-optimalisering og mer."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Agenta",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-05-13",
+  "date_evidence": "13. mai 2026",
+  "decision": "withhold",
+  "reason": "The item is an educational guide and article providing advice on local SEO strategy, rather than reporting a specific event, development, or action undertaken by the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1581,
+ "input_tokens": 3106,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:53.274917+00:00"
+}

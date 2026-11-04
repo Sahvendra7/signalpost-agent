@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fremskrittspartiet ber om fortgang fra regjeringen og vil ha en seriøs, grundig og hurtig behandling i energi- og miljøkomiteen av alle forslag rundt datasentre.",
+   "Publisert 02.11.2026 kl.09:00"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-11-02",
+  "date_evidence": "Publisert 02.11.2026 kl.09:00",
+  "decision": "publish",
+  "reason": "The article is a press release issued by Fremskrittspartiet announcing their political stance and demands regarding data centers in Norway.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1377,
+ "input_tokens": 3109,
+ "output_tokens": 281,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:28.025529+00:00"
+}

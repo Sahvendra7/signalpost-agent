@@ -1,0 +1,27 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Gjennom samarbeidet med Voksenåsen Kultursenter har rundt 240 svenske lærere besøkt Stiftelsen 10. august.",
+   "De siste to årene har rundt 240 lærere fra Sverige besøkt Stiftelsen 10. august",
+   "Skoler som ønsker å sende lærere på besøk til oss, kan ta kontakt for å avtale et lærerbesøk."
+  ],
+  "subject_entity": "Stiftelsen 10. august",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The article describes the activities and educational programs offered by Stiftelsen 10. august, using first-person language ('besøkt oss', 'læringssenteret vårt') to refer to the organization.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1391,
+ "input_tokens": 2289,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:26.953547+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet selected as a technology partner for the development of Louisiana Green Fuels carbon-negative power project",
+   "Valmet, a leading global developer and supplier of process technologies, automation and services for the energy, pulp and paper industries, was selected by Strategic Biofuels to provide biomass power generation and flue gas cleaning technologies"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-09-21",
+  "date_evidence": "Sep 21, 2026",
+  "decision": "publish",
+  "reason": "The article reports that Valmet has been selected as a technology partner by Strategic Biofuels to provide biomass power generation and flue gas cleaning technologies for a specific project.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 153260,
+ "input_tokens": 2199,
+ "output_tokens": 262,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:58.710031+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Regnskapsregisteret kommer til å unnlate å beregne forsinkelsesgebyr så lenge årsregnskapet er sendt inn innen utløpet av august."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Regnskapsregisteret",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-08-19",
+  "date_evidence": "19. august 2024",
+  "decision": "withhold",
+  "reason": "The item provides general informational guidance about filing deadlines and fees set by Regnskapsregisteret rather than reporting a specific development about the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1277,
+ "input_tokens": 1724,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:53:07.970506+00:00"
+}

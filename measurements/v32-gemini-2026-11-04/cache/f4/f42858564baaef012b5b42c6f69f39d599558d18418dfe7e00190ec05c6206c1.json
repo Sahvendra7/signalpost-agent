@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "FrP er positiv til de foreslåtte endringene, sier Hans Andreas Limi, finanspolitisk talsperson.",
+   "Publisert 15.10.2026 kl.10:25"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fremskrittspartiet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-10-15",
+  "date_evidence": "Publisert 15.10.2026 kl.10:25",
+  "decision": "publish",
+  "reason": "The article reports on the official political stance and development of the target company (Fremskrittspartiet) regarding the Gjedrem-utvalget, as expressed by their financial policy spokesperson.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1302,
+ "input_tokens": 2240,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:13.710527+00:00"
+}

@@ -51,6 +51,7 @@ def main() -> None:
     p.add_argument("--rpm", type=float, default=10)
     p.add_argument("--workers", type=int, default=2)
     p.add_argument("--max-output-tokens", type=int, default=1536)
+    p.add_argument("--key-env", default="GEMINI_API_KEY", help="name of the environment variable holding the key (never its value)")
     p.add_argument("--thinking", choices=["MINIMAL", "LOW", "MEDIUM", "HIGH"], help="override the prompt's thinking level (new prompt id)")
     args = p.parse_args()
 
@@ -68,7 +69,9 @@ def main() -> None:
     if args.live:
         if args.max_calls <= 0:
             raise SystemExit("--live needs an explicit --max-calls budget")
-        config = GeminiConfig.from_env(os.environ, model=args.model, _force_enabled=True)
+        if not args.key_env.startswith("GEMINI_API_KEY"):
+            raise SystemExit("--key-env must name a GEMINI_API_KEY* variable")
+        config = GeminiConfig.from_env(os.environ, model=args.model, api_key=os.environ.get(args.key_env, "").strip(), _force_enabled=True)
         if not config.enabled:
             raise SystemExit(f"Gemini not configured: {config.disabled_reason}")
         provider = GeminiProvider(config)

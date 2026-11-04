@@ -1,0 +1,28 @@
+  25/80
+  50/80
+  75/80
+  80/80
+{
+ "experiment_id": "dev80v2-news-p1-binary-v1-gemini-3.1-flash-lite",
+ "items": 80,
+ "ok": 77,
+ "api_failures": 3,
+ "api_calls_made": 77,
+ "cache_hits": 3,
+ "input_tokens": 177877,
+ "output_tokens": 19339,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.073478,
+ "latency_ms_p50": 2109,
+ "decisions": {
+  "publish": 36,
+  "withhold": 41,
+  "uncertain": 3
+ },
+ "errors": {
+  "http_503": 3
+ },
+ "budget_stop": null,
+ "quotes_total": 156,
+ "quotes_verified": 154
+}

@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny plan for fremtiden 14. okt.",
+   "En arbeidsgruppe har laget en solid og troverdig plan for hvordan bygningene på Lia Gård Retreatsenter kan holdes vedlike de kommende år."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Lia Gård Retreatsenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2024-10-14",
+  "date_evidence": "14. okt.",
+  "decision": "publish",
+  "reason": "The article announces a new long-term maintenance and building plan developed for Lia Gård Retreatsenter, detailing prioritization of upcoming work.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 4849,
+ "input_tokens": 2379,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:48:36.542527+00:00"
+}

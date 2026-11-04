@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På oppdrag for Arbeids- og inkluderingsdepartementet skal Proba evaluere ungdomsgarantien i Nav.",
+   "I evalueringen skal vi vurdere hvordan ungdomsgarantien er implementert"
+  ],
+  "subject_entity": "Proba",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "reason": "The text describes a project being conducted by Proba, using the first-person plural 'vi' to refer to the company's work.",
+  "uncertainty": "low"
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1031,
+ "input_tokens": 1334,
+ "output_tokens": 145,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:06.594085+00:00"
+}

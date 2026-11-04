@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oracle EPM 11.2.25 was released on 29 April 2026 as the April quarterly update for Oracle Enterprise Performance Management on-premises."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Oracle",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-05-13",
+  "date_evidence": "13 May 2026",
+  "decision": "withhold",
+  "reason": "The item reports on a software product release by Oracle rather than any development or event concerning the target company Inlumi AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1419,
+ "input_tokens": 3319,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:08.067691+00:00"
+}

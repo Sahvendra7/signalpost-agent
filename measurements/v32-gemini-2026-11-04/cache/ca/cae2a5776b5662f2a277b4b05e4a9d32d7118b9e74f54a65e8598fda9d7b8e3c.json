@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Provendo lanserer blogg",
+   "Med det mål for øye lanserer vi nå Provendo-bloggen.",
+   "October 31, 2023"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2023-10-31",
+  "date_evidence": "October 31, 2023",
+  "decision": "publish",
+  "reason": "The company has announced the launch of a new corporate blog as a platform to share insights and knowledge, which constitutes a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1626,
+ "input_tokens": 2066,
+ "output_tokens": 232,
+ "thoughts_tokens": 114,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:49.969989+00:00"
+}

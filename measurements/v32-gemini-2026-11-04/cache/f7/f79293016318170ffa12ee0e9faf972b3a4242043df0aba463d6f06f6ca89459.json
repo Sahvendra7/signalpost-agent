@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "IT til fastpris",
+   "Med våre skytjenester får du faste månedlige priser – enkelt og forutsigbart"
+  ],
+  "content_category": "product_service_marketing",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "reason": "The article is a promotional description of the company's cloud services and IT support packages, explaining the benefits of their offering rather than reporting a specific corporate event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1746,
+ "input_tokens": 2796,
+ "output_tokens": 179,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:09:17.308837+00:00"
+}

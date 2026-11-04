@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Bli bedre kjent med FpUs nye leder Sebastian Ytrevik."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "FpU",
+  "subject_relation": "other_group_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a profile introduction of the new leader of FpU (Fremskrittspartiet's youth organization), which is a separate entity from the target company Fremskrittspartiet itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1683,
+ "input_tokens": 1785,
+ "output_tokens": 208,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:13.331237+00:00"
+}

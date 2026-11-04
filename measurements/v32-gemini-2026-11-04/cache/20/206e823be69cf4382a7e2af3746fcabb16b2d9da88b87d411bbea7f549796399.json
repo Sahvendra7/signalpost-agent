@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I podkasten Usivilisert , utfordrer Adara Høeg Kielland på nettopp dette."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Statkraft",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is an interview/podcast episode discussing Statkraft and electricity prices, which is unrelated content about a third party and not an event of the target company Sivilisasjonen AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1346,
+ "input_tokens": 3209,
+ "output_tokens": 206,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:57:38.040246+00:00"
+}

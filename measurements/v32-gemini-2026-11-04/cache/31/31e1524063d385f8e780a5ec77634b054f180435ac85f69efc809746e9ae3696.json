@@ -1,0 +1,29 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I 2025 – da vi hadde 10årsjubileum – hadde vi besøk av Selbyggen på tunet.",
+   "Jentene på tunet / april 21, 2026 / Omtaler"
+  ],
+  "content_category": "genuine_company_news",
+  "is_genuine_company_event": "yes",
+  "event_type": "anniversary",
+  "publication_date": "2026-04-21",
+  "date_evidence": "april 21, 2026",
+  "reason": "The article discusses the company's 10-year anniversary and reflects on its history and development, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1116,
+ "input_tokens": 2238,
+ "output_tokens": 200,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:05:36.678362+00:00"
+}

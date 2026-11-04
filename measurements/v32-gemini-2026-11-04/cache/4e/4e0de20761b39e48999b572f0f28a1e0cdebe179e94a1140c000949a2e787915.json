@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommersamlinger for 60+ Er du over 60 år og trener i en NTN Taekwon-Do klubb? Bli med på sommersamling i mai 2026. Det arrangeres en samling i Surnadal og en i Selbu."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "BERGEN TAEKWON-DO KLUBB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-11-11",
+  "date_evidence": "11. november 2025",
+  "decision": "publish",
+  "reason": "The item announces summer gatherings for members aged 60 and above in May 2026, which represents a club activity and event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2404,
+ "input_tokens": 1499,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:46:19.052186+00:00"
+}

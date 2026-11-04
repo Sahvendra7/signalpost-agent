@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Morbi eu ligula non tellus dictum dictum"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Unknown",
+  "subject_relation": "unclear",
+  "is_about_target_company": "unclear",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item consists entirely of lorem ipsum placeholder text and contains no actual news or development about the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1448,
+ "input_tokens": 1583,
+ "output_tokens": 170,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:49:28.142376+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Jeg har fått noen nye bilder av meg selv fra Trondheim, tatt av Maja Johansen."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Maja Johansen",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-11-12",
+  "date_evidence": "12. nov 2025",
+  "decision": "withhold",
+  "reason": "The item is a personal update about the owner receiving new photographs taken by a third party, which does not constitute a professional development or company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1163,
+ "input_tokens": 1591,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:13.572323+00:00"
+}

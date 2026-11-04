@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Teknostress oppstår når digitale krav og forventninger gjør at hodet aldri får helt fri. I artikkelen forklarer jeg hva..."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-05-15",
+  "date_evidence": "15. mai 2026",
+  "decision": "withhold",
+  "reason": "The article provides professional advice and educational content regarding 'technostress' in the workplace, rather than reporting on a specific development, action, or event of the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1557,
+ "input_tokens": 2956,
+ "output_tokens": 229,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:02:33.966078+00:00"
+}

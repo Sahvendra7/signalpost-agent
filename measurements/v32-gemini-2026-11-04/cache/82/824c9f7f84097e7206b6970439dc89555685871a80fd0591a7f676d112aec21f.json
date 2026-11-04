@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "DROPS glass bonbonniers – new colours launched for Magnor Glassverk, August 26th 2019."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kristine Bjaadal",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2019-08-26",
+  "date_evidence": "August 26th 2019",
+  "decision": "publish",
+  "reason": "The item announces the launch of new colours for the product 'DROPS' designed by the target company, Kristine Bjaadal, for Magnor Glassverk.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1478,
+ "input_tokens": 1550,
+ "output_tokens": 230,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:59:18.886781+00:00"
+}

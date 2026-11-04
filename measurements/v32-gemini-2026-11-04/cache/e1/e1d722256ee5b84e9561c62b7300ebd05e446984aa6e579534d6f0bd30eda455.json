@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Psykolog Berge's julekalender Hva med en annerledes gave til de ansatte i år?",
+   "Julekalenderen har 24 luker med råd og verktøy fra Psykolog Berge Julekalenderen leveres på norsk og engelsk"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Jan-Martin Berge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-10-28",
+  "date_evidence": "28. okt 2025",
+  "decision": "withhold",
+  "reason": "The item promotes and describes a commercial product (an advent calendar for employees) offered by the target company rather than reporting a discrete corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1327,
+ "input_tokens": 2065,
+ "output_tokens": 257,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:51:17.975609+00:00"
+}

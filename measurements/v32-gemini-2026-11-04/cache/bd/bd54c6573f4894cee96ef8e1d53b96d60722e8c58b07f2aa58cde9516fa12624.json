@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vertinnegaven som blir lagt merke til – og som smaker fantastisk!",
+   "Jentene på tunet / april 21, 2026 / Gaver & anledninger"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Jentene på Tunet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-21",
+  "date_evidence": "Jentene på tunet / april 21, 2026 / Gaver & anledninger",
+  "decision": "withhold",
+  "reason": "The article provides general advice and tips on choosing gifts, which is educational content rather than a report on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 14195,
+ "input_tokens": 2255,
+ "output_tokens": 254,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:49.726483+00:00"
+}

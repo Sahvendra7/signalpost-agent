@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "a balcony is a must key feature in your next luxury condo",
+   "INTERESTED IN THIS PROPERTY? WRITE A MESSAGE OR CALL US"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Tønsberg Roklub",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-08-09",
+  "date_evidence": "Sat, 09 Aug 2025 15:11:12 +0000",
+  "decision": "withhold",
+  "reason": "The item is a property listing for luxury condos, which does not constitute a genuine company development or event for the rowing club.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4638,
+ "input_tokens": 2529,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:55:32.047007+00:00"
+}

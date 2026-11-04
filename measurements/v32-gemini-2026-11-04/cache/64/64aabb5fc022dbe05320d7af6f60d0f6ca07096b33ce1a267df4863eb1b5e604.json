@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sjømatbedriftene advarer mot å erstatte dagens MTB-avgensning for fiskeoppdrett, med et system for omsettelige lusekvoter."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Sjømatbedriftene",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-30",
+  "date_evidence": "Fri, 30 Oct 2026 15:31:54 +0100",
+  "decision": "withhold",
+  "reason": "The article is about the industry organization Sjømatbedriftene and their views on a government report, not about the target company FISK MEDIA AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1237,
+ "input_tokens": 3518,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:02.930508+00:00"
+}

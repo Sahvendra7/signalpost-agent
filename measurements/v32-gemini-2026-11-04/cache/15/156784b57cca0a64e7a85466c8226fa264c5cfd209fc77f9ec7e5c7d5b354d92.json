@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Book: Men, Masculinities and Intimate Partner Violence (Routledge, 2020) – Margunn Bjørnholt"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Margunn Bjørnholt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The item announces the publication of a book authored by the target company, which constitutes a professional development or activity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1869,
+ "input_tokens": 1554,
+ "output_tokens": 201,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:39:42.319739+00:00"
+}

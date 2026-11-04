@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvordan få full kontroll over IT-sikkerheten i din bedrift",
+   "Mange bedrifter har en for avslappet tilnærming til IT-sikkerhet.",
+   "Derfor anbefaler vi på det sterkeste, alle bedrifter uansett størrelse, å få sikkerhetssituasjonen i sin bedrift vurdert."
+  ],
+  "content_category": "advice_or_educational",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "reason": "The article is an educational blog post providing general advice on IT security and explaining the risks of cyberattacks, rather than reporting a specific event or development concerning Provendo AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 15271,
+ "input_tokens": 2731,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:10:05.833443+00:00"
+}

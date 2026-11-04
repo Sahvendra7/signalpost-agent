@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Intervju med John Kabat Zinn",
+   "Aftenposten, fredag 13 mai 2011"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "John Kabat Zinn",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2011-05-13",
+  "date_evidence": "Aftenposten, fredag 13 mai 2011",
+  "decision": "withhold",
+  "reason": "The content is an interview with a third party (John Kabat Zinn) published in Aftenposten, which does not constitute a development or event of the target company NYSIKT AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1108,
+ "input_tokens": 1494,
+ "output_tokens": 241,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T23:04:08.517390+00:00"
+}

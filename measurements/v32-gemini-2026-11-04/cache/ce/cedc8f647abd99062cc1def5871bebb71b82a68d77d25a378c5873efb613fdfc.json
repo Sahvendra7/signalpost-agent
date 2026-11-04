@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Valmet has signed a partner agreement with Territory Instruments in Australia to strengthen the local presence of Valmet’s Boiler Diagnostics Systems, PlantTriage, and Advanced Process Controls portfolio across the country."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Valmet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2026-10-13",
+  "date_evidence": "Oct 13, 2026",
+  "decision": "publish",
+  "reason": "The article reports on a new partnership agreement signed by Valmet to expand its automation and optimization solutions in Australia.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9051,
+ "input_tokens": 2310,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:52.592714+00:00"
+}

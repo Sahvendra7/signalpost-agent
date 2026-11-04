@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nye lærere til neste skoleår er : Olav Støylen som skal være klasselærer i 2./3.klasse. Rasmus Krogh-Sand blir skolens gymlærer i tillegg vil han være fast i hovedfag sammen med Martin Hansson i 4.-6.klasse.",
+   "Alex Nelson slutter som SFO leder og engelsklærer og inn for ham kommer Maria Hecimovic som SFO leder og hans etterfølger i engelsk blir Sule Yuksel Ertugrul. Eli Moe blir skolens framtidige daglige leder."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2022-06-10",
+  "date_evidence": "Fredagsbladet nr 37 – 10.06.2022",
+  "decision": "publish",
+  "reason": "The article announces several new staff appointments and changes in leadership roles at the school for the upcoming academic year.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 152941,
+ "input_tokens": 2993,
+ "output_tokens": 325,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:43:41.055325+00:00"
+}

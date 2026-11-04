@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "«Takk for at du ikke ga meg opp» Studentprofil «Takk for at du ikke ga meg opp» Da en ungdom sa akkurat disse ordene til Vibeke Espegard, satte det ord på mye av det som driver henne i arbeidet med barn og unge.",
+   "Vibeke har tatt både Psykisk helsearbeid og rusarbeid og Psykisk helse barn og unge ved Fagskolen Diakonova."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Vibeke Espegard",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a student profile highlighting an individual's background and studies rather than a specific corporate development, action or event of the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2182,
+ "input_tokens": 1703,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:44:18.876257+00:00"
+}

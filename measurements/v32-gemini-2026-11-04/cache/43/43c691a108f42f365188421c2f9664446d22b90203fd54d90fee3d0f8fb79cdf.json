@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommersamlinger for 60+ Er du over 60 år og trener i en NTN Taekwon-Do klubb? Bli med på sommersamling i mai 2026. Det arrangeres en samling i Surnadal og en i Selbu.",
+   "11. november 2025"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "NTN Taekwon-Do",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-11-11",
+  "date_evidence": "11. november 2025",
+  "decision": "withhold",
+  "reason": "The item concerns events organized by NTN Taekwon-Do for members of NTN Taekwon-Do clubs, not a specific development or event of the target company Bergen Taekwon-Do Klubb itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2408,
+ "input_tokens": 1499,
+ "output_tokens": 286,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:04.817295+00:00"
+}

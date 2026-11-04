@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "skriver Carina Blålid, som tar for seg historien til de norske dronningen Ingerid Ragnvaldsdatter og kongedatteren Kristin Sigurdsdatter."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Carina Blålid",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is an historical opinion piece or reader submission about medieval queens written by Carina Blålid, and does not report any business development or event concerning Sivilisasjonen AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1326,
+ "input_tokens": 3355,
+ "output_tokens": 223,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T22:54:53.020397+00:00"
+}

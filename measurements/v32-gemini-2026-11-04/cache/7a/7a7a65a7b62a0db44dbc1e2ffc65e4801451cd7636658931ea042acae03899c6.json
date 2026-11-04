@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Klubbklær - kort bestillingsfrist!",
+   "Frist for bestilling: 07.september kl 23.59."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Bergen Taekwon-Do Klubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-09-04",
+  "date_evidence": "4. september 2025",
+  "decision": "withhold",
+  "reason": "The item is a promotional notice regarding a deadline for ordering club clothing, which constitutes marketing of products rather than a significant company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 31805,
+ "input_tokens": 1470,
+ "output_tokens": 229,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:56:14.213634+00:00"
+}

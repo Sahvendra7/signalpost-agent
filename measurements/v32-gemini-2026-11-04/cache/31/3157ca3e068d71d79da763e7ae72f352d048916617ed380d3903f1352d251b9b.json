@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rådgiver i Fremskrittspartiets hovedorganisasjon",
+   "Nå trenger vi en rådgiver som vil være med å løfte FrP videre mot 2027 og 2029."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Fremskrittspartiets hovedorganisasjon",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-16",
+  "date_evidence": "Publisert 16.10.2026 kl.14:15",
+  "decision": "withhold",
+  "reason": "The text is a job vacancy advertisement seeking a new advisor ('Rådgiver i Fremskrittspartiets hovedorganisasjon'), which counts as careers content rather than company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 4942,
+ "input_tokens": 2607,
+ "output_tokens": 271,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T22:41:41.591061+00:00"
+}
