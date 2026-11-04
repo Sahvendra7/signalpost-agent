@@ -1,5 +1,19 @@
 # Final submission manifest
 
+## V3.1 candidate 2 — candidate 1 plus the foreign-namesake entity correction (not submitted, not scored)
+
+| | |
+|---|---|
+| Branch | `claude/awesome-sagan-m2lppu` (local; not pushed) |
+| Tag | `v3.1-candidate-2` (local) on the docs and measurements commit on top of `334a085` |
+| **Code under test** | **`334a085`**. Later commits change only documentation and measurements; `git diff 334a085 v3.1-candidate-2 -- src tests scripts pyproject.toml uv.lock` is empty. |
+| Previous candidate | `v3.1-candidate-1` (`00e644a`, code `0e4c426`), unchanged and reproducible |
+| What changed | `attribution/names.py` and `attribution/operator.py` only: a handle ending in a foreign legal form the company's own name lacks names another entity; a site naming the company's name under a foreign legal form, and never this company, is a group or brand site. News rules unchanged. See `docs/v31-release-report.md` §10. |
+| Impact on captured bytes | On 8 sets (860 organisations), the only change from `0e4c426` is LOGSCOM AS: 2 incorrect profiles withheld. No labelled-correct profile is lost. |
+| Tests | 533 passed and 175 subtests, in the working tree and in the clean room |
+| Live check (2026-11-04) | 100/100 `completed`; 0 contract findings (3,995 hashes re-checked); $0; no LLM; no social-platform host. The refresh kept last values on 2 outage events. The 8 reproduction companies are as intended. Published site facts are identical in count to `0e4c426`'s live run. |
+| **Independent accuracy** | As for candidate 1: eval200b outputs are identical under `334a085`. News 80.2%: the 90% target is NOT met. Social 100% (68/68). |
+
 ## V3.1 candidate 1 — news classification accuracy remediation (not submitted, not scored)
 
 | | |

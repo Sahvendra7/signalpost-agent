@@ -1,0 +1,13 @@
+== smoke100: companies 13 with a site; units removed 0, added 0; operator changes 0
+== midsize40: companies 15 with a site; units removed 0, added 0; operator changes 0
+== fresh60: companies 47 with a site; units removed 0, added 0; operator changes 0
+== fresh60b: companies 40 with a site; units removed 0, added 0; operator changes 0
+== diag80: companies 44 with a site; units removed 0, added 0; operator changes 0
+== eval120: companies 61 with a site; units removed 0, added 1; operator changes 0
+   ADDED   [unlabelled] 955599535|news_item|fib.no/stottespillere/sparebankstiftelsen-dnb|2026-11-04
+== eval200: companies 97 with a site; units removed 2, added 0; operator changes 1
+   operator 830872752: ('self', 'no_contrary_signal') -> ('group_or_brand', 'site_of_a_foreign_namesake')
+   REMOVED [incorrect] 830872752|social_profile|facebook.com/logscom
+   REMOVED [incorrect] 830872752|social_profile|instagram.com/logscom_ab
+== eval200b: companies 94 with a site; units removed 0, added 0; operator changes 0
+{'removed': 2, 'added': 1}

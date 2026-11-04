@@ -2,8 +2,9 @@
 
 **Status:**
 - Not pushed, not submitted, not scored by Builderr.
-- Candidate tag: `v3.1-candidate-1`, local only. Code `0e4c426`; the docs and measurements commits on top are
-  code-identical.
+- **V3.1 candidate 2** (code `334a085`, local tag `v3.1-candidate-2`): candidate 1 plus one entity-resolution
+  correction for companies abroad that share the name (LOGSCOM AS / Logscom AB). The news rules are unchanged. See §10.
+- V3.1 candidate 1 (`v3.1-candidate-1` on `00e644a`, code `0e4c426`) is unchanged; §1–§9 describe it.
 - V3 candidate 2 (`v3-candidate-2`, code `7b8fc69`) is unchanged.
 
 **Outcome in one paragraph.**
@@ -203,7 +204,8 @@ news feeds are now withheld from news.
 - **Earlier sets** (tuned, still present): Solregn customer reminders in the company's voice; the Kellners welcome
   page; the Oslo PT third-party promotion (eval120); Kameo's product landing page (eval200).
 - **Entity:** a company whose verified site belongs to a foreign sister company with no registry group link (LOGSCOM
-  AS / Logscom AB). Its news is withheld only when the text gives it away; its profiles are published.
+  AS / Logscom AB). Its news is withheld only when the text gives it away; its profiles are published. **Fixed in
+  candidate 2 (§10).**
 - **Retention:**
   - correct items whose captured text neither names the company nor speaks in its voice are withheld (school class
     reports, title-only cards);
@@ -223,3 +225,140 @@ news feeds are now withheld from news.
   - one in five published news items is still wrong.
 
 The exact SHAs are in `docs/final-submission-manifest.md` and `HANDOFF.md`.
+
+## 10. V3.1 candidate 2 — companies abroad that share the name (code `334a085`)
+
+You asked for this correction without any change to the news rules, without company-specific exclusions or URL lists,
+and without tuning against eval200b.
+
+### 10.1 Reproduction
+
+On `0e4c426`, the eval200 capture of LOGSCOM AS (830872752; fixture `tests/fixtures/v3/830872752`) publishes:
+- `https://www.facebook.com/logscom`, with the attribution `handle_exact`;
+- `http://instagram.com/logscom_ab`, with the same attribution.
+
+Both are labelled **incorrect** in the eval200 audit: they are the profiles of Logscom AB, Åsele, Sweden. The
+regression test `SharedNameAcrossBorders.test_logscom_as_does_not_take_the_swedish_logscom_ab_profiles` reproduces
+this; it fails on `0e4c426`.
+
+### 10.2 Identity chain, and why `0e4c426` accepted both profiles
+
+1. **Registry.**
+   - LOGSCOM AS was registered in 2022 in Lillehammer. Its registered purpose is to sell "det svenske
+     morselskapets produkter".
+   - Its `hjemmeside` is `logscom.com`, so the site is registry-linked.
+   - Brreg `konsernstruktur` is not_found. Norway's registry records no group with a foreign parent, so the existing
+     registry-group rule (`site_named_after_registry_group_company`) cannot fire.
+2. **Site operator** (`attribution/operator.assess_operator`).
+   - The site's title is "We make logs communicate - Logscom AB", and its contact is "Logscom AB Blåviksvägen 11
+     SE-91931 Åsele Sweden".
+   - It states no Norwegian organisation number at all, neither 830872752 nor another's. It does not redirect, and
+     the domain carries the company's name.
+   - With no contrary signal, the operator was `self` / `no_contrary_signal`.
+3. **Handle relation** (`attribution/names.handle_relation`).
+   - `logscom` equals the distinctive name, so it is EXACT.
+   - `logscom_ab` is "logscom" plus "ab". "ab" was in the neutral legal-form list, which also accepts "as", "asa",
+     "sa" and "ab", so this was also EXACT.
+4. **Decision** (`attribution/social.decide_profile`). An EXACT handle on a `self` site is accepted as the company's
+   own.
+
+The weak link is step 2. The site does name its operator, a company with the same name under a Swedish legal form.
+Step 3 then treats that foreign form as if it were this company's own.
+
+### 10.3 The general rules
+
+| Rule | Where | Condition | Effect |
+|---|---|---|---|
+| A foreign legal form names another entity | `names.py` (`FOREIGN_FORMS`, `LegalName.foreign_form`) | A handle ends in AB, GmbH, Ltd, Limited, Inc, ApS, Oy, Oyj, AG, LLC, PLC or BV, and the company's own registered name does not carry that form. | `OTHER_ENTITY`, so the profile is held (`handle_names_other_entity`). |
+| The site of a foreign namesake | `operator.py` (`foreign_namesake_named`, code `site_of_a_foreign_namesake`) | The verified site names "<this company's name> <foreign form>", never "<name> <own form>", and does not state this company's organisation number. That last check runs earlier and returns `self`. | The operator is `group_or_brand`. The existing rules for that operator then hold the bare shared-name handle (`group_name_handle_on_group_or_brand_site`) and withhold stories not about this company. The registry-linked website itself stays published, with the role `group_or_brand_site`. |
+
+- **Why the rules are general.** They use only the legal form, which is how registers tell separately registered
+  companies apart. They use no company name, domain or URL.
+- **NUF.** A NUF (a Norwegian branch of a foreign company) carries the foreign form in its own registered name, e.g.
+  "KAMEO INVESTMENT PLATFORM AB NUF". For a NUF the form counts as its own and nothing changes.
+- **Danish companies.** The Danish "A/S" cannot be told apart from the Norwegian AS, so it is deliberately not a
+  foreign form.
+
+### 10.4 Effect on legitimate profiles
+
+Every captured set was replayed through `334a085` and compared with the stored `0e4c426` replays:
+- the sets are smoke100, midsize40, fresh60, fresh60b, diag80, eval120, eval200 and eval200b;
+- together they hold 860 organisations, 411 of them with a verified site;
+- the evidence is in `measurements/v31-2026-11-01/namesake/`.
+
+- **The only change in published units or operator decisions is Logscom.**
+  - Its operator becomes `group_or_brand/site_of_a_foreign_namesake`.
+  - Its 2 incorrect profiles are withheld.
+  - Its website is kept, and its news was already empty.
+- **No profile labelled correct is lost on any set.**
+- After the change, **no labelled set publishes an incorrect social profile.**
+  - eval200 social goes from 73/75 to 73/73 decided.
+  - eval200b stays at 68/68. It was not used to develop or tune this change.
+- **Legitimate controls**, captured and pinned as regression tests that pass on both `0e4c426` and `334a085`:
+
+  | Control | Organisation | Behaviour, unchanged |
+  |---|---|---|
+  | Kameo NUF | 932468352, eval200 | Operator `self`, from its own organisation number. Its 3 profiles, all labelled correct, are kept: `kameo-norge`, `kameo.norge` and `KameoNorge`. |
+  | Alpha Solutions Norge AS | 921147325, eval200b | The registry site redirects into the international group's site (an existing rule). The US group's profiles (`alpha-solutions-usa`, `alpha_solutions_us`; labelled incorrect) stay held. |
+
+- **One eval120 news unit differs from the stored replay. It is not caused by this change.**
+  - The unit is 955599535, `fib.no/stottespillere/sparebankstiftelsen-dnb`, dated 2026-11-04.
+  - `0e4c426` replayed on the same day publishes the identical 126 units.
+  - The date is the page's application deadline ("Søknadsfrist: 4. november 2026"). It was rejected while it lay in
+    the future, and it passes once it is the run date. See §10.6.
+
+### 10.5 Tests and validation of `334a085`
+
+- **New tests.** All pass on `334a085`.
+  - 3 regression tests on captured bytes (`tests/test_v3_regressions.py::SharedNameAcrossBorders`): Logscom (the
+    defect), Kameo NUF and Alpha Solutions (the controls).
+  - 4 unit tests (`tests/test_v3_attribution.py::ForeignNamesakes`): foreign-form handles, NUF own forms,
+    `foreign_namesake_named`, and the operator with and without the company's own organisation number.
+  - **On `0e4c426`, the 4 Logscom/defect tests fail and the 3 control tests pass.**
+- **Suite.** 533 passed (526 earlier plus 7), including the existing social positive controls: Bergknapp, BioMar
+  Norge, BDT Viken, Grønsand, Birralee, Beredt, Bjelland and the others in `SocialAttribution` and `HandleRelations`.
+- **Clean room** (`measurements/v31-2026-11-01/cleanroom-334a085/`): a fresh clone at `334a085` with an empty uv
+  cache. `uv sync --locked` exit 0; **3 of 3 suite runs with 533 passed and 175 subtests passed**; the documented
+  batch command (911771098) exit 0.
+- **Live release validation** (`measurements/v31-2026-11-01/release-334a085/`, 2026-11-04): a clean worktree,
+  `run_release.sh`.
+
+  | Run | Result |
+  |---|---|
+  | live 100 | 100/100 `completed`; 0 contract findings (3,995 hashes re-checked); $0; no LLM; no restricted host |
+  | refresh | baseline = the published envelopes; 2 `unavailable` events, last values kept (as on `0e4c426`) |
+  | 8 reproduction companies | as intended |
+
+  - The published site facts are identical in count to `0e4c426`'s live run of 2026-11-02: 12 profiles, 4 careers
+    pages, 14 websites and 29 news items.
+  - The one unit-level difference is Kilis Hockey (875606662). It published "Bli med på moroa" on 2026-11-03, between
+    the two runs, and the newest-items window dropped the oldest post. One extra withheld check comes from the same
+    new post. Both are changes on the live site, not code effects.
+
+### 10.6 Remaining risk
+
+- **A foreign namesake that never writes its legal form.** If the site says only "Logscom", there is no evidence that
+  separates the two companies. The site stays `self`, and a bare-name handle is still accepted. No reliable rule
+  exists without a foreign registry lookup, which this agent does not do.
+- **Forms not in the list.** These include SA/SAS/SARL, SRL, S.p.A., Pty, KK and AB(publ) spellings. The list covers
+  the Nordic, German, British, Dutch and US forms found in Norwegian registrations. Danish A/S is excluded on purpose.
+- **Norwegian namesakes** (two AS companies with one brand) are unchanged. They are still handled by the
+  organisation-number, sibling and registry-group rules, and remain at risk when the site names neither company.
+- **Over-holding.** A Norwegian company whose site names only its Swedish sister "X AB", and never "X AS" or its own
+  number, now has its bare-name profiles held. This cost no labelled-correct profile on any captured set. It errs
+  towards withholding, which is the qualification-safe direction.
+- **News date defect (existing, not fixed: the news rules are frozen).**
+  - A stated application deadline ("Søknadsfrist") can be read as a publication date.
+  - It is rejected only while it lies in the future, so on or after the deadline day the item can publish (fib.no on
+    eval120).
+  - This affects `0e4c426` and `334a085` equally. A fix belongs to a news-rule change, with its own evaluation.
+
+### 10.7 Recommended release
+
+- **Recommended: `v3.1-candidate-2`.** Code `334a085`; the tag points at the docs and measurements commit on top,
+  which is code-identical.
+- It is `v3.1-candidate-1` plus a correction that removes the 2 known wrong-company profiles. It changes nothing else
+  on 860 captured organisations. The news-classification code is unchanged: only `attribution/names.py` and
+  `attribution/operator.py` differ from `0e4c426`.
+- The news target is still not met (eval200b 80.2%). That result applies unchanged, because eval200b's outputs are
+  identical under `334a085`.

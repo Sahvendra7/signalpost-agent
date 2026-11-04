@@ -203,3 +203,12 @@ holds 448 labelled units. Labels are `assistant_blind`, with the captured text v
 - Social ≥95%: met on this sample.
 - Careers: 7 decided, which is too few to establish a rate.
 - Job ads: not validated; one job was published by the baseline only, and its label is unsure.
+
+### V3.1 candidate 2 (`334a085`) — foreign namesakes, entity resolution only
+
+- **No new sample was scored.** The correction was developed on the eval200 Logscom case, which is development data.
+- On every captured set, `334a085` publishes exactly what `0e4c426` publishes, except LOGSCOM AS: its 2 profiles,
+  both labelled incorrect, are withheld.
+- So the eval200b figures above apply unchanged: news 80.2%, social 68/68.
+- eval200 social becomes 73/73 decided. That is development data, so it is not evidence of independent precision.
+- Details are in `docs/v31-release-report.md` §10 and `measurements/v31-2026-11-01/namesake/`.
