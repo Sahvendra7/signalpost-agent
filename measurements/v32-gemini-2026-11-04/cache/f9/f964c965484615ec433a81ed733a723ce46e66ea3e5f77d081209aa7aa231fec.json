@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Mesén er kurator og produsent for Kunstreisen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mesén",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-06-04",
+  "date_evidence": "4. juni",
+  "decision": "publish",
+  "reason": "The target company Mesén acts as curator and producer for the anniversary exhibition of Kunstreisen, which is reported as an event hosted and organized by the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 17537,
+ "input_tokens": 2511,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:33:03.670511+00:00"
+}

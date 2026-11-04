@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Med våre skytjenester får du faste månedlige priser – enkelt og forutsigbart",
+   "Vi tilbyr også drift av PC i våre skypakker. Det vil si at vi sørger for at dine maskiner alltid er oppe og går."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-06",
+  "date_evidence": "November 6, 2023",
+  "decision": "withhold",
+  "reason": "The article is a promotional page describing the company's cloud services and IT support offerings, rather than reporting a specific company event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1326,
+ "input_tokens": 2840,
+ "output_tokens": 250,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:27.129265+00:00"
+}

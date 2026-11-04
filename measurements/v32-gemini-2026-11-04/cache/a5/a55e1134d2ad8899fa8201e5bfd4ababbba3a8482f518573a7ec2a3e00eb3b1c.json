@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba Samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-09-15",
+  "date_evidence": "Tue, 15 Sep 2026 15:19:15 +0000",
+  "decision": "publish",
+  "reason": "The text announces the publication of a new report by the target company, evaluated as a genuine company development.",
+  "evidence_quotes": [
+   "Delrapport: Evaluering av voldserstatningsloven"
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 46745,
+ "input_tokens": 1615,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:46:25.720708+00:00"
+}

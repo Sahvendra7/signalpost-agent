@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+   "6 april, 2014"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "unclear",
+  "subject_relation": "unclear",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-04-06",
+  "date_evidence": "6 april, 2014",
+  "decision": "withhold",
+  "reason": "The content consists of placeholder Lorem Ipsum text and generic template elements. It does not report any actual news or events concerning Midthaug Zink AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2244,
+ "input_tokens": 2403,
+ "output_tokens": 210,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.6-flash",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:41:04.084783+00:00"
+}

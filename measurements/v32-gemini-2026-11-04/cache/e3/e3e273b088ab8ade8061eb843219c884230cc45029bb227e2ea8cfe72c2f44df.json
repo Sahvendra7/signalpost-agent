@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Visning och julglögg - Logscom AB På tisdagen den 17 december bjuder vi på maskinvisning och öppet hus.",
+   "Passa på att titta in hur virkesmärkaren Logscom GTP funka och varför inte passa på att hyra en märkare; hyr en märkare i 48 månader och betala endast 2 999 kr per månad inkl. service och försäkring."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Logscom AB",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text refers to Logscom AB and promotes an open house and product offers, rather than reporting on the target company LOGSCOM AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 22479,
+ "input_tokens": 2044,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:46:06.902503+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi leverer Tårnkranfører til Ø.M Fjeld på Ask utenfør Gjerdrum."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Mobil og Tårnkranfører AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2025-05-15",
+  "date_evidence": "mai 15, 2025",
+  "decision": "publish",
+  "reason": "The text reports that the target company is supplying a tower crane operator to a customer project, which is a genuine company event and service delivery.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 31051,
+ "input_tokens": 1745,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:48:32.842523+00:00"
+}

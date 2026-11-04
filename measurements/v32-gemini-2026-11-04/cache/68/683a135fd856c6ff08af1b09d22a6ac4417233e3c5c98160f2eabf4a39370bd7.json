@@ -1,0 +1,70 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "ROSIM AS is a registered legal form AS with organisation number 988185701, founded on 2005-04-11 and registered on 2005-05-21.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f3",
+     "f8",
+     "f9"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company operates in the industry code 58.290 for publishing other software, with a registry employee count of 12.",
+    "fact_ids": [
+     "f4",
+     "f7"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "company_reported",
+    "text": "The company's website reports that ROSIM are experts on water flow measurement and network modeling, providing insight into stormwater and wastewater systems, precipitation measurement, and extraneous water.",
+    "fact_ids": [
+     "f12"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Revenue increased from 25,957,519 NOK to 27,000,247 NOK between the periods 2023-01-01 to 2023-12-31 and 2024-01-01 to 2024-12-31, but then decreased to 26,065,153 NOK for the period 2025-01-01 to 2025-12-31.",
+    "fact_ids": [
+     "f26",
+     "f33",
+     "f40",
+     "d1",
+     "d2"
+    ]
+   },
+   {
+    "section": "leadership",
+    "kind": "verified_fact",
+    "text": "Geir Johan Lindholm serves as the daglig leder and styremedlem, while Gorm Andreas Pedersen is the styrets leder.",
+    "fact_ids": [
+     "f14",
+     "f15",
+     "f17"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 11939,
+ "input_tokens": 6710,
+ "output_tokens": 586,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:49:45.559594+00:00"
+}

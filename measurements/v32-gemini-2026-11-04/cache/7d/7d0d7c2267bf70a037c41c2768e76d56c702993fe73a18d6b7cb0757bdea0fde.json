@@ -1,0 +1,83 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "KRISTIANIA BEDRIFTSIDRETTSLAG, with organisation number 996569071, is a legal form FLI registered on 2011-02-16 and founded on 1984-09-03.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f3",
+     "f7",
+     "f8"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company operates as a sports club and association under industry code 93.120, serving as a corporate sports team for employees at Høyskolen Kristiania - Ernst G Mortensens Stiftelse.",
+    "fact_ids": [
+     "f4",
+     "f9"
+    ]
+   },
+   {
+    "section": "leadership",
+    "kind": "verified_fact",
+    "text": "The board consists of Kamilla Kolvig as chair, alongside board members Knut Erik Gaustad, Sindre Sommerfelt, and Morten Michaelsen Gjestrud.",
+    "fact_ids": [
+     "f11",
+     "f12",
+     "f13",
+     "f14"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Between the periods of 2023-12-31 and 2024-12-31, revenue increased by 51,705 NOK from 432,545 NOK to 484,250 NOK, and subsequently decreased by 172,471 NOK to 311,779 NOK by 2025-12-31.",
+    "fact_ids": [
+     "f20",
+     "f27",
+     "f34",
+     "d1",
+     "d2"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Operating results changed from -44,019 NOK in 2023 to 22,405 NOK in 2024, and further improved to 25,248 NOK by the end of 2025.",
+    "fact_ids": [
+     "f21",
+     "f28",
+     "f35",
+     "d3",
+     "d4"
+    ]
+   },
+   {
+    "section": "uncertainty",
+    "kind": "uncertainty",
+    "text": "There is no information regarding the specific details of operations beyond registered activities and public announcements.",
+    "fact_ids": [
+     "f9"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 10237,
+ "input_tokens": 6287,
+ "output_tokens": 645,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:26.379559+00:00"
+}

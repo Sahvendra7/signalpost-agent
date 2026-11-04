@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Leilighet nr. 6 ble på grunn av oppkjøp/fusjon avsluttet av Storesté Entreprenør AS",
+   "Forrige uke hadde vi overlevering på leilighet nr. 6 på Stealliveien, Rovdas Boligfelt.",
+   "13 okt 2017"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Storesté Entreprenør AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "delivery_or_completed_project",
+  "publication_date": "2017-10-13",
+  "date_evidence": "13 okt 2017",
+  "decision": "publish",
+  "reason": "The article reports that Storesté Entreprenør AS completed and handed over apartment number 6 at Stealliveien following a merger/acquisition of the original builder.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2137,
+ "input_tokens": 1788,
+ "output_tokens": 281,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:39:41.129828+00:00"
+}

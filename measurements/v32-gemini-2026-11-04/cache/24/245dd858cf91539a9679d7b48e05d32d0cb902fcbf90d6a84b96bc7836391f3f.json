@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Produkt i fokus - Oktober 2024: Valchromat",
+   "I stedet for å være en enkel trefiberplate, er Valchromat gjennomfarget"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Oslofinér",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-10-01",
+  "date_evidence": "1. oktober 2024",
+  "decision": "withhold",
+  "reason": "The page promotes a specific product (Valchromat) offered by the company without reporting a distinct corporate event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 22976,
+ "input_tokens": 1938,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:41:37.570882+00:00"
+}

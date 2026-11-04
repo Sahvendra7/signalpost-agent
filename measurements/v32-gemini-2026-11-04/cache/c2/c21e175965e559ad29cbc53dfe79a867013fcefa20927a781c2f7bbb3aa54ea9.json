@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet nr 30 – 22.04.22 – Steinerskolen i Ås",
+   "Da er vi ferdig med den første skoleuka etter påskeferien."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-04-22",
+  "date_evidence": "Fredagsbladet nr 30 – 22.04.22",
+  "decision": "publish",
+  "reason": "The newsletter reports on school activities, updates, and upcoming events at Steinerskolen i Ås following the Easter break.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 36600,
+ "input_tokens": 2897,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:43:03.524103+00:00"
+}

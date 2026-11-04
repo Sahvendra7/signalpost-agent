@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The target company announced a new operational requirement regarding PPR (Prior Permission Required) for all traffic starting from 15.03.25 following instructions from Luftfartstilsynet.",
+  "evidence_quotes": [
+   "Etter pålegg fra Luftfartstilsynet må alle som skal fly til/fra Kjeller søke om PPR via www.myppr.no ."
+  ],
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24692,
+ "input_tokens": 1838,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:45:38.972829+00:00"
+}

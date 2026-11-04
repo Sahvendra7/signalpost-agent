@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På oppdrag fra KS skal Proba undersøke hva som motiverer ungdom til å bli helsefagarbeidere og hvordan kommuner og fylkeskommuner kan bidra til å sikre at flere unge fullfører opplæringsløp med helsefag."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The text announces a new project awarded to Proba by KS to investigate recruitment of young people to healthcare worker professions.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 30691,
+ "input_tokens": 1757,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:29.287629+00:00"
+}

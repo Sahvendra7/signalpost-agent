@@ -1,0 +1,65 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "KUNNSKAPSPARKEN BODØ AS is registered under organisation number 984047320 as a private limited company with the legal form AS.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f3"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company operates in business consulting and other administrative consulting, and lists activities including research and development, teaching, and real estate rental.",
+    "fact_ids": [
+     "f4",
+     "f10"
+    ]
+   },
+   {
+    "section": "leadership",
+    "kind": "verified_fact",
+    "text": "Erlend Bullvåg serves as the chief executive officer while Ole-Henrik Hjartøy is the board chair.",
+    "fact_ids": [
+     "f13",
+     "f14"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Revenue decreased from 44,620,608 NOK for the period ending December 31, 2023 to 40,205,329 NOK for the period ending December 31, 2024, and then increased to 42,421,421 NOK for the period ending December 31, 2025.",
+    "fact_ids": [
+     "d1",
+     "d2"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Operating result decreased from 949,911 NOK for the period ending December 31, 2023 to 113,241 NOK for the period ending December 31, 2024, and subsequently increased to 2,699,309 NOK for the period ending December 31, 2025.",
+    "fact_ids": [
+     "d3",
+     "d4"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8225,
+ "input_tokens": 7901,
+ "output_tokens": 548,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:07.729512+00:00"
+}

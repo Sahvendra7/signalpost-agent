@@ -1,0 +1,80 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "FRAM MARINE AS is registered with the organisation number 993973645 and has the legal form AS.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f3"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company operates in the industry of other technical consultancy activities and was founded on March 15, 2009.",
+    "fact_ids": [
+     "f4",
+     "f8"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "company_reported",
+    "text": "The company's website reports that it combines years of experience in project execution and management with technical and operational expertise in the Marine, Energy, and Renewable industry.",
+    "fact_ids": [
+     "f12",
+     "f48"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Revenue decreased from 40,012,265 NOK in the period from 2023-01-01 to 2023-12-31 down to 31,994,381 NOK in the period from 2024-01-01 to 2024-12-31, and further down to 25,943,930 NOK in the period from 2025-01-01 to 2025-12-31.",
+    "fact_ids": [
+     "f25",
+     "f32",
+     "f39",
+     "d1",
+     "d2"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "Operating result went down from 5,147,707 NOK in the 2023 period to 2,143,423 NOK in the 2024 period, and then to -870,904 NOK in the 2025 period.",
+    "fact_ids": [
+     "f26",
+     "f33",
+     "f40",
+     "d3",
+     "d4"
+    ]
+   },
+   {
+    "section": "leadership",
+    "kind": "verified_fact",
+    "text": "Karen Grøttheim Algaard serves as the chief executive officer while Per Grieg is the board chair.",
+    "fact_ids": [
+     "f14",
+     "f15"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 13939,
+ "input_tokens": 7703,
+ "output_tokens": 686,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:49:59.501693+00:00"
+}

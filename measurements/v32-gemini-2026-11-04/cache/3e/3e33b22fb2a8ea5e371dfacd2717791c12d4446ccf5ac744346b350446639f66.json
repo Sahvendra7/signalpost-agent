@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Proba samfunnsanalyse skal gjennomføre prosjektet sammen med forskere fra Ideas2evidence .",
+   "Nytt prosjekt: Erfaringer og utbytte av minikvalifikasjoner innen karriereveiledning"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The text announces that Proba samfunnsanalyse has been awarded a new project regarding career guidance micro-credentials, which is a specific company development and action.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 31857,
+ "input_tokens": 1794,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:47:29.363543+00:00"
+}

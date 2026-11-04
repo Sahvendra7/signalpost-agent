@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Aldring påvirker ikke bare huden, men også strukturer som skjelettet og fettputene i ansiktet."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Unknown",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The source text discusses skin aging and facial structures, which is unrelated to the target company Proba AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 19652,
+ "input_tokens": 1587,
+ "output_tokens": 190,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:45:51.169510+00:00"
+}

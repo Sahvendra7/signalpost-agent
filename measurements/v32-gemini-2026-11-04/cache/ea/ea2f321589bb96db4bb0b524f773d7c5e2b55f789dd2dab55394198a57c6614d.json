@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På oppdrag for Arbeids- og inkluderingsdepartementet skal Proba evaluere ungdomsgarantien i Nav.",
+   "Prosjektleder er Pia Dybvik Staalesen . Prosjektet avsluttes mot slutten av 2027."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "Proba has been commissioned by the Ministry of Labour and Social Inclusion to evaluate the youth guarantee in Nav, which constitutes a new contract/project for the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4905,
+ "input_tokens": 1997,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:42:20.278140+00:00"
+}

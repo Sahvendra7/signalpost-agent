@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I am so happy, my dear friend – Midt-Telemark Kommunale Eigedom AS"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Midt-Telemark Kommunale Eigedom AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page contains only placeholder Lorem Ipsum text and gibberish rather than genuine company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 26251,
+ "input_tokens": 2408,
+ "output_tokens": 189,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:44:37.542872+00:00"
+}

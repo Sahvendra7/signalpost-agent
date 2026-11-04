@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Daglig leder har ordet Da er det fredag igjen etter en hektisk uke med foreldremøte på tirsdag, FAU – møte på onsdag og førstehjelpskurs i går."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Unknown school or kindergarten",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2014-03-29",
+  "date_evidence": "29 mars, 2014",
+  "decision": "withhold",
+  "reason": "The text discusses school-related activities like parent-teacher meetings and first aid courses, which are completely unrelated to the target company MIDTHAUG ZINK AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24022,
+ "input_tokens": 2836,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:45:17.600732+00:00"
+}

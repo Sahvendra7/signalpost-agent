@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Web 10.06.2024 Web 10.06.2024 Ny arena for skulptur på Oslo S Les mer"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Ny arena for skulptur på Oslo S",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-06-10",
+  "date_evidence": "10.06.2024",
+  "decision": "withhold",
+  "reason": "The snippet describes unrelated content about a sculpture arena rather than a development of Matsentralen Øst.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 16561,
+ "input_tokens": 1488,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:34:01.631654+00:00"
+}

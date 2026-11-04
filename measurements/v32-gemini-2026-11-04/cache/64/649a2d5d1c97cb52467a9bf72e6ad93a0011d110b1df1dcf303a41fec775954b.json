@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "A couple of new videos on my YouTube channel",
+   "Oct 2, 2020"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2020-10-02",
+  "date_evidence": "Oct 2, 2020",
+  "decision": "publish",
+  "reason": "Alexander Rybak announced the release of two new videos on his official YouTube channel.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1865,
+ "input_tokens": 1961,
+ "output_tokens": 206,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.6-flash",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:35:24.807159+00:00"
+}

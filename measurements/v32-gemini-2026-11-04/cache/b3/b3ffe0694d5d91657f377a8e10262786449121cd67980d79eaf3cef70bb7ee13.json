@@ -1,0 +1,61 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "STIFTELSEN LIA GÅRD RETREATSENTER has the legal form STI and organisation number 927293056.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f3"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company's registered activity is Christian retreat and course operations.",
+    "fact_ids": [
+     "f10"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "company_reported",
+    "text": "The company's website reports that Lia Gård is an inhabited resting place outside the asphalt under an open sky for those on their way.",
+    "fact_ids": [
+     "f11"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "From the period 2023-12-31 to 2024-12-31, revenue decreased from 15,965,803 NOK to 9,560,570 NOK, which is a down direction of 40.1 percent.",
+    "fact_ids": [
+     "d1"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "From the period 2024-12-31 to 2025-12-31, revenue increased from 9,560,570 NOK to 9,714,082 NOK, representing an upward change of 1.6 percent.",
+    "fact_ids": [
+     "d2"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8949,
+ "input_tokens": 6537,
+ "output_tokens": 471,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:35.331573+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "For virksomheter som krever presise og tilpassbare etiketter, er Brother DK-22246 et utmerket valg ."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Frankeringsrekvisita",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a product promotional article describing the features of the Brother DK-22246 label roll without reporting any corporate event or development of Frankeringsrekvisita NUF.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 19986,
+ "input_tokens": 2510,
+ "output_tokens": 199,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:46:15.465599+00:00"
+}

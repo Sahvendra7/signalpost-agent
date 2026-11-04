@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "På oppdrag fra Utdanningsdirektoratet har Deloitte i samarbeid med Proba samfunnsanalyse evaluert etterlevelsen av barnehageloven og tilsyn på barnehageområdet."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The company reports on a completed project where they, in collaboration with Deloitte, evaluated the compliance of the Kindergarten Act on behalf of the Norwegian Directorate for Education and Training.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8159,
+ "input_tokens": 1607,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:47:48.962074+00:00"
+}

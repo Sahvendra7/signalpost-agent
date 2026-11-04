@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oslo Snekkermesterlaug og Oslofiner har i samarbeid med Wordskills Norway gleden av å arrangere Yrkes-NM i Møbelsnekkerfaget.",
+   "konkurransen er for både lærlinger og svenner, og vil bli arrangert i lokalene til Oslofiner i Nittedal utenfor Oslo torsdag - lørdag 15.-17- Oktober."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Oslofiner",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-21",
+  "date_evidence": "21. august 2026",
+  "decision": "publish",
+  "reason": "The target company Oslofiner announces that it is co-arranging Yrkes-NM i Møbelsnekkerfaget in its premises, representing a company-hosted event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 33134,
+ "input_tokens": 1974,
+ "output_tokens": 294,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:48.873078+00:00"
+}

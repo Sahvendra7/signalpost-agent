@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Avtalen ble undertegnet fredag 23. oktober."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Norge og Russland",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-23",
+  "date_evidence": "Avtalen ble undertegnet fredag 23. oktober.",
+  "decision": "withhold",
+  "reason": "The article reports on a Norwegian-Russian fisheries agreement and quota negotiations between governments, which is general industry and public news unrelated to the target company Fisk Media AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 13574,
+ "input_tokens": 3102,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:34:15.207241+00:00"
+}

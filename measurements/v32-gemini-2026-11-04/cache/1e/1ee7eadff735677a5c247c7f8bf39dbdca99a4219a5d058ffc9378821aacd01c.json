@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Forutsigbare kostnader med leasing – Provendo tilbake",
+   "Leasing – en smart løsning I dagens teknologidrevne verden er det viktig for bedrifter å holde tritt med den nyeste maskinvaren."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-02-13",
+  "date_evidence": "Forutsigbare kostnader med leasing February 13, 2024",
+  "decision": "withhold",
+  "reason": "The item is an educational or advisory post explaining the general benefits of hardware leasing for businesses, not reporting a specific corporate development or event of Provendo.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 15400,
+ "input_tokens": 2089,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:44:03.630064+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Administrerende direktør i Sjømat Norge, Geir Ove Ystmark. Arkivfoto: Øyvind A Haram / Sjømat Norge Statsbudsjettet 2027: Sjømat Norge reagerer på at regjeringen verken avvikler normprisrådet",
+   "Sjømat Norge mener at regjeringen ikke leverer på noen av delene i statsbudsjettet for 2027, slik Stortinget har bedt om."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Sjømat Norge",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-07",
+  "date_evidence": "Wed, 07 Oct 2026 14:31:52 +0200",
+  "decision": "withhold",
+  "reason": "The article is a news report about the industry organization Sjømat Norge and its reaction to the national budget; it does not mention the target company FISK MEDIA AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2180,
+ "input_tokens": 3219,
+ "output_tokens": 318,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:40:05.173022+00:00"
+}

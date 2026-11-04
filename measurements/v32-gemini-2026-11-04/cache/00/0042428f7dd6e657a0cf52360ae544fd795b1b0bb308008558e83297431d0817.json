@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Aldrende hud og ansiktsstruktur: Hvordan bevare et ungdommelig utseende",
+   "Hva kan du gjøre for å motvirke aldring? Hudpleie: Invester i hudpleieprodukter som støtter kollagenproduksjonen, som retinol og C-vitamin, og bruk alltid solbeskyttelse."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "JOY Medispa",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "This is an educational blog post offering skincare advice and discussing facial aging rather than reporting a specific event or development about JOY Medispa.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 10957,
+ "input_tokens": 2694,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:46:22.400131+00:00"
+}

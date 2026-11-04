@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Merethe Foss - 23.09.2026 10.03 Brann og flammer er farlig, men likevel spennende."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fossegrenda Barnehage",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-23",
+  "date_evidence": "23.09.2026",
+  "decision": "publish",
+  "reason": "The item reports on the target kindergarten holding its 'brannvernuka' (fire safety week) activities for the children.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 21154,
+ "input_tokens": 2021,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:41:58.727469+00:00"
+}

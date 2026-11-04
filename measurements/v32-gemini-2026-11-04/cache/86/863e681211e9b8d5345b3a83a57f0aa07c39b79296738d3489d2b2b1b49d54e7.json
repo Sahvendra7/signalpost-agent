@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "5 grunner til at Zebra etikettskrivere er bedriftens beste valg"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Zebra",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article provides an educational guide and product overview discussing five reasons to choose Zebra label printers, containing no specific corporate news or events for the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18468,
+ "input_tokens": 2437,
+ "output_tokens": 190,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:47:28.831367+00:00"
+}

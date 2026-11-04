@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Båndtvangen er over – eller er den egentlig det?",
+   "Når bør valpen starte på valpekurs?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "unclear",
+  "subject_relation": "unclear",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The content consists of educational articles about dog care and local leash laws, which are unrelated to the target company's business in maritime transport.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 34336,
+ "input_tokens": 1594,
+ "output_tokens": 142,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:42:42.316528+00:00"
+}

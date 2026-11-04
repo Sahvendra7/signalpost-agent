@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Merethe Foss - 23.02.2026 13.15",
+   "Ski og akedagen er barnehagens egne olympiske leker."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Fossegrenda barnehage",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-02-23",
+  "date_evidence": "23.02.2026",
+  "decision": "publish",
+  "reason": "The item reports on an upcoming ski and sledding event hosted by the target kindergarten.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8998,
+ "input_tokens": 1704,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:43:48.228134+00:00"
+}

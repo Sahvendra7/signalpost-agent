@@ -1,0 +1,36 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "TSC Etikettskrivere: Effektivisering av etiketteringsprosessen",
+   "Som en totalleverandør av frankeringsrekvisita, vet vi hos Frankeringsrekvisita.no verdien av kvalitetsprodukter. Derfor er vi stolte av å være leverandør av TSC etikettskrivere"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "TSC",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The page is a product marketing and promotional blog post discussing TSC label printers rather than reporting a specific development or event about Frankeringsrekvisita NUF.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 3,
+ "latency_ms": 41492,
+ "input_tokens": 2384,
+ "output_tokens": 242,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0,
+  3.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T18:44:15.242456+00:00"
+}

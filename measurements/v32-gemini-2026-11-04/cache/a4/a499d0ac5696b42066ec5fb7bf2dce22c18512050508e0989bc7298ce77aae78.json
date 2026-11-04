@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommarjobb - Logscom AB Förra sommaren kom vi på idén om att lotta ut ett sommarjobb.",
+   "Vi söker därför efter en ny kandidat till årets sommar som vill hänga med oss i tre veckor!",
+   "Du hittar annonsen här: Sommarjobb 2024",
+   "senast den 30 april."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Logscom AB",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-02-07",
+  "date_evidence": "Wed, 07 Feb 2024 14:30:48 +0000",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for summer positions at Logscom AB, which is a Swedish entity (based in Åsele) rather than the Norwegian target company LOGSCOM AS. Job advertisements are also excluded from news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 30821,
+ "input_tokens": 2135,
+ "output_tokens": 309,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:42:15.369359+00:00"
+}

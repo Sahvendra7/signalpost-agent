@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+   "Proba samfunnsanalyse undersøker ungdommers motivasjon for helsefagarbeideryrket"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Proba samfunnsanalyse",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a default WordPress placeholder post ('Hello world!') containing unrelated text about a study by Proba samfunnsanalyse; it does not report any news about Sving Trafikkskole AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8727,
+ "input_tokens": 1739,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:41:48.989143+00:00"
+}

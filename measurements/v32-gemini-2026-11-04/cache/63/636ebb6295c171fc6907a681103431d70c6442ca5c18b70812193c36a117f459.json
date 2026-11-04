@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Pigmentflekker oppstår ofte som et resultat av overdreven soleksponering eller hormonelle forandringer.",
+   "Behandling av pigmentflekker hos JOY Medispa For å behandle pigmentflekker fokuserer vi på metoder som reduserer melaninproduksjonen"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "JOY Medispa",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-09-26",
+  "date_evidence": "September 26, 2024",
+  "decision": "withhold",
+  "reason": "The article is educational and promotional content explaining causes and treatments for pigment spots, rather than reporting a specific company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 6837,
+ "input_tokens": 2498,
+ "output_tokens": 253,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.6-flash",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T18:42:21.535020+00:00"
+}

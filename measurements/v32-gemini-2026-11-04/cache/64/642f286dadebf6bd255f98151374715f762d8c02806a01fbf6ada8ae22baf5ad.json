@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Driftshåndboken for Kjeller er derfor oppdatert",
+   "Det innføres RMZ/TMZ (Radio- and Transponder Mandatory Zone) i G-luft i Kjeller området (119.10) og i Oslo området (122.00) fra 01.05.2024."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Kjeller Aero Senter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The article reports a specific update to the company's operations manual (Driftshåndboken) and the implementation of new mandatory radio/transponder zones at the airport effective May 1, 2024.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1933,
+ "input_tokens": 2000,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:41:29.338018+00:00"
+}

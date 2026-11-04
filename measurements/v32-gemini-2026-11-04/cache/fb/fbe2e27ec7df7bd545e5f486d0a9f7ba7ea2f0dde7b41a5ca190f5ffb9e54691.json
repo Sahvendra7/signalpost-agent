@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Visste du at Fresvik Produkt har ei svært god løysing for innfesting mot golv?"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Fresvik Produkt",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-01-08",
+  "date_evidence": "8. jan.",
+  "decision": "withhold",
+  "reason": "The item promotes an existing product solution and features rather than reporting a specific new development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12980,
+ "input_tokens": 1818,
+ "output_tokens": 196,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:33:46.233774+00:00"
+}

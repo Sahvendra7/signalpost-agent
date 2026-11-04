@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "KARMSUND HAVN IKS has the organization number 963706820 and was founded on 1992-01-01.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f8"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company engages in public port operations according to the act on ports and fairways, rental of halls and outdoor areas, rental of patrol and guard boats, and the sale of water and electricity for shipping use.",
+    "fact_ids": [
+     "f10"
+    ]
+   },
+   {
+    "section": "leadership",
+    "kind": "verified_fact",
+    "text": "Torfinn Gaupås serves as the chief executive officer, while Olav Linga is the board chair.",
+    "fact_ids": [
+     "f13",
+     "f20"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "From the period ending 2023-12-31 to the period ending 2024-12-31, revenue decreased from 179,891,000 NOK to 174,177,000 NOK.",
+    "fact_ids": [
+     "d1"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "From the period ending 2024-12-31 to the period ending 2025-12-31, revenue increased from 174,177,000 NOK to 206,321,000 NOK.",
+    "fact_ids": [
+     "d2"
+    ]
+   },
+   {
+    "section": "developments",
+    "kind": "company_reported",
+    "text": "The company's website reports news items including the establishment of the technology company Shorly by Havnekraft and cruise calls to Kopervik.",
+    "fact_ids": [
+     "f61",
+     "f64"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 13221,
+ "input_tokens": 7727,
+ "output_tokens": 447,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:48.554561+00:00"
+}

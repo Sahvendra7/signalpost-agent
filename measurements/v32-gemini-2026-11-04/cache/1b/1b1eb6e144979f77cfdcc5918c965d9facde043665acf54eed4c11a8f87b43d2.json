@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rosim - Innsikt Bruk av modellregn Når vi gjør kapasitetsberegning for et ledningsnett så ønsker vi gjerne å finne ut hvilken maks vannføring vi kan forvente i ledningsnettet for eksempel hvert 10 år eller hvert 25 år"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Rosim",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text discusses general insights and educational content about hydraulic modeling and precipitation measurements by Rosim, unrelated to the target company ODD SMÅGE AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 10838,
+ "input_tokens": 1618,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "created_at": "2026-11-04T18:33:14.091960+00:00"
+}

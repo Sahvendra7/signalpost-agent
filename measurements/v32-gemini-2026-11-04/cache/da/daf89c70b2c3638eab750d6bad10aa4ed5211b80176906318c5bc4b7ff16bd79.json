@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvorfor bør du investere i nye PC’er i din bedrift?",
+   "Hvis du vil at bedriften din skal jobbe bedre og mer effektivt, kan det å kjøpe nye datamaskiner være en smart ting å gjøre."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Provendo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-28",
+  "date_evidence": "November 28, 2023",
+  "decision": "withhold",
+  "reason": "The article provides general advice and arguments for why businesses should invest in new computers, which falls under advice or educational content rather than reporting a specific development or event about the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 9048,
+ "input_tokens": 2649,
+ "output_tokens": 250,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:47:02.268211+00:00"
+}

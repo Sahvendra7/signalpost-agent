@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "De siste årene har Universitetet i Bergen (UiB) og flere arbeidsplasser deltatt i AHKR201, også kalt Praksis i arbeidslivet.",
+   "I år var jeg en av de heldige studentene som fikk delta – og min praksisplass var ved Interkommunalt arkiv Hordaland (IKA Hordaland)."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Interkommunalt arkiv i Hordaland IKS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a personal account written by a student about their internship experience at the company, which constitutes a promotional profile rather than a formal company news event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4637,
+ "input_tokens": 2879,
+ "output_tokens": 265,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:49:10.440236+00:00"
+}

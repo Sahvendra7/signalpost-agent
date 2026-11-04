@@ -1,0 +1,516 @@
+{
+ "synthesis": [
+  {
+   "org": "988185701",
+   "company": "ROSIM AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 70,
+   "derived_facts": 14,
+   "deterministic_statements": 31,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "993973645",
+   "company": "FRAM MARINE AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 78,
+   "derived_facts": 14,
+   "deterministic_statements": 31,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "984047320",
+   "company": "KUNNSKAPSPARKEN BODØ AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 82,
+   "derived_facts": 14,
+   "deterministic_statements": 31,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "922582270",
+   "company": "FRESVIK PRODUKT AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 75,
+   "derived_facts": 14,
+   "deterministic_statements": 29,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "996569071",
+   "company": "KRISTIANIA BEDRIFTSIDRETTSLAG",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 65,
+   "derived_facts": 14,
+   "deterministic_statements": 25,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "927293056",
+   "company": "STIFTELSEN LIA GÅRD RETREATSENTER",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 71,
+   "derived_facts": 14,
+   "deterministic_statements": 30,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "963706820",
+   "company": "KARMSUND HAVN IKS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 81,
+   "derived_facts": 14,
+   "deterministic_statements": 32,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  },
+  {
+   "org": "911814684",
+   "company": "AGENTA AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "facts": 66,
+   "derived_facts": 14,
+   "deterministic_statements": 29,
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "paid_equivalent_cost_usd": null,
+   "model_version": null,
+   "accepted": [],
+   "rejected": []
+  }
+ ],
+ "whats_new": [
+  {
+   "case": "real_registry_change",
+   "synthetic": false,
+   "org": "933217469",
+   "company": "AMANDUS INVESTMENT AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [
+    {
+     "event_id": "e1",
+     "kind": "updated",
+     "field": "role_count",
+     "old_value": 3,
+     "new_value": 2
+    },
+    {
+     "event_id": "e2",
+     "kind": "new",
+     "field": "accountant",
+     "new_value": {
+      "name": [
+       "GERHARD & SØNN AS"
+      ],
+      "organisation_number": "913107209",
+      "role_code": "REGN",
+      "role": "Regnskapsfører",
+      "group": "Regnskapsfører",
+      "group_last_changed": "2026-10-19"
+     }
+    },
+    {
+     "event_id": "e3",
+     "kind": "updated",
+     "field": "roles_last_changed",
+     "old_value": "2026-10-16",
+     "new_value": "2026-10-19"
+    },
+    {
+     "event_id": "e4",
+     "kind": "retracted",
+     "field": "accountant",
+     "old_value": {
+      "name": [
+       "GERHARD & SØNN AS"
+      ],
+      "organisation_number": "913107209",
+      "role_code": "REGN",
+      "role": "Regnskapsfører",
+      "group": "Regnskapsfører",
+      "group_last_changed": "2026-10-16"
+     }
+    },
+    {
+     "event_id": "e5",
+     "kind": "retracted",
+     "field": "accountant",
+     "old_value": {
+      "name": [
+       "SYSTEM REGNSKAP AS"
+      ],
+      "organisation_number": "915075223",
+      "role_code": "REGN",
+      "role": "Regnskapsfører",
+      "group": "Regnskapsfører",
+      "group_last_changed": "2026-10-16"
+     }
+    }
+   ],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 5,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_no_change",
+   "synthetic": false,
+   "org": "817510302",
+   "company": "COGNIXAR INVEST AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 0,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_no_change",
+   "synthetic": false,
+   "org": "820776372",
+   "company": "THINK AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 0,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_no_change",
+   "synthetic": false,
+   "org": "822156002",
+   "company": "KVERNELAND NÆRINGSPARK IX-A AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 0,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_source_outage",
+   "synthetic": false,
+   "org": "929336038",
+   "company": "SJØLOFTET AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [
+    {
+     "event_id": "e1",
+     "kind": "source_outage",
+     "field": "site_research",
+     "fields_retained": [
+      "careers_page",
+      "social_profile"
+     ],
+     "last_verified_at": "2026-11-02T01:00:15.312010Z",
+     "current_attempt_status": "source_error"
+    }
+   ],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 1,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_source_outage",
+   "synthetic": false,
+   "org": "980807568",
+   "company": "STIFTELSEN SKANSEHYTTA ASKIM",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [
+    {
+     "event_id": "e1",
+     "kind": "source_outage",
+     "field": "website",
+     "fields_retained": [
+      "official_website",
+      "website_description"
+     ],
+     "last_verified_at": "2026-11-02T01:00:19.526250Z",
+     "current_attempt_status": "blocked"
+    }
+   ],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 1,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_retraction_policy",
+   "synthetic": false,
+   "org": "911814684",
+   "company": "AGENTA AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [
+    {
+     "event_id": "e1",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Er det på tide med ny hjemmeside? 7 tegn på at nettsiden din koster deg kunder",
+      "url": "https://www.agenta.no/artikler",
+      "publication_date": "2026-10-24",
+      "date_text": "24. oktober 2026",
+      "date_kind": "stated_on_page",
+      "summary": "Test hjemmesiden din på mobilen på fem minutter. Se 7 tegn på at det er på tide med ny hjemmeside i Trondheim, og hva du må ta vare på av SEO."
+     }
+    },
+    {
+     "event_id": "e2",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Bli funnet i AI-søk: Slik gjør du nettsiden klar for Google AI-oversikter og svar fra chatboter",
+      "url": "https://www.agenta.no/artikler/synlighet-i-ai-sok",
+      "publication_date": "2026-10-21",
+      "date_text": "21. oktober 2026",
+      "date_kind": "stated_on_page",
+      "summary": "Slik øker du synlighet i AI-søk: FAQ-svar, strukturert data og oppdatert info som hjelper Google AI-oversikter og chatboter å finne bedriften din."
+     }
+    },
+    {
+     "event_id": "e3",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Intranett for små og mellomstore bedrifter: Slik samler du dokumenter, rutiner og kommunikasjon ett sted",
+      "url": "https://www.agenta.no/artikler/intranett-for-sma-og-mellomstore-bedrifter",
+      "publication_date": "2026-10-18",
+      "date_text": "18. oktober 2026",
+      "date_kind": "stated_on_page",
+      "summary": "Slik velger du intranett system løsning: HMS, rutiner, skjemaer og tilgangsstyring på mobil. Ferdighylle eller skreddersydd? Se hva du bør avklare først."
+     }
+    },
+    {
+     "event_id": "e4",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Mobilapp for håndverksbedrifter: Timeføring, avvik og bilder fra byggeplass i lomma",
+      "url": "https://www.agenta.no/artikler/mobilapp-for-handverksbedrifter-timeforing-avvik-bilder",
+      "publication_date": "2026-10-15",
+      "date_text": "15. oktober 2026",
+      "date_kind": "stated_on_page",
+      "summary": "Hvilke oppgaver kan flyttes fra papir og Excel til mobilen? Slik bruker håndverksbedrifter mobilapp til timeføring, avvik og byggeplassbilder."
+     }
+    },
+    {
+     "event_id": "e5",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Proffgruppen og nettside: Slik får byggefirmaer i Proffgruppen en profesjonell nettside som gir henvendelser",
+      "url": "https://www.agenta.no/artikler/proffgruppen-nettside-byggefirma",
+      "publication_date": "2026-10-12",
+      "date_text": "12. oktober 2026",
+      "date_kind": "stated_on_page",
+      "summary": "Medlem i Proffgruppen? Slik bygger du nettside for byggefirma med referanser, tjenestesider og kontaktflyt på mobil. Fastpris for medlemmer."
+     }
+    },
+    {
+     "event_id": "e6",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "SEO-verktøy for norske bedrifter: Slik velger du riktig programvare uten å drukne i funksjoner",
+      "url": "https://www.agenta.no/artikler/seo-verktoy-for-norske-bedrifter",
+      "publication_date": "2026-10-09",
+      "date_text": "9. oktober 2026",
+      "date_kind": "stated_on_page",
+      "summary": "Hvilke SEO-verktøy trenger en liten bedrift? Vi viser hva du bør måle, hvilke gratisverktøy som holder og når betalt programvare er verdt det."
+     }
+    }
+   ],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 6,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "real_retraction_policy",
+   "synthetic": false,
+   "org": "993973645",
+   "company": "FRAM MARINE AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [
+    {
+     "event_id": "e1",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Supporting Success with Project Reviews",
+      "url": "https://frammarine.com/supporting-success-with-project-reviews/",
+      "publication_date": "2024-12-10T14:08:38Z",
+      "date_text": "Tue, 10 Dec 2024 14:08:38 +0000",
+      "date_kind": "published",
+      "summary": "Project reviews are important checkpoints that ensure a project stays on track, identifies and mitigates risks, and aligns with involved parties. Many projects in the marine, energy and renewables industry are characterized by complexity an"
+     }
+    },
+    {
+     "event_id": "e2",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Your next challenge awaits with Fram Marine – Apply now",
+      "url": "https://frammarine.com/your-next-challenge-awaits-with-fram-marine-apply-now/",
+      "publication_date": "2024-09-18T23:40:37Z",
+      "date_text": "Wed, 18 Sep 2024 23:40:37 +0000",
+      "date_kind": "published",
+      "summary": "Are you ready to advance your career and make an impact? At Fram Marine, we are always looking for talented professionals who are excited about taking on new challenges and contributing to innovative solutions within the maritime industry."
+     }
+    },
+    {
+     "event_id": "e3",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Ship Efficiency through technology",
+      "url": "https://frammarine.com/ship-efficiency-through-technology/",
+      "publication_date": "2023-12-19T12:00:00Z",
+      "date_text": "Tue, 19 Dec 2023 12:00:00 +0000",
+      "date_kind": "published",
+      "summary": "The requirements and cost for carbon emissions are getting stricter and more expensive. Careful selection and implementation of green ship technology can help you save on both."
+     }
+    },
+    {
+     "event_id": "e4",
+     "kind": "retracted",
+     "field": "news_item",
+     "old_value": {
+      "title": "Looking for new challenges – we’re hiring",
+      "url": "https://frammarine.com/looking-for-new-challenges-were-hiring/",
+      "publication_date": "2022-02-11T12:00:00Z",
+      "date_text": "Fri, 11 Feb 2022 12:00:00 +0000",
+      "date_kind": "published",
+      "summary": "We are experiencing increased demand for our services and are searching for new colleagues to be a part of our growing company."
+     }
+    }
+   ],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 4,
+   "events_explained": 0,
+   "fabricated": 0
+  },
+  {
+   "case": "correction_synthetic",
+   "synthetic": true,
+   "org": "988185701",
+   "company": "ROSIM AS",
+   "ok": false,
+   "error": "cache_miss_offline",
+   "events_input": [
+    {
+     "event_id": "e1",
+     "kind": "corrected",
+     "field": "revenue",
+     "old_value": 26065153.0,
+     "new_value": 26190153.0,
+     "period": {
+      "from": "2025-01-01",
+      "to": "2025-12-31"
+     },
+     "currency": "NOK"
+    }
+   ],
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": null,
+   "accepted": [],
+   "rejected": [],
+   "events": 1,
+   "events_explained": 0,
+   "fabricated": 0
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sommarjobb - Logscom AB Förra sommaren kom vi på idén om att lotta ut ett sommarjobb.",
+   "Vi söker därför efter en ny kandidat till årets sommar som vill hänga med oss i tre veckor!"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Logscom AB",
+  "subject_relation": "other_group_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for a summer job published by Logscom AB, which is a related or similarly named entity rather than the target company LOGSCOM AS, and job advertisements are withheld.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18152,
+ "input_tokens": 2135,
+ "output_tokens": 240,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:42:06.661345+00:00"
+}

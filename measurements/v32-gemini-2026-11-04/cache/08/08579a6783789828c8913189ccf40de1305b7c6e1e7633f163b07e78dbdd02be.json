@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Querkus Terra - enda en farge lagerført; Cammello",
+   "18. mars 2026",
+   "Fargen Cammello er for fin til ikke å ha lagerført!"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "OSLOFINÉR AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-03-18",
+  "date_evidence": "18. mars 2026",
+  "decision": "withhold",
+  "reason": "The item announces a new stock color addition for a product range (Querkus Terra Cammello) as a product availability/marketing update rather than a corporate development event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 33531,
+ "input_tokens": 1556,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:48:22.465858+00:00"
+}

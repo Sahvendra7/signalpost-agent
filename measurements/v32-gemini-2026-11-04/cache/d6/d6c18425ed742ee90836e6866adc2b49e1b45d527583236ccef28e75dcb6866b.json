@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fredagsbladet er skolens ukentlige nyhetsbrev og sendes ut på slutten av hver uke.",
+   "Fredag 4.mars dro barneskolen (1.-6.klasse) til Ski Ishall for å leke og ha det gøy på isen."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Steinerskolen i Ås",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2022-03-04",
+  "date_evidence": "Fredagsbladet nr 24 – 04.03.2022",
+  "decision": "publish",
+  "reason": "The item is the school's weekly newsletter, which reports on school activities such as a parent meeting and a school trip to an ice rink.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5452,
+ "input_tokens": 2659,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:48:41.255103+00:00"
+}

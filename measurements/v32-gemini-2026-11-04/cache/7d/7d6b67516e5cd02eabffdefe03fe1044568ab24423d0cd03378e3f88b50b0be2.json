@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "New Videos. “All I do is dream of you” & “Just a gigolo”",
+   "A couple of new videos on my YouTube channel",
+   "Oct 2, 2020"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Alexander Rybak",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2020-10-02",
+  "date_evidence": "Oct 2, 2020",
+  "decision": "publish",
+  "reason": "The item reports the release of new music videos by the artist Alexander Rybak on his YouTube channel, which constitutes a specific development for his artistic business.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 25664,
+ "input_tokens": 1961,
+ "output_tokens": 241,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3-flash-preview",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "created_at": "2026-11-04T18:40:10.657392+00:00"
+}

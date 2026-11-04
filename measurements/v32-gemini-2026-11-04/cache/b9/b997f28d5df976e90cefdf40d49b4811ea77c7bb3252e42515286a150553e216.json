@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nytt prosjekt: Ekstern gjennomgang av Kulturrådet"
+  ],
+  "content_category": "uncertain",
+  "subject_entity": "PROBA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "uncertain",
+  "reason": "The title indicates a new project about an external review of Kulturrådet, but no article text is captured to confirm the details and specifics of the event.",
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 26380,
+ "input_tokens": 1439,
+ "output_tokens": 184,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:45:31.261532+00:00"
+}

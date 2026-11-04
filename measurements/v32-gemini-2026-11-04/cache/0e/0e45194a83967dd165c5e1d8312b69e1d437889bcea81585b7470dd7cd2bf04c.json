@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Trött på att få snö i skorna när virket ska kontrollmätas?",
+   "The post MetricBoost first appeared on Logscom AB ."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Logscom AB",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The content is about Logscom AB and its product MetricBoost, which is unrelated to the target company Proba AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 37451,
+ "input_tokens": 1627,
+ "output_tokens": 200,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:48:52.099622+00:00"
+}

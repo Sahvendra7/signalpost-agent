@@ -1,0 +1,78 @@
+{
+ "ok": true,
+ "data": {
+  "statements": [
+   {
+    "section": "overview",
+    "kind": "verified_fact",
+    "text": "FRESVIK PRODUKT AS is a limited company with organisation number 922582270, founded on 1978-02-11.",
+    "fact_ids": [
+     "f1",
+     "f2",
+     "f3",
+     "f8"
+    ]
+   },
+   {
+    "section": "activity",
+    "kind": "verified_fact",
+    "text": "The company engages in producing prefabricated insulation panels, other industrial production, and participating in other business agencies and trade.",
+    "fact_ids": [
+     "f10"
+    ]
+   },
+   {
+    "section": "leadership",
+    "kind": "verified_fact",
+    "text": "Espen Skjerven Holen serves as the chief executive officer and Trygve Simlenes acts as the board chair.",
+    "fact_ids": [
+     "f13",
+     "f14"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "From the period of 2023-12-31 to 2025-12-31, the company's revenue decreased from 77,951,787 NOK down to 66,726,366 NOK.",
+    "fact_ids": [
+     "f26",
+     "f40",
+     "d1",
+     "d2"
+    ]
+   },
+   {
+    "section": "financial_trend",
+    "kind": "derived_comparison",
+    "text": "During the same period from 2023-12-31 to 2025-12-31, operating results decreased from 4,714,009 NOK to 758,412 NOK.",
+    "fact_ids": [
+     "f27",
+     "f41",
+     "d3",
+     "d4"
+    ]
+   },
+   {
+    "section": "developments",
+    "kind": "company_reported",
+    "text": "The company's website reports that they have implemented a robot and a chaotic storage system for elements after the summer of 2023.",
+    "fact_ids": [
+     "f48",
+     "f53"
+    ]
+   }
+  ]
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8408,
+ "input_tokens": 7212,
+ "output_tokens": 457,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:16.139684+00:00"
+}

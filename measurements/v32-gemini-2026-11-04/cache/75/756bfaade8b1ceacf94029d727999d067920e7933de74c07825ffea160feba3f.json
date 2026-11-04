@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Advokatfirmaet Lund & Co DA og Proba samfunnsanalyse har på oppdrag for Justis- og beredskapsdepartementet gjennomført en evaluering av voldserstatningsloven."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Proba samfunnsanalyse",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": "2026-09-15",
+  "date_evidence": "en sluttrapport som ble formelt overlevert til statssekretær Marte Ingul 15. september 2026",
+  "decision": "publish",
+  "reason": "The text reports that Proba samfunnsanalyse, together with Advokatfirmaet Lund & Co DA, completed and formally delivered an evaluation report of the Norwegian Compensation Act to the Ministry of Justice and Public Security.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 34556,
+ "input_tokens": 3032,
+ "output_tokens": 274,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.5-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-04T18:50:58.867159+00:00"
+}

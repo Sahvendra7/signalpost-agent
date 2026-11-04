@@ -1,0 +1,37 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Praktiske råd du kan bruke i hverdagen med hunden din.",
+   "Båndtvangen er over – eller er den egentlig det?"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "unclear",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The text contains general advice and articles regarding dog care and leash laws, rather than reporting any specific company news or developments for Seistar Holding AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 10303,
+ "input_tokens": 1594,
+ "output_tokens": 206,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.6-flash",
+ "finish_reason": "STOP",
+ "quota_ids": [
+  "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+ ],
+ "retry_delays_s": [
+  7.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-04T18:42:03.571914+00:00"
+}

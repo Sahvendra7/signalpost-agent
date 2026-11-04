@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Indeks Nordland 2022 er ute!",
+   "Det gjør det mer krevende å få fart på det grønne skiftet i Nordland, sier Adm. Dir. i KPB; Erlend Bullvåg.",
+   "8. mars Skrevet av Erik Liland"
+  ],
+  "content_category": "press_release_or_announcement",
+  "subject_entity": "KPB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "publication_or_report",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "Kunnskapsparken Bodø AS (KPB) has released its annual economic report 'Indeks Nordland 2022', featuring commentary from Managing Director Erlend Bullvåg.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 5355,
+ "input_tokens": 3046,
+ "output_tokens": 253,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.6-flash",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "created_at": "2026-11-04T18:35:34.296903+00:00"
+}
