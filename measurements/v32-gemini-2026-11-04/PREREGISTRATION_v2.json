@@ -1,0 +1,60 @@
+{
+ "registered_at": "2026-11-06, before the new sample is drawn, captured, labelled or sent to any model",
+ "implementation_frozen": {
+  "src/norway_company_agent/identity_gate.py": "86c7ff2bd42803e25aec34648e8728486346107de488937bbb62c088c06c86c2",
+  "src/norway_company_agent/llm_experiments/news_contract.py": "77bfb58cca33cd199a662e4c6da9667506bb053b879e8fb2a6ee0fa041e23a08",
+  "src/norway_company_agent/llm_experiments/prompts.py": "804309db12fa3def0897594a6d464a411589f588cb8d646e655ac0a929bdb638",
+  "src/norway_company_agent/llm_experiments/policies.py": "d22dedaba7c40a57de5ef4ff7a148defc920a2a606252a8eab92056e74e17b2b",
+  "src/norway_company_agent/llm_experiments/scoring.py": "fecd2f9f7e851b84ca230ef560d39f488ab6d3a47789362545d411319aa8c6cc",
+  "src/norway_company_agent/llm_experiments/runner.py": "00c55104a6198588b521f0bd779c377d30ce8ef4cb47ace665ee3fc209b0424c",
+  "src/norway_company_agent/llm_experiments/capture.py": "6a5eb4951a8f82e50534c8dc8cb11152cacf9059a014fe145dfbfffc6aa834c6",
+  "src/norway_company_agent/llm/gemini.py": "71d06e40dcdbc4a64473689a54f45a1053bba17c7158cbc963db40bb3bc4411b",
+  "docs/v32-news-labelling-rubric.md": "a3ffb44b933d296391292b6694ad0350ddffe08a5f0d12f5857da79fdfc9a4a3"
+ },
+ "configuration": {
+  "model": "gemini-3.1-flash-lite",
+  "prompt_id": "news-p2-evidence-v2",
+  "prompt_sha256": "3f1d2431715f6b1c87e75e00b670053c2c4d1e2b66ba39cdf4fd353f9c2d3b14",
+  "packet_version": "v2",
+  "note": "single configuration; no prompt or model selection on the new sample. Model chosen on evalg250 (cheaper, equal accuracy); prompt v2 = P2 + v2 entity rules + rubric-v2 organisations rule"
+ },
+ "arms": [
+  "v31",
+  "v31_gate",
+  "A_filter_v2",
+  "C_hybrid_v2",
+  "D_conservative_v2",
+  "B_llm_only"
+ ],
+ "primary_arm": "C_hybrid_v2",
+ "secondary_arm": "A_filter_v2",
+ "sample": {
+  "name": "evalh400",
+  "companies": 400,
+  "seed": 20261106,
+  "universe": "Brreg enheter with a registered website, not bankrupt/liquidating/forced dissolution, excluding every 9-digit organisation number in the repository (now including evalg250)",
+  "unit_cap": "at most 12 news units per company, chosen at random (seed 20261106) from the census before labelling; the capped census is the evaluation population"
+ },
+ "capture": "live through ff3b515 (permissive baseline) with snapshots; replay through a clean worktree of 334a085 with the reasons hook; article pages captured deterministically",
+ "labels": {
+  "rubric": "docs/v32-news-labelling-rubric.md (v2)",
+  "first_labeller": "assistant_blind (captured text only; no arm, no V3.1 reason, no gate result, no model output)",
+  "second_person": "25% stratified kit; adjudicated labels used for scoring when available; kappa reported",
+  "committed_before_model_calls": true
+ },
+ "metrics": [
+  "precision (Wilson + company-clustered 95% CI)",
+  "item coverage (correct published / correct in capped census)",
+  "company coverage",
+  "false positives",
+  "false negatives",
+  "wrong_company false positives separately",
+  "cost and latency"
+ ],
+ "objective": "internal target >= 90% news precision without giving up coverage; report whatever is measured",
+ "api": {
+  "project": "one authorised project via GEMINI_API_KEY only",
+  "precondition": "exposed keys revoked/rotated; runner refuses keys on the local revoked list",
+  "budget": "--max-usd hard cap per run; billing budget and quota set by the owner"
+ }
+}
