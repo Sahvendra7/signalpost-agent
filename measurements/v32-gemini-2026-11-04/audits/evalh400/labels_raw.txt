@@ -1,0 +1,433 @@
+1|incorrect|opinion_or_promotional_profile|personal reflection (body journal)
+2|incorrect|advice_or_educational|practical-insight essay
+3|incorrect|opinion_or_promotional_profile|personal inquiry essay
+4|incorrect|advice_or_educational|educational text
+5|incorrect|advice_or_educational|explainer of the service
+6|correct|news|nominated as a top-50 workplace
+7|correct|news|re-certified as Miljøfyrtårn
+8|correct|news|launches its new website
+9|correct|news|partner with two shops at the handball EM
+10|correct|news|now operates Navnlapp.no and launches a new designer (new service channel)
+11|correct|news|the association launches a practical guide (own publication)
+12|correct|news|the association submitted its input on TEK17 (action stated)
+13|incorrect|structural_or_default|category listing page
+14|correct|news|the association establishes a refrigeration forum (meeting)
+15|correct|news|joint launch of new delivery conditions with three other associations
+16|incorrect|structural_or_default|category listing page
+17|incorrect|advice_or_educational|explainer/appeal about vocational placements
+18|incorrect|structural_or_default|category listing page
+19|incorrect|opinion_or_promotional_profile|director's commentary on the state budget
+20|incorrect|advice_or_educational|explainer of a tax change with commentary
+21|incorrect|opinion_or_promotional_profile|commentary on heatwaves and ventilation
+22|incorrect|unrelated|industry news about cyberattacks elsewhere
+23|incorrect|product_service_marketing|product catalogue promotion
+24|incorrect|advice_or_educational|whitepaper/standards explainer
+25|incorrect|advice_or_educational|PPE guide
+26|incorrect|advice_or_educational|technical FAQ
+27|incorrect|advice_or_educational|whitepaper
+28|incorrect|advice_or_educational|whitepaper
+29|incorrect|advice_or_educational|PPE guide
+30|incorrect|advice_or_educational|heat-safety guide
+31|incorrect|advice_or_educational|regulatory whitepaper
+32|incorrect|advice_or_educational|standards explainer
+33|incorrect|project_or_property_listing|designer's portfolio entry (client work showcase)
+34|incorrect|project_or_property_listing|portfolio entry
+35|incorrect|project_or_property_listing|portfolio entry
+36|incorrect|project_or_property_listing|portfolio entry
+37|incorrect|project_or_property_listing|portfolio entry
+38|correct|news|product now covers 13 species (product development; title only)
+39|incorrect|wrong_company|Eleda group (Swedish parent) acquisitions, not ELEDA RAIL NORGE AS
+40|incorrect|wrong_company|Eleda group acquisitions
+41|incorrect|wrong_company|Eleda group acquisitions
+42|incorrect|wrong_company|Eleda Norge AS (another group company) acquires Nordic Infrastructure Group
+43|incorrect|wrong_company|Eleda Norge AS (another group company) acquires Nettpartner Bane
+44|incorrect|wrong_company|Eleda Norge AS (another group company) acquires Nettpartner Bane (English version)
+45|correct|news|the association extends its mentor-programme deadline
+46|correct|news|the association donated to a hygiene project
+47|correct|news|first scholars of its mentor programme started
+48|correct|news|the association donated to an accommodation project
+49|correct|news|the association announces its scholarship programme
+50|correct|news|the association announces its scholarship programme
+51|unsure|news|a partner organisation's project; the association's role is not stated
+52|correct|news|the association extends its programme deadline
+53|correct|news|the association announces its scholarship programme
+54|correct|news|the association announces its scholarship programme
+55|incorrect|structural_or_default|news listing page
+56|incorrect|opinion_or_promotional_profile|Christmas greeting
+57|unsure|news|title only; an opinion piece or an event is not shown
+58|correct|news|the local party's election result
+59|incorrect|product_service_marketing|product article
+60|incorrect|product_service_marketing|product explainer under a "has developed" title
+61|incorrect|product_service_marketing|product article/explainer
+62|incorrect|product_service_marketing|product article/explainer
+63|incorrect|product_service_marketing|product article/explainer
+64|incorrect|product_service_marketing|product article/explainer
+65|incorrect|product_service_marketing|product article/explainer
+66|incorrect|advice_or_educational|case essay promoting the product
+67|incorrect|advice_or_educational|case essay promoting the product
+68|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+69|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+70|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+71|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+72|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+73|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+74|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+75|incorrect|advice_or_educational|yarn guide
+76|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+77|incorrect|product_service_marketing|knitting pattern / yarn kit promotion
+78|incorrect|structural_or_default|category page under an item title
+79|correct|news|the clinic hosts an evening meeting for veterinarians (own event)
+80|correct|news|the clinic hosts a professional course evening (own event)
+81|incorrect|wrong_company|Teqt Group AB acquires Alltak AS (group release)
+82|incorrect|wrong_company|Teqt Group acquisition (group release)
+83|incorrect|wrong_company|trade-magazine interview with the group CEO
+84|incorrect|wrong_company|Teqt Group acquisition (group release)
+85|incorrect|wrong_company|Teqt Group acquisition (group release)
+86|incorrect|wrong_company|Teqt Group acquisition (group release)
+87|incorrect|wrong_company|Teqt Group acquisition (group release)
+88|incorrect|wrong_company|Teqt Group acquisition (group release)
+89|incorrect|wrong_company|sister company Eidsvoll Taktekking's delivery
+90|incorrect|wrong_company|sister company HB Blikk's facade project
+91|correct|news|Teqt Norge's own conference and award
+92|incorrect|wrong_company|group's new country manager in Germany
+93|incorrect|advice_or_educational|thought leadership / guide
+94|incorrect|advice_or_educational|thought leadership / guide
+95|incorrect|opinion_or_promotional_profile|customer case study
+96|incorrect|advice_or_educational|thought leadership / guide
+97|incorrect|advice_or_educational|thought leadership / guide
+98|correct|news|new partnership with Dynatos
+99|incorrect|advice_or_educational|thought leadership / guide
+100|incorrect|advice_or_educational|thought leadership / guide
+101|incorrect|opinion_or_promotional_profile|interview series (opinions)
+102|incorrect|opinion_or_promotional_profile|interview series (opinions)
+103|incorrect|opinion_or_promotional_profile|interview series (opinions)
+104|incorrect|opinion_or_promotional_profile|interview series (opinions)
+105|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+106|correct|news|promotions in the company's France team
+107|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+108|correct|news|the company's architects took part in an industry discussion event
+109|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+110|correct|news|winner of the company's own drawing prize
+111|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+112|correct|news|the Mumbai office grows to 10 (expansion)
+113|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+114|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+115|correct|news|the company's architect selected for WAF 40 under 40 (award)
+116|incorrect|opinion_or_promotional_profile|'Perspective' essay by a director
+117|incorrect|structural_or_default|WordPress default post
+118|incorrect|advice_or_educational|'Insight' article (listing card)
+119|incorrect|advice_or_educational|'Insight' explainer (listing card)
+120|correct|news|expands operations into India
+121|correct|news|signs MoU with SRM University
+122|correct|news|built a live private 5G network at Vignan (delivery)
+123|correct|news|partnership/deployment with the University of Oslo
+124|correct|news|joins the Bharat 6G Alliance
+125|correct|news|joins One6G Association
+126|correct|news|showcase at India Mobile Congress 2026 (event participation)
+127|correct|news|receives Innovation Norway funding
+128|incorrect|job_advertisement|vacancy
+129|correct|news|the theatre's spring-season letter: 40 years, new 20-year lease signed
+130|incorrect|opinion_or_promotional_profile|Pride solidarity statement
+131|correct|news|the theatre's 40th anniversary celebration
+132|correct|news|the theatre's festival pauses in 2026 (own decision)
+133|correct|news|the theatre director's spring-2026 season programme
+134|incorrect|product_service_marketing|group-booking ambassador offer
+135|incorrect|opinion_or_promotional_profile|guest essay (bookshop series)
+136|incorrect|opinion_or_promotional_profile|guest essay (bookshop series)
+137|incorrect|opinion_or_promotional_profile|transcript of artists' conversation
+138|correct|news|extended autumn programme and season opening with the new director
+139|incorrect|opinion_or_promotional_profile|condolence statement
+140|correct|news|the organisation took part in a workshop in Gothenburg
+141|incorrect|advice_or_educational|SEO tips
+142|incorrect|product_service_marketing|Innovation Norway's student scheme with the company's help offer
+143|incorrect|wrong_company|another institute's project accepted by the Arctic Phi-Lab consortium
+144|incorrect|job_advertisement|vacancy
+145|incorrect|wrong_company|the Arctic Phi-Lab consortium's call for applications
+146|correct|news|the company's pilot programme Target Circular completed
+147|incorrect|product_service_marketing|call for applications to an incubator network node
+148|incorrect|job_advertisement|vacancy
+149|correct|news|the company's incubator Startup IX turns 25
+150|correct|news|five projects linked to the company receive commercialisation funding
+151|correct|news|selected as UiT's commercialisation partner (new agreement)
+152|incorrect|structural_or_default|news listing page
+153|incorrect|advice_or_educational|tyre advice
+154|correct|news|the company's 100-year anniversary celebration
+155|incorrect|advice_or_educational|tread-depth advice
+156|incorrect|product_service_marketing|tyre recycling service page
+157|incorrect|product_service_marketing|24/7 service page with prices
+158|incorrect|product_service_marketing|TPMS service promotion
+159|incorrect|structural_or_default|transparency-act statement page
+160|incorrect|product_service_marketing|sales campaign
+161|correct|news|the cooperative's 2026 price list adopted at its annual meeting
+162|correct|news|the waterworks' watering restrictions (own operational notice)
+163|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+164|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+165|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+166|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+167|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+168|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+169|correct|news|the library launches new digital services
+170|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+171|incorrect|structural_or_default|listing page
+172|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+173|incorrect|product_service_marketing|municipal library/service information page (evergreen)
+174|unsure|news|profile of a summer worker; whether it reports the municipality's hiring as news is a judgment call
+175|incorrect|product_service_marketing|evergreen fishing-zone rules page
+176|incorrect|product_service_marketing|evergreen fishing-zone rules page
+177|incorrect|product_service_marketing|evergreen fishing-zone rules page
+178|incorrect|product_service_marketing|evergreen fishing-zone rules page
+179|incorrect|product_service_marketing|evergreen fishing-zone rules page
+180|incorrect|product_service_marketing|evergreen fishing-zone rules page
+181|incorrect|product_service_marketing|evergreen fishing-zone rules page
+182|incorrect|product_service_marketing|evergreen fishing-zone rules page
+183|incorrect|product_service_marketing|evergreen fishing-zone rules page
+184|incorrect|misdated|event 3 June 2023, item dated 2013-05-17
+185|incorrect|misdated|event 14 April 2024, item dated 2015-03-04
+186|incorrect|misdated|flea market October 2024, item dated 2016-07-01
+187|correct|news|announces own project from autumn 2025 and its entry in a sponsor's funding vote
+188|incorrect|structural_or_default|information sheet for new members
+189|correct|news|received county grant for percussion equipment
+190|incorrect|opinion_or_promotional_profile|title only; government grant cut, not the association's own action
+191|unsure|news|title only; subject and the association's role not shown
+192|incorrect|wrong_company|title only; about a member organisation's work
+193|incorrect|wrong_company|title only; about a member organisation
+194|incorrect|opinion_or_promotional_profile|argument about grant regulation
+195|incorrect|product_service_marketing|title only; course offering
+196|incorrect|opinion_or_promotional_profile|another party's budget position; the association only thanks
+197|incorrect|opinion_or_promotional_profile|another party's budget position; the association only thanks
+198|incorrect|opinion_or_promotional_profile|another party's budget position; the association only thanks
+199|incorrect|opinion_or_promotional_profile|another party's budget position; the association only thanks
+200|incorrect|unrelated|local newspaper journalism about third parties
+201|incorrect|unrelated|local newspaper journalism about third parties
+202|incorrect|unrelated|local newspaper journalism about third parties
+203|incorrect|unrelated|local newspaper journalism about third parties
+204|incorrect|unrelated|local newspaper journalism about third parties
+205|incorrect|unrelated|local newspaper journalism about third parties
+206|incorrect|unrelated|local newspaper journalism about third parties
+207|incorrect|unrelated|local newspaper journalism about third parties
+208|incorrect|unrelated|local newspaper journalism about third parties
+209|incorrect|unrelated|local newspaper journalism about third parties
+210|incorrect|unrelated|local newspaper journalism about third parties
+211|incorrect|unrelated|local newspaper journalism about third parties
+212|correct|news|publishes results of its own annual satisfaction survey
+213|incorrect|opinion_or_promotional_profile|customer profile
+214|incorrect|product_service_marketing|firewood in stock
+215|incorrect|product_service_marketing|bird box product promotion
+216|incorrect|product_service_marketing|firewood product promotion
+217|correct|news|club presented its volunteer prize at its Christmas show
+218|incorrect|structural_or_default|whistleblowing information page
+219|incorrect|advice_or_educational|coaching film
+220|correct|news|club won 'Årets anlegg' award
+221|incorrect|product_service_marketing|summer camp promotion video
+222|correct|news|competition results at Opplandspokalen
+223|incorrect|opinion_or_promotional_profile|coach featured in a broadcaster's documentary (staff profile)
+224|incorrect|opinion_or_promotional_profile|coach's personal award (staff profile)
+225|incorrect|structural_or_default|news listing page
+226|correct|news|district championship results
+227|correct|news|own Christmas show on 5 December
+228|incorrect|advice_or_educational|driving-licence guide
+229|incorrect|advice_or_educational|driving-licence guide
+230|incorrect|advice_or_educational|driving-licence guide
+231|incorrect|advice_or_educational|driving-licence guide
+232|incorrect|advice_or_educational|driving-licence guide
+233|incorrect|advice_or_educational|driving-licence guide
+234|correct|news|held member meeting
+235|correct|news|co-hosted Sjøslaget 2026
+236|correct|news|awarded its student prize
+237|incorrect|unrelated|about a municipality's nomination
+238|incorrect|job_advertisement|vacancy
+239|incorrect|job_advertisement|vacancy
+240|incorrect|job_advertisement|vacancy
+241|incorrect|job_advertisement|vacancy
+242|incorrect|structural_or_default|news listing page
+243|incorrect|product_service_marketing|manufacturer campaign price
+244|incorrect|product_service_marketing|manufacturer 0% finance campaign
+245|incorrect|wrong_company|car manufacturer's model news relayed by the dealer
+246|incorrect|product_service_marketing|manufacturer model launch with campaign price
+247|incorrect|advice_or_educational|towing tips
+248|incorrect|product_service_marketing|manufacturer price campaign
+249|incorrect|product_service_marketing|model product page
+250|incorrect|product_service_marketing|manufacturer VAT-guarantee campaign
+251|incorrect|wrong_company|car manufacturer's concept car at a motor show
+252|incorrect|product_service_marketing|test-drive competition
+253|incorrect|product_service_marketing|test-drive competition
+254|incorrect|advice_or_educational|blog guide / thought leadership
+255|incorrect|advice_or_educational|blog guide / thought leadership
+256|incorrect|advice_or_educational|blog guide / thought leadership
+257|correct|news|delivered a test system for a named client
+258|incorrect|advice_or_educational|blog guide / thought leadership
+259|incorrect|advice_or_educational|blog guide / thought leadership
+260|incorrect|advice_or_educational|blog guide / thought leadership
+261|incorrect|advice_or_educational|blog guide / thought leadership
+262|incorrect|advice_or_educational|blog guide / thought leadership
+263|incorrect|advice_or_educational|blog guide / thought leadership
+264|incorrect|advice_or_educational|blog guide / thought leadership
+265|incorrect|advice_or_educational|blog guide / thought leadership
+266|incorrect|opinion_or_promotional_profile|reflection / magazine essay
+267|incorrect|opinion_or_promotional_profile|reflection / magazine essay
+268|incorrect|opinion_or_promotional_profile|reflection / magazine essay
+269|incorrect|opinion_or_promotional_profile|reflection / magazine essay
+270|incorrect|opinion_or_promotional_profile|reflection / magazine essay
+271|correct|news|season reports for its football teams
+272|correct|news|match schedule of a futsal tournament the club takes part in
+273|incorrect|structural_or_default|membership fee administrative notice
+274|correct|news|annual meeting with documents
+275|correct|news|match schedule for a cup the club takes part in
+276|correct|news|youth board invites to the club's futsal tournament
+277|incorrect|unrelated|publisher's travel journalism about third parties
+278|incorrect|unrelated|publisher's travel journalism about third parties
+279|incorrect|unrelated|publisher's travel journalism about third parties
+280|incorrect|unrelated|publisher's travel journalism about third parties
+281|incorrect|unrelated|publisher's travel journalism about third parties
+282|incorrect|unrelated|publisher's travel journalism about third parties
+283|incorrect|unrelated|publisher's travel journalism about third parties
+284|incorrect|unrelated|publisher's travel journalism about third parties
+285|incorrect|unrelated|publisher's travel journalism about third parties
+286|incorrect|unrelated|publisher's travel journalism about third parties
+287|incorrect|unrelated|publisher's travel journalism about third parties
+288|incorrect|unrelated|publisher's travel journalism about third parties
+289|incorrect|structural_or_default|activity timetable
+290|incorrect|structural_or_default|membership benefit information
+291|correct|news|club's grading event in Sandnes
+292|incorrect|wrong_company|another club's camp
+293|unsure|news|championship invitation; organiser and the club's role not shown
+294|incorrect|wrong_company|federation region event
+295|incorrect|wrong_company|national championship of the federation
+296|incorrect|wrong_company|federation 60+ camps
+297|correct|news|club's own training gathering
+298|incorrect|wrong_company|another club's championship
+299|incorrect|wrong_company|another club's championship
+300|incorrect|wrong_company|championship hosted by another club
+301|correct|news|club's training gathering before grading; fee update
+302|incorrect|wrong_company|federation 60+ camp
+303|correct|news|received foundation grant
+304|correct|news|received bank grant
+305|correct|news|annual meeting called
+306|correct|news|annual report published and annual meeting
+307|correct|news|annual meeting minutes; decided to build a new practice area
+308|incorrect|advice_or_educational|explains federation membership-registration requirement
+309|correct|news|received foundation grant
+310|correct|news|week's club activities and tournaments
+311|correct|news|own charity tournament this weekend
+312|correct|news|week's club results and milestones
+313|correct|news|club hosts a junior tour event; volunteers sought
+314|correct|news|juniors' results at junior tour events
+315|correct|news|club's pool-training season starts with new times
+316|correct|news|club's Divers Night event
+317|correct|news|club's Christmas dive event
+318|correct|news|annual report and agenda for annual meeting
+319|correct|news|club's New Year coffee morning
+320|incorrect|unrelated|title only; a platform's advertising policy
+321|correct|news|title only; new members appointed to the organisation's committee
+322|incorrect|product_service_marketing|title only; course start
+323|unsure|news|title only; source of the trust survey not shown
+324|unsure|news|title only; whether this is the organisation's own tool not shown
+325|unsure|news|title only; who issued the report not shown
+326|incorrect|advice_or_educational|title only; recommendations
+327|incorrect|opinion_or_promotional_profile|column
+328|incorrect|opinion_or_promotional_profile|editorial
+329|incorrect|unrelated|another organisation's fundraising campaign
+330|unsure|news|title only; relation of the named initiative to the organisation not shown
+331|incorrect|job_advertisement|vacancy
+332|correct|news|artist's photobooks shown at book fairs
+333|correct|news|artist's work in a group exhibition
+334|unsure|news|title only
+335|incorrect|opinion_or_promotional_profile|photo essay / commentary
+336|correct|news|artist in a salon exhibition
+337|unsure|news|title only; role not shown
+338|correct|news|artist's exhibition at a culture house
+339|unsure|news|title only
+340|correct|news|artist's book/work shown at a venue
+341|unsure|news|title only
+342|unsure|news|title only; participation not shown
+343|correct|news|artist's work at a group exhibition
+344|incorrect|product_service_marketing|product catalogue page
+345|incorrect|product_service_marketing|product catalogue page
+346|incorrect|product_service_marketing|product catalogue page
+347|incorrect|product_service_marketing|product catalogue page
+348|incorrect|product_service_marketing|product catalogue page
+349|incorrect|product_service_marketing|product catalogue page
+350|incorrect|product_service_marketing|product catalogue page
+351|incorrect|product_service_marketing|product catalogue page
+352|incorrect|product_service_marketing|product catalogue page
+353|incorrect|product_service_marketing|product catalogue page
+354|incorrect|product_service_marketing|product catalogue page
+355|incorrect|product_service_marketing|product catalogue page
+356|correct|news|held its dialogue conference
+357|incorrect|product_service_marketing|course brochure
+358|correct|news|held recovery workshop
+359|correct|news|visit by a state secretary
+360|correct|news|held recovery workshop
+361|correct|news|held self-strengthening course
+362|incorrect|product_service_marketing|summer opening information, no content
+363|correct|news|summer party; general manager retires
+364|correct|news|held recovery workshop
+365|correct|news|held recovery workshop (page served from a CDN host)
+366|incorrect|advice_or_educational|waffle history and recipe article
+367|incorrect|structural_or_default|site information
+368|incorrect|structural_or_default|statutes notice
+369|incorrect|structural_or_default|welcome / greeting
+370|correct|news|title only; league match between the club's own teams
+371|correct|news|club cup results after round 7
+372|correct|news|title only; club team's veteran match
+373|correct|news|club cup round played
+374|incorrect|structural_or_default|theme demo post (lorem ipsum)
+375|incorrect|structural_or_default|theme demo post (lorem ipsum)
+376|incorrect|structural_or_default|theme demo post (lorem ipsum)
+377|incorrect|structural_or_default|theme demo post (lorem ipsum)
+378|incorrect|structural_or_default|theme demo post (lorem ipsum)
+379|incorrect|structural_or_default|theme demo post (lorem ipsum)
+380|incorrect|structural_or_default|theme demo post (lorem ipsum)
+381|incorrect|structural_or_default|theme demo post (lorem ipsum)
+382|incorrect|structural_or_default|theme demo post (lorem ipsum)
+383|correct|news|association donated a gift on another association's anniversary
+384|correct|news|annual meeting agenda
+385|correct|news|club hosts series weekend and camp
+386|incorrect|product_service_marketing|fundraising sock sale offer
+387|correct|news|club hosts EasyBasket Saturday
+388|correct|news|club hosts 3x3 tournament
+389|correct|news|club's season start
+390|correct|news|annual meeting called
+391|correct|news|club's open training event
+392|correct|news|annual meeting called
+393|correct|news|club hosts series weekend
+394|correct|news|25th anniversary celebration
+395|correct|news|workshop extension built
+396|correct|news|first electric four-axle tipper truck
+397|incorrect|opinion_or_promotional_profile|designer profile in the shop's window feature
+398|incorrect|opinion_or_promotional_profile|designer profile in the shop's window feature
+399|incorrect|opinion_or_promotional_profile|designer profile in the shop's window feature
+400|incorrect|opinion_or_promotional_profile|designer profile in the shop's window feature
+401|incorrect|opinion_or_promotional_profile|designer profile in the shop's window feature
+402|incorrect|opinion_or_promotional_profile|designer profile in the shop's window feature
+403|incorrect|product_service_marketing|knitting pattern promotion
+404|correct|news|launch of a returning yarn colour
+405|incorrect|product_service_marketing|knitting pattern promotion
+406|incorrect|product_service_marketing|knitting pattern promotion
+407|correct|news|pattern collection expanded with three new models
+408|incorrect|product_service_marketing|course offering
+409|correct|news|lambs born at the kindergarten farm
+410|correct|news|kindergarten's outdoor week
+411|incorrect|product_service_marketing|evergreen description of animal care
+412|correct|news|break-in at the club's lost-disc box
+413|correct|news|registration open for the club's cup
+414|correct|news|club hosts corporate tournament
+415|correct|news|club member wins national championship
+416|correct|news|club postpones its cup
+417|correct|news|course closed for the club's tournament
+418|correct|news|new course opened with club instructors
+419|correct|news|club championship announced
+420|correct|news|title only; the club's own cup
+421|correct|news|club championship summary (title only)
+422|incorrect|structural_or_default|summer greeting
+423|unsure|news|title only; organiser not shown
+424|correct|news|title only; new member company welcomed
+425|incorrect|job_advertisement|call for mentors
+426|correct|news|title only; its Ringeriksdagen event goes ahead
+427|correct|news|title only; new staff member
+428|unsure|news|title only; whether event or commentary not shown
+429|correct|news|launches a survey on AI use among businesses
+430|incorrect|opinion_or_promotional_profile|partner promotion
+431|correct|news|title only; award winners at its conference
+432|incorrect|job_advertisement|call for companies to offer student projects
+433|incorrect|opinion_or_promotional_profile|manifesto
