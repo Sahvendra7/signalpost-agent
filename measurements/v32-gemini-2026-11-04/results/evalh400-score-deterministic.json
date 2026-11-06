@@ -1,0 +1,172 @@
+{
+ "dataset": "evalh400",
+ "units": 433,
+ "companies": 57,
+ "labels": {
+  "incorrect": 279,
+  "correct": 138,
+  "unsure": 16
+ },
+ "pool_correct_companies": 37,
+ "run": null,
+ "arms": {
+  "v31": {
+   "published": 190,
+   "correct": 86,
+   "incorrect": 92,
+   "unsure": 12,
+   "precision": 0.4831,
+   "precision_wilson95": [
+    0.4109,
+    0.5561
+   ],
+   "precision_cluster95": [
+    0.3516,
+    0.6136
+   ],
+   "false_positives": 92,
+   "false_negatives": 52,
+   "pool_coverage": 0.6232,
+   "pool_coverage_wilson95": [
+    0.54,
+    0.6997
+   ],
+   "company_coverage": "29/37",
+   "companies_with_any_published": 43,
+   "baseline_retention": "86/86",
+   "baseline_retention_rate": 1.0,
+   "baseline_errors_removed": "0/92",
+   "errors_introduced_vs_baseline": 0,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 26,
+    "wrong_company": 23,
+    "product_service_marketing": 22,
+    "structural_or_default": 7,
+    "advice_or_educational": 6,
+    "project_or_property_listing": 3,
+    "unrelated": 3,
+    "misdated": 1,
+    "job_advertisement": 1
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "21/47",
+    "advice_or_educational": "44/50",
+    "structural_or_default": "22/29",
+    "unrelated": "25/28",
+    "product_service_marketing": "54/76",
+    "project_or_property_listing": "2/5",
+    "wrong_company": "8/31",
+    "job_advertisement": "9/10",
+    "misdated": "2/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 51,
+     "incorrect": 30,
+     "precision": 0.6296,
+     "pool_coverage": "51/89"
+    },
+    "limited_company": {
+     "correct": 25,
+     "incorrect": 41,
+     "precision": 0.3788,
+     "pool_coverage": "25/36"
+    },
+    "other": {
+     "correct": 4,
+     "incorrect": 11,
+     "precision": 0.2667,
+     "pool_coverage": "4/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 6,
+     "incorrect": 10,
+     "precision": 0.375,
+     "pool_coverage": "6/7"
+    }
+   },
+   "wrong_company_fp": 23
+  },
+  "v31_gate": {
+   "published": 190,
+   "correct": 86,
+   "incorrect": 92,
+   "unsure": 12,
+   "precision": 0.4831,
+   "precision_wilson95": [
+    0.4109,
+    0.5561
+   ],
+   "precision_cluster95": [
+    0.3516,
+    0.6136
+   ],
+   "false_positives": 92,
+   "false_negatives": 52,
+   "pool_coverage": 0.6232,
+   "pool_coverage_wilson95": [
+    0.54,
+    0.6997
+   ],
+   "company_coverage": "29/37",
+   "companies_with_any_published": 43,
+   "baseline_retention": "86/86",
+   "baseline_retention_rate": 1.0,
+   "baseline_errors_removed": "0/92",
+   "errors_introduced_vs_baseline": 0,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 26,
+    "wrong_company": 23,
+    "product_service_marketing": 22,
+    "structural_or_default": 7,
+    "advice_or_educational": 6,
+    "project_or_property_listing": 3,
+    "unrelated": 3,
+    "misdated": 1,
+    "job_advertisement": 1
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "21/47",
+    "advice_or_educational": "44/50",
+    "structural_or_default": "22/29",
+    "unrelated": "25/28",
+    "product_service_marketing": "54/76",
+    "project_or_property_listing": "2/5",
+    "wrong_company": "8/31",
+    "job_advertisement": "9/10",
+    "misdated": "2/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 51,
+     "incorrect": 30,
+     "precision": 0.6296,
+     "pool_coverage": "51/89"
+    },
+    "limited_company": {
+     "correct": 25,
+     "incorrect": 41,
+     "precision": 0.3788,
+     "pool_coverage": "25/36"
+    },
+    "other": {
+     "correct": 4,
+     "incorrect": 11,
+     "precision": 0.2667,
+     "pool_coverage": "4/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 6,
+     "incorrect": 10,
+     "precision": 0.375,
+     "pool_coverage": "6/7"
+    }
+   },
+   "wrong_company_fp": 23
+  },
+  "A_filter_v2": "not run (Gemini calls blocked until the exposed keys are rotated; see report)",
+  "C_hybrid_v2": "not run (Gemini calls blocked until the exposed keys are rotated; see report)",
+  "D_conservative_v2": "not run (Gemini calls blocked until the exposed keys are rotated; see report)",
+  "B_llm_only": "not run (Gemini calls blocked until the exposed keys are rotated; see report)"
+ }
+}
