@@ -41,6 +41,10 @@ if run_path:
     assert seen == {want}, f"run is not the pre-registered configuration: {seen} != {want}"
     missing = [i["item_id"] for i in items if i["item_id"] not in recs]
     assert not missing, f"{len(missing)} evalh400 units have no run record"
+    failed = [i for i, r in recs.items() if not r.get("ok")]
+    if failed:  # a failed call would count as "withhold" and flatter precision: never score a partial run as complete
+        sys.exit(f"partial run: {len(recs) - len(failed)}/{len(recs)} items completed, {len(failed)} failed "
+                 f"({dict(Counter(e for i in failed for e in (recs[i].get('errors') or ['unknown'])))}); resume the run, do not score")
 arms = arm_members_v2(items, recs, gate)
 llm_arms = {"A_filter_v2", "C_hybrid_v2", "D_conservative_v2", "B_llm_only"}
 report = {"dataset": "evalh400", "units": len(items), "companies": len({i["org"] for i in items}),
