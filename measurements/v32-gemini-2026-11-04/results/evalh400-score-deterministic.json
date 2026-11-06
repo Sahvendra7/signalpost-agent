@@ -21,8 +21,8 @@
     0.5561
    ],
    "precision_cluster95": [
-    0.3516,
-    0.6136
+    0.3548,
+    0.6111
    ],
    "false_positives": 92,
    "false_negatives": 52,
@@ -43,10 +43,10 @@
     "product_service_marketing": 22,
     "structural_or_default": 7,
     "advice_or_educational": 6,
-    "project_or_property_listing": 3,
     "unrelated": 3,
-    "misdated": 1,
-    "job_advertisement": 1
+    "project_or_property_listing": 3,
+    "job_advertisement": 1,
+    "misdated": 1
    },
    "errors_removed_by_category": {
     "opinion_or_promotional_profile": "21/47",
@@ -98,8 +98,8 @@
     0.5561
    ],
    "precision_cluster95": [
-    0.3516,
-    0.6136
+    0.3548,
+    0.6111
    ],
    "false_positives": 92,
    "false_negatives": 52,
@@ -120,10 +120,10 @@
     "product_service_marketing": 22,
     "structural_or_default": 7,
     "advice_or_educational": 6,
-    "project_or_property_listing": 3,
     "unrelated": 3,
-    "misdated": 1,
-    "job_advertisement": 1
+    "project_or_property_listing": 3,
+    "job_advertisement": 1,
+    "misdated": 1
    },
    "errors_removed_by_category": {
     "opinion_or_promotional_profile": "21/47",

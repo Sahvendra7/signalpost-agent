@@ -8,9 +8,12 @@ all ARMS_V2 arms are scored on identical inputs. Wrong-company errors are report
 from the run records (paid-equivalent list price; the free tier bills nothing).
 Writes results/evalh400-score[-deterministic].json.
 """
-import json, statistics, sys
+import hashlib, json, os, statistics, sys
 from collections import Counter
 from pathlib import Path
+
+if os.environ.get("PYTHONHASHSEED") != "0":  # the company-clustered bootstrap iterates sets: pin hashing so its CI is reproducible
+    os.execve(sys.executable, [sys.executable, *sys.argv], {**os.environ, "PYTHONHASHSEED": "0"})
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -28,8 +31,12 @@ assert all(i.get("label") for i in items), "evalh400 has unlabelled units"
 gate = {i["item_id"]: i["identity_gate"] for i in items}
 recs = {}
 if run_path:
+    frozen = dict(PREREG["implementation_frozen"])
+    frozen["src/norway_company_agent/llm_experiments/news_contract.py"] = PREREG["addendum_2026-11-06_minimise_fix"]["news_contract.py_sha256"]
+    drift = [f for f, h in frozen.items() if hashlib.sha256((ROOT / f).read_bytes()).hexdigest() != h]
+    assert not drift, f"implementation changed since pre-registration: {drift}"
     recs = {r["item_id"]: r for r in (json.loads(l) for l in open(run_path, encoding="utf-8"))}
-    want = PREREG.get("model"), PREREG.get("prompt_id")
+    want = PREREG["configuration"]["model"], PREREG["configuration"]["prompt_id"]
     seen = {(r["model"], r["prompt_id"]) for r in recs.values()}
     assert seen == {want}, f"run is not the pre-registered configuration: {seen} != {want}"
     missing = [i["item_id"] for i in items if i["item_id"] not in recs]
@@ -39,7 +46,7 @@ llm_arms = {"A_filter_v2", "C_hybrid_v2", "D_conservative_v2", "B_llm_only"}
 report = {"dataset": "evalh400", "units": len(items), "companies": len({i["org"] for i in items}),
           "labels": dict(Counter(i["label"] for i in items)),
           "pool_correct_companies": len({i["org"] for i in items if i["label"] == "correct"}),
-          "run": str(run_path.relative_to(ROOT)) if run_path else None, "arms": {}}
+          "run": (str(run_path.resolve().relative_to(ROOT)) if run_path.resolve().is_relative_to(ROOT) else str(run_path)) if run_path else None, "arms": {}}
 for arm in ARMS_V2:
     if arm in llm_arms and not run_path:
         report["arms"][arm] = "not run (Gemini calls blocked until the exposed keys are rotated; see report)"
@@ -55,7 +62,8 @@ if run_path:
     report["usage"] = {"records": len(rs), "ok": sum(bool(r.get("ok")) for r in rs), "api_calls_made": sum(r.get("api_calls_made", 0) for r in rs),
                        "input_tokens": sum(r.get("input_tokens") or 0 for r in rs), "output_tokens": sum(r.get("output_tokens") or 0 for r in rs),
                        "thoughts_tokens": sum(r.get("thoughts_tokens") or 0 for r in rs), "paid_equivalent_cost_usd": round(cost, 4),
-                       "paid_equivalent_cost_per_100_companies_usd": round(100 * cost / ncomp, 4),
+                       "paid_equivalent_cost_per_100_companies_with_candidates_usd": round(100 * cost / ncomp, 4),
+                       "paid_equivalent_cost_per_100_sampled_companies_usd": round(100 * cost / PREREG["sample"]["companies"], 4),
                        "latency_ms_p50": statistics.median(lat) if lat else None,
                        "latency_ms_p90": sorted(lat)[int(0.9 * (len(lat) - 1))] if lat else None}
 out = HERE / f"results/evalh400-score{'' if run_path else '-deterministic'}.json"

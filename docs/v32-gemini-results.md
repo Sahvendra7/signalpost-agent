@@ -4,6 +4,9 @@ Branch `experiment/v3.2-gemini` (local, not pushed), based on `139e23c` (`v3.1-c
 Companion documents: `docs/v32-gemini-api-report.md` (API, cost, privacy, security) and
 `docs/v32-llm-architecture.md` (architecture and integration design). All labels are `assistant_blind`.
 
+> **Follow-up (2026-11-06):** `docs/v32-hybrid-remediation.md` covers the VALMET identity fix, rubric v2 and the
+> independent evalh400 set. The figures below stand as reported. evalg250 is diagnostic from that date.
+
 ## 0. Bottom line
 
 1. **On an independent sample, a deterministic + Gemini hybrid is clearly better than V3.1 on both precision and
