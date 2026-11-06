@@ -1,0 +1,60 @@
+{
+ "id": "rosim_own_site_with_sister_item",
+ "source": "captured",
+ "target": {
+  "org": "988185701",
+  "legal_name": "ROSIM AS",
+  "legal_form": "AS",
+  "street": "Østre Aker vei 19",
+  "postal_code": "0581",
+  "municipality": "OSLO",
+  "registry_website": "www.rosim.no",
+  "parents": [
+   {
+    "name": "AQUA ROSIM AS",
+    "org": "984289898",
+    "foreign": false
+   }
+  ],
+  "group_members": []
+ },
+ "site_url": "https://rosim.no/",
+ "homepage": {
+  "sha256": "2dcaf4a239fc7952cfa7d4194b13b1543f0c43cc4ecba05fcff715e7bb948dc4",
+  "retrieved_at": "2026-11-04T18:21:53.340645Z",
+  "excerpt": "Hjem - ROSIM Skip to content ROSIM Menu Om oss Kontakt NO NO SE Image Slide 2 Våre kunder investerer i faktisk kunnskap om hvordan overvann- og avløpssystemet fungerer Image Slide 2 - overvåker utslipp for et godt vannmiljø Image Slide 2 - dokumenterer effekt av tiltak Image Slide 2 Våre kunder investerer i faktisk kunnskap om hvordan overvann- og avløpssystemet fungerer Image Slide 2 - overvåker utslipp for et godt vannmiljø Image Slide 2 - dokumenterer effekt av tiltak Har du spørsmål? Vi hjelper deg gjerne! Book et uforpliktende Teams møte her Møteplanlegger Hva foregår? 24 August 2025 Instrumentering av overløp og nedbørmålere i samarbeid med Miljø- og Fluidteknikk (MFT) 21 November 2024 Rammeavtale for vannføringsmåling med Stockholm Vatten 17 January 2022 Ny målerigg med NIVUS NivuFlow 750 for prosessvann til forbrenningsanlegget på Klemetsrud Se flere Innsikt Bruk av modellregn CFD modellering av overløp Digital modell for avløpssystemet Doppler vs. krysskorrelasjon Se flere Tjenester Oppbygging av nettmodell Hva er riktige dimensjoner på pumper og gravitasjonsledninger i forhold til fremtidens klima? Hvordan vil vårt eksisterende avløpssystem håndtere mer avløp fra et nytt  … oner av NIVUS målere i Skandinavia. Vi bistår med råd om valg av måleutstyr, konfigurering, installasjon og drift om ønskelig. Hovedkontor Østre Aker Vei 19 0581 Oslo Postadresse Postboks 53, Vollebekk 0516 Oslo Org.nr. 988 185 701 Sentralbord +47 479 268 00 Epost post@rosim.no WinCan Support +47 900 155 69 Sosiale medier Linkedin Nettsteder nivus.no wincan.no Sverige Aqua Rosim AB Nord Makedonia Geo Rosim Dooel ©ROSIM AS Scroll to Top … ebekk 0516 Oslo Org.nr. 988 185 701 Sentralbord +47 479 268 00 Epost post@rosim.no WinCan Support +47 900 155 69 Sosiale medier Linkedin Nettsteder nivus.no wincan.no Sverige Aqua Rosim AB Nord Makedonia Geo Rosim Dooel ©ROSIM AS Scroll to Top …  0581 Oslo Postadresse Postboks 53, Vollebekk 0516 Oslo Org.nr. 988 185 701 Sentralbord +47 479 268 00 Epost post@rosim.no WinCan Support +47 900 155 69 Sosiale medier Linkedin Nettsteder nivus.no wincan.no Sverige Aqua Rosim AB Nord Makedonia Geo Rosim Dooel ©ROSIM AS Scroll to Top … bekk 0516 Oslo Org.nr. 988 185 701 Sentralbord +47 479 268 00 Epost post@rosim.no WinCan Support +47 900 155 69 Sosiale medier Linkedin Nettsteder nivus.no wincan.no Sverige Aqua Rosim AB Nord Makedonia Geo Rosim Dooel ©ROSIM AS Scroll to Top …  og for permanente stasjoner tilkoblet strøm. Vi har gjort flere tusen installasjoner av NIVUS målere i Skandinavia. Vi bistår med råd om valg av måleutstyr, konfigurering, installasjon og drift om ønskelig. Hovedkontor Østre Aker Vei 19 0581 Oslo Postadresse Postboks 53, Vollebekk 0516 Oslo Org.nr. 988 185 701 Sentralbord +47 479 268 00 Epost post@rosim.no WinCan Support +47 900 155 69 Sosiale medier Linkedin Nettsteder nivus.no wincan.no Sverige Aqua "
+ },
+ "expected_site_status": "target_operated",
+ "items": [
+  {
+   "item_id": "988185701|news_item|rosim.no/ny-malerigg-med-nivus-nivuflow-750-for-prosessvann|2022-01-17",
+   "text": "Ny målerigg med NIVUS NivuFlow 750 for prosessvann til forbrenningsanlegget på Klemetsrud\n[feed categories: ['Hva foregår', 'Nedbørmåler', 'Nedbørsmåler', 'Nedbørsmålere', 'NF 750', 'NFM750', 'NivuFlow 750', 'Nivus', 'Vannføringsmåler', 'Vannføringsmålere', 'Vannføringsmålinger']] Rosim - Hva foregår Ny målerigg med NIVUS NivuFlow 750 for prosessvann til forbrenningsanlegget på Klemetsrud 17/01/2022 Energigjenvinningsanlegget på Klemetsrud er et kraftvarmeverk og forbrenningsanlegg for avfall i Oslo, satt i drift i 1985. Anlegget eies og drives av Hafslund Celsio som er Norges største leverandør av fjernvarme. På anlegget var det en måler for utslipp av prosessvann basert på\nNy målerigg med NIVUS NivuFlow 750 for prosessvann til forbrenningsanlegget på Klemetsrud - ROSIM Rosim - Hva foregår 17/01/2022 Energigjenvinningsanlegget på Klemetsrud er et kraftvarmeverk og forbrenningsanlegg for avfall i Oslo, satt i drift i 1985. Anlegget eies og drives av Hafslund Celsio som er Norges største leverandør av fjernvarme. På anlegget var det en måler for utslipp av prosessvann basert på nivåmåling over en måleterskel, som en var usikker på om målte riktig. Siden Oslo Vann- og Avløpsetat har satt en maksgrense for utslipp så er det viktig med en nøyaktig permanent vannføringsmåling for anlegget. For å få etablert en ny målerigg startet vi med kjerneboring av et hull i eksisterende tverrprofil. Kjerneboret hull i eksisterende tverrprofil For å sikre at trykket fra vannet ikke skyver starten på måleriggen ut av tverrkanten ble røret sikret med et anker på innsiden av veggen. Gjennomføring av målerigg i eksisterende tverrprofil For å kunne måle nøyaktig mengde er det laget en målerigg der måleprofilet består av et 315mm rør med en rettstrekning på mer enn 10 ganger indre dimensjon, som bidrar til å sikre gode hydrauliske forhold med laminær strømning over sensorene. For visuell inspeksjon av strømningsforhold og for mulighet for rensk er det åpne slisser i toppen av røret. Loggeren som er benyttet i installasjonen er en NIVUS NivuFlow 750. Sensorene som måler hastighet og nivå er en krysskorrelasjon mini-hastighetssensor (CSM) og en ultralyd nivå sensor (CSM-D). NivuFlow 750 plassert i teknisk skap Data overføres fra loggeren til kontrollsystemet. Måleriggen i kombinasjon med krysskorrelasjon vannføringsmåler fra NIVUS gir nøyaktige vannføringsmålinger og enkel drift og oppfølging av målinger. Alt arbeide ble utført som en «turn key» leveranse fra Rosim. Nyeste innlegg All Posts Hva foregår Bruk av blokkregn Kategori Hva foregår",
+   "expected": "pass",
+   "provenance": {
+    "captured": true,
+    "url": "https://rosim.no/ny-malerigg-med-nivus-nivuflow-750-for-prosessvann/",
+    "sha256": "647916c8e0a89ab55435709f7a11ecad9aca6a9b967006438438d29fb46972f6",
+    "retrieved_at": "2026-11-04T18:22:10.973176Z",
+    "chars": 1876,
+    "truncated": false,
+    "chrome_lines_removed": 50,
+    "html_title": "Ny målerigg med NIVUS NivuFlow 750 for prosessvann til forbrenningsanlegget på Klemetsrud - ROSIM"
+   }
+  },
+  {
+   "item_id": "988185701|news_item|rosim.no/rammeavtale-for-vannforingsmaling-med-stockholm-vatten|2024-11-21",
+   "text": "Rammeavtale for vannføringsmåling med Stockholm Vatten\n[feed categories: ['Hva foregår', 'Nedbørmåler', 'Nedbørsmåler', 'Nedbørsmålere', 'NivuFlow', 'Vannføringsmåler', 'Vannføringsmålere', 'Vannføringsmålinger']] Rosim - Hva foregår Rammeavtale for vannføringsmåling med Stockholm Vatten 21/11/2024 Stockholm Vatten och Avfall (SVOA) er Sveriges største vann- og avfallsselskap og leverer tjenester til omtrent 1,5 millioner innbyggere og bedrifter i Stockholmsområdet. Innunder forrige rammeavtale med SVOA fra 2020-2024 har vi gjort flere hundre installasjoner av nedbør-, nivå- og vannføringsmålere. For å oppnå god målekvalitet stiller SVOA kra\nRammeavtale for vannføringsmåling med Stockholm Vatten - ROSIM Rosim - Hva foregår 21/11/2024 Stockholm Vatten och Avfall (SVOA) er Sveriges største vann- og avfallsselskap og leverer tjenester til omtrent 1,5 millioner innbyggere og bedrifter i Stockholmsområdet. Innunder forrige rammeavtale med SVOA fra 2020-2024 har vi gjort flere hundre installasjoner av nedbør-, nivå- og vannføringsmålere. For å oppnå god målekvalitet stiller SVOA krav til måleutstyr. Krav i rammeavtalen til utstyr for VH-vannføringsmålere er blant annet: Skal måle hastighet med krysskorrelasjon sensor Skal ha minst to nivåsensorer Skal ha trådløs dataoverføring med GSM eller tilsvarende Kommunikasjon skal fungere også når logger plasseres under kumlokk Rådata skal lagres i VH-vannføringsmåler og ikke bare leveres som et beregnet resultat NivuFlow Mobile 750 vannføringsmåler For å arbeide for SVOA skal en også ha gjennomført en rekke kurs: Röd Zon, Stockholm Stad: ”Trafikanordningar och markarbeten i offentlig mark” Arbete på väg: Hantering av sekretessbelagd information Aqua Rosim AB har, som en av tre leverandører, kommet med på rammeavtalen som vil vare i opptil 8 år. Nyeste innlegg All Posts Hva foregår Bruk av blokkregn Kategori Hva foregår",
+   "expected": "withhold",
+   "provenance": {
+    "captured": true,
+    "url": "https://rosim.no/rammeavtale-for-vannforingsmaling-med-stockholm-vatten/",
+    "sha256": "2481e5c58ca723d7cfacf7289c240de4a7a2b32d3cf1921810fcd4f0b61d67a9",
+    "retrieved_at": "2026-11-04T18:22:13.404027Z",
+    "chars": 1236,
+    "truncated": false,
+    "chrome_lines_removed": 50,
+    "html_title": "Rammeavtale for vannføringsmåling med Stockholm Vatten - ROSIM"
+   }
+  }
+ ]
+}

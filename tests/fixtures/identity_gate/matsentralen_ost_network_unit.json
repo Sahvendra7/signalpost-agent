@@ -1,0 +1,33 @@
+{
+ "id": "matsentralen_ost_network_unit",
+ "source": "captured",
+ "target": {
+  "org": "915643787",
+  "legal_name": "MATSENTRALEN ØST",
+  "legal_form": "FLI",
+  "street": "Gladengveien 17",
+  "postal_code": "0661",
+  "municipality": "OSLO",
+  "registry_website": "www.matsentralen.no",
+  "parents": [],
+  "group_members": []
+ },
+ "site_url": "https://www.matsentralen.no/",
+ "homepage": {
+  "sha256": "232bf7b53bcf7711a0ba9c8ae16131d0b925c96f3bd15c2b28a285ae729de360",
+  "retrieved_at": "2026-11-04T18:24:41.818621Z",
+  "excerpt": "Matsentralen Norge - Food Banks Norway 140040 Matsentralene Innlandet Nord-Norge Øst Rogaland Sør Trøndelag Vestfold og Telemark Vestland Innlandet Nord-Norge Øst Rogaland Sør Trøndelag Vestfold og Telemark Vestland || FAQ English Vårt arbeid Vår løsning Prosjekter Skoler Matsentralen Primær Matsentralen Måltid Matsentralen Norge Nyheter Faktasider Matsvinn Fattigdom Bærekraftsmål Forskning Rapporter Støtt vårt arbeid Doner mat Støtt oss økonomisk Bli frivillig Bidra med kompetanse eller annet Samarbeidspartnere Matbransjen Ideelle organisasjoner Støttespillere KONTAKT OSS Støtt økonomisk Motta mat Vi gir mat, mennesker og miljø en ny sjanse Matsentralene er et nettverk av åtte matsentraler som som hjelper mennesker ved at overskuddsmat fra matbransjen deles ut gratis til ideelle organisasjoner som hjelper mennesker i nød. På den måten hjelper vi ideelle organisasjoner med å redusere fattigdom, og matbransjen med å redusere matsvinn. Støtt Økonomisk Motta mat DonÉr Mat Dele ut mat 6206 Tonn mat delt ut 383 LEVERANDØRER TILSVARER 12 MILL MÅLTIDER 568 MOTTAKERORGANISASJONER *data fra 2025 Matsentralens mathjelpsbarometer 2026 Matsentralens mathjelpsbarometer 2026 kartlegger aktivitet … eres takket være økonomisk støtte fra en rekke støttespillere. Dette er noen av våre støttespillere. Email Address Tusen takk! Du er nå påmeldt. Oi, det skjedde en feil ved innsending. Prøv på nytt. Org. Nr. 919 702 974 © 2025 Matsentralen Norge, All rights reserved. ‍ Salgbetingelser Personvernerklæring Matsentralen Norge Om oss Trenger du hjelp? Kontakt oss FAQ Adresse Gladengveien 17 0661 Oslo norge@matsentralen.no +47 40 02 02 60 … kjedde en feil ved innsending. Prøv på nytt. Org. Nr. 919 702 974 © 2025 Matsentralen Norge, All rights reserved. ‍ Salgbetingelser Personvernerklæring Matsentralen Norge Om oss Trenger du hjelp? Kontakt oss FAQ Adresse Gladengveien 17 0661 Oslo norge@matsentralen.no +47 40 02 02 60"
+ },
+ "expected_site_status": "group_site",
+ "items": [
+  {
+   "item_id": "915643787|news_item|matsentralen.no/nyheter|2025-02-28",
+   "text": "Hvordan kan matsentralene redde mer mat?\n140040 Matsentralene Innlandet Nord-Norge Øst Rogaland Sør Trøndelag Vestfold og Telemark Vestland Innlandet Nord-Norge Øst Rogaland Sør Trøndelag Vestfold og Telemark Vestland || FAQ English Vårt arbeid Vår løsning Prosjekter Skoler Matsentralen Primær Matsentralen Måltid Matsentralen Norge Nyheter Faktasider Matsvinn Fattigdom Bærekraftsmål Forskning Rapporter Støtt vårt arbeid Doner mat Støtt oss økonomisk Bli frivillig Bidra med kompetanse eller annet Samarbeidspartnere Matbransjen Ideelle organisasjoner Støttespillere KONTAKT OSS Støtt økonomisk Motta mat Nyheter 8/",
+   "expected": "withhold",
+   "provenance": {
+    "captured": false,
+    "reason": "item_url_is_source_page"
+   }
+  }
+ ]
+}

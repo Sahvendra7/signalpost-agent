@@ -1,0 +1,39 @@
+{
+ "id": "rybak_brand_only_own_site",
+ "source": "captured",
+ "target": {
+  "org": "995695987",
+  "legal_name": "ALEXANDER RYBAK AS",
+  "legal_form": "AS",
+  "street": "Bryggetorget 7",
+  "postal_code": "0250",
+  "municipality": "OSLO",
+  "registry_website": "www.alexanderrybak.com",
+  "parents": [],
+  "group_members": []
+ },
+ "site_url": "https://alexanderrybak.com/",
+ "homepage": {
+  "sha256": "790bccd65595ddb7312f7bdeea613c87fdb175b91aa6220cac27837090636a89",
+  "retrieved_at": "2026-11-04T18:18:13.222434Z",
+  "excerpt": "Alexander Rybak | Alexander Rybak Official Website webshop@alexanderrybak.com Facebook X Instagram Facebook X Instagram 0 Items Home Blog Gallery Bio Music Music DVD Songs For Others Artists Shop Tickets Notes & Scores Booking Cart Select Page Fairytales Too out on 19 Jan 2026. LISTEN Terms & Conditions Privacy Policy Refund Policy Cookie Policy (EU) Manage Consent To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. Functional Functional Always active The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network. Preferences Preferences The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user. Statistics Statisti"
+ },
+ "expected_site_status": "brand_only",
+ "items": [
+  {
+   "item_id": "995695987|news_item|alexanderrybak.com/alexander-rybak-as-a-surprise-guest-in-stjernekamp-on-nrk|2020-09-28",
+   "text": "Alexander Rybak as a surprise-guest in “Stjernekamp” on NRK\nAlexander Rybak as a surprise-guest in “Stjernekamp” on NRK Sep 28, 2020 | 0 Comments Alexander Rybak in Stjernekamp In the TV-show \"Stjernekamp\" on NRK, 10 established norwegian artists meet to compete within different musical genres. By viewers voting, one artist leaves the show in each episode. The winner achieves the title as \"Ultimate Entertainer... read more\nAlexander Rybak as a surprise-guest in “Stjernekamp” on NRK | Alexander Rybak Alexander Rybak as a surprise-guest in “Stjernekamp” on NRK Sep 28, 2020 Alexander Rybak in Stjernekamp In the TV-show “ Stjernekamp” on NRK, 10 established norwegian artists meet to compete within different musical genres. By viewers voting, one artist leaves the show in each episode. The winner achieves the title as “Ultimate Entertainer of Norway”. In the 9th season, 2020, operasinger Emil Solli-Tangen is among the contestants and as a surprise, he invites his friend Alexander Rybak to join him on stage with his violin for his performance of “Se Ilden Lyse” Click on the picture below to watch the performance or the whole broadcast. Emil Solli-Tangens’ performance begins at 1.05.44 Emil Solli-Tangen – “Se ilden lyse” feat. Alexander Rybak in Stjernekamp, 26.9.2020. http://https://www.youtube.com/watch?v=KUsujqWZSSk&feature=emb_title",
+   "expected": "pass",
+   "provenance": {
+    "captured": true,
+    "url": "https://alexanderrybak.com/alexander-rybak-as-a-surprise-guest-in-stjernekamp-on-nrk/",
+    "sha256": "9497b81b7732d5d1e98048359ff3944fc1a3ce8268a3a4cc08980ea8498211f1",
+    "retrieved_at": "2026-11-04T18:18:33.650781Z",
+    "chars": 924,
+    "truncated": false,
+    "chrome_lines_removed": 31,
+    "html_title": "Alexander Rybak as a surprise-guest in “Stjernekamp” on NRK | Alexander Rybak"
+   }
+  }
+ ]
+}

@@ -202,6 +202,6 @@ def test_aid_excerpts_are_matched_to_their_own_unit(tmp_path):
 
 
 def test_redact_covers_new_key_format_and_key_override():
-    assert "Ab8RN6" not in redact("bad key AQ.Ab8RN6abcdefghijklmnopqrstuvwxyz0123456789-_xyz in message", "")
+    assert "FAKEKEY" not in redact("bad key AQ.FAKEKEYabcdefghijklmnopqrstuvwxyz0123456789-_xyz in message", "")
     c = GeminiConfig.from_env({"GEMINI_API_KEY": "default-key-0000000000"}, api_key="other-key-1111111111", _force_enabled=True)
     assert c.enabled and c.api_key == "other-key-1111111111"

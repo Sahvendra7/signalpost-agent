@@ -1,0 +1,39 @@
+{
+ "id": "fram_marine_own_site",
+ "source": "captured",
+ "target": {
+  "org": "993973645",
+  "legal_name": "FRAM MARINE AS",
+  "legal_form": "AS",
+  "street": "Drammensveien 167",
+  "postal_code": "0277",
+  "municipality": "OSLO",
+  "registry_website": "www.frammarine.com",
+  "parents": [],
+  "group_members": []
+ },
+ "site_url": "https://frammarine.com/",
+ "homepage": {
+  "sha256": "757d6255fa194a33215a966f1a45acba059ec4f4d52becb07c3bfb051859584b",
+  "retrieved_at": "2026-11-04T18:21:05.953132Z",
+  "excerpt": "Fram Marine - We bring you safely to shore Skip to content Expertise References About Career News Contact We bring you safely to shore By combining years of experience in project execution and management with technical and operational expertise in Marine, Energy and Renewable industry, we are dedicated to navigate you​ through the challenges ahead Contact Expertise Expertise Marine Energy Renewables Marine Our expertise and industry track record gives our customers additional expertise and assistance to effectively deliver on their goals from start to finish. We ensure successful project execution through competent and dedicated recourses. This is what we can help you with: Project Execution and Management Engineering Services and Management Ship Operation and Management HSEQ and Risk Management Project Control & Contracting Technology Development and Management Management Consulting Energy Efficiency and Environmental Upgrades Energy Our expertise and industry track record gives our customers additional expertise and assistance to effectively deliver on their goals from start to finish. We ensure successful project execution through competent and dedicated recourses. This is what  …  * Message * The information is processed in accordance with our privacy policy . Send message post@frammarine.com Drammensveien 167, Oslo Expertise Marine Energy Renewables About References News Careers Contact Privacy © 2024 Fram Marine AS Webdesign by Fjellvann , a part of Solid Media . … equired fields URL This field is for validation purposes and should be left unchanged. Name * Phone Email * Message * The information is processed in accordance with our privacy policy . Send message post@frammarine.com Drammensveien 167, Oslo Expertise Marine Energy Renewables About References News Careers Contact Privacy © 2024 Fram Marine AS Webdesign by Fjellvann , a part of Solid Media ."
+ },
+ "expected_site_status": "target_operated",
+ "items": [
+  {
+   "item_id": "993973645|news_item|frammarine.com/10-years-with-fram-marine-as|2019-09-06",
+   "text": "10 years with Fram Marine AS\n[feed categories: ['Uncategorized']] Highly qualified employees, project planning, implementation and execution expertise is our strengths. Inspired by Fridtjof Nansen and Roald Amundsen’s Arctic missions, fellow students at NTNU Kjetil Bruun-Olsen and Ola Often established the advisory company Fram Marine AS in 2009. The first few years the company was run by the two, and they were running it well. High ability to execute “We had a strong desire to use our competence to help others with good project planning and focus on implementation,” says Bruun-Olsen. “In a period of time, we saw ma\n10 years with Fram Marine AS - Fram Marine 10 years with Fram Marine AS Recently, Fram Marine AS celebrated its 10th anniversary and Kjetil Bruun-Olsen, CEO and entrepreneur, looks back on the business first ten years. Posted 06.09.2019 Author Kjetil Bruun-Olsen Category Reading time Highly qualified employees, project planning, implementation and execution expertise is our strengths. Inspired by Fridtjof Nansen and Roald Amundsen’s Arctic missions, fellow students at NTNU Kjetil Bruun-Olsen and Ola Often established the advisory company Fram Marine AS in 2009. The first few years the company was run by the two, and they were running it well. High ability to execute “We had a strong desire to use our competence to help others with good project planning and focus on implementation,” says Bruun-Olsen. “In a period of time, we saw many examples of unsuccessful projects because planning and preparations had not been good enough. That’s when we drew parallels to the two expeditions, where Amundsen defeated Robert F. Scott in the race to reach the South Pole in 1911. The story of the race told us that Amundsen’s expedition had been better planned and they were devoted to the plan throughout the expedition. From two to 16 employees in four years In the initial phase, there were complicated projects in the marine industry they were aiming for, which they succeeded very well with as Fram Marine AS was quickly recognized as a quality supplier of technology-based consulting services for business and project management within the energy and marine markets. Already in 2013 the company had grown to 16 employees. Today the team counts 20. Thoroughness “Our company philosophy has always been that thoroughness in preparation, planning, engineering and contracts are key elements for successful projects. It was precisely these elements that contributed to the success of the Fram expeditions led by Fridtjof Nansen and Roald Amundsen. Expertise company “Looking back, I am proud that we in Fram Marine AS have become a expertise and competence company in energy offshore extraction with special competence related to floating offshore installations. Although we are a small player, we have attracted very competent employees and are involved in major national projects. 10 years of green innovation and sustainable technology Today we have employees with up to 30 years of experience in technology development, engineering and project execution from the oil and gas industry. In recent y",
+   "expected": "pass",
+   "provenance": {
+    "captured": true,
+    "url": "https://frammarine.com/10-years-with-fram-marine-as/",
+    "sha256": "0675ac848e82ce88cad3d80ca955333c736b95a5e22a68ead2ff6f3202a541b7",
+    "retrieved_at": "2026-11-04T18:21:08.562530Z",
+    "chars": 3784,
+    "truncated": false,
+    "chrome_lines_removed": 75,
+    "html_title": "10 years with Fram Marine AS - Fram Marine"
+   }
+  }
+ ]
+}

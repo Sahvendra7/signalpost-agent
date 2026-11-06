@@ -1,0 +1,60 @@
+{
+ "id": "valmet_global_group_site",
+ "source": "captured",
+ "target": {
+  "org": "932383357",
+  "legal_name": "VALMET AS",
+  "legal_form": "AS",
+  "street": "Vebjørns vei 2A",
+  "postal_code": "3414",
+  "municipality": "LIER",
+  "registry_website": "www.valmet.com",
+  "parents": [
+   {
+    "name": "NELES CONTROLS OY",
+    "org": "981128354",
+    "foreign": true
+   }
+  ],
+  "group_members": []
+ },
+ "site_url": "https://www.valmet.com/",
+ "homepage": {
+  "sha256": "6a470dd4f541b22f07c02778221463bcf0ca597016ded6649e5011484f734eb6",
+  "retrieved_at": "2026-11-04T18:13:11.656068Z",
+  "excerpt": "Valmet: technologies, services and automation to pulp, energy and paper industries Skip to main content Portals en 中文 - Chinese Suomi - Finnish Français - French Deutsch - German 日本語 - Japanese 한국어(대한민국) - Korean Polski - Polish Português - Portuguese Español - Spanish Svenska - Swedish ไทย - Thai Main navigation Portals Company Company Company Our business Our journey Strategy Innovation Beyond Circularity Industrial NEXUS Values Management Board of Directors Executive Leadership Team Working principles Code of Conduct Raising concerns Policies Procurement Media News Image gallery Events Careers Careers Careers at Valmet Students & Recent Graduates Open jobs Working with us Your development and wellbeing Benefits – what we offer Diversity and inclusion Career stories How to apply FAQ Sustainability Sustainability Climate and nature Climate Transition Plan Climate and nature in our own operations Circular-based waste management Circular and net-zero solutions Enabling a circular economy for our customers People and rights Engaged workplace Human rights Global social responsibility Health and safety Responsible value chain Sustainable supply chain Ethical business practices Transpar … ss performance solutions Automation solutions Flow control Transforming industries Solutions by industry About this site Sitemap Legal notice Trademarks Accessibility statement Privacy notice Cookie preference Copyright © 2026 Valmet Close … ts Engaged workplace Human rights Global social responsibility Health and safety Responsible value chain Sustainable supply chain Ethical business practices Transparent reporting Life Cycle Assesment Investors Investors Valmet as an investment Strategic review Valmet factsheet Strategy and financial targets More Segments and business areas Outlook, growth drivers and risks Orders received Order backlog R&D Competitors M&A External data providers … ng process industries. We work together with our customers throughout the entire lifecycle, delivering cutting-edge technologies and services as well as mission-critical automation and flow control solutions. Read about Valmet as a company Upcoming events Events Nov 2, 2026 Roll Academy Asia Pacific 2026 The goal of the Roll Academy is to raise awareness of the function of rolls and their impact on your productio... Events Nov 2, 2026 Tissue Ope"
+ },
+ "expected_site_status": "group_site",
+ "items": [
+  {
+   "item_id": "932383357|news_item|valmet.com/news/stock-exchange-releases/2026/change-in-valmets-executive-leadership-team-pia-aaltonen-forsell-appointed-chief-financial-officer|2026-07-24|e567a5f6",
+   "text": "Change in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer\nJul 24, 2026 Stock exchange releases Change in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer\nChange in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer Change in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer Valmet Oyj’s stock exchange release on July 24, 2026, at 09.03 a.m. EEST Change in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer Valmet has appointed Pia Aaltonen-Forsell (M. Soc.Sc. (Econ.), MBA) Chief Financial Officer and member of the Valmet Executive Leadership Team. In this position Aaltonen-Forsell will report to the President and CEO Thomas Hinnerskov and she will start in the position at the latest at the end of January 2027. Pia Aaltonen-Forsell joins Valmet from the role of Chief Financial Officer at Finnair. Previously, she has served as CFO in Northvolt, CFO in Outokumpu, CFO in Alhström-Munksjö and Munksjö, CFO in Vacon, and in various management and finance positions at Stora Enso. Aaltonen-Forsell is a member of the Board of Directors and Chair of the Audit Committee of UPM-Kymmene Corporation. Pia Aaltonen-Forsell will be based in Espoo, Finland. “I’m very pleased to welcome Pia to Valmet. She brings demonstrated, broad financial expertise and experience from leading complex global organizations. As we continue to develop Valmet and execute our strategy, her leadership will be important in driving our financial performance, cost competitiveness, and long-term value creation for our stakeholders,” says Thomas Hinnerskov, President and CEO, Valmet. Aaltonen-Forsell succeeds Valmet’s CFO Katri Hokkanen, who as announced on March 20, 2026, is leaving her role as the CFO by the end of September 2026. Further information: Anu Pires, EVP, People, Communications and Culture, tel. +358 10 672 0000 (switchboard) VALMET Katri Hokkanen CFO Pekka Rouhiainen VP, Investor Relations DISTRIBUTION: Nasdaq Helsinki Major media www.valmet.com Valmet is a global technology leader in serving process industries. We work with our customers throughout the lifecycle, delivering cutting-edge technologies and services, as well as mission-critical automation and flow control solutions. Backed by more than 225 years of industrial experience and a global team of 18,500 professionals close to customers, we are uniquely positioned to transform industries toward a regenerative tomorrow. In 2025, Valmet’s net sales totaled approximately EUR 5.2 billion. Our head office is in Espoo, Finland, and we have experts in approximately 40 c",
+   "expected": "withhold",
+   "provenance": {
+    "captured": true,
+    "url": "https://www.valmet.com/news/stock-exchange-releases/2026/change-in-valmets-executive-leadership-team-pia-aaltonen-forsell-appointed-chief-financial-officer/",
+    "sha256": "df64eeaafcd06c69fbaca1bbd9de37e0ab1febd6dcd5ecade4358ab21ce5bdf6",
+    "retrieved_at": "2026-11-04T18:30:39.729889Z",
+    "chars": 2672,
+    "truncated": false,
+    "chrome_lines_removed": 103,
+    "html_title": "Change in Valmet’s Executive Leadership Team: Pia Aaltonen-Forsell appointed Chief Financial Officer"
+   }
+  },
+  {
+   "item_id": "932383357|news_item|valmet.com/news/other-news/2026/valmet-to-replace-hansol-papers-legacy-quality-control-systems-qcs-to-enhance-quality-efficiency-and-long-term-reliability|2026-08-05|99e49b16",
+   "text": "Valmet to replace Hansol Paper’s legacy quality control systems (QCS) to enhance quality, efficiency, and long term reliability\nAug 5, 2026 Featured news Valmet to replace Hansol Paper’s legacy quality control systems (QCS) to enhance quality, efficiency, and long term reliability\nValmet to replace Hansol Paper’s legacy quality control systems (QCS) to enhance quality, efficiency, and long term reliability Valmet to replace Hansol Paper’s legacy quality control systems (QCS) to enhance quality, efficiency, and long term reliability Aug 5, 2026 Valmet will replace three existing quality control systems from other suppliers with Valmet IQ Quality Control Systems (QCS) at Hansol Paper’s Janghang, Shintanjin, and Cheonan mills in Korea. The new systems will enable Hansol Paper to achieve high product quality while optimizing efficiency. With seamless integration into the existing systems, the future-ready solution will support the next level of automation, enabling more optimized operations and improved cost efficiency. The solution for the three mills combines scanners, related measurements, as well as MD and CD Controls. By combining advanced quality control technology with lifecycle services and support, Hansol Paper can further secure long-term system performance and production reliability. “We selected Valmet as our partner to strengthen operational reliability and support our long-term competitiveness. After evaluating several suppliers, we determined that Valmet was the best partner to support our transition toward a smarter, more data-driven production environment. The new Valmet QCS will help us improve process stability, reduce maintenance risks, and provide more accurate and consistent quality data for better decision-making. Beyond a technology upgrade, this investment lays an important foundation for our digital transformation, enabling higher levels of automation, improved efficiency, reduced waste, and more sustainable production in the future,” says Hongjin Kim , Electrical part manager at Shintanjin mill, Hansol Paper. “Part of what makes Valmet IQ QCS so customer-friendly is how easily it can be configured to the customer’s exact needs. Hansol Paper’s trust in Valmet’s advanced automation and quality control solutions and our ability to support their targets for operational excellence, improved efficiency, and sustainability throughout the entire lifecycle of their operations gives our team great pride, and we look forward to delivering,” says Keunmo Yeoun , Solution Sales Manager, Automation Solutions business area, Valmet. The order was included in Valmet’s orders received for the first quarter of 2026, and the value of the order will not be disclosed. The delivery is scheduled for the third quarter of 2026. Valmet I",
+   "expected": "withhold",
+   "provenance": {
+    "captured": true,
+    "url": "https://www.valmet.com/news/other-news/2026/valmet-to-replace-hansol-papers-legacy-quality-control-systems-qcs-to-enhance-quality-efficiency-and-long-term-reliability/",
+    "sha256": "33a6cb7477a244ac814b1e1437aa99df3739b4fbf2e1b38f4b5f67efb9903fe2",
+    "retrieved_at": "2026-11-04T18:30:02.556356Z",
+    "chars": 4026,
+    "truncated": false,
+    "chrome_lines_removed": 103,
+    "html_title": "Valmet to replace Hansol Paper’s legacy quality control systems (QCS) to enhance quality, efficiency, and long term reliability"
+   }
+  }
+ ]
+}
