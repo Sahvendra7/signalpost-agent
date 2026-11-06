@@ -53,6 +53,8 @@ def main() -> None:
     p.add_argument("--workers", type=int, default=2)
     p.add_argument("--max-output-tokens", type=int, default=1536)
     p.add_argument("--max-usd", type=float, default=None, help="hard cap on the paid-equivalent cost of this run (required with --live)")
+    p.add_argument("--owner-accepts-exposed-key", action="store_true",
+                   help="owner decision: run with a key on the exposed list instead of a rotated one (recorded next to the output)")
     p.add_argument("--thinking", choices=["MINIMAL", "LOW", "MEDIUM", "HIGH"], help="override the prompt's thinking level (new prompt id)")
     args = p.parse_args()
 
@@ -72,11 +74,22 @@ def main() -> None:
             raise SystemExit("--live needs an explicit --max-calls budget")
         if args.max_usd is None:
             raise SystemExit("--live needs an explicit --max-usd budget")
-        # One authorised project only (2026-11-06): the single GEMINI_API_KEY; additional project keys are not used.
+        # One authorised project only (2026-11-06): the single GEMINI_API_KEY; additional project keys are not used,
+        # and their presence stops a live run, so a quota limit can never be bypassed by switching projects.
+        extra = sorted(k for k, v in os.environ.items() if k.startswith("GEMINI_API_KEY_") and v.strip())
+        if extra:
+            raise SystemExit(f"other Gemini key variables are set ({', '.join(extra)}): remove them; live runs use GEMINI_API_KEY only")
         key = os.environ.get("GEMINI_API_KEY", "").strip()
         revoked = Path(os.environ.get("SIGNALPOST_REVOKED_KEYS_FILE", ROOT / "out/v32/revoked_key_sha256.txt"))
-        if revoked.exists() and hashlib.sha256(key.encode()).hexdigest() in revoked.read_text().split():
+        exposed = revoked.exists() and hashlib.sha256(key.encode()).hexdigest() in revoked.read_text().split()
+        if exposed and not args.owner_accepts_exposed_key:
             raise SystemExit("GEMINI_API_KEY is on the revoked/exposed key list: rotate it before making API calls")
+        if exposed:  # the key value is never written; only the fact and the decision are
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.with_suffix(".key_note.json").write_text(json.dumps({
+                "key_variable": "GEMINI_API_KEY", "key_on_exposed_list": True, "owner_accepted_exposed_key": True,
+                "single_project": True, "other_key_variables_used": False}, indent=1), encoding="utf-8")
+            print("note: GEMINI_API_KEY is on the exposed list; running on the owner's explicit decision (recorded)", file=sys.stderr)
         config = GeminiConfig.from_env(os.environ, model=args.model, api_key=key, _force_enabled=True)
         if not config.enabled:
             raise SystemExit(f"Gemini not configured: {config.disabled_reason}")
