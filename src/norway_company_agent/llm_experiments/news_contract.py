@@ -126,6 +126,46 @@ def build_packet(*, item_id: str, org: str, legal_name: str, legal_form: str | N
     return packet
 
 
+_EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+")
+_PHONE = re.compile(r"(?:(?<=\s)|^)(?:\+47[\s-]?)?(?<!\d)(?:\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}|\d{3}[\s.]?\d{2}[\s.]?\d{3})(?!\d)")
+
+
+def minimise(text: str | None) -> str | None:
+    """Data minimisation before text leaves Signalpost: e-mail addresses and phone numbers are masked (they never
+    decide whether an item is news). Names are kept: the subject of an item is needed for classification."""
+    if not text:
+        return text
+    return _PHONE.sub("[phone]", _EMAIL.sub("[email]", text))
+
+
+def build_packet_v2(*, item_id: str, target: Any, site: Any, gate: Any, industry: str | None, relationships: list[dict[str, Any]],
+                    title: str, item_url: str | None, source_url: str | None, section: str | None, extraction_method: str | None,
+                    date_candidate: str | None, date_text: str | None, source_text: str | None, source_text_kind: str | None,
+                    article_text: str | None, article_provenance: dict[str, Any] | None = None, site_url: str | None = None) -> dict[str, Any]:
+    """Packet v2: no aliases. The legal identity is the legal name + organisation number; brand tokens are passed
+    explicitly as NOT identity evidence; the deterministic website-operator status and the item's identity-gate
+    result are supplied; e-mail addresses and phone numbers are masked."""
+    packet = {
+        "item_id": item_id,
+        "target_company": {"legal_name": target.legal_name, "organisation_number": target.org, "legal_form": target.legal_form,
+                           "brand_tokens_not_identity": target.brand_tokens, "industry": industry,
+                           "known_relationships": relationships or []},
+        "website": {"url": site_url, "operator_status": site.status, "operator_note": site.operator_note,
+                    "operator_evidence": site.evidence},
+        "identity_gate": {"item_names_target_exactly": gate.names_target_exactly, "other_legal_entities_named": gate.other_entities,
+                          "registry_group_names_in_item": gate.group_names},
+        "item": {"title": title, "url": item_url, "source_page_url": source_url, "section": section,
+                 "extraction_method": extraction_method, "pipeline_date_candidate": date_candidate, "pipeline_date_text": date_text},
+        "source_text_kind": source_text_kind,
+        "source_text": minimise(source_text) or None,
+        "article_text": minimise(article_text) or None,
+        "packet_version": "v2",
+    }
+    packet["_provenance"] = article_provenance or {}
+    packet["packet_sha256"] = sha(canonical({k: v for k, v in packet.items() if not k.startswith("_")}))
+    return packet
+
+
 def canonical(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
@@ -136,7 +176,7 @@ def sha(text: str) -> str:
 
 def render_packet(packet: dict[str, Any]) -> str:
     """The user message. Web text is fenced and labelled untrusted."""
-    meta = {k: packet[k] for k in ("target_company", "website", "item")}
+    meta = {k: packet[k] for k in ("target_company", "website", "identity_gate", "item") if k in packet}
     parts = ["CLASSIFICATION METADATA (trusted, from the Norwegian business registry and the deterministic pipeline):",
              json.dumps(meta, ensure_ascii=False, indent=1),
              f"TITLE (untrusted web text): {packet['item']['title']}"]

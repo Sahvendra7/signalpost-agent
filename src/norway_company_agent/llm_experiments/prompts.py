@@ -102,6 +102,18 @@ ENTITY RULES
 OUTPUT FIELDS: evidence_quotes, subject_entity, subject_relation, is_about_target_company (yes/no/unclear), reason, uncertainty."""
 
 
+ENTITY_RULES_V2 = """ENTITY RULES (v2)
+- The target is the exact legal entity identified by legal_name and organisation_number. brand_tokens_not_identity lists the brand words in its name: a brand mention is NOT evidence that an item is about the target, because the same brand can belong to a parent group, sister companies or foreign entities.
+- website.operator_status is a deterministic assessment of who operates the site: target_operated (the site states the target's own legal identity), brand_only (only the brand; presumed the target's own), group_site or other_entity (the site belongs to the group or another legal entity). identity_gate says whether the item itself names the exact target. These are facts you must not contradict; an item reaches you only after passing the deterministic identity checks.
+- Even so, judge from the text who the item is about. If it is about a parent, sister, subsidiary, federation, foreign namesake, customer or supplier rather than the target's own action, subject_relation must say so and the decision is "withhold".
+- A company name in a menu, footer, header or byline is not evidence."""
+
+ORG_STATEMENTS = """ORGANISATIONS' STATEMENTS (political parties, associations, unions, NGOs, public bodies)
+- Publish only when the text states an ACTION the organisation (or an officer acting for it) took or will take: formally submitting a proposal, asking a formal question of a minister, raising a case in a parliamentary committee, voting or deciding, electing or appointing its own officers, holding a meeting or conference, launching a campaign, publishing its own report or programme, a stated joint initiative with another party.
+- Commentary or criticism of others, general policy explanations ("X wants more people in work"), relayed opinions from a speech or interview, and "demands" without a stated action are opinion_or_promotional_profile: withhold.
+- A separate affiliated entity (a youth organisation, a local branch with its own organisation number) is not the target."""
+
+
 @dataclass(frozen=True)
 class PromptVersion:
     id: str
@@ -117,10 +129,25 @@ class PromptVersion:
         return hashlib.sha256(body.encode("utf-8")).hexdigest()
 
 
+P2_V2 = f"""You classify one candidate item found on a Norwegian organisation's website for a company-intelligence product that publishes only genuine news about the exact target legal entity.
+
+Work evidence-first: first select the exact passages that show what the item is and who it is about, then classify only from those passages. A "publish" decision must be supported by a quoted passage that states the target's own development, action or event. If no passage states one, the decision cannot be "publish".
+
+{RUBRIC.split("ENTITY RULES")[0].strip()}
+
+{ENTITY_RULES_V2}
+
+{ORG_STATEMENTS}
+
+{SAFETY}
+
+{FIELDS}"""
+
 PROMPTS = {p.id: p for p in (
     PromptVersion("news-p1-binary-v1", "strict binary with abstain", P1, evidence_first=False, thinking_level="MINIMAL"),
     PromptVersion("news-p2-evidence-v1", "evidence-first", P2, thinking_level="MINIMAL"),
     PromptVersion("news-p2-evidence-think-v1", "evidence-first + model thinking (LOW), structured final output", P2, thinking_level="LOW"),
     PromptVersion("news-p3-counter-v1", "evidence-first + counterexamples", P3, thinking_level="MINIMAL"),
     PromptVersion("news-p4-twostage-v1", "separate content and entity stages", P4_CONTENT, thinking_level="MINIMAL", two_stage=True),
+    PromptVersion("news-p2-evidence-v2", "evidence-first, v2 entity rules (no brand aliases, deterministic operator facts) + organisations' statements rule", P2_V2, thinking_level="MINIMAL"),
 )}

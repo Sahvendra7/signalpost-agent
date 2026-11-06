@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import dataclasses
+import hashlib
 import gzip
 import json
 import os
@@ -51,7 +52,7 @@ def main() -> None:
     p.add_argument("--rpm", type=float, default=10)
     p.add_argument("--workers", type=int, default=2)
     p.add_argument("--max-output-tokens", type=int, default=1536)
-    p.add_argument("--key-env", default="GEMINI_API_KEY", help="name of the environment variable holding the key (never its value)")
+    p.add_argument("--max-usd", type=float, default=None, help="hard cap on the paid-equivalent cost of this run (required with --live)")
     p.add_argument("--thinking", choices=["MINIMAL", "LOW", "MEDIUM", "HIGH"], help="override the prompt's thinking level (new prompt id)")
     args = p.parse_args()
 
@@ -69,16 +70,21 @@ def main() -> None:
     if args.live:
         if args.max_calls <= 0:
             raise SystemExit("--live needs an explicit --max-calls budget")
-        if not args.key_env.startswith("GEMINI_API_KEY"):
-            raise SystemExit("--key-env must name a GEMINI_API_KEY* variable")
-        config = GeminiConfig.from_env(os.environ, model=args.model, api_key=os.environ.get(args.key_env, "").strip(), _force_enabled=True)
+        if args.max_usd is None:
+            raise SystemExit("--live needs an explicit --max-usd budget")
+        # One authorised project only (2026-11-06): the single GEMINI_API_KEY; additional project keys are not used.
+        key = os.environ.get("GEMINI_API_KEY", "").strip()
+        revoked = Path(os.environ.get("SIGNALPOST_REVOKED_KEYS_FILE", ROOT / "out/v32/revoked_key_sha256.txt"))
+        if revoked.exists() and hashlib.sha256(key.encode()).hexdigest() in revoked.read_text().split():
+            raise SystemExit("GEMINI_API_KEY is on the revoked/exposed key list: rotate it before making API calls")
+        config = GeminiConfig.from_env(os.environ, model=args.model, api_key=key, _force_enabled=True)
         if not config.enabled:
             raise SystemExit(f"Gemini not configured: {config.disabled_reason}")
         provider = GeminiProvider(config)
     summary = run_items(experiment_id=args.experiment_id, dataset=args.dataset or args.packets.name.split(".")[0], packets=packets,
                         prompt=prompt, model=args.model, provider=provider, cache=ResponseCache(args.cache),
                         out_path=args.out, root=ROOT, rpm=args.rpm, workers=args.workers, max_calls=args.max_calls or 0,
-                        max_output_tokens=args.max_output_tokens,
+                        max_output_tokens=args.max_output_tokens, max_usd=args.max_usd,
                         progress=lambda n, t: print(f"  {n}/{t}", file=sys.stderr, flush=True) if n % 25 == 0 or n == t else None)
     print(json.dumps({k: summary[k] for k in ("experiment_id", "items", "ok", "api_failures", "api_calls_made", "cache_hits", "input_tokens",
                                              "output_tokens", "thoughts_tokens", "paid_equivalent_cost_usd", "latency_ms_p50", "decisions",

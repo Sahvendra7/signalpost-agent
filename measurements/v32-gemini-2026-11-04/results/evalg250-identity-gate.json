@@ -1,0 +1,2404 @@
+{
+ "860152002|news_item|sulland.no/artikler/nyheter/slik-gjoer-du-din-bmw-klar-for-vinteren|2026-11-03|2ca21d79": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "875596942|news_item|betelhorten.no/feeds/8213437807668549736/comments/default|2019-06-19|6e641771": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "875596942|news_item|betelhorten.no/feeds/8091964502794921007/comments/default|2026-05-16|05647f4a": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "893782052|news_item|musikkverkstedet.org/?p=160|2026-05-23|d741d9b0": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "915363954|news_item|humlenadvokater.no/avisartikler|2016-01-02|20da5975": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "915363954|news_item|humlenadvokater.no/hei-verden|2016-02-02|c99a8187": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3557|2026-07-20|5089ddb0": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3568|2026-07-22|eba4e7f2": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3579|2026-07-24|010d6be9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3594|2026-08-02|4cb36db9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3495|2026-08-02|f876bf10": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3598|2026-08-05|7cdd2356": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3600|2026-08-09|4529e023": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3607|2026-09-02|e1196ebc": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3621|2026-09-15|8c990152": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "916574347|news_item|mp-energi.no/?p=3617|2026-10-07|d2e83ed8": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/c2u-group-officially-a-training-partner-to-lean-forum-sweden|2023-05-08|07a0cd0a": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/can-a-simple-process-map-help-you-to-reduce-inventory|2023-05-08|d057a842": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/great-start-of-the-execute-program-in-skien-norway|2023-05-08|04b6e590": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/artikel-nummer-1|2023-05-08|d80e30c6": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/do-you-want-to-improve-your-results-performance-management|2023-05-19|c0c64d28": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/mr-hyodo-visits-scandinavia|2023-10-03|e081098e": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/to-lead-model|2024-03-27|9afc59d1": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/linda-rosen|2024-04-29|b6e0d1d4": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/the-first-line-leader-crucial-to-your-business-performance|2024-05-22|228f8f84": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "918795189|news_item|c2ugroup.se/morgan-lundberg-cost-engineering|2024-05-30|b263b9ed": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/beleggleggere|2020-12-04|0ffd57d6": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/betongarbeidere|2020-12-04|70adbe0b": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/blikkenslagere|2020-12-04|8ec94d4c": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/elektriker|2020-12-04|f1110f12": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/flislegger|2020-12-04|e287d228": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/maler|2020-12-04|1b980953": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/renhold|2020-12-04|d59a4467": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/rorlegger|2020-12-04|fe3f448c": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/snekker|2020-12-04|f8ed228f": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920010571|news_item|personell.as/taktekker|2020-12-04|5947165c": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/02/01/finnes-det-hjelp-for-tinnitusplager|2019-02-01|123ac307": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/02/02/hvordan-beskytte-seg-mot-stoy|2019-02-02|a6e6e133": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/02/03/hva-koster-horeapparater|2019-02-03|d920fe44": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/03/04/jeg-har-fatt-horeapparat-tildelt-hos-en-annen-audiografklinikk-kan-jeg-fa-time-hos-melhus-horsel-da|2019-03-04|d5c65412": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/03/05/jeg-er-ikke-fornoyd-med-mine-horeapparater-hva-kan-arsaken-vaere|2019-03-05|c66ca5e3": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/03/06/hvordan-bevarer-jeg-god-lyd-i-mine-horeapparater|2019-03-06|bff919c6": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/03/09/ma-jeg-ha-henvisning-for-a-fa-time|2019-03-09|86261e63": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "920389139|news_item|melhushorsel.no/2019/03/10/nar-bor-jeg-teste-horselen|2019-03-10|f3fba1ba": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/sureplay-underlag-for-hog-sakerhet-pa-lekplatser|2018-11-04|b3f38dba": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/viktigt-att-tanka-pa-nar-du-ska-installera-platgjutet-gummugranulat|2018-11-16|014b823b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/fordelar-med-sureplay-platsgjutet-gummigranulat|2018-11-29|da12a904": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/installation-av-konstgras|2018-12-10|88ef3fdf": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/vilka-krav-staller-du-pa-ditt-konstgras|2018-12-18|65a5d98c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/gor-ett-hallbart-val-valj-konstgras-som-haller-i-langden|2018-12-26|ba57c7c2": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/konvertering-fran-tennis-till-padel-en-succe-for-tennisklubben-i-lund|2019-03-04|8645bf29": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/12-ar-senare-sureplay-i-ystad|2019-05-11|1bd5fb9f": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/padel-med-hk-malmo-pa-sportcenter-syd|2020-01-17|cb317c6c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/fallskydd-sureplay-nu-annu-battre-bade-for-barn-och-for-miljo|2020-02-14|61af5cc4": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/frodin-ar-trafik-fritid-i-mellersta-och-norra-sverige|2020-05-26|6faab2cd": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/langasands-if-ordnade-tennisbanor-i-toppskick|2020-09-23|e84c689b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/marknadens-basta-hardcourt-i-stora-wasby|2020-09-23|8a009907": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/se-tiny-line-marker-in-action|2020-10-20|f1a67b91": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/projekt-for-hallbar-tennis-i-malmo-gjorde-succe|2021-01-19|c885f9bd": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/koncept-som-skapar-nya-mojligheter-inom-padel|2021-03-11|f4eeabc5": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/reseindustrin-gar-mer-mot-upplevelser-och-upplevelsepaket|2021-06-21|7215c098": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/multisportanlaggning-pa-gislovs-ip|2021-09-07|c476156c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/trafik-fritid-blir-delagare-i-padel-courts-deluxe|2021-12-20|93173fe5": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/europas-forsta-poptennisbana-pa-konstgras|2022-04-22|52007680": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/poptennis|2022-06-27|c3ce8bdc": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/padmax|2022-06-29|b7b93984": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/miljovanligare-bindemedel-gor-sureplay-annu-battre|2023-02-08|51cdae11": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/europas-forsta-inomhusanlaggning-for-poptennis-invigd|2023-05-24|0460072d": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/ny-farg-gor-stor-skillnad|2023-09-22|adb72f73": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/det-sparar-oss-oerhort-mycket-tid|2024-04-19|80a59a32": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/forlangd-tennissasong-med-hybridgrusbanor-conipur-pro-clay|2024-09-26|f012537a": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/trafik-fritid-presenco-sport|2026-03-09|b0bbfa70": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/trafik-fritid-natur-fritid|2026-03-13|b8346ced": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "922030065|news_item|trafik-fritid.se/trafik-fritid-gront-rent|2026-04-14|94531deb": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/samvaersvegring|2022-06-15|0915abe9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/foreldreansvar-etter-samvaersnekt|2022-06-15|c5b62b7d": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/emd-samvaerssabotasje|2022-06-16|1ba709a1": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/voldtekt|2022-08-09|5d5a354d": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/fordeling-av-verdier|2022-08-12|43c796ab": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/vektlagte-momenter-ved-valg-av-bosted|2022-09-01|d146fcf2": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/fordele-verdier-skilsmisse|2022-09-06|e1f7bc77": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/pastand-om-overgrep-i-foreldretvister|2023-01-17|cec53ec7": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/delt-fast-bosted|2023-10-09|bf61fa2b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "923453083|news_item|advokatrm.no/skolevalg|2024-01-05|cfdf688b": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/the-role-of-family-policy-regimes-in-work-family-adaptations-polish-parents-in-norway-and-poland|2017-07-18|cdef1eab": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/the-role-of-family-policy-regimes-in-work-family-adaptations-polish-parents-in-norway-and-poland|2017-07-18|6328bfe4": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/book-chapter-in-new-anthology-co-designing-economies-in-transition-radical-approaches-in-dialogue-with-contemplative-social-sciences-how-to-make-what-really-matters-count-in-economic-decision-makin|2018-02-01|cedf69b4": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/preventing-violence-against-women-in-the-nordic-countries-gender-blind-or-gender-based-prevention|2018-03-09|48be679e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/same-but-different-polish-and-norwegian-parents-work-family-adaptations-in-norway|2018-03-21|e6db9429": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/same-but-different-polish-and-norwegian-parents-work-family-adaptations-in-norway|2018-03-21|edfa9301": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/measuring-violence-mainstreaming-gender-does-adding-harm-make-a-difference|2018-11-20|e6c68892": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/measuring-violence-mainstreaming-gender-does-adding-harm-make-a-difference|2018-11-20|9b8eb5a4": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/the-social-dynamics-of-revictimisation-and-intimate-partner-violence-an-embodied-gendered-institutional-and-life-course-perspective|2019-02-11|81730ef8": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/the-social-dynamics-of-revictimisation-and-intimate-partner-violence-an-embodied-gendered-institutional-and-life-course-perspective|2019-02-11|b23bcfed": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/vold-i-parforhold-kjonn-likestilling-og-makt|2019-06-20|a0b31c3c": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/vold-i-parforhold-kjonn-likestilling-og-makt|2019-06-20|725affec": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/vold-i-naere-relasjoner-forstaelser-konsekvenser-og-tiltak|2019-08-10|79fc2ae5": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/vold-i-naere-relasjoner-forstaelser-konsekvenser-og-tiltak|2019-08-10|70e446cd": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/men-masculinities-and-intimate-partner-violence|2019-09-06|63795cef": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/men-masculinities-and-intimate-partner-violence|2019-09-06|d6dd9843": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "929471288|news_item|margunnbjornholt.no/violence-against-women-migrants-and-refugees|2022-01-20|f28a4a31": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932151871|news_item|lideco.se/sv/aktuellt/post/vd3|2026-10-02|2dc06926": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932151871|news_item|lideco.se/sv/aktuellt/post/produktion|2026-10-09|325a69d7": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932151871|news_item|lideco.se/sv/aktuellt/post/lideco|2026-10-09|bc4741de": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/stock-exchange-releases/2026/change-in-valmets-executive-leadership-team-pia-aaltonen-forsell-appointed-chief-financial-officer|2026-07-24|e567a5f6": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-to-replace-hansol-papers-legacy-quality-control-systems-qcs-to-enhance-quality-efficiency-and-long-term-reliability|2026-08-05|99e49b16": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/sheets-unlimited-enhances-corrugated-board-warp-control-and-production-efficiency-with-valmet-iq-quality-control-system|2026-08-12|63a0cac7": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-bhel-team-strengthens-its-leadership-in-flexible-operations-in-india|2026-08-18|1e035d03": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/change-in-valmets-executive-leadership-team2|2026-08-19|e4e758e6": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-to-divest-its-pump-business-to-metso|2026-08-24|b63db19e": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-supports-jeonju-paper-corporations-energy-and-machine-efficiency-targets-with-press-section-rebuild|2026-08-26|aa0d42b7": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-delivers-the-first-commercial-scale-3d-fiber-line-to-metsa-group-enabling-high-quality-molded-fiber-packaging-production|2026-08-27|76889c15": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-delivers-recovery-boiler-modification-to-stora-enso-varkaus-mill-in-finland-to-improve-reliability-and-cost-efficiency|2026-08-28|bf01de2e": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-improves-heat-recovery-and-energy-efficiency-at-helens-salmisaari-pellet-heating-plant-in-finland|2026-08-31|48d9d290": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/stock-exchange-releases/2026/valmets-financial-reporting-in-2027|2026-08-31|6589b000": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmets-quality-control-systems-support-viet-nam-koro-paper-in-achieving-efficient-high-quality-tissue-production-on-new-lines|2026-09-09|cb3d1bfc": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-improves-reliability-and-safety-at-sodra-monsteras-through-modernization-services-for-recovery-boiler-and-evaporation-plant|2026-09-14|166abfd5": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmets-digital-solutions-to-optimize-district-heating-production-and-energy-balance-for-gren-in-tartu-estonia|2026-09-15|81755af7": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/stock-exchange-releases/2026/change-in-valmet-oyjs-holding-of-treasury-shares2|2026-09-18|0ec22d3c": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-selected-for-louisiana-green-fuels-carbon-negative-power-project|2026-09-21|fef50f33": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-supplies-a-complete-board-making-line-for-efficient-premium-quality-coated-board-production-in-asia|2026-09-23|4204cbb9": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-launches-renewed-sizer-roll-cover-portfolio-for-improved-performance-and-longer-running-intervals|2026-09-29|2b23c7d4": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-dnae-v8.1-release--whats-new|2026-09-30|78a4d9bd": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/collaboration-between-valmet-and-vtt-supports-faster-innovation-and-technology-scale-up|2026-10-01|5687e03a": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-has-completed-the-divestment-of-its-pump-business-to-metso|2026-10-01|1ce37612": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-continues-its-partnership-with-anhui-linping-circular-development-with-delivery-of-a-new-board-making-line-for-lightweight-packaging|2026-10-12|02f209d3": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/territory-instruments-to-strengthen-the-reach-of-valmets-automation-and-optimization-solutions-in-australia|2026-10-13|1d03e081": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/two-new-valmet-bctmp-lines-to-guangxi-jingui|2026-10-16|090eaf7b": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmets-key-technology-delivery-supports-efficient-and-flexible-pulp-production-at-the-new-century-sunshine-rizhao-mill-in-china|2026-10-21|e05e5776": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/other-news/2026/valmet-to-deliver-a-new-bctmp-line-to-itc-bhadrachalam-mill-in-india-to-increase-high-quality-pulp-production|2026-10-26|8bc42923": {
+  "decision": "withhold",
+  "code": "group_site_item_does_not_name_exact_target",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmet-to-acquire-leading-manufacturing-execution-system-mes-business-from-tieto-to-accelerate-industrial-transition-towards-autonomous-operations|2026-10-27|74b2b097": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/stock-exchange-releases/2026/valmet-and-metsa-fibre-reach-settlement-on-kemi-bioproduct-mill-arbitration|2026-10-30|03e918f6": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/tt-line-expands-use-of-automation-in-its-fleet-selects-valmet-to-supply-marine-automation-system-to-two-new-green-ship-2.0s|2026-11-03|c73a5c3c": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "932383357|news_item|valmet.com/news/press-releases/2026/valmets-automation-improves-hydropower-plants-performance-for-kainuun-voima-in-finland|2026-11-04|045c1a2c": {
+  "decision": "withhold",
+  "code": "item_names_other_legal_entity_under_brand",
+  "names_target_exactly": false,
+  "other_entities": [
+   "Valmet Oyj"
+  ],
+  "group_names": []
+ },
+ "939600515|news_item|nesna.kommune.no/aktuelt/norskopplaring-og-kurs-ved-nesna-voksenopplaring.5723.aspx|2026-10-16|c1281f90": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "939600515|news_item|nesna.kommune.no/aktuelt/hostens-vaksiner-mot-influensa-pneumokokksykdom-og-covid-19.5737.aspx|2026-10-27|52a4ef43": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "939600515|news_item|nesna.kommune.no/aktuelt/tydeligere-lederstruktur-innen-helse-og-omsorg.5756.aspx|2026-11-02|c7cb88c2": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/nyttaarsaften-2025-her-er-reglene-for-din-kommune.6736924.html|2025-12-22|72c65fa8": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/ledig-stilling-som-brannkonstabel-deltid-i-kvinesdal.6739353.html|2026-02-03|1c12c7c9": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/vinn-premie-bli-med-paa-vaar-podkast-konkurranse.6739374.html|2026-02-24|44afc36b": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/brannsjefen-roser-mannskapene-etter-vellykket-redningsaksjon.6741063.html|2026-04-29|aca88a92": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/ny-veileder-slik-tilrettelegger-du-for-brannvesenets-innsats-i-agder.6746035.html|2026-05-21|4fd419ad": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/klargjoer-for-feiing-unngaa-sot-i-stua.6746235.html|2026-06-19|a3073cdf": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/er-du-vaar-neste-brannkonstabel.6751481.html|2026-08-18|b428feed": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/mange-aktoerer-bidro-da-skogbrannen-herjet-ved-buksetjoedn.6751595.html|2026-09-02|d64b8c9a": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/pning-av-ny-brannstasjon-paa-vanse.6753576.html|2026-09-23|b5f3d641": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "969952890|news_item|brannsor.no/fr-det-brenner.6754362.html|2026-10-20|c7dd3041": {
+  "decision": "pass",
+  "code": "exact_target_named",
+  "names_target_exactly": true,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/ap-trosser-stortinget-og-svikter-oljearbeiderne|2026-10-07|ac398802": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/arbeidslinja-er-taperen-i-statsbudsjettet|2026-10-07|be20c1c9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/frp-vil-ha-flere-i-arbeid-og-faerre-pa-trygd|2026-10-07|44d8b24b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/ingen-penger-til-nye-politihelikoptre|2026-10-07|f2669321": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/ingen-satsing-pa-eldre-og-syke-i-regjeringens-budsjett|2026-10-07|caf3777f": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/kjonnslemlestelse-og-tvangsekteskap-horer-ikke-hjemme-i-norge|2026-10-07|b2a0611a": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/mer-i-bompenger|2026-10-07|6c3ece48": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/en-mork-dag-for-bilistene|2026-10-07|8f99398a": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/et-puslete-svar-pa-en-alvorlig-situasjon|2026-10-07|a5f7ae93": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/som-a-tro-pa-julenissen-2|2026-10-08|dc679b12": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/na-er-det-pa-tide-med-avgiftskutt|2026-10-09|d5899e75": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/sebastian-ytrevik-ny-leder-i-fpu|2026-10-10|1f821b57": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/mange-tor-ikke-snakke-om-dette|2026-10-10|c4c5f632": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/sebastian-ytrevik-ny-leder-i-fpu|2026-10-12|a1802c78": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/det-er-for-mange-ubesvarte-sporsmal|2026-10-13|ed9033b3": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/hoksrud-regjeringen-trenerer-viktige-vei-og-togprosjekter|2026-10-13|6996dbf8": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/92-5-prosent-av-sosialhjelpen-gar-til-innvandrere-frp-krever-innstramminger|2026-10-14|a9dc6790": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/vil-ha-fortgang-om-kjernekraft|2026-10-14|9036f6da": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/frp-er-positiv-til-gjedrem-utvalget|2026-10-15|e816b508": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/vil-stenge-kriminelle-ute-av-barnevernet|2026-10-15|6a0addff": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/radgiver-i-fremskrittspartiets-hovedorganisasjon|2026-10-16|c74ffcc8": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/norge-ma-kartlegge-omfanget-av-kriminelle-organisasjoner-og-klaner|2026-10-17|23961278": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/norge-star-ved-et-veiskille|2026-10-17|2f2dabc8": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/frp-vil-skjerpe-kontrollen-med-velferdssvindel|2026-10-19|fc58d241": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/utfordrer-samferdselsministeren|2026-10-19|a5029a31": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/vil-heller-styrke-ordningen|2026-10-19|f874bf49": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/det-viktigste-ma-fa-strom-forst|2026-10-20|570affab": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/frp-vil-stille-strengere-krav-til-datasentre-det-viktigste-ma-fa-strom-forst|2026-10-20|02484fe1": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/krever-svar-om-ringeriksbanen|2026-10-20|a81c12b0": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/auf-har-lenge-ligget-i-en-solidaritetsnarkose|2026-10-20|93d5d1b5": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/grillet-samferdselsministeren-med-24-sporsmal|2026-10-21|139c45d7": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/skuffende-og-arrogant|2026-10-23|5a9c3737": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/vil-ha-garanti-for-utbygging|2026-10-23|0a7c2da3": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/ber-regjeringen-utrede-kjop-av-gull|2026-10-26|e6e03046": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/vil-gjore-det-enklere-a-slette-medlemskap-i-trossamfunn|2026-10-28|9cc63acb": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/vestlandet-far-lite|2026-10-28|a5d29ad4": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/krever-svar-fra-samferdselsministeren-ikke-en-utommelig-minibank|2026-10-29|2f223ead": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/slar-alarm-om-treg-boligbygging|2026-10-29|e4475663": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/vi-ma-laere-av-det-som-skjer-i-frankrike|2026-10-29|9098e7bc": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/mot-sebastian-ytrevik|2026-10-31|90052573": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/frp-far-stotte-fra-boligbransjen-slutt-a-prate-begynn-a-handle|2026-11-02|1823cb6f": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/frp-stotter-ikke-fjerning-av-sprakkrav|2026-11-02|d3da75a8": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/frp-vil-ha-serios-behandling-av-datasentre|2026-11-02|f4e0694d": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyheter/helsereformutvalget-peker-i-frps-retning|2026-11-02|0d44f912": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "970374825|news_item|frp.no/nyhetsdogn/stenseng-sminker-virkeligheten|2026-11-03|0cadf629": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "975839028|news_item|siljanil.no/news|2026-03-13|82cc9962": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "975839028|news_item|siljanil.no/news|2026-03-19|cebb3b36": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "975839028|news_item|siljanil.no/news|2026-04-08|fdfdec5f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "975839028|news_item|siljanil.no/news|2026-04-10|d35ac894": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "975839028|news_item|siljanil.no/news|2026-05-11|d86bec2e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/sommerens-medlemsblad-2|2025-07-01|e37fbf24": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/stor-sorgkonferanse-i-oslo|2025-09-05|d8e3812c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/bli-medlem-na-kun-kr-50-ut-aret-2|2025-09-23|700cab9f": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/hostens-webinarer-21-okt-sorg-og-mat-6-nov-sorg-og-kropp|2025-10-13|fc49ecde": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/foreningen-har-fatt-nytt-navn|2025-11-07|1bc96df7": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/nytt-medlemsblad-2|2025-11-07|56f79039": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/2296-2|2026-03-17|561905fe": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/sommeren-medlemsblad-ble-sendt-ut-i-juli|2026-08-13|d28a3da6": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/vil-du-delta-i-et-forskningsprosjekt-om-sorg|2026-09-18|2cf5f648": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "980624404|news_item|etbarnforlite.no/stott-auksjonen-til-inntekt-for-adjo-bitteliten-minnebokser|2026-10-12|315a463c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/a-white-curved-house|2025-08-09|1c21b033": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/now-is-the-right-time-to-change-your-life-and-enjoy-the-luxury-life-can-offer|2025-08-09|f838f57d": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/the-black-box-home|2025-08-09|0769dfd2": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/the-glass-house|2025-08-09|6028a465": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/the-house-with-the-balcony|2025-08-09|5130a8dd": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/the-pool-house|2025-08-09|0a8fbb70": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/the-xs-luxury-apartment|2025-08-09|b9a85120": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/the-sky-is-the-limit-the-luxury-homes-we-love-to-explore|2025-08-09|13d136d9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/when-is-the-right-time-to-buy-an-apartment-learn-from-our-experts|2025-08-09|85baa8e4": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "983687008|news_item|tonsberg-roklub.no/trk2025/a-balcony-is-a-must-key-feature-in-your-next-luxury-condo|2025-08-09|bb73f6ac": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-08-30|e999b6b9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-09-01|52e80b02": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-09-04|ac45a39b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-09-08|a18213b9": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-11-04|728b795c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-11-04|b89d136a": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-11-11|faff9782": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-11-18|f2fc04be": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2025-12-17|0fbf148b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-01-13|19e21c89": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-02-08|8a3c5178": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-02-10|9f62c835": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-02-13|42a5ffda": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-02-19|63863456": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-05-04|59d2c45f": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-05-05|ead63c42": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-05-12|77d75d69": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-05-20|3ad7951b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-07-26|abc8264c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-08-04|03bfeed0": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-08-24|8c0a1122": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-08-24|9c9cbb42": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-08-27|fb84d8b2": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-08-28|5ace4158": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-09-11|0a937062": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-09-16|95d0cab5": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-09-22|3cab5b9e": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-10-10|d59d33ef": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-10-30|16d75aec": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984067844|news_item|btkd.no/nyheter|2026-11-04|64a796ae": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984938195|news_item|rhodesianridgeback.no/2026/08/19/kennel-bellorosario-har-fatt-valper|2026-08-19|a9e6a66f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984938195|news_item|rhodesianridgeback.no/2026/09/10/lillispesial-2026|2026-09-10|ce7b5ea6": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984938195|news_item|rhodesianridgeback.no/2026/09/26/vinnerlister|2026-09-26|b0df5f23": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984938195|news_item|rhodesianridgeback.no/2026/10/03/kennel-kifani-har-fatt-valper|2026-10-03|96422345": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984938195|news_item|rhodesianridgeback.no/2026/10/09/oppgradering-hjemmeside|2026-10-09|dacef936": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "984938195|news_item|rhodesianridgeback.no/2026/10/28/en-litt-annerledes-jakthund|2026-10-28|934c602e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhibition-norwegian-presence-ventura-lambrate-milan|2015-04-24|5acfecbc": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhibition-100-norway-at-tent-london|2015-09-21|0fb82925": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhibition-norway-designs-na-vol-2-skala-oslo-october-8-november-4|2015-10-07|b038fd6e": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhibition-icons-of-norway-skandium-february-2016|2016-02-04|8a82d3d3": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/norwegian-structure-at-ventura-lambrate-milan-april-2016|2016-03-22|244b4b26": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhibition-norway-designs-na-vol-3-seksten|2016-10-06|5e61a62b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/launch-hold-hverdag-for-magnor-glassverk|2017-01-23|b066f45c": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/launch-drops-for-magnor|2017-09-01|74aa8af0": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/collaboration-with-volver|2019-09-04|8fb30f34": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/launch-of-new-colours-drops-by-magnor-glassverk|2019-09-04|58519557": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhbition-take-your-time|2020-06-22|41c33e33": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/launch-of-three-new-rugs-for-volver|2020-11-05|3acecead": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/launch-of-drops-green-for-magnor|2022-01-26|70c4f35f": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/exhibition-in-between-oslo-design-fair-x-sorgenfri|2022-08-30|456d50a0": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "988506656|news_item|kristinebjaadal.no/instagram|2025-08-05|5a231b70": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "990255105|news_item|tkk.no/blogg|2026-10-25|d29ac8fa": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992183225|news_item|17-mai.no/aktuelt/bergens-beste-dag-har-fatt-et-nytt-digitalt-hjem|2026-10-09|9701d50d": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/anerkjennelse|2025-10-28|8252ba9e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/besok-hos-nrks-nyhetsmorgen-tilbake-fra-ferie-til-jobb|2025-10-28|4fcf8245": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/en-sunn-mental-helse|2025-10-28|f42dbb2f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/far-og-sonn-lager-julekalender|2025-10-28|c7e9c618": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/feedback|2025-10-28|e4aef490": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/foredrag-i-cannes-og-nye-bilder|2025-10-28|c661f4c9": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/gjest-i-podcast|2025-10-28|142563f7": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/gjest-i-podcasten-talertid|2025-10-28|8515a91a": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/grenselost-arbeidsliv-kan-bety-trobbel|2025-10-28|2a91ea72": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/happy-valentine-kjaerlighetsbanken|2025-10-28|692994d7": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/hvordan-fremme-trivsel-og-engasjement-i-den-nye-arbeidshverdagen|2025-10-28|7f682d7d": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/hvordan-jobber-dere-med-psykososialt-arbeidsmiljo|2025-10-28|930a3e7d": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/mental-health-under-pressure|2025-10-28|73bfdd25": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/psykolog-berges-julekalender|2025-10-28|741be26f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/psykolog-berges-7-tips-til-mellomlederen|2025-10-28|9ce28838": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/publikums-reaksjon|2025-10-28|7480a53e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/sees-pa-linkedin|2025-10-28|ad8be4ce": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/selvmord|2025-10-28|cf511337": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/slik-far-du-hodet-pa-plass-etter-ferien|2025-10-28|f138c104": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/sommergave-til-alle-ansatte|2025-10-28|47b8e0b8": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/stresshandtering-med-feil-fokus|2025-10-28|dfc36f21": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/sykefravaer|2025-10-28|a7f82a29": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/sovn|2025-10-28|c04610fe": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/tillbakemelding-fra-workshop|2025-10-28|4602511f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/toleransevinduet-som-verktoy|2025-10-28|71c5b25c": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/vitaminfilm-jobb-fritid-balansen|2025-10-28|ea9ff1a6": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/vitaminfilm-stressmestring|2025-10-28|1b679d58": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/nye-bilder-pa-veien-i-trondheim-av-maja-johansen|2025-11-12|4d6b1a9e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/psykolog-berges-julekalender-2025|2025-11-12|cb310a96": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/dette-sier-kundene-om-janmartin-berge|2026-05-05|fd892bae": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/fredagsapent-hos-psykologen-loping-pa-godt-og-ondt|2026-05-08|a80a3ae0": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/teknostress-nar-hodet-aldri-far-helt-fri|2026-05-15|b8cb8c98": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/fredagsapent-hos-psykologen-mellom-stimulus-og-respons-et-valg|2026-05-23|d747ac1f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/post-ferie-blues|2026-08-07|3dbc9d8e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/ hvordan-spille-hverandre-gode-pa-jobb|2026-08-14|33d3c67b": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "992441070|news_item|psykologberge.no/artikler/hjemmekontor-fleksibilitet-fellesskap-tillit|2026-08-21|7bb6a84e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/festkonsert|2026-01-17|fb84339a": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/smting|2026-01-17|db3efa72": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/the-brazz-brothers|2026-01-23|623715f6": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/tuva-halse-quintet|2026-02-04|3205d8d8": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/3qpejc55br7sm8ebxzs48qx6ef4kyw|2026-02-07|08bf25e5": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/nypan-trio|2026-02-25|48d22002": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/trio-oro|2026-03-14|28ec9a0b": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/kk-med-sarah-camille-tuva-frden|2026-03-14|b93ec7b5": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/3bo032v2bfetw38wnacrnb84x0i67h|2026-03-20|055bbe39": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/weejuns|2026-04-15|3a24db99": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/trygve-fiske-sextet|2026-04-22|200a409e": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/nesodden-jazzfestival-2026|2026-05-22|932f80a3": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "996316661|news_item|nesoddjazz.no/hjem/nesodden-jazzfestival-2026|2026-05-22|6ba045d7": {
+  "decision": "pass",
+  "code": "target_operated_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "998595975|news_item|nysikt.no/?p=349|2011-09-16|8b306087": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "998595975|news_item|nysikt.no/?p=379|2011-09-29|3ed8d246": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "998595975|news_item|nysikt.no/?p=373|2011-09-29|6512c8bf": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/why-planning-confined-to-finance-limits-business-insight|2026-01-14|eac23924": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/why-the-epm-landscape-is-quietly-defining-the-limits-of-the-cfo-office|2026-01-19|9104285e": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/why-the-future-of-epm-is-about-convergence-and-real-time-decision-making|2026-01-28|64326a6d": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-cpu-january-2026|2026-02-05|271835bc": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-epm-11-2-24-release-highlights-january-2026|2026-02-12|5155607d": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-hfm-bsl-vbscript-transition|2026-03-24|a10b9ebd": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-cpu-april-2026-epm|2026-04-30|8af8349f": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-epm-11-2-25-release-highlights-april-2026|2026-05-13|c22a92f6": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/beyond-the-ticket-what-oracle-application-support-really-looks-like|2026-06-01|068c90ac": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/ai-in-oracle-epm-cloud|2026-06-26|e5f8e8b9": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-epm-cloud-july-2026-update-new-ai-features-for-planning-and-fccs|2026-07-23|4282ec87": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-critical-patch-update-cpu-july-2026-insights-for-epm|2026-08-03|8eb60344": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-epm-11-2-26-release-highlights-july-2026|2026-08-11|e6f0bb56": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-hfm-bsl-migration-update-2026|2026-09-18|39bf7c86": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-epm-cloud-october-2026-update|2026-10-12|4d42055a": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ },
+ "999291988|news_item|inlumi.com/oracle-cpu-october-2026|2026-10-26|797147bc": {
+  "decision": "pass",
+  "code": "brand_only_site",
+  "names_target_exactly": false,
+  "other_entities": [],
+  "group_names": []
+ }
+}

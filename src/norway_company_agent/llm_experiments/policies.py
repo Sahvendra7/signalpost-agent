@@ -57,3 +57,41 @@ def arm_members(items: list[dict[str, Any]], llm: dict[str, dict[str, Any]], *, 
     if not has_reasons:
         out.pop("C_hybrid"); out.pop("D_conservative")
     return out
+
+
+# ---------- V3.2 hybrid remediation: the deterministic identity gate is a hard stage ----------
+
+ARMS_V2 = ("v31", "v31_gate", "A_filter_v2", "C_hybrid_v2", "D_conservative_v2", "B_llm_only")
+
+
+def arm_members_v2(items: list[dict[str, Any]], llm: dict[str, dict[str, Any]], gate: dict[str, str], *, v31_arm: str = "v31") -> dict[str, set[str]]:
+    """`gate[item_id]` is the identity gate's decision ("pass" | "withhold"); a missing entry counts as withhold.
+
+      v31               the release as published (deterministic baseline)
+      v31_gate          V3.1 minus items the identity gate withholds (deterministic only; no LLM)
+      A_filter_v2       V3.1 ∩ gate pass ∩ LLM publish
+      C_hybrid_v2       candidates not hard-rejected by V3.1 ∩ gate pass ∩ LLM publish
+      D_conservative_v2 C_hybrid_v2 ∩ explicit stated event with low uncertainty
+      B_llm_only        LLM publish over the whole pool, no deterministic gate (reference only)
+    The LLM can never publish an item the identity gate or a V3.1 hard gate withheld."""
+    out: dict[str, set[str]] = {arm: set() for arm in ARMS_V2}
+    for item in items:
+        iid = item["item_id"]
+        rec = llm.get(iid)
+        passes = gate.get(iid) == "pass"
+        in_v31 = v31_arm in (item.get("arms") or [])
+        hard = bool(item.get("v31_hard_reject")) or item.get("v31_status") == "absent"
+        if in_v31:
+            out["v31"].add(iid)
+            if passes:
+                out["v31_gate"].add(iid)
+                if llm_publish(rec):
+                    out["A_filter_v2"].add(iid)
+        if llm_publish(rec):
+            out["B_llm_only"].add(iid)
+        if passes and not hard and (in_v31 or item.get("v31_status") == "withheld"):
+            if llm_publish(rec):
+                out["C_hybrid_v2"].add(iid)
+            if conservative(rec):
+                out["D_conservative_v2"].add(iid)
+    return out

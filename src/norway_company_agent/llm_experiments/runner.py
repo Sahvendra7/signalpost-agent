@@ -88,7 +88,9 @@ class RateLimiter:
 @dataclass
 class Budget:
     max_calls: int
+    max_usd: float | None = None          # hard cap on the paid-equivalent cost of this run (from usageMetadata)
     calls: int = 0
+    spent_usd: float = 0.0
     stop_reason: str | None = None
     _lock: threading.Lock = field(default_factory=threading.Lock)
 
@@ -97,8 +99,15 @@ class Budget:
             if self.stop_reason or self.calls >= self.max_calls:
                 self.stop_reason = self.stop_reason or "max_calls_reached"
                 return False
+            if self.max_usd is not None and self.spent_usd >= self.max_usd:
+                self.stop_reason = "max_usd_reached"
+                return False
             self.calls += 1
             return True
+
+    def add_cost(self, usd: float | None) -> None:
+        with self._lock:
+            self.spent_usd += usd or 0.0
 
     def stop(self, reason: str) -> None:
         with self._lock:
@@ -124,6 +133,8 @@ def _call(provider: Any, cache: ResponseCache, limiter: RateLimiter, budget: Bud
              "thoughts_tokens": getattr(response, "thoughts_tokens", None), "model_version": getattr(response, "model_version", None),
              "finish_reason": getattr(response, "finish_reason", None), "quota_ids": getattr(response, "quota_ids", []),
              "retry_delays_s": getattr(response, "retry_delays_s", []), "error_message": getattr(response, "error_message", None), "created_at": datetime.now(timezone.utc).isoformat()}
+    budget.add_cost(paid_cost(model, response.input_tokens, response.output_tokens, getattr(response, "thoughts_tokens", None))
+                    or (0.002 if response.ok else 0.0))  # unknown price: count a conservative $0.002 per call
     if response.error == "http_429_daily_quota":
         budget.stop("daily_quota_exhausted")
     if response.ok:
@@ -133,8 +144,9 @@ def _call(provider: Any, cache: ResponseCache, limiter: RateLimiter, budget: Bud
 
 def run_items(*, experiment_id: str, dataset: str, packets: list[dict[str, Any]], prompt: PromptVersion, model: str,
               provider: Any, cache: ResponseCache, out_path: Path, root: Path, rpm: float = 10, workers: int = 2,
-              max_calls: int = 500, max_output_tokens: int = 1536, progress: Callable[[int, int], None] | None = None) -> dict[str, Any]:
-    limiter, budget = RateLimiter(rpm), Budget(max_calls)
+              max_calls: int = 500, max_output_tokens: int = 1536, progress: Callable[[int, int], None] | None = None,
+              max_usd: float | None = None) -> dict[str, Any]:
+    limiter, budget = RateLimiter(rpm), Budget(max_calls, max_usd)
     code = git_commit(root)
     schema = output_schema(prompt.evidence_first)
 
@@ -186,7 +198,7 @@ def run_items(*, experiment_id: str, dataset: str, packets: list[dict[str, Any]]
                 progress(n, len(packets))
     summary = summarise(records)
     summary.update({"experiment_id": experiment_id, "dataset": dataset, "model": model, "prompt_id": prompt.id,
-                    "prompt_sha256": prompt.sha256, "git": code, "budget_stop": budget.stop_reason, "prices_source": PRICES_SOURCE,
+                    "prompt_sha256": prompt.sha256, "git": code, "budget_stop": budget.stop_reason, "spent_paid_equivalent_usd": round(budget.spent_usd, 6), "max_usd": max_usd, "prices_source": PRICES_SOURCE,
                     "finished_at": datetime.now(timezone.utc).isoformat()})
     out_path.with_suffix(".summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
     return summary
