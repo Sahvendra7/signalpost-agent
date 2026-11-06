@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Great Barrier Reef i Australia: Verdens største korallrike"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Great Barrier Reef",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-05",
+  "date_evidence": "05/10/2026",
+  "decision": "withhold",
+  "reason": "The article is a travel guide about the Great Barrier Reef in Australia and does not report on any development, action, or event concerning the target company, REISELIV.NO AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1326,
+ "input_tokens": 3535,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:53:21.804082+00:00"
+}

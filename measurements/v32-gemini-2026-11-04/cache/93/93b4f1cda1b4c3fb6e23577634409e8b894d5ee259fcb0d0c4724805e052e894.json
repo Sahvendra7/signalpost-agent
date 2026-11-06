@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Veke 20 har bestått av både turneringar, medlemstreningar, kurs og mykje aktivitet på anlegget",
+   "Tysdag var det klart for 5. runde i T-serien, og heile 41 spelarar stilte til start!",
+   "Allereie torsdag var det ny turnering på programmet – Torsdags Scramble nummer 3.",
+   "Fredag var me i gang igjen med Par Trippel Trøbbel-turneringa!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Stord Golfklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-05-18",
+  "date_evidence": "Mon, 18 May 2026 11:54:30 GMT",
+  "decision": "publish",
+  "reason": "The article reports on various activities, tournaments, and training sessions held by the golf club during week 20, which constitutes genuine company activity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1403,
+ "input_tokens": 2831,
+ "output_tokens": 323,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:56:27.881490+00:00"
+}

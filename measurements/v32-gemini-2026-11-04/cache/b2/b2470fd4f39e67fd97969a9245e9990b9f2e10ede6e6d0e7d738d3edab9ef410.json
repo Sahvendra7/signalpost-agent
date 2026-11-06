@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Grimstad finalist til årets maritime kommune 2026"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Grimstad kommune",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-07-06",
+  "date_evidence": "6. juli",
+  "decision": "withhold",
+  "reason": "The article reports on Grimstad municipality being a finalist for an award, which is not a development or action of the target company, Sørlandet Rederiforening.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2450,
+ "input_tokens": 3559,
+ "output_tokens": 207,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:49:06.592091+00:00"
+}

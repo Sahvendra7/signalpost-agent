@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tyrkia og Egeerhavet: Tre øyer med hver sin sjarm Av Reiseliv 16/10/2026"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Reiseliv",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-16",
+  "date_evidence": "16/10/2026",
+  "decision": "withhold",
+  "reason": "The article is a travel guide providing tips and information about islands in Turkey, which constitutes educational content rather than a report on a specific development or action taken by the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1167,
+ "input_tokens": 3588,
+ "output_tokens": 231,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:53:39.644927+00:00"
+}

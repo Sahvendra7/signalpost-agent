@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "WordPress",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a default WordPress 'Hello world' post, which is not a genuine company event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1552,
+ "input_tokens": 1827,
+ "output_tokens": 182,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:37:05.693431+00:00"
+}

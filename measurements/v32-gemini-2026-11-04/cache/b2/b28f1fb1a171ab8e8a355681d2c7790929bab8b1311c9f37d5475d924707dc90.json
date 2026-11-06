@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Gjennom det daglige arbeidet får barna erfaringer med det å ta vare på og gi omsorg til dyrene på gården. Vi sanker egg, gir de mat, gjør rent i de ulike dyregårdene og ser til at høns, kaniner, sauer og katt har det godt."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Jonettaplassen gardsbarnehage AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-08",
+  "date_evidence": "08.09.2026",
+  "decision": "withhold",
+  "reason": "The text describes the daily pedagogical activities and routines of the kindergarten rather than reporting a specific, unique development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5700,
+ "input_tokens": 2238,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:06:38.177819+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fire dager i mai og juni holdt Sagatun Recoveryskole selvstyrkingskurs på Hamar i lokalene til Storhamarstuene."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sagatun Recoveryskole",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-06-15",
+  "date_evidence": "Mon, 15 Jun 2026 09:06:31 +0000",
+  "decision": "publish",
+  "reason": "The article reports on a specific event held by the target company, namely a four-day self-empowerment course conducted by Sagatun Recoveryskole.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1359,
+ "input_tokens": 2514,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:01:33.837492+00:00"
+}

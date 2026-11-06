@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har nye digitale tilbud til dere!",
+   "Under digitale tjenester kan du gå inn på Filmoteket, lage deg en bruker og låne filmer. Flipp er en tjeneste hvor du kan lese en mengde forskjellige magasiner."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Stange kommune",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2024-01-11",
+  "date_evidence": "Publisert/sist endret: 11.01.2024",
+  "decision": "publish",
+  "reason": "The target entity, Stange kommune, announces the launch of new digital services (Filmoteket and Flipp) for its library users.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1208,
+ "input_tokens": 2120,
+ "output_tokens": 259,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:42:17.349777+00:00"
+}

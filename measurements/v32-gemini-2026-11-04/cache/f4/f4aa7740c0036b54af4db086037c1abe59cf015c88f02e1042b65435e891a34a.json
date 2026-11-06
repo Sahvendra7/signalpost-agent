@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Seriehelg – 14. og 15.mars 2026 – Griffen Basketballklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Griffen Basketballklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The item announces and provides logistical information for a basketball tournament (seriehelg) hosted by the target organization, Griffen Basketballklubb.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1779,
+ "input_tokens": 4140,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:04:46.256838+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dette var en av utsagnene til noen deltagere på dagens Recoveryverksted, som omhandlet «identitet og tilhørighet»",
+   "Kårhild introduserer dagen med dagens tema, hun har lang fartstid på Sagatun, hun har vært der i 12 år, som daglig leder, men som nå går av med pensjon."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sagatun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-11-02",
+  "date_evidence": "Mon, 02 Nov 2026 11:37:26 +0000",
+  "decision": "publish",
+  "reason": "The text reports on a specific event held by the organization (a recovery workshop) and announces the retirement of the long-standing general manager.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1548,
+ "input_tokens": 1985,
+ "output_tokens": 294,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:01:58.025888+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Utmärkelsen Teqt Norges Gaselle gikk denne gangen til Tønsberg Blikk og Montasje",
+   "Konferansen ble holdt på historiske Kongsvinger festning, der 33 deltakere fra 12 selskaper i Teqt Norge var samlet til to dager med erfaringsutveksling"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Teqt Norge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-09-11",
+  "date_evidence": "11. sep. 2025",
+  "decision": "publish",
+  "reason": "The article reports on a leadership conference held by Teqt Norge and the presentation of an award to one of its member companies, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1499,
+ "input_tokens": 2016,
+ "output_tokens": 280,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:33:55.370762+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Osaka – møte med Japans historie og dagens kultur"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Osaka",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-27",
+  "date_evidence": "27/10/2026",
+  "decision": "withhold",
+  "reason": "The article is a travel guide about the city of Osaka, which does not constitute a development, action, or event of the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3409,
+ "input_tokens": 3572,
+ "output_tokens": 203,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:54:05.886786+00:00"
+}

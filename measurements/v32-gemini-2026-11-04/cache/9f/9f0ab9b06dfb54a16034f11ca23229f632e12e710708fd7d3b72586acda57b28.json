@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "som stolt partner er AssistCo selvfølgelig på plass med to shops i Unity Arena!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "AssistCo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-01-15",
+  "date_evidence": "15. januar 2026",
+  "decision": "publish",
+  "reason": "The company announces its participation as a partner at the 2026 European Handball Championship, where it operates two shops at the venue.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1235,
+ "input_tokens": 1969,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:25:24.591044+00:00"
+}

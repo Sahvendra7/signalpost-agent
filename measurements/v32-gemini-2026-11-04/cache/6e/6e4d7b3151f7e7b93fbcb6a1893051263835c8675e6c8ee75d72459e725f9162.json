@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oktober i år var den varmaste som er målt i verda nokosinne, ifølgje EUs klimateneste Copernicus.",
+   "Nynorsk Pressekontor Nynorsk Pressekontor NPK Publisert 06.11.2026 - 11:25"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "EUs klimateneste Copernicus",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-11-06",
+  "date_evidence": "Publisert 06.11.2026 - 11:25",
+  "decision": "withhold",
+  "reason": "The article is a news report about climate data from the EU's climate service Copernicus, not about the target company's own activities.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1339,
+ "input_tokens": 2512,
+ "output_tokens": 276,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:46:29.481247+00:00"
+}

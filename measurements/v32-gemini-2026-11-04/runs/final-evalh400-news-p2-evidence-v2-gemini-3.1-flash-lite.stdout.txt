@@ -1,0 +1,41 @@
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+note: GEMINI_API_KEY is on the exposed list; running on the owner's explicit decision (recorded)
+  25/433
+  50/433
+  75/433
+  100/433
+  125/433
+  150/433
+  175/433
+  200/433
+  225/433
+  250/433
+  275/433
+  300/433
+  325/433
+  350/433
+  375/433
+  400/433
+  425/433
+  433/433
+{
+ "experiment_id": "final-evalh400-news-p2-evidence-v2-gemini-3.1-flash-lite",
+ "items": 433,
+ "ok": 433,
+ "api_failures": 0,
+ "api_calls_made": 433,
+ "cache_hits": 0,
+ "input_tokens": 1055966,
+ "output_tokens": 102197,
+ "thoughts_tokens": 0,
+ "paid_equivalent_cost_usd": 0.417287,
+ "latency_ms_p50": 1548,
+ "decisions": {
+  "withhold": 275,
+  "publish": 158
+ },
+ "errors": {},
+ "budget_stop": null,
+ "quotes_total": 602,
+ "quotes_verified": 601
+}

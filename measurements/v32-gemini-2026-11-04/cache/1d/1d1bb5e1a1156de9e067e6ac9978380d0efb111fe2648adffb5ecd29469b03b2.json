@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vedlagt ligger link til kampoppsettet for Kårstø Cup 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Falkeid idrettslag",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-06-03",
+  "date_evidence": "Postet av den 3. jun 2026",
+  "decision": "publish",
+  "reason": "The target organisation is announcing the match schedule for its own event, Kårstø Cup 2026.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2220,
+ "input_tokens": 2226,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:52:58.697793+00:00"
+}

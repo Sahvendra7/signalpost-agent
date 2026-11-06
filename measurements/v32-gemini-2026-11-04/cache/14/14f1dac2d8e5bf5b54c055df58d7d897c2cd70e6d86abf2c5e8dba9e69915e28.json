@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det er enkelt å låne e-bøker og lydbøker gratis fra biblioteket med appen BookBites."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Stange kommune",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-04-15",
+  "date_evidence": "Publisert/sist endret: 15.04.2023",
+  "decision": "withhold",
+  "reason": "The item is a service promotion informing users how to use the BookBites app at the library, which does not constitute a specific development or event of the target entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24601,
+ "input_tokens": 2190,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:42:28.743067+00:00"
+}

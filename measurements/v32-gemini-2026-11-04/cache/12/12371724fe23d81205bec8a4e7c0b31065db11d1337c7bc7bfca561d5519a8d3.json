@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi ser frem til å ta i bruk den nye delen av verkstedet, som skal brukes til sveise- og vaskehall.",
+   "8. mai 2024"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Birkeland AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "expansion_or_new_location",
+  "publication_date": "2024-05-08",
+  "date_evidence": "8. mai 2024",
+  "decision": "publish",
+  "reason": "The company reports the construction and upcoming use of a new extension to their workshop facility at Ekrene.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1361,
+ "input_tokens": 2089,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:04:57.838948+00:00"
+}

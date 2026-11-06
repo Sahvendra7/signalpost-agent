@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I Markveien, midt i hjertet av Oslo, gir vi strikkedesignere muligheten til å stille ut sine kreasjoner i vårt butikkvindu.",
+   "Nå har vi gleden av å gi Pickles-vinduet over til […]"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Pickles AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-12-23",
+  "date_evidence": "Tue, 23 Dec 2025 10:50:54 +0000",
+  "decision": "publish",
+  "reason": "The company announces a specific event where they are hosting a designer's work in their own shop window, which constitutes a company-led activity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3009,
+ "input_tokens": 1927,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:05:35.487182+00:00"
+}

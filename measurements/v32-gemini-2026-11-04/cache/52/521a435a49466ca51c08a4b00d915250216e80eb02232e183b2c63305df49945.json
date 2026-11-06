@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I Markveien, midt i hjertet av Oslo, gir vi strikkedesignere muligheten til å stille ut sine kreasjoner i vårt butikkvindu."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Pickles AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-11-13",
+  "date_evidence": "Thu, 13 Nov 2025 10:48:04 +0000",
+  "decision": "publish",
+  "reason": "The company announces a specific event where they host a designer in their shop window, which is an activity organized and held by the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4283,
+ "input_tokens": 1905,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:05:30.761057+00:00"
+}

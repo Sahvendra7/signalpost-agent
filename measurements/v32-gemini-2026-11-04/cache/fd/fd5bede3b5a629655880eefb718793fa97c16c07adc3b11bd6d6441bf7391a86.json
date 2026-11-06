@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dette var en av utsagnene til en av deltakerene på dagens Recoveryverksted, der tema var «Introduksjon til recovery» onsdag 30. september."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sagatun Recovery",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The article reports on a specific event, a 'Recoveryverksted' (recovery workshop), hosted and organized by the target company, Sagatun Recovery.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1233,
+ "input_tokens": 3623,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:01:51.710767+00:00"
+}

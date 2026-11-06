@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Jeep åpner nå for salg av nye helelektriske Compass i Norge."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Jeep",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-27",
+  "date_evidence": "Aug 27, 2026",
+  "decision": "withhold",
+  "reason": "The article is a promotional product announcement for a new Jeep vehicle model, which is a third-party brand and not an action taken by the target company ÅKRA BIL AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1366,
+ "input_tokens": 3134,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:49:59.507591+00:00"
+}

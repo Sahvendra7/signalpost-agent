@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [],
+  "content_category": "uncertain",
+  "subject_entity": "unknown",
+  "subject_relation": "unclear",
+  "is_about_target_company": "unclear",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The provided content is empty, making it impossible to determine if the item reports a specific development or action of the target company.",
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1132,
+ "input_tokens": 1870,
+ "output_tokens": 157,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:44:29.274114+00:00"
+}

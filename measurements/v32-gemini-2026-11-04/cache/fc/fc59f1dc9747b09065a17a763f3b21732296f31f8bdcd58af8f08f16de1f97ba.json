@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Tirsdag 1. september kl. 16:30-20:00 arranger vi en bedriftsturnering på Ølberg i samarbeid med Rogaland bedriftsidretten."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola FrisbeeKlubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-15",
+  "date_evidence": "15/08/2026",
+  "decision": "publish",
+  "reason": "The target organization is announcing that it is hosting a corporate frisbee tournament on September 1st.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1235,
+ "input_tokens": 2234,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:06:51.713371+00:00"
+}

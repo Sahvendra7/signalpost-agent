@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Alle prosjektene er knyttet til Norinnova AS",
+   "Dette er de fem Norinnova-prosjektene som alle har fått 500 000 kroner i kommersialiseringsstøtte"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "NORINNOVA AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-09-16",
+  "date_evidence": "Wed, 16 Sep 2026 12:09:49 +0000",
+  "decision": "publish",
+  "reason": "The article reports on five research projects linked to Norinnova AS that have received commercialization funding from the Research Council of Norway, which is a development involving the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2267,
+ "input_tokens": 3080,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:40:24.411273+00:00"
+}

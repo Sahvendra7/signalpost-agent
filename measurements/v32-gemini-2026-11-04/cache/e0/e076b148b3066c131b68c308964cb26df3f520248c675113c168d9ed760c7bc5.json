@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "STORD GOLFKLUBB HAR NO PASSERT 800 MEDLEMMAR!🙌",
+   "Sparebanken Norge dukka opp med tidenes gåvesjekk til det nye treningsområdet vårt: ❤ HEILE 250 000 KRONER!❤"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "STORD GOLFKLUBB",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-05-26",
+  "date_evidence": "Tue, 26 May 2026 08:20:36 GMT",
+  "decision": "publish",
+  "reason": "The article reports on significant developments for the target company, including reaching a membership milestone of 800 members and receiving a donation of 250,000 NOK for a new training area.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1286,
+ "input_tokens": 2974,
+ "output_tokens": 288,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:56:39.764046+00:00"
+}

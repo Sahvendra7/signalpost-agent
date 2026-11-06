@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "An exploration of why insight does not always create change in the body, and what somatic work may offer when familiar patterns remain."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Giulio D’Anna",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-12",
+  "date_evidence": "Sat, 12 Sep 2026 16:04:15 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational piece exploring somatic work and psychological patterns, which constitutes advice or educational content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1435,
+ "input_tokens": 3206,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:24:42.791155+00:00"
+}

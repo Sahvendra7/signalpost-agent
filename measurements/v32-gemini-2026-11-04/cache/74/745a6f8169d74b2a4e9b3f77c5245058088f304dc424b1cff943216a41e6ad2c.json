@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "AssistCo AS drifter Navnlapp.no , en spesialisert nettbutikk for personlige, selvklebende navnelapper til klær, sko og utstyr. Nå gjør vi løsningen enda lettere tilgjengelig"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "AssistCo AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "product_or_service_launch",
+  "publication_date": "2026-07-22",
+  "date_evidence": "22. juli 2026",
+  "decision": "publish",
+  "reason": "The company announces the launch of a new designer tool and expanded availability for its navnelapper (name labels) service, which constitutes a genuine company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1416,
+ "input_tokens": 3140,
+ "output_tokens": 250,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:25:30.772728+00:00"
+}

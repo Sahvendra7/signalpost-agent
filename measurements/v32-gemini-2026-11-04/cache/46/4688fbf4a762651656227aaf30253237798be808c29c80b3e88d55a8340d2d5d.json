@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Below, we therefore describe why an AX(P) filter cannot be used in combination with an RSG T-AIR PAPR."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "RSG Safety",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-09-29",
+  "date_evidence": "Mon, 29 Sep 2025 12:40:43 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational piece explaining technical standards and safety constraints regarding the use of specific filters with the company's products, rather than reporting a company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1413,
+ "input_tokens": 3308,
+ "output_tokens": 239,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:27:06.769835+00:00"
+}

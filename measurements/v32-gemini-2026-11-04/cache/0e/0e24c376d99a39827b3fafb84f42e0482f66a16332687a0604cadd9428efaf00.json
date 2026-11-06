@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "UiT Norges arktiske universitet har tildelt Norinnova oppdraget med å levere kommersialiseringstjenester de neste fire årene.",
+   "Norinnova er valgt som kommersialiseringspartner for UiT Norges arktiske universitet de neste fire årene."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Norinnova",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "contract_or_order",
+  "publication_date": "2026-09-30",
+  "date_evidence": "Wed, 30 Sep 2026 06:44:11 +0000",
+  "decision": "publish",
+  "reason": "The article reports that the target company, Norinnova, has been awarded a new four-year contract to provide commercialization services for UiT Norges arktiske universitet.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4875,
+ "input_tokens": 3226,
+ "output_tokens": 283,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:40:33.017037+00:00"
+}

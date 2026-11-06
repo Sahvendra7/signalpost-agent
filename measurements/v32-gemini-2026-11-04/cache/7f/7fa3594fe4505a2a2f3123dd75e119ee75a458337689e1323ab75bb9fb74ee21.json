@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "03.09.2026 Beredskapsvennskap bygges før krisen rammer"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Beredskapsvennskap",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-03",
+  "date_evidence": "03.09.2026",
+  "decision": "withhold",
+  "reason": "The item is a general article about emergency preparedness and does not report on a specific development, action, or event of Ringerike Næringsforening.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1221,
+ "input_tokens": 1819,
+ "output_tokens": 225,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:08:25.502068+00:00"
+}

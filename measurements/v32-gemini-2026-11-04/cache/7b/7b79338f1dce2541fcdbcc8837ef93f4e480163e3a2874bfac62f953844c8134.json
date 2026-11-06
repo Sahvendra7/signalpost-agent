@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Quickly respond on your Device for Inspection - Aktiv-IT"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Aktiv-IT",
+  "subject_relation": "target_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-06-03",
+  "date_evidence": "Wed, 03 Jun 2020 04:41:26 +0000",
+  "decision": "withhold",
+  "reason": "The content consists entirely of placeholder 'Lorem Ipsum' text and generic filler, containing no information about a specific development, action, or event involving the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1746,
+ "input_tokens": 2670,
+ "output_tokens": 223,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:03:40.224004+00:00"
+}

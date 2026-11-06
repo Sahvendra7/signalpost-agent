@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "We are happy to report about one of our partner organisation’s – Cambodian Children’s Advocacy Foundation (CCAF) – project"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Cambodian Children’s Advocacy Foundation (CCAF)",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-02-25",
+  "date_evidence": "Tue, 25 Feb 2020 20:18:03 +0000",
+  "decision": "withhold",
+  "reason": "The article reports on a project conducted by a partner organization, the Cambodian Children’s Advocacy Foundation (CCAF), rather than an action taken by the target entity OLEA itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 8215,
+ "input_tokens": 2350,
+ "output_tokens": 248,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:29:43.571508+00:00"
+}

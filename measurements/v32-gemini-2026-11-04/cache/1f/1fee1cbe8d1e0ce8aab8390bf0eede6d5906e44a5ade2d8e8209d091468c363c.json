@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fagtidsskriftet Blikkenslageren har skrevet en artikkel om TEQT og intervjuet vår konsernsjef Stefan Lind",
+   "Teqt Group beskriver seg selv som det ledende konsernet innen takløsninger i Sverige. Nå utvider de horisonten og fokuserer på Norge."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Teqt Group",
+  "subject_relation": "parent_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-09-07",
+  "date_evidence": "7. sep. 2023",
+  "decision": "withhold",
+  "reason": "The article is about the parent company, Teqt Group, and its expansion strategy in Norway, rather than a specific development or action of the target entity, TEQT NORGE AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6900,
+ "input_tokens": 2146,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:33:11.642029+00:00"
+}

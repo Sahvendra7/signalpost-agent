@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "None",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2019-06-10",
+  "date_evidence": "Mon, 10 Jun 2019 08:24:40 +0000",
+  "decision": "withhold",
+  "reason": "The content consists entirely of placeholder 'Lorem Ipsum' text and does not report any genuine development, action, or event related to the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1844,
+ "input_tokens": 2680,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:02:58.322511+00:00"
+}

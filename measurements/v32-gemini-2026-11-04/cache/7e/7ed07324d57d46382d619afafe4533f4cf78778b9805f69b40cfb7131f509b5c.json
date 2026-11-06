@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ny rapport: Frivillige organisasjoner opplever dokumentasjonskrav som for omfattende"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Frivillige organisasjoner",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-26",
+  "date_evidence": "26. aug 2026",
+  "decision": "withhold",
+  "reason": "The item reports on a general industry report regarding voluntary organizations in general, rather than a specific development or action taken by Fundraising Norge itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1747,
+ "input_tokens": 1805,
+ "output_tokens": 214,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:57:58.224712+00:00"
+}

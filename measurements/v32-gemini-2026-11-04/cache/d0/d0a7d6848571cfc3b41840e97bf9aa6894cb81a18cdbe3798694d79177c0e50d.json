@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Slik sjekker du mønsterdybde",
+   "Vi får ofte spørsmål av kunder om dekkene Deres har nok mønsterdybde. Det kan vi enkelt sjekke for deg på en av våre avdelinger, men nå ønsker vi å dele et lurt triks med deg til hvordan du kan gjøre det selv!"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Bodahl-Johansen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2022-09-15",
+  "date_evidence": "Publisert kl.14:30 15.09.2022",
+  "decision": "withhold",
+  "reason": "The article provides general advice and instructions on how to check tire tread depth, which is educational content rather than a report on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1264,
+ "input_tokens": 3402,
+ "output_tokens": 285,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:40:53.405585+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "AssistCo nominert til topp 50 arbeidsplass",
+   "Det er utrolig stas å dele at vi er nominert til Norges 50 Beste Arbeidsplasser 2023 av Great Place to Work Norge"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "AssistCo",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "award_or_certification",
+  "publication_date": "2024-06-06",
+  "date_evidence": "6. juni 2024",
+  "decision": "publish",
+  "reason": "The company announces its nomination for a 'Great Place to Work' award, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1356,
+ "input_tokens": 2006,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:25:06.712440+00:00"
+}

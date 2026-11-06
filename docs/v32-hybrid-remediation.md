@@ -5,6 +5,14 @@ release candidate `v3.1-candidate-2` (code `334a085`, branch `claude/awesome-sag
 the release run path was modified, the identity gate is a new module the run path does not import (tested), and Gemini
 stays off unless explicitly enabled.
 
+> **Update (2026-11-06, after this document):** the evalh400 Gemini run completed and was scored once
+> (`docs/v32-evalh400-comparison.md`):
+> * the hybrid reaches 82.3% precision (Wilson 75.1–87.7%), against 48.3% for V3.1;
+> * it covers 116/138 correct items, against 86;
+> * wrong-company publications fall from 23 to 2.
+>
+> The 90% target was not met. The "not yet measured" statements below refer to the state before that run.
+
 ## 0. Answers for the release decision
 
 | Question | Answer |

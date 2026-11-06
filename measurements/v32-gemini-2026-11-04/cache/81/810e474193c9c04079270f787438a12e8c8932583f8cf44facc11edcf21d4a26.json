@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi levererar en rad olika medicinska etiketter i olika kvaliteér passande olika applikationer som provrör, ROS/BOS-etiketter m.m. med eller utan tryck."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "RL Gruppen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The content is a product description and catalog listing for medical labels, which constitutes marketing of the company's products rather than reporting a specific development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1303,
+ "input_tokens": 2593,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:00:33.781232+00:00"
+}

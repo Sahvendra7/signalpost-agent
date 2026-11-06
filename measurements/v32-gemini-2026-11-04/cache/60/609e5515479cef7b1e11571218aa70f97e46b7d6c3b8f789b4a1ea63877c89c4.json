@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Har bedriften din en IT-utfordring studentene kan ta tak i?"
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Ringerike Næringsforening",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-23",
+  "date_evidence": "23.10.2026",
+  "decision": "withhold",
+  "reason": "The item is a call for companies to engage students for IT challenges, which functions as a recruitment or project-matching advertisement rather than a report on the target's own corporate development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1826,
+ "input_tokens": 1821,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:08:50.107393+00:00"
+}

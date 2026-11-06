@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Norwaves Systems Partners with University of Oslo",
+   "Norwaves has deployed an end-to-end Private 5G network for the University of Oslo to support advanced research and innovation"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Norwaves Systems",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2026-05-27",
+  "date_evidence": "27 May 2026",
+  "decision": "publish",
+  "reason": "The text reports that the company has entered into a partnership with the University of Oslo and has deployed a private 5G network for them.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1233,
+ "input_tokens": 1855,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:37:41.375160+00:00"
+}

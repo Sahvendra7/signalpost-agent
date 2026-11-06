@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nøstret Bo- og Omsorgsenter søker helsefagarbeider til stilling i et spennende miljø."
+  ],
+  "content_category": "job_advertisement",
+  "subject_entity": "Nøstret Bo- og Omsorgsenter",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-04-11",
+  "date_evidence": "Post published: 11. april 2023",
+  "decision": "withhold",
+  "reason": "The item is a job advertisement for a health worker position, which is classified as careers content rather than company news.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1170,
+ "input_tokens": 3008,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:49:11.312091+00:00"
+}

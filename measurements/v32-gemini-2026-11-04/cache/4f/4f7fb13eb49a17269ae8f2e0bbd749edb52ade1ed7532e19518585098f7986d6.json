@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Salongutstilling på Forbundet Frie Fotografers 50 års jubileum — Adrian Bugge"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Adrian Bugge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2024-08-20",
+  "date_evidence": "August 20, 2024",
+  "decision": "publish",
+  "reason": "The item reports on the target's participation in an exhibition at the 50th anniversary of Forbundet Frie Fotografers.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2040,
+ "input_tokens": 1864,
+ "output_tokens": 220,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:59:04.517597+00:00"
+}

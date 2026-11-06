@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "In this whitepaper, we break it down clearly using practical examples (like A1P3 vs A2P3), explain what filter capacity really means, and share key considerations to help you make the right choice"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "RSG Safety",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-01-22",
+  "date_evidence": "Thu, 22 Jan 2026 11:25:45 +0000",
+  "decision": "withhold",
+  "reason": "The item is an educational whitepaper providing technical advice on respiratory filters, which falls under the advice or educational category rather than reporting a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1215,
+ "input_tokens": 2108,
+ "output_tokens": 252,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:27:12.570943+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hvordan brukes KI i næringslivet i Ringerike? Del gjerne dine erfaringer i denne korte undersøkelsen"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Ringerike Næringsforening",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-08",
+  "date_evidence": "08.10.2026",
+  "decision": "withhold",
+  "reason": "The item is a request for members to participate in a survey about AI usage in the region, which constitutes educational or engagement content rather than a specific corporate development or action of the organization itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1169,
+ "input_tokens": 1852,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:08:31.450600+00:00"
+}

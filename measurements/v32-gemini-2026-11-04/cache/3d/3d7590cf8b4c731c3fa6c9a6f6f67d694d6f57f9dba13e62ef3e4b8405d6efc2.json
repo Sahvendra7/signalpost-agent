@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Teksten er en del av Areopagos' magasin Tørst 2026, som utgis i samarbeid med Areopagos Danmark."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Areopagos",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-17",
+  "date_evidence": "Tørst 17.08.2026 En åben, rummelig og modtagelig tilgang til livet",
+  "decision": "withhold",
+  "reason": "The article is an educational or reflective piece published in the organization's magazine, discussing general themes of faith and open-mindedness rather than reporting on a specific corporate development or event of the target entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 7306,
+ "input_tokens": 3546,
+ "output_tokens": 255,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:52:17.448282+00:00"
+}

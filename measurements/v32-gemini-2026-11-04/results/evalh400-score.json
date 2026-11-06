@@ -1,0 +1,472 @@
+{
+ "dataset": "evalh400",
+ "units": 433,
+ "companies": 57,
+ "labels": {
+  "incorrect": 279,
+  "correct": 138,
+  "unsure": 16
+ },
+ "pool_correct_companies": 37,
+ "run": "measurements/v32-gemini-2026-11-04/runs/final-evalh400-news-p2-evidence-v2-gemini-3.1-flash-lite.jsonl",
+ "arms": {
+  "v31": {
+   "published": 190,
+   "correct": 86,
+   "incorrect": 92,
+   "unsure": 12,
+   "precision": 0.4831,
+   "precision_wilson95": [
+    0.4109,
+    0.5561
+   ],
+   "precision_cluster95": [
+    0.3548,
+    0.6111
+   ],
+   "false_positives": 92,
+   "false_negatives": 52,
+   "pool_coverage": 0.6232,
+   "pool_coverage_wilson95": [
+    0.54,
+    0.6997
+   ],
+   "company_coverage": "29/37",
+   "companies_with_any_published": 43,
+   "baseline_retention": "86/86",
+   "baseline_retention_rate": 1.0,
+   "baseline_errors_removed": "0/92",
+   "errors_introduced_vs_baseline": 0,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 26,
+    "wrong_company": 23,
+    "product_service_marketing": 22,
+    "structural_or_default": 7,
+    "advice_or_educational": 6,
+    "unrelated": 3,
+    "project_or_property_listing": 3,
+    "job_advertisement": 1,
+    "misdated": 1
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "21/47",
+    "advice_or_educational": "44/50",
+    "structural_or_default": "22/29",
+    "unrelated": "25/28",
+    "product_service_marketing": "54/76",
+    "project_or_property_listing": "2/5",
+    "wrong_company": "8/31",
+    "job_advertisement": "9/10",
+    "misdated": "2/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 51,
+     "incorrect": 30,
+     "precision": 0.6296,
+     "pool_coverage": "51/89"
+    },
+    "limited_company": {
+     "correct": 25,
+     "incorrect": 41,
+     "precision": 0.3788,
+     "pool_coverage": "25/36"
+    },
+    "other": {
+     "correct": 4,
+     "incorrect": 11,
+     "precision": 0.2667,
+     "pool_coverage": "4/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 6,
+     "incorrect": 10,
+     "precision": 0.375,
+     "pool_coverage": "6/7"
+    }
+   },
+   "wrong_company_fp": 23
+  },
+  "v31_gate": {
+   "published": 190,
+   "correct": 86,
+   "incorrect": 92,
+   "unsure": 12,
+   "precision": 0.4831,
+   "precision_wilson95": [
+    0.4109,
+    0.5561
+   ],
+   "precision_cluster95": [
+    0.3548,
+    0.6111
+   ],
+   "false_positives": 92,
+   "false_negatives": 52,
+   "pool_coverage": 0.6232,
+   "pool_coverage_wilson95": [
+    0.54,
+    0.6997
+   ],
+   "company_coverage": "29/37",
+   "companies_with_any_published": 43,
+   "baseline_retention": "86/86",
+   "baseline_retention_rate": 1.0,
+   "baseline_errors_removed": "0/92",
+   "errors_introduced_vs_baseline": 0,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 26,
+    "wrong_company": 23,
+    "product_service_marketing": 22,
+    "structural_or_default": 7,
+    "advice_or_educational": 6,
+    "unrelated": 3,
+    "project_or_property_listing": 3,
+    "job_advertisement": 1,
+    "misdated": 1
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "21/47",
+    "advice_or_educational": "44/50",
+    "structural_or_default": "22/29",
+    "unrelated": "25/28",
+    "product_service_marketing": "54/76",
+    "project_or_property_listing": "2/5",
+    "wrong_company": "8/31",
+    "job_advertisement": "9/10",
+    "misdated": "2/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 51,
+     "incorrect": 30,
+     "precision": 0.6296,
+     "pool_coverage": "51/89"
+    },
+    "limited_company": {
+     "correct": 25,
+     "incorrect": 41,
+     "precision": 0.3788,
+     "pool_coverage": "25/36"
+    },
+    "other": {
+     "correct": 4,
+     "incorrect": 11,
+     "precision": 0.2667,
+     "pool_coverage": "4/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 6,
+     "incorrect": 10,
+     "precision": 0.375,
+     "pool_coverage": "6/7"
+    }
+   },
+   "wrong_company_fp": 23
+  },
+  "A_filter_v2": {
+   "published": 96,
+   "correct": 79,
+   "incorrect": 15,
+   "unsure": 2,
+   "precision": 0.8404,
+   "precision_wilson95": [
+    0.7533,
+    0.9008
+   ],
+   "precision_cluster95": [
+    0.6759,
+    0.9495
+   ],
+   "false_positives": 15,
+   "false_negatives": 59,
+   "pool_coverage": 0.5725,
+   "pool_coverage_wilson95": [
+    0.4891,
+    0.6519
+   ],
+   "company_coverage": "26/37",
+   "companies_with_any_published": 30,
+   "baseline_retention": "79/86",
+   "baseline_retention_rate": 0.9186,
+   "baseline_errors_removed": "77/92",
+   "errors_introduced_vs_baseline": 0,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 8,
+    "product_service_marketing": 3,
+    "wrong_company": 2,
+    "structural_or_default": 1,
+    "misdated": 1
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "39/47",
+    "advice_or_educational": "50/50",
+    "structural_or_default": "28/29",
+    "unrelated": "28/28",
+    "product_service_marketing": "73/76",
+    "project_or_property_listing": "5/5",
+    "wrong_company": "29/31",
+    "job_advertisement": "10/10",
+    "misdated": "2/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 48,
+     "incorrect": 7,
+     "precision": 0.8727,
+     "pool_coverage": "48/89"
+    },
+    "limited_company": {
+     "correct": 23,
+     "incorrect": 8,
+     "precision": 0.7419,
+     "pool_coverage": "23/36"
+    },
+    "other": {
+     "correct": 3,
+     "incorrect": 0,
+     "precision": 1.0,
+     "pool_coverage": "3/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 5,
+     "incorrect": 0,
+     "precision": 1.0,
+     "pool_coverage": "5/7"
+    }
+   },
+   "wrong_company_fp": 2
+  },
+  "C_hybrid_v2": {
+   "published": 145,
+   "correct": 116,
+   "incorrect": 25,
+   "unsure": 4,
+   "precision": 0.8227,
+   "precision_wilson95": [
+    0.7514,
+    0.8769
+   ],
+   "precision_cluster95": [
+    0.7059,
+    0.9167
+   ],
+   "false_positives": 25,
+   "false_negatives": 22,
+   "pool_coverage": 0.8406,
+   "pool_coverage_wilson95": [
+    0.7704,
+    0.8923
+   ],
+   "company_coverage": "32/37",
+   "companies_with_any_published": 36,
+   "baseline_retention": "79/86",
+   "baseline_retention_rate": 0.9186,
+   "baseline_errors_removed": "77/92",
+   "errors_introduced_vs_baseline": 10,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 13,
+    "product_service_marketing": 6,
+    "structural_or_default": 3,
+    "wrong_company": 2,
+    "misdated": 1
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "34/47",
+    "advice_or_educational": "50/50",
+    "structural_or_default": "26/29",
+    "unrelated": "28/28",
+    "product_service_marketing": "70/76",
+    "project_or_property_listing": "5/5",
+    "wrong_company": "29/31",
+    "job_advertisement": "10/10",
+    "misdated": "2/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 73,
+     "incorrect": 10,
+     "precision": 0.8795,
+     "pool_coverage": "73/89"
+    },
+    "limited_company": {
+     "correct": 33,
+     "incorrect": 13,
+     "precision": 0.7174,
+     "pool_coverage": "33/36"
+    },
+    "other": {
+     "correct": 5,
+     "incorrect": 2,
+     "precision": 0.7143,
+     "pool_coverage": "5/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 5,
+     "incorrect": 0,
+     "precision": 1.0,
+     "pool_coverage": "5/7"
+    }
+   },
+   "wrong_company_fp": 2
+  },
+  "D_conservative_v2": {
+   "published": 139,
+   "correct": 113,
+   "incorrect": 23,
+   "unsure": 3,
+   "precision": 0.8309,
+   "precision_wilson95": [
+    0.759,
+    0.8846
+   ],
+   "precision_cluster95": [
+    0.7132,
+    0.9219
+   ],
+   "false_positives": 23,
+   "false_negatives": 25,
+   "pool_coverage": 0.8188,
+   "pool_coverage_wilson95": [
+    0.7462,
+    0.8742
+   ],
+   "company_coverage": "31/37",
+   "companies_with_any_published": 35,
+   "baseline_retention": "78/86",
+   "baseline_retention_rate": 0.907,
+   "baseline_errors_removed": "78/92",
+   "errors_introduced_vs_baseline": 9,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 13,
+    "product_service_marketing": 5,
+    "structural_or_default": 3,
+    "wrong_company": 2
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "34/47",
+    "advice_or_educational": "50/50",
+    "structural_or_default": "26/29",
+    "unrelated": "28/28",
+    "product_service_marketing": "71/76",
+    "project_or_property_listing": "5/5",
+    "wrong_company": "29/31",
+    "job_advertisement": "10/10",
+    "misdated": "3/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 71,
+     "incorrect": 9,
+     "precision": 0.8875,
+     "pool_coverage": "71/89"
+    },
+    "limited_company": {
+     "correct": 32,
+     "incorrect": 13,
+     "precision": 0.7111,
+     "pool_coverage": "32/36"
+    },
+    "other": {
+     "correct": 5,
+     "incorrect": 1,
+     "precision": 0.8333,
+     "pool_coverage": "5/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 5,
+     "incorrect": 0,
+     "precision": 1.0,
+     "pool_coverage": "5/7"
+    }
+   },
+   "wrong_company_fp": 2
+  },
+  "B_llm_only": {
+   "published": 158,
+   "correct": 127,
+   "incorrect": 27,
+   "unsure": 4,
+   "precision": 0.8247,
+   "precision_wilson95": [
+    0.7569,
+    0.8766
+   ],
+   "precision_cluster95": [
+    0.7039,
+    0.9154
+   ],
+   "false_positives": 27,
+   "false_negatives": 11,
+   "pool_coverage": 0.9203,
+   "pool_coverage_wilson95": [
+    0.8629,
+    0.9549
+   ],
+   "company_coverage": "33/37",
+   "companies_with_any_published": 37,
+   "baseline_retention": "79/86",
+   "baseline_retention_rate": 0.9186,
+   "baseline_errors_removed": "77/92",
+   "errors_introduced_vs_baseline": 12,
+   "fp_by_category": {
+    "opinion_or_promotional_profile": 13,
+    "product_service_marketing": 6,
+    "misdated": 3,
+    "structural_or_default": 3,
+    "wrong_company": 2
+   },
+   "errors_removed_by_category": {
+    "opinion_or_promotional_profile": "34/47",
+    "advice_or_educational": "50/50",
+    "structural_or_default": "26/29",
+    "unrelated": "28/28",
+    "product_service_marketing": "70/76",
+    "project_or_property_listing": "5/5",
+    "wrong_company": "29/31",
+    "job_advertisement": "10/10",
+    "misdated": "0/3"
+   },
+   "by_company_type": {
+    "foundation_association_cooperative": {
+     "correct": 83,
+     "incorrect": 12,
+     "precision": 0.8737,
+     "pool_coverage": "83/89"
+    },
+    "limited_company": {
+     "correct": 34,
+     "incorrect": 13,
+     "precision": 0.7234,
+     "pool_coverage": "34/36"
+    },
+    "other": {
+     "correct": 5,
+     "incorrect": 2,
+     "precision": 0.7143,
+     "pool_coverage": "5/6"
+    },
+    "sole_or_partnership_or_foreign": {
+     "correct": 5,
+     "incorrect": 0,
+     "precision": 1.0,
+     "pool_coverage": "5/7"
+    }
+   },
+   "wrong_company_fp": 2
+  }
+ },
+ "usage": {
+  "records": 433,
+  "ok": 433,
+  "api_calls_made": 433,
+  "input_tokens": 1055966,
+  "output_tokens": 102197,
+  "thoughts_tokens": 0,
+  "paid_equivalent_cost_usd": 0.4173,
+  "paid_equivalent_cost_per_100_companies_with_candidates_usd": 0.7321,
+  "paid_equivalent_cost_per_100_sampled_companies_usd": 0.1043,
+  "latency_ms_p50": 1548,
+  "latency_ms_p90": 10005
+ }
+}

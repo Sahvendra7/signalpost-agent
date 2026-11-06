@@ -1,0 +1,7 @@
+{
+ "key_variable": "GEMINI_API_KEY",
+ "key_on_exposed_list": true,
+ "owner_accepted_exposed_key": true,
+ "single_project": true,
+ "other_key_variables_used": false
+}

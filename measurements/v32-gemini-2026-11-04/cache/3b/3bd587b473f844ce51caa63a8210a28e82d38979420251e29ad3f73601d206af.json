@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Teksten er en del av Areopagos' magasin Tørst 2026, som utgis i samarbeid med Areopagos Danmark.",
+   "Publisert 03.08.2026"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Nikolaj Paakjær",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-08-03",
+  "date_evidence": "Publisert 03.08.2026",
+  "decision": "withhold",
+  "reason": "The article is a profile piece about a musician and songwriter, Nikolaj Paakjær, and his personal reflections on faith. It does not report on a specific development, action, or event of the target organisation itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 22334,
+ "input_tokens": 2875,
+ "output_tokens": 270,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:52:26.475502+00:00"
+}

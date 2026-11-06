@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Demolering"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Adrian Bugge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-09-26",
+  "date_evidence": "September 26, 2025",
+  "decision": "withhold",
+  "reason": "The item is a blog post titled 'Demolering' (Demolition) which does not describe a specific development, action, or event of the company, but rather appears to be a creative or thematic post.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4436,
+ "input_tokens": 1777,
+ "output_tokens": 209,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:59:36.913938+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I en tid hvor mye av strikkedesign presenteres digitalt, gir Pickles Window Takeover både nye og etablerte designere en fysisk arena for å vise frem sine verk."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Pickles AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-03-21",
+  "date_evidence": "Sat, 21 Mar 2026 07:41:03 +0000",
+  "decision": "publish",
+  "reason": "The company is hosting an event called 'Pickles Window Takeover' to provide a physical arena for designers to showcase their work, which constitutes a genuine company activity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3792,
+ "input_tokens": 1914,
+ "output_tokens": 256,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:05:42.270834+00:00"
+}

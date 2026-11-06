@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "– Regjeringen følger opp målet om at CO2-avgiften i 2030 skal være 2 000,- (i 2021-kroner), og det er forventet at avgiften vil fortsette å øke også etter 2030. For kuldemedier har avgiften nå blitt så stor at den dominerer prisbildet på syntetiske kuldemedier med høy GWP, sier Espen Rønning, fagsjef i VKE."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "VKE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-09",
+  "date_evidence": "Publisert 09.10.2026",
+  "decision": "withhold",
+  "reason": "The article provides industry commentary and information regarding government tax proposals and their impact on refrigerants, rather than reporting on a specific development or action taken by the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1475,
+ "input_tokens": 3268,
+ "output_tokens": 316,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:26:30.831470+00:00"
+}

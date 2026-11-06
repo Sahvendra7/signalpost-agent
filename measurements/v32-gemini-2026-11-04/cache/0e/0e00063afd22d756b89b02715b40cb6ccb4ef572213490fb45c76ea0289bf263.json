@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Benefits of Having Professional manage Security - Aktiv-IT"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Aktiv-IT",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2020-05-26",
+  "date_evidence": "Tue, 26 May 2020 04:32:36 +0000",
+  "decision": "withhold",
+  "reason": "The article is a generic piece of educational content about security management and contains placeholder text (Lorem Ipsum), rather than reporting on a specific development or event involving the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1254,
+ "input_tokens": 2659,
+ "output_tokens": 223,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:03:15.732132+00:00"
+}

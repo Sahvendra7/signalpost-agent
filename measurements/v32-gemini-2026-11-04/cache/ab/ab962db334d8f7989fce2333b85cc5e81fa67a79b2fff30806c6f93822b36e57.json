@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I forbindelse med Kong Harald V bortgang i dag 28.08.26 har vi i Sola Frisbeeklubb valgt å utsette helgens Rogalands Cup på Ølberg.",
+   "Nye datoer blir den 19. og 20. september."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola Frisbeeklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-28",
+  "date_evidence": "28/08/2026",
+  "decision": "publish",
+  "reason": "The target organization announces the postponement of their own event, the Rogalands Cup, and provides new dates for the competition.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 33801,
+ "input_tokens": 2088,
+ "output_tokens": 260,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:07:36.279060+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sweden's leading infrastructure group, Eleda, acquires Hanell Entreprenad AB and Flexirail AB, both of which have extensive experience in the maintenance of railways."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Eleda",
+  "subject_relation": "parent_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2024-11-29",
+  "date_evidence": "29 November 2024 / 14:38",
+  "decision": "withhold",
+  "reason": "The article reports on acquisitions made by the parent group, Eleda, rather than an action taken by the target entity, Eleda Rail Norge AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4475,
+ "input_tokens": 3054,
+ "output_tokens": 234,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:28:27.831013+00:00"
+}

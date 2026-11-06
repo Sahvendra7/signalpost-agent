@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Da kan MUK igjen ønske velkommen til en ny sesong med trening og lek i Mossehallens basseng!",
+   "Vi åpner 24. august kl 09:15 og avslutter kl 10:45."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "MUK",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2025-08-19",
+  "date_evidence": "Postet av den 19. aug 2025",
+  "decision": "publish",
+  "reason": "The article announces the start of a new season of swimming training and activities organized by the club (MUK) in the local pool, which constitutes a genuine event for the association.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1492,
+ "input_tokens": 2421,
+ "output_tokens": 263,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:56:57.970015+00:00"
+}

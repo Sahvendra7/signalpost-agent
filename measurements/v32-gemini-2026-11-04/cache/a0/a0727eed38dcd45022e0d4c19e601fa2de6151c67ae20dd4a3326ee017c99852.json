@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Why invoices hold more value today than ever before",
+   "Thought Leadership May 19, 2025"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "ImportFlow AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-05-19",
+  "date_evidence": "May 19, 2025",
+  "decision": "withhold",
+  "reason": "The article is a thought leadership piece providing general industry commentary on the value of invoice data, rather than reporting on a specific development or action taken by the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 12520,
+ "input_tokens": 2311,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:35:05.368792+00:00"
+}

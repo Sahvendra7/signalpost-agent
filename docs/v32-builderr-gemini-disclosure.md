@@ -51,7 +51,7 @@ The drop on new data is itself a finding about the deterministic release, indepe
 | **evalg250** (338 news units) | **independent** (at the time) | prompt v1, no identity gate | 46.2% | 65.2% (55.0–74.2) | **77.0%** (69.7–83.0); clustered 50.3–97.4 |
 | evalg250 re-scored with the identity gate | **diagnostic** (the gate was built from evalg250's errors) | cached prompt-v1 outputs + gate | 46.2% | 90.9% | 92.9% (87.0–96.2) |
 | evalg250, same, FrP items relabelled under rubric v2 | diagnostic, provisional | — | 40.3% | 81.8% | 82.5% |
-| **evalh400** (433 news units) | **independent, pre-registered** | prompt v2 + identity gate | 48.3% | see §4 | see §4 |
+| **evalh400** (433 news units) | **independent, pre-registered** | prompt v2 + identity gate | 48.3% (41.1–55.6) | **84.0%** (75.3–90.1) | **82.3%** (75.1–87.7) |
 
 On evalg250, Gemini removed almost every content-type error: advice, listings and job ads. It failed on
 legal-entity boundaries. One subsidiary whose registered website is its foreign parent's global site produced most of
@@ -60,13 +60,28 @@ the remaining errors. That led to the deterministic identity gate (§6), which t
 
 ## 4. Final independent evaluation (evalh400)
 
-_Status: to be completed from `measurements/v32-gemini-2026-11-04/results/evalh400-score.json` once the run and
-scoring finish. A partial run is never reported as a complete result._
+Complete: 433/433 calls succeeded, scored once. Full report: `docs/v32-evalh400-comparison.md`.
+
+| Arm | Precision (Wilson 95%) | Company-clustered 95% | Correct items published | Incorrect published | Company coverage | Wrong-company published |
+|---|---|---|---|---|---|---|
+| V3.1 (deterministic) | 48.3% (41.1–55.6) | 35.5–61.1 | 86/138 | 92 | 29/37 | 23 |
+| Gemini filter | 84.0% (75.3–90.1) | 67.6–95.0 | 79/138 | 15 | 26/37 | 2 |
+| **Hybrid** | **82.3% (75.1–87.7)** | 70.6–91.7 | **116/138** | 25 | **32/37** | 2 |
+
+* **Hybrid against V3.1:** it recovered 37 genuine items V3.1 missed and lost 7. It removed 77 of V3.1's 92 errors
+  and added 10.
+* **Run quality:** median latency 1.5 s (p90 10.0 s); 601/602 quotes verified.
+* **Target:** the pre-registered 90% precision was **not** reached, but the improvement over V3.1 is clear on both
+  precision and coverage, with non-overlapping intervals.
+* **Remaining errors:** mostly promotional profiles and product pages, plus 2 federation events on a club's
+  subdomain.
 
 ## 5. Expenditure and estimated operating cost
 
 * **Actual spend on this research: $0.** Every call used Gemini's free tier, and no billing account was linked.
-* **Estimated paid operating cost: about $0.12 per 100 sampled companies.**
+* **Estimated paid operating cost: about $0.10–0.12 per 100 sampled companies.** On evalh400: 433 calls,
+  1.06M input and 0.10M output tokens, $0.417 at list price. That is $0.10 per 100 sampled companies, or $0.73 per
+  100 companies with news candidates.
   * Measured on evalg250: 338 calls cost $0.298 at list price (`gemini-3.1-flash-lite`: $0.25 per million input
     tokens, $1.50 per million output tokens). That is $0.12 per 100 sampled companies.
   * Most companies have no news candidates. Per 100 companies that do have candidates, the cost is about $1.
@@ -93,7 +108,7 @@ scoring finish. A partial run is never reported as a complete result._
    These were seen during labelling, so the gate was deliberately **not** tuned on evalh400.
 3. **Opinion versus action.** For political parties and associations, Gemini published opinion pieces as news. On
    the diagnostic FrP set it agreed with the stricter rubric on 32 of 45 items. Prompt v2 adds an explicit rule;
-   its effect is measured only on evalh400.
+   on evalh400, opinion and promotional items are the largest remaining error class (13 of the hybrid's 25).
 4. **Labels.** All labels come from one labeller, the same assistant that wrote the prompts. A blind second-person
    review kit is prepared (about 25% of each sample) but not yet completed, and agreement is not reported.
 5. **Small samples, wide uncertainty.** evalh400's 433 news units come from only 57 companies. Company-clustered
@@ -115,7 +130,8 @@ scoring finish. A partial run is never reported as a complete result._
 * The deterministic release is complete without it and is the submitted system.
 * Production use for Norwegian (EEA) users requires Gemini's **paid** tier: free-tier inputs may be used to improve
   Google's products. It also needs a data-processing assessment.
-* The improvement is established on one independent sample at most (§3–4), with known entity-boundary failures (§6).
+* The improvement is established independently (§4) but falls short of the 90% target. Labels come from a single
+  rater until the second review is done, and entity-boundary failures remain (§6).
 * The provider is enabled only when `GEMINI_ENABLED` is true and a key is set. The release's run path never imports
   the experimental code (tested).
 
@@ -163,5 +179,5 @@ Notes for a live run:
 * A separate `--cache` directory forces fresh calls instead of replaying ours.
 * `--live` requires both a call cap and a cost cap.
 * The run stops at the first daily-quota refusal. Rerunning resumes from the cache.
-* Expect a paid-equivalent cost of about $0.45 for the 433 evalh400 calls.
+* Expect a paid-equivalent cost of about $0.42 for the 433 evalh400 calls (our measured figure).
 * LLM outputs are not bit-for-bit deterministic, so expect small differences from our run.

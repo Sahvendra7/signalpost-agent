@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I helgen deltok Søgne Turn på Opplandspokalen, nasjonal konkurranse i TeamGym",
+   "Juniorlaget satte klubbrekord og tok Søgne Turns beste plassering i et nasjonalt mesterskap noensinne"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Søgne Turn",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-04-12",
+  "date_evidence": "12. april 2026",
+  "decision": "publish",
+  "reason": "The article reports on the target organisation's participation in a national gymnastics competition and their achievement of record-breaking results.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1525,
+ "input_tokens": 2601,
+ "output_tokens": 246,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:47:35.666983+00:00"
+}

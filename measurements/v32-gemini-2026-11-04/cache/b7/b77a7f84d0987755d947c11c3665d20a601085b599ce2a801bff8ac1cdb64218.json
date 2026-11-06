@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "This conversation is part of our whitepaper The Evolving Role of the CFO, exploring how Norway’s top finance leaders are preparing for the future."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Maria Lien",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2025-08-25",
+  "date_evidence": "Aug 25, 2025",
+  "decision": "withhold",
+  "reason": "The article is an educational interview/thought leadership piece featuring an external expert, Maria Lien, discussing finance and digital transformation. It does not report on a specific development or action of ImportFlow AS.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 18257,
+ "input_tokens": 3030,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:35:42.208691+00:00"
+}

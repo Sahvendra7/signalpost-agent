@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "30 April 2026 Insight Private 5G vs. Wi-Fi: what's actually different A plain-language look at why industrial sites are moving from Wi-Fi to dedicated private networks."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Norwaves Systems AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-30",
+  "date_evidence": "30 April 2026",
+  "decision": "withhold",
+  "reason": "The item is an educational or industry insight article comparing technologies, which does not report on a specific development or action taken by the company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1493,
+ "input_tokens": 1862,
+ "output_tokens": 233,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:37:17.634622+00:00"
+}

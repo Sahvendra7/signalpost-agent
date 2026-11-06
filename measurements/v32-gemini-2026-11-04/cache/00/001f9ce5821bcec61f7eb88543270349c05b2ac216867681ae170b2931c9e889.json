@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "What is the Security and what is Value of Integrity"
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "Aktiv-IT",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a generic, placeholder-filled text discussing security and integrity in a general sense, which constitutes educational or advice-oriented content rather than reporting on a specific company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6634,
+ "input_tokens": 2662,
+ "output_tokens": 191,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:03:09.112636+00:00"
+}

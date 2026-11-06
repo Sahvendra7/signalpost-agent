@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Eleda Norge AS, part of the Eleda Group (“Eleda”), has signed an agreement to acquire Nettpartner Bane AS",
+   "Nettpartner Bane will be part of Eleda Rail, which consolidates Eleda’s railway maintenance activities."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Eleda Group",
+  "subject_relation": "parent_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2026-01-15",
+  "date_evidence": "15 January 2026 / 08:30",
+  "decision": "withhold",
+  "reason": "The article reports on an acquisition made by the parent company, Eleda Group, rather than an action taken by the target entity, Eleda Rail Norge AS itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4012,
+ "input_tokens": 2859,
+ "output_tokens": 254,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:28:57.368492+00:00"
+}

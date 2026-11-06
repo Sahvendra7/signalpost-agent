@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "The oak processionary moth poses a serious health risk for professionals working in public spaces, landscaping, arboriculture, forestry and pest control.",
+   "For guidance on selecting the right PPE for oak processionary moth removal, RSG Safety provides specialist support tailored to high-risk biological exposure environments."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "RSG Safety",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-07-09",
+  "date_evidence": "Thu, 09 Jul 2026 13:43:56 +0000",
+  "decision": "withhold",
+  "reason": "The article is an educational guide on the risks of the oak processionary moth and the general types of PPE required for safe removal, rather than reporting a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1452,
+ "input_tokens": 2902,
+ "output_tokens": 273,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:27:24.808438+00:00"
+}

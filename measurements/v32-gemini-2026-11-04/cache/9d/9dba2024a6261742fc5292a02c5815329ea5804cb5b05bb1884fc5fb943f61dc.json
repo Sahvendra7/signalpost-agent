@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det ble arrangert onsdag 27. mai på Braset i Øvre Vang i regi av Sagatun Recovery.",
+   "Merethe, som tiltrer som daglig leder på Sagatun 1. august 2026, understreket betydningen av fysisk aktivitet"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sagatun Recovery",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-06-01",
+  "date_evidence": "Mon, 01 Jun 2026 10:38:25 +0000",
+  "decision": "publish",
+  "reason": "The article reports on a specific event (Recoveryverksted) organized by the target company, Sagatun Recovery, and includes an announcement regarding the appointment of a new general manager.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1407,
+ "input_tokens": 2722,
+ "output_tokens": 286,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:01:27.885659+00:00"
+}

@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Veteran 22-1-2015 Ringerike1"
+  ],
+  "content_category": "uncertain",
+  "subject_entity": "Ringerike1",
+  "subject_relation": "unclear",
+  "is_about_target_company": "unclear",
+  "is_genuine_company_event": "unclear",
+  "event_type": "none",
+  "publication_date": "2015-01-22",
+  "date_evidence": "Thu, 22 Jan 2015 21:44:58 +0100",
+  "decision": "withhold",
+  "reason": "The provided text is insufficient to determine if the item refers to the target organisation's own activities or a specific event, as it only contains a title mentioning a team name.",
+  "uncertainty": "high",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1299,
+ "input_tokens": 1830,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:02:39.777378+00:00"
+}

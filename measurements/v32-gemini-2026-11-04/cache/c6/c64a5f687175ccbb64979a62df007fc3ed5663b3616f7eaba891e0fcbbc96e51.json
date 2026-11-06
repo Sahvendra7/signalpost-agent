@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Due to COVID-19, we have decided to extend the application deadline for the OLEA Mentorprogram"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "OLEA",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2020-03-21",
+  "date_evidence": "Sat, 21 Mar 2020 12:47:02 +0000",
+  "decision": "publish",
+  "reason": "The organization announces a specific operational change regarding the extension of an application deadline for its own mentor program.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1598,
+ "input_tokens": 1937,
+ "output_tokens": 222,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:29:42.954748+00:00"
+}

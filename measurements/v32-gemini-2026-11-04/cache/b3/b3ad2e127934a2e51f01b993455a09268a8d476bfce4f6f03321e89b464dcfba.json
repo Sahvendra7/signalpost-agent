@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sørlandet Rederiforening delte ut Elevprisen for fjerde år på rad",
+   "For fjerde år på rad delte Sørlandet Rederiforening ut Elevprisen til en av avgangselevene ved Maritim videregående skole Sørlandet - Skoleskipet Lofoten."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sørlandet Rederiforening",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "other_company_development",
+  "publication_date": "2026-06-19",
+  "date_evidence": "19. juni",
+  "decision": "publish",
+  "reason": "The article reports on the target company's own event, specifically the annual awarding of their 'Elevprisen' to a student.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1319,
+ "input_tokens": 2880,
+ "output_tokens": 262,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:48:59.461361+00:00"
+}

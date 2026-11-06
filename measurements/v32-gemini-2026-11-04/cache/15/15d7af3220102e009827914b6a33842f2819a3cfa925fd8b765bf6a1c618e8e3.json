@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Årsmøtet i Stord Golfklubb vert halde torsdag 19. februar kl. 19.00 i selskapslokalet på Stord Golfpark."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Stord Golfklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The item announces the annual general meeting (årsmøte) for the target organisation, which is a formal event held by the club.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2325,
+ "input_tokens": 1956,
+ "output_tokens": 218,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:55:58.803352+00:00"
+}

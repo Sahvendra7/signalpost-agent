@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Turneringen er et samarbeid mellom Sola Frisbeeklubb og Bedriftsidretten i Rogaland."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola Frisbeeklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-08-31",
+  "date_evidence": "31/08/2026",
+  "decision": "publish",
+  "reason": "The target company is co-organizing a disc golf tournament, which constitutes a specific event or activity of the organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1658,
+ "input_tokens": 2267,
+ "output_tokens": 219,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:07:10.136199+00:00"
+}

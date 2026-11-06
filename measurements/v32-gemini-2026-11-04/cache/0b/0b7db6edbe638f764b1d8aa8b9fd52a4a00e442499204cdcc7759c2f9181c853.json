@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "I developed a visual identity that’s intentionally understated but impactful, built around a few carefully crafted elements that highlight the people, the craftsmanship, and the landscape that defines Jo Bygg."
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "Jo Bygg",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a portfolio entry describing a design project completed for a third-party client, Jo Bygg, rather than a development concerning the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 6388,
+ "input_tokens": 2109,
+ "output_tokens": 215,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:27:59.744731+00:00"
+}

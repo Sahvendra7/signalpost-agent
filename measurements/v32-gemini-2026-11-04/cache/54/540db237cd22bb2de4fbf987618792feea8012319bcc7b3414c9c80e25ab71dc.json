@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "SUMMER shawl Kanskje skal du ett sommerbryllup? På en sommerfest? Det som er helt sikkert er at det blir sommerkvelder og dette delikate, luftige sjalet blir perfekt uansett anledning.",
+   "Oppskriften er nybegynnervennlig. Det strikkes med tre tråder hele veien nedenfra og opp, med ett mønster som går over 2 pinner."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "KNITTERIET AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-12-15",
+  "date_evidence": "desember 15, 2023",
+  "decision": "withhold",
+  "reason": "The item is a product description for a knitting pattern, which constitutes marketing of the company's products rather than a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 12873,
+ "input_tokens": 2289,
+ "output_tokens": 290,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-06T16:32:09.779312+00:00"
+}

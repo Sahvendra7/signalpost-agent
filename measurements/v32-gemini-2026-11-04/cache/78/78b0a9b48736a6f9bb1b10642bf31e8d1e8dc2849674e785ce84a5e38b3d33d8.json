@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "13. november 2023 Test-system for veidekke",
+   "I forbindelse med et byggeprosjekt ble vi kontaktet av Veidekke for å…"
+  ],
+  "content_category": "project_or_property_listing",
+  "subject_entity": "INNOVA KURS OG KONSULENT Hans Kristian Eide",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2023-11-13",
+  "date_evidence": "13. november 2023",
+  "decision": "withhold",
+  "reason": "The text describes a past project or reference case for a customer, which is classified as a project listing rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1315,
+ "input_tokens": 1861,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:51:05.456828+00:00"
+}

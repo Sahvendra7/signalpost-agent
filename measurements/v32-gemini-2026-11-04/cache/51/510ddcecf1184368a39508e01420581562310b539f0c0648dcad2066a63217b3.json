@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi har et samarbeid med Bambusa, og er 1 av 2 idrettslag i Harstad som kan selge Bambusa-sokker som dugnad",
+   "Dette foregår 1-2 ganger i året (november og april), og gir oss opp mot 50 000 kroner i klubbkassa"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Griffen Basketballklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-04-15",
+  "date_evidence": "Mon, 15 Apr 2024 17:58:23 +0000",
+  "decision": "withhold",
+  "reason": "The content describes a recurring fundraising activity (dugnad) for the club, which is a promotional page for selling socks rather than a specific, unique company event or development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1548,
+ "input_tokens": 3087,
+ "output_tokens": 288,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:04:04.026017+00:00"
+}

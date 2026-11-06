@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Da er påmeldingen for årets klubbmesterskap åpnet.",
+   "I år blir det 2 runder på Ølbergbanen den 10. oktober."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola FrisbeeKlubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-20",
+  "date_evidence": "20/09/2026",
+  "decision": "publish",
+  "reason": "The item announces the opening of registration for the club's own championship event, which is a specific activity of the target organization.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 24887,
+ "input_tokens": 2078,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:07:46.382462+00:00"
+}

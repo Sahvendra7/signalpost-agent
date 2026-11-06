@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lørdag 12.09.2026 kl. 10:45 var det offisiell åpning av den nye 7-hullsbanen i Solakrossen.",
+   "Sola Frisbeeeklubb stilte med instruktører samt utlånsdisker."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola FrisbeeKlubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-12",
+  "date_evidence": "Lørdag 12.09.2026",
+  "decision": "publish",
+  "reason": "The article reports on the official opening of a new frisbee golf course and the club's participation in the event, including providing instructors and equipment.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 7016,
+ "input_tokens": 2202,
+ "output_tokens": 277,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:07:21.493978+00:00"
+}

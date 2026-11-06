@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Akkurat nå har vi kampanjepriser på en rekke produkter for løft og sikring fra Lilleseth Kjetting Få lastesurringer, kjettingsurringer, jekketaljer, kjetttingtaljer, løfteskrev, rundslinger, båndstropper, støttestenger, hjørnebeskytter, og gaffelkran for truck til kampanjepriser!"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Bodahl-Johansen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2024-07-23",
+  "date_evidence": "Tue, 23 Jul 2024 09:47:50 +0000",
+  "decision": "withhold",
+  "reason": "The item is a promotional post announcing a sales campaign for products, which does not constitute a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1351,
+ "input_tokens": 2528,
+ "output_tokens": 297,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:41:23.492886+00:00"
+}

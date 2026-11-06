@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Sammen med Norkem har Nordic-Eco AS utviklet Eco PipeClean – en helt grønn og bærekraftig måte å holde rør rene på."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Nordic-Eco AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a promotional piece describing the benefits and features of a product (Eco PipeClean) offered by the company, rather than reporting on a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 4384,
+ "input_tokens": 3590,
+ "output_tokens": 216,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-06T16:31:03.190220+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Corina Cristescu and Katia Souni have been promoted to associate in Hyphen’s France team",
+   "We’re proud to announce two new promotions in our team in France"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Hyphen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-06-05",
+  "date_evidence": "5 June 2026",
+  "decision": "publish",
+  "reason": "The article announces the promotion of two employees to the position of associate within the company's France team.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3909,
+ "input_tokens": 2147,
+ "output_tokens": 224,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:36:01.025429+00:00"
+}

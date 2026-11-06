@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fahranaz Bahrami og Tord Kristian Skancke fra Arbeiderpartiet, hadde invitert statssekretær i Helse- og omsorgsdepartementet, Ellen Rønning Arnesen til Sagatun.",
+   "Jeg vil takke regjeringen for at vi nå har fått støtte til det viktige arbeidet med å samle, systematisere og spre erfaringsbasert kunnskap"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "STIFTELSEN SAGATUN RECOVERY",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-05-11",
+  "date_evidence": "Mandag 11. mai 2026",
+  "decision": "publish",
+  "reason": "The article reports on a visit by the State Secretary to the target company, Sagatun Recovery, and mentions the company's receipt of government support for its work.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1376,
+ "input_tokens": 3626,
+ "output_tokens": 303,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:01:21.854498+00:00"
+}

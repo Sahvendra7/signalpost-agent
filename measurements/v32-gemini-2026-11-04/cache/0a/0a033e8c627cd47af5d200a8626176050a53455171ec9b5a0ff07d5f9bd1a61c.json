@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vita Premiumetiketter passande Inkjet etikettskrivare.",
+   "Artikelnummer Benämning Format Häftämne Etk/Rulle Kvalitet Fp"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "RL Gruppen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The item is a product catalog page listing specifications for inkjet labels, which constitutes marketing content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5663,
+ "input_tokens": 2972,
+ "output_tokens": 205,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:00:50.141282+00:00"
+}

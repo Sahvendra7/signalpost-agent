@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Det blir eit møte igjen med tidlegare sokneprest Asbjørn Salthe, førstkommande søndag."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Asbjørn Salthe",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-11-05",
+  "date_evidence": "Publisert 05.11.2026 - 11:01",
+  "decision": "withhold",
+  "reason": "The article is a profile or announcement about a third party (Asbjørn Salthe) and does not report on a development or action of Suldalsposten AS itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1318,
+ "input_tokens": 2116,
+ "output_tokens": 243,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:46:11.459812+00:00"
+}

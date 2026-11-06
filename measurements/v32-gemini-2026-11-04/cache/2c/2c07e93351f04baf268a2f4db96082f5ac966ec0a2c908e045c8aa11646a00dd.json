@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Oslo negativ 2024 — Adrian Bugge"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Adrian Bugge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2024-10-14",
+  "date_evidence": "October 14, 2024",
+  "decision": "publish",
+  "reason": "The item announces the photographer's participation in or publication of the project 'Oslo negativ 2024', which constitutes a genuine company event for the sole proprietorship.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1399,
+ "input_tokens": 1803,
+ "output_tokens": 217,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:59:09.877673+00:00"
+}

@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "VKE mener derfor at det er for tidlig å konkludere med at regjeringens forslag automatisk innebærer en tilsvarende reduksjon i den faktiske støtten til enøk i bygninger.",
+   "VKE mener derfor at oppdragsbrevet til Enova for 2027 må inneholde klare styringssignaler og prioriteringer for energieffektivisering i bygninger."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "VKE",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-10-08",
+  "date_evidence": "Publisert 08.10.2026",
+  "decision": "withhold",
+  "reason": "The article consists of the organization's commentary and political opinions regarding the government's budget proposal, rather than reporting on a specific development or action taken by the company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1413,
+ "input_tokens": 3709,
+ "output_tokens": 296,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:26:24.769210+00:00"
+}

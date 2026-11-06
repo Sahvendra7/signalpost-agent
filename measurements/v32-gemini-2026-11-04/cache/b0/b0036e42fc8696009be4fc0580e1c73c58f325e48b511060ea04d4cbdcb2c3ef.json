@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Rogalandscup Sola 2026"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola FrisbeeKlubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-09-21",
+  "date_evidence": "21/09/2026",
+  "decision": "publish",
+  "reason": "The item announces that the target organization is hosting or participating in the 'Rogalandscup Sola 2026' event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4402,
+ "input_tokens": 1863,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:07:40.683495+00:00"
+}

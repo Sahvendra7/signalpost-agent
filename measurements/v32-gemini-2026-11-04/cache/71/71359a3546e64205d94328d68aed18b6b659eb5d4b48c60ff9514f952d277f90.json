@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Hurtigs Track Service (railway maintenance) will be part of the platform company Eleda Rail, which consolidates Eleda’s railway maintenance operations."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Eleda",
+  "subject_relation": "parent_company",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "yes",
+  "event_type": "ownership_change",
+  "publication_date": "2025-09-04",
+  "date_evidence": "4 September 2025 / 11:30",
+  "decision": "withhold",
+  "reason": "The article reports on acquisitions made by the parent group Eleda, which involves the target company Eleda Rail as a platform entity, but the news is about the group's corporate activity rather than a specific development of the target legal entity itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2054,
+ "input_tokens": 2685,
+ "output_tokens": 249,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:28:37.410380+00:00"
+}

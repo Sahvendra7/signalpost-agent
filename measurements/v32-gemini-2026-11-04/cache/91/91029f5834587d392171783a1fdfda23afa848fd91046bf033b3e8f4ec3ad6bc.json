@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "22.10.2026 Ulike historier, samme drivkraft – møt årets prisvinnere Ringerikskonferansen"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Ringerikskonferansen",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-22",
+  "date_evidence": "22.10.2026",
+  "decision": "publish",
+  "reason": "The item reports on the winners of an award presented at the Ringerikskonferansen, which is an event organized by the target entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 5241,
+ "input_tokens": 1827,
+ "output_tokens": 238,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:08:47.522089+00:00"
+}

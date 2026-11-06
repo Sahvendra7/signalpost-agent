@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Landsliga Lokaloppgjør Ringerike 4 mot Ringerike 5"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Ringerike Bowlingklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2015-01-11",
+  "date_evidence": "Sun, 11 Jan 2015 15:02:33 +0100",
+  "decision": "publish",
+  "reason": "The item reports on a specific sporting event (a local league match) involving the target club's teams.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1714,
+ "input_tokens": 1838,
+ "output_tokens": 228,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:02:28.192440+00:00"
+}

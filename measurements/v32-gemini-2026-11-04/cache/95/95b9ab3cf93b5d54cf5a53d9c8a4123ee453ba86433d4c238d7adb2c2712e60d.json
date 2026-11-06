@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Klubbmesterskap 2026 oppsummering",
+   "Sola FrisbeeKlubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sola FrisbeeKlubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2026-10-12",
+  "date_evidence": "12/10/2026",
+  "decision": "publish",
+  "reason": "The article reports on the club championship held by Sola FrisbeeKlubb, which constitutes a genuine event organized by the target entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1842,
+ "input_tokens": 1875,
+ "output_tokens": 226,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:07:44.123626+00:00"
+}

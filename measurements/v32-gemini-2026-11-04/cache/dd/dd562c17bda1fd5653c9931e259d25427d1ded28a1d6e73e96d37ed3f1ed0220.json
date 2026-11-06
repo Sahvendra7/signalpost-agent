@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Dette var et av utsagnene som ble beskrevet på Recoveryverkstedet 4. mars, som handlet om musikk.",
+   "Vi takker alle som var med å bidro til dagens Recoveryverksted, med innlegg, med brukerhistorier og med alle musikkinnslagene, dette ble en innholdrik og flott dag!"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Sagatun",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The article reports on a specific event, a 'Recoveryverksted' (recovery workshop), hosted by the target organization on March 4th, including details about the activities and participants.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1612,
+ "input_tokens": 3151,
+ "output_tokens": 261,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:01:16.090006+00:00"
+}

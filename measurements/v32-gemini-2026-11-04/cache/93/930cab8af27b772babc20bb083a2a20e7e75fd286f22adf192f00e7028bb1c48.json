@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Nest siste runde av Ringerikscupen er spilt i kveld."
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Ringerike Bowlingklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2015-03-05",
+  "date_evidence": "Thu, 05 Mar 2015 22:23:06 +0100",
+  "decision": "publish",
+  "reason": "The item reports on the club's own sporting activity, specifically the completion of a round in their tournament, Ringerikscupen.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3149,
+ "input_tokens": 1827,
+ "output_tokens": 232,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:02:47.626685+00:00"
+}

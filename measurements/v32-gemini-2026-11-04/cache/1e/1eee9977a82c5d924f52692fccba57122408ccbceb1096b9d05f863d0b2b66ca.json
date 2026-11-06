@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Vi feirer at utebanen ved Kirkeparken (snart) er ferdig, og inviterer til utendørs 3×3-turnering!",
+   "Harstad 3×3 Streetbasket Festival – Griffen Basketballklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Griffen Basketballklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The target organization is hosting and organizing a 3x3 basketball tournament, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1274,
+ "input_tokens": 2736,
+ "output_tokens": 227,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:04:15.752100+00:00"
+}

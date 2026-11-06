@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Velkommen til EasyBasket-lørdag i Harstad! Vi ser frem til å ta i mot lag fra både Tromsø og Bodø denne helgen, og gleder oss til en lørdag med liv og røre og mange kamper i Seljestadhallen.",
+   "Fra Griffen Basketballklubb stiller: Bergseng U9 Bergseng J11 Byskolen 1 Byskolen 2 Medkila 1 Medkila 1"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Griffen Basketballklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2024-05-01",
+  "date_evidence": "Wed, 01 May 2024 09:02:13 +0000",
+  "decision": "publish",
+  "reason": "The article announces that the target organization is hosting an EasyBasket tournament, detailing the event logistics and the participation of their own teams.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1414,
+ "input_tokens": 3142,
+ "output_tokens": 314,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:04:09.891949+00:00"
+}

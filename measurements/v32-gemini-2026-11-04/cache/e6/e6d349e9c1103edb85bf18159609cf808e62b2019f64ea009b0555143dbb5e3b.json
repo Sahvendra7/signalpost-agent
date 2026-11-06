@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Ahoy Boatneck er en moderne strikkeoppskrift på en stripete genser med båthals",
+   "Kjøp garnpakke med strikkeoppskrift her"
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Pickles",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-04-21",
+  "date_evidence": "Tue, 21 Apr 2026 10:55:22 +0000",
+  "decision": "withhold",
+  "reason": "The item is a product page for a knitting pattern and yarn kit, which constitutes marketing of the company's products rather than a specific corporate development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4123,
+ "input_tokens": 1960,
+ "output_tokens": 249,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:05:48.600723+00:00"
+}

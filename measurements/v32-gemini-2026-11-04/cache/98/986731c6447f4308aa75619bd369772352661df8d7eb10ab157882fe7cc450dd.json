@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "We are thrilled to announce our official partnership with Dynatos",
+   "By teaming up with Dynatos, ImportFlow will help businesses simplify e-invoicing"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "ImportFlow AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "partnership",
+  "publication_date": "2025-03-12",
+  "date_evidence": "Mar 12, 2025",
+  "decision": "publish",
+  "reason": "The article announces a new official partnership between the target company, ImportFlow, and Dynatos, which constitutes a genuine company development.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 15455,
+ "input_tokens": 2007,
+ "output_tokens": 221,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-06T16:34:58.985719+00:00"
+}

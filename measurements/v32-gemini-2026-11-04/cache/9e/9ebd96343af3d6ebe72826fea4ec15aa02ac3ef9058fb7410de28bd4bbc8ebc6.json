@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Scoliosis and Somatic Healing: A Personal Story | Giulio D’Anna"
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Giulio D’Anna",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article is a personal reflection and autobiographical story about the founder's life and experiences with scoliosis, rather than a report on a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 4573,
+ "input_tokens": 3352,
+ "output_tokens": 199,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:24:39.929179+00:00"
+}

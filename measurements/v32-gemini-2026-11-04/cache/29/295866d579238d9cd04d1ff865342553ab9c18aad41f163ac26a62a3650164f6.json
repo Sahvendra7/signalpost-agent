@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Fotobøkene Den nye byen, Y. Bygget som forsvant og Inngrep var i sommer på bokmessene Bergen Art Book Fair , Chart Art Fair i København , Fotobokfestival Oslo og Shanghai Art Book Fair"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Adrian Bugge",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": "2023-09-07",
+  "date_evidence": "September 07, 2023",
+  "decision": "publish",
+  "reason": "The text reports that the target company's photobooks were exhibited at several international art book fairs during the summer, which constitutes a genuine company event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1269,
+ "input_tokens": 1943,
+ "output_tokens": 249,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:58:39.747532+00:00"
+}

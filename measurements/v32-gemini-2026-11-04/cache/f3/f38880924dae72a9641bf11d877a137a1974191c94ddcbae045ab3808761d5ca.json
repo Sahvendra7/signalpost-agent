@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Reisetips i Vietnam: Opplev landet fra nord til sør",
+   "Reisetips i Vietnam gir deg ideer til en reise fra nord til sør, fra Hanois gamle bydeler og fjellene rundt Sapa til Ha Long Bays kalksteinsøyer, Hoi Ans historiske gater og det hektiske bylivet i Ho Chi Minh-byen."
+  ],
+  "content_category": "advice_or_educational",
+  "subject_entity": "REISELIV.NO AS",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-09-24",
+  "date_evidence": "24/09/2026",
+  "decision": "withhold",
+  "reason": "The article provides travel tips and general information about visiting Vietnam, which constitutes educational or advice-based content rather than a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1504,
+ "input_tokens": 3543,
+ "output_tokens": 275,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:53:09.982695+00:00"
+}

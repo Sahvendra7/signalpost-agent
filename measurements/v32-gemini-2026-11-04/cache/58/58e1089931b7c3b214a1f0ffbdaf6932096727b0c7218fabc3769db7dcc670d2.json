@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Velkommen til fellesskapet Utvika AS!"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Utvika AS",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-07-09",
+  "date_evidence": "09.07.2026",
+  "decision": "withhold",
+  "reason": "The item is a welcome message for a third-party company, Utvika AS, and does not report on a development or action of the target organisation, Ringerike Næringsforening.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 2605,
+ "input_tokens": 1800,
+ "output_tokens": 213,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:08:02.886200+00:00"
+}

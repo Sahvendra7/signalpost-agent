@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Now IceView has been granted as the first ever project supported by the Arctic Phi-Lab, the innovation hub in Norway established by European Space Agency (ESA) and a consortium of NORCE , Kongsberg Satellite Services (KSAT) , UiT – The Arctic University of Norway , Norinnova and Akvaplan-niva ."
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "IceView",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The article reports on a project called IceView being accepted by the Arctic Phi-Lab. While Norinnova is mentioned as one of the consortium partners that established the hub, the news is about the project and the Norwegian Geotechnical Institute, not an action taken by Norinnova itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1497,
+ "input_tokens": 3639,
+ "output_tokens": 268,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:39:41.639191+00:00"
+}

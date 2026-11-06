@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Lørdag 16. og søndag 17.mars arrangerer vi regionsseriehelg for aldersklassene U14-U19 og Basketball Camp for jenter i nord!",
+   "Seriehelg og Basketball Camp – Griffen Basketballklubb"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Griffen Basketballklubb",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "company_event_or_participation",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "publish",
+  "reason": "The target organization is hosting a regional basketball tournament and a basketball camp, which constitutes a genuine event organized by the entity.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1310,
+ "input_tokens": 3361,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:03:57.787829+00:00"
+}

@@ -1,0 +1,34 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "KOSTER sweater Vi har fått så mange henvendelser og spørsmål rundt genseren Emma Steinbakken hadde på seg på Hver Gang Vi Møtes i helgen. Det er energiboosteren vår KOSTER sweater."
+  ],
+  "content_category": "product_service_marketing",
+  "subject_entity": "Knitteriet",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2026-06-02",
+  "date_evidence": "juni 2, 2026",
+  "decision": "withhold",
+  "reason": "The item is a product description and marketing page for a sweater, not a report of a specific company development or event.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 2,
+ "latency_ms": 4135,
+ "input_tokens": 2257,
+ "output_tokens": 236,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [
+  2.0
+ ],
+ "error_message": null,
+ "created_at": "2026-11-06T16:32:31.916625+00:00"
+}

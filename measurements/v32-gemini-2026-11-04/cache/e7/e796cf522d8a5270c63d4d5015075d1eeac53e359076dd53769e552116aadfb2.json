@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Thomas Abrahamsen blir en del av RNF-laget"
+  ],
+  "content_category": "genuine_company_news",
+  "subject_entity": "Ringerike Næringsforening",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "yes",
+  "event_type": "appointment_or_personnel",
+  "publication_date": "2026-09-01",
+  "date_evidence": "01.09.2026",
+  "decision": "publish",
+  "reason": "The item announces that Thomas Abrahamsen has joined the organization (RNF-laget), which constitutes a personnel appointment.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 3977,
+ "input_tokens": 1810,
+ "output_tokens": 211,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:08:22.258941+00:00"
+}

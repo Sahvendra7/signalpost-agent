@@ -1,0 +1,32 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Latest Security technology for the Observation - Aktiv-IT"
+  ],
+  "content_category": "unrelated_content",
+  "subject_entity": "Aktiv-IT",
+  "subject_relation": "target_company",
+  "is_about_target_company": "yes",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": null,
+  "date_evidence": null,
+  "decision": "withhold",
+  "reason": "The content consists entirely of placeholder 'Lorem Ipsum' text and generic filler, providing no information about a specific development, action, or event involving the target company.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 10544,
+ "input_tokens": 2661,
+ "output_tokens": 186,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T17:03:43.022348+00:00"
+}

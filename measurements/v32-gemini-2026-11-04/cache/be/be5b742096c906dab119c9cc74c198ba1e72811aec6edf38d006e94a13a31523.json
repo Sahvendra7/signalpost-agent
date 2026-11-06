@@ -1,0 +1,33 @@
+{
+ "ok": true,
+ "data": {
+  "evidence_quotes": [
+   "Bil i Nord er fast kunde på Jobbfrukt",
+   "Bil i Nord har abonnert på jobbfrukt siden 2005, og får ukentlig levert en 7-kiloskurv og en 5-kiloskurv til sine 17 ansatte."
+  ],
+  "content_category": "opinion_or_promotional_profile",
+  "subject_entity": "Bil i Nord",
+  "subject_relation": "unrelated_entity",
+  "is_about_target_company": "no",
+  "is_genuine_company_event": "no",
+  "event_type": "none",
+  "publication_date": "2017-03-21",
+  "date_evidence": "Aktuelt mars 21, 2017",
+  "decision": "withhold",
+  "reason": "The article is a promotional profile of a customer (Bil i Nord) and their experience with the company's service, rather than reporting a specific development or event of the target company itself.",
+  "uncertainty": "low",
+  "injection_detected": false
+ },
+ "error": null,
+ "attempts": 1,
+ "latency_ms": 1371,
+ "input_tokens": 3072,
+ "output_tokens": 272,
+ "thoughts_tokens": null,
+ "model_version": "gemini-3.1-flash-lite",
+ "finish_reason": "STOP",
+ "quota_ids": [],
+ "retry_delays_s": [],
+ "error_message": null,
+ "created_at": "2026-11-06T16:46:41.513064+00:00"
+}
