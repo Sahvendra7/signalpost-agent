@@ -56,5 +56,11 @@
   "project": "one authorised project via GEMINI_API_KEY only",
   "precondition": "exposed keys revoked/rotated; runner refuses keys on the local revoked list",
   "budget": "--max-usd hard cap per run; billing budget and quota set by the owner"
+ },
+ "addendum_2026-11-06_minimise_fix": {
+  "written_before": "any evalh400 label or model call",
+  "change": "news_contract.minimise: the phone pattern also matched dotted dates (26.08.2026 -> [phone]); dots no longer act as phone separators, and sentence-final numbers are still masked. Regression test test_minimise_masks_contacts_but_never_dates_numbers_or_org_numbers.",
+  "news_contract.py_sha256": "f45dbf2491bbcb9e34cc354fe193f5f752a1e92f73efab5e2a19a99eeae50f70",
+  "evalh400_packets_rebuilt": true
  }
 }

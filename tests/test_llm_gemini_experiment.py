@@ -205,3 +205,10 @@ def test_redact_covers_new_key_format_and_key_override():
     assert "FAKEKEY" not in redact("bad key AQ.FAKEKEYabcdefghijklmnopqrstuvwxyz0123456789-_xyz in message", "")
     c = GeminiConfig.from_env({"GEMINI_API_KEY": "default-key-0000000000"}, api_key="other-key-1111111111", _force_enabled=True)
     assert c.enabled and c.api_key == "other-key-1111111111"
+
+
+def test_minimise_masks_contacts_but_never_dates_numbers_or_org_numbers():
+    text = "Publisert 26.08.2026 kl 10.15. Kontakt post@firma.no, tlf 22 33 44 55 eller +47 900 00 000. Org.nr 932 383 357. Omsetning 26 065 153 kr. Dato 2026-08-26."
+    out = nc.minimise(text)
+    assert "26.08.2026" in out and "2026-08-26" in out and "932 383 357" in out and "26 065 153" in out
+    assert "post@firma.no" not in out and "22 33 44 55" not in out and "900 00 000" not in out

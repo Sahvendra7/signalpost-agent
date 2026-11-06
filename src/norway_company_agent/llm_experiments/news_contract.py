@@ -127,7 +127,9 @@ def build_packet(*, item_id: str, org: str, legal_name: str, legal_form: str | N
 
 
 _EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+")
-_PHONE = re.compile(r"(?:(?<=\s)|^)(?:\+47[\s-]?)?(?<!\d)(?:\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}|\d{3}[\s.]?\d{2}[\s.]?\d{3})(?!\d)")
+# Norwegian phone numbers are written with spaces or no separator ("22 33 44 55", "900 00 000", "+47 22334455");
+# dots are excluded so that dates ("26.08.2026") are never masked (regression, 2026-11-06).
+_PHONE = re.compile(r"(?:(?<=\s)|^)(?:\+47[\s-]?)?(?<!\d)(?<!\d\.)(?:\d{2} ?\d{2} ?\d{2} ?\d{2}|\d{3} ?\d{2} ?\d{3})(?!\d)(?!\.\d)")
 
 
 def minimise(text: str | None) -> str | None:
