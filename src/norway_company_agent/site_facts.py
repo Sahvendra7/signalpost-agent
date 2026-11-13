@@ -827,6 +827,7 @@ class SiteFacts:
     careers_checked: list[dict[str, Any]] = field(default_factory=list)
     operator: dict[str, Any] | None = None
     rejected_keys: list[dict[str, Any]] = field(default_factory=list)
+    brand_site: bool = False  # V3.1.1: a Norwegian AS on an international brand site that never writes its legal name
 
     def reject(self, kind: str, reason: str, item: dict[str, Any], page: CapturedPage | None) -> None:
         key = f"{kind}:{reason}"
@@ -1191,6 +1192,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     recruiter = is_recruiter(profile)
     run_date = (now or datetime.now(timezone.utc)).astimezone(_OSLO).date()
     other_employers: dict[str, int] = {}  # V3.1.1: careers-page positions that name another employer, per page
+    own_positions: dict[str, int] = {}  # V3.1.1: positions published as this company's, per page
     for page in pages:
         if page.kind != "html":
             continue
@@ -1221,6 +1223,12 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             if reason:
                 out.reject("job", reason, job, source)
                 continue
+            if brand_site and "no other employer named" in (decision.basis or ""):
+                # V3.1.1: on an international brand site that never writes the company's legal name, an ad that names no
+                # employer is the brand's, not necessarily this Norwegian company's.
+                out.reject("job", "employer_unstated_on_international_brand_site", job, source)
+                continue
+            own_positions[source.url] = own_positions.get(source.url, 0) + 1
             job = {**job, "currency": {"state": decision.code, "basis": decision.basis}}
             key = (fold(job["title"]), str(job.get("url") or source.url))
             if key in seen_jobs:
@@ -1230,4 +1238,6 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     for entry in out.careers_checked:
         if other_employers.get(entry["url"]):
             entry["other_employer_positions"] = other_employers[entry["url"]]
+            entry["own_positions"] = own_positions.get(entry["url"], 0)
+    out.brand_site = brand_site
     return out

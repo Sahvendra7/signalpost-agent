@@ -436,6 +436,31 @@ class PostAuditFixes(unittest.TestCase):
         self.assertEqual(facts.activities, [])
         self.assertTrue(rejected(facts, "no_individual_article_url"))
 
+    def test_a_board_mostly_of_other_employers_with_some_unverified_ads_is_not_a_careers_page(self):
+        """FUNDRAISING NORGE live (2026-11-14): 12 of 14 positions name other employers, 2 are unverified finn.no ads."""
+        from norway_company_agent.site_research import SiteResult, apply_site_facts
+        cards = (card("Fundraiser, Norges Røde Kors", "https://www.finn.no/job/ad/1", f"<p>Søknadsfrist: {SOON}</p>")
+                 + card("Innsamlingsansvarlig, Caritas Norge", "https://www.finn.no/job/ad/2", f"<p>Søknadsfrist: {SOON}</p>")
+                 + card("Markedsrådgiver", "https://www.finn.no/job/ad/3", f"<p>Søknadsfrist: {SOON}</p>"))
+        board = careers_page(cards)
+        facts = extract_site_facts(profile("FJELL DATA AS"), [HOME, board], now=datetime.now(timezone.utc))
+        result = SiteResult(status="verified")
+        result.careers_page = board.url
+        apply_site_facts(result, facts, profile("FJELL DATA AS"), [HOME, board])
+        self.assertIsNone(result.careers_page)
+
+    def test_an_international_brand_sites_careers_page_is_not_the_norwegian_companys(self):
+        from norway_company_agent.site_research import SiteResult, apply_site_facts
+        site = "https://inlumi.com/"
+        home = page(site, "<html><body><h1>inlumi</h1><p>inlumi is a global EPM consultancy.</p></body></html>")
+        board = page(site + "careers/", "<html><body><h1>Careers</h1>" + card("EPM Consultant", "/careers/epm-consultant/", f"<p>Deadline: {SOON}</p>") + "</body></html>")
+        facts = extract_site_facts(profile("INLUMI AS", "999291988"), [home, board], now=datetime.now(timezone.utc))
+        self.assertEqual(facts.jobs, [])
+        result = SiteResult(status="verified")
+        result.careers_page = board.url
+        apply_site_facts(result, facts, profile("INLUMI AS", "999291988"), [home, board])
+        self.assertIsNone(result.careers_page)
+
     def test_an_off_site_ad_whose_title_names_the_company_as_employer_qualifies(self):
         cards = card("Båtmekaniker og tekniker ved Fjell Data", "https://www.jobbnorge.no/ledige-stillinger/stilling/311738/batmekaniker", f"<p>Søknadsfrist: {SOON}</p>")
         facts = extract_site_facts(profile("FJELL DATA AS"), [HOME, careers_page(cards)], now=datetime.now(timezone.utc))

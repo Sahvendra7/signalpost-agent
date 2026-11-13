@@ -531,8 +531,8 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
             counts["careers:recruiter_job_board"] = counts.get("careers:recruiter_job_board", 0) + 1
             held("careers", result.careers_page, "recruiter_job_board")
             result.careers_page, result.careers_checked = None, []
-        elif any(item.get("url") == result.careers_page and item.get("other_employer_positions", 0) >= 2
-                 and item.get("other_employer_positions", 0) >= item.get("positions", 0) for item in result.careers_checked):
+        elif any(item.get("url") == result.careers_page and item.get("other_employer_positions", 0) >= 2 and not item.get("own_positions")
+                 and 2 * item.get("other_employer_positions", 0) >= item.get("positions", 0) for item in result.careers_checked):
             # V3.1.1: every position the page lists names another employer (a member organisation's or client's job
             # board, FUNDRAISING NORGE on evalh400): it is not a page about working at this company.
             counts = result.extraction_rejections
@@ -544,6 +544,13 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
             counts["careers:not_a_careers_page"] = counts.get("careers:not_a_careers_page", 0) + 1
             held("careers", result.careers_page, "not_a_careers_page")
             result.careers_page, result.careers_checked = None, [item for item in result.careers_checked if item.get("url") != fetched_page.url] if fetched_page else []
+    if getattr(facts, "brand_site", False) and result.careers_page:
+        # V3.1.1: an international brand site that never writes the Norwegian company's legal name (INLUMI AS on
+        # inlumi.com): its careers page is the brand's.
+        counts = result.extraction_rejections
+        counts["careers:international_brand_site"] = counts.get("careers:international_brand_site", 0) + 1
+        held("careers", result.careers_page, "international_brand_site")
+        result.careers_page, result.careers_checked = None, []
     kind = (result.operator or {}).get("kind")
     if kind in ("other_entity", "group_or_brand"):
         # V3 §B5: another company (or a group/brand) runs the site. Its careers page and vacancies are not this
