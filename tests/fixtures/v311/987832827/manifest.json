@@ -1,0 +1,125 @@
+{
+ "organisation_number": "987832827",
+ "name": "LØWEHJERTE DESIGN AS",
+ "captured_by": "scripts/run_competition_batch.py with --snapshot-dir; scripts/build_fixture_from_snapshot.py",
+ "note": "LØWEHJERTE DESIGN AS: Builderr's confirmed example. Its Squarespace-built homepage lists Squarespace's own Facebook and LinkedIn verification page in Organization sameAs; ff3b515 published both. Captured 2026-11-13.",
+ "website_record": {
+  "field": "website",
+  "status": "available",
+  "source_type": "registry_linked_company_website",
+  "source_class": "registry_linked_company_website",
+  "source_url": "https://www.lowehjerte.no/",
+  "retrieved_at": "2026-11-13T22:03:40.708757Z",
+  "value": {
+   "requested_url": "https://www.lowehjerte.no/",
+   "final_url": "https://www.lowehjerte.no/",
+   "registered_domain": "lowehjerte.no",
+   "title": "Løwehjerte",
+   "description": "Morten Stensland Løwe, grafisk designer og gartner. Bor og jobber i Skjolden, Luster kommune og designer visuelle identiteter, logoer, bøker, magasiner, kart og nettsider.",
+   "main_text_excerpt": "Hei,\njeg er Morten Stensland Løwe, designer og gartner, oppvokst i Larvik og bosatt i Skjolden i Luster kommune.\nJeg designer:\n- visuelle identiteter og logoer\n- bøker, magasiner, trykksaker og kart\n- effektive og brukervennlige nettsider\n- gode helhetlige løsninger (omgivelsesdesign)\nJeg tilstreber å ha arbeidsdager hvor jeg kombinerer praktisk arbeid ute i naturen med kreativt arbeid inne så derfor jobber jeg som skjøtselansvarlig i Verdsarven Urnes og designer i Løwehjerte.\nJeg er ledig for nye designoppdrag og hvis du tror jeg kan bidra positivt for din bedrift eller organisasjon så er det bare å ta kontakt ved å klikke på knappen nedenfor.",
+   "identity_text_excerpt": "Løwehjerte design Morten Stensland Løwe +47 90 13 90 97 morten@lowehjerte.no",
+   "social_links": [],
+   "structured_organisations": [
+    {
+     "legalName": "Løwehjerte design",
+     "address": "35 Mørkridsvegen\nSkjolden, Vestland, 6876\nNorway",
+     "email": "morten@lowehjerte.no",
+     "telephone": "+47 90139097",
+     "sameAs": [
+      "http://twitter.com/squarespace",
+      "http://facebook.com/squarespace",
+      "https://www.linkedin.com/company/squarespace/mycompany/verification/"
+     ],
+     "@context": "http://schema.org",
+     "@type": "Organization"
+    },
+    {
+     "address": "35 Mørkridsvegen\nSkjolden, Vestland, 6876\nNorway",
+     "name": "Løwehjerte design",
+     "openingHours": ", , , , , , ",
+     "@context": "http://schema.org",
+     "@type": "LocalBusiness"
+    }
+   ],
+   "content_sha256": "f9f1a078d8ed345f44080ba7c655509f126420cf036c279d62be2956dde866f5",
+   "extraction_state": "static_complete",
+   "pages": [
+    {
+     "url": "https://www.lowehjerte.no/",
+     "title": "Løwehjerte",
+     "main_text_excerpt": "Hei,\njeg er Morten Stensland Løwe, designer og gartner, oppvokst i Larvik og bosatt i Skjolden i Luster kommune.\nJeg designer:\n- visuelle identiteter og logoer\n- bøker, magasiner, trykksaker og kart\n- effektive og brukervennlige nettsider\n- gode helhetlige løsninger (omgivelsesdesign)\nJeg tilstreber å ha arbeidsdager hvor jeg kombinerer praktisk arbeid ute i naturen med kreativt arbeid inne så derfor jobber jeg som skjøtselansvarlig i Verdsarven Urnes og designer i Løwehjerte.\nJeg er ledig for nye designoppdrag og hvis du tror jeg kan bidra positivt for din bedrift eller organisasjon så er det bare å ta kontakt ved å klikke på knappen nedenfor.",
+     "content_sha256": "f9f1a078d8ed345f44080ba7c655509f126420cf036c279d62be2956dde866f5"
+    }
+   ],
+   "crawl_errors": [],
+   "identity_assessment": {
+    "status": "exact",
+    "score": 0.95,
+    "publishable": true,
+    "legal_name_tokens": [
+     "lowehjerte",
+     "design"
+    ],
+    "matched_tokens": [
+     "design",
+     "lowehjerte"
+    ],
+    "reasons": [
+     "all normalized legal-name tokens appear together in homepage identity evidence"
+    ],
+    "method": "deterministic_name_org_evidence_v2"
+   },
+   "discovered_social_links": [],
+   "social_link_assessments": []
+  },
+  "as_of": null,
+  "note": "Company-controlled claim layer; not an official registry fact",
+  "content_sha256": "f9f1a078d8ed345f44080ba7c655509f126420cf036c279d62be2956dde866f5",
+  "source_row_key": null,
+  "effective_at": null
+ },
+ "entries": {
+  "https://data.brreg.no/enhetsregisteret/api/enheter/987832827": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "f0c0333d40e8b6cb.json.gz",
+   "content_sha256": "f0c0333d40e8b6cbc41f036f9b147f1717dda5a71c482302e3febb231c0b67a5",
+   "retrieved_at": "2026-11-13T22:03:37.442105Z"
+  },
+  "https://data.brreg.no/regnskapsregisteret/regnskap/987832827": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "96db8467024406bc.json.gz",
+   "content_sha256": "96db8467024406bc55a5966fb7bc232703d00706e874c89f97873e5c9bcc8ba6",
+   "retrieved_at": "2026-11-13T22:03:38.103604Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/konsernstruktur/987832827": {
+   "kind": "brreg",
+   "status": 404,
+   "file": "e3b0c44298fc1c14.json.gz",
+   "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "retrieved_at": "2026-11-13T22:03:38.766613Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/underenheter?overordnetEnhet=987832827&size=1000": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "0c9fe600b81b1eec.json.gz",
+   "content_sha256": "0c9fe600b81b1eec990d2edbf14711a992a264ee4f025a00c65a3d57c6848961",
+   "retrieved_at": "2026-11-13T22:03:39.445803Z"
+  },
+  "https://data.brreg.no/enhetsregisteret/api/enheter/987832827/roller": {
+   "kind": "brreg",
+   "status": 200,
+   "file": "31d30801e6aa7869.json.gz",
+   "content_sha256": "31d30801e6aa78696a6e928d4f45deb99a503f2fa8694fb282843b829db0851e",
+   "retrieved_at": "2026-11-13T22:03:40.108211Z"
+  },
+  "https://www.lowehjerte.no/": {
+   "kind": "site",
+   "status": 200,
+   "file": "f9f1a078d8ed345f.html.gz",
+   "content_sha256": "f9f1a078d8ed345f44080ba7c655509f126420cf036c279d62be2956dde866f5",
+   "retrieved_at": "2026-11-13T22:03:41.132330Z"
+  }
+ }
+}

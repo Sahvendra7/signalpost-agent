@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from .decision import Decision
 from .names import Relation
+from typing import Any
 
 SCORES = {"EXACT": 0.98, "EXACT_NEUTRAL": 0.95, "BRAND": 0.9, "EXTENDS": 0.9}
 STRICT_KINDS = {"group_or_brand", "section", "platform"}
@@ -60,3 +61,120 @@ def decide_profile(relation: Relation, operator_kind: str, *, domain_named: bool
             return Decision(True, "extended_handle_in_own_structured_data", "The company's own structured data, which names the company, lists this profile."), SCORES[kind]
         return Decision(False, "extended_handle_uncorroborated", f"The handle adds \"{relation.rest}\" to the company's name, and nothing ties it to this company."), None
     return Decision(False, "handle_unrelated", "The profile handle does not carry the company's name."), None
+
+
+# ---------- V3.1.1: owner checks applied before the handle decision (docs/v311-rescore-revision.md §3) ----------
+# Builderr's audit of ff3b515 found profiles that belong to other organisations: a website builder's own accounts
+# (squarespace on a Squarespace-built site), and group or parent accounts on a subsidiary's site. Each check below
+# looks only at the URL itself, the company's legal name, its registry group record and its website's domain. None
+# names a company, and none can be overridden by sameAs structured data or an anchor label: they run first.
+
+import re as _re
+import urllib.parse as _urlparse
+
+from .names import LegalName as _LegalName, fold as _fold, handle_of as _handle_of
+
+# Accounts of website builders, hosting and CMS providers, and of the social platforms themselves. A site built on one
+# carries the provider's links in its template (Squarespace's default sameAs, a "Powered by Wix" footer); a profile
+# with such a handle is the provider's, never the tenant's, unless the tenant's own legal name is that handle.
+PLATFORM_PROVIDERS = frozenset({
+    "squarespace", "wix", "wixcom", "wixstudio", "wordpress", "wordpresscom", "wpengine", "weebly", "shopify", "jimdo", "godaddy",
+    "webflow", "hubspot", "mailchimp", "onecom", "webnode", "strikingly", "site123", "blogger", "tumblr", "yola", "duda", "zyro",
+    "hostinger", "bluehost", "elementor", "elegantthemes", "themeforest", "envato", "yoast", "cloudflare", "framer", "carrd",
+    "smugmug", "zenfolio", "pixieset", "showit", "domeneshop", "proisp", "uniweb", "mystore", "visma", "facebook", "meta", "instagram",
+    "linkedin", "youtube", "google", "twitter", "tiktok", "pinterest", "snapchat", "vimeo",
+})
+# Path segments that make a platform URL something other than the public profile: an administrator's console, a page
+# verification flow or a login. "linkedin.com/company/squarespace/mycompany/verification/" is Squarespace's admin link.
+NON_PROFILE_SEGMENTS = frozenset({"mycompany", "admin", "verification", "verify", "edit", "analytics", "setup", "login", "inbox", "settings", "manage"})
+# Country words in a legal name that mark a national unit of a larger organisation ("GRUNDFOS NORGE AS",
+# "BECTON DICKINSON U.K. LIMITED"). A handle without the word is the wider organisation's account.
+NORWAY_MARKERS = ("norge", "norway", "noreg", "norwegian", "norsk")
+NATIONAL_MARKERS = frozenset({"norge", "norway", "noreg", "uk", "sverige", "sweden", "danmark", "denmark", "finland", "suomi", "deutschland", "germany", "usa"})
+NORWEGIAN_FORMS = frozenset({"AS", "ASA", "ANS", "DA", "ENK", "SA", "BA", "IKS", "KS", "STI", "FLI", "SAM", "NUF", "AAFY", "BRL", "ORGL"})
+FOREIGN_FORM_WORDS = frozenset({"oy", "oyj", "ab", "gmbh", "ltd", "limited", "inc", "plc", "bv", "nv", "aps", "ag", "llc", "sa", "sas", "spa", "srl", "corp", "corporation"})
+_LOCALE_HOST = _re.compile(r"^([a-z]{2})\.(?:linkedin|facebook)\.com$")
+
+
+def _tld(url: str) -> str:
+    host = (_urlparse.urlsplit(url).hostname or "").casefold().rstrip(".")
+    return host.rsplit(".", 1)[-1] if "." in host else ""
+
+
+def _words(text: str) -> list[str]:
+    return _re.findall(r"[a-z0-9]+", _fold(text))
+
+
+def national_markers(legal_name: str) -> set[str]:
+    words = _words(legal_name)
+    found = {word for word in words if word in NATIONAL_MARKERS}
+    if any(a == "u" and b == "k" for a, b in zip(words, words[1:])):
+        found.add("uk")
+    return found
+
+
+def _carries(handle: str, words: list[str], marker: str) -> bool:
+    if marker in ("norge", "norway", "noreg"):
+        return any(m in handle for m in NORWAY_MARKERS) or any(word in ("no", "nor") for word in words) or handle.endswith(("no", "nor"))
+    if marker == "uk":
+        return "uk" in words or handle.endswith("uk") or "unitedkingdom" in handle
+    return marker in handle
+
+
+def foreign_parent(profile: dict[str, Any]) -> str | None:
+    """The top parent named in this company's registry group structure (konsernstruktur), when it is a foreign entity:
+    registered as UTLA, or named with another country's legal form ("NELES CONTROLS OY" above VALMET AS)."""
+    org = _re.sub(r"\D", "", str(profile.get("organisation_number") or ""))
+    record = (profile.get("evidence") or {}).get("group") or {}
+    value = record.get("value") if record.get("status") == "available" else None
+    if not isinstance(value, dict):
+        return None
+    top_number = str(value.get("organisasjonsnummer") or "")
+    if not top_number or top_number == org:
+        return None
+    form = str((value.get("organisasjonsform") or {}).get("kode") or "").upper()
+    name = str(value.get("navn") or "")
+    words = _words(name)
+    if form == "UTLA" or (words and words[-1] in FOREIGN_FORM_WORDS):
+        return name
+    return None
+
+
+def owner_check(profile: dict[str, Any], legal: _LegalName, platform: str, url: str, site_url: str) -> Decision | None:
+    """A Decision to withhold when the URL itself shows the profile is not this company's; None otherwise."""
+    parsed = _urlparse.urlsplit(url)
+    segments = [segment.casefold() for segment in parsed.path.split("/") if segment]
+    tail = segments[2:] if platform == "linkedin" else segments[1:]
+    hit = next((segment for segment in tail if segment in NON_PROFILE_SEGMENTS), None)
+    if hit:
+        return Decision(False, "not_a_public_profile_url",
+                        f"The link is a platform administration or verification page (/{hit}/), not a public company profile.")
+    handle, words = _handle_of(platform, url)
+    exact = bool(handle) and handle in (legal.compact, legal.compact_full)
+    if handle in PLATFORM_PROVIDERS and not exact:
+        return Decision(False, "platform_provider_account",
+                        f"\"{handle}\" is the account of a website or social-media platform provider; a link to it in a site's template or "
+                        "structured data is not this company's profile.")
+    legal_form = str(profile.get("legal_form") or "").upper()
+    name = str(profile.get("name") or legal.name or "")
+    site_tld = _tld(site_url)
+    locale = _LOCALE_HOST.match((parsed.hostname or "").casefold())
+    foreign_locale = bool(locale) and locale.group(1) not in ("no", "www") and site_tld != locale.group(1)
+    markers = national_markers(name)
+    missing = sorted(marker for marker in markers if not _carries(handle, words, marker))
+    if missing and (site_tld != "no" or foreign_locale):
+        return Decision(False, "group_account_without_national_unit",
+                        f"The company is a national unit (\"{missing[0]}\" in its legal name), the handle leaves that out, and the website is a wider "
+                        "organisation's: it is the group's account, not this company's.")
+    norwegian = legal_form in NORWEGIAN_FORMS and not (markers - {"norge", "norway", "noreg"})
+    parent = foreign_parent(profile)
+    carries_norway = any(m in handle for m in NORWAY_MARKERS) or any(word in ("no", "nor") for word in words)
+    if parent and site_tld != "no" and not carries_norway:
+        return Decision(False, "foreign_parent_group_account",
+                        f"The registry lists a foreign parent ({parent}), the website is the group's international site, and the handle has no Norwegian "
+                        "marker: the account is the group's, not this Norwegian company's.")
+    if norwegian and foreign_locale and site_tld != "no" and not carries_norway:
+        return Decision(False, "account_localised_abroad_on_group_site",
+                        f"A Norwegian company's international website links the profile in another country's locale ({locale.group(1)}.), and the handle "
+                        "has no Norwegian marker: the account is run abroad by the wider organisation.")
+    return None

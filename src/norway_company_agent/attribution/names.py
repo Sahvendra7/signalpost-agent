@@ -196,6 +196,14 @@ def handle_of(platform: str, url: str) -> tuple[str, list[str]]:
     # Remediation R3: "board-assure-a-s", "firma.a.s": a slugified "A/S" or "A.S." is the legal form "as".
     folded = re.sub(r"(?<![a-z0-9])a[-._]s(?![a-z0-9])", "as", folded)
     words = [word for word in re.split(r"[^a-z0-9]+", folded) if word]
+    # V3.1.1: a CamelCase handle that ends in a capitalised legal form spells a legal name
+    # ("BirkelandTyseBergsprengerAs"): split it into its words so the legal-name check below sees "... as".
+    raw_text = urllib.parse.unquote(raw)
+    if len(words) == 1 and re.search(r"[a-zæøå0-9](?:As|AS|Asa|ASA)$", raw_text) and re.search(r"[a-zæøå][A-ZÆØÅ]", raw_text[:-2]):
+        camel = re.findall(r"[A-ZÆØÅ]+(?![a-zæøå])|[A-ZÆØÅ]?[a-zæøå0-9]+", raw_text)
+        camel_words = [compact(word) for word in camel if compact(word)]
+        if len(camel_words) >= 2 and "".join(camel_words) == words[0]:
+            words = camel_words
     if len(words) > 2:
         words = [word for word in words if word not in ("og", "and")]  # "hansen-og-sonn-as": connectors are not in legal tokens
     return "".join(words), words

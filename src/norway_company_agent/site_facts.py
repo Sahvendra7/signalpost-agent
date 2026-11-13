@@ -38,7 +38,7 @@ from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relati
 from .attribution.jobs import decide_job, is_recruiter
 from .attribution.news import NEWS_SEGMENT, assess_content, company_names, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, news_policy_decision, source_tier, subject_of
 from .attribution.operator import SiteOperator, assess_operator, sibling_names
-from .attribution.social import decide_profile
+from .attribution.social import decide_profile, owner_check
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
 
@@ -970,6 +970,9 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
             out.reject("social", "url_not_in_page", chosen, page)
             continue
         relation = handle_relation(legal, platform, chosen["canonical_url"])
+        # V3.1.1: the URL itself (admin page, platform provider, group account) can rule the profile out; this runs
+        # first, so neither sameAs structured data nor an anchor label can override it.
+        held = owner_check(profile, legal, platform, chosen["url"], site_url)
         org_sameas = any(item["via"] == "jsonld_sameas" and legal.phrase_in(item.get("jsonld_name")) for item in group)
         bare = relation.handle
         handle_is_domain = len(site_label) >= 4 and bare.startswith(site_label) and not legal.strip_neutral(bare[len(site_label):]) and site_label not in GENERIC_BRANDS
@@ -978,6 +981,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                                          org_sameas=org_sameas, operator_basis=operator.basis, handle_is_domain=handle_is_domain,
                                          names_site_entity=_display_entity(other_named, pages) if other_named else None,
                                          bare_exact_on_same_name_domain=same_name_domain and bare in (legal.compact, legal.compact_full))
+        if held is not None:
+            decision, score = held, None
         reason = decision.basis
         record = {
             "platform": platform, "url": chosen["url"], "canonical_url": canonical, "evidence_span": chosen["linked_as"],
