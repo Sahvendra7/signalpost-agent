@@ -370,6 +370,19 @@ class JobAdvertisements(unittest.TestCase):
         self.assertEqual(facts.jobs, [])
         self.assertTrue(rejected_job(facts, "no_individual_advertisement_url"))
 
+    def test_a_job_board_for_other_employers_is_not_the_companys_careers_page(self):
+        from norway_company_agent.site_research import SiteResult, apply_site_facts
+        cards = (card("Fundraiser, Norges Røde Kors", "https://www.finn.no/job/ad/479282780", f"<p>Søknadsfrist: {SOON}</p>")
+                 + card("Innsamlingsansvarlig, Caritas Norge", "https://www.finn.no/job/ad/479635547", f"<p>Søknadsfrist: {SOON}</p>"))
+        board = careers_page(cards)
+        facts = self.facts(board)
+        self.assertEqual(facts.careers_checked[0]["other_employer_positions"], 2)
+        result = SiteResult(status="verified")
+        result.careers_page = board.url
+        apply_site_facts(result, facts, self.FJELL, [HOME, board])
+        self.assertIsNone(result.careers_page)
+        self.assertIn("careers:job_board_for_other_employers", result.extraction_rejections)
+
     def test_the_crawler_follows_undated_positions_to_their_own_page(self):
         from test_site_research import FakeWeb, ORG, profile as research_profile
         from norway_company_agent.site_research import SiteSession, research_company_site

@@ -1182,6 +1182,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     seen_jobs: set[tuple[str, str]] = set()
     recruiter = is_recruiter(profile)
     run_date = (now or datetime.now(timezone.utc)).astimezone(_OSLO).date()
+    other_employers: dict[str, int] = {}  # V3.1.1: careers-page positions that name another employer, per page
     for page in pages:
         if page.kind != "html":
             continue
@@ -1207,6 +1208,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                                       on_news_page=is_news_page(source.url) or ARCHIVE_PATH.search(urllib.parse.urlsplit(source.url).path.casefold()) is not None,
                                       site_domain=site_domain)
                 reason = None if decision.accepted else decision.code
+            if reason and reason == "other_employer" and job.get("method") == "careers_page_listing":
+                other_employers[source.url] = other_employers.get(source.url, 0) + 1
             if reason:
                 out.reject("job", reason, job, source)
                 continue
@@ -1216,4 +1219,7 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                 continue
             seen_jobs.add(key)
             out.jobs.append({**job, **_provenance(source)})
+    for entry in out.careers_checked:
+        if other_employers.get(entry["url"]):
+            entry["other_employer_positions"] = other_employers[entry["url"]]
     return out

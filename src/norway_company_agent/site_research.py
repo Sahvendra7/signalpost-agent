@@ -531,6 +531,14 @@ def apply_site_facts(result: SiteResult, facts: Any, profile: dict[str, Any] | N
             counts["careers:recruiter_job_board"] = counts.get("careers:recruiter_job_board", 0) + 1
             held("careers", result.careers_page, "recruiter_job_board")
             result.careers_page, result.careers_checked = None, []
+        elif any(item.get("url") == result.careers_page and item.get("other_employer_positions", 0) >= 2
+                 and item.get("other_employer_positions", 0) >= item.get("positions", 0) for item in result.careers_checked):
+            # V3.1.1: every position the page lists names another employer (a member organisation's or client's job
+            # board, FUNDRAISING NORGE on evalh400): it is not a page about working at this company.
+            counts = result.extraction_rejections
+            counts["careers:job_board_for_other_employers"] = counts.get("careers:job_board_for_other_employers", 0) + 1
+            held("careers", result.careers_page, "job_board_for_other_employers")
+            result.careers_page, result.careers_checked = None, []
         elif fetched_page is None or not is_careers_page(fetched_page) or service_page(result.careers_page):
             counts = result.extraction_rejections
             counts["careers:not_a_careers_page"] = counts.get("careers:not_a_careers_page", 0) + 1
