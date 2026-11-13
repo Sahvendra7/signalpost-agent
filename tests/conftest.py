@@ -1,7 +1,8 @@
 """V3.1.1: the test modules written for V3.1 and earlier pin V3.1's news classification on synthetic posts (a "Ny avtale
 med kommunen" blog post must publish). They run with SIGNALPOST_NEWS_PUBLICATION=anchored, which reproduces V3.1's news
-output exactly. Modules for V3.1.1 run the default announcement tier. `scripts/run_suite_default_tier.sh` runs the
-whole suite on the default tier to list exactly which V3.1 expectations the tier changes."""
+output exactly. Modules for V3.1.1 run the default announcement tier. SIGNALPOST_TEST_DEFAULT_TIER=1 runs the whole
+suite on the default tier, to list exactly which V3.1 expectations the tier changes
+(measurements/v311-rescore-2026-11-14/suite-default-tier.txt)."""
 from __future__ import annotations
 
 import os
