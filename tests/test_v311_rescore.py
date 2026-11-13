@@ -293,5 +293,101 @@ class NewsDates(unittest.TestCase):
             self.assertEqual(titles(extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)], now=NOW)), ["Kampreferat runde 1 mot Storhamar"])
 
 
+# ---------- jobs: individual, current advertisements by this employer ----------
+
+from datetime import date, timedelta  # noqa: E402
+
+from norway_company_agent.attribution.jobs import decide_job, employer_in_title  # noqa: E402
+
+TODAY = datetime.now(timezone.utc).date()
+SOON = (TODAY + timedelta(days=21)).strftime("%d.%m.%Y")
+PAST = (TODAY - timedelta(days=40)).strftime("%d.%m.%Y")
+CAREERS = SITE + "karriere/"
+
+
+def careers_page(cards: str) -> CapturedPage:
+    return page(CAREERS, f"<html><body><main><h1>Ledige stillinger hos Fjell Data</h1>{cards}</main></body></html>")
+
+
+def card(title: str, href: str, extra: str = "") -> str:
+    return f'<div class="job"><a href="{href}"><h3>{title}</h3></a><p>Fast stilling, 100 %</p>{extra}</div>'
+
+
+class JobAdvertisements(unittest.TestCase):
+    FJELL = profile("FJELL DATA AS")
+
+    def facts(self, *pages):
+        return extract_site_facts(self.FJELL, [HOME, *pages], now=datetime.now(timezone.utc))
+
+    def test_a_current_individual_advertisement_is_published_dated_by_its_own_page(self):
+        detail = page(CAREERS + "driftstekniker/", f"<html><body><h1>Driftstekniker</h1><p>Fjell Data AS søker driftstekniker.</p>"
+                                                  f"<p><strong>Søknadsfrist:</strong> {SOON}</p></body></html>")
+        facts = self.facts(careers_page(card("Driftstekniker", "/karriere/driftstekniker/")), detail)
+        self.assertEqual([(job["title"], job["url"], job["currency"]["state"]) for job in facts.jobs],
+                         [("Driftstekniker", CAREERS + "driftstekniker/", "open")])
+        self.assertEqual(facts.jobs[0]["detail_page"], detail.url)
+
+    def test_an_expired_advertisement_is_rejected(self):
+        facts = self.facts(careers_page(card("Driftstekniker", "/karriere/driftstekniker/", f"<p>Søknadsfrist: {PAST}</p>")))
+        self.assertEqual(facts.jobs, [])
+        self.assertTrue(rejected_job(facts, "expired"))
+
+    def test_a_generic_careers_page_is_not_a_job_advertisement(self):
+        facts = self.facts(page(CAREERS, "<html><body><h1>Karriere</h1><p>Vi har for tiden ingen ledige stillinger. Send gjerne en åpen søknad.</p>"
+                                         '<a href="/karriere/apen-soknad/">Åpen søknad</a></body></html>'))
+        self.assertEqual(facts.jobs, [])
+        undated = self.facts(careers_page(card("Driftstekniker", "/karriere/driftstekniker/")))
+        self.assertEqual(undated.jobs, [], "a listed title with no date anywhere: whether it is open is unknown")
+
+    def test_an_advertisement_for_another_employer_is_rejected(self):
+        """FUNDRAISING NORGE (evalh400): V3.1 published finn.no ads for Norges Røde Kors and Caritas Norge."""
+        cards = (card("Fundraiser, Norges Røde Kors", "https://www.finn.no/job/ad/479282780", f"<p>Søknadsfrist: {SOON}</p>")
+                 + card("Innsamlingsansvarlig, Caritas Norge", "https://www.finn.no/job/ad/479635547", f"<p>Søknadsfrist: {SOON}</p>")
+                 + card("Rådgiver hos Bergen kommune", "/karriere/radgiver-bergen-kommune/", f"<p>Søknadsfrist: {SOON}</p>"))
+        facts = self.facts(careers_page(cards))
+        self.assertEqual(facts.jobs, [])
+        self.assertTrue(rejected_job(facts, "other_employer"))
+        legal = LegalName("FJELL DATA AS")
+        self.assertIsNone(employer_in_title("Selger – Oslo", legal), "a place is not an employer")
+        self.assertIsNone(employer_in_title("Driftstekniker, Fjell Data AS", legal))
+
+    def test_a_third_party_listing_without_a_verified_employer_is_rejected(self):
+        cards = card("Markedsfører", "https://www.finn.no/job/ad/481000001", f"<p>Søknadsfrist: {SOON}</p>")
+        facts = self.facts(careers_page(cards))
+        self.assertEqual(facts.jobs, [])
+        self.assertTrue(rejected_job(facts, "external_ad_employer_unverified"))
+
+    def test_an_applicant_tracking_page_named_for_the_company_qualifies(self):
+        cards = card("Markedsfører", "https://fjelldata.teamtailor.com/jobs/123-markedsforer", f"<p>Søknadsfrist: {SOON}</p>")
+        self.assertEqual([job["title"] for job in self.facts(careers_page(cards)).jobs], ["Markedsfører"])
+        named = card("Markedsfører", "https://www.finn.no/job/ad/481000002", f"<p>Arbeidsgiver: Fjell Data AS</p><p>Søknadsfrist: {SOON}</p>")
+        self.assertEqual([job["title"] for job in self.facts(careers_page(named)).jobs], ["Markedsfører"])
+
+    def test_several_unlinked_postings_on_one_page_are_not_individual_advertisements(self):
+        import json as _json
+        node = lambda title: f'<script type="application/ld+json">{_json.dumps({"@type": "JobPosting", "title": title, "validThrough": (TODAY + timedelta(days=20)).isoformat()})}</script>'
+        facts = self.facts(page(SITE + "om-oss/", f"<html><body>{node('Driftstekniker')}{node('Selger')}<p>Driftstekniker Selger</p></body></html>"))
+        self.assertEqual(facts.jobs, [])
+        self.assertTrue(rejected_job(facts, "no_individual_advertisement_url"))
+
+    def test_the_crawler_follows_undated_positions_to_their_own_page(self):
+        from test_site_research import FakeWeb, ORG, profile as research_profile
+        from norway_company_agent.site_research import SiteSession, research_company_site
+        base = "https://fjordtest.no"
+        home = (f'<html><body><a href="/karriere/">Karriere</a><footer>Fjordtest Programvare AS · Org.nr {ORG[:3]} {ORG[3:6]} {ORG[6:]}</footer></body></html>').encode()
+        careers = (f'<html><body><h1>Ledige stillinger</h1>{card("Utvikler", "/karriere/utvikler/")}</body></html>').encode()
+        detail = f"<html><body><h1>Utvikler</h1><p>Søknadsfrist: {SOON}</p></body></html>".encode()
+        web = FakeWeb({f"{base}/robots.txt": (200, b"User-agent: *\nAllow: /\n"), f"{base}/": (200, home), f"{base}/karriere/": (200, careers),
+                       f"{base}/karriere/utvikler/": (200, detail)})
+        result = research_company_site(research_profile(email="post@fjordtest.no"), SiteSession(web, resolver=lambda host: True))
+        self.assertIn(f"{base}/karriere/utvikler/", web.calls)
+        self.assertEqual([(job["title"], job["currency"]["state"]) for job in result.jobs], [("Utvikler", "open")])
+        self.assertEqual(result.job_pages_fetched, 1)
+
+
+def rejected_job(facts, code: str) -> bool:
+    return f"job:{code}" in facts.rejections
+
+
 if __name__ == "__main__":
     unittest.main()

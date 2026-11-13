@@ -47,6 +47,7 @@ CAREER_HINTS = ("ledige-stillinger", "ledige stillinger", "karriere", "career", 
 HTML_ACCEPT = "text/html,application/xhtml+xml"
 MAX_PAGE_BYTES = 3_000_000
 MAX_ARTICLE_FETCHES = 3  # article pages followed from a news listing that states no dates
+MAX_JOB_FETCHES = 3  # V3.1.1: advertisement pages followed from the careers page when its cards state no dates
 MANAGER_SITE_MAX_NEWS = 5  # a business manager's site serves many entities: at most this many items that name the entity
 
 
@@ -275,6 +276,7 @@ class SiteResult:
     activities: list[dict[str, Any]] = field(default_factory=list)
     jobs: list[dict[str, Any]] = field(default_factory=list)
     careers_page: str | None = None
+    job_pages_fetched: int = 0
     careers_checked: list[dict[str, Any]] = field(default_factory=list)
     articles_fetched: int = 0
     manager: dict[str, Any] | None = None  # MANAGER_DESIGNATED: the registered forretningsfører operating the site
@@ -454,6 +456,27 @@ def _enrich(profile: dict[str, Any], session: SiteSession, budget: CompanyBudget
                 fetched.append((url, response))
                 result.articles_fetched += 1
         if result.articles_fetched:
+            captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
+            facts = extract_site_facts(profile, captured, feed_pages, **context)
+    # V3.1.1: positions the careers page lists without a date are dated only by their own advertisement page. Read at
+    # most MAX_JOB_FETCHES of them, on the company's own site, through the same budget, robots and Crawl-delay controls.
+    careers_url = result.careers_page
+    careers_page = next((page for page in captured if page.url == careers_url), None) if careers_url else None
+    if careers_page is not None and is_careers_page(careers_page):
+        from .site_facts import job_listings
+        listed, _ = job_listings(careers_page)
+        undated = [str(job["url"]).split("#")[0] for job in listed
+                   if not (job.get("application_deadline") or job.get("date_posted")) and inside(str(job.get("url") or ""))]
+        followed = 0
+        for url in list(dict.fromkeys(undated)):
+            if followed >= MAX_JOB_FETCHES or any(url == known for known, _ in fetched):
+                continue
+            state, response = session.get(url, budget)
+            if state == "ok":
+                fetched.append((url, response))
+                followed += 1
+        if followed:
+            result.job_pages_fetched = followed
             captured = [CapturedPage(url, response.raw, response.content_sha256, response.retrieved_at) for url, response in fetched]
             facts = extract_site_facts(profile, captured, feed_pages, **context)
     apply_site_facts(result, facts, profile, captured + feed_pages)

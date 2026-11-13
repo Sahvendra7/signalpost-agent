@@ -903,11 +903,29 @@ def _extends_name(rest: str) -> bool:
     return bool(following) and (following.group(1).isdigit() or following.group(1) in NAME_CONTINUATIONS)
 
 
-def validate_job(job: dict[str, Any], page: CapturedPage) -> str | None:
+def _dated_by_detail_page(job: dict[str, Any], detail: CapturedPage | None) -> dict[str, Any]:
+    """The listing job with the deadline (or posting date) its own advertisement page states, when the card states none.
+    The detail page must carry the job title; the date must sit under its label ("Søknadsfrist: 30.11.2026")."""
+    if detail is None or detail.kind != "html" or job.get("application_deadline") or job.get("date_posted") or not detail.contains(job.get("title")):
+        return job
+    soup = detail.soup()
+    _drop(soup, chrome=True)
+    segments = _segments(soup.body or soup)
+    deadline, deadline_text = _labelled_date(segments, ("søknadsfrist", "frist", "deadline", "apply by", "sista ansökningsdag"), allow_future=True)
+    posted, posted_text = _labelled_date(segments, ("publisert", "published", "posted", "lagt ut"))
+    if not (deadline or posted):
+        return job
+    return {**job, **({"application_deadline": deadline, "application_deadline_text": deadline_text} if deadline else {}),
+            **({"date_posted": posted, "date_posted_text": posted_text} if posted else {}), "detail_page": detail.url,
+            "detail_content_sha256": detail.content_sha256}
+
+
+def validate_job(job: dict[str, Any], page: CapturedPage, detail: CapturedPage | None = None) -> str | None:
     if not page.contains(job.get("title")):
         return "title_not_in_page"
     for key in ("date_posted_text", "application_deadline_text", "location"):
-        if job.get(key) and not page.contains(job[key]):
+        source = detail if detail is not None and job.get("detail_page") and key != "location" else page
+        if job.get(key) and not source.contains(job[key]):
             return f"{key}_not_in_page"
     return None
 
@@ -1168,16 +1186,26 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
         if page.kind != "html":
             continue
         found = [(job, page) for job in job_postings(page.html, page.url)]
+        unlinked = [job for job, _ in found if job.get("url") == page.url and not str(job.get("valid_through") or "9999")[:10] < run_date.isoformat()]
+        if len(unlinked) > 1:
+            # V3.1.1: several current JobPostings on one page without their own URLs: no individual advertisement page.
+            for job in unlinked:
+                out.reject("job", "no_individual_advertisement_url", job, page)
+            found = [(job, source) for job, source in found if not any(job is other for other in unlinked)]
         if is_careers_page(page):
             listed, why = job_listings(page)
+            # V3.1.1: a listed position without dates on the card is dated by its own advertisement page when the
+            # crawl read it (site_research fetches a few on the company's own domain): its deadline or posting date.
+            listed = [_dated_by_detail_page(job, by_url.get(str(job.get("url") or "").split("#")[0])) for job in listed]
             out.careers_checked.append({"url": page.url, "positions": len(listed), "reason": why})
             found.extend((job, page) for job in listed)
         for job, source in found:
-            reason = validate_job(job, source)
+            reason = validate_job(job, source, by_url.get(str(job.get("detail_page") or "")))
             decision = None
             if not reason:
                 decision = decide_job(job, legal=legal, operator_kind=operator.kind, recruiter=recruiter, run_date=run_date,
-                                      on_news_page=is_news_page(source.url) or ARCHIVE_PATH.search(urllib.parse.urlsplit(source.url).path.casefold()) is not None)
+                                      on_news_page=is_news_page(source.url) or ARCHIVE_PATH.search(urllib.parse.urlsplit(source.url).path.casefold()) is not None,
+                                      site_domain=site_domain)
                 reason = None if decision.accepted else decision.code
             if reason:
                 out.reject("job", reason, job, source)

@@ -55,8 +55,46 @@ def currency(job: dict[str, Any], run_date: date) -> tuple[str, str]:
     return "undated", "no posting date or deadline stated; whether the position is still open is unknown"
 
 
+# V3.1.1: an advertisement title that names its employer after the role ("Fundraiser, Norges Røde Kors", "Rådgiver hos
+# Bergen kommune", "Lærer – Steinerskolen i Ås"): the trailing part names an organisation when it carries a legal form or
+# an organisation word. A trailing place name ("Selger – Oslo") names no organisation and is not read as one.
+ORGANISATION_WORDS = {"as", "asa", "sa", "iks", "kf", "hf", "ks", "ba", "da", "ans", "nuf", "kommune", "kommunes", "fylkeskommune",
+                      "norge", "norges", "kors", "stiftelse", "stiftelsen", "forening", "foreningen", "forbund", "forbundet", "laget",
+                      "klubb", "klubben", "sykehus", "sykehuset", "universitet", "universitetet", "hogskole", "hogskolen", "skole", "skolen",
+                      "barnehage", "barnehagen", "senter", "senteret", "gruppen", "group", "kirke", "kirken", "menighet", "fond", "fondet",
+                      "organisasjon", "organisasjonen", "helseforetak", "direktorat", "direktoratet", "etaten", "tilsynet", "partiet"}
+TITLE_EMPLOYER = re.compile(r"^(?P<role>.{3,80}?)(?:\s*,\s+|\s+[–—-]\s+|\s+(?:hos|ved|i|til|for|at|with)\s+)(?P<org>[A-ZÆØÅ0-9][^,–—]{1,80})$")
+
+
+def employer_in_title(title: str, legal: LegalName) -> str | None:
+    """The other organisation an advertisement's title names as employer, or None."""
+    match = TITLE_EMPLOYER.match(" ".join(str(title or "").split()))
+    if not match:
+        return None
+    org = match.group("org").strip(" .")
+    words = re.findall(r"[a-z0-9]+", fold(org))
+    if not words or not set(words) & ORGANISATION_WORDS:
+        return None
+    if legal.phrase_in(org) or (legal.compact and compact(org).startswith(legal.compact)):
+        return None
+    return org
+
+
+def _host_names_company(url: str, legal: LegalName) -> bool:
+    """An applicant-tracking address that carries the company's name (fjelldata.teamtailor.com, /company/fjell-data)."""
+    import urllib.parse
+    parts = urllib.parse.urlsplit(url)
+    host = (parts.hostname or "").casefold()
+    labels = [compact(label) for label in host.split(".")[:-2]] + [compact(segment) for segment in parts.path.split("/") if segment]
+    bases = [base for base in (legal.compact, legal.compact_full, *legal.brands) if base and len(base) >= 4]
+    return any(label and any(label.startswith(base) for base in bases) for label in labels)
+
+
 def employer(job: dict[str, Any], legal: LegalName, operator_kind: str, recruiter: bool) -> Decision:
     named = str(job.get("hiring_organization") or job.get("employer_label") or "").strip()
+    titled = employer_in_title(str(job.get("title") or ""), legal)
+    if titled:
+        return Decision(False, "other_employer", f"The advertisement's title names another employer (\"{titled}\").")
     if named:
         value = compact(named)
         if legal.phrase_in(named) or (legal.compact and value.startswith(legal.compact) and not legal.strip_neutral(value[len(legal.compact):])):
@@ -69,7 +107,11 @@ def employer(job: dict[str, Any], legal: LegalName, operator_kind: str, recruite
     return Decision(False, "employer_unstated_on_shared_site", "The website is shared with other companies, and the advertisement names no employer.")
 
 
-def decide_job(job: dict[str, Any], *, legal: LegalName, operator_kind: str, recruiter: bool, run_date: date, on_news_page: bool) -> Decision:
+def decide_job(job: dict[str, Any], *, legal: LegalName, operator_kind: str, recruiter: bool, run_date: date, on_news_page: bool,
+               site_domain: str | None = None) -> Decision:
+    """`site_domain`: the verified website's registered domain. An advertisement hosted elsewhere (finn.no, an
+    applicant-tracking system) qualifies only when its employer is verified: named as this company, or the tracking
+    address itself carries the company's name. "Listed on our careers page" is not enough off the company's own site."""
     title = " ".join(str(job.get("title") or "").split())
     if job.get("method") == "jsonld_JobPosting" and on_news_page:
         return Decision(False, "job_on_news_page", "The advertisement sits in a news archive, where old advertisements stay listed.")
@@ -78,6 +120,12 @@ def decide_job(job: dict[str, Any], *, legal: LegalName, operator_kind: str, rec
     owner = employer(job, legal, operator_kind, recruiter)
     if not owner.accepted:
         return owner
+    url = str(job.get("url") or "")
+    if site_domain and url and owner.code == "employer_presumed_own_careers_page":
+        from ..website import _registered_domain
+        if _registered_domain(url) != site_domain and not _host_names_company(url, legal):
+            return Decision(False, "external_ad_employer_unverified",
+                            "The advertisement is hosted off the company's website and names no employer; the link alone does not verify who is hiring.")
     state, basis = currency(job, run_date)
     if state not in ("open", "recently_posted"):
         return Decision(False, "currency_unknown" if state == "undated" else "expired", basis[:1].upper() + basis[1:] + ".")
