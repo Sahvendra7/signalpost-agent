@@ -103,7 +103,11 @@ const { chromium } = require(process.env.PWPATH);
     await page.waitForSelector("#company-name");
     r.held = await page.$$eval("#detail h3", (n) => n.map((x) => x.textContent).filter((t) => t.startsWith("Seen but not attributed")));
     r.retracted = await page.$$eval("#detail td", (n) => n.map((x) => x.textContent).filter((t) => t === "Withdrawn by our checks").length);
+    r.heldText = await page.$$eval("#detail td", (n) => n.map((x) => x.textContent).filter((t) => t.startsWith("Related website, not the entity's own")));
     await wide("company");
+    // V3.1.1: Tyin's website is run by another company, so it is held (above); the inspector is checked on Kilis's own website.
+    await page.goto(file + "#org=" + process.argv[4]); await page.reload();
+    await page.waitForSelector("#company-name");
     await page.click('#detail button[aria-label="Inspect official website"]');
     await page.waitForSelector("#inspect[open]");
     r.inspect = await page.$$eval("#inspect dt", (n) => n.map((x) => x.textContent));
@@ -144,8 +148,9 @@ const { chromium } = require(process.env.PWPATH);
                     self.assertEqual(r["overflow"], [], "no horizontal page scroll")
                     self.assertTrue(r["held"], "held-back items are shown, separately from facts")
                     self.assertGreaterEqual(r["retracted"], 1)
-                    self.assertIn("How it relates to this company", r["inspect"])
-                    self.assertIn("Website role", r["inspect"], "Tyin's site is run by another company, and the inspector says so")
+                    self.assertIn("Source type", r["inspect"], "V3.1.1: inspected on Kilis's own website (Tyin's is held), which has no attribution note")
+                    self.assertTrue(any("tyinfilefjell.no" in text for text in r["heldText"]),
+                                    "V3.1.1: Tyin's site is run by another company; it is held as a related website, with its URL and the reason")
                     self.assertIn("Content hash", r["inspect"])
                     self.assertTrue(r["closed"])
                     self.assertEqual(r["newTitle"], "What's new since the previous run")

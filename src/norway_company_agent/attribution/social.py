@@ -140,6 +140,22 @@ def foreign_parent(profile: dict[str, Any]) -> str | None:
     return None
 
 
+def shared_group_brand(profile: dict[str, Any], legal: _LegalName, handle: str, words: list[str]) -> str | None:
+    """Another registry group company whose name also begins with the handle's brand (MOELVEN WOOD AS's `moelven` next to
+    Moelven Industrier ASA and Moelven Bioenergi AS). Only a brand handle (shorter than the legal name, possibly with a
+    neutral or domain affix) is affected: a handle that spells this company's full legal name stays this company's."""
+    from .operator import registry_group_names
+    from .names import NEUTRAL, compact as _compact_name
+
+    if not handle or handle in (legal.compact, legal.compact_full) or not legal.compact.startswith(handle[:4]):
+        return None
+    stem = next((brand for brand in sorted(legal.brands, key=len, reverse=True) if handle.startswith(brand)), None)
+    if not stem or any(marker in handle[len(stem):] for marker in ("norge", "norway")) or legal.compact.startswith(handle) and handle != stem and len(handle) > len(stem) + 3:
+        return None
+    others = [name for number, name in registry_group_names(profile) if _compact_name(name).startswith(stem) and _compact_name(name) != legal.compact]
+    return ", ".join(sorted(others)[:3]) or None
+
+
 def owner_check(profile: dict[str, Any], legal: _LegalName, platform: str, url: str, site_url: str) -> Decision | None:
     """A Decision to withhold when the URL itself shows the profile is not this company's; None otherwise."""
     parsed = _urlparse.urlsplit(url)
@@ -158,6 +174,11 @@ def owner_check(profile: dict[str, Any], legal: _LegalName, platform: str, url: 
     legal_form = str(profile.get("legal_form") or "").upper()
     name = str(profile.get("name") or legal.name or "")
     site_tld = _tld(site_url)
+    shared = shared_group_brand(profile, legal, handle, words)
+    if shared:
+        return Decision(False, "group_shared_brand_handle",
+                        f"The handle is the brand \"{handle}\", which other companies in this company's registry group also carry ({shared}); it is "
+                        "the group's account, not necessarily this company's.")
     locale = _LOCALE_HOST.match((parsed.hostname or "").casefold())
     foreign_locale = bool(locale) and locale.group(1) not in ("no", "www") and site_tld != locale.group(1)
     markers = national_markers(name)

@@ -54,8 +54,12 @@ class SocialAttribution(unittest.TestCase):
         """TYIN ALPINT AS (983181732): registry website tyinfilefjell.no states Tyin Filefjell AS 930182451 and
         Filefjellstuene AS 930182478, never 983181732. Baseline published Tyin Filefjell's LinkedIn/Facebook/Instagram."""
         self.assertEqual(profiles("983181732"), set())
-        site = available("983181732", "official_website")
-        self.assertEqual([claim["value"] for claim in site], ["https://www.tyinfilefjell.no/"], "the registry-linked website itself stays")
+        # V3.1.1: the site is run by another company, so it is not published as Tyin Alpint's own website; it stays visible
+        # as a related website (related_not_exact), and the registry link itself stays as registry_listed_website.
+        self.assertEqual(available("983181732", "official_website"), [])
+        site = [claim for claim in replay("983181732")["claims"] if claim["field"] == "official_website" and claim.get("related_url")]
+        self.assertEqual([(claim["related_url"], claim["availability"], claim["relation"]) for claim in site],
+                         [("https://www.tyinfilefjell.no/", "ambiguous", "related_not_exact")])
         self.assertEqual((site[0].get("operated_by") or {}).get("organisation_number"), "930182451")
 
     def test_bergknapp_keeps_its_own_profiles_but_not_grasrota(self):
@@ -312,8 +316,10 @@ class SharedNameAcrossBorders(unittest.TestCase):
         held = held_social("830872752")
         self.assertEqual(held.get("https://facebook.com/logscom"), "group_name_handle_on_group_or_brand_site", "the bare shared name")
         self.assertEqual(held.get("https://instagram.com/logscom_ab"), "handle_names_other_entity", "'ab' is the Swedish company's legal form")
-        site = available("830872752", "official_website")
-        self.assertEqual([claim["value"] for claim in site], ["https://logscom.com/"], "the registry-linked website itself stays")
+        # V3.1.1: logscom.com is the Swedish Logscom AB's site: held as a related website, not published as LOGSCOM AS's own.
+        self.assertEqual(available("830872752", "official_website"), [])
+        site = [claim for claim in replay("830872752")["claims"] if claim["field"] == "official_website" and claim.get("related_url")]
+        self.assertEqual([claim["related_url"] for claim in site], ["https://logscom.com/"])
         self.assertEqual(site[0].get("site_role"), "group_or_brand_site")
         self.assertEqual(news_titles("830872752"), [])
 

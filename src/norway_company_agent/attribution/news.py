@@ -513,9 +513,16 @@ ANNOUNCEMENT = re.compile(
     r")\b", re.I)
 
 
+LAUNCH = re.compile(r"\b(?:lanserer|lansert|lansering|launch\w*|introduserer|introduces|introduced|presenterer|presents)\b", re.I)
+
+
 def announcement_decision(title: str, body: str, *, names: list[str], names_company: bool) -> Decision | None:
     """None = publish (the item is a dated announcement of this organisation's own development); a Decision = withhold."""
     title = " ".join(str(title or "").split())
+    if LAUNCH.search(title) and not mentions_company(title, names):
+        # V3.1.1 (eval-r300): a dealer's or distributor's site reposts its suppliers' launches ("DPA lanserer …"); a launch
+        # is this organisation's only when the headline itself names it.
+        return Decision(False, "launch_not_by_the_company", "Withheld: the headline announces a launch without naming this organisation as the one launching.")
     if title.rstrip().endswith("?"):
         return Decision(False, "question_title_not_announcement", "Withheld: a question as the headline is advice or an explainer, not an announcement.")
     match = ANNOUNCEMENT.search(title)

@@ -39,6 +39,7 @@ from .attribution.jobs import decide_job, is_recruiter
 from .attribution.news import NEWS_SEGMENT, announcement_decision, assess_content, company_names, group_brand_only, split_unit_names, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, news_policy_decision, source_tier, subject_of
 from .attribution.operator import SiteOperator, assess_operator, international_brand_site, sibling_names
 from .attribution.social import decide_profile, owner_check
+from .attribution.decision import Decision
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
 
@@ -1150,6 +1151,13 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                 withheld = news_policy_decision(NEWS_POLICY, tier=tier, content=content, names_company=subject == "THIS")
                 if withheld is None and news_publication() == "announcement":
                     withheld = announcement_decision(item.get("title") or "", body, names=anchor_names, names_company=subject == "THIS")
+                    own_url = item_url.split("#")[0].rstrip("/")
+                    own_segments = [part for part in urllib.parse.urlsplit(own_url).path.split("/") if part]
+                    if withheld is None and (own_url == site_url.split("#")[0].rstrip("/") or (len(own_segments) == 1 and NEWS_SEGMENT.match(own_segments[0].casefold()))
+                                             or (own_url == page.url.split("#")[0].rstrip("/") and page.kind == "html" and not is_article_path(own_url))):
+                        # V3.1.1: an announcement is published only with its own article URL, never as a card on a listing
+                        # page or the homepage (eval-r300: melbye.no/nyheter).
+                        withheld = Decision(False, "no_individual_article_url", "Withheld: the item has no article page of its own; its URL is a listing or the homepage.")
                 if withheld is not None:
                     reason = withheld.code
                 else:

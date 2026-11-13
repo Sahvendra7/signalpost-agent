@@ -80,6 +80,12 @@ def employer_in_title(title: str, legal: LegalName) -> str | None:
     return org
 
 
+def own_employer_in_title(title: str, legal: LegalName) -> bool:
+    """The title names this company as employer after the role ("Båtmekaniker og tekniker ved Havforskningsinstituttet")."""
+    match = TITLE_EMPLOYER.match(" ".join(str(title or "").split()))
+    return bool(match) and (legal.phrase_in(match.group("org")) or (bool(legal.compact) and compact(match.group("org")).startswith(legal.compact)))
+
+
 def _host_names_company(url: str, legal: LegalName) -> bool:
     """An applicant-tracking address that carries the company's name (fjelldata.teamtailor.com, /company/fjell-data)."""
     import urllib.parse
@@ -95,6 +101,8 @@ def employer(job: dict[str, Any], legal: LegalName, operator_kind: str, recruite
     titled = employer_in_title(str(job.get("title") or ""), legal)
     if titled:
         return Decision(False, "other_employer", f"The advertisement's title names another employer (\"{titled}\").")
+    if not named and own_employer_in_title(str(job.get("title") or ""), legal):
+        return Decision(True, "employer_named_in_title", "The advertisement's title names the company as employer.")
     if named:
         value = compact(named)
         if legal.phrase_in(named) or (legal.compact and value.startswith(legal.compact) and not legal.strip_neutral(value[len(legal.compact):])):

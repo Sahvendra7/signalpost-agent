@@ -159,14 +159,24 @@ def international_group_site_signals(profile: dict[str, Any], legal: LegalName, 
     from .social import foreign_parent, national_markers  # local import: social imports names, not operator
 
     domain = str(_registered(site_url) or "")
-    if not domain or domain.endswith((".no", ".as")):
+    if not domain:
         return []
     signals: list[dict[str, Any]] = []
+    from .social import shared_group_brand
+    shared_label = compact(domain.split(".")[0])
+    shared = shared_group_brand(profile, legal, shared_label, [shared_label])
+    if shared:
+        # V3.1.1 (eval-r300, MOELVEN WOOD AS on moelven.com): the domain is a brand that other companies in the registry
+        # group also carry, and the site does not state this company's organisation number: the group's site.
+        signals.append({"signal": "site_of_a_shared_group_brand", "detail": f"website {domain}; brand also carried by {shared}"})
+    if domain.endswith((".no", ".as")):
+        return signals
     parent = foreign_parent(profile)
     if parent:
         signals.append({"signal": "international_site_of_foreign_parent_group", "detail": f"registry parent {parent}; website {domain}"})
     markers = national_markers(str(profile.get("name") or legal.name))
     label = compact(domain.split(".")[0])
+
     if markers and not any(marker in label for marker in markers | {"norge", "norway", "noreg"}):
         signals.append({"signal": "international_site_of_national_unit", "detail": f"{', '.join(sorted(markers))} in the legal name; website {domain}"})
     return signals

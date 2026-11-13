@@ -402,5 +402,45 @@ def rejected_job(facts, code: str) -> bool:
     return f"job:{code}" in facts.rejections
 
 
+# ---------- post-audit fixes (eval-r300 audit of the frozen candidate 44d0cd3) ----------
+
+class PostAuditFixes(unittest.TestCase):
+    MOELVEN_GROUP = {"navn": "Moelven Industrier ASA", "organisasjonsnummer": "910724008", "organisasjonsform": {"kode": "ASA"},
+                     "children": [{"navn": "MOELVEN WOOD AS", "organisasjonsnummer": "941809030", "parentNavn": "Moelven Industrier ASA", "parentOrganisasjonsnummer": "910724008"},
+                                  {"navn": "MOELVEN BIOENERGI AS", "organisasjonsnummer": "990041881", "parentNavn": "Moelven Industrier ASA", "parentOrganisasjonsnummer": "910724008"}]}
+
+    def test_a_brand_shared_across_the_registry_group_is_not_one_members_account(self):
+        moelven = profile("MOELVEN WOOD AS", "941809030", group=self.MOELVEN_GROUP)
+        for url in ("https://www.linkedin.com/company/moelven/", "https://www.instagram.com/moelven/", "https://www.facebook.com/moelven"):
+            with self.subTest(url=url):
+                platform = next(p for p in ("linkedin", "instagram", "facebook") if p in url)
+                self.assertEqual(owner_check(moelven, LegalName("MOELVEN WOOD AS"), platform, url, "https://www.moelven.com/").code, "group_shared_brand_handle")
+        self.assertIsNone(owner_check(moelven, LegalName("MOELVEN WOOD AS"), "linkedin", "https://www.linkedin.com/company/moelven-wood/", "https://www.moelven.com/"))
+        melbye = profile("MELBYE AS", "941009697", group={"navn": "MELBYE GROUP AS", "organisasjonsnummer": "999999999", "organisasjonsform": {"kode": "AS"},
+                                                          "children": [{"navn": "MELBYE AS", "organisasjonsnummer": "941009697"}]})
+        self.assertIsNone(owner_check(melbye, LegalName("MELBYE AS"), "linkedin", "https://www.linkedin.com/company/melbye", "https://melbye.no/"),
+                          "a handle that is the company's full legal name stays its own")
+
+    def test_a_suppliers_launch_on_a_distributors_site_is_not_the_distributors_news(self):
+        posts = [("DPA lanserer 4097 CORE+ Micro Shotgun Microphone", SITE + "dpa-lanserer/", pub("Mon, 05 Oct 2026 10:00:00 +0000"), "Fjell Data er distributør for DPA i Norge."),
+                 ("Fjell Data lanserer ny nettbutikk", SITE + "fjell-data-lanserer-nettbutikk/", pub("Tue, 06 Oct 2026 10:00:00 +0000"), "Fjell Data AS lanserer i dag.")]
+        facts = extract_site_facts(profile("FJELL DATA AS"), [HOME], [feed(posts)], now=NOW)
+        self.assertEqual(titles(facts), ["Fjell Data lanserer ny nettbutikk"])
+        self.assertTrue(rejected(facts, "launch_not_by_the_company"))
+
+    def test_an_announcement_without_its_own_article_url_is_not_published(self):
+        listing = page(SITE + "nyheter", """<html><body><main>
+            <div class="card"><h3>Fjell Data signerer avtale med Bergen kommune</h3><p>Publisert 2. oktober 2026</p>
+            <p>Fjell Data AS har signert en treårig rammeavtale med Bergen kommune.</p></div></main></body></html>""")
+        facts = extract_site_facts(profile("FJELL DATA AS"), [HOME, listing], now=NOW)
+        self.assertEqual(facts.activities, [])
+        self.assertTrue(rejected(facts, "no_individual_article_url"))
+
+    def test_an_off_site_ad_whose_title_names_the_company_as_employer_qualifies(self):
+        cards = card("Båtmekaniker og tekniker ved Fjell Data", "https://www.jobbnorge.no/ledige-stillinger/stilling/311738/batmekaniker", f"<p>Søknadsfrist: {SOON}</p>")
+        facts = extract_site_facts(profile("FJELL DATA AS"), [HOME, careers_page(cards)], now=datetime.now(timezone.utc))
+        self.assertEqual([job["title"] for job in facts.jobs], ["Båtmekaniker og tekniker ved Fjell Data"])
+
+
 if __name__ == "__main__":
     unittest.main()

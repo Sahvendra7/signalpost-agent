@@ -88,8 +88,10 @@ class ManagerDesignatedTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as raw:
             root = Path(raw)
             envelope, _ = replay("813396092", root)
-            website = available(envelope, "official_website")[0]
-            self.assertEqual(website["value"], "https://www.bori.no/")
+            # V3.1.1: the business manager's website is not the entity's own: held as a related website (related_not_exact).
+            self.assertEqual(available(envelope, "official_website"), [])
+            website = next(claim for claim in envelope["claims"] if claim["field"] == "official_website" and claim.get("related_url"))
+            self.assertEqual((website["related_url"], website["availability"], website["relation"]), ("https://www.bori.no/", "ambiguous", "related_not_exact"))
             self.assertEqual(website["identity_class"], "MANAGER_DESIGNATED")
             self.assertEqual(website["operated_by"], {"organisation_number": "989987011", "name": "BORI BBL", "registry_role": "forretningsfører"})
             self.assertLess(website["confidence"], 0.95)

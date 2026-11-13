@@ -485,18 +485,40 @@ def _annotate_site_operator(claims: ClaimSet, record: dict[str, Any] | None) -> 
     value = (record or {}).get("value") or {}
     operator = value.get("operator") or {}
     kind = operator.get("kind")
-    if (record or {}).get("status") != "available" or kind not in ("other_entity", "group_or_brand"):
+    manager = value.get("manager") if value.get("identity_class") == "MANAGER_DESIGNATED" else None
+    if (record or {}).get("status") != "available" or (kind not in ("other_entity", "group_or_brand") and not manager):
         return
+    # A group-named site that states this company's own organisation number (BE KRAFTSALG AS on bodoenergi.no) is still
+    # its own website; only its group-named stories and profiles are held item by item.
+    own_number = any((signal or {}).get("signal") == "own_org_number_stated" for signal in operator.get("signals") or [])
     site_domain = _registered_domain(value.get("site_url"))
     for claim in claims.claims:
         if claim.get("field") != "official_website" or claim.get("availability") != "available" or _registered_domain(claim.get("value")) != site_domain:
             continue
-        if kind == "other_entity":
+        if manager:
+            claim["site_role"] = "business_manager_site"
+            claim["operated_by"] = {"organisation_number": manager.get("organisation_number"), "name": manager.get("name"), "registry_role": "forretningsfører"}
+            basis = (f"The website is that of the registered business manager {manager.get('name')} ({manager.get('organisation_number')}), "
+                     "not this entity's own; the registry link is kept as registry_listed_website.")
+            code = "business_manager_site"
+        elif kind == "other_entity":
             claim["site_role"] = "operated_by_other_company"
             claim["operated_by"] = {"organisation_number": operator.get("operator_org"), "basis": operator.get("basis")}
+            basis, code = operator.get("basis"), operator.get("code")
         else:
             claim["site_role"] = "group_or_brand_site"
-        claim["attribution"] = {"code": operator.get("code"), "basis": operator.get("basis")}
+            basis, code = operator.get("basis"), operator.get("code")
+        claim["attribution"] = {"code": code, "basis": basis}
+        if own_number and not manager:
+            continue
+        # V3.1.1 (Builderr rescoring revision): a site run by the business manager, another company or the group is
+        # related to the entity but is not its own website. Builderr's reference sample marks such a relation
+        # "related_not_exact · withheld"; the claim is held as ambiguous with the URL kept as related_url.
+        claim["related_url"] = claim.pop("value")
+        claim["value"] = None
+        claim["availability"] = "ambiguous"
+        claim["relation"] = "related_not_exact"
+        claim["reason"] = f"Related website, not the entity's own ({claim['related_url']}): {basis}"
 
 
 def claims_from_profile(profile: dict[str, Any], *, snapshot_root: Path | None = None) -> ClaimSet:
