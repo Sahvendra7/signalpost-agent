@@ -158,5 +158,140 @@ class OwnerChecks(unittest.TestCase):
                 self.assertIsNone(self.check(name, url, site, legal_form="UTLA" if name.endswith(" AB") else "AS"))
 
 
+# ---------- news: the announcement tier ----------
+
+SITE = "https://fjell-data.no/"
+HOME = page(SITE, "<html><body><h1>Fjell Data AS</h1><p>Org.nr. 987 654 321</p></body></html>")
+
+
+def feed(items: list[tuple], url: str = SITE + "feed/", channel: str = "") -> CapturedPage:
+    """(title, link, date_xml, description)."""
+    body = "".join(f"<item><title>{t}</title><link>{link}</link>{date}<description>{desc}</description></item>" for t, link, date, desc in items)
+    raw = f"<?xml version='1.0'?><rss><channel>{channel}{body}</channel></rss>".encode()
+    return CapturedPage(url, raw, hashlib.sha256(raw).hexdigest(), "2026-11-14T08:00:00Z", kind="feed")
+
+
+def pub(day: str) -> str:
+    return f"<pubDate>{day}</pubDate>"
+
+
+def titles(facts) -> list[str]:
+    return sorted(item["title"] for item in facts.activities)
+
+
+def rejected(facts, code: str) -> bool:
+    return f"activity:{code}" in facts.rejections
+
+
+class AnnouncementTier(unittest.TestCase):
+    FJELL = profile("FJELL DATA AS")
+
+    def test_a_dated_company_announcement_is_published_with_provenance(self):
+        article = page(SITE + "nyheter/fjell-data-signerer-avtale-med-bergen-kommune/", """<html><head>
+            <script type="application/ld+json">{"@type":"NewsArticle","headline":"Fjell Data signerer avtale med Bergen kommune","datePublished":"2026-10-02T08:00:00+02:00"}</script>
+            </head><body><main><h1>Fjell Data signerer avtale med Bergen kommune</h1><p>Publisert 2. oktober 2026</p>
+            <p>Fjell Data AS har signert en treårig rammeavtale med Bergen kommune om drift av skolenes nettverk.</p></main></body></html>""")
+        facts = extract_site_facts(self.FJELL, [HOME, article], now=NOW)
+        self.assertEqual(titles(facts), ["Fjell Data signerer avtale med Bergen kommune"])
+        item = facts.activities[0]
+        self.assertEqual(item["url"], article.url, "the individual article URL")
+        self.assertTrue(item["date"].startswith("2026-10-02"))
+        self.assertEqual(item["content_sha256"], article.content_sha256, "provenance: the captured bytes behind the claim")
+
+    def test_plain_slug_wordpress_articles_remain_eligible(self):
+        posts = [("Fjell Data åpner nytt kontor i Bergen", SITE + "fjell-data-apner-nytt-kontor-i-bergen/", pub("Mon, 05 Oct 2026 10:00:00 +0000"),
+                  "Fjell Data AS åpner nå kontor i Bergen sentrum.")]
+        self.assertEqual(titles(extract_site_facts(self.FJELL, [HOME], [feed(posts)], now=NOW)), ["Fjell Data åpner nytt kontor i Bergen"])
+
+    def test_product_service_advice_and_promotional_items_are_not_news(self):
+        posts = [("Fjell Data Router X200", SITE + "nyheter/router-x200/", pub("Mon, 05 Oct 2026 10:00:00 +0000"), "Pris på forespørsel. Legg i handlekurven."),
+                 ("Fem tips for sikrere passord", SITE + "nyheter/fem-tips/", pub("Tue, 06 Oct 2026 10:00:00 +0000"), "Fjell Data gir deg fem tips."),
+                 ("Hva koster en brannmur?", SITE + "nyheter/hva-koster/", pub("Wed, 07 Oct 2026 10:00:00 +0000"), "Fjell Data forklarer prisene."),
+                 ("Vi tilbyr nettverksdrift for bedrifter", SITE + "nyheter/nettverksdrift/", pub("Thu, 08 Oct 2026 10:00:00 +0000"), "Fjell Data AS tilbyr drift."),
+                 ("Fjell Data søker driftstekniker", SITE + "nyheter/vi-soker/", pub("Fri, 09 Oct 2026 10:00:00 +0000"), "Send søknad og CV innen 1. desember.")]
+        self.assertEqual(titles(extract_site_facts(self.FJELL, [HOME], [feed(posts)], now=NOW)), [])
+
+    def test_the_announcement_must_name_the_company(self):
+        posts = [("Grimstad finalist til årets maritime kommune", SITE + "nyheter/grimstad/", pub("Mon, 05 Oct 2026 10:00:00 +0000"), "Kommunen er nominert."),
+                 ("Bergen kommune signerer avtale med Statens vegvesen", SITE + "nyheter/bk/", pub("Tue, 06 Oct 2026 10:00:00 +0000"), "Kommunen og vegvesenet har signert.")]
+        facts = extract_site_facts(self.FJELL, [HOME], [feed(posts)], now=NOW)
+        self.assertEqual(titles(facts), [])
+
+    def test_a_foreign_parents_news_is_not_the_subsidiarys(self):
+        """VALMET AS on valmet.com: the registry names a foreign parent; group releases never name Valmet AS."""
+        group = {"navn": "NELES CONTROLS OY", "organisasjonsnummer": "981128354", "organisasjonsform": {"kode": "UTLA"},
+                 "children": [{"navn": "VALMET AS", "organisasjonsnummer": "932383357", "parentOrganisasjonsnummer": "981128354"}]}
+        site = "https://www.valmet.com/"
+        home = page(site, "<html><body><h1>Valmet</h1><p>Valmet, Keilasatama 5, Espoo, Finland</p></body></html>")
+        posts = [("Valmet acquires the process automation business of X", site + "news/valmet-acquires-x/", pub("Mon, 05 Oct 2026 10:00:00 +0000"),
+                  "Valmet Oyj has signed an agreement to acquire X.")]
+        facts = extract_site_facts(profile("VALMET AS", "932383357", group=group), [home], [feed(posts, site + "feed/")], now=NOW)
+        self.assertEqual(titles(facts), [])
+        self.assertEqual(facts.operator["kind"], "group_or_brand")
+        self.assertEqual(facts.operator["code"], "international_site_of_foreign_parent_group")
+        self.assertTrue(rejected(facts, "item_not_about_entity_on_group_or_brand_site"))
+
+    def test_a_group_brand_story_is_not_the_national_units(self):
+        """TEQT NORGE AS on teqt.no: "Teqt Group vokser gjennom oppkjøpet av …" is the group's acquisition."""
+        site = "https://www.teqt.no/"
+        home = page(site, "<html><body><h1>Teqt Norge</h1><p>Org.nr. 929 418 727</p></body></html>")
+        posts = [("Teqt Group vokser gjennom oppkjøpet av Profil Montering AS", site + "no/nyheter/profil/", pub("Mon, 05 Oct 2026 10:00:00 +0000"),
+                  "Teqt Group har kjøpt Profil Montering AS."),
+                 ("Teqt Norge åpner avdeling i Bodø", site + "no/nyheter/bodo/", pub("Tue, 06 Oct 2026 10:00:00 +0000"), "Teqt Norge AS åpner nå i Bodø.")]
+        facts = extract_site_facts(profile("TEQT NORGE AS", "929418727"), [home], [feed(posts, site + "feed/")], now=NOW)
+        self.assertEqual(titles(facts), ["Teqt Norge åpner avdeling i Bodø"])
+        self.assertTrue(rejected(facts, "group_brand_item_not_national_unit"))
+
+    def test_an_international_brand_site_that_never_writes_the_norwegian_entity(self):
+        site = "https://inlumi.com/"
+        home = page(site, "<html><body><h1>inlumi</h1><p>inlumi is a global EPM consultancy.</p></body></html>")
+        posts = [("inlumi announces partnership with Oracle", site + "news/oracle/", pub("Mon, 05 Oct 2026 10:00:00 +0000"), "inlumi announced a partnership.")]
+        facts = extract_site_facts(profile("INLUMI AS", "999291988"), [home], [feed(posts, site + "feed/")], now=NOW)
+        self.assertEqual(titles(facts), [])
+        self.assertTrue(rejected(facts, "item_not_about_entity_on_international_brand_site"))
+
+
+class NewsDates(unittest.TestCase):
+    FJELL = profile("FJELL DATA AS")
+
+    def test_an_application_deadline_in_its_own_element_is_never_a_publication_date(self):
+        """The V3.1 defect (fib.no, eval120): "Søknadsfrist: 4. november 2026" became the item's date once it had passed."""
+        listing = page(SITE + "nyheter/", """<html><body><main>
+            <div class="card"><a href="/nyheter/fjell-data-signerer-avtale/"><h3>Fjell Data signerer avtale med Bergen kommune</h3></a>
+            <p><strong>Søknadsfrist:</strong> <span>4. november 2026</span></p></div>
+            <div class="card"><a href="/nyheter/fjell-data-feirer-20-ar/"><h3>Fjell Data feirer 20 år</h3></a>
+            <p><b>Oppdatert:</b> <span>3. november 2026</span></p></div>
+            <div class="card"><a href="/nyheter/fjell-data-apner/"><h3>Fjell Data åpner i Bodø</h3></a>
+            <p><em>Påmeldingsfrist</em> <span>1. november 2026</span></p></div>
+            </main></body></html>""")
+        facts = extract_site_facts(self.FJELL, [HOME, listing], now=NOW)
+        self.assertEqual(facts.activities, [])
+
+    def test_a_feed_update_date_never_replaces_a_publication_date(self):
+        atom = b"""<?xml version='1.0'?><feed xmlns="http://www.w3.org/2005/Atom"><updated>2026-11-10T10:00:00Z</updated>
+            <entry><title>Fjell Data signerer avtale med Bergen kommune</title><link href="https://fjell-data.no/nyheter/avtale/"/>
+            <updated>2026-11-09T10:00:00Z</updated><summary>Fjell Data AS har signert avtale.</summary></entry></feed>"""
+        rss = feed([("Fjell Data åpner i Bodø", SITE + "nyheter/bodo/", "", "Fjell Data AS åpner i Bodø.")],
+                   url=SITE + "feed/rss/", channel="<lastBuildDate>Tue, 10 Nov 2026 10:00:00 +0000</lastBuildDate>")
+        atom_page = CapturedPage(SITE + "feed/atom/", atom, hashlib.sha256(atom).hexdigest(), "2026-11-14T08:00:00Z", kind="feed")
+        facts = extract_site_facts(self.FJELL, [HOME], [atom_page, rss], now=NOW)
+        self.assertEqual(facts.activities, [])
+        self.assertTrue(rejected(facts, "updated_timestamp_not_publication_date") or rejected(facts, "no_explicit_date"))
+
+    def test_an_event_date_in_running_text_is_not_a_publication_date(self):
+        listing = page(SITE + "nyheter/", """<html><body><main>
+            <div class="card"><a href="/nyheter/seminar/"><h3>Fjell Data inviterer til seminar</h3></a>
+            <p>Seminaret holdes 26. november 2026 i våre lokaler i Bergen sentrum, med foredrag og lunsj.</p></div></main></body></html>""")
+        self.assertEqual(extract_site_facts(self.FJELL, [HOME, listing], now=NOW).activities, [])
+
+    def test_anchored_tier_reproduces_v31(self):
+        import os
+        from unittest import mock
+        posts = [("Kampreferat runde 1 mot Storhamar", SITE + "kampreferat-1/", pub("Mon, 05 Oct 2026 10:00:00 +0000"), "Her er siste nytt fra oss.")]
+        self.assertEqual(titles(extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)], now=NOW)), [], "not an announcement: withheld by default")
+        with mock.patch.dict(os.environ, {"SIGNALPOST_NEWS_PUBLICATION": "anchored"}):
+            self.assertEqual(titles(extract_site_facts({"name": "Fjell Data AS"}, [HOME], [feed(posts)], now=NOW)), ["Kampreferat runde 1 mot Storhamar"])
+
+
 if __name__ == "__main__":
     unittest.main()

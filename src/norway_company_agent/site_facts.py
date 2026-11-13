@@ -36,8 +36,8 @@ from bs4 import BeautifulSoup
 from .evidence_text import content_words, date_matches, digit_runs, fold, span_in_text, url_in_source, words
 from .attribution.names import GENERIC_BRANDS, LegalName, compact, handle_relation, named_entities
 from .attribution.jobs import decide_job, is_recruiter
-from .attribution.news import NEWS_SEGMENT, assess_content, company_names, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, news_policy_decision, source_tier, subject_of
-from .attribution.operator import SiteOperator, assess_operator, sibling_names
+from .attribution.news import NEWS_SEGMENT, announcement_decision, assess_content, company_names, group_brand_only, split_unit_names, burst_members, classify_item, evergreen_title, feed_item_outside_news_section, has_news_path, is_publisher, news_policy_decision, source_tier, subject_of
+from .attribution.operator import SiteOperator, assess_operator, international_brand_site, sibling_names
 from .attribution.social import decide_profile, owner_check
 from .identity import _tokens, assess_social_identity
 from .website import _registered_domain, normalize_social_url
@@ -186,6 +186,15 @@ def _host(url: str) -> str:
 
 
 NEWS_POLICY = "anchored"  # attribution.news.POLICIES; the alternatives are kept only to reproduce the V3.1 comparison
+# V3.1.1: after NEWS_POLICY, only headline announcements that name the company are published (attribution.news).
+# SIGNALPOST_NEWS_PUBLICATION=anchored reproduces V3.1's news output exactly (used by the V3.1 regression tests and for
+# comparisons); any other value, or none, is the default "announcement".
+NEWS_PUBLICATIONS = ("announcement", "anchored")
+
+
+def news_publication() -> str:
+    import os
+    return "anchored" if os.environ.get("SIGNALPOST_NEWS_PUBLICATION", "").strip().casefold() == "anchored" else "announcement"
 
 
 def _registered_domain_label(site_url: str) -> str:
@@ -593,7 +602,11 @@ def listing_items(page: CapturedPage, *, require_news_link: bool) -> list[dict[s
             continue
         for iso, matched, start, _end in date_matches(text):
             prefix = fold(text[max(0, start - 30):start])
-            if any(cue in prefix for cue in UPDATED_CUES + DEADLINE_CUES) or not date_stamp(text[:start], text[_end:]):
+            # V3.1.1: the label may be its own element ("<strong>Søknadsfrist:</strong> <span>4. november 2026</span>"):
+            # the text just before the date across element boundaries counts as its label too, so an application
+            # deadline, an "updated" stamp or a closing date is never read as a publication date.
+            label = fold(_preceding_text(string, 40) + " " + text[:start])[-40:] if not text[:start].strip() else prefix
+            if any(cue in prefix or cue in label for cue in UPDATED_CUES + DEADLINE_CUES) or not date_stamp(text[:start], text[_end:]):
                 continue
             item = _card_item(string.parent, iso, page, own_domain, require_news_link)
             if item is None:
@@ -607,6 +620,18 @@ def listing_items(page: CapturedPage, *, require_news_link: bool) -> list[dict[s
             if len(items) >= MAX_ITEMS_PER_PAGE:
                 return items
     return items
+
+
+def _preceding_text(string: Any, limit: int) -> str:
+    """Up to `limit` characters of visible text immediately before `string` in document order."""
+    collected = ""
+    for previous in string.find_all_previous(string=True, limit=6):
+        if previous.parent is not None and previous.parent.name in ("script", "style"):
+            continue
+        collected = str(previous) + " " + collected
+        if len(collected.strip()) >= limit:
+            break
+    return " ".join(collected.split())[-limit:]
 
 
 def _card_item(start: Any, iso: str, page: CapturedPage, own_domain: str, require_news_link: bool) -> dict[str, Any] | None:
@@ -1046,6 +1071,10 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
     outside_section = _outside_listing_section(candidates)
     # V3.1: the names an item on this site may use for the company (content anchoring; attribution.news.company_names)
     anchor_names = company_names(legal, site_label if domain_named else "")
+    # V3.1.1: a national unit's bare group brand ("Teqt" for TEQT NORGE AS) does not name the unit; and on a Norwegian
+    # company's international brand site that never writes its legal name, only items naming the company are its news.
+    anchor_names, bare_brands = split_unit_names(legal, anchor_names)
+    brand_site = not shared_site and international_brand_site(profile, site_url, " ".join(page.text for page in pages if page.kind == "html"))
     # Remediation R3: how many distinct candidates the site keeps in its own news section (/nyheter/…, /aktuelt/…).
     news_section_items = len({str(item.get("url") or "") for item, page in candidates if item.get("url")
                               and in_site_scope(str(item["url"]), site_url)
@@ -1082,6 +1111,8 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                 reason = "sibling_entity_item"
             elif subject != "THIS" and operator.kind in ("other_entity", "group_or_brand"):
                 reason = f"item_not_about_entity_on_{operator.kind}_site"
+            elif subject != "THIS" and brand_site:
+                reason = "item_not_about_entity_on_international_brand_site"
             elif subject != "THIS" and publisher:
                 reason = "publisher_content_not_about_company"  # a newspaper's articles are its product, not news about it
             elif subject != "THIS" and evergreen_title(item.get("title")):
@@ -1093,9 +1124,14 @@ def extract_site_facts(profile: dict[str, Any], pages: list[CapturedPage], feeds
                 own_page = by_url.get(item_url) if item_url != page.url else (page if page.kind == "html" and is_article_path(page.url) else None)
                 own_text = item_page_text(own_page, chrome if own_page.url != site_url else frozenset())[:4000] if own_page is not None and own_page.kind == "html" else None
                 body = " ".join(filter(None, [item.get("body") or item.get("summary"), own_text]))
+                if subject != "THIS" and group_brand_only(f"{item.get('title') or ''}. {body}", anchor_names, bare_brands):
+                    out.reject("activity", "group_brand_item_not_national_unit", item, page)
+                    continue
                 tier = source_tier(item_url, page.url if page.kind == "html" else "", page.url if page.kind == "feed" else "")
                 content = assess_content(item.get("title") or "", body, names_company=subject == "THIS", names=anchor_names)
                 withheld = news_policy_decision(NEWS_POLICY, tier=tier, content=content, names_company=subject == "THIS")
+                if withheld is None and news_publication() == "announcement":
+                    withheld = announcement_decision(item.get("title") or "", body, names=anchor_names, names_company=subject == "THIS")
                 if withheld is not None:
                     reason = withheld.code
                 else:

@@ -454,3 +454,75 @@ def news_policy_decision(policy: str, *, tier: str, content: ContentAssessment, 
         if not (tier == "newsroom" and names_company):
             return Decision(False, "no_company_development", "Withheld: no stated company development in the title or the captured text.")
     return None
+
+
+# ---------- V3.1.1: national units of a group (Builderr rescoring revision) ----------
+
+UNIT_MARKERS = {"norge", "norway", "noreg", "uk", "sverige", "sweden", "danmark", "denmark", "finland", "suomi", "deutschland", "germany", "usa"}
+
+
+def split_unit_names(legal: LegalName, names: list[str]) -> tuple[list[str], list[str]]:
+    """For a national unit of a group ("TEQT NORGE AS", "ELEDA RAIL NORGE AS"): (names that carry the unit's national
+    marker, bare brand names without it). Written on the site, a bare brand ("Teqt", "Eleda") is the group's name, so it
+    is not evidence that an item is about this unit. For any other company the bare list is empty."""
+    from ..attribution.social import national_markers
+
+    if not national_markers(legal.name):
+        return names, []
+    unit = [name for name in names if set(name.split()) & UNIT_MARKERS or any(marker in name.replace(" ", "") for marker in ("norge", "norway"))]
+    bare = [name for name in names if name not in unit]
+    return unit, bare
+
+
+def group_brand_only(text: str, unit: list[str], bare: list[str]) -> str | None:
+    """The bare group brand the text names, when it never names the national unit itself."""
+    if not bare or mentions_company(text, unit):
+        return None
+    return mentions_company(text, bare)
+
+
+# ---------- V3.1.1: the announcement tier (Builderr rescoring revision, docs/v311-rescore-revision.md §4) ----------
+# Builderr asked for "a dated item ... linked from the company's own site" and requires 95% correct attribution. On
+# every labelled set, V3.1's anchored policy publishes 48-80% correct news; the errors are guides, product pages,
+# opinion pieces and other organisations' stories, which no deterministic content rule separated. A headline that
+# itself announces an event in the organisation's life (an acquisition, appointment, agreement, opening, award,
+# anniversary, launch, certification, annual meeting, new name, grant), on an item that names the organisation, is
+# the one subset that did (93-96% on the consumed, labelled sets; diagnostic, not independent). Only that subset is
+# published; every V3.1 rule still runs first.
+ANNOUNCEMENT = re.compile(
+    r"\b(?:"
+    r"kjøper|kjøpt(?:e)?(?: opp)?|kjøper opp|oppkjøp\w*|overtar|overtatt|fusjon\w*|slår seg sammen|blir (?:en )?del av|blir deleier|deleier i|"
+    r"acquir\w+|acquisition|merger|merges|förvärv\w*|förvärvar|köper|"
+    r"ny(?:e|tt)? (?:daglig leder|adm(?:\.|inistrerende)? dir\w*|ceo|styreleder|leder|direktør|partner|medeier|eier|avdelingsleder|salgssjef|markedssjef)|"
+    r"ansatt som|ansetter (?:ny|en)|tiltrer|går inn som|appoint\w*|new ceo|joins as|"
+    r"signer\w*|inngå\w*|inngått|tildelt (?:kontrakt|oppdrag|prisen)|vinner (?:kontrakt|oppdrag|anbud|prisen)|kontrakt med|avtale med|rammeavtale\w*|samarbeidsavtale\w*|"
+    r"signs?|signed|awarded|wins? (?:contract|award)|contract with|partners? with|partnership|mou\b|"
+    r"åpner|åpnet|åpning av|nyåpn\w*|innvi\w*|flytter (?:til|inn)|nye lokaler|nytt (?:kontor|lager|anlegg|bygg|verksted)|ny (?:avdeling|butikk|fabrikk)|opens?|opened|"
+    r"kåret|vant (?:prisen|pris)|vi vant|tildelt|nominert|award|wins|won|"
+    r"feirer|jubilerer|jubileum|\d+[ -]?års?(?:jubileum)?\b|\d+ år\b|anniversary|"
+    r"lanserer|lansert|lansering|launch\w*|"
+    r"sertifisert|resertifisert|miljøfyrtårn|iso[ -]?\d{4,5}|certified|"
+    r"årsmøte|generalforsamling|årsberetning|årsrapport|årsresultat\w*|kvartalsrapport|annual (?:meeting|report|results)|"
+    r"investerer|investering|utvider|utvidelse|ekspander\w*|expands?|expansion|etablerer|etablert|startet opp|"
+    r"nytt navn|skifter navn|endrer navn|new name|rebrand\w*|"
+    r"pressemelding|press release|kunngjør|announce\w*|"
+    r"fått (?:støtte|tilskudd|midler)|mottar (?:støtte|tilskudd)|støtte fra|tilskudd fra|"
+    r"har flyttet|flyttet til|(?:nytt |inngår |innleder )?samarbeid med|collaboration with|sertifisering|vinner|introduserer|introduces|introduced|"
+    r"ny(?:e|tt)? (?:fagarbeider\w*|medarbeider\w*|kollega\w*|ansatte?|lærling\w*|trener|assistent ?trener|rektor|prosjektleder|styremedlem\w*|medlem(?:mer)?)|"
+    r"fått i oppdrag|nytt oppdrag|nye oppdrag|ny rapport|new report"
+    r")\b", re.I)
+
+
+def announcement_decision(title: str, body: str, *, names: list[str], names_company: bool) -> Decision | None:
+    """None = publish (the item is a dated announcement of this organisation's own development); a Decision = withhold."""
+    title = " ".join(str(title or "").split())
+    if title.rstrip().endswith("?"):
+        return Decision(False, "question_title_not_announcement", "Withheld: a question as the headline is advice or an explainer, not an announcement.")
+    match = ANNOUNCEMENT.search(title)
+    if not match:
+        return Decision(False, "headline_not_an_announcement",
+                        "Withheld: the headline does not announce an event in the organisation's life (acquisition, appointment, agreement, "
+                        "opening, award, anniversary, launch, certification, annual meeting, new name or grant).")
+    if not (names_company or mentions_company(f"{title}. {strip_boilerplate(body)}", names)):
+        return Decision(False, "announcement_does_not_name_the_company", "Withheld: the announcement does not name this organisation.")
+    return None

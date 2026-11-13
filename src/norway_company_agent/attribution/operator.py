@@ -144,6 +144,49 @@ def foreign_namesake_named(legal: LegalName, text: str) -> str | None:
     return namesake
 
 
+NORWEGIAN_COMPANY_FORMS = {"AS", "ASA"}
+
+
+def international_group_site_signals(profile: dict[str, Any], legal: LegalName, site_url: str, all_text: str) -> list[dict[str, Any]]:
+    """V3.1.1 (Builderr rescoring revision): signals that the verified website is an international group's site rather
+    than this Norwegian company's, for sites that never state this company's organisation number. Each uses the registry
+    record, the legal name and the domain only; none names a company.
+      * the registry group structure names a foreign top parent and the site is not on a .no domain (VALMET AS on
+        valmet.com, parent NELES CONTROLS OY): the stories and profiles are the group's;
+      * the legal name marks a national unit ("… NORGE AS"), the site is not on a .no domain and its name lacks the
+        marker (GRUNDFOS NORGE AS on grundfos.com);
+    (`international_brand_site` below is a third, news-only signal.)"""
+    from .social import foreign_parent, national_markers  # local import: social imports names, not operator
+
+    domain = str(_registered(site_url) or "")
+    if not domain or domain.endswith((".no", ".as")):
+        return []
+    signals: list[dict[str, Any]] = []
+    parent = foreign_parent(profile)
+    if parent:
+        signals.append({"signal": "international_site_of_foreign_parent_group", "detail": f"registry parent {parent}; website {domain}"})
+    markers = national_markers(str(profile.get("name") or legal.name))
+    label = compact(domain.split(".")[0])
+    if markers and not any(marker in label for marker in markers | {"norge", "norway", "noreg"}):
+        signals.append({"signal": "international_site_of_national_unit", "detail": f"{', '.join(sorted(markers))} in the legal name; website {domain}"})
+    return signals
+
+
+def international_brand_site(profile: dict[str, Any], site_url: str, all_text: str) -> bool:
+    """V3.1.1, news only: a Norwegian AS/ASA whose verified website is outside .no/.as and never writes the company's own
+    legal name with its legal form (INLUMI AS on inlumi.com). Its stories are the international brand's unless an item
+    itself names this company. Profiles are not affected: a Norwegian company's own .com site often omits "AS"."""
+    from .social import national_markers
+
+    domain = str(_registered(site_url) or "")
+    if not domain or domain.endswith((".no", ".as")) or str(profile.get("legal_form") or "").upper() not in NORWEGIAN_COMPANY_FORMS:
+        return False
+    if national_markers(str(profile.get("name") or "")):
+        return False  # handled by the national-unit rules
+    written = fold(profile.get("name"))
+    return bool(written) and re.search(r"(?<![a-z0-9])" + re.escape(written) + r"(?![a-z0-9])", fold(all_text)) is None
+
+
 def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[tuple[str, str]], homepage_text: str = "",
                     website_value: dict[str, Any] | None = None, identity_class: str | None = None, shared_kind: str | None = None,
                     taxonomy: list[str] | None = None, legal: LegalName | None = None) -> SiteOperator:
@@ -210,6 +253,7 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
         group.append({"signal": "domain_and_site_do_not_name_the_company", "detail": f"domain label {label!r}; legal name phrase absent"})
     if legal.qualifiers and live.get("in_group") and any(compact(label) == brand for brand in legal.brands) and not legal.phrase_in(homepage_text):
         group.append({"signal": "brand_site_of_a_group_unit", "detail": f"legal name = brand + {', '.join(legal.qualifiers)}; full name absent from the homepage"})
+    group.extend(international_group_site_signals(profile, legal, site_url, all_text))
     siblings = sibling_names(legal, taxonomy or [])
     if len(siblings) >= 2:
         group.append({"signal": "sibling_entities_in_site_taxonomy", "detail": "; ".join(sorted(siblings)[:5])})
