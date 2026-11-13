@@ -1,0 +1,77 @@
+{
+ "run": "eval-r200c",
+ "envelopes": 200,
+ "terminal": {
+  "completed": 200
+ },
+ "input_order_kept": true,
+ "validation_passed": null,
+ "contract_findings": 0,
+ "evidence_hashes_checked": 5734,
+ "evidence_hash_mismatches": 0,
+ "evidence_without_snapshot": 31,
+ "hosts": 525,
+ "social_platform_hosts": [],
+ "third_party_cost_usd": 0.0,
+ "unsupported_summary_statements": 0,
+ "published": {
+  "social_profile": 63,
+  "official_website": 63,
+  "careers_page": 10,
+  "news_item": 7
+ },
+ "code_version": {
+  "source_sha256": "f98f759b0c37ef5c70dcf30f5e617a0bb66c523ecf51e78852728012d096eafc",
+  "package_version": "0.3.0",
+  "git_commit": "fef9be42c000c792ca8a044802ac9b3919b796a9",
+  "git_dirty": false
+ },
+ "llm": null,
+ "baseline": {
+  "source": null,
+  "companies_with_baseline": 0
+ },
+ "new_items": {
+  "social_profile": 0,
+  "news_item": 0,
+  "job_posting": 0,
+  "retracted": 0
+ },
+ "checks": {
+  "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+  "withheld": {
+   "activity:announcement_does_not_name_the_company": 4,
+   "activity:bulk_entry_burst": 5,
+   "activity:content_advice": 16,
+   "activity:content_listing": 3,
+   "activity:content_recruitment": 1,
+   "activity:date_contradicts_title": 1,
+   "activity:default_cms_post": 1,
+   "activity:evergreen_advice_not_news": 42,
+   "activity:generic_title": 2,
+   "activity:headline_not_an_announcement": 104,
+   "activity:item_not_about_entity_on_international_brand_site": 6,
+   "activity:launch_not_by_the_company": 4,
+   "activity:listing_not_item": 2,
+   "activity:manager_news_not_about_entity": 66,
+   "activity:no_article_evidence": 20,
+   "activity:no_individual_article_url": 3,
+   "activity:no_title": 6,
+   "activity:not_anchored_to_the_company": 54,
+   "activity:outside_news_section": 1,
+   "activity:outside_site_section": 3,
+   "activity:page_date_on_non_news_page": 22,
+   "activity:publisher_content_not_about_company": 3,
+   "activity:question_title_not_announcement": 3,
+   "careers:not_a_careers_page": 2,
+   "careers:recruiter_job_board": 2,
+   "job:external_ad_employer_unverified": 1,
+   "social:brand_handle_on_section_site": 1,
+   "social:brand_handle_uncorroborated": 1,
+   "social:extended_handle_uncorroborated": 1,
+   "social:handle_unrelated": 20,
+   "social:platform_provider_account": 2,
+   "social:site_operated_by_manager": 20
+  }
+ }
+}

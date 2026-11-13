@@ -1,5 +1,20 @@
 # Final submission manifest
 
+## V3.1.1 — Builderr rescoring revision (not pushed, not submitted)
+
+| | |
+|---|---|
+| Branch | `revision/v3.1.1-builderr-rescore` (local; not pushed), based on V3.1 candidate 2 `139e23c` |
+| **Code under test** | **`38ff24c`**. The release commit is the documentation commit on top; `git diff 38ff24c <release> -- src tests scripts pyproject.toml uv.lock` is empty. |
+| Unchanged | `claude/awesome-sagan-m2lppu` (`139e23c`), `ff3b515`, `submission-candidate-1`; no Gemini code (`experiment/v3.2-hybrid` not merged) |
+| What changed | `docs/v311-rescore-revision.md`: URL-level social owner checks (platform/builder accounts, admin URLs, group and parent accounts, shared group brands); related-not-exact websites (business manager, other company, group); news announcement tier with group/parent rules and the Søknadsfrist fix; job ads with verified employer, detail-page dating, job boards of other employers |
+| Install | `uv sync --locked` (no dependency change: `git diff 139e23c 38ff24c -- pyproject.toml uv.lock` is empty) |
+| Run (documented command, unchanged) | `uv run python scripts/run_competition_batch.py --organisations <BATCH.jsonl> --output out/envelopes.jsonl --profiles-output out/profiles.jsonl --report out/report.json --snapshot-dir out/snapshots --run-id <RUN_ID>` |
+| Tests | 570 passed, 193 subtests, in the working tree and in a clean room (fresh clone, empty uv cache) |
+| Independent accuracy (eval-r200c, new sample, labelled after the run) | 134/138 decided published external claims correct = 97.1% (CI 92.8–98.9); wrong company 3/138. Assistant labels; not a Builderr score; the 95% threshold is not claimed. |
+| Default external cost / APIs | $0. Only the public Brønnøysund registry APIs and the companies' own websites. No social platform fetched. |
+| LLM / Gemini / Brave / NAV | Off (not imported) / not in the branch / not used / not used |
+
 ## V3.1 candidate 2 — candidate 1 plus the foreign-namesake entity correction (not submitted, not scored)
 
 | | |

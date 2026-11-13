@@ -1,0 +1,238 @@
+{
+  "run_id": "v311-eval-r200c",
+  "code_version": {
+    "source_sha256": "f98f759b0c37ef5c70dcf30f5e617a0bb66c523ecf51e78852728012d096eafc",
+    "package_version": "0.3.0",
+    "git_commit": "fef9be42c000c792ca8a044802ac9b3919b796a9",
+    "git_dirty": false
+  },
+  "started_at": "2026-11-13T23:29:08.082734Z",
+  "completed_at": "2026-11-13T23:35:22.575511Z",
+  "runtime_ms": 374485,
+  "input_rows": 200,
+  "emitted_envelopes": 200,
+  "unique_companies_researched": 200,
+  "terminal_status_counts": {
+    "completed": 200
+  },
+  "modules": [
+    "registry",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website",
+    "site_research"
+  ],
+  "registry": {
+    "bulk": null,
+    "snapshot_status": "absent",
+    "fallback": "live_registry"
+  },
+  "category_coverage": {
+    "description": {
+      "available": 200
+    },
+    "filings": {
+      "not_available": 113,
+      "available": 87
+    },
+    "hiring": {
+      "not_available": 192,
+      "not_applicable": 8
+    },
+    "identity": {
+      "available": 200
+    },
+    "leadership": {
+      "available": 187,
+      "not_available": 13
+    },
+    "locations": {
+      "available": 200
+    },
+    "public_activity": {
+      "not_available": 148,
+      "available": 39,
+      "ambiguous": 6,
+      "not_applicable": 7
+    },
+    "registry_activity": {
+      "available": 187,
+      "not_checked": 13
+    },
+    "relationships": {
+      "not_available": 192,
+      "available": 8
+    },
+    "websites": {
+      "available": 200
+    }
+  },
+  "category_available_rate": {
+    "description": 1.0,
+    "filings": 0.435,
+    "hiring": 0.0,
+    "identity": 1.0,
+    "leadership": 0.935,
+    "locations": 1.0,
+    "public_activity": 0.195,
+    "registry_activity": 0.935,
+    "relationships": 0.04,
+    "websites": 1.0
+  },
+  "area_coverage": {
+    "filings": 87,
+    "leadership": 187,
+    "locations": 200,
+    "websites": 63,
+    "public_footprint": 39,
+    "hiring": 0
+  },
+  "companies_all_five_areas": 26,
+  "module_states": {
+    "financials": {
+      "not_found": 118,
+      "complete": 82
+    },
+    "group": {
+      "not_found": 192,
+      "complete": 8
+    },
+    "locations": {
+      "complete": 200
+    },
+    "registry": {
+      "not_found": 200
+    },
+    "registry_live": {
+      "complete": 200
+    },
+    "roles": {
+      "complete": 187,
+      "not_found": 13
+    },
+    "site_research": {
+      "not_found": 129,
+      "complete": 71
+    },
+    "website": {
+      "blocked_policy": 39,
+      "complete": 122,
+      "blocked_robots": 31,
+      "not_found": 7,
+      "source_error": 1
+    }
+  },
+  "error_codes": {},
+  "claims": {
+    "available_total": 5757,
+    "available_per_company_mean": 28.79,
+    "evidence_total": 5765,
+    "changes_total": 0
+  },
+  "operations": {
+    "requests": 2488,
+    "bytes": 71725207,
+    "request_latency": {
+      "n": 1375,
+      "p50_ms": 661.0,
+      "p95_ms": 1518.0,
+      "max_ms": 10434
+    },
+    "company_runtime": {
+      "n": 200,
+      "p50_ms": 10490.0,
+      "p95_ms": 34758.0,
+      "max_ms": 87425
+    },
+    "third_party_cost_usd": 0,
+    "llm_calls": 0
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "one_envelope_per_input_row": true,
+      "envelopes_follow_input_order": true,
+      "all_terminal": true,
+      "all_envelopes_valid": true,
+      "expected_count_matches_input": true
+    },
+    "findings": {}
+  },
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "resumed_profiles": 0,
+  "baseline": {
+    "source": null,
+    "companies_with_baseline": 0
+  },
+  "new_items": {
+    "social_profile": 0,
+    "news_item": 0,
+    "job_posting": 0,
+    "retracted": 0
+  },
+  "checks": {
+    "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+    "withheld": {
+      "activity:announcement_does_not_name_the_company": 4,
+      "activity:bulk_entry_burst": 5,
+      "activity:content_advice": 16,
+      "activity:content_listing": 3,
+      "activity:content_recruitment": 1,
+      "activity:date_contradicts_title": 1,
+      "activity:default_cms_post": 1,
+      "activity:evergreen_advice_not_news": 42,
+      "activity:generic_title": 2,
+      "activity:headline_not_an_announcement": 104,
+      "activity:item_not_about_entity_on_international_brand_site": 6,
+      "activity:launch_not_by_the_company": 4,
+      "activity:listing_not_item": 2,
+      "activity:manager_news_not_about_entity": 66,
+      "activity:no_article_evidence": 20,
+      "activity:no_individual_article_url": 3,
+      "activity:no_title": 6,
+      "activity:not_anchored_to_the_company": 54,
+      "activity:outside_news_section": 1,
+      "activity:outside_site_section": 3,
+      "activity:page_date_on_non_news_page": 22,
+      "activity:publisher_content_not_about_company": 3,
+      "activity:question_title_not_announcement": 3,
+      "careers:not_a_careers_page": 2,
+      "careers:recruiter_job_board": 2,
+      "job:external_ad_employer_unverified": 1,
+      "social:brand_handle_on_section_site": 1,
+      "social:brand_handle_uncorroborated": 1,
+      "social:extended_handle_uncorroborated": 1,
+      "social:handle_unrelated": 20,
+      "social:platform_provider_account": 2,
+      "social:site_operated_by_manager": 20
+    }
+  },
+  "manual_audit": {
+    "state": "not_audited",
+    "note": "no manual audit supplied (scripts/audit_kit.py score; --audit-results)"
+  },
+  "history": {
+    "written": true,
+    "dir": "/tmp/claude-0/-home-user-signalpost-agent/73e92424-aae6-4030-9d01-70544c683fcb/scratchpad/val2/evalc/signalpost-history",
+    "run_path": "/tmp/claude-0/-home-user-signalpost-agent/73e92424-aae6-4030-9d01-70544c683fcb/scratchpad/val2/evalc/signalpost-history/v311-eval-r200c",
+    "complete": true,
+    "pruned": 0
+  },
+  "viewer": {
+    "written": true,
+    "path": "/tmp/claude-0/-home-user-signalpost-agent/73e92424-aae6-4030-9d01-70544c683fcb/scratchpad/val2/evalc/eval-r200c.envelopes.viewer.html",
+    "bytes": 2275770,
+    "companies": 200,
+    "self_contained": true
+  }
+}

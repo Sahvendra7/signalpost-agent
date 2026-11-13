@@ -1,0 +1,80 @@
+{
+ "run": "repro21",
+ "envelopes": 21,
+ "terminal": {
+  "completed": 21
+ },
+ "input_order_kept": true,
+ "validation_passed": null,
+ "contract_findings": 0,
+ "evidence_hashes_checked": 945,
+ "evidence_hash_mismatches": 0,
+ "evidence_without_snapshot": 10,
+ "hosts": 34,
+ "social_platform_hosts": [],
+ "third_party_cost_usd": 0.0,
+ "unsupported_summary_statements": 0,
+ "published": {
+  "official_website": 16,
+  "social_profile": 17,
+  "careers_page": 5,
+  "news_item": 3
+ },
+ "code_version": {
+  "source_sha256": "3211a732d5b8718b624ca790f56e575cf6191ca789e3e42964d3c7f58e34f633",
+  "package_version": "0.3.0",
+  "git_commit": "38ff24c48e989a987529f4f7d6ca3fa107bce75d",
+  "git_dirty": false
+ },
+ "llm": null,
+ "baseline": {
+  "source": null,
+  "companies_with_baseline": 0
+ },
+ "new_items": {
+  "social_profile": 0,
+  "news_item": 0,
+  "job_posting": 0,
+  "retracted": 0
+ },
+ "checks": {
+  "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+  "withheld": {
+   "activity:announcement_does_not_name_the_company": 5,
+   "activity:bulk_entry_burst": 16,
+   "activity:content_advice": 3,
+   "activity:content_recruitment": 1,
+   "activity:evergreen_advice_not_news": 5,
+   "activity:group_brand_item_not_national_unit": 36,
+   "activity:headline_not_an_announcement": 66,
+   "activity:item_not_about_entity_on_group_or_brand_site": 186,
+   "activity:no_individual_article_url": 4,
+   "activity:no_title": 7,
+   "activity:non_article_path": 1,
+   "activity:not_anchored_to_the_company": 19,
+   "activity:page_date_on_non_news_page": 16,
+   "activity:question_title_not_announcement": 3,
+   "careers:job_board_for_other_employers": 1,
+   "careers:not_a_careers_page": 1,
+   "careers:site_operated_by_group_or_brand": 2,
+   "careers:site_operated_by_other_entity": 1,
+   "job:currency_unknown": 7,
+   "job:external_ad_employer_unverified": 2,
+   "job:other_employer": 12,
+   "social:account_localised_abroad_on_group_site": 1,
+   "social:brand_handle_on_group_or_brand_site": 1,
+   "social:brand_handle_on_platform_site": 1,
+   "social:foreign_parent_group_account": 4,
+   "social:group_account_without_national_unit": 8,
+   "social:group_name_handle_on_group_or_brand_site": 1,
+   "social:group_name_handle_on_section_site": 1,
+   "social:group_shared_brand_handle": 4,
+   "social:handle_names_other_company_on_site": 2,
+   "social:handle_names_other_entity": 9,
+   "social:handle_unrelated": 10,
+   "social:not_a_public_profile_url": 1,
+   "social:platform_provider_account": 1,
+   "social:site_operated_by_other_entity": 6
+  }
+ }
+}

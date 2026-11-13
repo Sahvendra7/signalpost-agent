@@ -13,7 +13,8 @@ This is where the work stands for whoever continues on another machine or accoun
 | Revision 1 | `05d7566` (code `a5e06ce`), submitted by the owner. Builderr C300 directional row (2026-10-17): 56.85/100 (recall 26.18, precision 28.27, synthesis 2.40, UX 0). Which tree Builderr processed is not determinable from the available metadata. |
 | C300 revision candidate | Code `6487205` (code commits `7492f32`, `6487205`); the docs/measurements commit on top is code-identical. Not submitted, not scored. See `docs/c300-revision.md`. |
 | Previously submitted | `ff3b515` (branch `claude/c300-refresh-fix`) — the V3 baseline. |
-| **V3.1 candidate 2 (recommended)** | Tag `v3.1-candidate-2` (local), code `334a085`: candidate 1 plus the foreign-namesake entity correction (LOGSCOM AS / Logscom AB; `docs/v31-release-report.md` §10). The news rules are unchanged. Not pushed, not submitted, not scored. |
+| **V3.1.1 Builderr rescoring revision (recommended)** | Branch `revision/v3.1.1-builderr-rescore`, code `38ff24c`, based on `139e23c`. Answers Builderr's audit of `ff3b515` (11 of 86 claims belonged to other companies; no verified news or jobs). See `docs/v311-rescore-revision.md`. Local; not pushed, not submitted. |
+| V3.1 candidate 2 | Tag `v3.1-candidate-2` (local), code `334a085`: candidate 1 plus the foreign-namesake entity correction (LOGSCOM AS / Logscom AB; `docs/v31-release-report.md` §10). The news rules are unchanged. Not pushed, not submitted, not scored. |
 | V3.1 candidate 1 | Tag `v3.1-candidate-1` (local), code `0e4c426`, after the news accuracy remediation (`docs/v31-release-report.md`). Not pushed, not submitted, not scored. Independent news precision 80.2% (eval200b): the 90% target is not met. Social 100%. |
 | V3 candidate 2 | Code `7b8fc69` plus documentation and measurements, after the pre-release remediation pass (`docs/v3-remediation.md`). Not pushed, not submitted, not scored. Independent news precision 25.6%: the target is not met. |
 | V3 candidate 1 | Branch `claude/awesome-sagan-m2lppu`, code `730ccfe` plus documentation and measurements. **Not submitted, not scored.** See `docs/v3-changelog.md`, `docs/v3-accuracy.md` and the V3 section of `docs/final-submission-manifest.md`. |
@@ -21,6 +22,7 @@ This is where the work stands for whoever continues on another machine or accoun
 
 ## Read in this order
 
+00. V3.1.1: `docs/v311-rescore-revision.md` (root causes, changes, eval-r300 and eval-r200c audits, validation, email).
 0. V3.1: `docs/v31-release-report.md` (outcome, all measurements, the recommended commit), then
    `docs/v31-news-analysis.md` (the 29-error analysis, the comparison of approaches, both independent evaluations).
    V3:

@@ -1,0 +1,12 @@
+  "deadline": {
+    "deadline_seconds": 2700.0,
+    "grace_seconds": 60.0,
+    "stop_reason": null,
+    "companies_degraded_to_official_only": 0,
+    "companies_not_started": 0,
+    "companies_salvaged_at_hard_stop": 0
+  },
+  "viewer": "../out/envelopes.viewer.html",
+  "validation_passed": true,
+  "registry_snapshot": "absent"
+}

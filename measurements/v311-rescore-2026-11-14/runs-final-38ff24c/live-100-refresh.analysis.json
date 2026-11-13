@@ -1,0 +1,54 @@
+{
+ "run": "live-100-refresh",
+ "envelopes": 100,
+ "terminal": {
+  "completed": 100
+ },
+ "input_order_kept": true,
+ "validation_passed": null,
+ "contract_findings": 0,
+ "evidence_hashes_checked": 3968,
+ "evidence_hash_mismatches": 0,
+ "evidence_without_snapshot": 4,
+ "hosts": 197,
+ "social_platform_hosts": [],
+ "third_party_cost_usd": 0.0,
+ "unsupported_summary_statements": 0,
+ "published": {
+  "social_profile": 11,
+  "careers_page": 4,
+  "official_website": 16,
+  "news_item": 2
+ },
+ "code_version": {
+  "source_sha256": "3211a732d5b8718b624ca790f56e575cf6191ca789e3e42964d3c7f58e34f633",
+  "package_version": "0.3.0",
+  "git_commit": "38ff24c48e989a987529f4f7d6ca3fa107bce75d",
+  "git_dirty": false
+ },
+ "llm": null,
+ "baseline": {
+  "source": "history",
+  "companies_with_baseline": 100
+ },
+ "new_items": {
+  "social_profile": 0,
+  "news_item": 0,
+  "job_posting": 0,
+  "retracted": 0
+ },
+ "checks": {
+  "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+  "withheld": {
+   "activity:announcement_does_not_name_the_company": 4,
+   "activity:content_advice": 2,
+   "activity:content_service": 3,
+   "activity:date_contradicts_title": 2,
+   "activity:evergreen_advice_not_news": 1,
+   "activity:headline_not_an_announcement": 27,
+   "activity:no_article_evidence": 3,
+   "activity:not_anchored_to_the_company": 3,
+   "social:handle_unrelated": 3
+  }
+ }
+}
