@@ -1,0 +1,314 @@
+{"uid": "0069a53833133fb5", "label": "correct", "category": null, "note": "the foundation's report launch", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "015693cfe7bebe43", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "017f3e531a7a9614", "label": "incorrect", "category": "wrong_company", "note": "MDE Group account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "02a03b2772b0e13e", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "05037a6eca166c20", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "05ba7ae8cf115800", "label": "incorrect", "category": "wrong_company", "note": "supplier (DPA) product launch", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "07130a8c28eece62", "label": "correct", "category": null, "note": "the society awarded its prize", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "08f3e5a22991bac5", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "09684b77bb0681c8", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "09c8cafdf86b9097", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0abee59a891fd25b", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0b175407a5e7e5b2", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0caf2dcbc4f486c9", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0d283fec482ca1d6", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0d65fc12253bec33", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0e755e199115a5c4", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0e8f7189948581d9", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0f1a4001e934285b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "0f8250543754f36c", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "113eb9bb4ac69456", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "11aa286c49374eb0", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "11abf2ce284a365f", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1248bf59bde7418c", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "13a246f7533d579f", "label": "incorrect", "category": "wrong_company", "note": "Moelven group account (parent Moelven Industrier ASA); brand shared by several registered group companies", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "144f94cb1137c7ec", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "17240cb4ae9d93a4", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1780ac58b7105559", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "18596860f3a2479d", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "19e588da78c53a0a", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1a207ca4a4a72980", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1ab0d90f681ca301", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1ba2c9a65ec998a1", "label": "incorrect", "category": "wrong_company", "note": "supplier (d&b) product launch", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1ca03c88f1a5b26a", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1d0e765fb3e9be36", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1dfcf7a32a96b4fb", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "1f8ceed505b6b195", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "20afc537556e0f04", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "21e6691065a6a4b8", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2291570fc844fea0", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "25c13c00709239f6", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2736c7578037b331", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "27a5c4e6ac19e0bc", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "27a7634d568365a1", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "28249b49ecbbf163", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "28c4ab2ca240f67d", "label": "correct", "category": null, "note": "annual meeting", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "28cae5559a1f2eca", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2a504c014e7e53a8", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2a62b434c23b463d", "label": "correct", "category": null, "note": "product launch by the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2c046449ba85f74d", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2dce54d5a9b720ca", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2df21c9199b834e1", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2e9cfbcbc01fbf49", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "2ff2e8217de5acb7", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "32e119078cd2efdd", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "331e96783c8eb60f", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3328fb8fff304527", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3389baa31a31bd46", "label": "correct", "category": null, "note": "annual meeting", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "33d01330fb7564b8", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "34d64d86c6c7efa1", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "35bfe00366bfa55b", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "36edf3bcb8a39b76", "label": "unsure", "category": null, "note": "bare brand = legal name; parent MELBYE GROUP AS shares it", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "385f997a79d1ff4f", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "39622561cb28447b", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3a4b42429577df0d", "label": "correct", "category": null, "note": "annual meeting and seminars", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3ab10af2073af94b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3b5e2b99507f2b68", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3e82a4c35457d0c5", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3f0943785dec3008", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "3f8a350638945d72", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "40e8c91b33941c6b", "label": "incorrect", "category": "wrong_company", "note": "MDE Group account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "413865d120174f4a", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "41761bde2ca164d5", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4300607ad6926628", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "43f66711c6408bb2", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "44ec64037ebddf1d", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4527a0871bcf0d96", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "46fdbb95fafb2572", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "47414920b04708a5", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "47a36a66bdfbcb06", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "48efdb17417eebeb", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4a30a00916941702", "label": "unsure", "category": null, "note": "bare brand = legal name; parent MELBYE GROUP AS shares it", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4ababf7039cee952", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4acc0c567873005f", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4b008466f7083c0f", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4bac0f40cfb79144", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4befc4391fa5a7fc", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4c06c9b0fed61c45", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4c137ce1235f122c", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4c356c925af689b7", "label": "incorrect", "category": "related_not_exact", "note": "the group's website (registry group / MDE Group), not the exact entity's", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4c5bfdb2ea9bc59b", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4ce8a83f81b9f914", "label": "correct", "category": null, "note": "current Havforskningsinstituttet vacancy on Jobbnorge, title names the employer", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4dbd6757cc5a7d7f", "label": "correct", "category": null, "note": "the photographer's own new publication", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4e6ef18dbf943453", "label": "incorrect", "category": "wrong_company", "note": "Melbye Group (parent MELBYE GROUP AS) account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "4fd8f21b9e2a97e2", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "508c10ceda66144b", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5158232c8922395d", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "51cf90dbef368fa3", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "51f4fa1214ea8e25", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "53562b11465792f1", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "53f65b9d7c3dcf9b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5423b352fbd3fb21", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "54ab14ccea6083a9", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "54b2e4ad6597fca5", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "56235503036bd56b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "567f5abb83376b08", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "56f18158fd46a2de", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "57c97c5c3d67939a", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "59e71e568df50802", "label": "incorrect", "category": "wrong_company", "note": "Melbye Group (parent MELBYE GROUP AS) account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5a3f3cab2a118128", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5d5786aa48ded855", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5d5baa2182870327", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5e11c7c256e3928c", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5e40343910c107cc", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "5e8a9d3b81572554", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "61102e7e9445a7ee", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6154dab5e6691068", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6201c2b04cd6248d", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "63dae6617af66284", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "657ca37530fadb5e", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "65d52935a11b2279", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "68ce3d79ef3799d5", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6976d81dc9ee9516", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "69a26e33b0008cc0", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6a9bc7a66b333734", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6c52fad9e32783c0", "label": "incorrect", "category": "not_a_job_advertisement", "note": "generic recruitment page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6e028ef54230e206", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6e7982e7742cc037", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "6ee529f87e5ae96b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "7469d2d3275f5ce9", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "74755072900597ef", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "764253077d279660", "label": "correct", "category": null, "note": "acquisition", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "775af55f969f09ef", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "79aedd7d5090be10", "label": "incorrect", "category": "wrong_company", "note": "supplier (SSL) product launch", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "7c3477aafafdd43b", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "7d92255774cbf785", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "7f49383ce8562071", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "7f5bbe259d17b2bd", "label": "incorrect", "category": "wrong_company", "note": "Moelven group account (parent Moelven Industrier ASA); brand shared by several registered group companies", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "7fe7e925dcf7e6fa", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "806324f9719fd2c8", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8066d7c0b67ec25b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "816e89da54c7ea0e", "label": "incorrect", "category": "wrong_company", "note": "Moelven group news", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8233901572b7c29a", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "83c912090f3c2009", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "83cdeb61578752a3", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "84bb73ab41adf6fd", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "84cfec02f09e1ba0", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "84e5b2cedb392af6", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "84faa1dbb384a1f5", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "85e8cb7e76f11f4f", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "860b571cbeefb2b5", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "89f63ad7ab849665", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8c24293fc2ecea52", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8c3e7b4885351bbe", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8e0b7abe321cce15", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8e1050881aef5071", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8e95929b870dc30b", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8ee883ae03f999db", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "8eeaa35c96a71cdc", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "90526ee83934266a", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9092d4591a27760e", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "915633b38d161dad", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "918f90abf0ed0863", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9265085696fa03ef", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9423587c7432f4c8", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9436bb832627cc61", "label": "incorrect", "category": "not_a_job_advertisement", "note": "generic recruitment page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "94f854aa17c94024", "label": "incorrect", "category": "wrong_company", "note": "national team news", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "950c6d9fa24413dd", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "97251538e46f44ab", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "97b85b6282ceba5a", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "980783f8da0c1d15", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9a13dd136bbbaaed", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9ada18bb6e1a941c", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9b6a13d08fb8ee88", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9c5c10253d637fe1", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "9f5101ee7e5ce51d", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a03f55509b42065e", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a0578669f2736c62", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a08e8e35224539d4", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a15b88c39de4ac74", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a1c2a8cf40cd90a3", "label": "correct", "category": null, "note": "new colleague", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a1d9db07e258fc68", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a229499cd7374dfe", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a31e3485295dff74", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a32ca27e54e2af4d", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a3dc29baaaaea225", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a42e879b3d808b00", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a43b3dbf759fe4ea", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a448b05d5b5698ae", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a4dd30e6a85ab41d", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a63da67bf09b992b", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a763b9616966585a", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a79df734a262f1b6", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "a7e846eba0d1f111", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "aaf242476e898be6", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "acb68165300edc8e", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ae702d0651c332b8", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "aeac2d5c531b5bf6", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "aead8f9601d2cd7e", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "aef89ff861d0d5f7", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "aefcc0c79234b077", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "af54173983c9a5c4", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "afbe2e57fd9a8218", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "afca3f2505eaa035", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b06445e644a22ad6", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b0a0e224788a78e1", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b0c1d8bac16ac2fa", "label": "unsure", "category": null, "note": "site content does not identify the company (default/under construction or not captured)", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b0cd130b0af3d46a", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b2a818329eb8dfda", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b4081bb057c1faa5", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b5793b597b5a71d1", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b58350eaf1eeca06", "label": "incorrect", "category": "wrong_company", "note": "the business manager's (forretningsfører) website, published as the entity's own", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b8b1419550305538", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b95983a663a48ca7", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b96a69d9ace2732d", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "b9d847688282839b", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ba5a59a040c4cc57", "label": "unsure", "category": null, "note": "site content does not identify the company (default/under construction or not captured)", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "babfe0e0c0e806d1", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "bb019df80cd70c59", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "bb38bb078830c1f2", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "bbd89d4824dd2938", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "bbdc80c09e5a3312", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "be11d42cd82543a0", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "be2af5656d61f4e0", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "be5f1476be110570", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "bfc6b6584f9c7d1a", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c1283873226678a0", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c2584cf91327cceb", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c3673265787488bd", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c4466329fadcae77", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c462a36801c1d002", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c49b6d9c8befadea", "label": "correct", "category": null, "note": "partnership", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c533a5575a120785", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c54088772bba6b54", "label": "incorrect", "category": "not_a_job_advertisement", "note": "generic recruitment page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c66db9f1888b80bf", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c7b8b8720515a49d", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c8aaef21be624ad5", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c8d463806f398955", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c9b11a8df1899c79", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c9ec0b2221daa577", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "c9fe8aefac6ed020", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "cb939ebef33ff54b", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "cbbd453611b48908", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "cccb68426d29381f", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ce400793b3daf327", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ce59ea401a717d6e", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "cf31d030f54ac409", "label": "correct", "category": null, "note": "the society received a prize", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "cfe7f0a892246ba5", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d03de511c3403e7e", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d112a5652e3616c5", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d28c5ff0f8c7bce6", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d2ecc06a5139d4b0", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d2f03d01cfe7aaeb", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d3435d4277aac6b7", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d355910173227400", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d3bb20a64b718766", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d551222ebacf9f2c", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d555c6a6940fa24e", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d5ccb08f6baab016", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d601725880081f1e", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d627791e10ce23a2", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d67f85dc2b7677b6", "label": "incorrect", "category": "related_not_exact", "note": "the group's website (registry group / MDE Group), not the exact entity's", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d7d1c7ec67062f6d", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "d89b1b98d9356bb0", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "da2f253cfe8c1987", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "dadfe87242d856a6", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "db2c3fe8991a9c2f", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "dba5ce52f9afe7fc", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "dbe1f4d47a65a468", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "de2eb0a8b6849602", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "dff9a47695de098c", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e01274c4492c1aa1", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e0b861ae2ff50d4e", "label": "correct", "category": null, "note": "own product line launch (listing URL, not an individual article)", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e44674269a7a0058", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e569635874a3520e", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e63f7fdd7348b77a", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e6a14f2ce3ba173c", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e6ccd38a71b410ad", "label": "correct", "category": null, "note": "public offer", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e7982b2cd02e53c1", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e801662249c757fc", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e8145ee13d6fb4fc", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "e979c4781951732e", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "eb18db6d31b888e5", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ec225ebb54a97306", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f054c50ac147ef12", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f09d5539e4f1be9b", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f1c075ce62dd4161", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f23da69e50b0dfbb", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f369ddad3c81c458", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f51c2fb46a7e1b9c", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f534c86ec59c6a31", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f58dd42e64b2061c", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f61a47892d876a06", "label": "incorrect", "category": "not_a_careers_page", "note": "not a careers page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f61b1df185e5b1bf", "label": "correct", "category": null, "note": "the company's own careers/vacancies page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f6558d06aec346ec", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f768d41bc4c4ff82", "label": "correct", "category": null, "note": "the organisation's own development or activity", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f7ba91c078dbfc32", "label": "incorrect", "category": "wrong_company", "note": "supplier (DPA) product launch", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f8dbffd69c9838b5", "label": "correct", "category": null, "note": "ARVA group acquired by d&b audiotechnik", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f9169e27441718ba", "label": "incorrect", "category": "not_a_job_advertisement", "note": "generic recruitment page", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f93ddf56ebb0fb72", "label": "incorrect", "category": "wrong_company", "note": "supplier (d&b audiotechnik) product launch reposted by the distributor", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "f9b451c3dee164b1", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fa760db54143abce", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fcb2b17985e23e9d", "label": "incorrect", "category": "wrong_company", "note": "supplier (DPA) product launch", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fd05e3fe77b9657d", "label": "incorrect", "category": "wrong_company", "note": "Moelven group account (parent Moelven Industrier ASA); brand shared by several registered group companies", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fd68f24b76788ea6", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fd76284ce1bc6a56", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fd8891e9a9846570", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fe2e41df35926ce2", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fedde8d4357f4709", "label": "correct", "category": null, "note": "current Havforskningsinstituttet vacancy on Jobbnorge, title names the employer", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "fee0463e4e5284e2", "label": "incorrect", "category": "not_company_news", "note": "advice, product/service, info page, opening hours, default post or promotion", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ff29b4de3b4dd260", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ff5880ee215f5787", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ff6eea137c564142", "label": "correct", "category": null, "note": "registry-linked site of the company", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ffda6e2623321e80", "label": "correct", "category": null, "note": "the company's own account", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}
+{"uid": "ffe9fc48d5476bfc", "label": "correct", "category": null, "note": "school opened by the prime minister", "labeller": "assistant (author of the V3.1.1 rules), version-blind sheet"}

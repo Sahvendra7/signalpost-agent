@@ -1,0 +1,126 @@
+{
+ "ff3b515": {
+  "official_website": {
+   "published": 112,
+   "correct": 97,
+   "incorrect": 13,
+   "unsure": 2,
+   "wrong_or_related_company": 13,
+   "precision": 0.882
+  },
+  "social_profile": {
+   "published": 79,
+   "correct": 70,
+   "incorrect": 7,
+   "unsure": 2,
+   "wrong_or_related_company": 7,
+   "precision": 0.909
+  },
+  "news_item": {
+   "published": 446,
+   "estimated_correct": 206.7,
+   "estimated_precision": 0.463,
+   "sample": "18/40 correct, 2 wrong-company",
+   "census_correct": "15/20"
+  },
+  "careers_page": {
+   "published": 18,
+   "correct": 9,
+   "incorrect": 9,
+   "unsure": 0,
+   "wrong_or_related_company": 0,
+   "precision": 0.5
+  },
+  "job_posting": {
+   "published": 6,
+   "correct": 2,
+   "incorrect": 4,
+   "unsure": 0,
+   "wrong_or_related_company": 0,
+   "precision": 0.333
+  }
+ },
+ "v31": {
+  "official_website": {
+   "published": 111,
+   "correct": 97,
+   "incorrect": 13,
+   "unsure": 1,
+   "wrong_or_related_company": 13,
+   "precision": 0.882
+  },
+  "social_profile": {
+   "published": 72,
+   "correct": 67,
+   "incorrect": 3,
+   "unsure": 2,
+   "wrong_or_related_company": 3,
+   "precision": 0.957
+  },
+  "news_item": {
+   "published": 200,
+   "estimated_correct": 87.0,
+   "estimated_precision": 0.435,
+   "sample": "16/40 correct, 1 wrong-company",
+   "census_correct": "15/20"
+  },
+  "careers_page": {
+   "published": 11,
+   "correct": 11,
+   "incorrect": 0,
+   "unsure": 0,
+   "wrong_or_related_company": 0,
+   "precision": 1.0
+  },
+  "job_posting": {
+   "published": 2,
+   "correct": 2,
+   "incorrect": 0,
+   "unsure": 0,
+   "wrong_or_related_company": 0,
+   "precision": 1.0
+  }
+ },
+ "v311": {
+  "official_website": {
+   "published": 111,
+   "correct": 97,
+   "incorrect": 13,
+   "unsure": 1,
+   "wrong_or_related_company": 13,
+   "precision": 0.882
+  },
+  "social_profile": {
+   "published": 72,
+   "correct": 67,
+   "incorrect": 3,
+   "unsure": 2,
+   "wrong_or_related_company": 3,
+   "precision": 0.957
+  },
+  "news_item": {
+   "published": 20,
+   "correct": 15,
+   "incorrect": 5,
+   "unsure": 0,
+   "wrong_or_related_company": 5,
+   "precision": 0.75
+  },
+  "careers_page": {
+   "published": 11,
+   "correct": 11,
+   "incorrect": 0,
+   "unsure": 0,
+   "wrong_or_related_company": 0,
+   "precision": 1.0
+  },
+  "job_posting": {
+   "published": 0,
+   "correct": 0,
+   "incorrect": 0,
+   "unsure": 0,
+   "wrong_or_related_company": 0,
+   "precision": null
+  }
+ }
+}
