@@ -20,7 +20,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from ..inputs import mod11_valid
-from .names import COUNTIES, REGIONS, LegalName, compact, fold
+from .names import COUNTIES, FOREIGN_FORMS, REGIONS, LegalName, compact, fold
 
 IMPRINT_CUE = re.compile(r"(?:org(?:anisasjons)?\.?\s*-?\s*(?:nr|nummer|no)\b\.?|organisasjonsnummer|foretaksregisteret|selskapsinformasjon)\s*[:.]?\s*", re.I)
 VAT_NUMBER = re.compile(r"(?<![A-Za-z])NO\s?(\d{3})[\s.]?(\d{3})[\s.]?(\d{3})\s?MVA")
@@ -197,6 +197,32 @@ def international_brand_site(profile: dict[str, Any], site_url: str, all_text: s
     return bool(written) and re.search(r"(?<![a-z0-9])" + re.escape(written) + r"(?![a-z0-9])", fold(all_text)) is None
 
 
+NORWEGIAN_LIMITED_FORMS = {"as", "asa"}  # folded, as written after a name
+
+
+def norwegian_namesake_named(legal: LegalName, text: str) -> str | None:
+    """V3.1.2, the mirror of `foreign_namesake_named`: a foreign-registered company (its legal name carries another
+    country's form: "SVELVIK MASKIN AB") whose registry website writes the same name as a Norwegian limited company
+    ("Svelvik Maskin AS") throughout, and this company's own form at most in passing ("our subsidiary in Sweden,
+    Svelvik Maskin AB"). The Norwegian namesake runs the site. Needs at least three statements under the Norwegian form
+    and more than three for each statement under the company's own form; a company whose name carries a Norwegian
+    form itself never matches."""
+    if not (legal.own_forms & FOREIGN_FORMS) or legal.own_forms & NORWEGIAN_LIMITED_FORMS:
+        return None
+    folded = fold(text)
+    own = other = 0
+    namesake = None
+    for match in legal.phrase_re.finditer(folded):
+        following = re.match(r"[\s,.]*([a-z]+)", folded[match.end():match.end() + 16])
+        word = following.group(1) if following else ""
+        if word in legal.own_forms:
+            own += 1
+        elif word in NORWEGIAN_LIMITED_FORMS:
+            other += 1
+            namesake = namesake or f"{folded[match.start():match.end()]} {word}"
+    return namesake if other >= 3 and other > 3 * own else None
+
+
 def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[tuple[str, str]], homepage_text: str = "",
                     website_value: dict[str, Any] | None = None, identity_class: str | None = None, shared_kind: str | None = None,
                     taxonomy: list[str] | None = None, legal: LegalName | None = None) -> SiteOperator:
@@ -249,6 +275,12 @@ def assess_operator(profile: dict[str, Any], site_url: str, *, page_texts: list[
                             f"The website names \"{namesake}\", a company with this company's name under another country's legal form, and never "
                             "this company itself or its organisation number; profiles and stories under the shared name may be that company's.",
                             ({"signal": "site_of_a_foreign_namesake", "named": namesake},))
+    namesake = norwegian_namesake_named(legal, all_text)
+    if namesake:
+        return SiteOperator("group_or_brand", "site_of_a_norwegian_namesake",
+                            f"The website is written throughout in the name of \"{namesake}\", a Norwegian company with this foreign-registered "
+                            "company's name, and names this company at most in passing; it does not state this company's organisation number.",
+                            ({"signal": "site_of_a_norwegian_namesake", "named": namesake},))
     group: list[dict[str, Any]] = []
     value = website_value or {}
     requested, final = str(value.get("requested_url") or ""), str(value.get("final_url") or "")

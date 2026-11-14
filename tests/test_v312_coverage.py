@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from norway_company_agent import website  # noqa: E402
+from norway_company_agent.attribution.names import LegalName  # noqa: E402
+from norway_company_agent.attribution.operator import assess_operator, norwegian_namesake_named  # noqa: E402
 from norway_company_agent.http import ByteFetch  # noqa: E402
 from norway_company_agent.identity import assess_website_identity  # noqa: E402
 from norway_company_agent.synthesis import company_summary  # noqa: E402
@@ -168,6 +170,33 @@ class RegistryListedSiteIdentity(unittest.TestCase):
         self.assertFalse(publishable(site("HAVBRIS EIENDOM AS", "https://www.solstrand.no/", title="Solstrand Utleie AS", text="Velkommen til Solstrand Utleie " * 5)))
         parked = site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell Filmverksted", text="This domain is for sale " * 8)
         self.assertFalse(publishable(parked))
+
+
+class NorwegianNamesake(unittest.TestCase):
+    """A foreign-registered "… AB" whose registry website is its Norwegian parent's "… AS" (seen on eval-r300f)."""
+
+    PARENT_SITE = ("Maskiner for avfallsbehandling - Fjordvik Maskin AS. Fjordvik Maskin AS tilbyr et bredt utvalg av maskiner. Kontakt oss: Fjordvik Maskin AS, "
+                   "Strømmveien 266. Om oss: Fjordvik Maskin AS er en ledende leverandør og har hele Norge som nedslagsfelt. "
+                   "Vi har også et datterselskap i Sverige (Fjordvik Maskin AB) som leverer tilsvarende tjenester.")
+
+    def test_site_written_in_the_norwegian_namesakes_name(self):
+        legal = LegalName("FJORDVIK MASKIN AB")
+        self.assertEqual(norwegian_namesake_named(legal, self.PARENT_SITE), "fjordvik maskin as")
+        operator = assess_operator({"name": "FJORDVIK MASKIN AB", "organisation_number": "937936257", "legal_form": "UTLA", "evidence": {}},
+                                   "https://fjordvikmaskin.no/", page_texts=[("https://fjordvikmaskin.no/", self.PARENT_SITE)])
+        self.assertEqual((operator.kind, operator.code), ("group_or_brand", "site_of_a_norwegian_namesake"))
+
+    def test_own_site_of_a_foreign_company_and_of_a_norwegian_company_are_kept(self):
+        # The foreign company's own site; a site that names both about equally; a Norwegian AS (never matches);
+        # a branch whose name carries both forms.
+        self.assertIsNone(norwegian_namesake_named(LegalName("FJORDVIK MASKIN AB"), "Fjordvik Maskin AB, Lagervägen 10. Fjordvik Maskin AB levererar maskiner. © Fjordvik Maskin AB"))
+        self.assertIsNone(norwegian_namesake_named(LegalName("FJORDVIK MASKIN AB"), "Fjordvik Maskin AB och Fjordvik Maskin AS. Fjordvik Maskin AS i Norge, Fjordvik Maskin AB i Sverige. Fjordvik Maskin AS."))
+        self.assertIsNone(norwegian_namesake_named(LegalName("FJORDVIK MASKIN AS"), self.PARENT_SITE))
+        self.assertIsNone(norwegian_namesake_named(LegalName("FJORDVIK MASKIN AB"), "Fjordvik Maskin AS leverer maskiner."))
+        # With the company's own organisation number on the site the site stays its own (earlier rule decides first).
+        operator = assess_operator({"name": "FJORDVIK MASKIN AB", "organisation_number": "937936257", "legal_form": "UTLA", "evidence": {}},
+                                   "https://fjordvikmaskin.no/", page_texts=[("https://fjordvikmaskin.no/", self.PARENT_SITE + " Org.nr. 937 936 257")])
+        self.assertEqual(operator.kind, "self")
 
 
 def robots_answer(status: int, body: bytes = b"", error: str | None = None):
