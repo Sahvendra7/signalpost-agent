@@ -181,6 +181,10 @@ def _robots_check(url: str, timeout: float) -> tuple[bool, str, float]:
     response = fetch_bytes(robots_url, headers={"User-Agent": USER_AGENT, "Accept": "text/plain"}, timeout=timeout, attempts=1, max_bytes=ROBOTS_MAX_BYTES * 4, opener=SAFE_OPENER)
     parser, reason = robots_policy(response.status, response.raw)
     if parser is None:
+        # No HTTP answer at all (TLS failure, refused or reset connection, timeout) is told apart from a server
+        # answering 5xx/429: the caller may then try the other scheme of a URL the registry gave without one.
+        if reason == "robots_unreachable" and not response.status and not str(response.error or "").startswith(("HTTP ", "blocked:")):
+            return False, "robots_no_connection", 0.0
         return False, reason, 0.0
     if not parser.can_fetch(USER_AGENT, url):
         return False, "robots_disallowed", 0.0
@@ -379,8 +383,15 @@ def fetch_website(url: str | None, *, timeout: float = 15.0, max_bytes: int = 2_
     except ValueError as exc:
         return evidence("website", "blocked", "registry_linked_company_website", normalized, note=str(exc)), {"requests": 0, "bytes": 0, "latencies_ms": []}
     allowed, robots_reason, delay = _robots_check(normalized, timeout)
+    if not allowed and robots_reason == "robots_no_connection" and not supplied_scheme and normalized.startswith("https://"):
+        # The registry gave a bare host; https was only our guess and nothing answered there. A site served over
+        # plain http is read over http, under its own robots.txt (the same fallback the homepage request has).
+        record, metrics = fetch_website("http://" + supplied_url, timeout=timeout, max_bytes=max_bytes)
+        metrics["requests"] += 1
+        return record, metrics
     if not allowed:
         notes = {"robots_disallowed": "robots.txt disallows this user agent", "robots_forbidden": "robots.txt returned 401/403 (treated as disallow)", "robots_unreachable": "robots.txt unreachable (5xx/429/network; RFC 9309: assume disallow)"}
+        notes["robots_no_connection"] = notes["robots_unreachable"]
         return evidence("website", "blocked", "registry_linked_company_website", normalized, note=notes.get(robots_reason, robots_reason)), {"requests": 1, "bytes": 0, "latencies_ms": []}
     if delay > MAX_CRAWL_DELAY_SECONDS:
         return evidence("website", "blocked", "registry_linked_company_website", normalized, note=f"robots.txt Crawl-delay {delay:g}s exceeds the per-company budget; not fetched"), {"requests": 1, "bytes": 0, "latencies_ms": []}

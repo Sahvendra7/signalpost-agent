@@ -565,6 +565,10 @@ def company_summary(envelope: dict[str, Any]) -> dict[str, Any]:
         overview = "No verified registry identity was found for this organisation number; nothing is reported about it."
     elif sparse:
         overview = "Public information found was limited to official registry records: " + ", ".join(["registry identity"] + found) + "."
+    elif out.items["at_a_glance"]:
+        # A company with a verified public footprint gets the same lead paragraph a sparse one has: the cited
+        # "At a glance" statements read together. Nothing is added to them, so every sentence keeps its sources there.
+        overview = " ".join(statement["text"] for statement in out.items["at_a_glance"])
     sections = []
     for key, title in SECTIONS:
         statements = out.items[key]

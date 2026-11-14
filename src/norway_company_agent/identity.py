@@ -32,6 +32,84 @@ def _structured_names(value: Any) -> list[str]:
     return names
 
 
+# ---- Registry-listed sites whose identity evidence is the domain itself or the owner's name (V3.1.2) ----
+# Legal-form words a legal name ends with. A site writes "Impakt Geofysik AB" for the registered
+# "IMPAKT GEOFYSIK AKTIEBOLAG": the form is not part of the name to be matched.
+TRAILING_LEGAL_FORMS = {
+    "aktiebolag", "aktieselskap", "aktieselskab", "aps", "ag", "gmbh", "oy", "oyj", "llc", "sarl", "srl", "spa",
+    "nv", "kft", "ou", "uab", "sia", "ehf", "hf", "kg", "se", "nuf",
+}
+# Parked or placeholder pages not already named in PARKED_MARKERS; consulted by the V3.1.2 rules only.
+PLACEHOLDER_MARKERS = (
+    "is parked", "domain parking", "parked domain", "domenet er parkert", "this domain is registered",
+    "buy this domain", "kjop dette domenet", "site maintenance", "under construction", "coming soon",
+    "nettsiden er under utvikling", "siden er under konstruksjon",
+)
+
+
+def _name_without_trailing_form(core: list[str]) -> list[str]:
+    trimmed = list(core)
+    while len(trimmed) > 1 and trimmed[-1] in TRAILING_LEGAL_FORMS:
+        trimmed.pop()
+    return trimmed
+
+
+def _domain_label(hostname: str) -> str:
+    """The registrable label of a hostname, hyphens removed: www.alle-gode-ting.no -> allegodeting."""
+    from .website import _registered_domain  # late import: website imports nothing from here, but keep the cycle impossible
+
+    domain = _registered_domain("https://" + hostname) if hostname else ""
+    label = (domain or hostname).split(".")[0]
+    return "".join(_tokens(label.replace("-", " ")) or [re.sub(r"[^a-z0-9]", "", label.casefold())])
+
+
+def _owner_tokens(profile: dict[str, Any]) -> list[str]:
+    """Name tokens of the registered owner (innehaver) of a sole proprietorship, from the roles register."""
+    roles = (((profile.get("evidence") or {}).get("roles") or {}).get("value") or {}).get("roles") or []
+    for role in roles:
+        if role.get("role_code") == "INNH" and not role.get("inactive") and not role.get("organisation_number"):
+            name = role.get("name")
+            return _tokens(" ".join(name) if isinstance(name, list) else name)
+    return []
+
+
+def _same_person_token(name_token: str, owner_token: str) -> bool:
+    # "BENGTSSONS KUNSTNERSKAP": the legal name carries the owner's surname in the genitive.
+    return name_token == owner_token or (len(owner_token) >= 4 and name_token == owner_token + "s")
+
+
+def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostname: str, homepage_token_sets: list[set[str]], *, substantive: bool, folded_text: str) -> str | None:
+    """A reason when a registry-listed site's own domain or the registered owner's name identifies the entity, else None.
+
+    Every rule needs the registry's own link (the caller applies this to the registry-listed website only) and no parked
+    or placeholder marker; all but the last also need a homepage with real content (the last has the owner's name
+    stated on it, which a portfolio site often has and little else). None accepts name similarity alone:
+      * the homepage states the legal name, the trailing legal-form word aside (AKTIEBOLAG ~ AB);
+      * the domain label is exactly the legal name written together (at least two name words);
+      * a sole proprietorship (ENK) whose domain is exactly its trade name, the part of the legal name that is not the
+        registered owner's name; or whose domain carries the owner's name and whose homepage states that name.
+    """
+    if not core or any(marker in folded_text for marker in PLACEHOLDER_MARKERS):
+        return None
+    label = _domain_label(hostname)
+    trimmed = _name_without_trailing_form(core)
+    if substantive and trimmed != core and len(trimmed) >= 2 and any(set(trimmed).issubset(tokens) for tokens in homepage_token_sets):
+        return "the homepage states the legal name (its legal-form word aside) on the registry-listed website"
+    if substantive and len(trimmed) >= 2 and len(label) >= 8 and label == "".join(trimmed):
+        return "the registry-listed domain is the legal name written together"
+    if str(profile.get("legal_form") or "").upper() == "ENK":
+        owner = _owner_tokens(profile)
+        if owner:
+            owner_in_name = [token for token in core if any(_same_person_token(token, part) for part in owner)]
+            trade = [token for token in core if token not in owner_in_name]
+            if substantive and trade and owner_in_name and len(label) >= 5 and label == "".join(trade):
+                return "sole proprietorship: the registry-listed domain is its trade name (the legal name without the registered owner's name)"
+            stated = [part for part in owner if any(_same_person_token(token, part) for token in core)]
+            if len(stated) >= 2 and any(len(part) >= 4 and part in label for part in stated) and any(set(stated).issubset(tokens) for tokens in homepage_token_sets):
+                return "sole proprietorship: the registry-listed domain carries the registered owner's name and the homepage states it"
+    return None
+
+
 def assess_website_identity(profile: dict[str, Any]) -> dict[str, Any]:
     website = profile.get("evidence", {}).get("website", {})
     value = website.get("value") or {}
@@ -85,6 +163,9 @@ def assess_website_identity(profile: dict[str, Any]) -> dict[str, Any]:
     elif len(core) == 1 and exact_homepage_name and substantive_homepage:
         score = 0.95
         reasons.append("single distinctive legal-name token appears in homepage identity evidence with substantive content")
+    elif listed_site_reason := _registry_listed_site_rule(profile, core, hostname, homepage_token_sets, substantive=substantive_homepage, folded_text=normalized_raw):
+        score = 0.92
+        reasons.append(listed_site_reason)
     elif ratio >= 0.75 and len(overlap) >= 2:
         score = 0.85
         reasons.append("most legal-name tokens appear, but exact identity is incomplete")
