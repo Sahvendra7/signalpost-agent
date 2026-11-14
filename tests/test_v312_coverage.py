@@ -54,10 +54,12 @@ class RegistryListedSiteIdentity(unittest.TestCase):
         self.assertFalse(publishable(site("WALDEN INTERNATIONAL AG", "https://www.walden.com/", legal_form="UTLA", title="WALDEN", text="")))
 
     def test_domain_that_is_the_legal_name_written_together(self):
-        assessment = assess_website_identity(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell"))
+        assessment = assess_website_identity(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell", text="Hos Parallell filmverksted lager vi film. " + BODY))
         self.assertTrue(assessment["publishable"])
         self.assertIn("written together", assessment["reasons"][0])
-        self.assertTrue(publishable(site("TRE GODE NABOER DA", "https://www.tre-gode-naboer.com/", legal_form="DA", title="Velkommen")))
+        self.assertTrue(publishable(site("TRE GODE NABOER DA", "https://www.tre-gode-naboer.no/", legal_form="DA", title="Velkommen", text="Vi i Tre gode naboer hjelper hverandre. " + BODY)))
+        # The page never writes the name: the domain alone is not enough.
+        self.assertFalse(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell")))
 
     def test_exact_name_domain_needs_content_and_no_placeholder(self):
         url = "https://www.parallellfilmverksted.no/"
@@ -109,29 +111,56 @@ class RegistryListedSiteIdentity(unittest.TestCase):
                       identity_text_excerpt="Postadresse: Nordvik Fysikalske Institutt AS PB 9024 6023 ÅLESUND")
         self.assertFalse(publishable(clinic))
         # The same site without another company named on it stays accepted (positive control).
-        self.assertTrue(publishable(site("NORDVIK FYSIKALSKE-SOLBERG", "https://www.nordvikfysikalske.no/", legal_form="ENK", owner="Bernt Solberg", title="Nordvik Fysikalske")))
+        self.assertTrue(publishable(site("NORDVIK FYSIKALSKE-SOLBERG", "https://www.nordvikfysikalske.no/", legal_form="ENK", owner="Bernt Solberg", title="Nordvik Fysikalske")))  # title states the trade name
         # A proprietorship converted into a limited company; an owner-named site of the owner's company; a sister company.
         self.assertFalse(publishable(site("MEDIKUS Ronny Hansen", "https://www.medikus.no/", legal_form="ENK", owner="Alf Ronny Hansen", title="Hjem | Medikus", identity_text_excerpt="© Medikus AS")))
         self.assertFalse(publishable(site("KARI BERGE KUNST", "https://kariberge.com/", legal_form="ENK", owner="Kari Berge", title="Kari Berge", text="", identity_text_excerpt="Kari Berge Design AS, Oslo")))
         self.assertFalse(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell", identity_text_excerpt="Parallell Media AS")))
         # The entity's own name with its legal form is not another company.
-        self.assertTrue(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell", identity_text_excerpt="Kontakt Parallell Filmverksted AS i dag")))
+        self.assertTrue(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell", text="Velkommen til Parallell filmverksted. " + BODY, identity_text_excerpt="Kontakt oss i dag")))
 
     def test_hosting_placeholder_is_not_a_company_site(self):
         placeholder = site("CON AMORE KOR", "http://www.conamorekor.no/", legal_form="FLI", title="This server is operated by Example Webhosting",
                            text="No website is currently present on this hostname. The site you are trying to reach could be suspended, deleted or DNS could be incorrect. " * 2)
         self.assertFalse(publishable(placeholder))
-        self.assertTrue(publishable(site("CON AMORE KOR", "http://www.conamorekor.no/", legal_form="FLI", title="Velkommen")))
+        self.assertTrue(publishable(site("CON AMORE KOR", "http://www.conamorekor.no/", legal_form="FLI", title="Velkommen", text="Con Amore kor øver hver tirsdag. " + BODY)))
 
     def test_name_shaped_domain_abroad_needs_the_registered_place(self):
         def row(text, url="https://www.fjordkraftteknologi.com/"):
-            item = site("FJORDKRAFT TEKNOLOGI AS", url, title="Fjordkraft | Clean Marine", text=text)
+            item = site("FJORDKRAFT TEKNOLOGI AS", url, title="Fjordkraft | Clean Marine", text="Fjordkraft Teknologi. " + text)
             item["evidence"]["registry_live"] = {"status": "available", "value": {"business_address": {"postnummer": "5003", "poststed": "BERGEN"}}}
             return item
 
         self.assertFalse(publishable(row("GW-scale compute, powered from thin air. Modular pre-fab data halls built in a factory. " * 3)))
         self.assertTrue(publishable(row("Our Norwegian office is in Bergen. Modular pre-fab data halls built in a factory and assembled on site. " * 3)))
         self.assertTrue(publishable(row("GW-scale compute, powered from thin air. Modular pre-fab data halls built in a factory. " * 3, url="https://www.fjordkraftteknologi.no/")))
+
+    def test_registrar_and_host_pages_are_not_websites_under_any_name_rule(self):
+        # Seen live: a registrar's "is parked" page whose title repeats the domain (accepted by the older single-word
+        # rule), an expired-domain notice, a web host's page, a crashed installation printing its file path.
+        cases = (
+            ("REVO AS", "http://www.revo.no/", "AS", None, "www.revo.no is parked", "www.revo.no is registered, but the owner currently does not have an active website here. Other services, such as e-mail, may be actively used by the owner."),
+            ("RUD SKYTTERLAG", "https://rud.skytterlag.no/", "FLI", None, "rud.skytterlag.no in parked", "rud.skytterlag.no is parked. rud.skytterlag.no is registered, but the owner has currently no active website here."),
+            ("TRUE NORTH RECORDS MARIT KARLSEN", "http://www.truenorthrecords.com/", "ENK", "Marit Karlsen", "NameBright - Domain Expired", "If this is your domain name you must renew it immediately before it is deleted and permanently removed from your account."),
+            ("SENTRUM LEGEKONTOR DA", "http://www.sentrumlegekontor.no/", "DA", None, "Site Unavailable", "Site Unavailable. We're sorry, but this website is currently unavailable. If this is your website, please contact your vendor."),
+            ("DESIGNPLOMMEN KINE EIDE", "http://www.designplommen.com/", "ENK", "Kine Eide", "Hosted by one.com", "Build your website. Build your dream website fast and easy, without any coding. Find your own domain. This one is taken, but you can find another."),
+            ("AUTOKARL Svein Karl Berg", "http://autokarl.no/", "ENK", "Svein Karl Berg", "", "Fatal error: Using $this when not in object context in /home/autokarl/public_html/libraries/joomla/filter/input.php on line 141"),
+        )
+        for name, url, form, owner, title, text in cases:
+            with self.subTest(name):
+                row = site(name, url, legal_form=form, owner=owner, title=title, text=text, pages=[{"title": title}])
+                assessment = assess_website_identity(row)
+                self.assertFalse(assessment["publishable"])
+                self.assertIn("placeholder", assessment["reasons"][0])
+
+    def test_thin_page_needs_the_name_in_its_own_text_whatever_the_wording(self):
+        # No known placeholder phrase at all: the domain in the title is still not the page stating the name.
+        self.assertFalse(publishable(site("REVO AS", "http://www.revo.no/", title="revo.no", text="Denne adressen er reservert av eieren. Ta kontakt med leverandøren for mer informasjon om tjenesten og vilkårene.")))
+        self.assertFalse(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="parallellfilmverksted.no", text=BODY)))
+        # A small real site: one page, little text, the name written on it (kept).
+        self.assertTrue(publishable(site("REVO AS", "https://www.revo.no/", title="Revo - rørlegger i Bodø", text="Revo utfører rørleggerarbeid for private og bedrifter i Bodø og omegn. Ta kontakt for befaring og et uforpliktende tilbud.")))
+        # Words such as "under construction" in a real page's news are not a placeholder.
+        self.assertTrue(publishable(site("NORDLYS CAMP AS", "https://nordlyscamp.no/en/", title="Nordlys Camp - Home", text="Under Construction: bringing Norway to China - Nordlys Camp China. New product under development for our guests this season.")))
 
     def test_earlier_rules_are_unchanged(self):
         # Exact name and organisation number still decide first; an unrelated site stays withheld.

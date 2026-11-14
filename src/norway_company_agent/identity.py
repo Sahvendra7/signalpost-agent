@@ -53,6 +53,41 @@ PLACEHOLDER_MARKERS = (
 STATED_ENTITY = re.compile(r"((?:[A-ZÆØÅ0-9][\w&'.\-]*[ \t]+){1,4})(AS|ASA|A/S|ANS|DA|SA|BA|AB|ApS|GmbH|Ltd\.?|Limited|Inc\.?|Oy|LLC)(?![\w])")
 
 
+# A page a registrar, web host or broken installation serves in place of a site. Read on thin pages only (one page, a
+# few lines of text), where these words are about the domain itself and not about the company's business.
+HOST_PLACEHOLDER = re.compile(
+    r"parked|parkert|parkering|expired|utl[oø]pt|site unavailable|currently unavailable|no website|not have an active website|"
+    r"ingen nettside|hosted by|this server is operated|web ?hosting|webhotell|domeneregistrar|domain registrar|renew it|suspended|"
+    r"find your own domain|this domain|dette domenet|domenet er|fatal error|default (?:web )?page|it works!|index of /|welcome to nginx|"
+    r"buy this domain|domain (?:is )?for sale|domenet er til salgs",
+    re.I,
+)
+
+
+def host_placeholder(value: dict[str, Any]) -> str | None:
+    """The marker found when the captured homepage is a registrar's, web host's or broken installation's page."""
+    if len(value.get("pages") or []) > 1 or len(str(value.get("main_text_excerpt") or "")) >= 600:
+        return None
+    match = HOST_PLACEHOLDER.search(" ".join(str(value.get(key) or "") for key in ("title", "description", "main_text_excerpt")))
+    return match.group(0) if match else None
+
+
+def _states_name(words: list[str], value: dict[str, Any], hostname: str) -> bool:
+    """The page's own text (title, description, body, footer) writes these name words together, in order. The
+    domain is not text: "example.no is parked" and a file path in an error message state nothing."""
+    text = " ".join(str(value.get(key) or "") for key in ("title", "description", "main_text_excerpt", "identity_text_excerpt"))
+    text = " ".join([text, *_structured_names(value.get("structured_organisations") or [])])
+    return bool(words) and "".join(words) in "".join(_tokens(_without_domain_mentions(text, hostname)))
+
+
+def _without_domain_mentions(text: str, hostname: str) -> str:
+    """Text with the site's own domain name, URLs and file paths removed ("www.example.no is parked" -> " is parked")."""
+    host = hostname.casefold().removeprefix("www.")
+    if host:
+        text = re.sub(r"[\w.\-]*" + re.escape(host.split(".")[0]) + r"\.[a-z]{2,}", " ", text, flags=re.I)
+    return re.sub(r"\S*/\S*", " ", text)
+
+
 def _name_without_trailing_form(core: list[str]) -> list[str]:
     trimmed = list(core)
     while len(trimmed) > 1 and trimmed[-1] in TRAILING_LEGAL_FORMS:
@@ -98,7 +133,7 @@ def _registered_place_stated(profile: dict[str, Any], text: str) -> bool:
     return False
 
 
-def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostname: str, homepage_token_sets: list[set[str]], *, substantive: bool, folded_text: str, raw_text: str) -> str | None:
+def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostname: str, homepage_token_sets: list[set[str]], *, substantive: bool, folded_text: str, raw_text: str, value: dict[str, Any]) -> str | None:
     """A reason when a registry-listed site's own domain or the registered owner's name identifies the entity, else None.
 
     Every rule needs the registry's own link (the caller applies this to the registry-listed website only) and no parked
@@ -106,10 +141,11 @@ def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostnam
     stated on it, which a portfolio site often has and little else). A site that names another company with a legal
     form and a word of this entity's name is that company's. None accepts name similarity alone:
       * the homepage states the legal name, the trailing legal-form word aside (AKTIEBOLAG ~ AB);
-      * the domain label is exactly the legal name written together (at least two name words), on a .no domain or
-        with the entity's registered postcode or town on the pages;
+      * the domain label is exactly the legal name written together (at least two name words), the page's own text
+        writes that name, and the domain is .no or the pages carry the entity's registered postcode or town;
       * a sole proprietorship (ENK) whose domain is exactly its trade name, the part of the legal name that is not the
-        registered owner's name; or whose domain carries the owner's name and whose homepage states that name.
+        registered owner's name, written in the page's own text; or whose domain carries the owner's name and whose
+        homepage states that name.
     """
     if not core or any(marker in folded_text for marker in PLACEHOLDER_MARKERS):
         return None
@@ -130,13 +166,13 @@ def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostnam
             return None
     if substantive and trimmed != core and len(trimmed) >= 2 and any(set(trimmed).issubset(tokens) for tokens in homepage_token_sets):
         return "the homepage states the legal name (its legal-form word aside) on the registry-listed website"
-    if substantive and len(trimmed) >= 2 and len(label) >= 8 and label == "".join(trimmed) and (norwegian_domain or registered_place_stated):
+    if substantive and len(trimmed) >= 2 and len(label) >= 8 and label == "".join(trimmed) and (norwegian_domain or registered_place_stated) and _states_name(trimmed, value, hostname):
         return "the registry-listed domain is the legal name written together"
     if str(profile.get("legal_form") or "").upper() == "ENK":
         if owner:
             owner_in_name = [token for token in core if any(_same_person_token(token, part) for part in owner)]
             trade = [token for token in core if token not in owner_in_name]
-            if substantive and trade and owner_in_name and len(label) >= 5 and label == "".join(trade):
+            if substantive and trade and owner_in_name and len(label) >= 5 and label == "".join(trade) and _states_name(trade, value, hostname):
                 return "sole proprietorship: the registry-listed domain is its trade name (the legal name without the registered owner's name)"
             stated = [part for part in owner if any(_same_person_token(token, part) for token in core)]
             if len(stated) >= 2 and any(len(part) >= 4 and part in label for part in stated) and any(set(stated).issubset(tokens) for tokens in homepage_token_sets):
@@ -179,12 +215,19 @@ def assess_website_identity(profile: dict[str, Any]) -> dict[str, Any]:
     )
     normalized_raw = unicodedata.normalize("NFKD", candidate_text).encode("ascii", "ignore").decode().casefold()
     homepage_token_sets = [set(_tokens(part)) for part in homepage_identity_parts if part]
-    exact_homepage_name = bool(core and any(set(core).issubset(tokens) for tokens in homepage_token_sets))
+    # A one-page capture with a few lines of text (a placeholder, an empty shell): the domain alone is not the page
+    # stating a name. The hostname counts as identity text only next to real content or further pages.
+    thin_capture = len(value.get("pages") or []) <= 1 and len(str(value.get("main_text_excerpt") or "")) < 600
+    stated_token_sets = [set(_tokens(_without_domain_mentions(str(part), hostname))) for part in homepage_identity_parts if part and part != hostname] if thin_capture else homepage_token_sets
+    exact_homepage_name = bool(core and any(set(core).issubset(tokens) for tokens in stated_token_sets))
     substantive_homepage = len(str(value.get("main_text_excerpt") or "").strip()) >= 100
     is_business_sports_club = bool(re.search(r"(?:^|\s)B\.?\s*I\.?\s*L\.?(?:\s|$)", str(profile.get("name") or ""), re.I))
     if any(marker in normalized_raw for marker in parked_markers):
         score = 0.1
         reasons.append("captured page is a parked, for-sale, or generic hosting placeholder")
+    elif placeholder := host_placeholder(value):
+        score = 0.1
+        reasons.append(f"captured page is a registrar, web-host or error placeholder, not a website (“{placeholder}”)")
     elif is_business_sports_club and "bedriftsidrett" not in normalized_candidate_text and "b i l" not in normalized_candidate_text:
         score = 0.3
         reasons.append("business sports-club entity points to the operating company's site without club evidence")
@@ -197,7 +240,7 @@ def assess_website_identity(profile: dict[str, Any]) -> dict[str, Any]:
     elif len(core) == 1 and exact_homepage_name and substantive_homepage:
         score = 0.95
         reasons.append("single distinctive legal-name token appears in homepage identity evidence with substantive content")
-    elif listed_site_reason := _registry_listed_site_rule(profile, core, hostname, homepage_token_sets, substantive=substantive_homepage, folded_text=normalized_raw, raw_text=candidate_text):
+    elif listed_site_reason := _registry_listed_site_rule(profile, core, hostname, homepage_token_sets, substantive=substantive_homepage, folded_text=normalized_raw, raw_text=candidate_text, value=value):
         score = 0.92
         reasons.append(listed_site_reason)
     elif ratio >= 0.75 and len(overlap) >= 2:
