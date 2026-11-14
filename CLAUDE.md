@@ -1,6 +1,8 @@
 # Signalpost — instructions for Claude sessions
 
-Read `docs/PROJECT_MEMORY.md` before doing anything. It holds the owner's standing rules, the current state (the V3.1.1
+Read `docs/PROJECT_MEMORY.md` before doing anything — start with its §00 (final review done 2026-11-14; proposed
+Builderr submission commit `408f41523e9b7aa2ffc45c12656403f9949bcb2b`; corrected email in
+`docs/v311-builderr-rescore-email.md`, sent by the owner only). It holds the owner's standing rules, the current state (the V3.1.1
 Builderr rescoring revision on branch `revision/v3.1.1-builderr-rescore`, release `9d99cba`, code `38ff24c`), results,
 open items and repo gotchas.
 

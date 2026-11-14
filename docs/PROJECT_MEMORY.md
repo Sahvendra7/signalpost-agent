@@ -1,10 +1,44 @@
 # Signalpost — project memory
 
-Updated 2026-11-14 at the end of the **V3.1.1 Builderr rescoring revision** session, so a new session can resume
-without the old chat. Read this first, then the documents it points to. (The V3.2 Gemini research memory, written
-2026-11-13, is on branch `experiment/v3.2-hybrid` in `docs/PROJECT_MEMORY.md`; its essentials are in §6 below.)
+Updated 2026-11-14 at the end of the **final release review** session (after the V3.1.1 Builderr rescoring revision
+session), so a new session can resume without the old chat. Read this first, then the documents it points to. (The V3.2
+Gemini research memory, written 2026-11-13, is on branch `experiment/v3.2-hybrid` in `docs/PROJECT_MEMORY.md`; its
+essentials are in §6 below.)
 
-## 0. Where we are right now (read this first)
+## 00. Latest status — final release review done (2026-11-14)
+
+* **Branch `revision/v3.1.1-builderr-rescore` was pushed to GitHub. Proposed submission commit (the exact SHA for
+  Builderr): `408f41523e9b7aa2ffc45c12656403f9949bcb2b`** (adds only `CLAUDE.md` + this memory on top of release
+  `9d99cba61493e99664db16c78fd37e84408e4408`; code last changed in `38ff24c48e989a987529f4f7d6ca3fa107bce75d`).
+  `git diff 38ff24c 408f415 -- src tests scripts pyproject.toml uv.lock` is empty. Any later commit on the branch (such
+  as the one adding this section) is documentation only; **the email names `408f415`, not the branch head.**
+* **Final review verdict: no release-blocking defect.** Verified in that session: remote branch head = `408f415`
+  (`git ls-remote`); protected refs unchanged (`claude/awesome-sagan-m2lppu` = `139e23c`, `claude/c300-refresh-fix` =
+  `ff3b515`, tag `submission-candidate-1` present); fresh GitHub clone + empty uv cache: `uv sync --locked` exit 0,
+  **570 passed, 193 subtests**; documented command from the clean clone (live, 987832827 + 923609016 Equinor) exit 0,
+  source sha256 `3211a732…` = the recorded `38ff24c` smoke run, LØWEHJERTE publishes no profile, Equinor keeps its 3 own
+  accounts and careers page; eval-r200c recomputed from `audit-r200c/labels.jsonl`: 134/138 = 97.1% (Wilson
+  92.8–98.9), 4 incorrect (3 wrong_company: 2 WANG chain accounts, 1 Oslo Klatresenter EGM; 1 not_a_careers_page), 5
+  unsure; no Gemini code; generic `src/norway_company_agent/llm/` is byte-identical to V3.1 and not imported on the batch
+  path; no key-shaped strings; all default dependencies permissively licensed (MIT/BSD/Apache-2.0/MPL-2.0/PSF/W3C).
+* **The eval-r200c labels are the assistant's (rule author), NOT the owner's.** The owner once called it
+  "owner-labelled"; that is wrong — never repeat it in an email or report.
+* **Rescore email: corrected final draft is `docs/v311-builderr-rescore-email.md`** (sender "Sachin", no surname;
+  repo/branch/`408f415`; docs-only note on `9d99cba`/`38ff24c`; command; models none; APIs; dependencies + licences; $0;
+  Gemini not in release; "4 claims were incorrect, 3 of them belonging to a related entity"; 97.1% explicitly not a
+  Builderr result and 95% not claimed; low news/job coverage stated). **The owner sends it himself before Sunday
+  2026-11-15 09:00 IST (03:30 UTC). Claude never sends it or submits.**
+* **Remaining risks (told to the owner):** local sample small, CI lower bound below 95%, labels not independent;
+  news/job coverage low by design (7 news, 0 job ads on eval-r200c) — may weigh on the 65/100 score; eval-r200c ran on
+  `7a88046` (38ff24c adds only two withhold-only careers/job rules; replay equivalence not committed as an artefact);
+  no `LICENSE` file in the repo (unchanged from earlier submissions); dead legacy `site_facts.social_identity` (0.95 sameAs
+  score, no callers); live websites change between runs.
+* **Do not:** recreate the lost `v3.1-candidate-2` tag; merge to `main`; open a PR; touch the release branches; check out
+  the V3.2 Gemini branches for this release.
+* **Next possible steps (only on owner instruction):** owner/second-person review of eval-r200c labels; respond to
+  Builderr's rescore result when it arrives.
+
+## 0. Where we were at the end of the revision session (historical; §00 supersedes it)
 
 * **Builderr feedback (Soham Sinha) on the evaluated commit `ff3b515`:** rank 2/104, about 69/100, 86 claims checked,
   75 correct, **11 belonged to another company** (87%). Qualification needs ≥65/100 **and** ≥95% correct attribution.
@@ -105,10 +139,10 @@ without the old chat. Read this first, then the documents it points to. (The V3.
 
 ## 5. Open items (owner decisions)
 
-1. **Review the V3.1.1 release** (`docs/v311-rescore-revision.md`).
-2. **Push** `revision/v3.1.1-builderr-rescore` — only on explicit instruction. Until pushed, the branch exists only in
-   the container it was made in. *(If this memory file is being read from GitHub, the branch was pushed.)*
-3. **Send the rescore email** (after the fixes in §0) before 2026-11-15 09:00 IST — the owner sends it, not Claude.
+1. ~~Review the V3.1.1 release~~ — done 2026-11-14 (§00): no release-blocking defect.
+2. ~~Push `revision/v3.1.1-builderr-rescore`~~ — done; submission commit `408f415`.
+3. **Send the rescore email** (`docs/v311-builderr-rescore-email.md`, already corrected) before 2026-11-15 09:00 IST —
+   the owner sends it, not Claude.
 4. Optional: owner/second-person review of the eval-r200c labels (`measurements/v311-rescore-2026-11-14/audit-r200c/`).
 5. V3.2 open items (second-person review kits, Builderr disclosure if Gemini is ever mentioned) — see the hybrid branch.
 
