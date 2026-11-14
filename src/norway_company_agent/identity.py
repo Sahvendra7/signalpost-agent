@@ -44,7 +44,13 @@ PLACEHOLDER_MARKERS = (
     "is parked", "domain parking", "parked domain", "domenet er parkert", "this domain is registered",
     "buy this domain", "kjop dette domenet", "site maintenance", "under construction", "coming soon",
     "nettsiden er under utvikling", "siden er under konstruksjon",
+    "no website is currently present", "this server is operated by", "could be suspended", "account suspended",
+    "account has been suspended", "default web page", "welcome to nginx", "apache2 ubuntu default", "index of /",
+    "webhotellet er", "denne siden er under", "domenet er registrert",
 )
+# A company name written with its legal form: "Blindheim Fysikalske Institutt AS". Case-sensitive on purpose
+# ("Da" and "da" are words; "DA" after a capitalised name is a legal form).
+STATED_ENTITY = re.compile(r"((?:[A-ZÆØÅ0-9][\w&'.\-]*[ \t]+){1,4})(AS|ASA|A/S|ANS|DA|SA|BA|AB|ApS|GmbH|Ltd\.?|Limited|Inc\.?|Oy|LLC)(?![\w])")
 
 
 def _name_without_trailing_form(core: list[str]) -> list[str]:
@@ -78,14 +84,30 @@ def _same_person_token(name_token: str, owner_token: str) -> bool:
     return name_token == owner_token or (len(owner_token) >= 4 and name_token == owner_token + "s")
 
 
-def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostname: str, homepage_token_sets: list[set[str]], *, substantive: bool, folded_text: str) -> str | None:
+def _registered_place_stated(profile: dict[str, Any], text: str) -> bool:
+    """The entity's registered postcode or postal town (business or postal address) is written on the captured pages."""
+    live = (((profile.get("evidence") or {}).get("registry_live") or {}).get("value") or {})
+    tokens = set(_tokens(text))
+    for address in (live.get("business_address"), live.get("postal_address"), profile.get("business_address")):
+        if not isinstance(address, dict):
+            continue
+        postcode = str(address.get("postnummer") or address.get("postal_code") or "").strip()
+        town = _tokens(address.get("poststed") or address.get("city"))
+        if (len(postcode) == 4 and re.search(r"(?<!\d)" + re.escape(postcode) + r"(?!\d)", text)) or (town and len("".join(town)) >= 3 and set(town).issubset(tokens)):
+            return True
+    return False
+
+
+def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostname: str, homepage_token_sets: list[set[str]], *, substantive: bool, folded_text: str, raw_text: str) -> str | None:
     """A reason when a registry-listed site's own domain or the registered owner's name identifies the entity, else None.
 
     Every rule needs the registry's own link (the caller applies this to the registry-listed website only) and no parked
     or placeholder marker; all but the last also need a homepage with real content (the last has the owner's name
-    stated on it, which a portfolio site often has and little else). None accepts name similarity alone:
+    stated on it, which a portfolio site often has and little else). A site that names another company with a legal
+    form and a word of this entity's name is that company's. None accepts name similarity alone:
       * the homepage states the legal name, the trailing legal-form word aside (AKTIEBOLAG ~ AB);
-      * the domain label is exactly the legal name written together (at least two name words);
+      * the domain label is exactly the legal name written together (at least two name words), on a .no domain or
+        with the entity's registered postcode or town on the pages;
       * a sole proprietorship (ENK) whose domain is exactly its trade name, the part of the legal name that is not the
         registered owner's name; or whose domain carries the owner's name and whose homepage states that name.
     """
@@ -93,12 +115,24 @@ def _registry_listed_site_rule(profile: dict[str, Any], core: list[str], hostnam
         return None
     label = _domain_label(hostname)
     trimmed = _name_without_trailing_form(core)
+    # A name-shaped domain abroad is often the foreign parent's (a Norwegian AS named after its group): outside .no
+    # the pages must place the entity at its registered postcode or town.
+    norwegian_domain = hostname.casefold().endswith(".no")
+    registered_place_stated = _registered_place_stated(profile, raw_text)
+    owner = _owner_tokens(profile) if str(profile.get("legal_form") or "").upper() == "ENK" else []
+    # The site names a company, with its legal form, whose name shares a word with this entity's but is not this
+    # entity: a clinic's or firm's site (… Institutt AS) that a practitioner's sole proprietorship points at, the
+    # limited company a proprietorship was converted into, a sister company. The site is theirs.
+    own_words = set(core) | set(owner)
+    for match in STATED_ENTITY.finditer(raw_text):
+        stated = set(_tokens(match.group(1)))
+        if stated & own_words and not set(trimmed).issubset(stated):
+            return None
     if substantive and trimmed != core and len(trimmed) >= 2 and any(set(trimmed).issubset(tokens) for tokens in homepage_token_sets):
         return "the homepage states the legal name (its legal-form word aside) on the registry-listed website"
-    if substantive and len(trimmed) >= 2 and len(label) >= 8 and label == "".join(trimmed):
+    if substantive and len(trimmed) >= 2 and len(label) >= 8 and label == "".join(trimmed) and (norwegian_domain or registered_place_stated):
         return "the registry-listed domain is the legal name written together"
     if str(profile.get("legal_form") or "").upper() == "ENK":
-        owner = _owner_tokens(profile)
         if owner:
             owner_in_name = [token for token in core if any(_same_person_token(token, part) for part in owner)]
             trade = [token for token in core if token not in owner_in_name]
@@ -163,7 +197,7 @@ def assess_website_identity(profile: dict[str, Any]) -> dict[str, Any]:
     elif len(core) == 1 and exact_homepage_name and substantive_homepage:
         score = 0.95
         reasons.append("single distinctive legal-name token appears in homepage identity evidence with substantive content")
-    elif listed_site_reason := _registry_listed_site_rule(profile, core, hostname, homepage_token_sets, substantive=substantive_homepage, folded_text=normalized_raw):
+    elif listed_site_reason := _registry_listed_site_rule(profile, core, hostname, homepage_token_sets, substantive=substantive_homepage, folded_text=normalized_raw, raw_text=candidate_text):
         score = 0.92
         reasons.append(listed_site_reason)
     elif ratio >= 0.75 and len(overlap) >= 2:

@@ -103,6 +103,36 @@ class RegistryListedSiteIdentity(unittest.TestCase):
         self.assertFalse(publishable(site("KARI BERGE KUNST", "https://kariberge.com/", legal_form="ENK", owner="Kari Berge", title="kariberge.com is parked", text="")))
         self.assertFalse(publishable(site("KARI BERGE KUNST", "https://kariberge.com/", legal_form="ENK", owner="Kari Berge", title="Nettbutikk for sko", text=BODY)))
 
+    def test_site_naming_another_company_with_a_shared_name_word_is_that_companys(self):
+        # A practitioner's sole proprietorship points at the clinic it works in; the clinic is a limited company.
+        clinic = site("NORDVIK FYSIKALSKE-SOLBERG", "https://www.nordvikfysikalske.no/", legal_form="ENK", owner="Bernt Solberg", title="Nordvik Fysikalske Institutt",
+                      identity_text_excerpt="Postadresse: Nordvik Fysikalske Institutt AS PB 9024 6023 ÅLESUND")
+        self.assertFalse(publishable(clinic))
+        # The same site without another company named on it stays accepted (positive control).
+        self.assertTrue(publishable(site("NORDVIK FYSIKALSKE-SOLBERG", "https://www.nordvikfysikalske.no/", legal_form="ENK", owner="Bernt Solberg", title="Nordvik Fysikalske")))
+        # A proprietorship converted into a limited company; an owner-named site of the owner's company; a sister company.
+        self.assertFalse(publishable(site("MEDIKUS Ronny Hansen", "https://www.medikus.no/", legal_form="ENK", owner="Alf Ronny Hansen", title="Hjem | Medikus", identity_text_excerpt="© Medikus AS")))
+        self.assertFalse(publishable(site("KARI BERGE KUNST", "https://kariberge.com/", legal_form="ENK", owner="Kari Berge", title="Kari Berge", text="", identity_text_excerpt="Kari Berge Design AS, Oslo")))
+        self.assertFalse(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell", identity_text_excerpt="Parallell Media AS")))
+        # The entity's own name with its legal form is not another company.
+        self.assertTrue(publishable(site("PARALLELL FILMVERKSTED AS", "https://www.parallellfilmverksted.no/", title="Parallell", identity_text_excerpt="Kontakt Parallell Filmverksted AS i dag")))
+
+    def test_hosting_placeholder_is_not_a_company_site(self):
+        placeholder = site("CON AMORE KOR", "http://www.conamorekor.no/", legal_form="FLI", title="This server is operated by Example Webhosting",
+                           text="No website is currently present on this hostname. The site you are trying to reach could be suspended, deleted or DNS could be incorrect. " * 2)
+        self.assertFalse(publishable(placeholder))
+        self.assertTrue(publishable(site("CON AMORE KOR", "http://www.conamorekor.no/", legal_form="FLI", title="Velkommen")))
+
+    def test_name_shaped_domain_abroad_needs_the_registered_place(self):
+        def row(text, url="https://www.fjordkraftteknologi.com/"):
+            item = site("FJORDKRAFT TEKNOLOGI AS", url, title="Fjordkraft | Clean Marine", text=text)
+            item["evidence"]["registry_live"] = {"status": "available", "value": {"business_address": {"postnummer": "5003", "poststed": "BERGEN"}}}
+            return item
+
+        self.assertFalse(publishable(row("GW-scale compute, powered from thin air. Modular pre-fab data halls built in a factory. " * 3)))
+        self.assertTrue(publishable(row("Our Norwegian office is in Bergen. Modular pre-fab data halls built in a factory and assembled on site. " * 3)))
+        self.assertTrue(publishable(row("GW-scale compute, powered from thin air. Modular pre-fab data halls built in a factory. " * 3, url="https://www.fjordkraftteknologi.no/")))
+
     def test_earlier_rules_are_unchanged(self):
         # Exact name and organisation number still decide first; an unrelated site stays withheld.
         self.assertTrue(publishable(site("BERG BYGG AS", "https://www.bergbygg.no/", title="Berg Bygg AS - totalentreprenør")))
