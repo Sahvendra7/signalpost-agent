@@ -1,0 +1,138 @@
+{
+ "rows": {
+  "base": 300,
+  "candidate": 300
+ },
+ "families": {
+  "official_website": {
+   "reference_facts": 124,
+   "reference_companies": 124,
+   "base": {
+    "published": 112,
+    "companies_published": 112,
+    "in_reference": 112,
+    "companies_in_reference": 112,
+    "company_share": 0.9032,
+    "fact_share": 0.9032,
+    "weighted_70_30": 0.9032
+   },
+   "candidate": {
+    "published": 124,
+    "companies_published": 124,
+    "in_reference": 124,
+    "companies_in_reference": 124,
+    "company_share": 1.0,
+    "fact_share": 1.0,
+    "weighted_70_30": 1.0
+   }
+  },
+  "social_profile": {
+   "reference_facts": 104,
+   "reference_companies": 67,
+   "base": {
+    "published": 98,
+    "companies_published": 62,
+    "in_reference": 98,
+    "companies_in_reference": 62,
+    "company_share": 0.9254,
+    "fact_share": 0.9423,
+    "weighted_70_30": 0.9305
+   },
+   "candidate": {
+    "published": 102,
+    "companies_published": 65,
+    "in_reference": 102,
+    "companies_in_reference": 65,
+    "company_share": 0.9701,
+    "fact_share": 0.9808,
+    "weighted_70_30": 0.9733
+   }
+  },
+  "news_item": {
+   "reference_facts": 12,
+   "reference_companies": 9,
+   "base": {
+    "published": 11,
+    "companies_published": 8,
+    "in_reference": 11,
+    "companies_in_reference": 8,
+    "company_share": 0.8889,
+    "fact_share": 0.9167,
+    "weighted_70_30": 0.8972
+   },
+   "candidate": {
+    "published": 11,
+    "companies_published": 8,
+    "in_reference": 11,
+    "companies_in_reference": 8,
+    "company_share": 0.8889,
+    "fact_share": 0.9167,
+    "weighted_70_30": 0.8972
+   }
+  },
+  "careers_page": {
+   "reference_facts": 9,
+   "reference_companies": 9,
+   "base": {
+    "published": 9,
+    "companies_published": 9,
+    "in_reference": 9,
+    "companies_in_reference": 9,
+    "company_share": 1.0,
+    "fact_share": 1.0,
+    "weighted_70_30": 1.0
+   },
+   "candidate": {
+    "published": 9,
+    "companies_published": 9,
+    "in_reference": 9,
+    "companies_in_reference": 9,
+    "company_share": 1.0,
+    "fact_share": 1.0,
+    "weighted_70_30": 1.0
+   }
+  },
+  "job_posting": {
+   "reference_facts": 5,
+   "reference_companies": 1,
+   "base": {
+    "published": 5,
+    "companies_published": 1,
+    "in_reference": 5,
+    "companies_in_reference": 1,
+    "company_share": 1.0,
+    "fact_share": 1.0,
+    "weighted_70_30": 1.0
+   },
+   "candidate": {
+    "published": 5,
+    "companies_published": 1,
+    "in_reference": 5,
+    "companies_in_reference": 1,
+    "company_share": 1.0,
+    "fact_share": 1.0,
+    "weighted_70_30": 1.0
+   }
+  }
+ },
+ "reference": "local union of both arms",
+ "difference": {
+  "added_by_candidate": {
+   "news_item": 1,
+   "official_website": 12,
+   "social_profile": 6
+  },
+  "lost_by_candidate": {
+   "news_item": 1,
+   "social_profile": 2
+  }
+ },
+ "official_website_state_changes": {
+  "blocked -> ambiguous": 9,
+  "blocked -> not_available": 3,
+  "blocked -> available": 5,
+  "ambiguous -> available": 7,
+  "ambiguous -> blocked": 1,
+  "blocked -> failed": 1
+ }
+}

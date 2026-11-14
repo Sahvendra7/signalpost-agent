@@ -5,7 +5,36 @@ session), so a new session can resume without the old chat. Read this first, the
 Gemini research memory, written 2026-11-13, is on branch `experiment/v3.2-hybrid` in `docs/PROJECT_MEMORY.md`; its
 essentials are in §6 below.)
 
-## 00. Latest status — final release review done (2026-11-14)
+## 000. Latest status — V3.1.2 final optimization (2026-11-14, later session)
+
+* **New local branch `final/v3.1.2-optimization`** (based on `e0786d3`); code **`95a5464073054b6717b963f3839541590ecdba52`**;
+  later commits are documentation only. **Not pushed, not submitted.** Report: `docs/v312-final-optimization.md`;
+  email draft (only if the owner chooses it): `docs/v312-builderr-email.md`; measurements:
+  `measurements/v312-final-2026-11-14/`.
+* **Official page on 2026-11-14: revisions are open through 22 November** (not 16 November; that is the JBOX vote).
+  Soham's rescore deadline (15 November 09:00 IST) is separate. Qualification: 65/100 and 95% of checked claims.
+* **Revision count: `05d7566` and `ff3b515` were submitted; `408f415` counts as the third only if the owner sent the
+  V3.1.1 email. Not recorded in the repo — ask the owner.** Four revisions are allowed.
+* **What V3.1.2 adds** (all general rules, `tests/test_v312_coverage.py`): http fallback when the https robots.txt
+  request gets no connection (`website.py`); registry-listed sites identified by a domain that is the legal name, a
+  trailing legal-form word, or a sole proprietor's trade/owner name, with guards (`identity.py`); registrar, host and
+  error pages are never websites and a thin page's domain is not identity text (`identity.py`, also fixes parked
+  pages V3.1.1 publishes); a foreign "… AB" whose site is its Norwegian "… AS" namesake's is held
+  (`attribution/operator.py` `norwegian_namesake_named`); lead paragraph for companies with a verified site
+  (`synthesis.py`).
+* **Results (assistant labels; not Builderr scores):** eval-r300f, independent for frozen `2fdd64d`: 190/192 = 99.0%
+  (Wilson 96.3–99.7), 96.4% with 5 unsure as wrong, 1 wrong company (also in V3.1.1: 186/188); websites 98 → 101.
+  eval-r300d and eval-r300e are **diagnostic** (guards were written on them). Gain: about 3–8% more verified websites.
+  News and job coverage unchanged. Suite 594 passed, 208 subtests (working tree and clean room). Smoke100 100/100,
+  0 contract findings, 3,969 hashes, no platform host, $0; refresh 1 `unavailable` event.
+* **Recommendation given to the owner:** keep `408f415` for the rescore due now; submit `95a5464` as a later revision
+  only after confirming the revision count and the label review; if `408f415` was never sent, `95a5464` may be sent
+  instead. **Ask Soham what the UX grade is taken from** (viewer exists, scored 0.60; leaders have 4.4–4.6).
+* **Gotchas found:** `attribution/operator.py` already has `NORWEGIAN_COMPANY_FORMS` (upper-case values) — do not
+  reuse the name; replay freezes website identity to the capture's decision and misses mixed-case registry URLs
+  (compare replay with replay); the registry CSV download needs no Accept header (a custom one returns 401).
+
+## 00. Earlier status — final release review done (2026-11-14)
 
 * **Branch `revision/v3.1.1-builderr-rescore` was pushed to GitHub. Proposed submission commit (the exact SHA for
   Builderr): `408f41523e9b7aa2ffc45c12656403f9949bcb2b`** (adds only `CLAUDE.md` + this memory on top of release

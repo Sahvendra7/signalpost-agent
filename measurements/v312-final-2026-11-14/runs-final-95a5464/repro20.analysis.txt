@@ -1,0 +1,156 @@
+{
+ "run": "repro20",
+ "envelopes": 20,
+ "terminal": {
+  "completed": 20
+ },
+ "input_order_kept": true,
+ "validation_passed": null,
+ "contract_findings": 0,
+ "evidence_hashes_checked": 898,
+ "evidence_hash_mismatches": 0,
+ "evidence_without_snapshot": 8,
+ "hosts": 33,
+ "social_platform_hosts": [],
+ "third_party_cost_usd": 0.0,
+ "unsupported_summary_statements": 0,
+ "published": {
+  "official_website": 16,
+  "social_profile": 17,
+  "careers_page": 5,
+  "news_item": 3
+ },
+ "code_version": {
+  "source_sha256": "b92b72a853d7e7ca62cf13068db85b8f6245b3db7eb54ced934b49f9090a2298",
+  "package_version": "0.3.0",
+  "git_commit": "95a5464073054b6717b963f3839541590ecdba52",
+  "git_dirty": false
+ },
+ "llm": null,
+ "baseline": {
+  "source": null,
+  "companies_with_baseline": 0
+ },
+ "new_items": {
+  "social_profile": 0,
+  "news_item": 0,
+  "job_posting": 0,
+  "retracted": 0
+ },
+ "checks": {
+  "note": "automatic checks: candidates withheld by rule, by reason; not an accuracy measurement",
+  "withheld": {
+   "activity:announcement_does_not_name_the_company": 5,
+   "activity:bulk_entry_burst": 16,
+   "activity:content_advice": 3,
+   "activity:content_recruitment": 1,
+   "activity:evergreen_advice_not_news": 5,
+   "activity:group_brand_item_not_national_unit": 36,
+   "activity:headline_not_an_announcement": 66,
+   "activity:item_not_about_entity_on_group_or_brand_site": 185,
+   "activity:no_individual_article_url": 4,
+   "activity:no_title": 7,
+   "activity:non_article_path": 1,
+   "activity:not_anchored_to_the_company": 19,
+   "activity:page_date_on_non_news_page": 16,
+   "activity:question_title_not_announcement": 3,
+   "careers:job_board_for_other_employers": 1,
+   "careers:not_a_careers_page": 1,
+   "careers:site_operated_by_group_or_brand": 2,
+   "careers:site_operated_by_other_entity": 1,
+   "job:currency_unknown": 7,
+   "job:external_ad_employer_unverified": 2,
+   "job:other_employer": 12,
+   "social:account_localised_abroad_on_group_site": 1,
+   "social:brand_handle_on_group_or_brand_site": 1,
+   "social:brand_handle_on_platform_site": 1,
+   "social:foreign_parent_group_account": 4,
+   "social:group_account_without_national_unit": 8,
+   "social:group_name_handle_on_group_or_brand_site": 1,
+   "social:group_name_handle_on_section_site": 1,
+   "social:handle_names_other_company_on_site": 2,
+   "social:handle_names_other_entity": 9,
+   "social:handle_unrelated": 10,
+   "social:not_a_public_profile_url": 1,
+   "social:platform_provider_account": 1,
+   "social:site_operated_by_other_entity": 6
+  }
+ }
+}
+== 987832827 LØWEHJERTE DESIGN AS
+   ambig social_profile   None | 2 profile link(s) on the verified site not corroborated as this compan
+   avail official_website https://www.lowehjerte.no/ | 
+== 961592097 ASAK AS
+   ambig social_profile   None | 2 profile link(s) on the verified site not corroborated as this compan
+   avail official_website https://www.asak.no/ | 
+== 995284766 ASHTEAD TECHNOLOGY AS
+   ambig social_profile   None | 1 profile link(s) on the verified site not corroborated as this compan
+   avail official_website https://www.ashtead-technology.com/lifting-pulling-and-deployment/ | 
+== 983181732 TYIN ALPINT AS
+   ambig social_profile   None | 6 profile link(s) on the verified site not corroborated as this compan
+   ambig official_website None | other_org_number_on_site
+== 980932834 BARTEC AS
+   ambig social_profile   None | 4 profile link(s) on the verified site not corroborated as this compan
+   ambig official_website None | registry_website_redirects_to_other_domain
+== 995596970 BERGKNAPP AS
+   avail social_profile   https://www.facebook.com/bergknapp.no | handle_exact_neutral
+   avail social_profile   https://www.instagram.com/bergknapp.no/ | handle_exact_neutral
+   avail social_profile   https://www.linkedin.com/company/bergknapp-as | handle_exact
+   avail official_website https://www.bergknapp.no/ | 
+== 995159406 BK BYGG AS
+   avail social_profile   https://www.facebook.com/bkbygg | handle_exact
+   avail social_profile   https://www.instagram.com/bk_bygg/ | handle_exact
+   avail official_website https://bkbygg.no/ | 
+== 990892687 BE KRAFTSALG AS
+   ambig social_profile   None | 3 profile link(s) on the verified site not corroborated as this compan
+   avail official_website https://bodoenergi.no/ | site_named_after_registry_group_company
+== 911771098 HANS JØRGEN SANDNES AS
+   ambig social_profile   None | 5 profile link(s) on the verified site not corroborated as this compan
+   avail official_website https://hjsandnes.wordpress.com/ | 
+== 830872752 LOGSCOM AS
+   ambig social_profile   None | 3 profile link(s) on the verified site not corroborated as this compan
+   ambig official_website None | site_of_a_foreign_namesake
+== 937843860 BIOMAR A.S.
+   avail social_profile   https://www.facebook.com/BiomarNorge/ | handle_exact_neutral
+   avail social_profile   https://www.instagram.com/biomarnorge/ | handle_exact_neutral
+   avail social_profile   https://www.linkedin.com/company/biomar-norge/ | handle_exact_neutral
+   avail careers_page     https://www.biomar.com/no-no/om-oss/karriere | 
+   avail news_item        BioMar introduserer BioRetain – et nytt kapittel innen fôrformulering | development
+   avail official_website https://www.biomar.com/no-no | 
+== 919378875 GRØNSAND GJESTEGÅRD AS
+   avail social_profile   http://www.facebook.com/gronsand | handle_is_own_domain_name
+   avail social_profile   https://instagram.com/gronsandgjestagard | extended_handle_on_own_named_site
+   avail news_item        Offisiell lansering av DiscGolfbanen på Grønsand | development
+   avail official_website https://www.gronsand.no/ | 
+== 932383357 VALMET AS
+   ambig social_profile   None | 4 profile link(s) on the verified site not corroborated as this compan
+   ambig official_website None | international_site_of_foreign_parent_group
+== 929418727 TEQT NORGE AS
+   avail official_website https://www.teqt.no/ | 
+   ambig social_profile   None | 1 profile link(s) on the verified site not corroborated as this compan
+== 999291988 INLUMI AS
+   ambig social_profile   None | 2 profile link(s) on the verified site not corroborated as this compan
+   avail careers_page     https://inlumi.com/careers/ | 
+   avail official_website https://inlumi.com/ | 
+== 996926524 THREE60 ENERGY NORWAY AS
+   avail social_profile   https://www.instagram.com/three60energy_norway/ | handle_exact
+   avail careers_page     https://www.three60energy-norway.com/career | 
+   avail official_website https://www.three60energy-norway.com/ | 
+== 996662292 BIRKELAND AS
+   avail official_website https://birkeland.no/ | 
+   avail social_profile   https://www.facebook.com/birkelandmaskin | extended_handle_on_own_named_site
+   avail social_profile   https://www.instagram.com/birkeland_as/ | handle_exact
+   avail careers_page     https://birkeland.no/ledige-stillinger/ | 
+   avail news_item        Birkeland 25 år | development
+== 933247813 BECTON DICKINSON U.K. LIMITED
+   ambig social_profile   None | 4 profile link(s) on the verified site not corroborated as this compan
+   avail official_website https://www.bd.com/en-uk/ | 
+== 914823390 ELEDA RAIL NORGE AS
+   avail social_profile   https://www.facebook.com/eledarailnorge/ | handle_exact
+   avail social_profile   https://www.instagram.com/eleda_rail_norge/ | handle_exact
+   avail careers_page     https://www.eledarail.se/no/ledige-stillinger/ | 
+   avail official_website https://www.eledarail.se/no | 
+== 984596014 FUNDRAISING NORGE
+   avail social_profile   https://www.facebook.com/FundraisingNorge | handle_exact
+   avail social_profile   https://www.linkedin.com/company/fundraising-norge/ | handle_exact
+   avail official_website https://fundraisingnorge.no/ | 
